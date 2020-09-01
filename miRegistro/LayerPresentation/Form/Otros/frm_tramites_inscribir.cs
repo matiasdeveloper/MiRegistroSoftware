@@ -84,6 +84,7 @@ namespace LayerPresentation
                     deleteFields();
                     frm_successdialog f = new frm_successdialog(2);
                     f.Show();
+                    _cnObject.RefreshDataTramitesCache();
                     _handlerTramites.refreshData();
                     this.Close();
                 }

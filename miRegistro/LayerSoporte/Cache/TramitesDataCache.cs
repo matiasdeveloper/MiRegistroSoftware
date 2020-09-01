@@ -16,17 +16,18 @@ namespace LayerSoporte.Cache
         public int totalProcesados;
         public int totalInscriptos;
         public int totalErrores;
+        public int totalEmpleados;
+        public int totalTipos;
 
         public TramitesDataCache()
         {
             this.tramitesCache = new LinkedList<Tramites>();
         }
-
         public bool AddTramites(Tramites u)
         {
-            LinkedListNode<Tramites> currentUser = tramitesCache.Find(u);
+            LinkedListNode<Tramites> currentTramite = tramitesCache.Find(u);
 
-            if (currentUser == null)
+            if (currentTramite == null)
             {
                 this.tramitesCache.AddLast(u);
                 return true;
@@ -54,6 +55,21 @@ namespace LayerSoporte.Cache
         public LinkedList<Tramites> GetTramites()
         {
             return tramitesCache;
+        }
+        public Tramites GetCurrentTramites(int id) 
+        {
+            Tramites tmpUser = null;
+            LinkedListNode<Tramites> currentTramites = this.tramitesCache.First;
+            while (currentTramites != null)
+            {
+                if (currentTramites.Value.id == id)
+                {
+                    tmpUser = currentTramites.Value;
+                    break;
+                }
+                currentTramites = currentTramites.Next;
+            }
+            return tmpUser;
         }
         /// <summary>
         /// Return total, procesados, inscriptos and errores in this order.

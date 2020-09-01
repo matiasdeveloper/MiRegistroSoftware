@@ -123,6 +123,7 @@ namespace LayerData.SqlServer
 
             _read = _command.ExecuteReader();
 
+            _table.Clear();
             _table.Load(_read);
             _conn.closeConnection();
 
@@ -139,6 +140,7 @@ namespace LayerData.SqlServer
 
             _read = _command.ExecuteReader();
 
+            _table.Clear();
             _table.Load(_read);
             _conn.closeConnection();
 

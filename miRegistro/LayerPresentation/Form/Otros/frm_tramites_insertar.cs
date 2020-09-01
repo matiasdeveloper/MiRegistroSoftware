@@ -201,6 +201,7 @@ namespace LayerPresentation
                         deleteFields();
                         frm_successdialog f = new frm_successdialog(0);
                         f.Show();
+                        _cnObject.RefreshDataTramitesCache();
                         _frmHandler.refreshData();
                     }
                     else
@@ -209,6 +210,7 @@ namespace LayerPresentation
                         deleteFields();
                         frm_successdialog f = new frm_successdialog(2);
                         f.Show();
+                        _cnObject.RefreshDataTramitesCache();
                         _frmHandler.refreshData();
                         this.Close();
                     }

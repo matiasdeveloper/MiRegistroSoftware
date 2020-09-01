@@ -1,4 +1,5 @@
 ﻿using LayerBusiness;
+using LayerPresentation.Clases;
 using LayerSoporte.Cache;
 using MaterialDesignColors.Recommended;
 using Microsoft.PowerBI.Api.Models;
@@ -24,6 +25,7 @@ namespace LayerPresentation
         }
         // Variables
         private Cn_Tramites _cnTramites = new Cn_Tramites();
+        private DataTable currentDt;
 
         private Button _currentBtn;
         private Panel _currentPanelQuery;
@@ -55,6 +57,7 @@ namespace LayerPresentation
         {
             dg_tramites.AutoGenerateColumns = false;
             DataTable dt = GetTramites(id);
+            currentDt = dt;
             dg_tramites.DataSource = dt;
         }
         private void refreshDashboard()
@@ -67,20 +70,9 @@ namespace LayerPresentation
         }
         private DataTable GetTramites(int id)
         {
-            LinkedList<Tramites> tmp = Cn_HandlerTramites.data.GetCache().GetTramites();
-            LinkedListNode<Tramites> tramites = tmp.First;
-
-            DataTable table = new DataTable();
-
-            for (int i = 0; i < tmp.Count; i++)
-            {
-                if (tramites.Value.id == id)
-                {
-                    table = tramites.Value.data;
-                    break;
-                }
-                tramites = tramites.Next;
-            }
+            Tramites tmp = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(id);
+            DataTable table = tmp.data;
+            //MessageBox.Show(table.Rows.Count.ToString());
             return table;
         }
 
@@ -234,7 +226,7 @@ namespace LayerPresentation
         }
 
         // Get data from selected index in datagrid
-        private string[] getDataFromSelectedIndex() 
+        private string[] GetDataFromSelectedIndex() 
         {
             selectedId = Convert.ToInt32(dg_tramites.CurrentRow.Cells["Id"].Value); ;
             string[] data = new string[8];
@@ -251,56 +243,6 @@ namespace LayerPresentation
             return data;
         } 
         
-        // Generate query with tramites and get the result
-        /// <summary>
-        /// Query avaiable ('Dominio', 'Empleado', 'Fecha', 'Fecha_empleado', 'Fecha_Procesado', 'Fecha_Inscripto', 'Hoy', 'Ayer', 'Semana', 'Mes')
-        /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
-        private DataTable myQuery(string name) 
-        {
-            DataTable dt = new DataTable();
-            switch (name) 
-            {
-                case "Dominio":
-
-                    break;
-                case "Empleado":
-
-                    break;
-                case "Fecha":
-
-                    break;
-                case "Fecha_Empleado":
-
-                    break;
-                case "Fecha_Procesado":
-
-                    break;
-                case "Fecha_Inscripto":
-
-                    break;
-                case "Fecha_Errores":
-
-                    break;
-                case "Hoy":
-
-                    break;
-                case "Ayer":
-
-                    break;
-                case "Semana":
-
-                    break;
-                case "Mes":
-
-                    break;
-                default:
-
-                    break;
-            }
-            return dt;
-        }
         private void radioButton_simple_Click(object sender, EventArgs e)
         {
             if (radioButton_simple.Checked)
@@ -369,27 +311,26 @@ namespace LayerPresentation
         }
         private void btn_refreshdata_Click(object sender, EventArgs e)
         {
-            _cnTramites.GenerateDataTramitesCache();
+            _cnTramites.RefreshDataTramitesCache();
             refreshTramites(Cn_HandlerTramites.current);
         }
         private void btn_imprimirPorDominio_Click(object sender, EventArgs e)
         {
             dg_tramites.AutoGenerateColumns = false;
-            DataTable dt = myQuery("Dominio");
+            DataTable dt = QuerySpecific.myQuery("Dominio", currentDt, DateTime.Now, DateTime.Now, txtBox_dominio.Text.ToUpper(), "", true);
             dg_tramites.DataSource = dt;           
         }
         private void btn_imprimirPorEmpleado_Click(object sender, EventArgs e)
         {
             dg_tramites.AutoGenerateColumns = false;
-            string empleado = comboBox_empleado.SelectedValue.ToString();
-            int cod_empleado = Convert.ToInt32(empleado);
+            string empleado = comboBox_empleado.GetItemText(comboBox_empleado.SelectedItem);
 
-            DataTable dt = myQuery("Empleado");
+            DataTable dt = QuerySpecific.myQuery("Empleado", currentDt, DateTime.Now, DateTime.Now, "", empleado, true);
             dg_tramites.DataSource = dt;
         }
         private void btn_imprimirPorFecha_Click(object sender, EventArgs e)
         {
-            /*try 
+            try 
             {
                 var values = checkCorrectDate(dateTimePicker_fecha1, dateTimePicker_fecha2);
                 if (values.Item1)
@@ -399,7 +340,7 @@ namespace LayerPresentation
                         DateTime dt1 = dateTimePicker_fecha1.Value;
                         dg_tramites.AutoGenerateColumns = false;
 
-                        DataTable dt = objects.mostrarByFecha(dateTimePicker_fecha1.Value.ToUniversalTime());
+                        DataTable dt = QuerySpecific.myQuery("Fecha", currentDt, dt1, dt1, "", "", true);
                         dg_tramites.DataSource = dt;
                     }
                     else
@@ -408,7 +349,7 @@ namespace LayerPresentation
                         DateTime dt2 = dateTimePicker_fecha2.Value;
                         dg_tramites.AutoGenerateColumns = false;
 
-                        DataTable dt = objects.mostrarByRangeOfFecha(dateTimePicker_fecha1.Value.ToUniversalTime(), dateTimePicker_fecha2.Value.ToUniversalTime());
+                        DataTable dt = QuerySpecific.myQuery("Fecha", currentDt, dt1, dt2, "", "", true);
                         dg_tramites.DataSource = dt;
                     }
                 }
@@ -416,29 +357,24 @@ namespace LayerPresentation
             catch(Exception ex) 
             {
                 MessageBox.Show("Error en la consulta: " + ex);
-            }*/
+            }
         }
         private void btn_imprimirPorFechaAndEmployee_Click(object sender, EventArgs e)
         {
-            /*try
+            try
             {
                 var values = checkCorrectDate(dateTimePicker_fecha3, dateTimePicker_fecha4);
                 if (values.Item1)
                 {
-                    string empleado = comboBox_empleados1.SelectedValue.ToString();
-                    int cod_empleado = Convert.ToInt32(empleado);
+                    string empleado = comboBox_empleados1.GetItemText(comboBox_empleados1.SelectedItem);
 
-                    Cn_tramites objects = new Cn_tramites();
                     if (values.Item2)
                     {
                         DateTime dt1 = dateTimePicker_fecha3.Value;
                         dg_tramites.AutoGenerateColumns = false;
 
-                        DataTable dt = objects.mostrarByFechaAndEmployee(dateTimePicker_fecha3.Value.ToUniversalTime(), cod_empleado);
+                        DataTable dt = QuerySpecific.myQuery("Fecha_Empleado", currentDt, dt1, dt1, "", empleado, true);
                         dg_tramites.DataSource = dt;
-
-                        TramitesData.tramites = dt;
-                        TramitesData.lastQuery = 4;
                     }
                     else
                     {
@@ -446,163 +382,136 @@ namespace LayerPresentation
                         DateTime dt2 = dateTimePicker_fecha4.Value;
                         dg_tramites.AutoGenerateColumns = false;
 
-                        DataTable dt = objects.mostrarByRangeOfFechaAndEmployee(dateTimePicker_fecha3.Value.ToUniversalTime(), dateTimePicker_fecha4.Value.ToUniversalTime(), cod_empleado);
+                        DataTable dt = QuerySpecific.myQuery("Fecha_Empleado", currentDt, dt1, dt2, "", empleado, true);
                         dg_tramites.DataSource = dt;
-
-                        TramitesData.tramites = dt;
-                        TramitesData.lastQuery = 5;
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error en la consulta: " + ex);
-            }*/
+            }
         }
         private void btn_imprimirPorFechaAndProcesado_Click(object sender, EventArgs e)
         {
-            /*try
+            try
             {
                 var values = checkCorrectDate(dateTimePicker_fecha5, dateTimePicker_fecha6);
                 if (values.Item1)
                 {
-                    int cod_etapa = 0;
-                    if (radioButton_siProcesados.Checked) { cod_etapa = 1; } else { cod_etapa = 0; }
+                    bool etapa = true;
+                    if (radioButton_siProcesados.Checked) { etapa = true; } else { etapa = false; }
 
-                    Cn_tramites objects = new Cn_tramites();
                     if (values.Item2)
                     {
                         dg_tramites.AutoGenerateColumns = false;
 
-                        DataTable dt = objects.mostrarByFechaAndProcesado(dateTimePicker_fecha5.Value.ToUniversalTime(), cod_etapa);
+                        DataTable dt = QuerySpecific.myQuery("Fecha_Procesado", currentDt, dateTimePicker_fecha5.Value, dateTimePicker_fecha5.Value, "", "", etapa);
                         dg_tramites.DataSource = dt;
-
-                        TramitesData.tramites = dt;
-                        TramitesData.lastQuery = 6;
                     }
                     else
                     {
                         dg_tramites.AutoGenerateColumns = false;
 
-                        DataTable dt = objects.mostrarByRangeOfFechaAndProcesado(dateTimePicker_fecha5.Value.ToUniversalTime(), dateTimePicker_fecha6.Value.ToUniversalTime(), cod_etapa);
+                        DataTable dt = QuerySpecific.myQuery("Fecha_Procesado", currentDt, dateTimePicker_fecha5.Value, dateTimePicker_fecha6.Value, "", "", etapa);
                         dg_tramites.DataSource = dt;
-
-                        TramitesData.tramites = dt;
-                        TramitesData.lastQuery = 7;
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error en la consulta: " + ex);
-            }*/
+            }
         }
         private void btn_imprimirPorFechaAndInscripto_Click(object sender, EventArgs e)
         {
-            /*try
+            try
             {
                 var values = checkCorrectDate(dateTimePicker_fecha7, dateTimePicker_fecha8);
                 if (values.Item1)
                 {
-                    int isIncripto = 0;
-                    if (radioButton_siInscriptos.Checked) { isIncripto = 1; } else { isIncripto = 0; }
+                    bool isIncripto = true;
+                    if (radioButton_siInscriptos.Checked) { isIncripto = true; } else { isIncripto = false; }
 
-                    Cn_tramites objects = new Cn_tramites();
                     if (values.Item2)
                     {
                         dg_tramites.AutoGenerateColumns = false;
 
-                        DataTable dt = objects.mostrarByFechaAndInscripto(dateTimePicker_fecha7.Value.ToUniversalTime(), isIncripto);
+                        DataTable dt = QuerySpecific.myQuery("Fecha_Inscripto", currentDt, dateTimePicker_fecha7.Value, dateTimePicker_fecha7.Value, "", "", isIncripto);
                         dg_tramites.DataSource = dt;
-
-                        TramitesData.tramites = dt;
-                        TramitesData.lastQuery = 7;
                     }
                     else
                     {
                         dg_tramites.AutoGenerateColumns = false;
 
-                        DataTable dt = objects.mostrarByRangeOfFechaAndInscripto(dateTimePicker_fecha7.Value.ToUniversalTime(), dateTimePicker_fecha8.Value.ToUniversalTime(), isIncripto);
+                        DataTable dt = QuerySpecific.myQuery("Fecha_Inscripto", currentDt, dateTimePicker_fecha7.Value, dateTimePicker_fecha8.Value, "", "", isIncripto);
                         dg_tramites.DataSource = dt;
-
-                        TramitesData.tramites = dt;
-                        TramitesData.lastQuery = 8;
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error en la consulta: " + ex);
-            }*/
+            }
         }
         private void btn_imprimirPorFechaAndErrores_Click(object sender, EventArgs e)
         {
-            /*try
+            try
             {
                 var values = checkCorrectDate(dateTimePicker_fecha9, dateTimePicker_fecha10);
                 if (values.Item1)
                 {
-                    int isError = 0;
-                    if (radioButton_siError.Checked) { isError = 1; } else { isError = 0; }
+                    bool isError = true;
+                    if (radioButton_siError.Checked) { isError = true; } else { isError = false; }
 
-                    Cn_tramites objects = new Cn_tramites();
                     if (values.Item2)
                     {
                         dg_tramites.AutoGenerateColumns = false;
 
-                        DataTable dt = objects.mostrarByFechaAndError(dateTimePicker_fecha9.Value.ToUniversalTime(), isError);
+                        DataTable dt = QuerySpecific.myQuery("Fecha_Inscripto", currentDt, dateTimePicker_fecha9.Value, dateTimePicker_fecha9.Value, "", "", isError);
                         dg_tramites.DataSource = dt;
-
-                        TramitesData.tramites = dt;
-                        TramitesData.lastQuery = 9;
                     }
                     else
                     {
                         dg_tramites.AutoGenerateColumns = false;
 
-                        DataTable dt = objects.mostrarByRangeOfFechaAndError(dateTimePicker_fecha9.Value.ToUniversalTime(), dateTimePicker_fecha10.Value.ToUniversalTime(), isError);
+                        DataTable dt = QuerySpecific.myQuery("Fecha_Inscripto", currentDt, dateTimePicker_fecha9.Value, dateTimePicker_fecha10.Value, "", "", isError);
                         dg_tramites.DataSource = dt;
-
-                        TramitesData.tramites = dt;
-                        TramitesData.lastQuery = 10;
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error en la consulta: " + ex);
-            }*/
+            }
         }
+        
         private void btn_imprimirPorHoy_Click(object sender, EventArgs e)
         {
             dg_tramites.AutoGenerateColumns = false;
 
-            DataTable dt = myQuery("Hoy");
+            DataTable dt = QuerySpecific.myQuery("Hoy", currentDt, DateTime.Now, DateTime.Now, "", "", true);
             dg_tramites.DataSource = dt;
         }
         private void btn_imprimirPorAyer_Click(object sender, EventArgs e)
         {
             dg_tramites.AutoGenerateColumns = false;
 
-            DataTable dt = myQuery("Ayer");
+            DataTable dt = QuerySpecific.myQuery("Ayer", currentDt, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), "", "", true);
             dg_tramites.DataSource = dt;
         }
         private void btn_imprimirPorSemana_Click(object sender, EventArgs e)
         {
             dg_tramites.AutoGenerateColumns = false;
 
-            DataTable dt = myQuery("Semana");
+            DataTable dt = QuerySpecific.myQuery("Semana", currentDt, Fechas.firstDayOfWeek, Fechas.lastDayOfWeek, "", "", true);
             dg_tramites.DataSource = dt;
         }
         private void btn_imprimirPorMes_Click(object sender, EventArgs e)
         {
             dg_tramites.AutoGenerateColumns = false;
 
-            DateTime date = DateTime.Now;
-            var firstDayOfMonth = new DateTime(date.Year, date.Month, 1);
-            var lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);
-
-            DataTable dt = myQuery("Mes");
+            DataTable dt = QuerySpecific.myQuery("Mes", currentDt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth, "", "", true);
             dg_tramites.DataSource = dt;
         }
         
@@ -720,7 +629,7 @@ namespace LayerPresentation
         // Button Crud
         private void btn_editar_Click(object sender, EventArgs e)
         {
-            var data = getDataFromSelectedIndex();
+            var data = GetDataFromSelectedIndex();
 
             string[] d = new string[6];
             d = data;
@@ -744,12 +653,14 @@ namespace LayerPresentation
                 {
                     if (dg_tramites.SelectedRows.Count > 0)
                     {
-                        //int id = getTramiteSelectedID();
+                        var data = GetDataFromSelectedIndex();
+                        int id = selectedId;
 
-                        //_cnTramites.eliminarTramite(id.ToString());
+                        _cnTramites.eliminarTramite(id.ToString());
                         frm_successdialog f = new frm_successdialog(1);
                         f.Show();
 
+                        _cnTramites.RefreshDataTramitesCache();
                         refreshData();
                     }
                 }
@@ -762,7 +673,7 @@ namespace LayerPresentation
 
         private void btn_error_Click(object sender, EventArgs e)
         {
-            var data = getDataFromSelectedIndex();
+            var data = GetDataFromSelectedIndex();
             int id = selectedId;
 
             frm_tramites_error frm = new frm_tramites_error(this, id, data[2] ,data[0], data[7]);
@@ -771,7 +682,7 @@ namespace LayerPresentation
 
         private void btn_inscribir_Click(object sender, EventArgs e)
         {
-            var data = getDataFromSelectedIndex();
+            var data = GetDataFromSelectedIndex();
             int id = selectedId;
 
             frm_tramites_inscribir frm = new frm_tramites_inscribir(this, false, id, data[2], data[0], data[7]);

@@ -100,8 +100,9 @@ namespace LayerPresentation
                      deleteFields();
                      frm_successdialog f = new frm_successdialog(2);
                      f.Show();
-                     _handlerTramites.refreshData();
-                     this.Close();
+                    _cnObject.RefreshDataTramitesCache();
+                    _handlerTramites.refreshData();
+                    this.Close();
                 }
                 catch (Exception ex)
                 {

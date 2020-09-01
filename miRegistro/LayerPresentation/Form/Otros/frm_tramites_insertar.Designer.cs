@@ -195,6 +195,7 @@
             // 
             // textBox_dominio
             // 
+            this.textBox_dominio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_dominio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_dominio.Location = new System.Drawing.Point(53, 67);
             this.textBox_dominio.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);

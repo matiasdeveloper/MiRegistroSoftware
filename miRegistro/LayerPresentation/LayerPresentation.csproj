@@ -94,6 +94,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\CreatorTables.cs" />
+    <Compile Include="Clases\QuerySpecific.cs" />
+    <Compile Include="Clases\Statistics.cs" />
     <Compile Include="Form\Login\frm_bienvenida.cs">
       <SubType>Form</SubType>
     </Compile>

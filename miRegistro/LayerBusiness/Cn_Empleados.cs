@@ -41,7 +41,7 @@ namespace LayerBusiness
             DataTable AlertasEmployee = _cnA.mostrarAlertasFromUser(id.ToString());
 
             string usuario = UserData.Rows[0][1].ToString();
-            string nombre = UserInfoData.Rows[0][1].ToString();
+            string nombre = Employee.Rows[0][1].ToString();
             string privilegios = UserData.Rows[0][1].ToString();
             string city = UserInfoData.Rows[0][3].ToString();
             string email = UserInfoData.Rows[0][4].ToString();

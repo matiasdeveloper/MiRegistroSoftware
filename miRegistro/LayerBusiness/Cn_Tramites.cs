@@ -43,7 +43,7 @@ namespace LayerBusiness
 
         #region Show
         // Query default
-        public DataTable mostrarTramites()
+        public DataTable mostrarTodo()
         {
             DataTable _table = new DataTable();
            _table = _cdObject.mostrarTodo();
@@ -232,23 +232,38 @@ namespace LayerBusiness
             Cn_HandlerTramites.data = new DataTramites();
             Cn_HandlerTramites.current += 1;
 
-            d = Cn_HandlerTramites.data;
-            TramitesDataCache data = d.GetCache();
-
              // Generate the data cache from all of tramites
-            data.AddTramites(GetTramites(Cn_HandlerTramites.current));
+            Cn_HandlerTramites.data.GetCache().AddTramites(GetTramites(Cn_HandlerTramites.current));
 
-            data.totalTramites = countAllTramites();
-            data.totalErrores = countTramitesAllError();
-            data.totalProcesados = countTramitesAllProcesado();
-            data.totalInscriptos = countTramitesAllInscripto();
+            RefreshDataDashboardCache();
 
             Fechas.firstDayOfWeek = FirstDayOfWeek(DateTime.Now);
             Fechas.lastDayOfWeek = Fechas.firstDayOfWeek.AddDays(6);
+
+            DateTime dateNow = DateTime.Now;
+
+            Fechas.firstDayOfMonth = new DateTime(dateNow.Year, dateNow.Month, 1);
+            Fechas.lastDayOfMonth = Fechas.firstDayOfMonth.AddMonths(1).AddDays(-1);
         }
-        private  Tramites GetTramites(int id)
+        public void RefreshDataTramitesCache() 
         {
-            DataTable tramites = mostarTramites();
+            Cn_HandlerTramites.current += 1;
+            // Generate the new data cache from all of tramites
+            Cn_HandlerTramites.data.GetCache().AddTramites(GetTramites(Cn_HandlerTramites.current));
+            RefreshDataDashboardCache();
+        }
+        public void RefreshDataDashboardCache() 
+        {
+            Cn_HandlerTramites.data.GetCache().totalTramites = countAllTramites();
+            Cn_HandlerTramites.data.GetCache().totalErrores = countTramitesAllError();
+            Cn_HandlerTramites.data.GetCache().totalProcesados = countTramitesAllProcesado();
+            Cn_HandlerTramites.data.GetCache().totalInscriptos = countTramitesAllInscripto();
+            Cn_HandlerTramites.data.GetCache().totalEmpleados = countEmpleados();
+            Cn_HandlerTramites.data.GetCache().totalTipos = countAllTipoTramites();
+        }
+        private Tramites GetTramites(int id)
+        {
+            DataTable tramites = mostrarTodo();
             Tramites cache = new Tramites(id, tramites);
             return cache;
         }
