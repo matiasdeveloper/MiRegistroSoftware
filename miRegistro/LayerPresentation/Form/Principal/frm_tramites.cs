@@ -186,43 +186,15 @@ namespace LayerPresentation
             LinkedList<Employee> tmp = Cn_Employee.data.GetCache().GetUsers();
             LinkedListNode<Employee> employee = tmp.First;
 
-            DataTable table = CreateNewTopTable();
+            DataTable table = CreatorTables.EmployeeList();
 
             for (int i = 0; i < tmp.Count; i++)
             {
-                AddRowData(table, employee.Value.id, employee.Value.nombre);
+                CreatorTables.AddRowEmployeeList(table, employee.Value.id, employee.Value.nombre);
                 employee = employee.Next;
             }
 
             return table;
-        }
-        private DataTable CreateNewTopTable()
-        {
-            DataTable table = new DataTable();
-            DataColumn column;
-            // Create new DataColumn, set DataType, ColumnName and add to DataTable.
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.Int32");
-            column.ColumnName = "Id";
-            table.Columns.Add(column);
-
-            // Create a first column
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.String");
-            column.ColumnName = "Empleado";
-            table.Columns.Add(column);
-
-            return table;
-        }
-        private void AddRowData(DataTable table, int top, string empleado)
-        {
-            DataRow row;
-
-            row = table.NewRow();
-            row["Id"] = top;
-            row["Empleado"] = empleado;
-
-            table.Rows.Add(row);
         }
 
         // Get data from selected index in datagrid
@@ -276,6 +248,14 @@ namespace LayerPresentation
         
         private void dg_tramites_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Inscripto")
+            {
+                if (Convert.ToBoolean(e.Value) == true)
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                }
+            }
             if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Error")
             {
                 if (Convert.ToBoolean(e.Value) == true)
@@ -290,22 +270,17 @@ namespace LayerPresentation
                 }
             }
             
-            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Tipo Error")
+            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "TipoError")
             {
                 if (Convert.ToString(e.Value) == "Error Total")
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
                 }
                 else if (Convert.ToString(e.Value) == "Error Parcial")
                 {
                     e.CellStyle.ForeColor = Color.White;
                     e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
-                }
-                else if (Convert.ToString(e.Value) == "Sin Errores")
-                {
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
                 }
             }
         }

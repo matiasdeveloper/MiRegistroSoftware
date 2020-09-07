@@ -46,8 +46,7 @@ namespace LayerData.SqlServer
             string q = @"UPDATE Tramites 
                         SET Dominio = '" + dominio + "', Cod_proceso = " + cod_proceso + "" +
                         ", Cod_empleadoProceso = " + cod_empleadoProceso + ", Cod_etapa = '1', Observaciones = '" + observaciones + "'" +
-                        ", Error = " + error + ", Cod_error = " + cod_error + ", Inscripto = '0'" +
-                        ", Cod_empleadoInscripto = '1' " +
+                        ", Error = " + error + ", Cod_error = " + cod_error + "" +
                         "WHERE Id = " + id + ";";
 
             _command.Connection = _conn.openConnetion();
@@ -109,13 +108,14 @@ namespace LayerData.SqlServer
                 Error as Error, 
                 Errores.Nombre AS 'Tipo Error', 
                 Tramites.Observaciones as Observaciones, 
-                Inscripto as Inscripto
+                Inscripto as Inscripto,
+                Empleados1.Nombre as 'Nombre Inscripto'
                 FROM((Tipo_Tramites RIGHT OUTER JOIN(Tipo_Etapa RIGHT OUTER JOIN(Errores RIGHT OUTER JOIN(Empleados RIGHT OUTER JOIN Tramites 
                 ON Empleados.Cod_empleado = Tramites.Cod_empleadoProceso) 
                 ON Errores.Cod_error = Tramites.Cod_Error)
                 ON Tipo_Etapa.Cod_Etapa = Tramites.Cod_etapa) 
                 ON Tipo_Tramites.Cod_tramite = Tramites.Cod_proceso)INNER JOIN Empleados Empleados1 
-                ON Tramites.Cod_empleadoProceso = Empleados1.Cod_empleado)
+                ON Tramites.Cod_empleadoInscripto = Empleados1.Cod_empleado)
                 ORDER BY Fecha DESC";
 
             _command.Connection = _conn.openConnetion();
@@ -219,14 +219,15 @@ namespace LayerData.SqlServer
                 Error as Error, 
                 Errores.Nombre AS 'Tipo Error', 
                 Tramites.Observaciones as Observaciones, 
-                Inscripto as Inscripto
+                Inscripto as Inscripto,
+                Empleados1.Nombre as 'Nombre Inscripto'
                 FROM((Tipo_Tramites RIGHT OUTER JOIN(Tipo_Etapa RIGHT OUTER JOIN(Errores RIGHT OUTER JOIN(Empleados RIGHT OUTER JOIN Tramites 
                 ON Empleados.Cod_empleado = Tramites.Cod_empleadoProceso) 
                 ON Errores.Cod_error = Tramites.Cod_Error)
                 ON Tipo_Etapa.Cod_Etapa = Tramites.Cod_etapa) 
                 ON Tipo_Tramites.Cod_tramite = Tramites.Cod_proceso)INNER JOIN Empleados Empleados1 
-                ON Tramites.Cod_empleadoProceso = Empleados1.Cod_empleado)
-                WHERE Empleados.Cod_empleado = '" + employee +"' ORDER BY Fecha DESC";
+                ON Tramites.Cod_empleadoInscripto = Empleados1.Cod_empleado)
+                WHERE Empleados.Cod_empleado = '" + employee +"' OR Empleados1.Cod_empleado = '"+ employee +"' ORDER BY Fecha DESC";
 
             _command.Connection = _conn.openConnetion();
             _command.CommandText = q;

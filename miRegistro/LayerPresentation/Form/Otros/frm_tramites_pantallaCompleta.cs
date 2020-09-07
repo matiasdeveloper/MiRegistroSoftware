@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LayerPresentation.Clases;
 using LayerSoporte.Cache;
 
 namespace LayerPresentation
@@ -37,7 +38,7 @@ namespace LayerPresentation
         private void InitializeData() 
         {
             dg_tramites.AutoGenerateColumns = false;
-            dg_tramites.DataSource = GenerateNewDataTableInRange(data, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+            dg_tramites.DataSource = GetTableDate(data, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
             lbl_id.Text = id.ToString();
             lbl_mes.Text = mes;
@@ -50,14 +51,19 @@ namespace LayerPresentation
             lbl_desde.Text = Fechas.firstDayOfMonth.ToShortDateString();
             lbl_hasta.Text = Fechas.lastDayOfMonth.ToShortDateString();
         }
-        
-        private DataTable GenerateNewDataTableInRange(DataTable dat, DateTime dt1, DateTime dt2) 
+        private DataTable GetTableDate(DataTable data, DateTime dt1, DateTime dt2)
         {
-            DataTable tramites = dat;
+            DataTable tramites = CreatorTables.TramitesEmployeeTable();
             dt2.AddDays(1);
-            foreach (DataRow fila in tramites.Rows)
+            foreach (DataRow fila in data.Rows)
             {
-                if ((DateTime)fila[5] >= dt1 && (DateTime)fila[5] < dt2){} else { fila.Delete(); }
+                if ((DateTime)fila[5] >= dt1 && (DateTime)fila[5] < dt2)
+                {                   
+                    CreatorTables.AddRowTramitesEmployeesTable(tramites, (int)fila[0], (string)fila[1], (string)fila[2],
+                        (string)fila[3], (string)fila[4], (DateTime)fila[5], (bool)fila[6], 
+                        (string)fila[7], (string)fila[8], (bool)fila[9], (string)fila[10]);
+                } 
+                else { /* fila.Delete(); */}
             }
             return tramites;
         }
@@ -72,9 +78,33 @@ namespace LayerPresentation
             this.WindowState = FormWindowState.Minimized;
         }
         #endregion
- 
-        private void dg_tramites_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+
+        private void dg_tramites_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Empleado1")
+            {
+                if (Convert.ToString(e.Value) == empleado)
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(0, 0, 35);
+                }
+            }
+            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "NombreInscripto") 
+            {
+                if(Convert.ToString(e.Value) == empleado) 
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(0, 0, 35);
+                }
+            }
+            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Inscripto")
+            {
+                if (Convert.ToBoolean(e.Value) == true)
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                }
+            }
             if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Error")
             {
                 if (Convert.ToBoolean(e.Value) == true)
@@ -89,24 +119,24 @@ namespace LayerPresentation
                 }
             }
 
-            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Tipo Error")
+            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "TipoError")
             {
                 if (Convert.ToString(e.Value) == "Error Total")
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
                 }
                 else if (Convert.ToString(e.Value) == "Error Parcial")
                 {
                     e.CellStyle.ForeColor = Color.White;
                     e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
                 }
-                else if (Convert.ToString(e.Value) == "Sin Errores")
-                {
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
-                }
             }
+        }
+
+        private void frm_tramites_pantallaCompleta_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

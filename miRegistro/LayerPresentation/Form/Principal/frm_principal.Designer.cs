@@ -309,7 +309,7 @@
             this.lbl_lastacess.AutoSize = true;
             this.lbl_lastacess.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_lastacess.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_lastacess.Location = new System.Drawing.Point(104, 91);
+            this.lbl_lastacess.Location = new System.Drawing.Point(109, 91);
             this.lbl_lastacess.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_lastacess.Name = "lbl_lastacess";
             this.lbl_lastacess.Size = new System.Drawing.Size(88, 17);

@@ -68,17 +68,17 @@ namespace LayerBusiness
             _table = _cdObject.mostrarErrores();
             return _table;
         }
-        // Query simple
-        public DataTable mostrarByDominio(string dominio)
-        {
-            DataTable _table = new DataTable();
-            _table = _cdObject.mostrarByDominio(dominio);
-            return _table;
-        }
         public DataTable mostrarByEmployee(int employee)
         {
             DataTable _table = new DataTable();
             _table = _cdObject.mostrarByEmployee(employee);
+            return _table;
+        }
+        /*
+        public DataTable mostrarByDominio(string dominio)
+        {
+            DataTable _table = new DataTable();
+            _table = _cdObject.mostrarByDominio(dominio);
             return _table;
         }
         public DataTable mostrarByFecha(DateTime fecha)
@@ -146,7 +146,7 @@ namespace LayerBusiness
             DataTable _table = new DataTable();
             _table = _cdObject.GetTramitesID(id);
             return _table;
-        }
+        }*/
         #endregion
 
         #region Counting

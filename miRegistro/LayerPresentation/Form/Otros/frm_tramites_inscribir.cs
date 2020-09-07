@@ -1,4 +1,6 @@
 ﻿using LayerBusiness;
+using LayerPresentation.Clases;
+using LayerSoporte.Cache;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +27,7 @@ namespace LayerPresentation
             displayEmpleados(comboBox_empleados);
 
             _handlerTramites = frm;
-            this.isMultiple = isMultiple;
+            //this.isMultiple = isMultiple;
 
             lbl_dominio.Text = dominio;
             lbl_nombre.Text = nombre;
@@ -36,30 +38,43 @@ namespace LayerPresentation
 
         Cn_Tramites _cnObject = new Cn_Tramites();
         frm_tramites _handlerTramites;
-        private bool isMultiple;
+        //private bool isMultiple;
 
         private int id;
         private int cod_empleado;
         private bool initVariables()
         {
             bool isOk = true;
-            string empleado = comboBox_empleados.SelectedValue.ToString();
-            cod_empleado = Convert.ToInt32(empleado);
+            cod_empleado = Convert.ToInt32(comboBox_empleados.SelectedValue);
             return isOk;
         }
         private void deleteFields()
         {
             comboBox_empleados.SelectedIndex = 0;
         }
+        // Display combobox empleados
         private void displayEmpleados(ComboBox cb)
         {
-            Cn_Tramites objects = new Cn_Tramites();
-            DataTable dt = objects.mostrarEmpleados();
-            cb.DisplayMember = "Nombre";
-            cb.ValueMember = "Cod";
+            DataTable dt = GetEmployes();
+            cb.DisplayMember = "Empleado";
+            cb.ValueMember = "Id";
             cb.DataSource = dt;
         }
+        private DataTable GetEmployes()
+        {
+            LinkedList<Employee> tmp = Cn_Employee.data.GetCache().GetUsers();
+            LinkedListNode<Employee> employee = tmp.First;
 
+            DataTable table = CreatorTables.EmployeeList();
+
+            for (int i = 0; i < tmp.Count; i++)
+            {
+                CreatorTables.AddRowEmployeeList(table, employee.Value.id, employee.Value.nombre);
+                employee = employee.Next;
+            }
+
+            return table;
+        }
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();

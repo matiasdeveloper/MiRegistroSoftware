@@ -39,10 +39,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -52,12 +52,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_refreshdata = new System.Windows.Forms.Button();
             this.txtBox_fecha = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_errores = new System.Windows.Forms.TabPage();
             this.panel72 = new System.Windows.Forms.Panel();
+            this.label54 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.btn_toperror = new System.Windows.Forms.Button();
@@ -75,6 +77,7 @@
             this.panel53 = new System.Windows.Forms.Panel();
             this.chart_errores = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel42 = new System.Windows.Forms.Panel();
+            this.label55 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.panel30 = new System.Windows.Forms.Panel();
@@ -226,6 +229,7 @@
             this.panel94 = new System.Windows.Forms.Panel();
             this.lbl_parcialprocesados_mes = new System.Windows.Forms.Label();
             this.panel74 = new System.Windows.Forms.Panel();
+            this.label56 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.btn_top = new System.Windows.Forms.Button();
@@ -319,10 +323,7 @@
             this.lblnombre_1 = new System.Windows.Forms.Label();
             this.lblnombre_0 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.tabPage_formularios = new System.Windows.Forms.TabPage();
-            this.tabPage_personalizado = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btn_refreshdata = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage_errores.SuspendLayout();
@@ -371,6 +372,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.panel5.Controls.Add(this.btn_refreshdata);
             this.panel5.Controls.Add(this.txtBox_fecha);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label3);
@@ -379,6 +381,21 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1005, 30);
             this.panel5.TabIndex = 18;
+            // 
+            // btn_refreshdata
+            // 
+            this.btn_refreshdata.BackColor = System.Drawing.Color.Transparent;
+            this.btn_refreshdata.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_refreshdata.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
+            this.btn_refreshdata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_refreshdata.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btn_refreshdata.Location = new System.Drawing.Point(4, 4);
+            this.btn_refreshdata.Name = "btn_refreshdata";
+            this.btn_refreshdata.Size = new System.Drawing.Size(187, 24);
+            this.btn_refreshdata.TabIndex = 157;
+            this.btn_refreshdata.Text = "Actualizar datos";
+            this.btn_refreshdata.UseVisualStyleBackColor = false;
+            this.btn_refreshdata.Click += new System.EventHandler(this.btn_refreshdata_Click);
             // 
             // txtBox_fecha
             // 
@@ -417,12 +434,11 @@
             // 
             this.tabControl.Controls.Add(this.tabPage_errores);
             this.tabControl.Controls.Add(this.btn_detalleTop);
-            this.tabControl.Controls.Add(this.tabPage_formularios);
-            this.tabControl.Controls.Add(this.tabPage_personalizado);
-            this.tabControl.Location = new System.Drawing.Point(0, 35);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Location = new System.Drawing.Point(0, 30);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1005, 642);
+            this.tabControl.Size = new System.Drawing.Size(1005, 647);
             this.tabControl.TabIndex = 19;
             // 
             // tabPage_errores
@@ -435,7 +451,7 @@
             this.tabPage_errores.Location = new System.Drawing.Point(4, 26);
             this.tabPage_errores.Name = "tabPage_errores";
             this.tabPage_errores.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_errores.Size = new System.Drawing.Size(997, 612);
+            this.tabPage_errores.Size = new System.Drawing.Size(997, 617);
             this.tabPage_errores.TabIndex = 0;
             this.tabPage_errores.Text = "Errores";
             this.tabPage_errores.UseVisualStyleBackColor = true;
@@ -443,6 +459,7 @@
             // panel72
             // 
             this.panel72.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel72.Controls.Add(this.label54);
             this.panel72.Controls.Add(this.label51);
             this.panel72.Controls.Add(this.label44);
             this.panel72.Controls.Add(this.btn_toperror);
@@ -456,12 +473,24 @@
             this.panel72.Size = new System.Drawing.Size(637, 195);
             this.panel72.TabIndex = 95;
             // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.label54.Location = new System.Drawing.Point(369, 2);
+            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(172, 15);
+            this.label54.TabIndex = 166;
+            this.label54.Text = "Datos de tramites procesados /";
+            // 
             // label51
             // 
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label51.Location = new System.Drawing.Point(501, 165);
+            this.label51.Location = new System.Drawing.Point(505, 54);
             this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(128, 15);
@@ -473,7 +502,7 @@
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label44.Location = new System.Drawing.Point(528, 55);
+            this.label44.Location = new System.Drawing.Point(530, 35);
             this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(74, 16);
@@ -485,7 +514,7 @@
             this.btn_toperror.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_toperror.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_toperror.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_toperror.Location = new System.Drawing.Point(506, 107);
+            this.btn_toperror.Location = new System.Drawing.Point(508, 106);
             this.btn_toperror.Name = "btn_toperror";
             this.btn_toperror.Size = new System.Drawing.Size(121, 55);
             this.btn_toperror.TabIndex = 162;
@@ -497,7 +526,7 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(506, 77);
+            this.textBox1.Location = new System.Drawing.Point(508, 76);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 23);
             this.textBox1.TabIndex = 163;
@@ -509,7 +538,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label16.Location = new System.Drawing.Point(528, 4);
+            this.label16.Location = new System.Drawing.Point(538, 2);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(97, 15);
@@ -582,7 +611,6 @@
             this.dg_topErrores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_topErrores.Size = new System.Drawing.Size(493, 152);
             this.dg_topErrores.TabIndex = 111;
-            this.dg_topErrores.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dg_topErrores_CellFormatting_1);
             this.dg_topErrores.SelectionChanged += new System.EventHandler(this.dg_topErrores_SelectionChanged);
             // 
             // Id
@@ -707,25 +735,18 @@
             this.chart_errores.Name = "chart_errores";
             this.chart_errores.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart_errores.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series1.ChartArea = "ChartArea1";
-            series1.EmptyPointStyle.IsVisibleInLegend = false;
-            series1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.IsValueShownAsLabel = true;
-            series1.IsXValueIndexed = true;
-            series1.Legend = "Legend1";
-            series1.Name = "Empleados";
-            series1.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes;
-            series1.ToolTip = "#TOTAL{G}";
-            series1.YValuesPerPoint = 2;
-            this.chart_errores.Series.Add(series1);
             this.chart_errores.Size = new System.Drawing.Size(331, 287);
             this.chart_errores.TabIndex = 2;
             this.chart_errores.Text = "chart3";
+            title1.Name = "Title1";
+            title1.Text = "Grafico de errores mensual por empleado";
+            this.chart_errores.Titles.Add(title1);
             // 
             // panel42
             // 
             this.panel42.AutoScroll = true;
             this.panel42.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel42.Controls.Add(this.label55);
             this.panel42.Controls.Add(this.label31);
             this.panel42.Controls.Add(this.label39);
             this.panel42.Controls.Add(this.panel30);
@@ -745,12 +766,24 @@
             this.panel42.Size = new System.Drawing.Size(764, 283);
             this.panel42.TabIndex = 91;
             // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.label55.Location = new System.Drawing.Point(492, 3);
+            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(172, 15);
+            this.label55.TabIndex = 167;
+            this.label55.Text = "Datos de tramites procesados /";
+            // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label31.Location = new System.Drawing.Point(642, 3);
+            this.label31.Location = new System.Drawing.Point(663, 3);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(97, 15);
@@ -2183,7 +2216,7 @@
             this.btn_detalleTop.Location = new System.Drawing.Point(4, 26);
             this.btn_detalleTop.Name = "btn_detalleTop";
             this.btn_detalleTop.Padding = new System.Windows.Forms.Padding(3);
-            this.btn_detalleTop.Size = new System.Drawing.Size(997, 612);
+            this.btn_detalleTop.Size = new System.Drawing.Size(997, 617);
             this.btn_detalleTop.TabIndex = 1;
             this.btn_detalleTop.Text = "Tramites";
             this.btn_detalleTop.UseVisualStyleBackColor = true;
@@ -2565,21 +2598,12 @@
             this.chart_tramites.Margin = new System.Windows.Forms.Padding(4);
             this.chart_tramites.Name = "chart_tramites";
             this.chart_tramites.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineRange;
-            series2.EmptyPointStyle.IsVisibleInLegend = false;
-            series2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.IsValueShownAsLabel = true;
-            series2.IsXValueIndexed = true;
-            series2.Legend = "Legend1";
-            series2.Name = "Empleados";
-            series2.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes;
-            series2.ToolTip = "#TOTAL{G}";
-            series2.YValuesPerPoint = 4;
-            this.chart_tramites.Series.Add(series2);
             this.chart_tramites.Size = new System.Drawing.Size(598, 241);
             this.chart_tramites.TabIndex = 3;
             this.chart_tramites.Text = "chart3";
+            title2.Name = "Title1";
+            title2.Text = "Grafico de tramites mensual por empleado";
+            this.chart_tramites.Titles.Add(title2);
             // 
             // panel93
             // 
@@ -2629,6 +2653,7 @@
             // panel74
             // 
             this.panel74.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel74.Controls.Add(this.label56);
             this.panel74.Controls.Add(this.label52);
             this.panel74.Controls.Add(this.label43);
             this.panel74.Controls.Add(this.btn_top);
@@ -2642,12 +2667,24 @@
             this.panel74.Size = new System.Drawing.Size(598, 195);
             this.panel74.TabIndex = 102;
             // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.label56.Location = new System.Drawing.Point(330, 2);
+            this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(172, 15);
+            this.label56.TabIndex = 167;
+            this.label56.Text = "Datos de tramites procesados /";
+            // 
             // label52
             // 
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label52.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label52.Location = new System.Drawing.Point(458, 163);
+            this.label52.Location = new System.Drawing.Point(457, 57);
             this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(128, 15);
@@ -2659,7 +2696,7 @@
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label43.Location = new System.Drawing.Point(481, 47);
+            this.label43.Location = new System.Drawing.Point(481, 38);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(74, 16);
@@ -2671,7 +2708,7 @@
             this.btn_top.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_top.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_top.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btn_top.Location = new System.Drawing.Point(460, 99);
+            this.btn_top.Location = new System.Drawing.Point(460, 109);
             this.btn_top.Name = "btn_top";
             this.btn_top.Size = new System.Drawing.Size(123, 60);
             this.btn_top.TabIndex = 159;
@@ -2854,7 +2891,7 @@
             // txtBox_empleado
             // 
             this.txtBox_empleado.Enabled = false;
-            this.txtBox_empleado.Location = new System.Drawing.Point(460, 67);
+            this.txtBox_empleado.Location = new System.Drawing.Point(460, 77);
             this.txtBox_empleado.Name = "txtBox_empleado";
             this.txtBox_empleado.Size = new System.Drawing.Size(123, 23);
             this.txtBox_empleado.TabIndex = 160;
@@ -3914,45 +3951,10 @@
             this.panel11.Size = new System.Drawing.Size(150, 1);
             this.panel11.TabIndex = 15;
             // 
-            // tabPage_formularios
-            // 
-            this.tabPage_formularios.Location = new System.Drawing.Point(4, 26);
-            this.tabPage_formularios.Name = "tabPage_formularios";
-            this.tabPage_formularios.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_formularios.Size = new System.Drawing.Size(997, 612);
-            this.tabPage_formularios.TabIndex = 2;
-            this.tabPage_formularios.Text = "Formularios";
-            this.tabPage_formularios.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_personalizado
-            // 
-            this.tabPage_personalizado.Location = new System.Drawing.Point(4, 26);
-            this.tabPage_personalizado.Name = "tabPage_personalizado";
-            this.tabPage_personalizado.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_personalizado.Size = new System.Drawing.Size(997, 612);
-            this.tabPage_personalizado.TabIndex = 3;
-            this.tabPage_personalizado.Text = "Personalizadas";
-            this.tabPage_personalizado.UseVisualStyleBackColor = true;
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btn_refreshdata
-            // 
-            this.btn_refreshdata.BackColor = System.Drawing.Color.White;
-            this.btn_refreshdata.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_refreshdata.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_refreshdata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_refreshdata.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_refreshdata.Location = new System.Drawing.Point(813, 35);
-            this.btn_refreshdata.Name = "btn_refreshdata";
-            this.btn_refreshdata.Size = new System.Drawing.Size(187, 23);
-            this.btn_refreshdata.TabIndex = 157;
-            this.btn_refreshdata.Text = "Actualizar datos";
-            this.btn_refreshdata.UseVisualStyleBackColor = false;
-            this.btn_refreshdata.Click += new System.EventHandler(this.btn_refreshdata_Click);
             // 
             // frm_estadisticas
             // 
@@ -3960,7 +3962,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1005, 677);
-            this.Controls.Add(this.btn_refreshdata);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.panel5);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4275,8 +4276,6 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Panel panel86;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TabPage tabPage_formularios;
-        private System.Windows.Forms.TabPage tabPage_personalizado;
         private System.Windows.Forms.DataGridView dg_topErrores;
         private System.Windows.Forms.Panel panel71;
         private System.Windows.Forms.Timer timer1;
@@ -4318,5 +4317,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Inscriptos;
         private System.Windows.Forms.Panel panel75;
         private System.Windows.Forms.TextBox txtBox_empleado;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
     }
 }

@@ -8,6 +8,7 @@ namespace LayerSoporte.Cache
 {
     public class EmployeesDataCache
     {
+        // Variables
         LinkedList<Employee> usersCache;
         public int current;
         public int totalEmployees;
@@ -19,6 +20,7 @@ namespace LayerSoporte.Cache
             this.totalEmployees = totalEmployees;
         }
 
+        // Methods
         public bool AddUser(Employee u)
         {
             LinkedListNode<Employee> currentUser = usersCache.Find(u);
@@ -33,6 +35,11 @@ namespace LayerSoporte.Cache
                 return false;
             }
         }
+        /// <summary>
+        /// Get the specific user in the system
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public LinkedList<Employee> GetUserInfo(int id)
         {
             LinkedList<Employee> tmpUser = new LinkedList<Employee>();
@@ -48,13 +55,13 @@ namespace LayerSoporte.Cache
             }
             return tmpUser;
         }
+        /// <summary>
+        /// Get all the active users in the system
+        /// </summary>
+        /// <returns></returns>
         public LinkedList<Employee> GetUsers()
         {
             return usersCache;
-        }
-        public int GetTotalEmployees() 
-        {
-            return totalEmployees;
         }
     }
 }

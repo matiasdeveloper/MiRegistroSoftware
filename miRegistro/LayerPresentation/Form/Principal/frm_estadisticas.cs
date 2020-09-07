@@ -25,12 +25,9 @@ namespace LayerPresentation
         Cn_Empleados _handlerEmpleados = new Cn_Empleados();
 
         DateTime dateNow = DateTime.Now;
-        public static LinkedList<Employee> tmp;
         
         private void refreshDashboard() 
         {
-            tmp = Cn_Employee.data.GetCache().GetUsers();
-
             chargeDataTabTramites();
             chargeDataTabErrores();
         }
@@ -38,6 +35,11 @@ namespace LayerPresentation
         {
             _handlerEmpleados.GenerateEmployeesDataCache();
             _handlerTramites.RefreshDataDashboardCache();
+
+            chart_tramites.Series.Clear();
+            chart_errores.Series.Clear();
+
+            Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
         }
         private void chargeDataTabErrores()
         {
@@ -53,11 +55,12 @@ namespace LayerPresentation
             Label[] errorestotales = { lbl_errorTotal_0, lbl_errorTotal_1, lbl_errorTotal_2, lbl_errorTotal_3, lbl_errorTotal_4, lbl_errorTotal_5, lbl_errorTotal_6, lbl_errorTotal_7, lbl_errorTotal_8 };
             Panel[] paneles = { panelError_user_0, panelError_user_1, panelError_user_2, panelError_user_3, panelError_user_4, panelError_user_5, panelError_user_6, panelError_user_7, panelError_user_8 };
             
-            Statistics.DisplayNames(names, tmp);
-            Statistics.DisplayErrores(errores, erroresparciales, errorestotales, paneles,tmp);
+            Statistics.DisplayNames(names);
+            Statistics.DisplayErrores(errores, erroresparciales, errorestotales, paneles);
 
-            Statistics.DisplayTopErrores(dg_topErrores, tmp);
+            Statistics.DisplayTopErrores(dg_topErrores);
             #region CHART
+            chart_errores.Series.Add("Empleados");
             chart_errores.Series["Empleados"].SetDefault(true);
             chart_errores.Series["Empleados"].Enabled = true;
             chart_errores.Visible = true;
@@ -92,13 +95,14 @@ namespace LayerPresentation
             Label[] count_inscriptosMes = { lbl_countInscriptos_0, lbl_countInscriptos_1, lbl_countInscriptos_2, lbl_countInscriptos_3, lbl_countInscriptos_4, lbl_countInscriptos_5, lbl_countInscriptos_6, lbl_countInscriptos_7, lbl_countInscriptos_8 };
             Label[] count_procesadosMes = { lbl_countProcesados_0, lbl_countProcesados_1, lbl_countProcesados_2, lbl_countProcesados_3, lbl_countProcesados_4, lbl_countProcesados_5, lbl_countProcesados_6, lbl_countProcesados_7, lbl_countProcesados_8 };
 
-            Statistics.DisplayNames(names_inscriptosMes, tmp);
-            Statistics.DisplayNames(names_procesadosMes, tmp);
-            Statistics.DisplayEtapas(count_inscriptosMes, count_procesadosMes, tmp);
+            Statistics.DisplayNames(names_inscriptosMes);
+            Statistics.DisplayNames(names_procesadosMes);
+            Statistics.DisplayEtapas(count_inscriptosMes, count_procesadosMes);
             
-            Statistics.DisplayTopTramites(dg_topTramites, tmp);
+            Statistics.DisplayTopTramites(dg_topTramites);
 
             #region CHART
+            chart_tramites.Series.Add("Empleados");
             chart_tramites.Series["Empleados"].SetDefault(true);
             chart_tramites.Series["Empleados"].Enabled = true;
             chart_tramites.Visible = true;
@@ -140,8 +144,8 @@ namespace LayerPresentation
             string mes = dateNow.Month.ToString();
             DataTable dt = null;
             dt = GetDataTramitesTableWithID(id);
-            int[] tramites = Statistics.FindTramites(dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-            int[] errores = Statistics.FindErrores(dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
             
             frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites);
             mv.Show();
@@ -154,31 +158,13 @@ namespace LayerPresentation
 
             DataTable dt = null;
             dt = GetDataTramitesTableWithID(id);
-            int[] tramites = Statistics.FindTramites(dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-            int[] errores = Statistics.FindErrores(dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
             frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites);
             mv.Show();
         }
 
-        private void dg_topErrores_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (this.dg_topErrores.Columns[e.ColumnIndex].Name == "Total")
-            {
-                if (Convert.ToInt32(e.Value) >= 3)
-                {
-                    // Rojo
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
-                }
-                else
-                {
-                    // Verde
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
-                }
-            }
-        }
         private void dg_topTramites_SelectionChanged(object sender, EventArgs e)
         {
             if(dg_topTramites.SelectedRows.Count != 0) 
@@ -205,6 +191,7 @@ namespace LayerPresentation
 
         private void frm_estadisticas_Load(object sender, EventArgs e)
         {
+            Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
             refreshDashboard();
         }
     }

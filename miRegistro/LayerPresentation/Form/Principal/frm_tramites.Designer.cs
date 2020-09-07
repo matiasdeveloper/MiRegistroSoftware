@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,38 +42,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_query = new System.Windows.Forms.Panel();
-            this.panel_simple = new System.Windows.Forms.Panel();
-            this.panel_simple_diaria = new System.Windows.Forms.Panel();
-            this.btn_imprimirPorMes = new System.Windows.Forms.Button();
-            this.btn_imprimirPorSemana = new System.Windows.Forms.Button();
-            this.btn_imprimirPorAyer = new System.Windows.Forms.Button();
-            this.btn_imprimirPorHoy = new System.Windows.Forms.Button();
-            this.label37 = new System.Windows.Forms.Label();
-            this.btn_simple_diaria = new System.Windows.Forms.Button();
-            this.panel_simple_dominio = new System.Windows.Forms.Panel();
-            this.txtBox_dominio = new System.Windows.Forms.TextBox();
-            this.btn_imprimirPorDominio = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.btn_simple_dominio = new System.Windows.Forms.Button();
-            this.panel_simple_empleado = new System.Windows.Forms.Panel();
-            this.comboBox_empleado = new System.Windows.Forms.ComboBox();
-            this.btn_imprimirPorEmpleado = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btn_simple_empleado = new System.Windows.Forms.Button();
-            this.panel_simple_fecha = new System.Windows.Forms.Panel();
-            this.dateTimePicker_fecha2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker_fecha1 = new System.Windows.Forms.DateTimePicker();
-            this.btn_imprimirPorFecha = new System.Windows.Forms.Button();
-            this.lbl_info = new System.Windows.Forms.Label();
-            this.lbl_desde = new System.Windows.Forms.Label();
-            this.lbl_hasta = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btn_simple_fecha = new System.Windows.Forms.Button();
             this.panel_complejo = new System.Windows.Forms.Panel();
             this.panel_complejo_fechaerrores = new System.Windows.Forms.Panel();
             this.dateTimePicker_fecha10 = new System.Windows.Forms.DateTimePicker();
@@ -122,6 +92,37 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.btn_complejo_fechaempleado = new System.Windows.Forms.Button();
+            this.panel_simple = new System.Windows.Forms.Panel();
+            this.panel_simple_diaria = new System.Windows.Forms.Panel();
+            this.btn_imprimirPorMes = new System.Windows.Forms.Button();
+            this.btn_imprimirPorSemana = new System.Windows.Forms.Button();
+            this.btn_imprimirPorAyer = new System.Windows.Forms.Button();
+            this.btn_imprimirPorHoy = new System.Windows.Forms.Button();
+            this.label37 = new System.Windows.Forms.Label();
+            this.btn_simple_diaria = new System.Windows.Forms.Button();
+            this.panel_simple_dominio = new System.Windows.Forms.Panel();
+            this.txtBox_dominio = new System.Windows.Forms.TextBox();
+            this.btn_imprimirPorDominio = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btn_simple_dominio = new System.Windows.Forms.Button();
+            this.panel_simple_empleado = new System.Windows.Forms.Panel();
+            this.comboBox_empleado = new System.Windows.Forms.ComboBox();
+            this.btn_imprimirPorEmpleado = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btn_simple_empleado = new System.Windows.Forms.Button();
+            this.panel_simple_fecha = new System.Windows.Forms.Panel();
+            this.dateTimePicker_fecha2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_fecha1 = new System.Windows.Forms.DateTimePicker();
+            this.btn_imprimirPorFecha = new System.Windows.Forms.Button();
+            this.lbl_info = new System.Windows.Forms.Label();
+            this.lbl_desde = new System.Windows.Forms.Label();
+            this.lbl_hasta = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btn_simple_fecha = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -136,16 +137,6 @@
             this.label36 = new System.Windows.Forms.Label();
             this.lbl_totalinscriptos = new System.Windows.Forms.Label();
             this.dg_tramites = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dominio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Etapa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Error = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.TipoError = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Inscripto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label31 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -171,17 +162,28 @@
             this.label5 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dominio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Etapa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Error = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.TipoError = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inscripto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreInscripto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_query.SuspendLayout();
-            this.panel_simple.SuspendLayout();
-            this.panel_simple_diaria.SuspendLayout();
-            this.panel_simple_dominio.SuspendLayout();
-            this.panel_simple_empleado.SuspendLayout();
-            this.panel_simple_fecha.SuspendLayout();
             this.panel_complejo.SuspendLayout();
             this.panel_complejo_fechaerrores.SuspendLayout();
             this.panel_complejo_fechainscriptos.SuspendLayout();
             this.panel_complejo_fechaprocesados.SuspendLayout();
             this.panel_complejo_fechaempleado.SuspendLayout();
+            this.panel_simple.SuspendLayout();
+            this.panel_simple_diaria.SuspendLayout();
+            this.panel_simple_dominio.SuspendLayout();
+            this.panel_simple_empleado.SuspendLayout();
+            this.panel_simple_fecha.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_tramites)).BeginInit();
             this.panel1.SuspendLayout();
@@ -201,440 +203,6 @@
             this.panel_query.Name = "panel_query";
             this.panel_query.Size = new System.Drawing.Size(244, 532);
             this.panel_query.TabIndex = 82;
-            // 
-            // panel_simple
-            // 
-            this.panel_simple.AutoScroll = true;
-            this.panel_simple.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel_simple.Controls.Add(this.panel_simple_diaria);
-            this.panel_simple.Controls.Add(this.btn_simple_diaria);
-            this.panel_simple.Controls.Add(this.panel_simple_dominio);
-            this.panel_simple.Controls.Add(this.btn_simple_dominio);
-            this.panel_simple.Controls.Add(this.panel_simple_empleado);
-            this.panel_simple.Controls.Add(this.btn_simple_empleado);
-            this.panel_simple.Controls.Add(this.panel_simple_fecha);
-            this.panel_simple.Controls.Add(this.btn_simple_fecha);
-            this.panel_simple.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_simple.Location = new System.Drawing.Point(0, 0);
-            this.panel_simple.Name = "panel_simple";
-            this.panel_simple.Size = new System.Drawing.Size(244, 532);
-            this.panel_simple.TabIndex = 2;
-            this.panel_simple.Visible = false;
-            // 
-            // panel_simple_diaria
-            // 
-            this.panel_simple_diaria.BackColor = System.Drawing.Color.White;
-            this.panel_simple_diaria.Controls.Add(this.btn_imprimirPorMes);
-            this.panel_simple_diaria.Controls.Add(this.btn_imprimirPorSemana);
-            this.panel_simple_diaria.Controls.Add(this.btn_imprimirPorAyer);
-            this.panel_simple_diaria.Controls.Add(this.btn_imprimirPorHoy);
-            this.panel_simple_diaria.Controls.Add(this.label37);
-            this.panel_simple_diaria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_simple_diaria.Location = new System.Drawing.Point(0, 776);
-            this.panel_simple_diaria.Name = "panel_simple_diaria";
-            this.panel_simple_diaria.Size = new System.Drawing.Size(227, 183);
-            this.panel_simple_diaria.TabIndex = 86;
-            this.panel_simple_diaria.Visible = false;
-            // 
-            // btn_imprimirPorMes
-            // 
-            this.btn_imprimirPorMes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_imprimirPorMes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_imprimirPorMes.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_imprimirPorMes.Location = new System.Drawing.Point(10, 139);
-            this.btn_imprimirPorMes.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_imprimirPorMes.Name = "btn_imprimirPorMes";
-            this.btn_imprimirPorMes.Size = new System.Drawing.Size(200, 25);
-            this.btn_imprimirPorMes.TabIndex = 101;
-            this.btn_imprimirPorMes.Text = "Tramites del mes";
-            this.btn_imprimirPorMes.UseVisualStyleBackColor = true;
-            this.btn_imprimirPorMes.Click += new System.EventHandler(this.btn_imprimirPorMes_Click);
-            // 
-            // btn_imprimirPorSemana
-            // 
-            this.btn_imprimirPorSemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_imprimirPorSemana.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_imprimirPorSemana.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_imprimirPorSemana.Location = new System.Drawing.Point(11, 106);
-            this.btn_imprimirPorSemana.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_imprimirPorSemana.Name = "btn_imprimirPorSemana";
-            this.btn_imprimirPorSemana.Size = new System.Drawing.Size(200, 25);
-            this.btn_imprimirPorSemana.TabIndex = 100;
-            this.btn_imprimirPorSemana.Text = "Tramites de la semana";
-            this.btn_imprimirPorSemana.UseVisualStyleBackColor = true;
-            this.btn_imprimirPorSemana.Click += new System.EventHandler(this.btn_imprimirPorSemana_Click);
-            // 
-            // btn_imprimirPorAyer
-            // 
-            this.btn_imprimirPorAyer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_imprimirPorAyer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_imprimirPorAyer.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_imprimirPorAyer.Location = new System.Drawing.Point(10, 73);
-            this.btn_imprimirPorAyer.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_imprimirPorAyer.Name = "btn_imprimirPorAyer";
-            this.btn_imprimirPorAyer.Size = new System.Drawing.Size(200, 25);
-            this.btn_imprimirPorAyer.TabIndex = 99;
-            this.btn_imprimirPorAyer.Text = "Tramites de ayer";
-            this.btn_imprimirPorAyer.UseVisualStyleBackColor = true;
-            this.btn_imprimirPorAyer.Click += new System.EventHandler(this.btn_imprimirPorAyer_Click);
-            // 
-            // btn_imprimirPorHoy
-            // 
-            this.btn_imprimirPorHoy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_imprimirPorHoy.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_imprimirPorHoy.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_imprimirPorHoy.Location = new System.Drawing.Point(11, 40);
-            this.btn_imprimirPorHoy.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_imprimirPorHoy.Name = "btn_imprimirPorHoy";
-            this.btn_imprimirPorHoy.Size = new System.Drawing.Size(200, 25);
-            this.btn_imprimirPorHoy.TabIndex = 97;
-            this.btn_imprimirPorHoy.Text = "Tramites de hoy";
-            this.btn_imprimirPorHoy.UseVisualStyleBackColor = true;
-            this.btn_imprimirPorHoy.Click += new System.EventHandler(this.btn_imprimirPorHoy_Click);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.Black;
-            this.label37.Location = new System.Drawing.Point(22, 11);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(181, 17);
-            this.label37.TabIndex = 91;
-            this.label37.Text = "Consultar tramites por fecha";
-            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_simple_diaria
-            // 
-            this.btn_simple_diaria.BackColor = System.Drawing.Color.White;
-            this.btn_simple_diaria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_simple_diaria.FlatAppearance.BorderSize = 0;
-            this.btn_simple_diaria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_simple_diaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_simple_diaria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_simple_diaria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_simple_diaria.Location = new System.Drawing.Point(0, 721);
-            this.btn_simple_diaria.Name = "btn_simple_diaria";
-            this.btn_simple_diaria.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_simple_diaria.Size = new System.Drawing.Size(227, 55);
-            this.btn_simple_diaria.TabIndex = 85;
-            this.btn_simple_diaria.Text = "Consulta diaria";
-            this.btn_simple_diaria.UseVisualStyleBackColor = false;
-            this.btn_simple_diaria.Click += new System.EventHandler(this.btn_simple_diaria_Click);
-            // 
-            // panel_simple_dominio
-            // 
-            this.panel_simple_dominio.BackColor = System.Drawing.Color.White;
-            this.panel_simple_dominio.Controls.Add(this.txtBox_dominio);
-            this.panel_simple_dominio.Controls.Add(this.btn_imprimirPorDominio);
-            this.panel_simple_dominio.Controls.Add(this.label14);
-            this.panel_simple_dominio.Controls.Add(this.label15);
-            this.panel_simple_dominio.Controls.Add(this.label17);
-            this.panel_simple_dominio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_simple_dominio.Location = new System.Drawing.Point(0, 544);
-            this.panel_simple_dominio.Name = "panel_simple_dominio";
-            this.panel_simple_dominio.Size = new System.Drawing.Size(227, 177);
-            this.panel_simple_dominio.TabIndex = 84;
-            this.panel_simple_dominio.Visible = false;
-            // 
-            // txtBox_dominio
-            // 
-            this.txtBox_dominio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBox_dominio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_dominio.ForeColor = System.Drawing.Color.Gray;
-            this.txtBox_dominio.Location = new System.Drawing.Point(15, 60);
-            this.txtBox_dominio.Name = "txtBox_dominio";
-            this.txtBox_dominio.Size = new System.Drawing.Size(201, 23);
-            this.txtBox_dominio.TabIndex = 80;
-            this.txtBox_dominio.Text = "EJ: AA111XX";
-            this.txtBox_dominio.Enter += new System.EventHandler(this.txtBox_dominio_Enter);
-            this.txtBox_dominio.Leave += new System.EventHandler(this.txtBox_dominio_Leave);
-            // 
-            // btn_imprimirPorDominio
-            // 
-            this.btn_imprimirPorDominio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_imprimirPorDominio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_imprimirPorDominio.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_imprimirPorDominio.Location = new System.Drawing.Point(11, 134);
-            this.btn_imprimirPorDominio.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_imprimirPorDominio.Name = "btn_imprimirPorDominio";
-            this.btn_imprimirPorDominio.Size = new System.Drawing.Size(200, 25);
-            this.btn_imprimirPorDominio.TabIndex = 97;
-            this.btn_imprimirPorDominio.Text = "Buscar por dominio";
-            this.btn_imprimirPorDominio.UseVisualStyleBackColor = true;
-            this.btn_imprimirPorDominio.Click += new System.EventHandler(this.btn_imprimirPorDominio_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label14.Location = new System.Drawing.Point(8, 92);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(219, 30);
-            this.label14.TabIndex = 96;
-            this.label14.Text = "*Por favor ingrese un dominio o patente\r\npara iniciar la busquedad";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label15.Location = new System.Drawing.Point(14, 33);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(57, 17);
-            this.label15.TabIndex = 94;
-            this.label15.Text = "Dominio";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(22, 11);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(181, 17);
-            this.label17.TabIndex = 91;
-            this.label17.Text = "Consultar tramites por fecha";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_simple_dominio
-            // 
-            this.btn_simple_dominio.BackColor = System.Drawing.Color.White;
-            this.btn_simple_dominio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_simple_dominio.FlatAppearance.BorderSize = 0;
-            this.btn_simple_dominio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_simple_dominio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_simple_dominio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_simple_dominio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_simple_dominio.Location = new System.Drawing.Point(0, 489);
-            this.btn_simple_dominio.Name = "btn_simple_dominio";
-            this.btn_simple_dominio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_simple_dominio.Size = new System.Drawing.Size(227, 55);
-            this.btn_simple_dominio.TabIndex = 83;
-            this.btn_simple_dominio.Text = "Consulta por dominio";
-            this.btn_simple_dominio.UseVisualStyleBackColor = false;
-            this.btn_simple_dominio.Click += new System.EventHandler(this.btn_simple_dominio_Click);
-            // 
-            // panel_simple_empleado
-            // 
-            this.panel_simple_empleado.BackColor = System.Drawing.Color.White;
-            this.panel_simple_empleado.Controls.Add(this.comboBox_empleado);
-            this.panel_simple_empleado.Controls.Add(this.btn_imprimirPorEmpleado);
-            this.panel_simple_empleado.Controls.Add(this.label10);
-            this.panel_simple_empleado.Controls.Add(this.label11);
-            this.panel_simple_empleado.Controls.Add(this.label13);
-            this.panel_simple_empleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_simple_empleado.Location = new System.Drawing.Point(0, 317);
-            this.panel_simple_empleado.Name = "panel_simple_empleado";
-            this.panel_simple_empleado.Size = new System.Drawing.Size(227, 172);
-            this.panel_simple_empleado.TabIndex = 82;
-            this.panel_simple_empleado.Visible = false;
-            // 
-            // comboBox_empleado
-            // 
-            this.comboBox_empleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_empleado.FormattingEnabled = true;
-            this.comboBox_empleado.Location = new System.Drawing.Point(13, 60);
-            this.comboBox_empleado.Name = "comboBox_empleado";
-            this.comboBox_empleado.Size = new System.Drawing.Size(201, 25);
-            this.comboBox_empleado.TabIndex = 98;
-            // 
-            // btn_imprimirPorEmpleado
-            // 
-            this.btn_imprimirPorEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_imprimirPorEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_imprimirPorEmpleado.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_imprimirPorEmpleado.Location = new System.Drawing.Point(13, 136);
-            this.btn_imprimirPorEmpleado.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_imprimirPorEmpleado.Name = "btn_imprimirPorEmpleado";
-            this.btn_imprimirPorEmpleado.Size = new System.Drawing.Size(200, 25);
-            this.btn_imprimirPorEmpleado.TabIndex = 97;
-            this.btn_imprimirPorEmpleado.Text = "Buscar por empleado";
-            this.btn_imprimirPorEmpleado.UseVisualStyleBackColor = true;
-            this.btn_imprimirPorEmpleado.Click += new System.EventHandler(this.btn_imprimirPorEmpleado_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label10.Location = new System.Drawing.Point(13, 94);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(194, 30);
-            this.label10.TabIndex = 96;
-            this.label10.Text = "*Por favor seleccione un empleado \r\npara generar la consulta";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label11.Location = new System.Drawing.Point(14, 34);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 17);
-            this.label11.TabIndex = 94;
-            this.label11.Text = "Empleado";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(8, 9);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(209, 17);
-            this.label13.TabIndex = 91;
-            this.label13.Text = "Consultar tramites por empleado";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_simple_empleado
-            // 
-            this.btn_simple_empleado.BackColor = System.Drawing.Color.White;
-            this.btn_simple_empleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_simple_empleado.FlatAppearance.BorderSize = 0;
-            this.btn_simple_empleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_simple_empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_simple_empleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_simple_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_simple_empleado.Location = new System.Drawing.Point(0, 262);
-            this.btn_simple_empleado.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.btn_simple_empleado.Name = "btn_simple_empleado";
-            this.btn_simple_empleado.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_simple_empleado.Size = new System.Drawing.Size(227, 55);
-            this.btn_simple_empleado.TabIndex = 81;
-            this.btn_simple_empleado.Text = "Consulta por empleado";
-            this.btn_simple_empleado.UseVisualStyleBackColor = false;
-            this.btn_simple_empleado.Click += new System.EventHandler(this.btn_simple_empleado_Click);
-            // 
-            // panel_simple_fecha
-            // 
-            this.panel_simple_fecha.BackColor = System.Drawing.Color.White;
-            this.panel_simple_fecha.Controls.Add(this.dateTimePicker_fecha2);
-            this.panel_simple_fecha.Controls.Add(this.dateTimePicker_fecha1);
-            this.panel_simple_fecha.Controls.Add(this.btn_imprimirPorFecha);
-            this.panel_simple_fecha.Controls.Add(this.lbl_info);
-            this.panel_simple_fecha.Controls.Add(this.lbl_desde);
-            this.panel_simple_fecha.Controls.Add(this.lbl_hasta);
-            this.panel_simple_fecha.Controls.Add(this.label9);
-            this.panel_simple_fecha.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_simple_fecha.Location = new System.Drawing.Point(0, 55);
-            this.panel_simple_fecha.Name = "panel_simple_fecha";
-            this.panel_simple_fecha.Size = new System.Drawing.Size(227, 207);
-            this.panel_simple_fecha.TabIndex = 80;
-            this.panel_simple_fecha.Visible = false;
-            // 
-            // dateTimePicker_fecha2
-            // 
-            this.dateTimePicker_fecha2.Checked = false;
-            this.dateTimePicker_fecha2.CustomFormat = "MM/dd/yyyy";
-            this.dateTimePicker_fecha2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_fecha2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker_fecha2.Location = new System.Drawing.Point(9, 106);
-            this.dateTimePicker_fecha2.Name = "dateTimePicker_fecha2";
-            this.dateTimePicker_fecha2.ShowCheckBox = true;
-            this.dateTimePicker_fecha2.Size = new System.Drawing.Size(201, 23);
-            this.dateTimePicker_fecha2.TabIndex = 99;
-            // 
-            // dateTimePicker_fecha1
-            // 
-            this.dateTimePicker_fecha1.CustomFormat = "MM/dd/yyyy";
-            this.dateTimePicker_fecha1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_fecha1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker_fecha1.Location = new System.Drawing.Point(9, 57);
-            this.dateTimePicker_fecha1.Name = "dateTimePicker_fecha1";
-            this.dateTimePicker_fecha1.ShowCheckBox = true;
-            this.dateTimePicker_fecha1.Size = new System.Drawing.Size(201, 23);
-            this.dateTimePicker_fecha1.TabIndex = 98;
-            // 
-            // btn_imprimirPorFecha
-            // 
-            this.btn_imprimirPorFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_imprimirPorFecha.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_imprimirPorFecha.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_imprimirPorFecha.Location = new System.Drawing.Point(8, 171);
-            this.btn_imprimirPorFecha.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_imprimirPorFecha.Name = "btn_imprimirPorFecha";
-            this.btn_imprimirPorFecha.Size = new System.Drawing.Size(200, 25);
-            this.btn_imprimirPorFecha.TabIndex = 97;
-            this.btn_imprimirPorFecha.Text = "Buscar por fecha";
-            this.btn_imprimirPorFecha.UseVisualStyleBackColor = true;
-            this.btn_imprimirPorFecha.Click += new System.EventHandler(this.btn_imprimirPorFecha_Click);
-            // 
-            // lbl_info
-            // 
-            this.lbl_info.AutoSize = true;
-            this.lbl_info.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_info.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.lbl_info.Location = new System.Drawing.Point(4, 134);
-            this.lbl_info.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_info.Name = "lbl_info";
-            this.lbl_info.Size = new System.Drawing.Size(224, 30);
-            this.lbl_info.TabIndex = 96;
-            this.lbl_info.Text = "*Por favor seleccione al menos una fecha\r\n para generar la consulta\r\n";
-            // 
-            // lbl_desde
-            // 
-            this.lbl_desde.AutoSize = true;
-            this.lbl_desde.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_desde.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbl_desde.Location = new System.Drawing.Point(9, 37);
-            this.lbl_desde.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_desde.Name = "lbl_desde";
-            this.lbl_desde.Size = new System.Drawing.Size(45, 17);
-            this.lbl_desde.TabIndex = 94;
-            this.lbl_desde.Text = "Desde";
-            // 
-            // lbl_hasta
-            // 
-            this.lbl_hasta.AutoSize = true;
-            this.lbl_hasta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_hasta.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbl_hasta.Location = new System.Drawing.Point(10, 85);
-            this.lbl_hasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_hasta.Name = "lbl_hasta";
-            this.lbl_hasta.Size = new System.Drawing.Size(41, 17);
-            this.lbl_hasta.TabIndex = 95;
-            this.lbl_hasta.Text = "Hasta";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(21, 11);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(181, 17);
-            this.label9.TabIndex = 91;
-            this.label9.Text = "Consultar tramites por fecha";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_simple_fecha
-            // 
-            this.btn_simple_fecha.BackColor = System.Drawing.Color.White;
-            this.btn_simple_fecha.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_simple_fecha.FlatAppearance.BorderSize = 0;
-            this.btn_simple_fecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_simple_fecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_simple_fecha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_simple_fecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_simple_fecha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_simple_fecha.Location = new System.Drawing.Point(0, 0);
-            this.btn_simple_fecha.Name = "btn_simple_fecha";
-            this.btn_simple_fecha.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_simple_fecha.Size = new System.Drawing.Size(227, 55);
-            this.btn_simple_fecha.TabIndex = 5;
-            this.btn_simple_fecha.Text = "Consulta por fecha";
-            this.btn_simple_fecha.UseVisualStyleBackColor = false;
-            this.btn_simple_fecha.Click += new System.EventHandler(this.btn_simple_fecha_Click);
             // 
             // panel_complejo
             // 
@@ -1301,6 +869,440 @@
             this.btn_complejo_fechaempleado.UseVisualStyleBackColor = false;
             this.btn_complejo_fechaempleado.Click += new System.EventHandler(this.btn_complejo_fechaempleado_Click);
             // 
+            // panel_simple
+            // 
+            this.panel_simple.AutoScroll = true;
+            this.panel_simple.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_simple.Controls.Add(this.panel_simple_diaria);
+            this.panel_simple.Controls.Add(this.btn_simple_diaria);
+            this.panel_simple.Controls.Add(this.panel_simple_dominio);
+            this.panel_simple.Controls.Add(this.btn_simple_dominio);
+            this.panel_simple.Controls.Add(this.panel_simple_empleado);
+            this.panel_simple.Controls.Add(this.btn_simple_empleado);
+            this.panel_simple.Controls.Add(this.panel_simple_fecha);
+            this.panel_simple.Controls.Add(this.btn_simple_fecha);
+            this.panel_simple.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_simple.Location = new System.Drawing.Point(0, 0);
+            this.panel_simple.Name = "panel_simple";
+            this.panel_simple.Size = new System.Drawing.Size(244, 532);
+            this.panel_simple.TabIndex = 2;
+            this.panel_simple.Visible = false;
+            // 
+            // panel_simple_diaria
+            // 
+            this.panel_simple_diaria.BackColor = System.Drawing.Color.White;
+            this.panel_simple_diaria.Controls.Add(this.btn_imprimirPorMes);
+            this.panel_simple_diaria.Controls.Add(this.btn_imprimirPorSemana);
+            this.panel_simple_diaria.Controls.Add(this.btn_imprimirPorAyer);
+            this.panel_simple_diaria.Controls.Add(this.btn_imprimirPorHoy);
+            this.panel_simple_diaria.Controls.Add(this.label37);
+            this.panel_simple_diaria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_simple_diaria.Location = new System.Drawing.Point(0, 776);
+            this.panel_simple_diaria.Name = "panel_simple_diaria";
+            this.panel_simple_diaria.Size = new System.Drawing.Size(227, 183);
+            this.panel_simple_diaria.TabIndex = 86;
+            this.panel_simple_diaria.Visible = false;
+            // 
+            // btn_imprimirPorMes
+            // 
+            this.btn_imprimirPorMes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_imprimirPorMes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_imprimirPorMes.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_imprimirPorMes.Location = new System.Drawing.Point(10, 139);
+            this.btn_imprimirPorMes.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_imprimirPorMes.Name = "btn_imprimirPorMes";
+            this.btn_imprimirPorMes.Size = new System.Drawing.Size(200, 25);
+            this.btn_imprimirPorMes.TabIndex = 101;
+            this.btn_imprimirPorMes.Text = "Tramites del mes";
+            this.btn_imprimirPorMes.UseVisualStyleBackColor = true;
+            this.btn_imprimirPorMes.Click += new System.EventHandler(this.btn_imprimirPorMes_Click);
+            // 
+            // btn_imprimirPorSemana
+            // 
+            this.btn_imprimirPorSemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_imprimirPorSemana.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_imprimirPorSemana.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_imprimirPorSemana.Location = new System.Drawing.Point(11, 106);
+            this.btn_imprimirPorSemana.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_imprimirPorSemana.Name = "btn_imprimirPorSemana";
+            this.btn_imprimirPorSemana.Size = new System.Drawing.Size(200, 25);
+            this.btn_imprimirPorSemana.TabIndex = 100;
+            this.btn_imprimirPorSemana.Text = "Tramites de la semana";
+            this.btn_imprimirPorSemana.UseVisualStyleBackColor = true;
+            this.btn_imprimirPorSemana.Click += new System.EventHandler(this.btn_imprimirPorSemana_Click);
+            // 
+            // btn_imprimirPorAyer
+            // 
+            this.btn_imprimirPorAyer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_imprimirPorAyer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_imprimirPorAyer.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_imprimirPorAyer.Location = new System.Drawing.Point(10, 73);
+            this.btn_imprimirPorAyer.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_imprimirPorAyer.Name = "btn_imprimirPorAyer";
+            this.btn_imprimirPorAyer.Size = new System.Drawing.Size(200, 25);
+            this.btn_imprimirPorAyer.TabIndex = 99;
+            this.btn_imprimirPorAyer.Text = "Tramites de ayer";
+            this.btn_imprimirPorAyer.UseVisualStyleBackColor = true;
+            this.btn_imprimirPorAyer.Click += new System.EventHandler(this.btn_imprimirPorAyer_Click);
+            // 
+            // btn_imprimirPorHoy
+            // 
+            this.btn_imprimirPorHoy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_imprimirPorHoy.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_imprimirPorHoy.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_imprimirPorHoy.Location = new System.Drawing.Point(11, 40);
+            this.btn_imprimirPorHoy.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_imprimirPorHoy.Name = "btn_imprimirPorHoy";
+            this.btn_imprimirPorHoy.Size = new System.Drawing.Size(200, 25);
+            this.btn_imprimirPorHoy.TabIndex = 97;
+            this.btn_imprimirPorHoy.Text = "Tramites de hoy";
+            this.btn_imprimirPorHoy.UseVisualStyleBackColor = true;
+            this.btn_imprimirPorHoy.Click += new System.EventHandler(this.btn_imprimirPorHoy_Click);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.Black;
+            this.label37.Location = new System.Drawing.Point(22, 11);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(181, 17);
+            this.label37.TabIndex = 91;
+            this.label37.Text = "Consultar tramites por fecha";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_simple_diaria
+            // 
+            this.btn_simple_diaria.BackColor = System.Drawing.Color.White;
+            this.btn_simple_diaria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_simple_diaria.FlatAppearance.BorderSize = 0;
+            this.btn_simple_diaria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_simple_diaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_simple_diaria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_simple_diaria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_simple_diaria.Location = new System.Drawing.Point(0, 721);
+            this.btn_simple_diaria.Name = "btn_simple_diaria";
+            this.btn_simple_diaria.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_simple_diaria.Size = new System.Drawing.Size(227, 55);
+            this.btn_simple_diaria.TabIndex = 85;
+            this.btn_simple_diaria.Text = "Consulta diaria";
+            this.btn_simple_diaria.UseVisualStyleBackColor = false;
+            this.btn_simple_diaria.Click += new System.EventHandler(this.btn_simple_diaria_Click);
+            // 
+            // panel_simple_dominio
+            // 
+            this.panel_simple_dominio.BackColor = System.Drawing.Color.White;
+            this.panel_simple_dominio.Controls.Add(this.txtBox_dominio);
+            this.panel_simple_dominio.Controls.Add(this.btn_imprimirPorDominio);
+            this.panel_simple_dominio.Controls.Add(this.label14);
+            this.panel_simple_dominio.Controls.Add(this.label15);
+            this.panel_simple_dominio.Controls.Add(this.label17);
+            this.panel_simple_dominio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_simple_dominio.Location = new System.Drawing.Point(0, 544);
+            this.panel_simple_dominio.Name = "panel_simple_dominio";
+            this.panel_simple_dominio.Size = new System.Drawing.Size(227, 177);
+            this.panel_simple_dominio.TabIndex = 84;
+            this.panel_simple_dominio.Visible = false;
+            // 
+            // txtBox_dominio
+            // 
+            this.txtBox_dominio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtBox_dominio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_dominio.ForeColor = System.Drawing.Color.Gray;
+            this.txtBox_dominio.Location = new System.Drawing.Point(15, 60);
+            this.txtBox_dominio.Name = "txtBox_dominio";
+            this.txtBox_dominio.Size = new System.Drawing.Size(201, 23);
+            this.txtBox_dominio.TabIndex = 80;
+            this.txtBox_dominio.Text = "EJ: AA111XX";
+            this.txtBox_dominio.Enter += new System.EventHandler(this.txtBox_dominio_Enter);
+            this.txtBox_dominio.Leave += new System.EventHandler(this.txtBox_dominio_Leave);
+            // 
+            // btn_imprimirPorDominio
+            // 
+            this.btn_imprimirPorDominio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_imprimirPorDominio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_imprimirPorDominio.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_imprimirPorDominio.Location = new System.Drawing.Point(11, 134);
+            this.btn_imprimirPorDominio.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_imprimirPorDominio.Name = "btn_imprimirPorDominio";
+            this.btn_imprimirPorDominio.Size = new System.Drawing.Size(200, 25);
+            this.btn_imprimirPorDominio.TabIndex = 97;
+            this.btn_imprimirPorDominio.Text = "Buscar por dominio";
+            this.btn_imprimirPorDominio.UseVisualStyleBackColor = true;
+            this.btn_imprimirPorDominio.Click += new System.EventHandler(this.btn_imprimirPorDominio_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label14.Location = new System.Drawing.Point(8, 92);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(219, 30);
+            this.label14.TabIndex = 96;
+            this.label14.Text = "*Por favor ingrese un dominio o patente\r\npara iniciar la busquedad";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label15.Location = new System.Drawing.Point(14, 33);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(57, 17);
+            this.label15.TabIndex = 94;
+            this.label15.Text = "Dominio";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(22, 11);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(181, 17);
+            this.label17.TabIndex = 91;
+            this.label17.Text = "Consultar tramites por fecha";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_simple_dominio
+            // 
+            this.btn_simple_dominio.BackColor = System.Drawing.Color.White;
+            this.btn_simple_dominio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_simple_dominio.FlatAppearance.BorderSize = 0;
+            this.btn_simple_dominio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_simple_dominio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_simple_dominio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_simple_dominio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_simple_dominio.Location = new System.Drawing.Point(0, 489);
+            this.btn_simple_dominio.Name = "btn_simple_dominio";
+            this.btn_simple_dominio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_simple_dominio.Size = new System.Drawing.Size(227, 55);
+            this.btn_simple_dominio.TabIndex = 83;
+            this.btn_simple_dominio.Text = "Consulta por dominio";
+            this.btn_simple_dominio.UseVisualStyleBackColor = false;
+            this.btn_simple_dominio.Click += new System.EventHandler(this.btn_simple_dominio_Click);
+            // 
+            // panel_simple_empleado
+            // 
+            this.panel_simple_empleado.BackColor = System.Drawing.Color.White;
+            this.panel_simple_empleado.Controls.Add(this.comboBox_empleado);
+            this.panel_simple_empleado.Controls.Add(this.btn_imprimirPorEmpleado);
+            this.panel_simple_empleado.Controls.Add(this.label10);
+            this.panel_simple_empleado.Controls.Add(this.label11);
+            this.panel_simple_empleado.Controls.Add(this.label13);
+            this.panel_simple_empleado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_simple_empleado.Location = new System.Drawing.Point(0, 317);
+            this.panel_simple_empleado.Name = "panel_simple_empleado";
+            this.panel_simple_empleado.Size = new System.Drawing.Size(227, 172);
+            this.panel_simple_empleado.TabIndex = 82;
+            this.panel_simple_empleado.Visible = false;
+            // 
+            // comboBox_empleado
+            // 
+            this.comboBox_empleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_empleado.FormattingEnabled = true;
+            this.comboBox_empleado.Location = new System.Drawing.Point(13, 60);
+            this.comboBox_empleado.Name = "comboBox_empleado";
+            this.comboBox_empleado.Size = new System.Drawing.Size(201, 25);
+            this.comboBox_empleado.TabIndex = 98;
+            // 
+            // btn_imprimirPorEmpleado
+            // 
+            this.btn_imprimirPorEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_imprimirPorEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_imprimirPorEmpleado.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_imprimirPorEmpleado.Location = new System.Drawing.Point(13, 136);
+            this.btn_imprimirPorEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_imprimirPorEmpleado.Name = "btn_imprimirPorEmpleado";
+            this.btn_imprimirPorEmpleado.Size = new System.Drawing.Size(200, 25);
+            this.btn_imprimirPorEmpleado.TabIndex = 97;
+            this.btn_imprimirPorEmpleado.Text = "Buscar por empleado";
+            this.btn_imprimirPorEmpleado.UseVisualStyleBackColor = true;
+            this.btn_imprimirPorEmpleado.Click += new System.EventHandler(this.btn_imprimirPorEmpleado_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label10.Location = new System.Drawing.Point(13, 94);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(194, 30);
+            this.label10.TabIndex = 96;
+            this.label10.Text = "*Por favor seleccione un empleado \r\npara generar la consulta";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label11.Location = new System.Drawing.Point(14, 34);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 17);
+            this.label11.TabIndex = 94;
+            this.label11.Text = "Empleado";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(8, 9);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(209, 17);
+            this.label13.TabIndex = 91;
+            this.label13.Text = "Consultar tramites por empleado";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_simple_empleado
+            // 
+            this.btn_simple_empleado.BackColor = System.Drawing.Color.White;
+            this.btn_simple_empleado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_simple_empleado.FlatAppearance.BorderSize = 0;
+            this.btn_simple_empleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_simple_empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_simple_empleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_simple_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_simple_empleado.Location = new System.Drawing.Point(0, 262);
+            this.btn_simple_empleado.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.btn_simple_empleado.Name = "btn_simple_empleado";
+            this.btn_simple_empleado.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_simple_empleado.Size = new System.Drawing.Size(227, 55);
+            this.btn_simple_empleado.TabIndex = 81;
+            this.btn_simple_empleado.Text = "Consulta por empleado";
+            this.btn_simple_empleado.UseVisualStyleBackColor = false;
+            this.btn_simple_empleado.Click += new System.EventHandler(this.btn_simple_empleado_Click);
+            // 
+            // panel_simple_fecha
+            // 
+            this.panel_simple_fecha.BackColor = System.Drawing.Color.White;
+            this.panel_simple_fecha.Controls.Add(this.dateTimePicker_fecha2);
+            this.panel_simple_fecha.Controls.Add(this.dateTimePicker_fecha1);
+            this.panel_simple_fecha.Controls.Add(this.btn_imprimirPorFecha);
+            this.panel_simple_fecha.Controls.Add(this.lbl_info);
+            this.panel_simple_fecha.Controls.Add(this.lbl_desde);
+            this.panel_simple_fecha.Controls.Add(this.lbl_hasta);
+            this.panel_simple_fecha.Controls.Add(this.label9);
+            this.panel_simple_fecha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_simple_fecha.Location = new System.Drawing.Point(0, 55);
+            this.panel_simple_fecha.Name = "panel_simple_fecha";
+            this.panel_simple_fecha.Size = new System.Drawing.Size(227, 207);
+            this.panel_simple_fecha.TabIndex = 80;
+            this.panel_simple_fecha.Visible = false;
+            // 
+            // dateTimePicker_fecha2
+            // 
+            this.dateTimePicker_fecha2.Checked = false;
+            this.dateTimePicker_fecha2.CustomFormat = "MM/dd/yyyy";
+            this.dateTimePicker_fecha2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_fecha2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker_fecha2.Location = new System.Drawing.Point(9, 106);
+            this.dateTimePicker_fecha2.Name = "dateTimePicker_fecha2";
+            this.dateTimePicker_fecha2.ShowCheckBox = true;
+            this.dateTimePicker_fecha2.Size = new System.Drawing.Size(201, 23);
+            this.dateTimePicker_fecha2.TabIndex = 99;
+            // 
+            // dateTimePicker_fecha1
+            // 
+            this.dateTimePicker_fecha1.CustomFormat = "MM/dd/yyyy";
+            this.dateTimePicker_fecha1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_fecha1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker_fecha1.Location = new System.Drawing.Point(9, 57);
+            this.dateTimePicker_fecha1.Name = "dateTimePicker_fecha1";
+            this.dateTimePicker_fecha1.ShowCheckBox = true;
+            this.dateTimePicker_fecha1.Size = new System.Drawing.Size(201, 23);
+            this.dateTimePicker_fecha1.TabIndex = 98;
+            // 
+            // btn_imprimirPorFecha
+            // 
+            this.btn_imprimirPorFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_imprimirPorFecha.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_imprimirPorFecha.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_imprimirPorFecha.Location = new System.Drawing.Point(8, 171);
+            this.btn_imprimirPorFecha.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_imprimirPorFecha.Name = "btn_imprimirPorFecha";
+            this.btn_imprimirPorFecha.Size = new System.Drawing.Size(200, 25);
+            this.btn_imprimirPorFecha.TabIndex = 97;
+            this.btn_imprimirPorFecha.Text = "Buscar por fecha";
+            this.btn_imprimirPorFecha.UseVisualStyleBackColor = true;
+            this.btn_imprimirPorFecha.Click += new System.EventHandler(this.btn_imprimirPorFecha_Click);
+            // 
+            // lbl_info
+            // 
+            this.lbl_info.AutoSize = true;
+            this.lbl_info.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_info.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.lbl_info.Location = new System.Drawing.Point(4, 134);
+            this.lbl_info.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_info.Name = "lbl_info";
+            this.lbl_info.Size = new System.Drawing.Size(224, 30);
+            this.lbl_info.TabIndex = 96;
+            this.lbl_info.Text = "*Por favor seleccione al menos una fecha\r\n para generar la consulta\r\n";
+            // 
+            // lbl_desde
+            // 
+            this.lbl_desde.AutoSize = true;
+            this.lbl_desde.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_desde.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbl_desde.Location = new System.Drawing.Point(9, 37);
+            this.lbl_desde.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_desde.Name = "lbl_desde";
+            this.lbl_desde.Size = new System.Drawing.Size(45, 17);
+            this.lbl_desde.TabIndex = 94;
+            this.lbl_desde.Text = "Desde";
+            // 
+            // lbl_hasta
+            // 
+            this.lbl_hasta.AutoSize = true;
+            this.lbl_hasta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hasta.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbl_hasta.Location = new System.Drawing.Point(10, 85);
+            this.lbl_hasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_hasta.Name = "lbl_hasta";
+            this.lbl_hasta.Size = new System.Drawing.Size(41, 17);
+            this.lbl_hasta.TabIndex = 95;
+            this.lbl_hasta.Text = "Hasta";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(21, 11);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(181, 17);
+            this.label9.TabIndex = 91;
+            this.label9.Text = "Consultar tramites por fecha";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_simple_fecha
+            // 
+            this.btn_simple_fecha.BackColor = System.Drawing.Color.White;
+            this.btn_simple_fecha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_simple_fecha.FlatAppearance.BorderSize = 0;
+            this.btn_simple_fecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_simple_fecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_simple_fecha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_simple_fecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_simple_fecha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_simple_fecha.Location = new System.Drawing.Point(0, 0);
+            this.btn_simple_fecha.Name = "btn_simple_fecha";
+            this.btn_simple_fecha.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_simple_fecha.Size = new System.Drawing.Size(227, 55);
+            this.btn_simple_fecha.TabIndex = 5;
+            this.btn_simple_fecha.Text = "Consulta por fecha";
+            this.btn_simple_fecha.UseVisualStyleBackColor = false;
+            this.btn_simple_fecha.Click += new System.EventHandler(this.btn_simple_fecha_Click);
+            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -1501,16 +1503,17 @@
             this.TipoError,
             this.Inscripto,
             this.Fecha,
-            this.Observaciones});
+            this.Observaciones,
+            this.NombreInscripto});
             this.dg_tramites.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_tramites.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_tramites.DefaultCellStyle = dataGridViewCellStyle13;
             this.dg_tramites.EnableHeadersVisualStyles = false;
             this.dg_tramites.GridColor = System.Drawing.Color.SteelBlue;
             this.dg_tramites.Location = new System.Drawing.Point(253, 154);
@@ -1518,196 +1521,20 @@
             this.dg_tramites.Name = "dg_tramites";
             this.dg_tramites.ReadOnly = true;
             this.dg_tramites.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_tramites.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_tramites.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dg_tramites.RowHeadersVisible = false;
             this.dg_tramites.RowHeadersWidth = 51;
             this.dg_tramites.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_tramites.Size = new System.Drawing.Size(740, 512);
             this.dg_tramites.TabIndex = 80;
             this.dg_tramites.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dg_tramites_CellFormatting);
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Id.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Id.HeaderText = "ID";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Id.Width = 25;
-            // 
-            // Dominio
-            // 
-            this.Dominio.DataPropertyName = "Dominio";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.Dominio.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Dominio.HeaderText = "Dominio";
-            this.Dominio.MinimumWidth = 6;
-            this.Dominio.Name = "Dominio";
-            this.Dominio.ReadOnly = true;
-            this.Dominio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dominio.Width = 70;
-            // 
-            // Empleado
-            // 
-            this.Empleado.DataPropertyName = "Empleado";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Empleado.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Empleado.HeaderText = "Empleado";
-            this.Empleado.MinimumWidth = 6;
-            this.Empleado.Name = "Empleado";
-            this.Empleado.ReadOnly = true;
-            this.Empleado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Empleado.Width = 75;
-            // 
-            // Tramite
-            // 
-            this.Tramite.DataPropertyName = "Tramite";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Tramite.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Tramite.HeaderText = "Tramite";
-            this.Tramite.MinimumWidth = 6;
-            this.Tramite.Name = "Tramite";
-            this.Tramite.ReadOnly = true;
-            this.Tramite.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Tramite.Width = 210;
-            // 
-            // Etapa
-            // 
-            this.Etapa.DataPropertyName = "Etapa";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Etapa.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Etapa.HeaderText = "Etapa";
-            this.Etapa.MinimumWidth = 6;
-            this.Etapa.Name = "Etapa";
-            this.Etapa.ReadOnly = true;
-            this.Etapa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Etapa.Width = 75;
-            // 
-            // Error
-            // 
-            this.Error.DataPropertyName = "Error";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.NullValue = false;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Error.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Error.HeaderText = "Error";
-            this.Error.MinimumWidth = 6;
-            this.Error.Name = "Error";
-            this.Error.ReadOnly = true;
-            this.Error.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Error.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Error.Width = 50;
-            // 
-            // TipoError
-            // 
-            this.TipoError.DataPropertyName = "Tipo error";
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.TipoError.DefaultCellStyle = dataGridViewCellStyle8;
-            this.TipoError.HeaderText = "Tipo de error";
-            this.TipoError.MinimumWidth = 6;
-            this.TipoError.Name = "TipoError";
-            this.TipoError.ReadOnly = true;
-            this.TipoError.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.TipoError.Width = 90;
-            // 
-            // Inscripto
-            // 
-            this.Inscripto.DataPropertyName = "Inscripto";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.NullValue = false;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            this.Inscripto.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Inscripto.HeaderText = "Inscripto";
-            this.Inscripto.MinimumWidth = 6;
-            this.Inscripto.Name = "Inscripto";
-            this.Inscripto.ReadOnly = true;
-            this.Inscripto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Inscripto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Inscripto.Width = 70;
-            // 
-            // Fecha
-            // 
-            this.Fecha.DataPropertyName = "Fecha";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Fecha.DefaultCellStyle = dataGridViewCellStyle10;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Fecha.Width = 80;
-            // 
-            // Observaciones
-            // 
-            this.Observaciones.DataPropertyName = "Observaciones";
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            this.Observaciones.DefaultCellStyle = dataGridViewCellStyle11;
-            this.Observaciones.HeaderText = "Observaciones";
-            this.Observaciones.MinimumWidth = 6;
-            this.Observaciones.Name = "Observaciones";
-            this.Observaciones.ReadOnly = true;
-            this.Observaciones.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Observaciones.Width = 150;
             // 
             // label31
             // 
@@ -2030,6 +1857,196 @@
             this.panel3.Size = new System.Drawing.Size(244, 20);
             this.panel3.TabIndex = 88;
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Id.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Id.HeaderText = "ID";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Id.Width = 25;
+            // 
+            // Dominio
+            // 
+            this.Dominio.DataPropertyName = "Dominio";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Dominio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Dominio.HeaderText = "Dominio";
+            this.Dominio.MinimumWidth = 6;
+            this.Dominio.Name = "Dominio";
+            this.Dominio.ReadOnly = true;
+            this.Dominio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dominio.Width = 70;
+            // 
+            // Empleado
+            // 
+            this.Empleado.DataPropertyName = "Empleado";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Empleado.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Empleado.HeaderText = "Empleado";
+            this.Empleado.MinimumWidth = 6;
+            this.Empleado.Name = "Empleado";
+            this.Empleado.ReadOnly = true;
+            this.Empleado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Empleado.Width = 75;
+            // 
+            // Tramite
+            // 
+            this.Tramite.DataPropertyName = "Tramite";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Tramite.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Tramite.HeaderText = "Tramite";
+            this.Tramite.MinimumWidth = 6;
+            this.Tramite.Name = "Tramite";
+            this.Tramite.ReadOnly = true;
+            this.Tramite.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Tramite.Width = 210;
+            // 
+            // Etapa
+            // 
+            this.Etapa.DataPropertyName = "Etapa";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Etapa.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Etapa.HeaderText = "Etapa";
+            this.Etapa.MinimumWidth = 6;
+            this.Etapa.Name = "Etapa";
+            this.Etapa.ReadOnly = true;
+            this.Etapa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Etapa.Width = 75;
+            // 
+            // Error
+            // 
+            this.Error.DataPropertyName = "Error";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.NullValue = false;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Error.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Error.HeaderText = "Error";
+            this.Error.MinimumWidth = 6;
+            this.Error.Name = "Error";
+            this.Error.ReadOnly = true;
+            this.Error.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Error.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Error.Width = 50;
+            // 
+            // TipoError
+            // 
+            this.TipoError.DataPropertyName = "Tipo error";
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.TipoError.DefaultCellStyle = dataGridViewCellStyle8;
+            this.TipoError.HeaderText = "Tipo de error";
+            this.TipoError.MinimumWidth = 6;
+            this.TipoError.Name = "TipoError";
+            this.TipoError.ReadOnly = true;
+            this.TipoError.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.TipoError.Width = 90;
+            // 
+            // Inscripto
+            // 
+            this.Inscripto.DataPropertyName = "Inscripto";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.NullValue = false;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.Inscripto.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Inscripto.HeaderText = "Inscripto";
+            this.Inscripto.MinimumWidth = 6;
+            this.Inscripto.Name = "Inscripto";
+            this.Inscripto.ReadOnly = true;
+            this.Inscripto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Inscripto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Inscripto.Width = 70;
+            // 
+            // Fecha
+            // 
+            this.Fecha.DataPropertyName = "Fecha";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Fecha.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 6;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Fecha.Width = 80;
+            // 
+            // Observaciones
+            // 
+            this.Observaciones.DataPropertyName = "Observaciones";
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            this.Observaciones.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Observaciones.HeaderText = "Observaciones";
+            this.Observaciones.MinimumWidth = 6;
+            this.Observaciones.Name = "Observaciones";
+            this.Observaciones.ReadOnly = true;
+            this.Observaciones.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Observaciones.Width = 150;
+            // 
+            // NombreInscripto
+            // 
+            this.NombreInscripto.DataPropertyName = "Nombre Inscripto";
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.NombreInscripto.DefaultCellStyle = dataGridViewCellStyle12;
+            this.NombreInscripto.HeaderText = "Inscripto por";
+            this.NombreInscripto.Name = "NombreInscripto";
+            this.NombreInscripto.ReadOnly = true;
+            this.NombreInscripto.Width = 95;
+            // 
             // frm_tramites
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -2057,15 +2074,6 @@
             this.Text = "0";
             this.Load += new System.EventHandler(this.frm_tramites_consultas_Load);
             this.panel_query.ResumeLayout(false);
-            this.panel_simple.ResumeLayout(false);
-            this.panel_simple_diaria.ResumeLayout(false);
-            this.panel_simple_diaria.PerformLayout();
-            this.panel_simple_dominio.ResumeLayout(false);
-            this.panel_simple_dominio.PerformLayout();
-            this.panel_simple_empleado.ResumeLayout(false);
-            this.panel_simple_empleado.PerformLayout();
-            this.panel_simple_fecha.ResumeLayout(false);
-            this.panel_simple_fecha.PerformLayout();
             this.panel_complejo.ResumeLayout(false);
             this.panel_complejo_fechaerrores.ResumeLayout(false);
             this.panel_complejo_fechaerrores.PerformLayout();
@@ -2075,6 +2083,15 @@
             this.panel_complejo_fechaprocesados.PerformLayout();
             this.panel_complejo_fechaempleado.ResumeLayout(false);
             this.panel_complejo_fechaempleado.PerformLayout();
+            this.panel_simple.ResumeLayout(false);
+            this.panel_simple_diaria.ResumeLayout(false);
+            this.panel_simple_diaria.PerformLayout();
+            this.panel_simple_dominio.ResumeLayout(false);
+            this.panel_simple_dominio.PerformLayout();
+            this.panel_simple_empleado.ResumeLayout(false);
+            this.panel_simple_empleado.PerformLayout();
+            this.panel_simple_fecha.ResumeLayout(false);
+            this.panel_simple_fecha.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_tramites)).EndInit();
@@ -2158,16 +2175,6 @@
         private System.Windows.Forms.Button btn_insertar;
         private System.Windows.Forms.Button btn_editar;
         private System.Windows.Forms.Button btn_eliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dominio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Empleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tramite;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Etapa;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Error;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoError;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Inscripto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
         private System.Windows.Forms.Button btn_error;
         private System.Windows.Forms.Button btn_inscribir;
         public System.Windows.Forms.DateTimePicker dateTimePicker_fecha2;
@@ -2225,5 +2232,16 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dominio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tramite;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Etapa;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Error;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoError;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Inscripto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreInscripto;
     }
 }

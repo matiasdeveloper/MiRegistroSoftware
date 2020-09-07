@@ -14,6 +14,8 @@ namespace LayerPresentation.Clases
 {
     public static class Statistics
     {
+        public static LinkedList<Employee> tmp;
+
         public static void DashboardStatisticHistory(Label[] labelStatistic) 
         {
             labelStatistic[0].Text = Cn_HandlerTramites.data.tramitesCache.totalTramites.ToString();
@@ -23,6 +25,7 @@ namespace LayerPresentation.Clases
             labelStatistic[4].Text = Cn_HandlerTramites.data.tramitesCache.totalEmpleados.ToString();
             labelStatistic[5].Text = Cn_HandlerTramites.data.tramitesCache.totalTipos.ToString();
         }
+        // Carga el total de: procesados e inscriptos (AYER,HOY,MES)
         public static void DashboardStatisticAyer(Label[] Ayer) 
         {
             DateTime fecha1 = DateTime.Now.AddDays(-1);
@@ -110,13 +113,13 @@ namespace LayerPresentation.Clases
             Mes[0].Text = procesado.ToString();
             Mes[1].Text = inscriptos.ToString();
         }   
+        // Carga el total de: errores, parciales y totales (AYER, HOY, MES)
         public static void DashboardStatisticErrores(Label[] Hoy, Label[] Mes, Label[] Hist) 
         {
             StatisticErroresDia(Hoy);
             StatisticErroresMes(Mes);
             StatisticErroresHist(Hist);
-        }
-        
+        }      
         public static void StatisticErroresDia(Label[] Hoy) 
         {
             DateTime fecha1 = DateTime.Now;
@@ -124,7 +127,7 @@ namespace LayerPresentation.Clases
 
             Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
 
-            int[] e = FindErrores(dt.data, fecha1, fecha2);
+            int[] e = FindErroresAll(dt.data, fecha1, fecha2);
 
             Hoy[0].Text = e[0].ToString();
             Hoy[1].Text = e[1].ToString();
@@ -137,7 +140,7 @@ namespace LayerPresentation.Clases
 
             Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
 
-            int[] e = FindErrores(dt.data, fecha1, fecha2);
+            int[] e = FindErroresAll(dt.data, fecha1, fecha2);
 
             Mes[0].Text = e[0].ToString();
             Mes[1].Text = e[1].ToString();
@@ -150,135 +153,308 @@ namespace LayerPresentation.Clases
 
             Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
 
-            int[] e = FindErrores(dt.data, fecha1, fecha2);
+            int[] e = FindErroresAll(dt.data, fecha1, fecha2);
 
             Hist[0].Text = e[0].ToString();
             Hist[1].Text = e[1].ToString();
             Hist[2].Text = e[2].ToString();
         }
 
-        public static void DisplayNames(Label[] labels, LinkedList<Employee> tmp)
+        public static void DisplayNames(Label[] labels)
         {
             LinkedListNode<Employee> employee = tmp.First;
 
             // Recorre la lista de empleados y los muestra en pantalla
             for (int i = 0; i < tmp.Count; i++)
             {
-                switch (i)
+                if (employee.Value.nombre != "Admin S.") 
                 {
-                    case 0:
-                        labels[0].Text = employee.Value.nombre;
-                        labels[0].Enabled = true;
-                        break;
-                    case 1:
-                        labels[1].Text = employee.Value.nombre;
-                        labels[1].Enabled = true;
-                        break;
-                    case 2:
-                        labels[2].Text = employee.Value.nombre;
-                        labels[2].Enabled = true;
-                        break;
-                    case 3:
-                        labels[3].Text = employee.Value.nombre;
-                        labels[3].Enabled = true;
-                        break;
-                    case 4:
-                        labels[4].Text = employee.Value.nombre;
-                        labels[4].Enabled = true;
-                        break;
-                    case 5:
-                        labels[5].Text = employee.Value.nombre;
-                        labels[5].Enabled = true;
-                        break;
-                    case 6:
-                        labels[6].Text = employee.Value.nombre;
-                        labels[6].Enabled = true;
-                        break;
-                    case 7:
-                        labels[7].Text = employee.Value.nombre;
-                        labels[7].Enabled = true;
-                        break;
-                    case 8:
-                        labels[8].Text = employee.Value.nombre;
-                        labels[8].Enabled = true;
-                        break;
-                    case 9:
-                        labels[9].Text = employee.Value.nombre;
-                        labels[9].Enabled = true;
-                        break;
+                    switch (i)
+                    {
+                        case 1:
+                            labels[0].Text = employee.Value.nombre;
+                            labels[0].Enabled = true;
+                            break;
+                        case 2:
+                            labels[1].Text = employee.Value.nombre;
+                            labels[1].Enabled = true;
+                            break;
+                        case 3:
+                            labels[2].Text = employee.Value.nombre;
+                            labels[2].Enabled = true;
+                            break;
+                        case 4:
+                            labels[3].Text = employee.Value.nombre;
+                            labels[3].Enabled = true;
+                            break;
+                        case 5:
+                            labels[4].Text = employee.Value.nombre;
+                            labels[4].Enabled = true;
+                            break;
+                        case 6:
+                            labels[5].Text = employee.Value.nombre;
+                            labels[5].Enabled = true;
+                            break;
+                        case 7:
+                            labels[6].Text = employee.Value.nombre;
+                            labels[6].Enabled = true;
+                            break;
+                        case 8:
+                            labels[7].Text = employee.Value.nombre;
+                            labels[7].Enabled = true;
+                            break;
+                        case 9:
+                            labels[8].Text = employee.Value.nombre;
+                            labels[8].Enabled = true;
+                            break;
+                        case 10:
+                            labels[9].Text = employee.Value.nombre;
+                            labels[9].Enabled = true;
+                            break;
+                    }
+
                 }
                 employee = employee.Next;
             }
         }
-        public static void DisplayEtapas(Label[] inscripto, Label[] procesados, LinkedList<Employee> tmp)
+        public static void DisplayInfo(Panel[] panels ,Label[][] info) 
+        {
+            LinkedListNode<Employee> employee = tmp.First;
+
+            // Recorre la lista de empleados y muestra en pantalla su informacion principal
+            // First: Actiavate panel
+            // Second: Display info empleado X > Permisos, Email, Acceso 
+            for (int i = 0; i < tmp.Count; i++)
+            {
+                if (employee.Value.nombre != "Admin S.") 
+                {
+                    switch (i)
+                    {
+                        case 1:
+                            panels[0].Enabled = true;
+                            info[0][0].Text = employee.Value.privilegios;
+                            info[0][1].Text = employee.Value.email;
+                            info[0][2].Text = employee.Value.fechaAcceso.ToShortDateString();
+                            info[0][3].Text = employee.Value.id.ToString();
+                            break;
+                        case 2:
+                            panels[1].Enabled = true;
+                            info[1][0].Text = employee.Value.privilegios;
+                            info[1][1].Text = employee.Value.email;
+                            info[1][2].Text = employee.Value.fechaAcceso.ToShortDateString();
+                            info[1][3].Text = employee.Value.id.ToString();
+                            break;
+                        case 3:
+                            panels[2].Enabled = true;
+                            info[2][0].Text = employee.Value.privilegios;
+                            info[2][1].Text = employee.Value.email;
+                            info[2][2].Text = employee.Value.fechaAcceso.ToShortDateString();
+                            info[2][3].Text = employee.Value.id.ToString();
+                            break;
+                        case 4:
+                            panels[3].Enabled = true;
+                            info[3][0].Text = employee.Value.privilegios;
+                            info[3][1].Text = employee.Value.email;
+                            info[3][2].Text = employee.Value.fechaAcceso.ToShortDateString();
+                            info[3][3].Text = employee.Value.id.ToString();
+                            break;
+                        case 5:
+                            panels[4].Enabled = true;
+                            info[4][0].Text = employee.Value.privilegios;
+                            info[4][1].Text = employee.Value.email;
+                            info[4][2].Text = employee.Value.fechaAcceso.ToShortDateString();
+                            info[4][3].Text = employee.Value.id.ToString();
+                            break;
+                        case 6:
+                            panels[5].Enabled = true;
+                            info[5][0].Text = employee.Value.privilegios;
+                            info[5][1].Text = employee.Value.email;
+                            info[5][2].Text = employee.Value.fechaAcceso.ToShortDateString();
+                            info[5][3].Text = employee.Value.id.ToString();
+                            break;
+                        case 7:
+                            panels[6].Enabled = true;
+                            info[6][0].Text = employee.Value.privilegios;
+                            info[6][1].Text = employee.Value.email;
+                            info[6][2].Text = employee.Value.fechaAcceso.ToShortDateString();
+                            info[6][3].Text = employee.Value.id.ToString();
+                            break;
+                        case 8:
+                            panels[7].Enabled = true;
+                            info[7][0].Text = employee.Value.privilegios;
+                            info[7][1].Text = employee.Value.email;
+                            info[7][2].Text = employee.Value.fechaAcceso.ToShortDateString();
+                            info[7][3].Text = employee.Value.id.ToString();
+                            break;
+                    }
+                }
+                employee = employee.Next;
+            }
+        }
+        public static void DisplayEmployeeData(Label[][] statisticEmployee) 
+        {
+            LinkedListNode<Employee> employee = tmp.First;
+            int[] etapasDia;
+            int[] etapasMes;
+            int[] errores;
+            // Display stastic for all of employees
+            // In this order: 
+            // - inscriptos dia[employe index][0]
+            // - procesados dia[employee index][1]
+            // - inscriptos mes[employee index][2]
+            // - procesados mes[employee index][3]
+            // - errores mes[employee index][4]
+            for (int i = 0; i < tmp.Count; i++)
+            {
+                if (employee.Value.nombre != "Admin S.") 
+                {
+                    // Dia
+                    etapasDia = FindEtapas(employee.Value.nombre, employee.Value.tramitesMes, Fechas.firstDayOfWeek, Fechas.lastDayOfWeek);
+                    // Mes
+                    etapasMes = FindEtapas(employee.Value.nombre, employee.Value.tramitesMes, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+                    errores = FindErrores(employee.Value.nombre, employee.Value.tramitesMes, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+
+                    switch (i)
+                    {
+                        case 1:
+                            statisticEmployee[0][0].Text = etapasDia[0].ToString();
+                            statisticEmployee[0][1].Text = etapasDia[1].ToString();
+                            statisticEmployee[0][2].Text = etapasMes[0].ToString();
+                            statisticEmployee[0][3].Text = etapasMes[1].ToString();
+                            statisticEmployee[0][4].Text = errores[0].ToString();
+                            break;
+                        case 2:
+                            statisticEmployee[1][0].Text = etapasDia[0].ToString();
+                            statisticEmployee[1][1].Text = etapasDia[1].ToString();
+                            statisticEmployee[1][2].Text = etapasMes[0].ToString();
+                            statisticEmployee[1][3].Text = etapasMes[1].ToString();
+                            statisticEmployee[1][4].Text = errores[0].ToString();
+                            break;
+                        case 3:
+                            statisticEmployee[2][0].Text = etapasDia[0].ToString();
+                            statisticEmployee[2][1].Text = etapasDia[1].ToString();
+                            statisticEmployee[2][2].Text = etapasMes[0].ToString();
+                            statisticEmployee[2][3].Text = etapasMes[1].ToString();
+                            statisticEmployee[2][4].Text = errores[0].ToString();
+                            break;
+                        case 4:
+                            statisticEmployee[3][0].Text = etapasDia[0].ToString();
+                            statisticEmployee[3][1].Text = etapasDia[1].ToString();
+                            statisticEmployee[3][2].Text = etapasMes[0].ToString();
+                            statisticEmployee[3][3].Text = etapasMes[1].ToString();
+                            statisticEmployee[3][4].Text = errores[0].ToString();
+                            break;
+                        case 5:
+                            statisticEmployee[4][0].Text = etapasDia[0].ToString();
+                            statisticEmployee[4][1].Text = etapasDia[1].ToString();
+                            statisticEmployee[4][2].Text = etapasMes[0].ToString();
+                            statisticEmployee[4][3].Text = etapasMes[1].ToString();
+                            statisticEmployee[4][4].Text = errores[0].ToString();
+                            break;
+                        case 6:
+                            statisticEmployee[5][0].Text = etapasDia[0].ToString();
+                            statisticEmployee[5][1].Text = etapasDia[1].ToString();
+                            statisticEmployee[5][2].Text = etapasMes[0].ToString();
+                            statisticEmployee[5][3].Text = etapasMes[1].ToString();
+                            statisticEmployee[5][4].Text = errores[0].ToString();
+                            break;
+                        case 7:
+                            statisticEmployee[6][0].Text = etapasDia[0].ToString();
+                            statisticEmployee[6][1].Text = etapasDia[1].ToString();
+                            statisticEmployee[6][2].Text = etapasMes[0].ToString();
+                            statisticEmployee[6][3].Text = etapasMes[1].ToString();
+                            statisticEmployee[6][4].Text = errores[0].ToString(); break;
+                        case 8:
+                            statisticEmployee[7][0].Text = etapasDia[0].ToString();
+                            statisticEmployee[7][1].Text = etapasDia[1].ToString();
+                            statisticEmployee[7][2].Text = etapasMes[0].ToString();
+                            statisticEmployee[7][3].Text = etapasMes[1].ToString();
+                            statisticEmployee[7][4].Text = errores[0].ToString();
+                            break;
+                        case 9:
+                            statisticEmployee[8][0].Text = etapasDia[0].ToString();
+                            statisticEmployee[8][1].Text = etapasDia[1].ToString();
+                            statisticEmployee[8][2].Text = etapasMes[0].ToString();
+                            statisticEmployee[8][3].Text = etapasMes[1].ToString();
+                            statisticEmployee[8][4].Text = errores[0].ToString();
+                            break;
+                    }
+                }
+                employee = employee.Next;
+            }
+        }
+        public static void DisplayEtapas(Label[] inscripto, Label[] procesados)
         {
             LinkedListNode<Employee> employee = tmp.First;
             int[] e;
 
             for (int i = 0; i < tmp.Count; i++)
             {
-                e = FindEtapas(employee.Value.tramitesMes, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-                switch (i)
+                if (employee.Value.nombre != "Admin S.") 
                 {
-                    case 0:
-                        inscripto[0].Text = e[0].ToString();
-                        procesados[0].Text = e[1].ToString();
-                        inscripto[0].Enabled = true;
-                        procesados[0].Enabled = true;
-                        break;
-                    case 1:
-                        inscripto[1].Text = e[0].ToString();
-                        procesados[1].Text = e[1].ToString();
-                        inscripto[1].Enabled = true;
-                        procesados[1].Enabled = true;
-                        break;
-                    case 2:
-                        inscripto[2].Text = e[0].ToString();
-                        procesados[2].Text = e[1].ToString();
-                        inscripto[2].Enabled = true;
-                        procesados[2].Enabled = true;
-                        break;
-                    case 3:
-                        inscripto[3].Text = e[0].ToString();
-                        procesados[3].Text = e[1].ToString();
-                        inscripto[3].Enabled = true;
-                        procesados[3].Enabled = true;
-                        break;
-                    case 4:
-                        inscripto[4].Text = e[0].ToString();
-                        procesados[4].Text = e[1].ToString();
-                        inscripto[4].Enabled = true;
-                        procesados[4].Enabled = true;
-                        break;
-                    case 5:
-                        inscripto[5].Text = e[0].ToString();
-                        procesados[5].Text = e[1].ToString();
-                        inscripto[5].Enabled = true;
-                        procesados[5].Enabled = true;
-                        break;
-                    case 6:
-                        inscripto[6].Text = e[0].ToString();
-                        procesados[6].Text = e[1].ToString();
-                        inscripto[6].Enabled = true;
-                        procesados[6].Enabled = true;
-                        break;
-                    case 7:
-                        inscripto[7].Text = e[0].ToString();
-                        procesados[7].Text = e[1].ToString();
-                        inscripto[7].Enabled = true;
-                        procesados[7].Enabled = true;
-                        break;
-                    case 8:
-                        inscripto[8].Text = e[0].ToString();
-                        procesados[8].Text = e[1].ToString();
-                        inscripto[8].Enabled = true;
-                        procesados[8].Enabled = true;
-                        break;
+                    e = FindEtapas(employee.Value.nombre, employee.Value.tramitesMes, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+                    switch (i)
+                    {
+                        case 1:
+                            inscripto[0].Text = e[0].ToString();
+                            procesados[0].Text = e[1].ToString();
+                            inscripto[0].Enabled = true;
+                            procesados[0].Enabled = true;
+                            break;
+                        case 2:
+                            inscripto[1].Text = e[0].ToString();
+                            procesados[1].Text = e[1].ToString();
+                            inscripto[1].Enabled = true;
+                            procesados[1].Enabled = true;
+                            break;
+                        case 3:
+                            inscripto[2].Text = e[0].ToString();
+                            procesados[2].Text = e[1].ToString();
+                            inscripto[2].Enabled = true;
+                            procesados[2].Enabled = true;
+                            break;
+                        case 4:
+                            inscripto[3].Text = e[0].ToString();
+                            procesados[3].Text = e[1].ToString();
+                            inscripto[3].Enabled = true;
+                            procesados[3].Enabled = true;
+                            break;
+                        case 5:
+                            inscripto[4].Text = e[0].ToString();
+                            procesados[4].Text = e[1].ToString();
+                            inscripto[4].Enabled = true;
+                            procesados[4].Enabled = true;
+                            break;
+                        case 6:
+                            inscripto[5].Text = e[0].ToString();
+                            procesados[5].Text = e[1].ToString();
+                            inscripto[5].Enabled = true;
+                            procesados[5].Enabled = true;
+                            break;
+                        case 7:
+                            inscripto[6].Text = e[0].ToString();
+                            procesados[6].Text = e[1].ToString();
+                            inscripto[6].Enabled = true;
+                            procesados[6].Enabled = true;
+                            break;
+                        case 8:
+                            inscripto[7].Text = e[0].ToString();
+                            procesados[7].Text = e[1].ToString();
+                            inscripto[7].Enabled = true;
+                            procesados[7].Enabled = true;
+                            break;
+                        case 9:
+                            inscripto[8].Text = e[0].ToString();
+                            procesados[8].Text = e[1].ToString();
+                            inscripto[8].Enabled = true;
+                            procesados[8].Enabled = true;
+                            break;
+                    }
                 }
                 employee = employee.Next;
             }
         }
-        private static int[] FindEtapas(DataTable employee, DateTime fecha1, DateTime fecha2)
+        private static int[] FindEtapas(string nameEmployee, DataTable employee, DateTime fecha1, DateTime fecha2)
         {
             DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
             DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
@@ -287,14 +463,17 @@ namespace LayerPresentation.Clases
             int procesados = 0;
             int inscriptos = 0;
 
-            // 0 procesados, 1 inscriptos
+            // 0 inscriptos, 1 procesados
             foreach (DataRow fila in employee.Rows)
             {
                 DateTime date = (DateTime)fila[5];
-                if (date >= dt1 & date < dt2)
+                if (date >= dt1 & date < dt2 && (string)fila[2] == nameEmployee)
                 {
                     procesados++;
-                    if ((bool)fila[9] == true)
+                }
+                if (date >= dt1 & date < dt2 && (bool)fila[9] == true)
+                {
+                    if ((string)fila[10] == nameEmployee)
                     {
                         inscriptos++;
                     }
@@ -304,7 +483,7 @@ namespace LayerPresentation.Clases
             return new int[] { inscriptos, procesados };
         }
         
-        public static void DisplayTopTramites(DataGridView dt, LinkedList<Employee> tmp)
+        public static void DisplayTopTramites(DataGridView dt)
         {
             LinkedListNode<Employee> employee = tmp.First;
 
@@ -314,15 +493,18 @@ namespace LayerPresentation.Clases
 
             for (int i = 0; i < tmp.Count; i++)
             {
-                e = FindTramites(employee.Value.tramitesMes, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-                CreatorTables.AddRowTopEmployeesTable(table, employee.Value.nombre, employee.Value.id, e[0], e[1], e[2]);
+                if (employee.Value.nombre != "Admin S.") 
+                {
+                    e = FindTramites(employee.Value.nombre, employee.Value.tramitesMes, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+                    CreatorTables.AddRowTopEmployeesTable(table, employee.Value.nombre, employee.Value.id, e[0], e[1], e[2]);
+                }
                 employee = employee.Next;
             }
 
             dt.AutoGenerateColumns = false;
             dt.DataSource = table;
         }
-        public static int[] FindTramites(DataTable employee, DateTime fecha1, DateTime fecha2)
+        public static int[] FindTramites(string nameEmployee, DataTable employee, DateTime fecha1, DateTime fecha2)
         {
             DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
             DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
@@ -332,19 +514,23 @@ namespace LayerPresentation.Clases
             int procesados = 0;
             int inscriptos = 0;
 
-            // 1 parciales, 2 totales
+            // 1 procesados, 2 inscriptos
             foreach (DataRow fila in employee.Rows)
             {
                 DateTime date = (DateTime)fila[5];
-                if (date >= dt1 & date < dt2)
+                if (date >= dt1 & date < dt2 && (string)fila[2] == nameEmployee)
                 {
-                    total++;
                     if ((string)fila[4] == "Procesado")
                     {
+                        total++;
                         procesados++;
                     }
-                    if ((bool)fila[9] == true)
+                }
+                if (date >= dt1 & date < dt2 && (bool)fila[9] == true)
+                {
+                    if ((string)fila[10] == nameEmployee)
                     {
+                        total++;
                         inscriptos++;
                     }
                 }
@@ -353,75 +539,78 @@ namespace LayerPresentation.Clases
             return new int[] { total, procesados, inscriptos };
         }
 
-        public static void DisplayErrores(Label[] errores, Label[] erroresparciales, Label[] errorestotales, Panel[] panelErrores,LinkedList<Employee> tmp)
+        public static void DisplayErrores(Label[] errores, Label[] erroresparciales, Label[] errorestotales, Panel[] panelErrores)
         {
             LinkedListNode<Employee> employee = tmp.First;
             int[] e;
 
             for (int i = 0; i < tmp.Count; i++)
             {
-                e = FindErrores(employee.Value.tramitesMes, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-                switch (i)
+                if (employee.Value.nombre != "Admin S.") 
                 {
-                    case 0:
-                        panelErrores[0].Enabled = true;
-                        errores[0].Text = e[0].ToString();
-                        erroresparciales[0].Text = e[1].ToString();
-                        errorestotales[0].Text = e[2].ToString();
-                        break;
-                    case 1:
-                        panelErrores[1].Enabled = true;
-                        errores[1].Text = e[0].ToString();
-                        erroresparciales[1].Text = e[1].ToString();
-                        errorestotales[1].Text = e[2].ToString();
-                        break;
-                    case 2:
-                        panelErrores[2].Enabled = true;
-                        errores[2].Text = e[0].ToString();
-                        erroresparciales[2].Text = e[1].ToString();
-                        errorestotales[2].Text = e[2].ToString();
-                        break;
-                    case 3:
-                        panelErrores[3].Enabled = true;
-                        errores[3].Text = e[0].ToString();
-                        erroresparciales[3].Text = e[1].ToString();
-                        errorestotales[3].Text = e[2].ToString();
-                        break;
-                    case 4:
-                        panelErrores[4].Enabled = true;
-                        errores[4].Text = e[0].ToString();
-                        erroresparciales[4].Text = e[1].ToString();
-                        errorestotales[4].Text = e[2].ToString();
-                        break;
-                    case 5:
-                        panelErrores[5].Enabled = true;
-                        errores[5].Text = e[0].ToString();
-                        erroresparciales[5].Text = e[1].ToString();
-                        errorestotales[5].Text = e[2].ToString();
-                        break;
-                    case 6:
-                        panelErrores[6].Enabled = true;
-                        errores[6].Text = e[0].ToString();
-                        erroresparciales[6].Text = e[1].ToString();
-                        errorestotales[6].Text = e[2].ToString();
-                        break;
-                    case 7:
-                        panelErrores[7].Enabled = true;
-                        errores[7].Text = e[0].ToString();
-                        erroresparciales[7].Text = e[1].ToString();
-                        errorestotales[7].Text = e[2].ToString();
-                        break;
-                    case 8:
-                        panelErrores[8].Enabled = true;
-                        errores[8].Text = e[0].ToString();
-                        erroresparciales[8].Text = e[1].ToString();
-                        errorestotales[8].Text = e[2].ToString();
-                        break;
+                    e = FindErrores(employee.Value.nombre, employee.Value.tramitesMes, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+                    switch (i)
+                    {
+                        case 1:
+                            panelErrores[0].Enabled = true;
+                            errores[0].Text = e[0].ToString();
+                            erroresparciales[0].Text = e[1].ToString();
+                            errorestotales[0].Text = e[2].ToString();
+                            break;
+                        case 2:
+                            panelErrores[1].Enabled = true;
+                            errores[1].Text = e[0].ToString();
+                            erroresparciales[1].Text = e[1].ToString();
+                            errorestotales[1].Text = e[2].ToString();
+                            break;
+                        case 3:
+                            panelErrores[2].Enabled = true;
+                            errores[2].Text = e[0].ToString();
+                            erroresparciales[2].Text = e[1].ToString();
+                            errorestotales[2].Text = e[2].ToString();
+                            break;
+                        case 4:
+                            panelErrores[3].Enabled = true;
+                            errores[3].Text = e[0].ToString();
+                            erroresparciales[3].Text = e[1].ToString();
+                            errorestotales[3].Text = e[2].ToString();
+                            break;
+                        case 5:
+                            panelErrores[4].Enabled = true;
+                            errores[4].Text = e[0].ToString();
+                            erroresparciales[4].Text = e[1].ToString();
+                            errorestotales[4].Text = e[2].ToString();
+                            break;
+                        case 6:
+                            panelErrores[5].Enabled = true;
+                            errores[5].Text = e[0].ToString();
+                            erroresparciales[5].Text = e[1].ToString();
+                            errorestotales[5].Text = e[2].ToString();
+                            break;
+                        case 7:
+                            panelErrores[6].Enabled = true;
+                            errores[6].Text = e[0].ToString();
+                            erroresparciales[6].Text = e[1].ToString();
+                            errorestotales[6].Text = e[2].ToString();
+                            break;
+                        case 8:
+                            panelErrores[7].Enabled = true;
+                            errores[7].Text = e[0].ToString();
+                            erroresparciales[7].Text = e[1].ToString();
+                            errorestotales[7].Text = e[2].ToString();
+                            break;
+                        case 9:
+                            panelErrores[8].Enabled = true;
+                            errores[8].Text = e[0].ToString();
+                            erroresparciales[8].Text = e[1].ToString();
+                            errorestotales[8].Text = e[2].ToString();
+                            break;
+                    }
                 }
                 employee = employee.Next;
             }
         }
-        public static void DisplayTopErrores(DataGridView dt, LinkedList<Employee> tmp)
+        public static void DisplayTopErrores(DataGridView dt)
         {
             LinkedListNode<Employee> employee = tmp.First;
             DataTable table = CreatorTables.TopEmployeesTable();
@@ -430,15 +619,52 @@ namespace LayerPresentation.Clases
 
             for (int i = 0; i < tmp.Count; i++)
             {
-                e = FindErrores(employee.Value.tramitesMes, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-                CreatorTables.AddRowTopEmployeesTable(table, employee.Value.nombre, employee.Value.id, e[0], e[1], e[2]);
+                if (employee.Value.nombre != "Admin S.") 
+                {
+                    e = FindErrores(employee.Value.nombre, employee.Value.tramitesMes, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+                    CreatorTables.AddRowTopEmployeesTable(table, employee.Value.nombre, employee.Value.id, e[0], e[1], e[2]);
+                }
                 employee = employee.Next;
             }
 
             dt.AutoGenerateColumns = false;
             dt.DataSource = table;
         }
-        public static int[] FindErrores(DataTable employee, DateTime fecha1, DateTime fecha2)
+        public static int[] FindErrores(string empleado, DataTable employee, DateTime fecha1, DateTime fecha2)
+        {
+            DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
+            DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
+            dt2 = dt2.AddDays(1);
+
+            int errores = 0;
+            int parciales = 0;
+            int totales = 0;
+
+            // 1 parciales, 2 totales
+            foreach (DataRow fila in employee.Rows)
+            {
+                DateTime date = (DateTime)fila[5];
+                if (date >= dt1 & date < dt2)
+                {
+                    if ((bool)fila[6] == true && (string)fila[2] == empleado)
+                    {
+                        errores++;
+                        if ((string)fila[7] == "Error Total")
+                        {
+                            totales++;
+                        }
+                        else
+                        {
+                            parciales++;
+                        }
+                    }
+                }
+            }
+
+            return new int[] { errores, parciales, totales };
+        }
+
+        public static int[] FindErroresAll(DataTable employee, DateTime fecha1, DateTime fecha2)
         {
             DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
             DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
