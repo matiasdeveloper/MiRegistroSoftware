@@ -41,6 +41,7 @@
             this.btn_chat = new System.Windows.Forms.Button();
             this.btn_escritorio = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.lbl_electronico = new System.Windows.Forms.Label();
             this.lbl_lastacess = new System.Windows.Forms.Label();
             this.lbl_permisos = new System.Windows.Forms.Label();
@@ -89,6 +90,7 @@
             // btn_estadisticas
             // 
             this.btn_estadisticas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_estadisticas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_estadisticas.FlatAppearance.BorderSize = 0;
             this.btn_estadisticas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btn_estadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -110,6 +112,7 @@
             // btn_empleados
             // 
             this.btn_empleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_empleados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_empleados.FlatAppearance.BorderSize = 0;
             this.btn_empleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btn_empleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -131,6 +134,7 @@
             // btn_tramites
             // 
             this.btn_tramites.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_tramites.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_tramites.FlatAppearance.BorderSize = 0;
             this.btn_tramites.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btn_tramites.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -152,6 +156,7 @@
             // btn_configuracion
             // 
             this.btn_configuracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_configuracion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_configuracion.FlatAppearance.BorderSize = 0;
             this.btn_configuracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btn_configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -262,6 +267,7 @@
             // btn_escritorio
             // 
             this.btn_escritorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_escritorio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_escritorio.FlatAppearance.BorderSize = 0;
             this.btn_escritorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btn_escritorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -282,6 +288,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lbl_electronico);
             this.panel2.Controls.Add(this.lbl_lastacess);
             this.panel2.Controls.Add(this.lbl_permisos);
@@ -293,56 +300,69 @@
             this.panel2.Size = new System.Drawing.Size(195, 111);
             this.panel2.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label3.Location = new System.Drawing.Point(43, 92);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 15);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Ultimo acceso:";
+            // 
             // lbl_electronico
             // 
             this.lbl_electronico.AutoSize = true;
-            this.lbl_electronico.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_electronico.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_electronico.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_electronico.Location = new System.Drawing.Point(13, 65);
+            this.lbl_electronico.Location = new System.Drawing.Point(13, 60);
             this.lbl_electronico.Name = "lbl_electronico";
-            this.lbl_electronico.Size = new System.Drawing.Size(53, 17);
+            this.lbl_electronico.Size = new System.Drawing.Size(44, 16);
             this.lbl_electronico.TabIndex = 3;
             this.lbl_electronico.Text = "Correo";
             // 
             // lbl_lastacess
             // 
             this.lbl_lastacess.AutoSize = true;
-            this.lbl_lastacess.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_lastacess.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_lastacess.Location = new System.Drawing.Point(109, 91);
+            this.lbl_lastacess.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_lastacess.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lbl_lastacess.Location = new System.Drawing.Point(128, 92);
             this.lbl_lastacess.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_lastacess.Name = "lbl_lastacess";
-            this.lbl_lastacess.Size = new System.Drawing.Size(88, 17);
+            this.lbl_lastacess.Size = new System.Drawing.Size(65, 15);
             this.lbl_lastacess.TabIndex = 2;
-            this.lbl_lastacess.Text = "dd/mm/aaaa";
+            this.lbl_lastacess.Text = "31/12/2020";
             // 
             // lbl_permisos
             // 
             this.lbl_permisos.AutoSize = true;
-            this.lbl_permisos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_permisos.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_permisos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_permisos.Location = new System.Drawing.Point(13, 46);
+            this.lbl_permisos.Location = new System.Drawing.Point(13, 39);
             this.lbl_permisos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_permisos.Name = "lbl_permisos";
-            this.lbl_permisos.Size = new System.Drawing.Size(63, 17);
+            this.lbl_permisos.Size = new System.Drawing.Size(52, 16);
             this.lbl_permisos.TabIndex = 1;
             this.lbl_permisos.Text = "Permisos";
             // 
             // lbl_nombre
             // 
             this.lbl_nombre.AutoSize = true;
-            this.lbl_nombre.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_nombre.Location = new System.Drawing.Point(4, 18);
+            this.lbl_nombre.Location = new System.Drawing.Point(8, 15);
             this.lbl_nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_nombre.Name = "lbl_nombre";
-            this.lbl_nombre.Size = new System.Drawing.Size(184, 23);
+            this.lbl_nombre.Size = new System.Drawing.Size(163, 19);
             this.lbl_nombre.TabIndex = 0;
             this.lbl_nombre.Text = "Nombre y apellido";
             // 
             // btn_stock
             // 
             this.btn_stock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_stock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_stock.FlatAppearance.BorderSize = 0;
             this.btn_stock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btn_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -499,5 +519,6 @@
         private System.Windows.Forms.Button btn_empleados;
         private System.Windows.Forms.Button btn_estadisticas;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -16,6 +16,27 @@ namespace LayerData
         DataTable _table = new DataTable();
         SqlCommand _command = new SqlCommand();
 
+        public DataTable MostrarTodo()
+        {
+            string q = "";
+
+            q = @"SELECT id_formulario as ID, name_categoria as Categoria , name_elemento as Objeto,
+                numeracion as Numeracion, stock as 'Stock actual', ultima_actualizacion as 'Ultima actualizacion'
+                FROM 
+                Formularios 
+                inner join CategoriasFormularios on Formularios.cod_categoria = CategoriasFormularios.cod_categoria 
+                inner join CategoriasElementos on Formularios.cod_elemento = CategoriasElementos.cod_elemento
+                ORDER BY name_elemento";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _read = _command.ExecuteReader();
+
+            _table.Load(_read);
+            _conn.closeConnection();
+
+            return _table;
+        }
         public DataTable mostrar(int mostrarIn) 
         {
             string q = "";
@@ -73,6 +94,24 @@ namespace LayerData
              
             return _table;
         }
+        
+        public DataTable MostarCategorias() 
+        {
+            DataTable _table = new DataTable();
+            string q = "";
+            q = @"SELECT cod_categoria,name_categoria, descripcion_categoria
+                  FROM CategoriasFormularios ORDER BY descripcion_categoria;";
+            
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _read = _command.ExecuteReader();
+
+            _table.Load(_read);
+            _conn.closeConnection();
+
+            return _table;
+        }
+       
         public DataTable mostarCategorias(int mostrarIn)
         {
             string q = "";
@@ -102,6 +141,8 @@ namespace LayerData
 
             return _table;
         }
+        
+        #region CRUD
         public void Insert(int cod_categoria,int cod_elemento, string numeracion, int stock, DateTime datetime)
         {
             string q = "INSERT INTO Formularios VALUES ("+cod_categoria+", "+cod_elemento+",'"+numeracion+"', "+stock+", GETDATE());";
@@ -149,7 +190,8 @@ namespace LayerData
 
             _conn.closeConnection();
         }
-
+        #endregion
+        #region Count
         public int queryCount(int min, int max) 
         {
             int numFormulariosInAlert = 0;
@@ -166,7 +208,7 @@ namespace LayerData
 
             return numFormulariosInAlert;
         }
-
+        #endregion
         public DataTable findAlert(int menorIgualQue) 
         {
             // Select query for object

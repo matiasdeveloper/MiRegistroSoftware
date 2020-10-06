@@ -99,7 +99,7 @@ namespace LayerPresentation
                     RememberUser();
                     _cnObject.IntializeLoginUserData(txtBox_user.Text);
 
-                    UserLoginCache.imageDefault = Properties.Settings.Default.UserImage;
+                    //UserLoginCache.imageDefault = Properties.Settings.Default.UserImage;
                     string permission = UserLoginCache.Priveleges;
                     string name = UserLoginCache.Nombre_Corto;
 
@@ -135,6 +135,14 @@ namespace LayerPresentation
                 Properties.Settings.Default.User = txtBox_user.Text;
                 Properties.Settings.Default.Pass = txtBox_pass.Text;
                 Properties.Settings.Default.Save();
+            } else 
+            {
+                if (Properties.Settings.Default.User == txtBox_user.Text) 
+                {
+                    Properties.Settings.Default.User = "";
+                    Properties.Settings.Default.Pass = "";
+                    Properties.Settings.Default.Save();
+                }
             }
         }
         private void FindSavedUser()

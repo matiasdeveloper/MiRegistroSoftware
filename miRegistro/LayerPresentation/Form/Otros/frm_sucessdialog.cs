@@ -19,23 +19,31 @@ namespace LayerPresentation
             {
                 case 0:
                     lbl_tittle.Text = "Excelente!";
-                    lbl_info.Text = "Dato ingresado correctamente";
+                    lbl_info.Text = "Dato ingresado correctamente.";
                     break;
                 case 1:
-                    lbl_tittle.Text = "Exitoso!";
-                    lbl_info.Text = "Dato eliminado correctamente";
+                    lbl_tittle.Text = "Muy bien!!";
+                    lbl_info.Text = "Dato eliminado correctamente.";
                     break;
                 case 2:
                     lbl_tittle.Text = "Maravilloso!";
-                    lbl_info.Text = "Dato actualizado correctamente";
+                    lbl_info.Text = "Dato actualizado correctamente.";
                     break;
                 case 3:
-                    lbl_tittle.Text = "Exitoso!";
-                    lbl_info.Text = "Stock actualizado correctamente";
+                    lbl_tittle.Text = "Segui asi!";
+                    lbl_info.Text = "Stock actualizado correctamente.";
                     break;
                 case 4:
                     lbl_tittle.Text = "Recuperacion!";
                     lbl_info.Text = "Verifica tu correo electronico.";
+                    break;
+                case 5:
+                    lbl_tittle.Text = "Excelente!";
+                    lbl_info.Text = "Pdf generado correctamente.";
+                    break;
+                case 6:
+                    lbl_tittle.Text = "Excelente!!";
+                    lbl_info.Text = "Consulta generada correctamente.";
                     break;
             }
         }

@@ -29,6 +29,21 @@ namespace LayerPresentation
         {
             ChargeInfoEmployees();
         }
+        private void cargarPrivilegios()
+        {
+            if (UserLoginCache.Priveleges == Privileges.Administrador)
+            {
+                // Code here
+                if(UserLoginCache.isRoot == 1) 
+                {
+                    Button[] edit = { btn_edit_0, btn_edit_1, btn_edit_2, btn_edit_3, btn_edit_4, btn_edit_5, btn_edit_6, btn_edit_7 };
+                    foreach (Button e in edit)
+                    {
+                        e.Enabled = true;
+                    }
+                }
+            } 
+        }
         private void ChargeInfoEmployees()
         {
             Panel[] panels = { panel_0, panel_1, panel_2, panel_3, panel_4, panel_5, panel_6, panel_7 };
@@ -162,12 +177,28 @@ namespace LayerPresentation
 
             Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
         }
+        private bool ExportDataTramitesPdf(Label lblid, Label lblname)
+        {
+            Random r = new Random();
+            int id = Convert.ToInt32(lblid.Text);
+            string dia = dateNow.Day + "-" + dateNow.Month;
+            string user = lblname.Text + "_" + dia;
 
+            DataTable dt = null;
+            dt = DataTramites.GetTableDate(DataTramites.GetDataTramitesTableWithID(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+
+            bool result = DataSave.ExportToPdf(dt, user);
+
+            return result;
+        }
+
+        // Timer server
         private void timer1_Tick(object sender, EventArgs e)
         {
             txtBox_fecha.Text = DateTime.Now.ToString();
         }
-
+       
+        // Buttons and more
         private void btn_tramites_0_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(lbl_id_0.Text);
@@ -175,13 +206,12 @@ namespace LayerPresentation
             string mes = dateNow.Month.ToString();
 
             DataTable dt = null;
-            dt = GetDataTramitesTableWithID(id);
+            dt = DataTramites.GetDataTramitesTableWithID(id);
             int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
             int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites);
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
             mv.Show();
-
         }
         private void btn_tramites_1_Click(object sender, EventArgs e)
         {
@@ -190,11 +220,11 @@ namespace LayerPresentation
             string mes = dateNow.Month.ToString();
 
             DataTable dt = null;
-            dt = GetDataTramitesTableWithID(id);
+            dt = DataTramites.GetDataTramitesTableWithID(id);
             int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
             int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites);
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
             mv.Show();
         }
         private void btn_tramites_2_Click(object sender, EventArgs e)
@@ -204,37 +234,199 @@ namespace LayerPresentation
             string mes = dateNow.Month.ToString();
 
             DataTable dt = null;
-            dt = GetDataTramitesTableWithID(id);
+            dt = DataTramites.GetDataTramitesTableWithID(id);
             int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
             int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites);
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
             mv.Show();
         }
-        
-        private DataTable GetDataTramitesTableWithID(int id)
+        private void btn_tramites_3_Click(object sender, EventArgs e)
         {
-            LinkedList<Employee> tmp = Cn_Employee.data.GetCache().GetUsers();
-            LinkedListNode<Employee> employee = tmp.First;
+            int id = Convert.ToInt32(lbl_id_3.Text);
+            string empleado = (string)lbl_nombre_3.Text;
+            string mes = dateNow.Month.ToString();
 
-            DataTable table = new DataTable();
+            DataTable dt = null;
+            dt = DataTramites.GetDataTramitesTableWithID(id);
+            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            for (int i = 0; i < tmp.Count; i++)
-            {
-                if (employee.Value.id == id)
-                {
-                    table = employee.Value.tramitesMes;
-                    break;
-                }
-                employee = employee.Next;
-            }
-
-            return table;
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
+            mv.Show();
         }
+        private void btn_tramites_4_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(lbl_id_4.Text);
+            string empleado = (string)lbl_nombre_4.Text;
+            string mes = dateNow.Month.ToString();
+
+            DataTable dt = null;
+            dt = DataTramites.GetDataTramitesTableWithID(id);
+            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
+            mv.Show();
+        }
+        private void btn_tramites_5_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(lbl_id_5.Text);
+            string empleado = (string)lbl_nombre_5.Text;
+            string mes = dateNow.Month.ToString();
+
+            DataTable dt = null;
+            dt = DataTramites.GetDataTramitesTableWithID(id);
+            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
+            mv.Show();
+        }
+
+        private void btn_tramites_6_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(lbl_id_6.Text);
+            string empleado = (string)lbl_nombre_6.Text;
+            string mes = dateNow.Month.ToString();
+
+            DataTable dt = null;
+            dt = DataTramites.GetDataTramitesTableWithID(id);
+            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
+            mv.Show();
+        }
+
+        private void btn_tramites_7_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(lbl_id_7.Text);
+            string empleado = (string)lbl_nombre_7.Text;
+            string mes = dateNow.Month.ToString();
+
+            DataTable dt = null;
+            dt = DataTramites.GetDataTramitesTableWithID(id);
+            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
+            mv.Show();
+        }
+        // Edit buttons
+        private void btn_edit_0_Click(object sender, EventArgs e)
+        {
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_0.Text),lbl_nombre_0.Text, lbl_permisos_0.Text);
+            frm.Show();
+        }
+        private void btn_edit_1_Click(object sender, EventArgs e)
+        {
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_1.Text), lbl_nombre_1.Text, lbl_permisos_1.Text);
+            frm.Show();
+        }
+        private void btn_edit_2_Click(object sender, EventArgs e)
+        {
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_2.Text), lbl_nombre_2.Text, lbl_permisos_2.Text);
+            frm.Show();
+        }
+        private void btn_edit_3_Click(object sender, EventArgs e)
+        {
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_3.Text), lbl_nombre_3.Text, lbl_permisos_3.Text);
+            frm.Show();
+        }
+        private void btn_edit_4_Click(object sender, EventArgs e)
+        {
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_4.Text), lbl_nombre_4.Text, lbl_permisos_4.Text);
+            frm.Show();
+        }
+        private void btn_edit_5_Click(object sender, EventArgs e)
+        {
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_5.Text), lbl_nombre_5.Text, lbl_permisos_5.Text);
+            frm.Show();
+        }
+        private void btn_edit_6_Click(object sender, EventArgs e)
+        {
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_6.Text), lbl_nombre_6.Text, lbl_permisos_6.Text);
+            frm.Show();
+        }
+        private void btn_edit_7_Click(object sender, EventArgs e)
+        {
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_7.Text), lbl_nombre_7.Text, lbl_permisos_7.Text);
+            frm.Show();
+        }
+       
+        // Save buttons
+        private void btn_savepdf_0_Click(object sender, EventArgs e)
+        {
+            if (ExportDataTramitesPdf(lbl_id_0, lbl_nombre_0)) 
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private void btn_savepdf_7_Click(object sender, EventArgs e)
+        {
+            if(ExportDataTramitesPdf(lbl_id_7, lbl_nombre_7)) 
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private void btn_savepdf_3_Click(object sender, EventArgs e)
+        {
+            if (ExportDataTramitesPdf(lbl_id_3, lbl_nombre_3)) 
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private void btn_savepdf_2_Click(object sender, EventArgs e)
+        {
+            if(ExportDataTramitesPdf(lbl_id_2, lbl_nombre_2)) 
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private void btn_savepdf_6_Click(object sender, EventArgs e)
+        {
+            if(ExportDataTramitesPdf(lbl_id_6, lbl_nombre_6)) 
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private void btn_savepdf_5_Click(object sender, EventArgs e)
+        {
+            if(ExportDataTramitesPdf(lbl_id_5, lbl_nombre_5)) 
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private void btn_savepdf_4_Click(object sender, EventArgs e)
+        {
+            if(ExportDataTramitesPdf(lbl_id_4, lbl_nombre_4)) 
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private void btn_savepdf_1_Click(object sender, EventArgs e)
+        {
+            if(ExportDataTramitesPdf(lbl_id_1, lbl_nombre_1)) 
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+
+        // Load
         private void frm_empleados_Load(object sender, EventArgs e)
         {
             Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
             refreshDashboard();
+            cargarPrivilegios();
         }
         private void btn_refreshdata_Click(object sender, EventArgs e)
         {

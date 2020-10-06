@@ -26,8 +26,16 @@ namespace LayerPresentation
 
         DateTime dateNow = DateTime.Now;
         
-        private void refreshDashboard() 
+        public void refreshDashboard() 
         {
+            chart_tramites.Series["Total tramites"].Points.Clear();
+            chart_tramites.Series["Procesados"].Points.Clear();
+            chart_tramites.Series["Inscriptos"].Points.Clear();
+
+            chart_errores.Series["Total errores"].Points.Clear();
+            chart_errores.Series["Parciales"].Points.Clear();
+            chart_errores.Series["Totales"].Points.Clear();
+
             chargeDataTabTramites();
             chargeDataTabErrores();
         }
@@ -35,9 +43,6 @@ namespace LayerPresentation
         {
             _handlerEmpleados.GenerateEmployeesDataCache();
             _handlerTramites.RefreshDataDashboardCache();
-
-            chart_tramites.Series.Clear();
-            chart_errores.Series.Clear();
 
             Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
         }
@@ -58,22 +63,10 @@ namespace LayerPresentation
             Statistics.DisplayNames(names);
             Statistics.DisplayErrores(errores, erroresparciales, errorestotales, paneles);
 
-            Statistics.DisplayTopErrores(dg_topErrores);
+            Statistics.DisplayTopErrores(dg_topErrores, dateNow.AddYears(-50), dateNow.AddYears(50));
             #region CHART
-            chart_errores.Series.Add("Empleados");
-            chart_errores.Series["Empleados"].SetDefault(true);
-            chart_errores.Series["Empleados"].Enabled = true;
-            chart_errores.Visible = true;
-
-            Random rnd = new Random();
-
-            for (int q = 0; q < 10; q++)
-            {
-                int first = rnd.Next(0, 10);
-                int second = rnd.Next(0, 15);
-                chart_errores.Series["Empleados"].Points.AddXY(first, second);
-            }
-            chart_errores.Show();
+            string[] series = { "Total errores", "Parciales", "Totales" };
+            Statistics.DashboardChartEmployeesErrores(chart_errores, series, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
             #endregion
         }
 
@@ -102,39 +95,9 @@ namespace LayerPresentation
             Statistics.DisplayTopTramites(dg_topTramites);
 
             #region CHART
-            chart_tramites.Series.Add("Empleados");
-            chart_tramites.Series["Empleados"].SetDefault(true);
-            chart_tramites.Series["Empleados"].Enabled = true;
-            chart_tramites.Visible = true;
-
-            Random rnd = new Random();
-            for (int q = 0; q < 10; q++)
-            {
-                int first = rnd.Next(0, 10);
-                int second = rnd.Next(0, 15);
-                chart_tramites.Series["Empleados"].Points.AddXY(first, second);
-            }
-            chart_tramites.Show();
+            string[] series = { "Total tramites", "Procesados", "Inscriptos" };
+            Statistics.DashboardChartEmployees(chart_tramites, series, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth, false);
             #endregion
-        }
-        private DataTable GetDataTramitesTableWithID(int id)
-        {
-            LinkedList<Employee> tmp = Cn_Employee.data.GetCache().GetUsers();
-            LinkedListNode<Employee> employee = tmp.First;
-
-            DataTable table = new DataTable();
-
-            for (int i = 0; i < tmp.Count; i++)
-            {
-                if(employee.Value.id == id) 
-                {
-                    table = employee.Value.tramitesMes;
-                    break;
-                }
-                employee = employee.Next;
-            }
-
-            return table;
         }
         
         private void btn_top_Click(object sender, EventArgs e)
@@ -143,11 +106,11 @@ namespace LayerPresentation
             string empleado = (string)dg_topTramites.SelectedRows[0].Cells[1].Value.ToString();
             string mes = dateNow.Month.ToString();
             DataTable dt = null;
-            dt = GetDataTramitesTableWithID(id);
+            dt = DataTramites.GetDataTramitesTableWithID(id);
             int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
             int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
             
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites);
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString(), true, this);
             mv.Show();
         }
         private void btn_toperror_Click_1(object sender, EventArgs e)
@@ -157,11 +120,12 @@ namespace LayerPresentation
             string mes = dateNow.Month.ToString();
 
             DataTable dt = null;
-            dt = GetDataTramitesTableWithID(id);
+            dt = DataTramites.GetDataTramitesTableWithID(id);
+            
             int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
             int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites);
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString(), true, this);
             mv.Show();
         }
 
@@ -193,6 +157,16 @@ namespace LayerPresentation
         {
             Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
             refreshDashboard();
+        }
+
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart_tramites_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using LayerData;
+using LayerSoporte.Cache;
+using LayerData.Data;
 
 namespace LayerBusiness
 {
@@ -13,19 +15,32 @@ namespace LayerBusiness
     {
         private Cd_Formularios _cdObject = new Cd_Formularios();
 
+        public DataTable MostarTodo()
+        {
+            DataTable _table = new DataTable();
+            _table = _cdObject.MostrarTodo();
+            return _table;
+        }
+        public DataTable MostrarCategorias()
+        {
+            DataTable _table = new DataTable();
+            _table = _cdObject.MostarCategorias();
+            return _table;
+        }
+
         public DataTable mostrarFormularios(int mostrarIn) 
         {
             DataTable _table = new DataTable();
             _table = _cdObject.mostrar(mostrarIn);
             return _table;          
-        } 
-        
+        }         
         public DataTable mostrarCategorias(int mostrarIn) 
         {
             DataTable _table = new DataTable();
             _table = _cdObject.mostarCategorias(mostrarIn);
             return _table;
         }
+        
         public void insertarFormularios(string cod_categoria, string cod_elemento, string numeracion, string stock, string datetime) 
         {
             _cdObject.Insert(Convert.ToInt32(cod_categoria),Convert.ToInt32(cod_elemento),numeracion, Convert.ToInt32(stock), Convert.ToDateTime(datetime));   
@@ -47,11 +62,64 @@ namespace LayerBusiness
             int num = _cdObject.queryCount(min, max);
             return num;      
         }
+        public int[] ConsultaStockRapido() 
+        {
+            List<int> a = new List<int>();
+
+            a.Add(consultasRapidas(50, Cn_HandlerFormularios.stockAlto));
+            a.Add(consultasRapidas(10, Cn_HandlerFormularios.stockMedio));
+            a.Add(consultasRapidas(0, Cn_HandlerFormularios.stockBajo));
+
+            return a.ToArray();
+        }
         public DataTable findAlert(int menorIgualQue) 
         {
             DataTable _table = new DataTable();
             _table = _cdObject.findAlert(menorIgualQue);
             return _table;
         }
+
+        #region Cache
+        public void GenerateDataFormulariosCache()
+        {
+            Cn_HandlerFormularios.data = new DataFormularios();
+            Cn_HandlerFormularios.current += 1;
+
+            // Generate the data cache from all of formularios
+            Cn_HandlerFormularios.data.GetCache().AddFormularios(GetFormularios(Cn_HandlerFormularios.current));
+            Cn_HandlerFormularios.data.GetCache().AddCategoria(GetCategorias());
+            RefreshDataDashboardCache();
+        }
+        private Formulario GetFormularios(int id)
+        {
+            Formulario frm = new Formulario(id, MostarTodo());
+            return frm;
+        }
+        private DataTable GetCategorias()
+        {
+            DataTable cat = MostrarCategorias();
+            return cat;
+        }
+        public void RefreshDataFormulariosCache()
+        {
+            Cn_HandlerFormularios.current += 1;
+
+            // Generate the data cache from all of formularios
+            Cn_HandlerFormularios.data.GetCache().AddFormularios(GetFormularios(Cn_HandlerFormularios.current));
+        }
+        public void RefreshDataCategoriasCache() 
+        {
+            Cn_HandlerFormularios.data.GetCache().AddCategoria(GetCategorias());
+        }
+        public void RefreshDataDashboardCache()
+        {
+            int[] countFormularios = ConsultaStockRapido();
+
+            Cn_HandlerFormularios.data.GetCache().totalAltos = countFormularios[0];
+            Cn_HandlerFormularios.data.GetCache().totalMedios = countFormularios[1];
+            Cn_HandlerFormularios.data.GetCache().totalBajos = countFormularios[2];
+        }
+
+        #endregion
     }
 }

@@ -21,12 +21,13 @@ namespace LayerPresentation
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        public frm_tramites_inscribir(frm_tramites frm, bool isMultiple,int id, string nombre, string dominio, string fecha)
+        public frm_tramites_inscribir(bool isMultiple,int id, string nombre, string dominio, string fecha, frm_tramites frm = null, frm_tramites_pantallaCompleta frm1 = null)
         {
             InitializeComponent();
-            displayEmpleados(comboBox_empleados);
+            DataTramites.DisplayEmpleados(comboBox_empleados);
 
-            _handlerTramites = frm;
+            this._handlerTPc = frm1;
+            this._handlerTramites = frm;
             //this.isMultiple = isMultiple;
 
             lbl_dominio.Text = dominio;
@@ -37,6 +38,8 @@ namespace LayerPresentation
         }
 
         Cn_Tramites _cnObject = new Cn_Tramites();
+
+        frm_tramites_pantallaCompleta _handlerTPc;
         frm_tramites _handlerTramites;
         //private bool isMultiple;
 
@@ -51,29 +54,6 @@ namespace LayerPresentation
         private void deleteFields()
         {
             comboBox_empleados.SelectedIndex = 0;
-        }
-        // Display combobox empleados
-        private void displayEmpleados(ComboBox cb)
-        {
-            DataTable dt = GetEmployes();
-            cb.DisplayMember = "Empleado";
-            cb.ValueMember = "Id";
-            cb.DataSource = dt;
-        }
-        private DataTable GetEmployes()
-        {
-            LinkedList<Employee> tmp = Cn_Employee.data.GetCache().GetUsers();
-            LinkedListNode<Employee> employee = tmp.First;
-
-            DataTable table = CreatorTables.EmployeeList();
-
-            for (int i = 0; i < tmp.Count; i++)
-            {
-                CreatorTables.AddRowEmployeeList(table, employee.Value.id, employee.Value.nombre);
-                employee = employee.Next;
-            }
-
-            return table;
         }
         private void btn_close_Click(object sender, EventArgs e)
         {
@@ -95,12 +75,26 @@ namespace LayerPresentation
             {
                 try
                 {
-                    _cnObject.inscribirTramite(id, 1, cod_empleado);
+                    int cod = 0;
+                    if (checkBox_inscripto.Checked) 
+                    {
+                        cod = 1;
+                    }
+
+                    _cnObject.inscribirTramite(id, cod, cod_empleado);
                     deleteFields();
                     frm_successdialog f = new frm_successdialog(2);
                     f.Show();
-                    _cnObject.RefreshDataTramitesCache();
-                    _handlerTramites.refreshData();
+
+                    if(_handlerTramites != null) 
+                    {
+                        _handlerTramites.refreshData();
+                    }
+                    if (_handlerTPc != null)
+                    {
+                        _handlerTPc.refreshData();
+                    }
+
                     this.Close();
                 }
                 catch (Exception ex)
@@ -118,13 +112,27 @@ namespace LayerPresentation
                 deleteFields();
                 frm_successdialog f = new frm_successdialog(2);
                 f.Show();
-                _handlerTramites.refreshData();
+
+                if(_handlerTramites != null) 
+                {
+                    _handlerTramites.refreshData();
+                }
+                if(_handlerTPc != null) 
+                {
+                    _handlerTPc.refreshData();
+                }
+
                 this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void frm_tramites_inscribir_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

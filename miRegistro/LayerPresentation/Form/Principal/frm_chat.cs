@@ -672,7 +672,7 @@ namespace LayerPresentation
             setAvatars();
             setComboBoxAvatars();
 
-            UserLoginCache.imageDefault = selectedImage;
+            //UserLoginCache.imageDefault = selectedImage;
             comboBox1.SelectedIndex = selectedImage;
             setAvatarUI(selectedImage);
 

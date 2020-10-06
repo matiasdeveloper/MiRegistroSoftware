@@ -29,18 +29,15 @@ namespace LayerPresentation
 
         private Button _currentBtn;
         private Panel _currentPanelQuery;
-        private Panel _currentPanelQueryActual;
 
-        private int selectedId;
+        private int selectedId = 0;
         // Methods
         public void refreshData() 
         {
             refreshTramites(Cn_HandlerTramites.current);
             refreshDashboard();
-
-            displayEmpleados(comboBox_empleado);
-            displayEmpleados(comboBox_empleados1);
         }
+        // Charge priviliges when intialize the form
         private void cargarPrivilegios() 
         {
             if (UserLoginCache.Priveleges == Privileges.Estandar)
@@ -53,12 +50,15 @@ namespace LayerPresentation
                 btn_eliminar.Enabled = false;
             }
         }
+        // Refresh data tramites
         private void refreshTramites(int id) 
         {
             dg_tramites.AutoGenerateColumns = false;
             DataTable dt = GetTramites(id);
             currentDt = dt;
             dg_tramites.DataSource = dt;
+
+            disableButton();
         }
         private void refreshDashboard()
         {
@@ -75,46 +75,16 @@ namespace LayerPresentation
             //MessageBox.Show(table.Rows.Count.ToString());
             return table;
         }
-
-        // Check the button selected
-        private void checkCorrectButton(RadioButton r1, RadioButton r2) 
+        // Refresh query specific tramites
+        public void RefreshQuery(DataTable dt) 
         {
-            if (!r1.Checked) 
+            if(dt == currentDt) 
             {
-                r1.Checked = true;
-                r2.Checked = false;
+                disableButton();
             }
-        }        
-        
-        // Check the date range
-        private Tuple<bool, bool> checkCorrectDate(DateTimePicker date1, DateTimePicker date2) 
-        {
-            bool isOk = false;
-            bool isOne = true;
-            if(date1.Checked && date2.Checked) 
-            {
-                if(date1.Value < date2.Value) 
-                {
-                    isOne = false;
-                    isOk = true;
-                } else 
-                {
-                    isOk = false;
-                    MessageBox.Show("El valor de la segunda fecha no puede ser menor o igual que la primera", "Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }       
-            } 
-            else if(date1.Checked)
-            {
-                isOne = true;
-                isOk = true;
-            } 
-            else 
-            {
-                MessageBox.Show("Seleccione al menos una fecha para iniciar la busquedad", "Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            return Tuple.Create(isOk, isOne);
+            dg_tramites.AutoGenerateColumns = false;
+            dg_tramites.DataSource = dt;
         }
-        
         // Activate or desactivate active button in current query
         private void activateButton(object senderBtn, Color color)
         {
@@ -140,7 +110,6 @@ namespace LayerPresentation
         {
             if(pn != null) 
             {
-                disablePanelQueryActual();
                 disableButton();
                 disablePanel();
                 _currentPanelQuery = (Panel)pn;
@@ -153,48 +122,6 @@ namespace LayerPresentation
             {
                 _currentPanelQuery.Visible = false;
             }
-        }
-
-        // Activate or desactivate panel query actual when press button
-        private void activatePanelQueryActual(Panel pn)
-        {
-            if (pn != null)
-            {
-                disablePanelQueryActual();
-                _currentPanelQueryActual = (Panel)pn;
-                _currentPanelQueryActual.Visible = true;
-            }
-        }
-        private void disablePanelQueryActual()
-        {
-            if (_currentPanelQueryActual != null)
-            {
-                _currentPanelQueryActual.Visible = false;
-            }
-        }
-
-        // Display combobox empleados
-        private void displayEmpleados(ComboBox cb) 
-        {
-            DataTable dt = GetEmployes();
-            cb.DisplayMember = "Empleado";
-            cb.ValueMember = "Id";
-            cb.DataSource = dt;
-        }
-        private DataTable GetEmployes()
-        {
-            LinkedList<Employee> tmp = Cn_Employee.data.GetCache().GetUsers();
-            LinkedListNode<Employee> employee = tmp.First;
-
-            DataTable table = CreatorTables.EmployeeList();
-
-            for (int i = 0; i < tmp.Count; i++)
-            {
-                CreatorTables.AddRowEmployeeList(table, employee.Value.id, employee.Value.nombre);
-                employee = employee.Next;
-            }
-
-            return table;
         }
 
         // Get data from selected index in datagrid
@@ -213,8 +140,15 @@ namespace LayerPresentation
             data[7] = dg_tramites.CurrentRow.Cells["Fecha"].Value.ToString();
 
             return data;
-        } 
-        
+        }
+
+        private void OpenFormQuery(string nombre, string query)
+        {
+            frm_tramites_query frm = new frm_tramites_query(nombre, query, currentDt, this);
+            frm.Show();
+        }
+
+        // Radio button categories
         private void radioButton_simple_Click(object sender, EventArgs e)
         {
             if (radioButton_simple.Checked)
@@ -225,7 +159,7 @@ namespace LayerPresentation
             {
                 radioButton_simple.Checked = true;
                 // Display panel
-                activatePanel(panel_simple);
+                activatePanel(query_group_1);
 
                 radioButton_complejas.Checked = false;
             }
@@ -240,367 +174,66 @@ namespace LayerPresentation
             {
                 radioButton_complejas.Checked = true;
                 // Display panel
-                activatePanel(panel_complejo);
+                activatePanel(query_group_2);
 
                 radioButton_simple.Checked = false;
             }
         }
-        
-        private void dg_tramites_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Inscripto")
-            {
-                if (Convert.ToBoolean(e.Value) == true)
-                {
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
-                }
-            }
-            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Error")
-            {
-                if (Convert.ToBoolean(e.Value) == true)
-                {
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
-                }
-                else
-                {
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
-                }
-            }
-            
-            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "TipoError")
-            {
-                if (Convert.ToString(e.Value) == "Error Total")
-                {
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
-                }
-                else if (Convert.ToString(e.Value) == "Error Parcial")
-                {
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
-                }
-            }
-        }
+       
+        // Refresh
         private void btn_refreshdata_Click(object sender, EventArgs e)
+        {
+            RefreshQuery(currentDt);
+        }
+        private void btn_refresh_Click(object sender, EventArgs e)
         {
             _cnTramites.RefreshDataTramitesCache();
             refreshTramites(Cn_HandlerTramites.current);
         }
-        private void btn_imprimirPorDominio_Click(object sender, EventArgs e)
-        {
-            dg_tramites.AutoGenerateColumns = false;
-            DataTable dt = QuerySpecific.myQuery("Dominio", currentDt, DateTime.Now, DateTime.Now, txtBox_dominio.Text.ToUpper(), "", true);
-            dg_tramites.DataSource = dt;           
-        }
-        private void btn_imprimirPorEmpleado_Click(object sender, EventArgs e)
-        {
-            dg_tramites.AutoGenerateColumns = false;
-            string empleado = comboBox_empleado.GetItemText(comboBox_empleado.SelectedItem);
 
-            DataTable dt = QuerySpecific.myQuery("Empleado", currentDt, DateTime.Now, DateTime.Now, "", empleado, true);
-            dg_tramites.DataSource = dt;
-        }
-        private void btn_imprimirPorFecha_Click(object sender, EventArgs e)
-        {
-            try 
-            {
-                var values = checkCorrectDate(dateTimePicker_fecha1, dateTimePicker_fecha2);
-                if (values.Item1)
-                {
-                    if (values.Item2)
-                    {
-                        DateTime dt1 = dateTimePicker_fecha1.Value;
-                        dg_tramites.AutoGenerateColumns = false;
-
-                        DataTable dt = QuerySpecific.myQuery("Fecha", currentDt, dt1, dt1, "", "", true);
-                        dg_tramites.DataSource = dt;
-                    }
-                    else
-                    {
-                        DateTime dt1 = dateTimePicker_fecha1.Value;
-                        DateTime dt2 = dateTimePicker_fecha2.Value;
-                        dg_tramites.AutoGenerateColumns = false;
-
-                        DataTable dt = QuerySpecific.myQuery("Fecha", currentDt, dt1, dt2, "", "", true);
-                        dg_tramites.DataSource = dt;
-                    }
-                }
-            } 
-            catch(Exception ex) 
-            {
-                MessageBox.Show("Error en la consulta: " + ex);
-            }
-        }
-        private void btn_imprimirPorFechaAndEmployee_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                var values = checkCorrectDate(dateTimePicker_fecha3, dateTimePicker_fecha4);
-                if (values.Item1)
-                {
-                    string empleado = comboBox_empleados1.GetItemText(comboBox_empleados1.SelectedItem);
-
-                    if (values.Item2)
-                    {
-                        DateTime dt1 = dateTimePicker_fecha3.Value;
-                        dg_tramites.AutoGenerateColumns = false;
-
-                        DataTable dt = QuerySpecific.myQuery("Fecha_Empleado", currentDt, dt1, dt1, "", empleado, true);
-                        dg_tramites.DataSource = dt;
-                    }
-                    else
-                    {
-                        DateTime dt1 = dateTimePicker_fecha3.Value;
-                        DateTime dt2 = dateTimePicker_fecha4.Value;
-                        dg_tramites.AutoGenerateColumns = false;
-
-                        DataTable dt = QuerySpecific.myQuery("Fecha_Empleado", currentDt, dt1, dt2, "", empleado, true);
-                        dg_tramites.DataSource = dt;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error en la consulta: " + ex);
-            }
-        }
-        private void btn_imprimirPorFechaAndProcesado_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                var values = checkCorrectDate(dateTimePicker_fecha5, dateTimePicker_fecha6);
-                if (values.Item1)
-                {
-                    bool etapa = true;
-                    if (radioButton_siProcesados.Checked) { etapa = true; } else { etapa = false; }
-
-                    if (values.Item2)
-                    {
-                        dg_tramites.AutoGenerateColumns = false;
-
-                        DataTable dt = QuerySpecific.myQuery("Fecha_Procesado", currentDt, dateTimePicker_fecha5.Value, dateTimePicker_fecha5.Value, "", "", etapa);
-                        dg_tramites.DataSource = dt;
-                    }
-                    else
-                    {
-                        dg_tramites.AutoGenerateColumns = false;
-
-                        DataTable dt = QuerySpecific.myQuery("Fecha_Procesado", currentDt, dateTimePicker_fecha5.Value, dateTimePicker_fecha6.Value, "", "", etapa);
-                        dg_tramites.DataSource = dt;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error en la consulta: " + ex);
-            }
-        }
-        private void btn_imprimirPorFechaAndInscripto_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                var values = checkCorrectDate(dateTimePicker_fecha7, dateTimePicker_fecha8);
-                if (values.Item1)
-                {
-                    bool isIncripto = true;
-                    if (radioButton_siInscriptos.Checked) { isIncripto = true; } else { isIncripto = false; }
-
-                    if (values.Item2)
-                    {
-                        dg_tramites.AutoGenerateColumns = false;
-
-                        DataTable dt = QuerySpecific.myQuery("Fecha_Inscripto", currentDt, dateTimePicker_fecha7.Value, dateTimePicker_fecha7.Value, "", "", isIncripto);
-                        dg_tramites.DataSource = dt;
-                    }
-                    else
-                    {
-                        dg_tramites.AutoGenerateColumns = false;
-
-                        DataTable dt = QuerySpecific.myQuery("Fecha_Inscripto", currentDt, dateTimePicker_fecha7.Value, dateTimePicker_fecha8.Value, "", "", isIncripto);
-                        dg_tramites.DataSource = dt;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error en la consulta: " + ex);
-            }
-        }
-        private void btn_imprimirPorFechaAndErrores_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                var values = checkCorrectDate(dateTimePicker_fecha9, dateTimePicker_fecha10);
-                if (values.Item1)
-                {
-                    bool isError = true;
-                    if (radioButton_siError.Checked) { isError = true; } else { isError = false; }
-
-                    if (values.Item2)
-                    {
-                        dg_tramites.AutoGenerateColumns = false;
-
-                        DataTable dt = QuerySpecific.myQuery("Fecha_Inscripto", currentDt, dateTimePicker_fecha9.Value, dateTimePicker_fecha9.Value, "", "", isError);
-                        dg_tramites.DataSource = dt;
-                    }
-                    else
-                    {
-                        dg_tramites.AutoGenerateColumns = false;
-
-                        DataTable dt = QuerySpecific.myQuery("Fecha_Inscripto", currentDt, dateTimePicker_fecha9.Value, dateTimePicker_fecha10.Value, "", "", isError);
-                        dg_tramites.DataSource = dt;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error en la consulta: " + ex);
-            }
-        }
-        
-        private void btn_imprimirPorHoy_Click(object sender, EventArgs e)
-        {
-            dg_tramites.AutoGenerateColumns = false;
-
-            DataTable dt = QuerySpecific.myQuery("Hoy", currentDt, DateTime.Now, DateTime.Now, "", "", true);
-            dg_tramites.DataSource = dt;
-        }
-        private void btn_imprimirPorAyer_Click(object sender, EventArgs e)
-        {
-            dg_tramites.AutoGenerateColumns = false;
-
-            DataTable dt = QuerySpecific.myQuery("Ayer", currentDt, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), "", "", true);
-            dg_tramites.DataSource = dt;
-        }
-        private void btn_imprimirPorSemana_Click(object sender, EventArgs e)
-        {
-            dg_tramites.AutoGenerateColumns = false;
-
-            DataTable dt = QuerySpecific.myQuery("Semana", currentDt, Fechas.firstDayOfWeek, Fechas.lastDayOfWeek, "", "", true);
-            dg_tramites.DataSource = dt;
-        }
-        private void btn_imprimirPorMes_Click(object sender, EventArgs e)
-        {
-            dg_tramites.AutoGenerateColumns = false;
-
-            DataTable dt = QuerySpecific.myQuery("Mes", currentDt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth, "", "", true);
-            dg_tramites.DataSource = dt;
-        }
-        
         // Buttons for query panel
         private void btn_simple_fecha_Click(object sender, EventArgs e)
         {
             activateButton(sender, Color.Blue);
-            if (_currentPanelQueryActual != panel_simple_fecha)
-            {
-                activatePanelQueryActual(panel_simple_fecha);
-            }
+            OpenFormQuery("una o dos fechas", "Fecha");
         }
+
         private void btn_simple_empleado_Click(object sender, EventArgs e)
         {
             activateButton(sender, Color.Blue);
-            if (_currentPanelQueryActual != panel_simple_empleado)
-            {
-                activatePanelQueryActual(panel_simple_empleado);
-            }
+            OpenFormQuery("empleado registrados", "Empleado");
         }
         private void btn_simple_dominio_Click(object sender, EventArgs e)
         {
             activateButton(sender, Color.Blue);
-            if (_currentPanelQueryActual != panel_simple_dominio)
-            {
-                activatePanelQueryActual(panel_simple_dominio);
-            }
+            OpenFormQuery("dominio del vehiculo", "Dominio");
         }
         private void btn_simple_diaria_Click(object sender, EventArgs e)
         {
             activateButton(sender, Color.Blue);
-            if (_currentPanelQueryActual != panel_simple_diaria)
-            {
-                activatePanelQueryActual(panel_simple_diaria);
-            }
+            OpenFormQuery("diaria (Mes y Dia)", "Diaria");
         }
         private void btn_complejo_fechaempleado_Click(object sender, EventArgs e)
         {
             activateButton(sender, Color.Blue);
-            if (_currentPanelQueryActual != panel_complejo_fechaempleado)
-            {
-                activatePanelQueryActual(panel_complejo_fechaempleado);
-            }
+            OpenFormQuery("fecha y empleado", "Fecha_Empleado");
         }
         private void btn_complejo_fechaprocesados_Click(object sender, EventArgs e)
         {
             activateButton(sender, Color.Blue);
-            if (_currentPanelQueryActual != panel_complejo_fechaprocesados)
-            {
-                activatePanelQueryActual(panel_complejo_fechaprocesados);
-            }
+            OpenFormQuery("fecha y procesados", "Fecha_Procesado");
         }
         private void btn_complejo_fechainscriptos_Click(object sender, EventArgs e)
         {
             activateButton(sender, Color.Blue);
-            if (_currentPanelQueryActual != panel_complejo_fechainscriptos)
-            {
-                activatePanelQueryActual(panel_complejo_fechainscriptos);
-            }
+            OpenFormQuery("fecha e inscripto", "Fecha_Inscripto");
         }
         private void btn_complejo_fechaerrores_Click(object sender, EventArgs e)
         {
             activateButton(sender, Color.Blue);
-            if (_currentPanelQueryActual != panel_complejo_fechaerrores)
-            {
-                activatePanelQueryActual(panel_complejo_fechaerrores);
-            }
+            OpenFormQuery("fecha y errores", "Fecha_Errores");
         }
 
-        private void txtBox_dominio_Enter(object sender, EventArgs e)
-        {
-            if (txtBox_dominio.Text == "EJ: AA111XX")
-            {
-                txtBox_dominio.Text = "";
-                txtBox_dominio.ForeColor = Color.Black;
-            }
-        }
-
-        private void txtBox_dominio_Leave(object sender, EventArgs e)
-        {
-            if (txtBox_dominio.Text == "")
-            {
-                txtBox_dominio.Text = "EJ: AA111XX";
-                txtBox_dominio.ForeColor = Color.Gray;
-            }
-        }
-        // Radiobutton query hard
-        private void radioButton_siProcesados_Click(object sender, EventArgs e)
-        {
-            checkCorrectButton(radioButton_siProcesados, radioButton_noProcesados);
-        }
-
-        private void radioButton_noProcesados_Click(object sender, EventArgs e)
-        {
-            checkCorrectButton(radioButton_noProcesados, radioButton_siProcesados);
-        }
-
-        private void radioButton_siInscriptos_Click(object sender, EventArgs e)
-        {
-            checkCorrectButton(radioButton_siInscriptos, radioButton_noInscriptos);
-        }
-
-        private void radioButton_noInscriptos_Click(object sender, EventArgs e)
-        {
-            checkCorrectButton(radioButton_noInscriptos, radioButton_siInscriptos);
-        }
-        private void radioButton_siError_Click(object sender, EventArgs e)
-        {
-            checkCorrectButton(radioButton_siError, radioButton_noError);
-        }
-        private void radioButton_noError_Click(object sender, EventArgs e)
-        {
-            checkCorrectButton(radioButton_noError, radioButton_siError);
-        }
         // Button Crud
         private void btn_editar_Click(object sender, EventArgs e)
         {
@@ -610,13 +243,13 @@ namespace LayerPresentation
             d = data;
             int id = selectedId;
 
-            frm_tramites_insertar frm = new frm_tramites_insertar(this, true, id, d);
+            frm_tramites_insertar frm = new frm_tramites_insertar(true, id, d, this);
             frm.Show();
         }
         private void btn_insertar_Click(object sender, EventArgs e)
         {
             string[] d = null;
-            frm_tramites_insertar frm = new frm_tramites_insertar(this, false, 0, d);
+            frm_tramites_insertar frm = new frm_tramites_insertar(false, 0, d, this);
             frm.Show();
         }
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -645,33 +278,98 @@ namespace LayerPresentation
                 }
             }
         }
-
         private void btn_error_Click(object sender, EventArgs e)
         {
             var data = GetDataFromSelectedIndex();
             int id = selectedId;
 
-            frm_tramites_error frm = new frm_tramites_error(this, id, data[2] ,data[0], data[7]);
+            frm_tramites_error frm = new frm_tramites_error(id, data[2] ,data[0], data[7], this);
             frm.Show();
         }
-
         private void btn_inscribir_Click(object sender, EventArgs e)
         {
             var data = GetDataFromSelectedIndex();
             int id = selectedId;
 
-            frm_tramites_inscribir frm = new frm_tramites_inscribir(this, false, id, data[2], data[0], data[7]);
+            frm_tramites_inscribir frm = new frm_tramites_inscribir(false, id, data[2], data[0], data[7], this);
             frm.Show();
         }
+        
+        // Timer server
         private void timer1_Tick(object sender, EventArgs e)
         {
             txtBox_fecha.Text = DateTime.Now.ToString();
         }
+
+        // Paint the datagrid
+        private void dg_tramites_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Inscripto")
+            {
+                if (Convert.ToBoolean(e.Value) == true)
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                }
+            }
+            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Error")
+            {
+                if (Convert.ToBoolean(e.Value) == true)
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
+                }
+                else
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                }
+            }
+
+            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "TipoError")
+            {
+                if (Convert.ToString(e.Value) == "Error Total")
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
+                }
+                else if (Convert.ToString(e.Value) == "Error Parcial")
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
+                }
+            }
+        }
+
         private void frm_tramites_consultas_Load(object sender, EventArgs e)
         {
-            activatePanel(panel_simple);
+            activatePanel(query_group_1);
             cargarPrivilegios();
         }
 
+        private void btn_savepdf_Click(object sender, EventArgs e)
+        {
+            if (ExportDataTramitesPdf(dg_tramites, "TramitesRNA"))
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+
+        private bool ExportDataTramitesPdf(DataGridView dt, string name)
+        {
+            Random r = new Random();
+            string dia = DateTime.Now.Day + "-" + DateTime.Now.Month;
+            string user = name + "_" + dia;
+
+            bool result = DataSave.saveInPdf(dt, user);
+
+            return result;
+        }
+
+        private void dg_tramites_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

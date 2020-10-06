@@ -1,0 +1,332 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using LayerBusiness;
+using LayerPresentation.Clases;
+using LayerSoporte.Cache;
+
+namespace LayerPresentation
+{
+    public partial class frm_tramites_pantallaCompleta : Form
+    {
+        public frm_tramites_pantallaCompleta(int id, string empleado, string mes, DataTable dt, int[] errores, int[] tramites, string desde, string hasta, bool isStatistics = true, frm_estadisticas frmStatistic = null, frm_escritorio frmEscritorio = null)
+        {
+            InitializeComponent();
+
+            this._handlerEstadisticas = frmStatistic;
+            this._handlerEscritorio = frmEscritorio;
+            this.id = id;
+            this.empleado = empleado;
+            this.mes = mes;
+            this.data = dt;
+            this.errores = errores;
+            this.tramites = tramites;
+            this.isStatistics = isStatistics;
+
+            lbl_desde.Text = desde;
+            lbl_hasta.Text = hasta;
+
+            InitializeData();
+        }
+
+        // Move form with mouse down in bar
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+        // Variables
+        frm_escritorio _handlerEscritorio;
+        frm_estadisticas _handlerEstadisticas;
+        private bool isStatistics;
+        private int id;
+        private string empleado;
+        private string mes;
+        private DataTable data;
+        private int[] errores;
+        private int[] tramites;
+        private int selectedId = 0;
+
+        private void InitializeData() 
+        {
+            dg_tramites.DataSource = null;
+
+            dg_tramites.AutoGenerateColumns = false;
+            dg_tramites.DataSource = GetTableDate(data, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+
+            if (isStatistics) 
+            {
+                lbl_id.Text = id.ToString();
+                lbl_mes.Text = mes;
+                lbl_user.Text = empleado;
+                lbl_totalerrores.Text = errores[0].ToString();
+                lbl_totaltramites.Text = tramites[0].ToString();
+                lbl_totalprocesados.Text = tramites[1].ToString();
+                lbl_totalinscriptos.Text = tramites[2].ToString();
+            } 
+            else 
+            {
+                lbl_id.Text = id.ToString();
+                lbl_mes.Text = mes;
+                lbl_user.Text = empleado;
+            }
+        }
+        private DataTable GetTableDate(DataTable data, DateTime dt1, DateTime dt2)
+        {
+            DataTable tramites = CreatorTables.TramitesEmployeeTable();
+            dt2.AddDays(1);
+            foreach (DataRow fila in data.Rows)
+            {
+                if ((DateTime)fila[5] >= dt1 && (DateTime)fila[5] < dt2)
+                {                   
+                    CreatorTables.AddRowTramitesEmployeesTable(tramites, (int)fila[0], (string)fila[1], (string)fila[2],
+                        (string)fila[3], (string)fila[4], (DateTime)fila[5], (bool)fila[6], 
+                        (string)fila[7], (string)fila[8], (bool)fila[9], (string)fila[10]);
+                } 
+                else { /* fila.Delete(); */}
+            }
+            return tramites;
+        }
+
+        #region Tittle Bar
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btn_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        #endregion
+
+        private void dg_tramites_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Empleado1")
+            {
+                if (Convert.ToString(e.Value) == empleado)
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(0, 0, 35);
+                }
+            }
+            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "NombreInscripto") 
+            {
+                if(Convert.ToString(e.Value) == empleado) 
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(0, 0, 35);
+                }
+            }
+            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Inscripto")
+            {
+                if (Convert.ToBoolean(e.Value) == true)
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                }
+            }
+            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Error")
+            {
+                if (Convert.ToBoolean(e.Value) == true)
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
+                }
+                else
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                }
+            }
+
+            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "TipoError")
+            {
+                if (Convert.ToString(e.Value) == "Error Total")
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
+                }
+                else if (Convert.ToString(e.Value) == "Error Parcial")
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
+                }
+            }
+        }
+
+        private void frm_tramites_pantallaCompleta_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barra_titulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btn_savepdf_Click(object sender, EventArgs e)
+        {
+            if (ExportDataTramitesPdf(dg_tramites, "TramitesRNA"))
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+
+        // Get data from selected index in datagrid
+        private string[] GetDataFromSelectedIndex()
+        {
+            selectedId = Convert.ToInt32(dg_tramites.CurrentRow.Cells["Id1"].Value); ;
+            string[] data = new string[8];
+
+            data[0] = dg_tramites.CurrentRow.Cells["Dominio"].Value.ToString();
+            data[1] = dg_tramites.CurrentRow.Cells["Tramite"].Value.ToString();
+            data[2] = dg_tramites.CurrentRow.Cells["Empleado1"].Value.ToString();
+            data[3] = dg_tramites.CurrentRow.Cells["Etapa"].Value.ToString();
+            data[4] = dg_tramites.CurrentRow.Cells["Error"].Value.ToString();
+            data[5] = dg_tramites.CurrentRow.Cells["TipoError"].Value.ToString();
+            data[6] = dg_tramites.CurrentRow.Cells["Observaciones"].Value.ToString();
+            data[7] = dg_tramites.CurrentRow.Cells["Fecha"].Value.ToString();
+
+            return data;
+        }
+        private bool ExportDataTramitesPdf(DataGridView dt, string name)
+        {
+            Random r = new Random();
+            string dia = DateTime.Now.Day + "-" + DateTime.Now.Month;
+            string user = name + "_" + dia;
+
+            bool result = DataSave.saveInPdf(dt, user);
+
+            return result;
+        }
+
+        private void btn_editar_Click_1(object sender, EventArgs e)
+        {
+            var data = GetDataFromSelectedIndex();
+
+            string[] d = new string[6];
+            d = data;
+            int id = selectedId;
+
+            frm_tramites_insertar frm = new frm_tramites_insertar(true, id, d, null, this);
+            frm.Show();
+        }
+
+        private void btn_inscribir_Click(object sender, EventArgs e)
+        {
+            var data = GetDataFromSelectedIndex();
+            int id = selectedId;
+
+            frm_tramites_inscribir frm = new frm_tramites_inscribir(false, id, data[2], data[0], data[7], null, this);
+            frm.Show();
+        }
+
+        private void btn_error_Click(object sender, EventArgs e)
+        {
+            var data = GetDataFromSelectedIndex();
+            int id = selectedId;
+
+            frm_tramites_error frm = new frm_tramites_error(id, data[2], data[0], data[7], null, this);
+            frm.Show();
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Estas seguro que deseas eliminar el tramite seleccionado?", "Atencion", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    if (dg_tramites.SelectedRows.Count > 0)
+                    {
+                        var data = GetDataFromSelectedIndex();
+                        int id = selectedId;
+
+                        Cn_Tramites _cnTramites = new Cn_Tramites();
+                        _cnTramites.eliminarTramite(id.ToString());
+
+                        frm_successdialog f = new frm_successdialog(1);
+                        f.Show();
+
+                        refreshData();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+        }
+
+        public void refreshData()
+        {
+            Cn_Empleados _handlerEmpleados = new Cn_Empleados();
+            _handlerEmpleados.GenerateEmployeesDataCache();
+
+            Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
+
+            Cn_Tramites _cnTramites = new Cn_Tramites();
+            _cnTramites.RefreshDataTramitesCache();
+            _cnTramites.RefreshDataDashboardCache();
+
+            DataTable dt = null;
+
+            // Refresh datatable!
+            switch (empleado) 
+            {
+                case "Todos mensual":
+                    Tramites tmp = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
+                    DataTable table = tmp.data;
+                    dt = QuerySpecific.myQuery("Mes", table, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth, "", "", true);
+                    this.data = dt;
+
+                    break;
+                case "Todos diario":
+                    Tramites tmp1 = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
+                    DataTable table1 = tmp1.data;
+                    dt = QuerySpecific.myQuery("Hoy", table1, DateTime.Now, DateTime.Now, "", "", true);
+                    this.data = dt;
+
+                    break;
+                case "Todos ayer":
+                    Tramites tmp2 = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
+                    DataTable table2 = tmp2.data;
+                    dt = QuerySpecific.myQuery("Ayer", table2, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), "", "", true);
+                    this.data = dt;
+
+                    break;
+                default:
+                    dt = DataTramites.GetDataTramitesTableWithID(id);
+
+                    int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+                    int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+                    
+                    this.data = dt;
+                    this.errores = errores;
+                    this.tramites = tramites;
+
+                    break;
+            }
+
+            InitializeData();
+
+            if (_handlerEstadisticas != null)
+            {
+                _handlerEstadisticas.refreshDashboard();
+            }
+            if(_handlerEscritorio != null) 
+            {
+                _handlerEscritorio.RefreshDashboard();
+            }
+        }
+    }
+}

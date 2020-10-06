@@ -63,31 +63,31 @@ namespace LayerPresentation.Clases
         // Simples
         public static DataTable GetByDominio(string dominio, DataTable data) 
         {
-            DataTable dt = CreateNewTable();
+            DataTable dt = CreatorTables.Tramites();
             foreach (DataRow fila in data.Rows)
             {
                 if ((string)fila[1] == dominio)
                 {
-                    AddRow(dt, fila);
+                    CreatorTables.AddRowTramites(dt, fila);
                 }
             }
             return dt;
         }
         public static DataTable GetByEmpleado(string empleado, DataTable data)
         {
-            DataTable dt = CreateNewTable();
+            DataTable dt = CreatorTables.Tramites();
             foreach (DataRow fila in data.Rows)
             {
                 if ((string)fila[2] == empleado)
                 {
-                    AddRow(dt, fila);
+                    CreatorTables.AddRowTramites(dt, fila);
                 }
             }
             return dt;
         }
         public static DataTable GetByFecha(DateTime fecha1, DateTime fecha2, DataTable data)
         {
-            DataTable dt = CreateNewTable();
+            DataTable dt = CreatorTables.Tramites();
 
             DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
             DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
@@ -98,7 +98,7 @@ namespace LayerPresentation.Clases
                 DateTime date = (DateTime)fila[5];
                 if (date >= dt1 & date < dt2)
                 {
-                    AddRow(dt, fila);
+                    CreatorTables.AddRowTramites(dt, fila);
                 }
             }
             return dt;
@@ -107,7 +107,7 @@ namespace LayerPresentation.Clases
         // Especificas
         public static DataTable GetByFecha_Empleado(DateTime fecha1, DateTime fecha2, string empleado,DataTable data)
         {
-            DataTable dt = CreateNewTable();
+            DataTable dt = CreatorTables.Tramites();
 
             DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
             DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
@@ -118,14 +118,14 @@ namespace LayerPresentation.Clases
                 DateTime date = (DateTime)fila[5];
                 if (date >= dt1 & date < dt2 && (string)fila[2] == empleado)
                 {
-                    AddRow(dt, fila);
+                    CreatorTables.AddRowTramites(dt, fila);
                 }
             }
             return dt;
         }
         public static DataTable GetByFecha_Procesado(DateTime fecha1, DateTime fecha2, DataTable data)
         {
-            DataTable dt = CreateNewTable();
+            DataTable dt = CreatorTables.Tramites();
 
             DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
             DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
@@ -136,14 +136,14 @@ namespace LayerPresentation.Clases
                 DateTime date = (DateTime)fila[5];
                 if (date >= dt1 & date < dt2)
                 {
-                    AddRow(dt, fila);
+                    CreatorTables.AddRowTramites(dt, fila);
                 }
             }
             return dt;
         }
         public static DataTable GetByFecha_Inscripto(DateTime fecha1, DateTime fecha2, bool inscripto,DataTable data)
         {
-            DataTable dt = CreateNewTable();
+            DataTable dt = CreatorTables.Tramites();
 
             DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
             DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
@@ -156,7 +156,7 @@ namespace LayerPresentation.Clases
                 {
                     if((bool)fila[9] == true) 
                     {
-                        AddRow(dt, fila);
+                        CreatorTables.AddRowTramites(dt, fila);
                     }
                 }
             }
@@ -164,7 +164,7 @@ namespace LayerPresentation.Clases
         }
         public static DataTable GetByFecha_Errores(DateTime fecha1, DateTime fecha2, bool errores,DataTable data)
         {
-            DataTable dt = CreateNewTable();
+            DataTable dt = CreatorTables.Tramites();
 
             DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
             DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
@@ -177,97 +177,11 @@ namespace LayerPresentation.Clases
                 {
                     if ((bool)fila[6] == true)
                     {
-                        AddRow(dt, fila);
+                        CreatorTables.AddRowTramites(dt, fila);
                     }
                 }
             }
             return dt;
-        }
-
-        private static void AddRow(DataTable dt, DataRow fila)
-        {
-            DataRow row;
-
-            row = dt.NewRow();
-
-            row["Id"] = fila[0];
-            row["Dominio"] = fila[1];
-            row["Empleado"] = fila[2];
-            row["Tramite"] = fila[3];
-            row["Etapa"] = fila[4];
-            row["Fecha"] = fila[5];
-            row["Error"] = fila[6];
-            row["Tipo Error"] = fila[7];
-            row["Observaciones"] = fila[8];
-            row["Inscripto"] = fila[9];
-
-            dt.Rows.Add(row);
-        }
-        private static DataTable CreateNewTable()
-        {
-            DataTable table = new DataTable();
-            DataColumn column;
-            // Create new DataColumn, set DataType, ColumnName and add to DataTable.
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.Int32");
-            column.ColumnName = "Id";
-            table.Columns.Add(column);
-
-            // Create a first column
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.String");
-            column.ColumnName = "Dominio";
-            table.Columns.Add(column);
-
-            // Create a first column
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.String");
-            column.ColumnName = "Empleado";
-            table.Columns.Add(column);
-
-            // Create a first column
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.String");
-            column.ColumnName = "Tramite";
-            table.Columns.Add(column);
-
-            // Create a first column
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.String");
-            column.ColumnName = "Etapa";
-            table.Columns.Add(column);
-
-            // Create second column.
-            column = new DataColumn();
-            column.DataType = Type.GetType("System.DateTime");
-            column.ColumnName = "Fecha";
-            table.Columns.Add(column);
-            
-            // Create third column.
-            column = new DataColumn();
-            column.DataType = Type.GetType("System.Boolean");
-            column.ColumnName = "Error";
-            table.Columns.Add(column);
-
-            // Create four column.
-            column = new DataColumn();
-            column.DataType = Type.GetType("System.String");
-            column.ColumnName = "Tipo Error";
-            table.Columns.Add(column);
-
-            // Create four column.
-            column = new DataColumn();
-            column.DataType = Type.GetType("System.String");
-            column.ColumnName = "Observaciones";
-            table.Columns.Add(column);
-
-            // Create four column.
-            column = new DataColumn();
-            column.DataType = Type.GetType("System.Boolean");
-            column.ColumnName = "Inscripto";
-            table.Columns.Add(column);
-
-            return table;
         }
     }
 }

@@ -34,6 +34,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,16 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cache\BitmapAvatar.cs" />
-    <Compile Include="Cache\Employee.cs" />
-    <Compile Include="Cache\EmployeesDataCache.cs" />
-    <Compile Include="Cache\Fechas.cs" />
-    <Compile Include="Cache\Privileges.cs" />
-    <Compile Include="Cache\Tramites.cs" />
-    <Compile Include="Cache\TramitesDataCache.cs" />
-    <Compile Include="Cache\UserChat.cs" />
-    <Compile Include="Cache\UserChatInfo.cs" />
-    <Compile Include="Cache\UserLoginCache.cs" />
+    <Compile Include="Cache\Chat\BitmapAvatar.cs" />
+    <Compile Include="Cache\Empleados\Employee.cs" />
+    <Compile Include="Cache\Empleados\EmployeesDataCache.cs" />
+    <Compile Include="Cache\Formularios\FormulariosDataCache.cs" />
+    <Compile Include="Cache\Sistema\Fechas.cs" />
+    <Compile Include="Cache\Formularios\Formulario.cs" />
+    <Compile Include="Cache\Sistema\Privileges.cs" />
+    <Compile Include="Cache\Tramites\Tramites.cs" />
+    <Compile Include="Cache\Tramites\TramitesDataCache.cs" />
+    <Compile Include="Cache\Chat\UserChat.cs" />
+    <Compile Include="Cache\Chat\UserChatInfo.cs" />
+    <Compile Include="Cache\Sistema\UserLoginCache.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

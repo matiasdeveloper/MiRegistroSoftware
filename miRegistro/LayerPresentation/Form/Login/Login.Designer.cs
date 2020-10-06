@@ -70,6 +70,7 @@
             // 
             this.txtBox_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtBox_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBox_user.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBox_user.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_user.ForeColor = System.Drawing.Color.DimGray;
             this.txtBox_user.Location = new System.Drawing.Point(275, 72);
@@ -86,6 +87,7 @@
             // 
             this.txtBox_pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtBox_pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBox_pass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBox_pass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_pass.ForeColor = System.Drawing.Color.DimGray;
             this.txtBox_pass.Location = new System.Drawing.Point(275, 119);
@@ -109,17 +111,18 @@
             // btn_login
             // 
             this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btn_login.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_login.FlatAppearance.BorderSize = 0;
             this.btn_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btn_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.LightGray;
             this.btn_login.Location = new System.Drawing.Point(275, 190);
             this.btn_login.Margin = new System.Windows.Forms.Padding(2);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(225, 32);
-            this.btn_login.TabIndex = 3;
+            this.btn_login.TabIndex = 0;
             this.btn_login.Text = "Acceder";
             this.btn_login.UseVisualStyleBackColor = false;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
@@ -134,7 +137,7 @@
             this.linkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel.Name = "linkLabel";
             this.linkLabel.Size = new System.Drawing.Size(174, 17);
-            this.linkLabel.TabIndex = 0;
+            this.linkLabel.TabIndex = 4;
             this.linkLabel.TabStop = true;
             this.linkLabel.Text = "Ha olvidado su contraseña?";
             this.linkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_LinkClicked);
@@ -155,6 +158,7 @@
             // 
             this.btn_minimize.BackgroundImage = global::LayerPresentation.Properties.Resources.minimize;
             this.btn_minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_minimize.Location = new System.Drawing.Point(574, 10);
             this.btn_minimize.Margin = new System.Windows.Forms.Padding(2);
             this.btn_minimize.Name = "btn_minimize";
@@ -167,6 +171,7 @@
             // 
             this.btn_close.BackgroundImage = global::LayerPresentation.Properties.Resources.close;
             this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_close.Location = new System.Drawing.Point(592, 10);
             this.btn_close.Margin = new System.Windows.Forms.Padding(2);
             this.btn_close.Name = "btn_close";
@@ -196,7 +201,7 @@
             this.checkBox_guardar.Location = new System.Drawing.Point(275, 159);
             this.checkBox_guardar.Name = "checkBox_guardar";
             this.checkBox_guardar.Size = new System.Drawing.Size(101, 21);
-            this.checkBox_guardar.TabIndex = 12;
+            this.checkBox_guardar.TabIndex = 3;
             this.checkBox_guardar.Text = "Recordarme";
             this.checkBox_guardar.UseVisualStyleBackColor = true;
             // 

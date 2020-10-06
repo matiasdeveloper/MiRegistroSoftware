@@ -8,6 +8,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using Label = System.Windows.Forms.Label;
 
 namespace LayerPresentation.Clases
@@ -15,6 +16,65 @@ namespace LayerPresentation.Clases
     public static class Statistics
     {
         public static LinkedList<Employee> tmp;
+
+        public static void DashboardChartEmployees(Chart ch, string[] series, DateTime fecha1, DateTime fecha2, bool isSimple = true)
+        {
+            DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
+            DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
+
+            LinkedListNode<Employee> employee = tmp.First;
+            
+            int[] etapasMes;
+            // Display stastic for all of employees into the chart series1
+            for (int i = 0; i < tmp.Count; i++)
+            {
+                if (employee.Value.nombre != "Admin S.")
+                {
+                    if (isSimple) 
+                    {
+                        // By month and simple chart
+                        etapasMes = FindEtapas(employee.Value.nombre, employee.Value.tramitesMes, dt1, dt2);
+                        etapasMes[1] += etapasMes[0];
+
+                        ch.Series[series[0]].Points.AddXY(employee.Value.nombre, etapasMes[1]);
+                    } 
+                    else 
+                    {
+                        // By month and all the chart
+                        etapasMes = FindEtapas(employee.Value.nombre, employee.Value.tramitesMes, dt1, dt2);
+                        etapasMes[1] += etapasMes[0];
+
+                        ch.Series[series[0]].Points.AddXY(employee.Value.nombre, etapasMes[1]);
+                        ch.Series[series[1]].Points.AddXY("Procesados", etapasMes[1]);
+                        ch.Series[series[2]].Points.AddXY("Inscriptos", etapasMes[0]);
+                    }
+                }
+                employee = employee.Next;
+            }
+        }
+        public static void DashboardChartEmployeesErrores(Chart ch, string[] series, DateTime fecha1, DateTime fecha2)
+        {
+            DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
+            DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
+
+            LinkedListNode<Employee> employee = tmp.First;
+
+            int[] erroresMes;
+            // Display stastic for all of employees into the chart series1
+            for (int i = 0; i < tmp.Count; i++)
+            {
+                if (employee.Value.nombre != "Admin S.")
+                {
+                    // By month and all the chart
+                    erroresMes = FindErrores(employee.Value.nombre, employee.Value.tramitesMes, dt1, dt2);
+
+                    ch.Series[series[0]].Points.AddXY(employee.Value.nombre, erroresMes[0]);
+                    ch.Series[series[1]].Points.AddXY("Parciales", erroresMes[1]);
+                    ch.Series[series[2]].Points.AddXY("Totales", erroresMes[2]);
+                }
+                employee = employee.Next;
+            }
+        }
 
         public static void DashboardStatisticHistory(Label[] labelStatistic) 
         {
@@ -610,7 +670,7 @@ namespace LayerPresentation.Clases
                 employee = employee.Next;
             }
         }
-        public static void DisplayTopErrores(DataGridView dt)
+        public static void DisplayTopErrores(DataGridView dt, DateTime fecha1, DateTime fecha2)
         {
             LinkedListNode<Employee> employee = tmp.First;
             DataTable table = CreatorTables.TopEmployeesTable();
@@ -621,7 +681,7 @@ namespace LayerPresentation.Clases
             {
                 if (employee.Value.nombre != "Admin S.") 
                 {
-                    e = FindErrores(employee.Value.nombre, employee.Value.tramitesMes, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+                    e = FindErrores(employee.Value.nombre, employee.Value.tramitesMes, fecha1, fecha2);
                     CreatorTables.AddRowTopEmployeesTable(table, employee.Value.nombre, employee.Value.id, e[0], e[1], e[2]);
                 }
                 employee = employee.Next;
@@ -697,5 +757,6 @@ namespace LayerPresentation.Clases
 
             return new int[] { errores, parciales, totales };
         }
+        
     }
 }

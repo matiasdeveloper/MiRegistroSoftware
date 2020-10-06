@@ -224,10 +224,11 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.barra_titulo);
             this.Controls.Add(this.panel_simple);
+            this.Controls.Add(this.barra_titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_tramites_inscribir";
+            this.Load += new System.EventHandler(this.frm_tramites_inscribir_Load);
             this.barra_titulo.ResumeLayout(false);
             this.barra_titulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();

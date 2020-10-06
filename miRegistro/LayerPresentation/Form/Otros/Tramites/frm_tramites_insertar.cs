@@ -14,13 +14,15 @@ namespace LayerPresentation
 {
     public partial class frm_tramites_insertar : Form
     {
-        public frm_tramites_insertar(frm_tramites frm, bool isEdit, int id, string[] data)
+        public frm_tramites_insertar(bool isEdit, int id, string[] data, frm_tramites frm = null, frm_tramites_pantallaCompleta frm1 = null)
         {
             InitializeComponent();
-            displayEmpleados(comboBox_empleados);
+            DataTramites.DisplayEmpleados(comboBox_empleados);
+
             displayTramites(comboBox_tramites);
             displayErrores(comboBox_tipoError);
 
+            _frmHandlerTPc = frm1;
             _frmHandler = frm;
             this.isEdit = isEdit;
             this.id = id;
@@ -52,7 +54,10 @@ namespace LayerPresentation
             }        
         }
         Cn_Tramites _cnObject = new Cn_Tramites();
+
+        frm_tramites_pantallaCompleta _frmHandlerTPc;
         frm_tramites _frmHandler;
+
         // Move form with mouse down in bar
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -78,14 +83,6 @@ namespace LayerPresentation
         private bool iniciarCarga = true;
 
         // Display combobox
-        private void displayEmpleados(ComboBox cb)
-        {
-            Cn_Tramites objects = new Cn_Tramites();
-            DataTable dt = objects.mostrarEmpleados();
-            cb.DisplayMember = "Nombre";
-            cb.ValueMember = "Cod";
-            cb.DataSource = dt;
-        }
         private void displayTramites(ComboBox cb)
         {
             Cn_Tramites objects = new Cn_Tramites();
@@ -102,7 +99,8 @@ namespace LayerPresentation
             cb.ValueMember = "Cod";
             cb.DataSource = dt;
         }
-        // Insert data
+
+        // Initialize Charge Tramites
         private bool initVariables() 
         {
             // Dominio
@@ -202,7 +200,14 @@ namespace LayerPresentation
                         frm_successdialog f = new frm_successdialog(0);
                         f.Show();
                         _cnObject.RefreshDataTramitesCache();
-                        _frmHandler.refreshData();
+                        if (_frmHandler != null)
+                        {
+                            _frmHandler.refreshData();
+                        }
+                        if (_frmHandlerTPc != null)
+                        {
+                            _frmHandlerTPc.refreshData();
+                        }
                     }
                     else
                     {
@@ -211,7 +216,14 @@ namespace LayerPresentation
                         frm_successdialog f = new frm_successdialog(2);
                         f.Show();
                         _cnObject.RefreshDataTramitesCache();
-                        _frmHandler.refreshData();
+                        if (_frmHandler != null)
+                        {
+                            _frmHandler.refreshData();
+                        }
+                        if (_frmHandlerTPc != null)
+                        {
+                            _frmHandlerTPc.refreshData();
+                        }
                         this.Close();
                     }
                 }

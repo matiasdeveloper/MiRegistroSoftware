@@ -39,9 +39,8 @@
             this.panel_0 = new System.Windows.Forms.Panel();
             this.lbl_id_0 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_savepdf_0 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_edit_0 = new System.Windows.Forms.Button();
             this.lbl_email_0 = new System.Windows.Forms.Label();
             this.lbl_permisos_0 = new System.Windows.Forms.Label();
@@ -64,11 +63,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_0 = new System.Windows.Forms.Label();
             this.panel_1 = new System.Windows.Forms.Panel();
+            this.btn_savepdf_1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.lbl_id_1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_edit_1 = new System.Windows.Forms.Button();
             this.lbl_email_1 = new System.Windows.Forms.Label();
             this.lbl_permisos_1 = new System.Windows.Forms.Label();
@@ -91,11 +89,10 @@
             this.label20 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_1 = new System.Windows.Forms.Label();
             this.panel_2 = new System.Windows.Forms.Panel();
+            this.btn_savepdf_2 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.lbl_id_2 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btn_edit_2 = new System.Windows.Forms.Button();
             this.lbl_email_2 = new System.Windows.Forms.Label();
             this.lbl_permisos_2 = new System.Windows.Forms.Label();
@@ -118,11 +115,10 @@
             this.label34 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_2 = new System.Windows.Forms.Label();
             this.panel_3 = new System.Windows.Forms.Panel();
+            this.btn_savepdf_3 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.lbl_id_3 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btn_edit_3 = new System.Windows.Forms.Button();
             this.lbl_email_3 = new System.Windows.Forms.Label();
             this.lbl_permisos_3 = new System.Windows.Forms.Label();
@@ -145,11 +141,10 @@
             this.label48 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_3 = new System.Windows.Forms.Label();
             this.panel_4 = new System.Windows.Forms.Panel();
+            this.btn_savepdf_4 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.lbl_id_4 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btn_edit_4 = new System.Windows.Forms.Button();
             this.lbl_email_4 = new System.Windows.Forms.Label();
             this.lbl_permisos_4 = new System.Windows.Forms.Label();
@@ -172,11 +167,10 @@
             this.label62 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_4 = new System.Windows.Forms.Label();
             this.panel_5 = new System.Windows.Forms.Panel();
+            this.btn_savepdf_5 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
             this.lbl_id_5 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btn_edit_5 = new System.Windows.Forms.Button();
             this.lbl_email_5 = new System.Windows.Forms.Label();
             this.lbl_permisos_5 = new System.Windows.Forms.Label();
@@ -199,11 +193,10 @@
             this.label76 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_5 = new System.Windows.Forms.Label();
             this.panel_6 = new System.Windows.Forms.Panel();
+            this.btn_savepdf_6 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
             this.lbl_id_6 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btn_edit_6 = new System.Windows.Forms.Button();
             this.lbl_email_6 = new System.Windows.Forms.Label();
             this.lbl_permisos_6 = new System.Windows.Forms.Label();
@@ -226,11 +219,10 @@
             this.label90 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_6 = new System.Windows.Forms.Label();
             this.panel_7 = new System.Windows.Forms.Panel();
+            this.btn_savepdf_7 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.lbl_id_7 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btn_edit_7 = new System.Windows.Forms.Button();
             this.lbl_email_7 = new System.Windows.Forms.Label();
             this.lbl_permisos_7 = new System.Windows.Forms.Label();
@@ -279,32 +271,23 @@
             this.lbl_diaprocesados_8 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_8 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel_0.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel93.SuspendLayout();
             this.panel_1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel_2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pl.SuspendLayout();
             this.panel_3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel20.SuspendLayout();
             this.panel_4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel26.SuspendLayout();
             this.panel_5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel32.SuspendLayout();
             this.panel_6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel38.SuspendLayout();
             this.panel_7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel44.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -389,20 +372,18 @@
             this.flowLayoutPanel1.Controls.Add(this.panel_6);
             this.flowLayoutPanel1.Controls.Add(this.panel_7);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 36);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(19, 37);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(962, 635);
             this.flowLayoutPanel1.TabIndex = 18;
             // 
             // panel_0
             // 
-            this.panel_0.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel_0.Controls.Add(this.button6);
+            this.panel_0.BackColor = System.Drawing.Color.Snow;
             this.panel_0.Controls.Add(this.lbl_id_0);
             this.panel_0.Controls.Add(this.label1);
-            this.panel_0.Controls.Add(this.button3);
+            this.panel_0.Controls.Add(this.btn_savepdf_0);
             this.panel_0.Controls.Add(this.button2);
-            this.panel_0.Controls.Add(this.pictureBox1);
             this.panel_0.Controls.Add(this.btn_edit_0);
             this.panel_0.Controls.Add(this.lbl_email_0);
             this.panel_0.Controls.Add(this.lbl_permisos_0);
@@ -421,7 +402,7 @@
             this.lbl_id_0.AutoSize = true;
             this.lbl_id_0.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id_0.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_id_0.Location = new System.Drawing.Point(209, 56);
+            this.lbl_id_0.Location = new System.Drawing.Point(214, 4);
             this.lbl_id_0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_id_0.Name = "lbl_id_0";
             this.lbl_id_0.Size = new System.Drawing.Size(14, 16);
@@ -433,26 +414,26 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(189, 56);
+            this.label1.Location = new System.Drawing.Point(194, 4);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 16);
             this.label1.TabIndex = 174;
             this.label1.Text = "Id:";
             // 
-            // button3
+            // btn_savepdf_0
             // 
-            this.button3.Enabled = false;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.DarkRed;
-            this.button3.Location = new System.Drawing.Point(6, 251);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 26);
-            this.button3.TabIndex = 173;
-            this.button3.Text = "Ver alertas";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_savepdf_0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_savepdf_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_savepdf_0.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_savepdf_0.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_savepdf_0.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_0.Name = "btn_savepdf_0";
+            this.btn_savepdf_0.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_0.TabIndex = 173;
+            this.btn_savepdf_0.Text = "Exportar .pdf del mes";
+            this.btn_savepdf_0.UseVisualStyleBackColor = true;
+            this.btn_savepdf_0.Click += new System.EventHandler(this.btn_savepdf_0_Click);
             // 
             // button2
             // 
@@ -468,18 +449,9 @@
             this.button2.Text = "Ver observaciones";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::LayerPresentation.Properties.Resources.employee;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(209, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(18, 20);
-            this.pictureBox1.TabIndex = 170;
-            this.pictureBox1.TabStop = false;
-            // 
             // btn_edit_0
             // 
+            this.btn_edit_0.Enabled = false;
             this.btn_edit_0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_0.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -490,6 +462,7 @@
             this.btn_edit_0.TabIndex = 171;
             this.btn_edit_0.Text = "Editar empleado";
             this.btn_edit_0.UseVisualStyleBackColor = true;
+            this.btn_edit_0.Click += new System.EventHandler(this.btn_edit_0_Click);
             // 
             // lbl_email_0
             // 
@@ -554,6 +527,7 @@
             // panel93
             // 
             this.panel93.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel93.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel93.Controls.Add(this.panel10);
             this.panel93.Controls.Add(this.label11);
             this.panel93.Controls.Add(this.lbl_meserrores_0);
@@ -745,12 +719,11 @@
             // 
             // panel_1
             // 
-            this.panel_1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_1.BackColor = System.Drawing.Color.Snow;
+            this.panel_1.Controls.Add(this.btn_savepdf_1);
+            this.panel_1.Controls.Add(this.button4);
             this.panel_1.Controls.Add(this.lbl_id_1);
             this.panel_1.Controls.Add(this.label8);
-            this.panel_1.Controls.Add(this.button1);
-            this.panel_1.Controls.Add(this.button4);
-            this.panel_1.Controls.Add(this.pictureBox2);
             this.panel_1.Controls.Add(this.btn_edit_1);
             this.panel_1.Controls.Add(this.lbl_email_1);
             this.panel_1.Controls.Add(this.lbl_permisos_1);
@@ -764,12 +737,40 @@
             this.panel_1.Size = new System.Drawing.Size(233, 310);
             this.panel_1.TabIndex = 1;
             // 
+            // btn_savepdf_1
+            // 
+            this.btn_savepdf_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_savepdf_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_savepdf_1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_savepdf_1.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_savepdf_1.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_1.Name = "btn_savepdf_1";
+            this.btn_savepdf_1.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_1.TabIndex = 179;
+            this.btn_savepdf_1.Text = "Exportar .pdf del mes";
+            this.btn_savepdf_1.UseVisualStyleBackColor = true;
+            this.btn_savepdf_1.Click += new System.EventHandler(this.btn_savepdf_1_Click);
+            // 
+            // button4
+            // 
+            this.button4.Enabled = false;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button4.Location = new System.Drawing.Point(118, 251);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(109, 54);
+            this.button4.TabIndex = 178;
+            this.button4.Text = "Ver observaciones";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // lbl_id_1
             // 
             this.lbl_id_1.AutoSize = true;
             this.lbl_id_1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id_1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_id_1.Location = new System.Drawing.Point(210, 56);
+            this.lbl_id_1.Location = new System.Drawing.Point(215, 4);
             this.lbl_id_1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_id_1.Name = "lbl_id_1";
             this.lbl_id_1.Size = new System.Drawing.Size(14, 16);
@@ -781,53 +782,16 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(190, 56);
+            this.label8.Location = new System.Drawing.Point(195, 4);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(22, 16);
             this.label8.TabIndex = 176;
             this.label8.Text = "Id:";
             // 
-            // button1
-            // 
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button1.Location = new System.Drawing.Point(6, 253);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 51);
-            this.button1.TabIndex = 173;
-            this.button1.Text = "Cambiar configuracion";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Enabled = false;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button4.Location = new System.Drawing.Point(118, 253);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 51);
-            this.button4.TabIndex = 172;
-            this.button4.Text = "Cambiar configuracion";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::LayerPresentation.Properties.Resources.employee;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(209, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(18, 20);
-            this.pictureBox2.TabIndex = 170;
-            this.pictureBox2.TabStop = false;
-            // 
             // btn_edit_1
             // 
+            this.btn_edit_1.Enabled = false;
             this.btn_edit_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -838,6 +802,7 @@
             this.btn_edit_1.TabIndex = 171;
             this.btn_edit_1.Text = "Editar empleado";
             this.btn_edit_1.UseVisualStyleBackColor = true;
+            this.btn_edit_1.Click += new System.EventHandler(this.btn_edit_1_Click);
             // 
             // lbl_email_1
             // 
@@ -902,6 +867,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.lbl_meserrores_1);
@@ -1093,12 +1059,11 @@
             // 
             // panel_2
             // 
-            this.panel_2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_2.BackColor = System.Drawing.Color.Snow;
+            this.panel_2.Controls.Add(this.btn_savepdf_2);
+            this.panel_2.Controls.Add(this.button7);
             this.panel_2.Controls.Add(this.lbl_id_2);
             this.panel_2.Controls.Add(this.label15);
-            this.panel_2.Controls.Add(this.button7);
-            this.panel_2.Controls.Add(this.button8);
-            this.panel_2.Controls.Add(this.pictureBox3);
             this.panel_2.Controls.Add(this.btn_edit_2);
             this.panel_2.Controls.Add(this.lbl_email_2);
             this.panel_2.Controls.Add(this.lbl_permisos_2);
@@ -1112,12 +1077,40 @@
             this.panel_2.Size = new System.Drawing.Size(233, 310);
             this.panel_2.TabIndex = 2;
             // 
+            // btn_savepdf_2
+            // 
+            this.btn_savepdf_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_savepdf_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_savepdf_2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_savepdf_2.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_savepdf_2.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_2.Name = "btn_savepdf_2";
+            this.btn_savepdf_2.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_2.TabIndex = 179;
+            this.btn_savepdf_2.Text = "Exportar .pdf del mes";
+            this.btn_savepdf_2.UseVisualStyleBackColor = true;
+            this.btn_savepdf_2.Click += new System.EventHandler(this.btn_savepdf_2_Click);
+            // 
+            // button7
+            // 
+            this.button7.Enabled = false;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button7.Location = new System.Drawing.Point(118, 251);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(109, 54);
+            this.button7.TabIndex = 178;
+            this.button7.Text = "Ver observaciones";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // lbl_id_2
             // 
             this.lbl_id_2.AutoSize = true;
             this.lbl_id_2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id_2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_id_2.Location = new System.Drawing.Point(210, 57);
+            this.lbl_id_2.Location = new System.Drawing.Point(215, 4);
             this.lbl_id_2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_id_2.Name = "lbl_id_2";
             this.lbl_id_2.Size = new System.Drawing.Size(14, 16);
@@ -1129,53 +1122,16 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label15.Location = new System.Drawing.Point(190, 57);
+            this.label15.Location = new System.Drawing.Point(195, 4);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(22, 16);
             this.label15.TabIndex = 176;
             this.label15.Text = "Id:";
             // 
-            // button7
-            // 
-            this.button7.Enabled = false;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button7.Location = new System.Drawing.Point(6, 253);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(109, 51);
-            this.button7.TabIndex = 173;
-            this.button7.Text = "Cambiar configuracion";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Enabled = false;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button8.Location = new System.Drawing.Point(118, 253);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(109, 51);
-            this.button8.TabIndex = 172;
-            this.button8.Text = "Cambiar configuracion";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::LayerPresentation.Properties.Resources.employee;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(209, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(18, 20);
-            this.pictureBox3.TabIndex = 170;
-            this.pictureBox3.TabStop = false;
-            // 
             // btn_edit_2
             // 
+            this.btn_edit_2.Enabled = false;
             this.btn_edit_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1186,6 +1142,7 @@
             this.btn_edit_2.TabIndex = 171;
             this.btn_edit_2.Text = "Editar empleado";
             this.btn_edit_2.UseVisualStyleBackColor = true;
+            this.btn_edit_2.Click += new System.EventHandler(this.btn_edit_2_Click);
             // 
             // lbl_email_2
             // 
@@ -1250,6 +1207,7 @@
             // pl
             // 
             this.pl.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pl.Controls.Add(this.panel15);
             this.pl.Controls.Add(this.label26);
             this.pl.Controls.Add(this.lbl_meserrores_2);
@@ -1441,12 +1399,11 @@
             // 
             // panel_3
             // 
-            this.panel_3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_3.BackColor = System.Drawing.Color.Snow;
+            this.panel_3.Controls.Add(this.btn_savepdf_3);
+            this.panel_3.Controls.Add(this.button10);
             this.panel_3.Controls.Add(this.lbl_id_3);
             this.panel_3.Controls.Add(this.label19);
-            this.panel_3.Controls.Add(this.button11);
-            this.panel_3.Controls.Add(this.button12);
-            this.panel_3.Controls.Add(this.pictureBox4);
             this.panel_3.Controls.Add(this.btn_edit_3);
             this.panel_3.Controls.Add(this.lbl_email_3);
             this.panel_3.Controls.Add(this.lbl_permisos_3);
@@ -1460,12 +1417,40 @@
             this.panel_3.Size = new System.Drawing.Size(233, 310);
             this.panel_3.TabIndex = 3;
             // 
+            // btn_savepdf_3
+            // 
+            this.btn_savepdf_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_savepdf_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_savepdf_3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_savepdf_3.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_savepdf_3.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_3.Name = "btn_savepdf_3";
+            this.btn_savepdf_3.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_3.TabIndex = 179;
+            this.btn_savepdf_3.Text = "Exportar .pdf del mes";
+            this.btn_savepdf_3.UseVisualStyleBackColor = true;
+            this.btn_savepdf_3.Click += new System.EventHandler(this.btn_savepdf_3_Click);
+            // 
+            // button10
+            // 
+            this.button10.Enabled = false;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button10.Location = new System.Drawing.Point(118, 251);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(109, 54);
+            this.button10.TabIndex = 178;
+            this.button10.Text = "Ver observaciones";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
             // lbl_id_3
             // 
             this.lbl_id_3.AutoSize = true;
             this.lbl_id_3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id_3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_id_3.Location = new System.Drawing.Point(210, 56);
+            this.lbl_id_3.Location = new System.Drawing.Point(215, 4);
             this.lbl_id_3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_id_3.Name = "lbl_id_3";
             this.lbl_id_3.Size = new System.Drawing.Size(14, 16);
@@ -1477,53 +1462,16 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label19.Location = new System.Drawing.Point(190, 56);
+            this.label19.Location = new System.Drawing.Point(195, 4);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(22, 16);
             this.label19.TabIndex = 176;
             this.label19.Text = "Id:";
             // 
-            // button11
-            // 
-            this.button11.Enabled = false;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button11.Location = new System.Drawing.Point(6, 253);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(109, 51);
-            this.button11.TabIndex = 173;
-            this.button11.Text = "Cambiar configuracion";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Enabled = false;
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button12.Location = new System.Drawing.Point(118, 253);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(109, 51);
-            this.button12.TabIndex = 172;
-            this.button12.Text = "Cambiar configuracion";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::LayerPresentation.Properties.Resources.employee;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(209, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(18, 20);
-            this.pictureBox4.TabIndex = 170;
-            this.pictureBox4.TabStop = false;
-            // 
             // btn_edit_3
             // 
+            this.btn_edit_3.Enabled = false;
             this.btn_edit_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1534,6 +1482,7 @@
             this.btn_edit_3.TabIndex = 171;
             this.btn_edit_3.Text = "Editar empleado";
             this.btn_edit_3.UseVisualStyleBackColor = true;
+            this.btn_edit_3.Click += new System.EventHandler(this.btn_edit_3_Click);
             // 
             // lbl_email_3
             // 
@@ -1593,10 +1542,12 @@
             this.btn_tramites_3.TabIndex = 160;
             this.btn_tramites_3.Text = "Ver tramites del mes";
             this.btn_tramites_3.UseVisualStyleBackColor = true;
+            this.btn_tramites_3.Click += new System.EventHandler(this.btn_tramites_3_Click);
             // 
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel20.Controls.Add(this.panel21);
             this.panel20.Controls.Add(this.label);
             this.panel20.Controls.Add(this.lbl_meserrores_3);
@@ -1788,12 +1739,11 @@
             // 
             // panel_4
             // 
-            this.panel_4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_4.BackColor = System.Drawing.Color.Snow;
+            this.panel_4.Controls.Add(this.btn_savepdf_4);
+            this.panel_4.Controls.Add(this.button16);
             this.panel_4.Controls.Add(this.lbl_id_4);
             this.panel_4.Controls.Add(this.label22);
-            this.panel_4.Controls.Add(this.button15);
-            this.panel_4.Controls.Add(this.button16);
-            this.panel_4.Controls.Add(this.pictureBox5);
             this.panel_4.Controls.Add(this.btn_edit_4);
             this.panel_4.Controls.Add(this.lbl_email_4);
             this.panel_4.Controls.Add(this.lbl_permisos_4);
@@ -1807,12 +1757,40 @@
             this.panel_4.Size = new System.Drawing.Size(233, 310);
             this.panel_4.TabIndex = 4;
             // 
+            // btn_savepdf_4
+            // 
+            this.btn_savepdf_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_savepdf_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_savepdf_4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_savepdf_4.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_savepdf_4.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_4.Name = "btn_savepdf_4";
+            this.btn_savepdf_4.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_4.TabIndex = 179;
+            this.btn_savepdf_4.Text = "Exportar .pdf del mes";
+            this.btn_savepdf_4.UseVisualStyleBackColor = true;
+            this.btn_savepdf_4.Click += new System.EventHandler(this.btn_savepdf_4_Click);
+            // 
+            // button16
+            // 
+            this.button16.Enabled = false;
+            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button16.Location = new System.Drawing.Point(118, 251);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(109, 54);
+            this.button16.TabIndex = 178;
+            this.button16.Text = "Ver observaciones";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
             // lbl_id_4
             // 
             this.lbl_id_4.AutoSize = true;
             this.lbl_id_4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id_4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_id_4.Location = new System.Drawing.Point(210, 57);
+            this.lbl_id_4.Location = new System.Drawing.Point(215, 4);
             this.lbl_id_4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_id_4.Name = "lbl_id_4";
             this.lbl_id_4.Size = new System.Drawing.Size(14, 16);
@@ -1824,53 +1802,16 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label22.Location = new System.Drawing.Point(190, 57);
+            this.label22.Location = new System.Drawing.Point(195, 4);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(22, 16);
             this.label22.TabIndex = 176;
             this.label22.Text = "Id:";
             // 
-            // button15
-            // 
-            this.button15.Enabled = false;
-            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button15.Location = new System.Drawing.Point(6, 253);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(109, 51);
-            this.button15.TabIndex = 173;
-            this.button15.Text = "Cambiar configuracion";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Enabled = false;
-            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button16.Location = new System.Drawing.Point(118, 253);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(109, 51);
-            this.button16.TabIndex = 172;
-            this.button16.Text = "Cambiar configuracion";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::LayerPresentation.Properties.Resources.employee;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(209, 5);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(18, 20);
-            this.pictureBox5.TabIndex = 170;
-            this.pictureBox5.TabStop = false;
-            // 
             // btn_edit_4
             // 
+            this.btn_edit_4.Enabled = false;
             this.btn_edit_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1881,6 +1822,7 @@
             this.btn_edit_4.TabIndex = 171;
             this.btn_edit_4.Text = "Editar empleado";
             this.btn_edit_4.UseVisualStyleBackColor = true;
+            this.btn_edit_4.Click += new System.EventHandler(this.btn_edit_4_Click);
             // 
             // lbl_email_4
             // 
@@ -1940,10 +1882,12 @@
             this.btn_tramites_4.TabIndex = 160;
             this.btn_tramites_4.Text = "Ver tramites del mes";
             this.btn_tramites_4.UseVisualStyleBackColor = true;
+            this.btn_tramites_4.Click += new System.EventHandler(this.btn_tramites_4_Click);
             // 
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel26.Controls.Add(this.panel27);
             this.panel26.Controls.Add(this.label54);
             this.panel26.Controls.Add(this.lbl_meserrores_4);
@@ -2135,12 +2079,11 @@
             // 
             // panel_5
             // 
-            this.panel_5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_5.BackColor = System.Drawing.Color.Snow;
+            this.panel_5.Controls.Add(this.btn_savepdf_5);
+            this.panel_5.Controls.Add(this.button20);
             this.panel_5.Controls.Add(this.lbl_id_5);
             this.panel_5.Controls.Add(this.label24);
-            this.panel_5.Controls.Add(this.button19);
-            this.panel_5.Controls.Add(this.button20);
-            this.panel_5.Controls.Add(this.pictureBox6);
             this.panel_5.Controls.Add(this.btn_edit_5);
             this.panel_5.Controls.Add(this.lbl_email_5);
             this.panel_5.Controls.Add(this.lbl_permisos_5);
@@ -2154,12 +2097,40 @@
             this.panel_5.Size = new System.Drawing.Size(233, 310);
             this.panel_5.TabIndex = 5;
             // 
+            // btn_savepdf_5
+            // 
+            this.btn_savepdf_5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_savepdf_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_savepdf_5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_savepdf_5.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_savepdf_5.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_5.Name = "btn_savepdf_5";
+            this.btn_savepdf_5.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_5.TabIndex = 179;
+            this.btn_savepdf_5.Text = "Exportar .pdf del mes";
+            this.btn_savepdf_5.UseVisualStyleBackColor = true;
+            this.btn_savepdf_5.Click += new System.EventHandler(this.btn_savepdf_5_Click);
+            // 
+            // button20
+            // 
+            this.button20.Enabled = false;
+            this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button20.Location = new System.Drawing.Point(118, 251);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(109, 54);
+            this.button20.TabIndex = 178;
+            this.button20.Text = "Ver observaciones";
+            this.button20.UseVisualStyleBackColor = true;
+            // 
             // lbl_id_5
             // 
             this.lbl_id_5.AutoSize = true;
             this.lbl_id_5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id_5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_id_5.Location = new System.Drawing.Point(210, 57);
+            this.lbl_id_5.Location = new System.Drawing.Point(216, 3);
             this.lbl_id_5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_id_5.Name = "lbl_id_5";
             this.lbl_id_5.Size = new System.Drawing.Size(14, 16);
@@ -2171,53 +2142,16 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label24.Location = new System.Drawing.Point(190, 57);
+            this.label24.Location = new System.Drawing.Point(196, 3);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(22, 16);
             this.label24.TabIndex = 176;
             this.label24.Text = "Id:";
             // 
-            // button19
-            // 
-            this.button19.Enabled = false;
-            this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button19.Location = new System.Drawing.Point(6, 253);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(109, 51);
-            this.button19.TabIndex = 173;
-            this.button19.Text = "Cambiar configuracion";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.Enabled = false;
-            this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button20.Location = new System.Drawing.Point(118, 253);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(109, 51);
-            this.button20.TabIndex = 172;
-            this.button20.Text = "Cambiar configuracion";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::LayerPresentation.Properties.Resources.employee;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(209, 5);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(18, 20);
-            this.pictureBox6.TabIndex = 170;
-            this.pictureBox6.TabStop = false;
-            // 
             // btn_edit_5
             // 
+            this.btn_edit_5.Enabled = false;
             this.btn_edit_5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2228,6 +2162,7 @@
             this.btn_edit_5.TabIndex = 171;
             this.btn_edit_5.Text = "Editar empleado";
             this.btn_edit_5.UseVisualStyleBackColor = true;
+            this.btn_edit_5.Click += new System.EventHandler(this.btn_edit_5_Click);
             // 
             // lbl_email_5
             // 
@@ -2287,10 +2222,12 @@
             this.btn_tramites_5.TabIndex = 160;
             this.btn_tramites_5.Text = "Ver tramites del mes";
             this.btn_tramites_5.UseVisualStyleBackColor = true;
+            this.btn_tramites_5.Click += new System.EventHandler(this.btn_tramites_5_Click);
             // 
             // panel32
             // 
             this.panel32.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel32.Controls.Add(this.panel33);
             this.panel32.Controls.Add(this.label68);
             this.panel32.Controls.Add(this.lbl_meserrores_5);
@@ -2482,12 +2419,11 @@
             // 
             // panel_6
             // 
-            this.panel_6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_6.BackColor = System.Drawing.Color.Snow;
+            this.panel_6.Controls.Add(this.btn_savepdf_6);
+            this.panel_6.Controls.Add(this.button18);
             this.panel_6.Controls.Add(this.lbl_id_6);
             this.panel_6.Controls.Add(this.label27);
-            this.panel_6.Controls.Add(this.button23);
-            this.panel_6.Controls.Add(this.button24);
-            this.panel_6.Controls.Add(this.pictureBox7);
             this.panel_6.Controls.Add(this.btn_edit_6);
             this.panel_6.Controls.Add(this.lbl_email_6);
             this.panel_6.Controls.Add(this.lbl_permisos_6);
@@ -2501,12 +2437,40 @@
             this.panel_6.Size = new System.Drawing.Size(233, 310);
             this.panel_6.TabIndex = 6;
             // 
+            // btn_savepdf_6
+            // 
+            this.btn_savepdf_6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_savepdf_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_savepdf_6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_savepdf_6.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_savepdf_6.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_6.Name = "btn_savepdf_6";
+            this.btn_savepdf_6.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_6.TabIndex = 179;
+            this.btn_savepdf_6.Text = "Exportar .pdf del mes";
+            this.btn_savepdf_6.UseVisualStyleBackColor = true;
+            this.btn_savepdf_6.Click += new System.EventHandler(this.btn_savepdf_6_Click);
+            // 
+            // button18
+            // 
+            this.button18.Enabled = false;
+            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button18.Location = new System.Drawing.Point(118, 251);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(109, 54);
+            this.button18.TabIndex = 178;
+            this.button18.Text = "Ver observaciones";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
             // lbl_id_6
             // 
             this.lbl_id_6.AutoSize = true;
             this.lbl_id_6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id_6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_id_6.Location = new System.Drawing.Point(210, 56);
+            this.lbl_id_6.Location = new System.Drawing.Point(217, 2);
             this.lbl_id_6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_id_6.Name = "lbl_id_6";
             this.lbl_id_6.Size = new System.Drawing.Size(14, 16);
@@ -2518,53 +2482,16 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label27.Location = new System.Drawing.Point(190, 56);
+            this.label27.Location = new System.Drawing.Point(197, 2);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(22, 16);
             this.label27.TabIndex = 176;
             this.label27.Text = "Id:";
             // 
-            // button23
-            // 
-            this.button23.Enabled = false;
-            this.button23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button23.Location = new System.Drawing.Point(6, 253);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(109, 51);
-            this.button23.TabIndex = 173;
-            this.button23.Text = "Cambiar configuracion";
-            this.button23.UseVisualStyleBackColor = true;
-            // 
-            // button24
-            // 
-            this.button24.Enabled = false;
-            this.button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button24.Location = new System.Drawing.Point(118, 253);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(109, 51);
-            this.button24.TabIndex = 172;
-            this.button24.Text = "Cambiar configuracion";
-            this.button24.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::LayerPresentation.Properties.Resources.employee;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(209, 5);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(18, 20);
-            this.pictureBox7.TabIndex = 170;
-            this.pictureBox7.TabStop = false;
-            // 
             // btn_edit_6
             // 
+            this.btn_edit_6.Enabled = false;
             this.btn_edit_6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2575,6 +2502,7 @@
             this.btn_edit_6.TabIndex = 171;
             this.btn_edit_6.Text = "Editar empleado";
             this.btn_edit_6.UseVisualStyleBackColor = true;
+            this.btn_edit_6.Click += new System.EventHandler(this.btn_edit_6_Click);
             // 
             // lbl_email_6
             // 
@@ -2634,10 +2562,12 @@
             this.btn_tramites_6.TabIndex = 160;
             this.btn_tramites_6.Text = "Ver tramites del mes";
             this.btn_tramites_6.UseVisualStyleBackColor = true;
+            this.btn_tramites_6.Click += new System.EventHandler(this.btn_tramites_6_Click);
             // 
             // panel38
             // 
             this.panel38.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel38.Controls.Add(this.panel39);
             this.panel38.Controls.Add(this.label82);
             this.panel38.Controls.Add(this.lbl_meserrores_6);
@@ -2829,12 +2759,11 @@
             // 
             // panel_7
             // 
-            this.panel_7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_7.BackColor = System.Drawing.Color.Snow;
+            this.panel_7.Controls.Add(this.btn_savepdf_7);
+            this.panel_7.Controls.Add(this.button12);
             this.panel_7.Controls.Add(this.lbl_id_7);
             this.panel_7.Controls.Add(this.label30);
-            this.panel_7.Controls.Add(this.button27);
-            this.panel_7.Controls.Add(this.button28);
-            this.panel_7.Controls.Add(this.pictureBox8);
             this.panel_7.Controls.Add(this.btn_edit_7);
             this.panel_7.Controls.Add(this.lbl_email_7);
             this.panel_7.Controls.Add(this.lbl_permisos_7);
@@ -2848,12 +2777,40 @@
             this.panel_7.Size = new System.Drawing.Size(233, 310);
             this.panel_7.TabIndex = 7;
             // 
+            // btn_savepdf_7
+            // 
+            this.btn_savepdf_7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_savepdf_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_savepdf_7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_savepdf_7.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_savepdf_7.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_7.Name = "btn_savepdf_7";
+            this.btn_savepdf_7.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_7.TabIndex = 179;
+            this.btn_savepdf_7.Text = "Exportar .pdf del mes";
+            this.btn_savepdf_7.UseVisualStyleBackColor = true;
+            this.btn_savepdf_7.Click += new System.EventHandler(this.btn_savepdf_7_Click);
+            // 
+            // button12
+            // 
+            this.button12.Enabled = false;
+            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button12.Location = new System.Drawing.Point(118, 251);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(109, 54);
+            this.button12.TabIndex = 178;
+            this.button12.Text = "Ver observaciones";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
             // lbl_id_7
             // 
             this.lbl_id_7.AutoSize = true;
             this.lbl_id_7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id_7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_id_7.Location = new System.Drawing.Point(210, 57);
+            this.lbl_id_7.Location = new System.Drawing.Point(215, 3);
             this.lbl_id_7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_id_7.Name = "lbl_id_7";
             this.lbl_id_7.Size = new System.Drawing.Size(14, 16);
@@ -2865,53 +2822,16 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label30.Location = new System.Drawing.Point(190, 57);
+            this.label30.Location = new System.Drawing.Point(195, 3);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(22, 16);
             this.label30.TabIndex = 176;
             this.label30.Text = "Id:";
             // 
-            // button27
-            // 
-            this.button27.Enabled = false;
-            this.button27.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button27.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button27.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button27.Location = new System.Drawing.Point(6, 253);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(109, 51);
-            this.button27.TabIndex = 173;
-            this.button27.Text = "Cambiar configuracion";
-            this.button27.UseVisualStyleBackColor = true;
-            // 
-            // button28
-            // 
-            this.button28.Enabled = false;
-            this.button28.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button28.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button28.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button28.Location = new System.Drawing.Point(118, 253);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(109, 51);
-            this.button28.TabIndex = 172;
-            this.button28.Text = "Cambiar configuracion";
-            this.button28.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = global::LayerPresentation.Properties.Resources.employee;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(209, 5);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(18, 20);
-            this.pictureBox8.TabIndex = 170;
-            this.pictureBox8.TabStop = false;
-            // 
             // btn_edit_7
             // 
+            this.btn_edit_7.Enabled = false;
             this.btn_edit_7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2922,6 +2842,7 @@
             this.btn_edit_7.TabIndex = 171;
             this.btn_edit_7.Text = "Editar empleado";
             this.btn_edit_7.UseVisualStyleBackColor = true;
+            this.btn_edit_7.Click += new System.EventHandler(this.btn_edit_7_Click);
             // 
             // lbl_email_7
             // 
@@ -2981,10 +2902,12 @@
             this.btn_tramites_7.TabIndex = 160;
             this.btn_tramites_7.Text = "Ver tramites del mes";
             this.btn_tramites_7.UseVisualStyleBackColor = true;
+            this.btn_tramites_7.Click += new System.EventHandler(this.btn_tramites_7_Click);
             // 
             // panel44
             // 
             this.panel44.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel44.Controls.Add(this.panel45);
             this.panel44.Controls.Add(this.label96);
             this.panel44.Controls.Add(this.lbl_meserrores_7);
@@ -3521,20 +3444,6 @@
             this.lbl_mesprocesados_8.TabIndex = 11;
             this.lbl_mesprocesados_8.Text = "0";
             // 
-            // button6
-            // 
-            this.button6.Enabled = false;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Green;
-            this.button6.Location = new System.Drawing.Point(6, 279);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(109, 26);
-            this.button6.TabIndex = 176;
-            this.button6.Text = "Ver mas info";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // frm_empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -3554,42 +3463,34 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel_0.ResumeLayout(false);
             this.panel_0.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel93.ResumeLayout(false);
             this.panel93.PerformLayout();
             this.panel_1.ResumeLayout(false);
             this.panel_1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel_2.ResumeLayout(false);
             this.panel_2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pl.ResumeLayout(false);
             this.pl.PerformLayout();
             this.panel_3.ResumeLayout(false);
             this.panel_3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             this.panel_4.ResumeLayout(false);
             this.panel_4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
             this.panel_5.ResumeLayout(false);
             this.panel_5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel32.ResumeLayout(false);
             this.panel32.PerformLayout();
             this.panel_6.ResumeLayout(false);
             this.panel_6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel38.ResumeLayout(false);
             this.panel38.PerformLayout();
             this.panel_7.ResumeLayout(false);
             this.panel_7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel44.ResumeLayout(false);
             this.panel44.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -3630,14 +3531,10 @@
         private System.Windows.Forms.Label lbl_diaprocesados_0;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbl_mesprocesados_0;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_savepdf_0;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_edit_0;
         private System.Windows.Forms.Panel panel_1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btn_edit_1;
         private System.Windows.Forms.Label lbl_email_1;
         private System.Windows.Forms.Label lbl_permisos_1;
@@ -3660,9 +3557,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label lbl_mesprocesados_1;
         private System.Windows.Forms.Panel panel_2;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btn_edit_2;
         private System.Windows.Forms.Label lbl_email_2;
         private System.Windows.Forms.Label lbl_permisos_2;
@@ -3685,9 +3579,6 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label lbl_mesprocesados_2;
         private System.Windows.Forms.Panel panel_3;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btn_edit_3;
         private System.Windows.Forms.Label lbl_email_3;
         private System.Windows.Forms.Label lbl_permisos_3;
@@ -3710,9 +3601,6 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label lbl_mesprocesados_3;
         private System.Windows.Forms.Panel panel_4;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btn_edit_4;
         private System.Windows.Forms.Label lbl_email_4;
         private System.Windows.Forms.Label lbl_permisos_4;
@@ -3735,9 +3623,6 @@
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label lbl_mesprocesados_4;
         private System.Windows.Forms.Panel panel_5;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btn_edit_5;
         private System.Windows.Forms.Label lbl_email_5;
         private System.Windows.Forms.Label lbl_permisos_5;
@@ -3760,9 +3645,6 @@
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Label lbl_mesprocesados_5;
         private System.Windows.Forms.Panel panel_6;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button btn_edit_6;
         private System.Windows.Forms.Label lbl_email_6;
         private System.Windows.Forms.Label lbl_permisos_6;
@@ -3785,9 +3667,6 @@
         private System.Windows.Forms.Label label90;
         private System.Windows.Forms.Label lbl_mesprocesados_6;
         private System.Windows.Forms.Panel panel_7;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button btn_edit_7;
         private System.Windows.Forms.Label lbl_email_7;
         private System.Windows.Forms.Label lbl_permisos_7;
@@ -3853,6 +3732,19 @@
         private System.Windows.Forms.Label lbl_diaprocesados_8;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label lbl_mesprocesados_8;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_savepdf_1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_savepdf_2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btn_savepdf_3;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btn_savepdf_4;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button btn_savepdf_5;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button btn_savepdf_6;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button btn_savepdf_7;
+        private System.Windows.Forms.Button button12;
     }
 }

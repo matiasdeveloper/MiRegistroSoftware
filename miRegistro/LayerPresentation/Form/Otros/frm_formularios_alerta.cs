@@ -116,10 +116,23 @@ namespace LayerPresentation
 
             }
         }
-
-        private void btn_maximize_Click(object sender, EventArgs e)
+        private bool ExportDataTramitesPdf(DataGridView dt, string name)
         {
+            Random r = new Random();
+            string dia = DateTime.Now.Day + "-" + DateTime.Now.Month;
+            string user = name + "_" + dia;
 
+            bool result = DataSave.saveInPdf(dt, user);
+
+            return result;
+        }
+        private void btn_savepdf_Click(object sender, EventArgs e)
+        {
+            if (ExportDataTramitesPdf(dg_formulariosAlert, "AlertasUsuariosRNA"))
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
         }
     }
 }

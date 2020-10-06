@@ -46,6 +46,7 @@
     <Compile Include="Cn_Empleados.cs" />
     <Compile Include="Cn_Employee.cs" />
     <Compile Include="Cn_Formularios.cs" />
+    <Compile Include="Cn_HandlerFormularios.cs" />
     <Compile Include="Cn_HandlerTramites.cs" />
     <Compile Include="Cn_Seguridad.cs" />
     <Compile Include="Cn_Tramites.cs" />

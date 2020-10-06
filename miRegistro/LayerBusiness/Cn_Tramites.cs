@@ -236,14 +236,7 @@ namespace LayerBusiness
             Cn_HandlerTramites.data.GetCache().AddTramites(GetTramites(Cn_HandlerTramites.current));
 
             RefreshDataDashboardCache();
-
-            Fechas.firstDayOfWeek = FirstDayOfWeek(DateTime.Now);
-            Fechas.lastDayOfWeek = Fechas.firstDayOfWeek.AddDays(6);
-
-            DateTime dateNow = DateTime.Now;
-
-            Fechas.firstDayOfMonth = new DateTime(dateNow.Year, dateNow.Month, 1);
-            Fechas.lastDayOfMonth = Fechas.firstDayOfMonth.AddMonths(1).AddDays(-1);
+            RefreshDataFechasCache();
         }
         public void RefreshDataTramitesCache() 
         {
@@ -266,6 +259,16 @@ namespace LayerBusiness
             DataTable tramites = mostrarTodo();
             Tramites cache = new Tramites(id, tramites);
             return cache;
+        }
+        public void RefreshDataFechasCache()
+        {
+            Fechas.firstDayOfWeek = FirstDayOfWeek(DateTime.Now);
+            Fechas.lastDayOfWeek = Fechas.firstDayOfWeek.AddDays(6);
+
+            DateTime dateNow = DateTime.Now;
+
+            Fechas.firstDayOfMonth = new DateTime(dateNow.Year, dateNow.Month, 1);
+            Fechas.lastDayOfMonth = Fechas.firstDayOfMonth.AddMonths(1).AddDays(-1);
         }
         public static DateTime FirstDayOfWeek(DateTime dt)
         {

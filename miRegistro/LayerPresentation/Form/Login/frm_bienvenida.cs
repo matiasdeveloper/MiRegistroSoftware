@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LayerBusiness;
+using LayerPresentation.Clases;
 using LayerSoporte.Cache;
 
 namespace LayerPresentation
@@ -21,6 +22,7 @@ namespace LayerPresentation
         }
         private Cn_Empleados _cnEmpleados = new Cn_Empleados();
         private Cn_Tramites _cnTramites = new Cn_Tramites();
+        private Cn_Formularios _cnFormularios = new Cn_Formularios();
 
         frm_principal frm;
         int count = 0;
@@ -33,7 +35,10 @@ namespace LayerPresentation
         private void InitializeProgram() 
         {
             _cnEmpleados.GenerateEmployeesDataCache();
+            Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
+
             _cnTramites.GenerateDataTramitesCache();
+            _cnFormularios.GenerateDataFormulariosCache();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {

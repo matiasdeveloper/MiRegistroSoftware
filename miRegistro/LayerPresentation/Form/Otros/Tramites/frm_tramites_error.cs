@@ -20,10 +20,13 @@ namespace LayerPresentation
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        public frm_tramites_error(frm_tramites frm, int id, string nombre, string dominio, string fecha)
+        public frm_tramites_error(int id, string nombre, string dominio, string fecha, frm_tramites frm = null, frm_tramites_pantallaCompleta frm1 = null)
         {
             InitializeComponent();
+
+            _handlerTPc = frm1;
             _handlerTramites = frm;
+
             lbl_dominio.Text = dominio;
             lbl_nombre.Text = nombre;
             lbl_fecha.Text = fecha;
@@ -34,6 +37,8 @@ namespace LayerPresentation
         }
 
         Cn_Tramites _cnObject = new Cn_Tramites();
+
+        frm_tramites_pantallaCompleta _handlerTPc;
         frm_tramites _handlerTramites;
 
         private int id;
@@ -100,8 +105,15 @@ namespace LayerPresentation
                      deleteFields();
                      frm_successdialog f = new frm_successdialog(2);
                      f.Show();
-                    _cnObject.RefreshDataTramitesCache();
-                    _handlerTramites.refreshData();
+
+                    if(_handlerTramites != null) 
+                    {
+                        _handlerTramites.refreshData();
+                    }
+                    if(_handlerTPc != null) 
+                    {
+                        _handlerTPc.refreshData();
+                    }
                     this.Close();
                 }
                 catch (Exception ex)
@@ -119,7 +131,6 @@ namespace LayerPresentation
                 textBox1.ForeColor = Color.Black;
             }
         }
-
         private void textBox1_Leave(object sender, EventArgs e)
         {
             if (textBox1.Text == "")

@@ -58,6 +58,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lbl_nombreCorto);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -166,6 +167,7 @@
             // 
             // progressBar1
             // 
+            this.progressBar1.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.progressBar1.Location = new System.Drawing.Point(26, 357);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(435, 23);
@@ -176,6 +178,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::LayerPresentation.Properties.Resources.backgroundBienvenida;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";

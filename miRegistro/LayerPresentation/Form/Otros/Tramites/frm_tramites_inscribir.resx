@@ -117,77 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;lbl_id.Name" xml:space="preserve">
-    <value>lbl_id</value>
-  </data>
-  <data name="&gt;&gt;lbl_id.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_id.Parent" xml:space="preserve">
-    <value>barra_titulo</value>
-  </data>
-  <data name="&gt;&gt;lbl_id.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lbl_tittle.Name" xml:space="preserve">
-    <value>lbl_tittle</value>
-  </data>
-  <data name="&gt;&gt;lbl_tittle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_tittle.Parent" xml:space="preserve">
-    <value>barra_titulo</value>
-  </data>
-  <data name="&gt;&gt;lbl_tittle.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btn_close.Name" xml:space="preserve">
-    <value>btn_close</value>
-  </data>
-  <data name="&gt;&gt;btn_close.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_close.Parent" xml:space="preserve">
-    <value>barra_titulo</value>
-  </data>
-  <data name="&gt;&gt;btn_close.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="barra_titulo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="barra_titulo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="barra_titulo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>302, 32</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="barra_titulo.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;barra_titulo.Name" xml:space="preserve">
-    <value>barra_titulo</value>
-  </data>
-  <data name="&gt;&gt;barra_titulo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;barra_titulo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;barra_titulo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="lbl_id.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbl_id.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 12pt</value>
   </data>
   <data name="lbl_id.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 6</value>
+    <value>202, 6</value>
   </data>
   <data name="lbl_id.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 21</value>
@@ -214,19 +153,19 @@
     <value>True</value>
   </data>
   <data name="lbl_tittle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 12pt</value>
+    <value>Century Gothic, 9.75pt, style=Italic</value>
   </data>
   <data name="lbl_tittle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 6</value>
+    <value>63, 9</value>
   </data>
   <data name="lbl_tittle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 21</value>
+    <value>127, 16</value>
   </data>
   <data name="lbl_tittle.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
   <data name="lbl_tittle.Text" xml:space="preserve">
-    <value>Inscribr tramite ID:</value>
+    <value>Inscribir tramite ID:</value>
   </data>
   <data name="&gt;&gt;lbl_tittle.Name" xml:space="preserve">
     <value>lbl_tittle</value>
@@ -240,11 +179,12 @@
   <data name="&gt;&gt;lbl_tittle.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_close.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Zoom</value>
   </data>
   <data name="btn_close.Location" type="System.Drawing.Point, System.Drawing">
-    <value>277, 7</value>
+    <value>309, 7</value>
   </data>
   <data name="btn_close.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -267,17 +207,41 @@
   <data name="&gt;&gt;btn_close.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="barra_titulo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="barra_titulo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="barra_titulo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>336, 32</value>
+  </data>
+  <data name="barra_titulo.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;barra_titulo.Name" xml:space="preserve">
+    <value>barra_titulo</value>
+  </data>
+  <data name="&gt;&gt;barra_titulo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;barra_titulo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;barra_titulo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>Century Gothic, 9.75pt, style=Bold</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 9</value>
+    <value>83, 15</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>14, 17</value>
+    <value>14, 16</value>
   </data>
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>96</value>
@@ -301,13 +265,13 @@
     <value>True</value>
   </data>
   <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>Century Gothic, 9.75pt, style=Bold</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 9</value>
+    <value>33, 15</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
+    <value>48, 16</value>
   </data>
   <data name="label9.TabIndex" type="System.Int32, mscorlib">
     <value>95</value>
@@ -334,7 +298,7 @@
     <value>Century Gothic, 9.75pt</value>
   </data>
   <data name="lbl_fecha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 113</value>
+    <value>89, 119</value>
   </data>
   <data name="lbl_fecha.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 17</value>
@@ -364,7 +328,7 @@
     <value>Century Gothic, 9.75pt</value>
   </data>
   <data name="lbl_dominio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 35</value>
+    <value>104, 41</value>
   </data>
   <data name="lbl_dominio.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 17</value>
@@ -394,7 +358,7 @@
     <value>Century Gothic, 9.75pt</value>
   </data>
   <data name="lbl_etapa.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 86</value>
+    <value>85, 92</value>
   </data>
   <data name="lbl_etapa.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 17</value>
@@ -424,7 +388,7 @@
     <value>Century Gothic, 9.75pt</value>
   </data>
   <data name="lbl_nombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 61</value>
+    <value>103, 67</value>
   </data>
   <data name="lbl_nombre.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 17</value>
@@ -454,7 +418,7 @@
     <value>Century Gothic, 9.75pt</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 113</value>
+    <value>37, 119</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 17</value>
@@ -484,7 +448,7 @@
     <value>Century Gothic, 9.75pt</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 35</value>
+    <value>35, 41</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 17</value>
@@ -514,7 +478,7 @@
     <value>Century Gothic, 9.75pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 86</value>
+    <value>37, 92</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 17</value>
@@ -544,7 +508,7 @@
     <value>Century Gothic, 9.75pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 61</value>
+    <value>36, 67</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -571,13 +535,13 @@
     <value>True</value>
   </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>Century Gothic, 9.75pt, style=Bold</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 191</value>
+    <value>112, 217</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>14, 17</value>
+    <value>14, 16</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>99</value>
@@ -607,7 +571,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="btn_cargar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 254</value>
+    <value>36, 280</value>
   </data>
   <data name="btn_cargar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -640,13 +604,13 @@
     <value>True</value>
   </data>
   <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>Century Gothic, 9.75pt, style=Bold</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 191</value>
+    <value>36, 217</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 17</value>
+    <value>78, 16</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
@@ -670,7 +634,7 @@
     <value>Century Gothic, 9pt</value>
   </data>
   <data name="comboBox_empleados.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 217</value>
+    <value>36, 243</value>
   </data>
   <data name="comboBox_empleados.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 25</value>
@@ -693,11 +657,8 @@
   <data name="checkBox_inscripto.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBox_inscripto.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="checkBox_inscripto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 162</value>
+    <value>39, 181</value>
   </data>
   <data name="checkBox_inscripto.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 21</value>
@@ -724,16 +685,16 @@
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>Century Gothic, 9.75pt, style=Bold</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 137</value>
+    <value>101, 153</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>14, 17</value>
+    <value>14, 16</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>105</value>
@@ -757,16 +718,16 @@
     <value>True</value>
   </data>
   <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>Century Gothic, 9.75pt, style=Bold</value>
   </data>
   <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 137</value>
+    <value>36, 153</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 17</value>
+    <value>68, 16</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
     <value>104</value>
@@ -790,7 +751,7 @@
     <value>5, 38</value>
   </data>
   <data name="panel_simple.Size" type="System.Drawing.Size, System.Drawing">
-    <value>289, 291</value>
+    <value>324, 323</value>
   </data>
   <data name="panel_simple.TabIndex" type="System.Int32, mscorlib">
     <value>106</value>
@@ -805,7 +766,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel_simple.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -814,7 +775,7 @@
     <value>8, 17</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>302, 335</value>
+    <value>336, 366</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 9.75pt</value>

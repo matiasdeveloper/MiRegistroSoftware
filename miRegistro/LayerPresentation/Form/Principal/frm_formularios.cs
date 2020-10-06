@@ -11,13 +11,14 @@ using System.Windows.Forms;
 using LayerBusiness;
 using LayerPresentation.Properties;
 using LayerSoporte.Cache;
+using LayerPresentation.Clases;
 
 namespace LayerPresentation
 {
     public partial class frm_formularios : Form
     {
         private Cn_Formularios _cnObject = new Cn_Formularios();
-        private Cn_alertas _cnObjectAlert = new Cn_alertas();
+        private DataTable currentDt;
 
         #region variables
 
@@ -33,121 +34,93 @@ namespace LayerPresentation
         private int actualGrid = 1;
         private int optionSelected = 1;
 
-        private int stockBajo = 0;
-        private int stockMedio = 0;
-        private int stockAlto = 0;
-
         #endregion
 
         public frm_formularios()
         {
             InitializeComponent();
         }
-
-        private void frm_formularios_Load(object sender, EventArgs e)
+        // Functions
+        // Refresh all UI
+        private void RefreshAll() 
         {
-            establecerEstilo();
+            RefreshFormularios();
+            RefreshDataStock();
 
-            mostrarCategorias(1);
-
-            stockBajo = Settings.Default.StockBajo;
-            stockMedio = Settings.Default.StockMedio;
-            stockAlto = Settings.Default.StockAlto;
-
-            txtBox_stockBajo.Text = stockBajo.ToString();
-            txtBox_stockMedio.Text = stockMedio.ToString();
-            txtBox_stockAlto.Text = stockAlto.ToString();
-
-            refreshData();
-
-            cargarPrivilegios();
-        }
-
-        private void refreshData() 
-        {
-            stockBajo = Settings.Default.StockBajo;
-            stockMedio = Settings.Default.StockMedio;
-            stockAlto = Settings.Default.StockAlto;
-
-            mostarFormularios(1);
-            dg_formularios_1.Enabled = true;
-            mostarFormularios(2);
-            dg_formularios_2.Enabled = false;
-            mostarFormularios(3);
-            dg_formularios_3.Enabled = false;
-
+            mostrarCategorias("Auto");
             mostrarAlertas();
         }
-
-        private void establecerEstilo() 
+        // Refresh Data stock and Formularios
+        public void RefreshDataStock()
         {
-            /*
-            var barraTitulo = ApplicationIdentity.GetForCurrentView().TitleBar;
-            if (barraTitulo != null)
-            {
-                // Para el color de fondo
-                barraTitulo.BackgroundColor = Color.FromArgb(0, 102, 204);
-                barraTitulo.ButtonBackgroundColor = Color.FromArgb(0, 102, 204);
+            Cn_HandlerFormularios.stockBajo = Settings.Default.StockBajo;
+            Cn_HandlerFormularios.stockMedio = Settings.Default.StockMedio;
+            Cn_HandlerFormularios.stockAlto = Settings.Default.StockAlto;
+        }
+        public void RefreshData() 
+        {
+            _cnObject.RefreshDataFormulariosCache();
+            _cnObject.RefreshDataCategoriasCache();
+            _cnObject.RefreshDataDashboardCache();
+        }
 
-                // Para el color de las letras
-                barraTitulo.ForegroundColor = Color.White;
-                barraTitulo.ButtonForegroundColor = Color.White;
-            }
-            */
+        public void RefreshFormularios()
+        {
+            dg_formularios_1.Enabled = true;
+            dg_formularios_2.Enabled = false;
+            dg_formularios_3.Enabled = false;
+
+            currentDt = DataFormularios.GetFormulariosCacheByID(Cn_HandlerFormularios.current);
+            mostarFormularios(dg_formularios_1, "Auto");
+            mostarFormularios(dg_formularios_2, "Moto");
+            mostarFormularios(dg_formularios_3, "Varios");
+        }        
+        private void mostarFormularios(DataGridView dt, string name)
+        {
+            dt.AutoGenerateColumns = false;
+            dt.DataSource = DataFormularios.GetTableForElement(currentDt, name);
         }
         
-        private void mostarFormularios(int mostrarIn)
-        {
-            Cn_Formularios objects = new Cn_Formularios();
-            switch (mostrarIn) 
-            {
-                case 1:
-                    dg_formularios_1.DataSource = objects.mostrarFormularios(mostrarIn);
-                    break;
-                case 2:
-                    dg_formularios_2.DataSource = objects.mostrarFormularios(mostrarIn);
-                    break;
-                case 3:
-                    dg_formularios_3.DataSource = objects.mostrarFormularios(mostrarIn);
-                    break;
-                default:
-                    dg_formularios_1.DataSource = objects.mostrarFormularios(mostrarIn);
-                    break;
-            }
-        }
         private void mostrarAlertas() 
         {
             Cn_alertas objects = new Cn_alertas();
             dg_alertas_1.DataSource = objects.mostrarAlertas();
         }
-        private void mostrarCategorias(int mostrarIn) 
+        private void mostrarCategorias(string name) 
         {
-            cb_categorias.DataSource = _cnObject.mostrarCategorias(mostrarIn);
-            cb_categorias.DisplayMember = "name_categoria";
-            cb_categorias.ValueMember = "cod_categoria";
+            cb_categorias.DataSource = DataFormularios.GetCategoriasForName(Cn_HandlerFormularios.data.formularioCache.GetCategorias(), name);
+            cb_categorias.DisplayMember = "Nombre";
+            cb_categorias.ValueMember = "Id";
         }
-
+        // Set and delete fields for crud
+        private void setFields()
+        {
+            switch (txtBox_object.Text)
+            {
+                case "Auto":
+                    txtBox_numeracion.Text = dg_formularios_1.CurrentRow.Cells[3].Value.ToString();
+                    txtBox_stock.Text = dg_formularios_1.CurrentRow.Cells[4].Value.ToString();
+                    break;
+                case "Moto":
+                    txtBox_numeracion.Text = dg_formularios_2.CurrentRow.Cells[3].Value.ToString();
+                    txtBox_stock.Text = dg_formularios_2.CurrentRow.Cells[4].Value.ToString();
+                    break;
+                case "Varios":
+                    txtBox_numeracion.Text = dg_formularios_3.CurrentRow.Cells[3].Value.ToString();
+                    txtBox_stock.Text = dg_formularios_3.CurrentRow.Cells[4].Value.ToString();
+                    break;
+                default:
+                    txtBox_numeracion.Text = dg_formularios_1.CurrentRow.Cells[3].Value.ToString();
+                    txtBox_stock.Text = dg_formularios_1.CurrentRow.Cells[4].Value.ToString();
+                    break;
+            }
+        }
         private void deleteFields() 
         {
             txtBox_stock.Text = "";
             txtBox_numeracion.Text = "";
         }
-
-        private void btn_save_Click(object sender, EventArgs e)
-        {
-            try 
-            {
-                _cnObject.insertarFormularios(cb_categorias.SelectedValue.ToString(), getElement(), txtBox_numeracion.Text, txtBox_stock.Text, txtBox_fecha.Text);
-                frm_successdialog f = new frm_successdialog(0);
-                f.Show();
-                mostarFormularios(actualGrid);
-                deleteFields();
-            }
-            catch(Exception ex) 
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
+        
         private string getElement()
         {
             string s = "";
@@ -206,47 +179,7 @@ namespace LayerPresentation
             }
         }
 
-        private void btn_update_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if(dg_formularios_1.SelectedRows.Count > 0) 
-                {
-                    _cnObject.actualizarFormularios((int)cb_categorias.SelectedValue, Convert.ToInt32(getElement()), txtBox_numeracion.Text, txtBox_stock.Text, txtBox_fecha.Text, getId(getElement()));
-                    frm_successdialog f = new frm_successdialog(2);
-                    f.Show();
-                    mostarFormularios(actualGrid);
-                    deleteFields();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void btn_delete_Click(object sender, EventArgs e)
-        {
-            string idFormulario = getId(getElement());
-            try
-            {
-                if (dg_formularios_1.SelectedRows.Count > 0 || dg_formularios_2.SelectedRows.Count > 0 || dg_formularios_3.SelectedRows.Count > 0)
-                {
-                    _cnObject.eliminarFormularios(idFormulario);
-                    frm_successdialog f = new frm_successdialog(1);
-                    f.Show();
-                    mostarFormularios(actualGrid);
-                    deleteFields();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
         // Select Operations for do
-
         private void rb_insert_Click(object sender, EventArgs e)
         {
             if(insert == true) 
@@ -286,7 +219,6 @@ namespace LayerPresentation
                 deleteFields();
             }
         }
-
         private void rb_update_Click(object sender, EventArgs e)
         {
             if (update == true)
@@ -333,28 +265,6 @@ namespace LayerPresentation
                 }
             }
         }
-        private void setFields() 
-        {
-            switch (txtBox_object.Text)
-            {
-                case "Auto":
-                    txtBox_numeracion.Text = dg_formularios_1.CurrentRow.Cells[3].Value.ToString();
-                    txtBox_stock.Text = dg_formularios_1.CurrentRow.Cells[4].Value.ToString(); 
-                    break;
-                case "Moto":
-                    txtBox_numeracion.Text = dg_formularios_2.CurrentRow.Cells[3].Value.ToString();
-                    txtBox_stock.Text = dg_formularios_2.CurrentRow.Cells[4].Value.ToString();
-                    break;
-                case "Varios":
-                    txtBox_numeracion.Text = dg_formularios_3.CurrentRow.Cells[3].Value.ToString();
-                    txtBox_stock.Text = dg_formularios_3.CurrentRow.Cells[4].Value.ToString();
-                    break;
-                default:
-                    txtBox_numeracion.Text = dg_formularios_1.CurrentRow.Cells[3].Value.ToString();
-                    txtBox_stock.Text = dg_formularios_1.CurrentRow.Cells[4].Value.ToString();
-                    break;
-            }
-        }
         private void rb_deleteData_Click(object sender, EventArgs e)
         {
             if (delete == true)
@@ -389,7 +299,6 @@ namespace LayerPresentation
                     txtBox_object.Enabled = false;
                     txtBox_numeracion.Enabled = false;
                     txtBox_stock.Enabled = false;
-                    txtBox_fecha.Enabled = false;
 
                     txtBox_stock.ForeColor = Color.Black;
                     txtBox_stock.BackColor = Color.White;
@@ -449,6 +358,75 @@ namespace LayerPresentation
                 }
             }
         }
+                
+        // Stock color DG FORMATTING CELLS
+        private void Dg_Formularios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dg_formularios_1.Columns[e.ColumnIndex].Index == 4) 
+            {
+                if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockAlto) 
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                    if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockMedio)
+                    {
+                        e.CellStyle.ForeColor = Color.White;
+                        e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
+                        if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockBajo)
+                        {
+                            e.CellStyle.ForeColor = Color.White;
+                            e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
+                        }
+                    }
+                }
+
+            }
+        }
+        private void dg_formularios_2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dg_formularios_2.Columns[e.ColumnIndex].Index == 4)
+            {
+                if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockAlto)
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                    if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockMedio)
+                    {
+                        e.CellStyle.ForeColor = Color.White;
+                        e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
+                        if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockBajo)
+                        {
+                            e.CellStyle.ForeColor = Color.White;
+                            e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
+                        }
+                    }
+                }
+
+            }
+        }
+        private void dg_formularios_3_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dg_formularios_3.Columns[e.ColumnIndex].Index == 4)
+            {
+                if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockAlto)
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                    if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockMedio)
+                    {
+                        e.CellStyle.ForeColor = Color.White;
+                        e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
+                        if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockBajo)
+                        {
+                            e.CellStyle.ForeColor = Color.White;
+                            e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
+                        }
+                    }
+                }
+
+            }
+        }
+        // Functions for stock color
         private void setFieldsForStock()
         {
             switch (txtBox_objeto.Text)
@@ -471,19 +449,19 @@ namespace LayerPresentation
                     break;
             }
         }
-        private void getColorForStock(int stock, TextBox txt) 
+        private void getColorForStock(int stock, TextBox txt)
         {
             if (stock != 0)
             {
-                if (stock <= stockAlto)
+                if (stock <= Cn_HandlerFormularios.stockAlto)
                 {
                     txt.ForeColor = Color.White;
-                    txt.BackColor= Color.FromArgb(81, 189, 51);
-                    if (stock <= stockMedio)
+                    txt.BackColor = Color.FromArgb(81, 189, 51);
+                    if (stock <= Cn_HandlerFormularios.stockMedio)
                     {
                         txt.ForeColor = Color.White;
                         txt.BackColor = Color.FromArgb(228, 194, 78);
-                        if (stock <= stockBajo)
+                        if (stock <= Cn_HandlerFormularios.stockBajo)
                         {
                             txt.ForeColor = Color.White;
                             txt.BackColor = Color.FromArgb(192, 25, 28);
@@ -493,73 +471,8 @@ namespace LayerPresentation
 
             }
         }
-        // Stock color
-        private void Dg_Formularios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (this.dg_formularios_1.Columns[e.ColumnIndex].Name == "Stocks") 
-            {
-                if (Convert.ToInt32(e.Value) <= stockAlto) 
-                {
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
-                    if (Convert.ToInt32(e.Value) <= stockMedio)
-                    {
-                        e.CellStyle.ForeColor = Color.White;
-                        e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
-                        if (Convert.ToInt32(e.Value) <= stockBajo)
-                        {
-                            e.CellStyle.ForeColor = Color.White;
-                            e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
-                        }
-                    }
-                }
 
-            }
-        }
-        private void dg_formularios_2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (this.dg_formularios_2.Columns[e.ColumnIndex].Name == "Stocks2")
-            {
-                if (Convert.ToInt32(e.Value) <= stockAlto)
-                {
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
-                    if (Convert.ToInt32(e.Value) <= stockMedio)
-                    {
-                        e.CellStyle.ForeColor = Color.White;
-                        e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
-                        if (Convert.ToInt32(e.Value) <= stockBajo)
-                        {
-                            e.CellStyle.ForeColor = Color.White;
-                            e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
-                        }
-                    }
-                }
 
-            }
-        }
-        private void dg_formularios_3_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (this.dg_formularios_3.Columns[e.ColumnIndex].Name == "Stocks33")
-            {
-                if (Convert.ToInt32(e.Value) <= stockAlto)
-                {
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
-                    if (Convert.ToInt32(e.Value) <= stockMedio)
-                    {
-                        e.CellStyle.ForeColor = Color.White;
-                        e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
-                        if (Convert.ToInt32(e.Value) <= stockBajo)
-                        {
-                            e.CellStyle.ForeColor = Color.White;
-                            e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
-                        }
-                    }
-                }
-
-            }
-        }   
         // Select Table for Operations
         private void rb_moto_Click(object sender, EventArgs e)
         {
@@ -588,7 +501,7 @@ namespace LayerPresentation
                 dg_formularios_3.Enabled = false;
                 dg_formularios_3.Visible = false;
 
-                mostrarCategorias(2);
+                mostrarCategorias("Moto");
                 txtBox_object.Text = "Moto";
                 txtBox_objeto.Text = "Moto";
             }
@@ -621,7 +534,7 @@ namespace LayerPresentation
                 dg_formularios_3.Visible = true;
 
                 /*categories*/
-                mostrarCategorias(3);
+                mostrarCategorias("Varios");
                 txtBox_object.Text = "Varios";
                 txtBox_objeto.Text = "Varios";
             }
@@ -655,7 +568,7 @@ namespace LayerPresentation
 
                 /*categories*/
                 // Change categories in the CATEGORIES and OBJECTS
-                mostrarCategorias(1);
+                mostrarCategorias("Auto");
                 txtBox_object.Text = "Auto";
                 txtBox_objeto.Text = "Auto";
 
@@ -694,7 +607,6 @@ namespace LayerPresentation
                         txtBox_object.Enabled = false;
                         txtBox_numeracion.Enabled = false;
                         txtBox_stock.Enabled = false;
-                        txtBox_fecha.Enabled = false;
 
                         txtBox_stock.ForeColor = Color.Black;
                         txtBox_stock.BackColor = Color.White;
@@ -717,7 +629,6 @@ namespace LayerPresentation
                 }
             }
         }
-
         private void dg_formularios_2_Click(object sender, EventArgs e)
         {
             if (!dg_formularios_2.Enabled && actualGrid != 2)
@@ -750,7 +661,6 @@ namespace LayerPresentation
                         txtBox_object.Enabled = false;
                         txtBox_numeracion.Enabled = false;
                         txtBox_stock.Enabled = false;
-                        txtBox_fecha.Enabled = false;
 
                         txtBox_stock.ForeColor = Color.Black;
                         txtBox_stock.BackColor = Color.White;
@@ -773,7 +683,6 @@ namespace LayerPresentation
                 }
             }
         }
-
         private void dg_formularios_3_Click(object sender, EventArgs e)
         {
             if (!dg_formularios_3.Enabled && actualGrid != 3)
@@ -806,7 +715,6 @@ namespace LayerPresentation
                         txtBox_object.Enabled = false;
                         txtBox_numeracion.Enabled = false;
                         txtBox_stock.Enabled = false;
-                        txtBox_fecha.Enabled = false;
 
                         txtBox_stock.ForeColor = Color.Black;
                         txtBox_stock.BackColor = Color.White;
@@ -821,7 +729,6 @@ namespace LayerPresentation
                         txtBox_object.Enabled = false;
                         txtBox_numeracion.Enabled = false;
                         txtBox_stock.Enabled = false;
-                        txtBox_fecha.Enabled = false;
 
                         setFieldsForStock();
                         getColorForStock(Convert.ToInt32(txtBox_stockAnterior.Text), txtBox_stockAnterior);
@@ -830,6 +737,28 @@ namespace LayerPresentation
             }
         }
 
+        // Crud
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dg_formularios_1.SelectedRows.Count > 0)
+                {
+                    _cnObject.actualizarFormularios((int)cb_categorias.SelectedValue, Convert.ToInt32(getElement()), txtBox_numeracion.Text, txtBox_stock.Text, txtBox_fecha.Text, getId(getElement()));
+                    frm_successdialog f = new frm_successdialog(2);
+                    f.Show();
+                    // Refresh data
+                    RefreshData();
+                    RefreshAll();
+
+                    deleteFields();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
         private void btn_stock_Click(object sender, EventArgs e)
         {
             try
@@ -839,7 +768,10 @@ namespace LayerPresentation
                     _cnObject.actualizarStock(txtBox_stockNuevo.Text, txtBox_fecha.Text, getId(getElement()));
                     frm_successdialog f = new frm_successdialog(3);
                     f.Show();
-                    mostarFormularios(actualGrid);
+                    // Refresh data
+                    RefreshData();
+                    RefreshAll();
+
                     deleteFields();
                 }
             }
@@ -848,49 +780,95 @@ namespace LayerPresentation
                 MessageBox.Show(ex.ToString());
             }
         }
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            string idFormulario = getId(getElement());
+            try
+            {
+                if (dg_formularios_1.SelectedRows.Count > 0 || dg_formularios_2.SelectedRows.Count > 0 || dg_formularios_3.SelectedRows.Count > 0)
+                {
+                    _cnObject.eliminarFormularios(idFormulario);
+                    frm_successdialog f = new frm_successdialog(1);
+                    f.Show();
+                    // Refresh data
+                    RefreshData();
+                    RefreshAll();
 
+                    deleteFields();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _cnObject.insertarFormularios(cb_categorias.SelectedValue.ToString(), getElement(), txtBox_numeracion.Text, txtBox_stock.Text, txtBox_fecha.Text);
+                frm_successdialog f = new frm_successdialog(0);
+                f.Show();
+                // Refresh data
+                RefreshData();
+                RefreshAll();
+
+                deleteFields();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        // Consultas rapidas
         private void btn_stockbajo_Click(object sender, EventArgs e)
         {
-            int num = _cnObject.consultasRapidas(0, stockBajo);
+            int num = Cn_HandlerFormularios.data.formularioCache.totalBajos;
             MessageBox.Show("Tenes " + num + " formularios que cuentan con stock bajo", "Consulta rapida (Auto, Motos, Varios)", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
         private void btn_stockmedio_Click(object sender, EventArgs e)
         {
-            int num = _cnObject.consultasRapidas(10, stockMedio);
+            int num = Cn_HandlerFormularios.data.formularioCache.totalMedios;
             MessageBox.Show("Tenes " + num + " formularios que cuentan con stock medio", "Consulta rapida (Auto, Motos, Varios)", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
         private void btn_stockalto_Click(object sender, EventArgs e)
         {
-            int num = _cnObject.consultasRapidas(50, stockAlto);
+            int num = Cn_HandlerFormularios.data.formularioCache.totalAltos;
             MessageBox.Show("Tenes " + num + " formularios que cuentan con stock alto", "Consulta rapida (Auto, Motos, Varios)", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
         private void btn_stockAlerta_Click(object sender, EventArgs e)
         {
             frm_formularios_alerta mv = new frm_formularios_alerta(false, 1, DateTime.Now.ToShortDateString(), UserLoginCache.Nombre);
             mv.Show();
         }
 
+        // Stock parameters
         private void btn_changeStockParameter_Click(object sender, EventArgs e)
         {
-            if (stockBajo.ToString() != txtBox_stockBajo.Text || stockMedio.ToString() != txtBox_stockMedio.Text || txtBox_stockAlto.Text != txtBox_stockAlto.Text)
+            if (Cn_HandlerFormularios.stockBajo.ToString() != txtBox_stockBajo.Text || Cn_HandlerFormularios.stockMedio.ToString() != txtBox_stockMedio.Text || txtBox_stockAlto.Text != txtBox_stockAlto.Text)
             {
                 Settings.Default.StockBajo = Convert.ToInt32(txtBox_stockBajo.Text);
                 Settings.Default.StockMedio = Convert.ToInt32(txtBox_stockMedio.Text);
                 Settings.Default.StockAlto = Convert.ToInt32(txtBox_stockAlto.Text);
                 Properties.Settings.Default.Save();
+
                 MessageBox.Show(@"Parametros actualizados correctamente!" + "\nLas alertas y el numero de stock estan siendo actualizados.", "Operacion exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                refreshData();
+
+                // Refresh data
+                RefreshDataStock();
+                RefreshData();
+                RefreshAll();
             }
         }
 
+        // Timer
         private void timer1_Tick(object sender, EventArgs e)
         {
             txtBox_fecha.Text = DateTime.Now.ToString();
         }
 
+        // Alerts
         private void btn_detalle_alerta_Click(object sender, EventArgs e)
         {
             frm_formularios_alerta mv = new frm_formularios_alerta(true, getAlertSelectedId(), dg_alertas_1.CurrentRow.Cells["fecha"].Value.ToString(), dg_alertas_1.CurrentRow.Cells["user"].Value.ToString());
@@ -902,10 +880,86 @@ namespace LayerPresentation
             id = Convert.ToInt32(dg_alertas_1.CurrentRow.Cells["Cod"].Value.ToString());
             return id;
         }
-        private void btn_ayuda_Click(object sender, EventArgs e)
-        {
 
+        // Save Pdf and Informe
+        private void btn_savePdf_informe_Click(object sender, EventArgs e)
+        {
+            if(ExportInformePdf(GenearteInforme(), "InformeFORMULARIOS")) 
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
         }
+        private void btn_savePdf_autos_Click(object sender, EventArgs e)
+        {
+            if (ExportDatagridviewPdf(dg_formularios_1, "FormulariosAUTO"))
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private void btn_savePdf_motos_Click(object sender, EventArgs e)
+        {
+            if (ExportDatagridviewPdf(dg_formularios_2, "FormulariosMOTO"))
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private void btn_savePdf_varios_Click(object sender, EventArgs e)
+        {
+            if (ExportDatagridviewPdf(dg_formularios_3, "FormulariosVARIOS"))
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private DataTable GenearteInforme() 
+        {
+            return currentDt;
+        }
+        private DataTable GenerateInformeAlertas() 
+        {
+            Cn_Formularios objects = new Cn_Formularios();   
+            DataTable dt = objects.findAlert(Cn_HandlerFormularios.stockBajo);
+            return dt;
+        }
+        private bool ExportInformePdf(DataTable dt, string name)
+        {
+            string dia = DateTime.Now.Day + "-" + DateTime.Now.Month;
+            string user = name + "_" + dia;
+
+            bool result = DataSave.ExportToPdf(dt, user);
+
+            return result;
+        }
+        private bool ExportDatagridviewPdf(DataGridView dt, string name)
+        {
+            Random r = new Random();
+            string dia = DateTime.Now.Day + "-" + DateTime.Now.Month;
+            string user = name + "_" + dia;
+
+            bool result = DataSave.saveInPdf(dt, user);
+
+            return result;
+        }
+        private void btn_exportPdf_alertas_Click(object sender, EventArgs e)
+        {
+            if (ExportInformePdf(GenerateInformeAlertas(), "InformeALERTAS"))
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+
+        // Refresh data
+        private void btn_refreshdata_Click(object sender, EventArgs e)
+        {
+            RefreshData();
+            RefreshDataStock();
+            RefreshAll();
+        }
+        // Load 
         private void cargarPrivilegios()
         {
             if (UserLoginCache.Priveleges == Privileges.Estandar)
@@ -920,6 +974,16 @@ namespace LayerPresentation
                 btn_save.Enabled = false;
                 btn_delete.Enabled = false;
             }
+        }
+        private void frm_formularios_Load(object sender, EventArgs e)
+        {
+            RefreshAll();
+
+            txtBox_stockBajo.Text = Cn_HandlerFormularios.stockBajo.ToString();
+            txtBox_stockMedio.Text = Cn_HandlerFormularios.stockMedio.ToString();
+            txtBox_stockAlto.Text = Cn_HandlerFormularios.stockAlto.ToString();
+
+            cargarPrivilegios();
         }
     }
 }

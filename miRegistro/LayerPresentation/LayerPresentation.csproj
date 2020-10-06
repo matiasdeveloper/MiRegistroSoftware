@@ -95,6 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\CreatorTables.cs" />
+    <Compile Include="Clases\DataFormularios.cs" />
+    <Compile Include="Clases\DataSave.cs" />
+    <Compile Include="Clases\DataTramites.cs" />
     <Compile Include="Clases\QuerySpecific.cs" />
     <Compile Include="Clases\Statistics.cs" />
     <Compile Include="Form\Login\frm_bienvenida.cs">
@@ -169,22 +172,22 @@
     <Compile Include="Form\Otros\frm_sucessdialog.Designer.cs">
       <DependentUpon>frm_sucessdialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Otros\frm_tramites_insertar.cs">
+    <Compile Include="Form\Otros\Tramites\frm_tramites_insertar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Otros\frm_tramites_insertar.Designer.cs">
+    <Compile Include="Form\Otros\Tramites\frm_tramites_insertar.Designer.cs">
       <DependentUpon>frm_tramites_insertar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Otros\frm_tramites_error.cs">
+    <Compile Include="Form\Otros\Tramites\frm_tramites_error.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Otros\frm_tramites_error.Designer.cs">
+    <Compile Include="Form\Otros\Tramites\frm_tramites_error.Designer.cs">
       <DependentUpon>frm_tramites_error.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Otros\frm_tramites_inscribir.cs">
+    <Compile Include="Form\Otros\Tramites\frm_tramites_inscribir.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Otros\frm_tramites_inscribir.Designer.cs">
+    <Compile Include="Form\Otros\Tramites\frm_tramites_inscribir.Designer.cs">
       <DependentUpon>frm_tramites_inscribir.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Principal\frm_empleados.cs">
@@ -199,14 +202,27 @@
     <Compile Include="Form\Principal\frm_estadisticas.Designer.cs">
       <DependentUpon>frm_estadisticas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Otros\frm_tramites_pantallaCompleta.cs">
+    <Compile Include="Form\Otros\Tramites\frm_tramites_pantallaCompleta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Otros\frm_tramites_pantallaCompleta.Designer.cs">
+    <Compile Include="Form\Otros\Tramites\frm_tramites_pantallaCompleta.Designer.cs">
       <DependentUpon>frm_tramites_pantallaCompleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Otros\frm_configuracion_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Otros\frm_configuracion_empleado.Designer.cs">
+      <DependentUpon>frm_configuracion_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Otros\Tramites\frm_tramites_query.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Otros\Tramites\frm_tramites_query.Designer.cs">
+      <DependentUpon>frm_tramites_query.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Web\HttpContext.cs" />
     <EmbeddedResource Include="Form\Login\frm_bienvenida.resx">
       <DependentUpon>frm_bienvenida.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,7 +250,7 @@
     <EmbeddedResource Include="Form\Principal\frm_tramites.resx">
       <DependentUpon>frm_tramites.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Otros\frm_tramites_inscribir.resx">
+    <EmbeddedResource Include="Form\Otros\Tramites\frm_tramites_inscribir.resx">
       <DependentUpon>frm_tramites_inscribir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Login\Login.resx">
@@ -243,10 +259,10 @@
     <EmbeddedResource Include="Form\Login\Login_recoverPassword.resx">
       <DependentUpon>Login_recoverPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Otros\frm_tramites_insertar.resx">
+    <EmbeddedResource Include="Form\Otros\Tramites\frm_tramites_insertar.resx">
       <DependentUpon>frm_tramites_insertar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Otros\frm_tramites_error.resx">
+    <EmbeddedResource Include="Form\Otros\Tramites\frm_tramites_error.resx">
       <DependentUpon>frm_tramites_error.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Principal\frm_empleados.resx">
@@ -255,8 +271,14 @@
     <EmbeddedResource Include="Form\Principal\frm_estadisticas.resx">
       <DependentUpon>frm_estadisticas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Otros\frm_tramites_pantallaCompleta.resx">
+    <EmbeddedResource Include="Form\Otros\Tramites\frm_tramites_pantallaCompleta.resx">
       <DependentUpon>frm_tramites_pantallaCompleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Otros\frm_configuracion_empleado.resx">
+      <DependentUpon>frm_configuracion_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Otros\Tramites\frm_tramites_query.resx">
+      <DependentUpon>frm_tramites_query.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -658,6 +680,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\query_find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveicon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets')" />
