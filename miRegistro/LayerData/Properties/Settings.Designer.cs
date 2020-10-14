@@ -26,8 +26,10 @@ namespace LayerData.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.114,1433;Initial Catalog=miRegistro;Persist Security Info=T" +
-            "rue;User ID=miRegistroSql;Password=admin")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=tcp:rna-argentina.database.windows.net,1433;Initial Catalog=MiRegistroCala" +
+            "fateSC;Persist Security Info=False;User ID=adminrna;Password=registro998P;Multip" +
+            "leActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Ti" +
+            "meout=30;")]
         public string Connection {
             get {
                 return ((string)(this["Connection"]));
