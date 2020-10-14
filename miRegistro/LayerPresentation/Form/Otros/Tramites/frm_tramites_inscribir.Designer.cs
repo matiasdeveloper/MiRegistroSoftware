@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_tramites_inscribir));
-            this.barra_titulo = new System.Windows.Forms.Panel();
-            this.lbl_id = new System.Windows.Forms.Label();
-            this.lbl_tittle = new System.Windows.Forms.Label();
-            this.btn_close = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lbl_fecha = new System.Windows.Forms.Label();
@@ -51,40 +47,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel_simple = new System.Windows.Forms.Panel();
-            this.barra_titulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
+            this.btn_close = new System.Windows.Forms.PictureBox();
+            this.lbl_tittle = new System.Windows.Forms.Label();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.barra_titulo = new System.Windows.Forms.Panel();
             this.panel_simple.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
+            this.barra_titulo.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // barra_titulo
-            // 
-            this.barra_titulo.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.barra_titulo.Controls.Add(this.lbl_id);
-            this.barra_titulo.Controls.Add(this.lbl_tittle);
-            this.barra_titulo.Controls.Add(this.btn_close);
-            resources.ApplyResources(this.barra_titulo, "barra_titulo");
-            this.barra_titulo.Name = "barra_titulo";
-            // 
-            // lbl_id
-            // 
-            resources.ApplyResources(this.lbl_id, "lbl_id");
-            this.lbl_id.ForeColor = System.Drawing.Color.White;
-            this.lbl_id.Name = "lbl_id";
-            // 
-            // lbl_tittle
-            // 
-            resources.ApplyResources(this.lbl_tittle, "lbl_tittle");
-            this.lbl_tittle.ForeColor = System.Drawing.Color.White;
-            this.lbl_tittle.Name = "lbl_tittle";
-            // 
-            // btn_close
-            // 
-            this.btn_close.BackgroundImage = global::LayerPresentation.Properties.Resources.close;
-            resources.ApplyResources(this.btn_close, "btn_close");
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.Name = "btn_close";
-            this.btn_close.TabStop = false;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click_1);
             // 
             // label8
             // 
@@ -219,6 +189,37 @@
             resources.ApplyResources(this.panel_simple, "panel_simple");
             this.panel_simple.Name = "panel_simple";
             // 
+            // btn_close
+            // 
+            this.btn_close.BackgroundImage = global::LayerPresentation.Properties.Resources.close;
+            resources.ApplyResources(this.btn_close, "btn_close");
+            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close.Name = "btn_close";
+            this.btn_close.TabStop = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click_1);
+            // 
+            // lbl_tittle
+            // 
+            resources.ApplyResources(this.lbl_tittle, "lbl_tittle");
+            this.lbl_tittle.ForeColor = System.Drawing.Color.White;
+            this.lbl_tittle.Name = "lbl_tittle";
+            // 
+            // lbl_id
+            // 
+            resources.ApplyResources(this.lbl_id, "lbl_id");
+            this.lbl_id.ForeColor = System.Drawing.Color.White;
+            this.lbl_id.Name = "lbl_id";
+            // 
+            // barra_titulo
+            // 
+            this.barra_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
+            this.barra_titulo.Controls.Add(this.lbl_id);
+            this.barra_titulo.Controls.Add(this.lbl_tittle);
+            this.barra_titulo.Controls.Add(this.btn_close);
+            resources.ApplyResources(this.barra_titulo, "barra_titulo");
+            this.barra_titulo.Name = "barra_titulo";
+            this.barra_titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barra_titulo_MouseDown_1);
+            // 
             // frm_tramites_inscribir
             // 
             resources.ApplyResources(this, "$this");
@@ -229,21 +230,16 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_tramites_inscribir";
             this.Load += new System.EventHandler(this.frm_tramites_inscribir_Load);
-            this.barra_titulo.ResumeLayout(false);
-            this.barra_titulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             this.panel_simple.ResumeLayout(false);
             this.panel_simple.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
+            this.barra_titulo.ResumeLayout(false);
+            this.barra_titulo.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel barra_titulo;
-        private System.Windows.Forms.Label lbl_id;
-        private System.Windows.Forms.Label lbl_tittle;
-        private System.Windows.Forms.PictureBox btn_close;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbl_fecha;
@@ -262,5 +258,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel_simple;
+        private System.Windows.Forms.PictureBox btn_close;
+        private System.Windows.Forms.Label lbl_tittle;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.Panel barra_titulo;
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel_configUser = new System.Windows.Forms.Panel();
             this.pn_expand_7 = new System.Windows.Forms.Panel();
             this.dateTimePick_fechaC = new System.Windows.Forms.DateTimePicker();
@@ -119,10 +118,7 @@
             this.lbl_nombreUser = new System.Windows.Forms.Label();
             this.picBox_userImage = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtBox_fecha = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel_configUser.SuspendLayout();
             this.pn_expand_7.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -1291,37 +1287,13 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.panel1.Controls.Add(this.txtBox_fecha);
-            this.panel1.Controls.Add(this.label7);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.panel1.Controls.Add(this.label23);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1005, 30);
             this.panel1.TabIndex = 19;
-            // 
-            // txtBox_fecha
-            // 
-            this.txtBox_fecha.AutoSize = true;
-            this.txtBox_fecha.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_fecha.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBox_fecha.Location = new System.Drawing.Point(898, 9);
-            this.txtBox_fecha.Name = "txtBox_fecha";
-            this.txtBox_fecha.Size = new System.Drawing.Size(89, 16);
-            this.txtBox_fecha.TabIndex = 19;
-            this.txtBox_fecha.Text = "dd/mm/aaaa ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Location = new System.Drawing.Point(733, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 17);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Fecha y hora del servidor:";
             // 
             // label23
             // 
@@ -1333,11 +1305,6 @@
             this.label23.Size = new System.Drawing.Size(114, 20);
             this.label23.TabIndex = 15;
             this.label23.Text = "Configuracion\r\n";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frm_configuracion
             // 
@@ -1481,9 +1448,6 @@
         private System.Windows.Forms.Label lbl_lastacess;
         private System.Windows.Forms.Label lbl_permission;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label txtBox_fecha;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Timer timer1;
     }
 }

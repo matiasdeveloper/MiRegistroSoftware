@@ -66,48 +66,56 @@ namespace LayerPresentation
                     info.Add(lbl_email_0);
                     info.Add(lbl_acceso_0);
                     info.Add(lbl_id_0);
+                    info.Add(lbl_user_0);
                     break;
                 case 1:
                     info.Add(lbl_permisos_1);
                     info.Add(lbl_email_1);
                     info.Add(lbl_acceso_1);
                     info.Add(lbl_id_1);
+                    info.Add(lbl_user_1);
                     break;
                 case 2:
                     info.Add(lbl_permisos_2);
                     info.Add(lbl_email_2);
                     info.Add(lbl_acceso_2);
                     info.Add(lbl_id_2);
+                    info.Add(lbl_user_2);
                     break;
                 case 3:
                     info.Add(lbl_permisos_3);
                     info.Add(lbl_email_3);
                     info.Add(lbl_acceso_3);
                     info.Add(lbl_id_3);
+                    info.Add(lbl_user_3);
                     break;
                 case 4:
                     info.Add(lbl_permisos_4);
                     info.Add(lbl_email_4);
                     info.Add(lbl_acceso_4);
                     info.Add(lbl_id_4);
+                    info.Add(lbl_user_4);
                     break;
                 case 5:
                     info.Add(lbl_permisos_5);
                     info.Add(lbl_email_5);
                     info.Add(lbl_acceso_5);
                     info.Add(lbl_id_5);
+                    info.Add(lbl_user_5);
                     break;
                 case 6:
                     info.Add(lbl_permisos_6);
                     info.Add(lbl_email_6);
                     info.Add(lbl_acceso_6);
                     info.Add(lbl_id_6);
+                    info.Add(lbl_user_6);
                     break;
                 case 7:
                     info.Add(lbl_permisos_7);
                     info.Add(lbl_email_7);
                     info.Add(lbl_acceso_7);
                     info.Add(lbl_id_7);
+                    info.Add(lbl_user_7);
                     break;
             }
             return info.ToArray();
@@ -192,12 +200,6 @@ namespace LayerPresentation
             return result;
         }
 
-        // Timer server
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            txtBox_fecha.Text = DateTime.Now.ToString();
-        }
-       
         // Buttons and more
         private void btn_tramites_0_Click(object sender, EventArgs e)
         {
@@ -207,10 +209,8 @@ namespace LayerPresentation
 
             DataTable dt = null;
             dt = DataTramites.GetDataTramitesTableWithID(id);
-            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
             mv.Show();
         }
         private void btn_tramites_1_Click(object sender, EventArgs e)
@@ -221,10 +221,8 @@ namespace LayerPresentation
 
             DataTable dt = null;
             dt = DataTramites.GetDataTramitesTableWithID(id);
-            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
             mv.Show();
         }
         private void btn_tramites_2_Click(object sender, EventArgs e)
@@ -235,10 +233,8 @@ namespace LayerPresentation
 
             DataTable dt = null;
             dt = DataTramites.GetDataTramitesTableWithID(id);
-            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
             mv.Show();
         }
         private void btn_tramites_3_Click(object sender, EventArgs e)
@@ -249,10 +245,8 @@ namespace LayerPresentation
 
             DataTable dt = null;
             dt = DataTramites.GetDataTramitesTableWithID(id);
-            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
             mv.Show();
         }
         private void btn_tramites_4_Click(object sender, EventArgs e)
@@ -263,10 +257,8 @@ namespace LayerPresentation
 
             DataTable dt = null;
             dt = DataTramites.GetDataTramitesTableWithID(id);
-            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
             mv.Show();
         }
         private void btn_tramites_5_Click(object sender, EventArgs e)
@@ -277,10 +269,8 @@ namespace LayerPresentation
 
             DataTable dt = null;
             dt = DataTramites.GetDataTramitesTableWithID(id);
-            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
             mv.Show();
         }
 
@@ -292,10 +282,8 @@ namespace LayerPresentation
 
             DataTable dt = null;
             dt = DataTramites.GetDataTramitesTableWithID(id);
-            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
             mv.Show();
         }
 
@@ -307,10 +295,8 @@ namespace LayerPresentation
 
             DataTable dt = null;
             dt = DataTramites.GetDataTramitesTableWithID(id);
-            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
             mv.Show();
         }
         // Edit buttons

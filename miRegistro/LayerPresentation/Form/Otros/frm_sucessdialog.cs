@@ -22,7 +22,7 @@ namespace LayerPresentation
                     lbl_info.Text = "Dato ingresado correctamente.";
                     break;
                 case 1:
-                    lbl_tittle.Text = "Muy bien!!";
+                    lbl_tittle.Text = "Excelente!";
                     lbl_info.Text = "Dato eliminado correctamente.";
                     break;
                 case 2:

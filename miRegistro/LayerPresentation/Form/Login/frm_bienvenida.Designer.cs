@@ -49,7 +49,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.panel1.Controls.Add(this.lbl_privilegios);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label2);
@@ -69,7 +69,7 @@
             // 
             this.lbl_privilegios.AutoSize = true;
             this.lbl_privilegios.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_privilegios.ForeColor = System.Drawing.Color.Red;
+            this.lbl_privilegios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_privilegios.Location = new System.Drawing.Point(119, 94);
             this.lbl_privilegios.Name = "lbl_privilegios";
             this.lbl_privilegios.Size = new System.Drawing.Size(59, 16);
@@ -80,7 +80,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(21, 77);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(216, 48);
@@ -91,7 +91,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.label2.Location = new System.Drawing.Point(22, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(168, 34);
@@ -126,7 +126,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.ForeColor = System.Drawing.Color.Green;
             this.label4.Location = new System.Drawing.Point(37, 317);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(171, 36);
@@ -137,7 +137,7 @@
             // 
             this.lbl_nombreCorto.AutoSize = true;
             this.lbl_nombreCorto.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombreCorto.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbl_nombreCorto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
             this.lbl_nombreCorto.Location = new System.Drawing.Point(158, 27);
             this.lbl_nombreCorto.Name = "lbl_nombreCorto";
             this.lbl_nombreCorto.Size = new System.Drawing.Size(84, 22);
@@ -176,6 +176,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.pictureBox1.BackgroundImage = global::LayerPresentation.Properties.Resources.backgroundBienvenida;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.AppStarting;
@@ -200,6 +201,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Bienvenida";
+            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenida";
             this.Load += new System.EventHandler(this.Bienvenida_Load);

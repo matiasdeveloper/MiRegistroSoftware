@@ -52,10 +52,7 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_refreshdata = new System.Windows.Forms.Button();
-            this.txtBox_fecha = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.flowPanel_Formularios = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_stockbajo = new System.Windows.Forms.Label();
@@ -115,14 +112,12 @@
             this.label31 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.checkBox_inscripto = new System.Windows.Forms.CheckBox();
             this.label37 = new System.Windows.Forms.Label();
             this.comboBox_empleados = new System.Windows.Forms.ComboBox();
             this.btn_savepdf_empleado = new System.Windows.Forms.Button();
             this.btn_savepdf_tramites = new System.Windows.Forms.Button();
             this.btn_savepdf_stock = new System.Windows.Forms.Button();
-            this.label35 = new System.Windows.Forms.Label();
-            this.dateTime_fecha_inscribir = new System.Windows.Forms.DateTimePicker();
             this.btn_inscribir = new System.Windows.Forms.Button();
             this.btn_insertar = new System.Windows.Forms.Button();
             this.btn_query_ayer = new System.Windows.Forms.Button();
@@ -191,10 +186,8 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.panel5.Controls.Add(this.btn_refreshdata);
-            this.panel5.Controls.Add(this.txtBox_fecha);
-            this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
@@ -209,37 +202,15 @@
             this.btn_refreshdata.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.btn_refreshdata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_refreshdata.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_refreshdata.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_refreshdata.Location = new System.Drawing.Point(5, 3);
+            this.btn_refreshdata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(168)))));
+            this.btn_refreshdata.Location = new System.Drawing.Point(845, 4);
             this.btn_refreshdata.Margin = new System.Windows.Forms.Padding(2);
             this.btn_refreshdata.Name = "btn_refreshdata";
-            this.btn_refreshdata.Size = new System.Drawing.Size(181, 25);
+            this.btn_refreshdata.Size = new System.Drawing.Size(156, 23);
             this.btn_refreshdata.TabIndex = 158;
             this.btn_refreshdata.Text = "Actualizar datos";
             this.btn_refreshdata.UseVisualStyleBackColor = false;
             this.btn_refreshdata.Click += new System.EventHandler(this.btn_refreshdata_Click);
-            // 
-            // txtBox_fecha
-            // 
-            this.txtBox_fecha.AutoSize = true;
-            this.txtBox_fecha.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_fecha.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBox_fecha.Location = new System.Drawing.Point(898, 9);
-            this.txtBox_fecha.Name = "txtBox_fecha";
-            this.txtBox_fecha.Size = new System.Drawing.Size(89, 16);
-            this.txtBox_fecha.TabIndex = 19;
-            this.txtBox_fecha.Text = "dd/mm/aaaa ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(733, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 17);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Fecha y hora del servidor:";
             // 
             // label3
             // 
@@ -251,11 +222,6 @@
             this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 15;
             this.label3.Text = "Escritorio\r\n";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // flowPanel_Formularios
             // 
@@ -270,7 +236,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(17)))), ((int)(((byte)(3)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.panel1.Controls.Add(this.lbl_stockbajo);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(3, 3);
@@ -305,7 +271,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(165)))), ((int)(((byte)(22)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(145)))), ((int)(((byte)(61)))));
             this.panel2.Controls.Add(this.lbl_stockmedio);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(135, 3);
@@ -341,7 +307,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(112)))), ((int)(((byte)(71)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(217)))), ((int)(((byte)(85)))));
             this.panel3.Controls.Add(this.lbl_stockalto);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Location = new System.Drawing.Point(267, 3);
@@ -378,11 +344,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
             this.label1.Location = new System.Drawing.Point(595, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 21);
+            this.label1.Size = new System.Drawing.Size(140, 21);
             this.label1.TabIndex = 40;
             this.label1.Text = "Stock formularios";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -569,7 +535,7 @@
             this.chart_circle_diario.Name = "chart_circle_diario";
             this.chart_circle_diario.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series10.Legend = "Legend1";
             series10.Name = "Series1";
             this.chart_circle_diario.Series.Add(series10);
@@ -618,7 +584,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
             this.label10.Location = new System.Drawing.Point(300, 275);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(132, 21);
@@ -658,10 +624,10 @@
             this.dg_topErrores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg_topErrores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(148)))));
             dataGridViewCellStyle19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(148)))));
             dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dg_topErrores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
@@ -774,7 +740,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
             this.label18.Location = new System.Drawing.Point(592, 364);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(124, 21);
@@ -807,7 +773,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
             this.label20.Location = new System.Drawing.Point(8, 277);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(144, 21);
@@ -974,6 +940,7 @@
             this.chart_circle_mensual.Legends.Add(legend11);
             this.chart_circle_mensual.Location = new System.Drawing.Point(9, 5);
             this.chart_circle_mensual.Name = "chart_circle_mensual";
+            this.chart_circle_mensual.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series11.ChartArea = "ChartArea1";
             series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series11.Legend = "Legend1";
@@ -1022,14 +989,12 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel17.Controls.Add(this.label4);
+            this.panel17.Controls.Add(this.checkBox_inscripto);
             this.panel17.Controls.Add(this.label37);
             this.panel17.Controls.Add(this.comboBox_empleados);
             this.panel17.Controls.Add(this.btn_savepdf_empleado);
             this.panel17.Controls.Add(this.btn_savepdf_tramites);
             this.panel17.Controls.Add(this.btn_savepdf_stock);
-            this.panel17.Controls.Add(this.label35);
-            this.panel17.Controls.Add(this.dateTime_fecha_inscribir);
             this.panel17.Controls.Add(this.btn_inscribir);
             this.panel17.Controls.Add(this.btn_insertar);
             this.panel17.Controls.Add(this.btn_query_ayer);
@@ -1040,24 +1005,28 @@
             this.panel17.Size = new System.Drawing.Size(571, 189);
             this.panel17.TabIndex = 171;
             // 
-            // label4
+            // checkBox_inscripto
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label4.Location = new System.Drawing.Point(7, 7);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 15);
-            this.label4.TabIndex = 183;
-            this.label4.Text = "Exportar pdf:";
+            this.checkBox_inscripto.AutoSize = true;
+            this.checkBox_inscripto.Checked = true;
+            this.checkBox_inscripto.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_inscripto.Enabled = false;
+            this.checkBox_inscripto.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_inscripto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.checkBox_inscripto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox_inscripto.Location = new System.Drawing.Point(416, 19);
+            this.checkBox_inscripto.Name = "checkBox_inscripto";
+            this.checkBox_inscripto.Size = new System.Drawing.Size(111, 20);
+            this.checkBox_inscripto.TabIndex = 184;
+            this.checkBox_inscripto.Text = "Inscribir mulitple";
+            this.checkBox_inscripto.UseVisualStyleBackColor = true;
             // 
             // label37
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label37.Location = new System.Drawing.Point(42, 98);
+            this.label37.Location = new System.Drawing.Point(42, 90);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(120, 15);
@@ -1069,7 +1038,7 @@
             this.comboBox_empleados.DisplayMember = "Nombre";
             this.comboBox_empleados.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_empleados.FormattingEnabled = true;
-            this.comboBox_empleados.Location = new System.Drawing.Point(8, 116);
+            this.comboBox_empleados.Location = new System.Drawing.Point(8, 108);
             this.comboBox_empleados.Name = "comboBox_empleados";
             this.comboBox_empleados.Size = new System.Drawing.Size(190, 25);
             this.comboBox_empleados.TabIndex = 181;
@@ -1077,7 +1046,7 @@
             // 
             // btn_savepdf_empleado
             // 
-            this.btn_savepdf_empleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(125)))), ((int)(((byte)(181)))));
+            this.btn_savepdf_empleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(142)))), ((int)(((byte)(179)))));
             this.btn_savepdf_empleado.FlatAppearance.BorderSize = 0;
             this.btn_savepdf_empleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_savepdf_empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1085,7 +1054,7 @@
             this.btn_savepdf_empleado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_savepdf_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_savepdf_empleado.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_savepdf_empleado.Location = new System.Drawing.Point(7, 145);
+            this.btn_savepdf_empleado.Location = new System.Drawing.Point(7, 137);
             this.btn_savepdf_empleado.Margin = new System.Windows.Forms.Padding(4);
             this.btn_savepdf_empleado.Name = "btn_savepdf_empleado";
             this.btn_savepdf_empleado.Size = new System.Drawing.Size(191, 28);
@@ -1096,7 +1065,7 @@
             // 
             // btn_savepdf_tramites
             // 
-            this.btn_savepdf_tramites.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(183)))), ((int)(((byte)(235)))));
+            this.btn_savepdf_tramites.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(127)))), ((int)(((byte)(219)))));
             this.btn_savepdf_tramites.FlatAppearance.BorderSize = 0;
             this.btn_savepdf_tramites.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_savepdf_tramites.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1104,7 +1073,7 @@
             this.btn_savepdf_tramites.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_savepdf_tramites.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_savepdf_tramites.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_savepdf_tramites.Location = new System.Drawing.Point(107, 27);
+            this.btn_savepdf_tramites.Location = new System.Drawing.Point(107, 19);
             this.btn_savepdf_tramites.Margin = new System.Windows.Forms.Padding(4);
             this.btn_savepdf_tramites.Name = "btn_savepdf_tramites";
             this.btn_savepdf_tramites.Size = new System.Drawing.Size(91, 63);
@@ -1115,7 +1084,7 @@
             // 
             // btn_savepdf_stock
             // 
-            this.btn_savepdf_stock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(74)))), ((int)(((byte)(107)))));
+            this.btn_savepdf_stock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(25)))), ((int)(((byte)(56)))));
             this.btn_savepdf_stock.FlatAppearance.BorderSize = 0;
             this.btn_savepdf_stock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_savepdf_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1123,7 +1092,7 @@
             this.btn_savepdf_stock.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_savepdf_stock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_savepdf_stock.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_savepdf_stock.Location = new System.Drawing.Point(7, 27);
+            this.btn_savepdf_stock.Location = new System.Drawing.Point(7, 19);
             this.btn_savepdf_stock.Margin = new System.Windows.Forms.Padding(4);
             this.btn_savepdf_stock.Name = "btn_savepdf_stock";
             this.btn_savepdf_stock.Size = new System.Drawing.Size(91, 63);
@@ -1131,28 +1100,6 @@
             this.btn_savepdf_stock.Text = "Informe\r\nStock\r\n";
             this.btn_savepdf_stock.UseVisualStyleBackColor = false;
             this.btn_savepdf_stock.Click += new System.EventHandler(this.btn_savepdf_stock_Click);
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label35.Location = new System.Drawing.Point(422, 11);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(123, 15);
-            this.label35.TabIndex = 175;
-            this.label35.Text = "Todos los tramites del:";
-            // 
-            // dateTime_fecha_inscribir
-            // 
-            this.dateTime_fecha_inscribir.CustomFormat = "MM/dd/yyyy";
-            this.dateTime_fecha_inscribir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime_fecha_inscribir.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTime_fecha_inscribir.Location = new System.Drawing.Point(416, 29);
-            this.dateTime_fecha_inscribir.Name = "dateTime_fecha_inscribir";
-            this.dateTime_fecha_inscribir.Size = new System.Drawing.Size(141, 23);
-            this.dateTime_fecha_inscribir.TabIndex = 86;
             // 
             // btn_inscribir
             // 
@@ -1163,9 +1110,9 @@
             this.btn_inscribir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_inscribir.ForeColor = System.Drawing.Color.Navy;
             this.btn_inscribir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inscribir.Location = new System.Drawing.Point(416, 58);
+            this.btn_inscribir.Location = new System.Drawing.Point(416, 44);
             this.btn_inscribir.Name = "btn_inscribir";
-            this.btn_inscribir.Size = new System.Drawing.Size(141, 34);
+            this.btn_inscribir.Size = new System.Drawing.Size(141, 30);
             this.btn_inscribir.TabIndex = 85;
             this.btn_inscribir.Text = "Inscribir tramites";
             this.btn_inscribir.UseVisualStyleBackColor = false;
@@ -1178,11 +1125,11 @@
             this.btn_insertar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_insertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_insertar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_insertar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(180)))), ((int)(((byte)(74)))));
+            this.btn_insertar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(217)))), ((int)(((byte)(85)))));
             this.btn_insertar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_insertar.Location = new System.Drawing.Point(416, 100);
+            this.btn_insertar.Location = new System.Drawing.Point(416, 83);
             this.btn_insertar.Name = "btn_insertar";
-            this.btn_insertar.Size = new System.Drawing.Size(141, 75);
+            this.btn_insertar.Size = new System.Drawing.Size(141, 83);
             this.btn_insertar.TabIndex = 84;
             this.btn_insertar.Text = "Insertar nuevo tramite";
             this.btn_insertar.UseVisualStyleBackColor = false;
@@ -1190,7 +1137,7 @@
             // 
             // btn_query_ayer
             // 
-            this.btn_query_ayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(190)))), ((int)(((byte)(232)))));
+            this.btn_query_ayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(142)))), ((int)(((byte)(219)))));
             this.btn_query_ayer.FlatAppearance.BorderSize = 0;
             this.btn_query_ayer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_query_ayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1198,7 +1145,7 @@
             this.btn_query_ayer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_query_ayer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_query_ayer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_query_ayer.Location = new System.Drawing.Point(211, 131);
+            this.btn_query_ayer.Location = new System.Drawing.Point(211, 123);
             this.btn_query_ayer.Margin = new System.Windows.Forms.Padding(4);
             this.btn_query_ayer.Name = "btn_query_ayer";
             this.btn_query_ayer.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
@@ -1210,7 +1157,7 @@
             // 
             // btn_query_diaria
             // 
-            this.btn_query_diaria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(138)))), ((int)(((byte)(168)))));
+            this.btn_query_diaria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btn_query_diaria.FlatAppearance.BorderSize = 0;
             this.btn_query_diaria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_query_diaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1218,7 +1165,7 @@
             this.btn_query_diaria.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_query_diaria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_query_diaria.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_query_diaria.Location = new System.Drawing.Point(211, 79);
+            this.btn_query_diaria.Location = new System.Drawing.Point(211, 71);
             this.btn_query_diaria.Margin = new System.Windows.Forms.Padding(4);
             this.btn_query_diaria.Name = "btn_query_diaria";
             this.btn_query_diaria.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
@@ -1230,7 +1177,7 @@
             // 
             // btn_query_mensual
             // 
-            this.btn_query_mensual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(86)))), ((int)(((byte)(105)))));
+            this.btn_query_mensual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(76)))));
             this.btn_query_mensual.FlatAppearance.BorderSize = 0;
             this.btn_query_mensual.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_query_mensual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1238,7 +1185,7 @@
             this.btn_query_mensual.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_query_mensual.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_query_mensual.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_query_mensual.Location = new System.Drawing.Point(211, 27);
+            this.btn_query_mensual.Location = new System.Drawing.Point(211, 19);
             this.btn_query_mensual.Margin = new System.Windows.Forms.Padding(4);
             this.btn_query_mensual.Name = "btn_query_mensual";
             this.btn_query_mensual.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
@@ -1253,7 +1200,7 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label33.Location = new System.Drawing.Point(893, 130);
+            this.label33.Location = new System.Drawing.Point(893, 129);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(97, 15);
@@ -1263,7 +1210,7 @@
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel18.Location = new System.Drawing.Point(594, 158);
+            this.panel18.Location = new System.Drawing.Point(594, 157);
             this.panel18.Margin = new System.Windows.Forms.Padding(4);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(400, 1);
@@ -1273,8 +1220,8 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label34.Location = new System.Drawing.Point(594, 130);
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
+            this.label34.Location = new System.Drawing.Point(594, 129);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(183, 21);
             this.label34.TabIndex = 176;
@@ -1297,15 +1244,16 @@
             this.chart_mensual_empleados.ChartAreas.Add(chartArea12);
             legend12.Name = "Legend1";
             this.chart_mensual_empleados.Legends.Add(legend12);
-            this.chart_mensual_empleados.Location = new System.Drawing.Point(6, 7);
+            this.chart_mensual_empleados.Location = new System.Drawing.Point(6, 5);
             this.chart_mensual_empleados.Name = "chart_mensual_empleados";
+            this.chart_mensual_empleados.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series12.ChartArea = "ChartArea1";
             series12.Legend = "Legend1";
             series12.Name = "Empleados";
             this.chart_mensual_empleados.Series.Add(series12);
-            this.chart_mensual_empleados.Size = new System.Drawing.Size(394, 170);
+            this.chart_mensual_empleados.Size = new System.Drawing.Size(394, 179);
             this.chart_mensual_empleados.TabIndex = 1;
-            this.chart_mensual_empleados.Text = "chart3";
+            this.chart_mensual_empleados.Text = "41; 217; 85";
             // 
             // lbl_inicio
             // 
@@ -1391,10 +1339,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label txtBox_fecha;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.FlowLayoutPanel flowPanel_Formularios;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_stockbajo;
@@ -1461,18 +1406,16 @@
         public System.Windows.Forms.Button btn_query_mensual;
         private System.Windows.Forms.Button btn_inscribir;
         private System.Windows.Forms.Button btn_insertar;
-        private System.Windows.Forms.Label label35;
-        public System.Windows.Forms.DateTimePicker dateTime_fecha_inscribir;
         public System.Windows.Forms.Button btn_savepdf_stock;
         public System.Windows.Forms.Button btn_savepdf_empleado;
         public System.Windows.Forms.Button btn_savepdf_tramites;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.ComboBox comboBox_empleados;
         private System.Windows.Forms.Label lbl_inicio;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_refreshdata;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.CheckBox checkBox_inscripto;
     }
 }

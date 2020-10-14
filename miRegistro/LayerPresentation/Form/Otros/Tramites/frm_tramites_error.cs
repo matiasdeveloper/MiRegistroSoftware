@@ -101,14 +101,19 @@ namespace LayerPresentation
             {
                 try
                 {
-                     _cnObject.actualizarError(id, observaciones, 1, cod_error);
-                     deleteFields();
-                     frm_successdialog f = new frm_successdialog(2);
-                     f.Show();
+                    int cod = 0;
+                    if (checkBox_errores.Checked) 
+                    {
+                        cod = 1;
+                    }
+                    _cnObject.actualizarError(id, observaciones, cod, cod_error);
+                    deleteFields();
+                    frm_successdialog f = new frm_successdialog(2);
+                    f.Show();
 
                     if(_handlerTramites != null) 
                     {
-                        _handlerTramites.refreshData();
+                        _handlerTramites.refreshAll();
                     }
                     if(_handlerTPc != null) 
                     {

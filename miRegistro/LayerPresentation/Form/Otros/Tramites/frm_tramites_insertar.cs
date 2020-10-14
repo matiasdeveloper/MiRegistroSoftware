@@ -199,10 +199,9 @@ namespace LayerPresentation
                         deleteFields();
                         frm_successdialog f = new frm_successdialog(0);
                         f.Show();
-                        _cnObject.RefreshDataTramitesCache();
                         if (_frmHandler != null)
                         {
-                            _frmHandler.refreshData();
+                            _frmHandler.refreshAll();
                         }
                         if (_frmHandlerTPc != null)
                         {
@@ -215,10 +214,9 @@ namespace LayerPresentation
                         deleteFields();
                         frm_successdialog f = new frm_successdialog(2);
                         f.Show();
-                        _cnObject.RefreshDataTramitesCache();
                         if (_frmHandler != null)
                         {
-                            _frmHandler.refreshData();
+                            _frmHandler.refreshAll();
                         }
                         if (_frmHandlerTPc != null)
                         {

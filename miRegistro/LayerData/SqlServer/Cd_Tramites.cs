@@ -82,6 +82,7 @@ namespace LayerData.SqlServer
 
             _conn.closeConnection();
         }
+
         public void Delete(int id)
         {
             string q = "DELETE FROM Tramites WHERE Id = " + id + ";";

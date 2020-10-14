@@ -51,7 +51,7 @@ namespace LayerPresentation
             {
                 disableButton();
                 _currentBtn = (Button)senderBtn;
-                _currentBtn.BackColor = Color.FromArgb(45, 66, 91);
+                _currentBtn.BackColor = Color.FromArgb(0, 104, 148);
                 _currentBtn.ForeColor = color;
             }
         }
@@ -59,7 +59,7 @@ namespace LayerPresentation
         {
             if(_currentBtn != null) 
             {
-                _currentBtn.BackColor = Color.FromArgb(15, 15, 15);
+                _currentBtn.BackColor = Color.FromArgb(30, 30, 30);
                 _currentBtn.ForeColor = Color.White;
             }
         }
@@ -77,7 +77,7 @@ namespace LayerPresentation
                     string valor = fila[0].ToString();
                     _cnObject.insertarDetallesAlerta(id, Convert.ToInt32(valor), "Alerta de stock");
                 }
-                if (MessageBox.Show("Alerta de stock detectada!" + "\nPara mas infomarcion pressione 'SI'" + "\nPara descartar la alerta presione 'NO'", "ALERTA DE STOCK", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (MessageBox.Show("Alerta de stock bajo de formularios" + "\nDesea ver la alerta?", "Atencion!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     // Mostrar los formularios de la alerta con bajo stock.
                     frm_formularios_alerta mv = new frm_formularios_alerta(true, id, UserLoginCache.Fecha_UltimoAcceso.ToString(), UserLoginCache.Username);
@@ -169,6 +169,11 @@ namespace LayerPresentation
             buscarNuevasAlertas(stockBajo);
 
             cargarDatosUsuario();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txtBox_fecha.Text = DateTime.Now.ToString();
         }
     }
 }

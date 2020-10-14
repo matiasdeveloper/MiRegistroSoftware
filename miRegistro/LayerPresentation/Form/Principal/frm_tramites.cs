@@ -25,6 +25,8 @@ namespace LayerPresentation
         }
         // Variables
         private Cn_Tramites _cnTramites = new Cn_Tramites();
+        private Cn_Empleados _cnEmpleados = new Cn_Empleados();
+
         private DataTable currentDt;
 
         private Button _currentBtn;
@@ -32,6 +34,14 @@ namespace LayerPresentation
 
         private int selectedId = 0;
         // Methods
+        public void refreshAll() 
+        {
+            _cnTramites.RefreshDataTramitesCache();
+            _cnEmpleados.GenerateEmployeesDataCache(); Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
+
+            refreshTramites(Cn_HandlerTramites.current);
+            refreshDashboard();
+        }
         public void refreshData() 
         {
             refreshTramites(Cn_HandlerTramites.current);
@@ -268,8 +278,7 @@ namespace LayerPresentation
                         frm_successdialog f = new frm_successdialog(1);
                         f.Show();
 
-                        _cnTramites.RefreshDataTramitesCache();
-                        refreshData();
+                        refreshAll();
                     }
                 }
                 catch (Exception ex)
@@ -288,19 +297,21 @@ namespace LayerPresentation
         }
         private void btn_inscribir_Click(object sender, EventArgs e)
         {
-            var data = GetDataFromSelectedIndex();
-            int id = selectedId;
+            if (checkBox_inscripto.Checked) 
+            {
+                frm_tramites_inscribir_mult frm = new frm_tramites_inscribir_mult(DateTime.Today, currentDt, this);
+                frm.Show();
+            } 
+            else 
+            {
+                var data = GetDataFromSelectedIndex();
+                int id = selectedId;
 
-            frm_tramites_inscribir frm = new frm_tramites_inscribir(false, id, data[2], data[0], data[7], this);
-            frm.Show();
+                frm_tramites_inscribir frm = new frm_tramites_inscribir(id, data[2], data[0], data[7], this);
+                frm.Show();
+            }
         }
         
-        // Timer server
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            txtBox_fecha.Text = DateTime.Now.ToString();
-        }
-
         // Paint the datagrid
         private void dg_tramites_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -309,7 +320,7 @@ namespace LayerPresentation
                 if (Convert.ToBoolean(e.Value) == true)
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                    e.CellStyle.BackColor = Color.FromArgb(41, 217, 85);
                 }
             }
             if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Error")
@@ -317,12 +328,12 @@ namespace LayerPresentation
                 if (Convert.ToBoolean(e.Value) == true)
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
+                    e.CellStyle.BackColor = Color.FromArgb(242, 53, 53);
                 }
                 else
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                    e.CellStyle.BackColor = Color.FromArgb(41, 217, 85);
                 }
             }
 
@@ -331,12 +342,12 @@ namespace LayerPresentation
                 if (Convert.ToString(e.Value) == "Error Total")
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
+                    e.CellStyle.BackColor = Color.FromArgb(242, 53, 53);
                 }
                 else if (Convert.ToString(e.Value) == "Error Parcial")
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
+                    e.CellStyle.BackColor = Color.FromArgb(242, 145, 61);
                 }
             }
         }

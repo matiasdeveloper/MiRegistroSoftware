@@ -19,6 +19,7 @@ namespace LayerPresentation
         public frm_estadisticas()
         {
             InitializeComponent();
+            tabControl.SelectedIndex = 1;
         }
 
         Cn_Tramites _handlerTramites = new Cn_Tramites();
@@ -107,10 +108,8 @@ namespace LayerPresentation
             string mes = dateNow.Month.ToString();
             DataTable dt = null;
             dt = DataTramites.GetDataTramitesTableWithID(id);
-            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
             
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString(), true, this);
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString(), true, this);
             mv.Show();
         }
         private void btn_toperror_Click_1(object sender, EventArgs e)
@@ -121,11 +120,8 @@ namespace LayerPresentation
 
             DataTable dt = null;
             dt = DataTramites.GetDataTramitesTableWithID(id);
-            
-            int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-            int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, errores, tramites, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString(), true, this);
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString(), true, this);
             mv.Show();
         }
 
@@ -143,10 +139,6 @@ namespace LayerPresentation
                 textBox1.Text = this.dg_topErrores.SelectedRows[0].Cells["Empleado"].Value.ToString();
             }
         }       
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            txtBox_fecha.Text = DateTime.Now.ToString();
-        }
         private void btn_refreshdata_Click(object sender, EventArgs e)
         {
             refreshData();

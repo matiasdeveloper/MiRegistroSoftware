@@ -34,17 +34,17 @@ namespace LayerPresentation.Clases
                     {
                         // By month and simple chart
                         etapasMes = FindEtapas(employee.Value.nombre, employee.Value.tramitesMes, dt1, dt2);
-                        etapasMes[1] += etapasMes[0];
+                        int total = etapasMes[1] + etapasMes[0];
 
-                        ch.Series[series[0]].Points.AddXY(employee.Value.nombre, etapasMes[1]);
+                        ch.Series[series[0]].Points.AddXY(employee.Value.nombre, total);
                     } 
                     else 
                     {
                         // By month and all the chart
                         etapasMes = FindEtapas(employee.Value.nombre, employee.Value.tramitesMes, dt1, dt2);
-                        etapasMes[1] += etapasMes[0];
+                        int total = etapasMes[1] + etapasMes[0];
 
-                        ch.Series[series[0]].Points.AddXY(employee.Value.nombre, etapasMes[1]);
+                        ch.Series[series[0]].Points.AddXY(employee.Value.nombre, total);
                         ch.Series[series[1]].Points.AddXY("Procesados", etapasMes[1]);
                         ch.Series[series[2]].Points.AddXY("Inscriptos", etapasMes[0]);
                     }
@@ -296,6 +296,7 @@ namespace LayerPresentation.Clases
                             info[0][1].Text = employee.Value.email;
                             info[0][2].Text = employee.Value.fechaAcceso.ToShortDateString();
                             info[0][3].Text = employee.Value.id.ToString();
+                            info[0][4].Text = employee.Value.usuario.ToString();
                             break;
                         case 2:
                             panels[1].Enabled = true;
@@ -303,6 +304,7 @@ namespace LayerPresentation.Clases
                             info[1][1].Text = employee.Value.email;
                             info[1][2].Text = employee.Value.fechaAcceso.ToShortDateString();
                             info[1][3].Text = employee.Value.id.ToString();
+                            info[1][4].Text = employee.Value.usuario.ToString();
                             break;
                         case 3:
                             panels[2].Enabled = true;
@@ -310,6 +312,7 @@ namespace LayerPresentation.Clases
                             info[2][1].Text = employee.Value.email;
                             info[2][2].Text = employee.Value.fechaAcceso.ToShortDateString();
                             info[2][3].Text = employee.Value.id.ToString();
+                            info[2][4].Text = employee.Value.usuario.ToString();
                             break;
                         case 4:
                             panels[3].Enabled = true;
@@ -317,6 +320,7 @@ namespace LayerPresentation.Clases
                             info[3][1].Text = employee.Value.email;
                             info[3][2].Text = employee.Value.fechaAcceso.ToShortDateString();
                             info[3][3].Text = employee.Value.id.ToString();
+                            info[3][4].Text = employee.Value.usuario.ToString();
                             break;
                         case 5:
                             panels[4].Enabled = true;
@@ -324,6 +328,7 @@ namespace LayerPresentation.Clases
                             info[4][1].Text = employee.Value.email;
                             info[4][2].Text = employee.Value.fechaAcceso.ToShortDateString();
                             info[4][3].Text = employee.Value.id.ToString();
+                            info[4][4].Text = employee.Value.usuario.ToString();
                             break;
                         case 6:
                             panels[5].Enabled = true;
@@ -331,6 +336,7 @@ namespace LayerPresentation.Clases
                             info[5][1].Text = employee.Value.email;
                             info[5][2].Text = employee.Value.fechaAcceso.ToShortDateString();
                             info[5][3].Text = employee.Value.id.ToString();
+                            info[5][4].Text = employee.Value.usuario.ToString();
                             break;
                         case 7:
                             panels[6].Enabled = true;
@@ -338,6 +344,7 @@ namespace LayerPresentation.Clases
                             info[6][1].Text = employee.Value.email;
                             info[6][2].Text = employee.Value.fechaAcceso.ToShortDateString();
                             info[6][3].Text = employee.Value.id.ToString();
+                            info[6][4].Text = employee.Value.usuario.ToString();
                             break;
                         case 8:
                             panels[7].Enabled = true;
@@ -345,6 +352,7 @@ namespace LayerPresentation.Clases
                             info[7][1].Text = employee.Value.email;
                             info[7][2].Text = employee.Value.fechaAcceso.ToShortDateString();
                             info[7][3].Text = employee.Value.id.ToString();
+                            info[7][4].Text = employee.Value.usuario.ToString();
                             break;
                     }
                 }

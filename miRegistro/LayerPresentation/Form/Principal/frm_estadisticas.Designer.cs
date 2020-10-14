@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -59,8 +58,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_refreshdata = new System.Windows.Forms.Button();
-            this.txtBox_fecha = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_errores = new System.Windows.Forms.TabPage();
@@ -342,7 +339,6 @@
             this.Inscriptos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel75 = new System.Windows.Forms.Panel();
             this.txtBox_empleado = new System.Windows.Forms.TextBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel5.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage_errores.SuspendLayout();
@@ -390,10 +386,8 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.panel5.Controls.Add(this.btn_refreshdata);
-            this.panel5.Controls.Add(this.txtBox_fecha);
-            this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
@@ -407,36 +401,14 @@
             this.btn_refreshdata.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_refreshdata.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.btn_refreshdata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_refreshdata.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_refreshdata.Location = new System.Drawing.Point(4, 4);
+            this.btn_refreshdata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(168)))));
+            this.btn_refreshdata.Location = new System.Drawing.Point(845, 4);
             this.btn_refreshdata.Name = "btn_refreshdata";
-            this.btn_refreshdata.Size = new System.Drawing.Size(187, 24);
-            this.btn_refreshdata.TabIndex = 157;
+            this.btn_refreshdata.Size = new System.Drawing.Size(156, 23);
+            this.btn_refreshdata.TabIndex = 1;
             this.btn_refreshdata.Text = "Actualizar datos";
             this.btn_refreshdata.UseVisualStyleBackColor = false;
             this.btn_refreshdata.Click += new System.EventHandler(this.btn_refreshdata_Click);
-            // 
-            // txtBox_fecha
-            // 
-            this.txtBox_fecha.AutoSize = true;
-            this.txtBox_fecha.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_fecha.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBox_fecha.Location = new System.Drawing.Point(898, 9);
-            this.txtBox_fecha.Name = "txtBox_fecha";
-            this.txtBox_fecha.Size = new System.Drawing.Size(89, 16);
-            this.txtBox_fecha.TabIndex = 19;
-            this.txtBox_fecha.Text = "dd/mm/aaaa ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(733, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 17);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Fecha y hora del servidor:";
             // 
             // label3
             // 
@@ -568,7 +540,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
             this.label19.Location = new System.Drawing.Point(9, 4);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
@@ -587,10 +559,10 @@
             this.dg_topErrores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg_topErrores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(148)))));
             dataGridViewCellStyle17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(148)))));
             dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dg_topErrores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
@@ -788,7 +760,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
             this.label39.Location = new System.Drawing.Point(6, 6);
             this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
@@ -844,7 +816,7 @@
             // 
             this.lbl_countErrores7.AutoSize = true;
             this.lbl_countErrores7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_countErrores7.ForeColor = System.Drawing.Color.Red;
+            this.lbl_countErrores7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_countErrores7.Location = new System.Drawing.Point(165, 2);
             this.lbl_countErrores7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores7.Name = "lbl_countErrores7";
@@ -888,7 +860,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.DarkRed;
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label18.Location = new System.Drawing.Point(3, 29);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
@@ -901,7 +873,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.DarkRed;
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label21.Location = new System.Drawing.Point(5, 55);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
@@ -945,7 +917,7 @@
             // 
             this.lbl_countErrores8.AutoSize = true;
             this.lbl_countErrores8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_countErrores8.ForeColor = System.Drawing.Color.Red;
+            this.lbl_countErrores8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_countErrores8.Location = new System.Drawing.Point(168, 1);
             this.lbl_countErrores8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores8.Name = "lbl_countErrores8";
@@ -967,7 +939,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.DarkRed;
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label32.Location = new System.Drawing.Point(3, 26);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
@@ -980,7 +952,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.DarkRed;
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label33.Location = new System.Drawing.Point(4, 54);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
@@ -1081,7 +1053,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.DarkRed;
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label23.Location = new System.Drawing.Point(4, 27);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
@@ -1094,7 +1066,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.DarkRed;
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label24.Location = new System.Drawing.Point(5, 55);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
@@ -1173,7 +1145,7 @@
             // 
             this.lbl_countErrores0.AutoSize = true;
             this.lbl_countErrores0.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_countErrores0.ForeColor = System.Drawing.Color.Red;
+            this.lbl_countErrores0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_countErrores0.Location = new System.Drawing.Point(166, 2);
             this.lbl_countErrores0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores0.Name = "lbl_countErrores0";
@@ -1195,7 +1167,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.DarkRed;
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label22.Location = new System.Drawing.Point(3, 29);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
@@ -1208,7 +1180,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.DarkRed;
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label25.Location = new System.Drawing.Point(5, 55);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
@@ -1287,7 +1259,7 @@
             // 
             this.lbl_countErrores2.AutoSize = true;
             this.lbl_countErrores2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_countErrores2.ForeColor = System.Drawing.Color.Red;
+            this.lbl_countErrores2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_countErrores2.Location = new System.Drawing.Point(164, 2);
             this.lbl_countErrores2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores2.Name = "lbl_countErrores2";
@@ -1309,7 +1281,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.DarkRed;
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label26.Location = new System.Drawing.Point(3, 29);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
@@ -1322,7 +1294,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.DarkRed;
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label27.Location = new System.Drawing.Point(4, 55);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
@@ -1401,7 +1373,7 @@
             // 
             this.lbl_countErrores1.AutoSize = true;
             this.lbl_countErrores1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_countErrores1.ForeColor = System.Drawing.Color.Red;
+            this.lbl_countErrores1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_countErrores1.Location = new System.Drawing.Point(165, 1);
             this.lbl_countErrores1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores1.Name = "lbl_countErrores1";
@@ -1423,7 +1395,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.DarkRed;
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label28.Location = new System.Drawing.Point(4, 26);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
@@ -1436,7 +1408,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.DarkRed;
+            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label29.Location = new System.Drawing.Point(5, 54);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
@@ -1528,7 +1500,7 @@
             // 
             this.lbl_countErrores5.AutoSize = true;
             this.lbl_countErrores5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_countErrores5.ForeColor = System.Drawing.Color.Red;
+            this.lbl_countErrores5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_countErrores5.Location = new System.Drawing.Point(165, 2);
             this.lbl_countErrores5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores5.Name = "lbl_countErrores5";
@@ -1572,7 +1544,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.DarkRed;
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label30.Location = new System.Drawing.Point(3, 28);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
@@ -1585,7 +1557,7 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.DarkRed;
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label34.Location = new System.Drawing.Point(5, 54);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
@@ -1629,7 +1601,7 @@
             // 
             this.lbl_countErrores3.AutoSize = true;
             this.lbl_countErrores3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_countErrores3.ForeColor = System.Drawing.Color.Red;
+            this.lbl_countErrores3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_countErrores3.Location = new System.Drawing.Point(165, 1);
             this.lbl_countErrores3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores3.Name = "lbl_countErrores3";
@@ -1651,7 +1623,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.DarkRed;
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label35.Location = new System.Drawing.Point(2, 26);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
@@ -1664,7 +1636,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.DarkRed;
+            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label36.Location = new System.Drawing.Point(3, 54);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
@@ -1743,7 +1715,7 @@
             // 
             this.lbl_countErrores4.AutoSize = true;
             this.lbl_countErrores4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_countErrores4.ForeColor = System.Drawing.Color.Red;
+            this.lbl_countErrores4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_countErrores4.Location = new System.Drawing.Point(168, 2);
             this.lbl_countErrores4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores4.Name = "lbl_countErrores4";
@@ -1765,7 +1737,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.DarkRed;
+            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label37.Location = new System.Drawing.Point(4, 28);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
@@ -1778,7 +1750,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.Color.DarkRed;
+            this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label38.Location = new System.Drawing.Point(5, 56);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
@@ -1842,7 +1814,7 @@
             this.chart_errores.Location = new System.Drawing.Point(4, 4);
             this.chart_errores.Margin = new System.Windows.Forms.Padding(4);
             this.chart_errores.Name = "chart_errores";
-            this.chart_errores.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart_errores.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
             this.chart_errores.RightToLeft = System.Windows.Forms.RightToLeft.No;
             series7.ChartArea = "ChartArea1";
             series7.IsValueShownAsLabel = true;
@@ -1974,7 +1946,7 @@
             // 
             this.lbl_totalerrores_total_hist.AutoSize = true;
             this.lbl_totalerrores_total_hist.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_totalerrores_total_hist.ForeColor = System.Drawing.Color.Firebrick;
+            this.lbl_totalerrores_total_hist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_totalerrores_total_hist.Location = new System.Drawing.Point(53, 92);
             this.lbl_totalerrores_total_hist.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_total_hist.Name = "lbl_totalerrores_total_hist";
@@ -2010,7 +1982,7 @@
             // 
             this.lbl_totalerrores_hist.AutoSize = true;
             this.lbl_totalerrores_hist.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_totalerrores_hist.ForeColor = System.Drawing.Color.Firebrick;
+            this.lbl_totalerrores_hist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_totalerrores_hist.Location = new System.Drawing.Point(52, 38);
             this.lbl_totalerrores_hist.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_hist.Name = "lbl_totalerrores_hist";
@@ -2093,7 +2065,7 @@
             // 
             this.lbl_totalerrores_dia.AutoSize = true;
             this.lbl_totalerrores_dia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_totalerrores_dia.ForeColor = System.Drawing.Color.Firebrick;
+            this.lbl_totalerrores_dia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_totalerrores_dia.Location = new System.Drawing.Point(153, 9);
             this.lbl_totalerrores_dia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_dia.Name = "lbl_totalerrores_dia";
@@ -2117,7 +2089,7 @@
             // 
             this.lbl_totalerrores_total_dia.AutoSize = true;
             this.lbl_totalerrores_total_dia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_totalerrores_total_dia.ForeColor = System.Drawing.Color.Maroon;
+            this.lbl_totalerrores_total_dia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_totalerrores_total_dia.Location = new System.Drawing.Point(152, 56);
             this.lbl_totalerrores_total_dia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_total_dia.Name = "lbl_totalerrores_total_dia";
@@ -2158,7 +2130,7 @@
             // 
             this.lbl_totalerrores_mes.AutoSize = true;
             this.lbl_totalerrores_mes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_totalerrores_mes.ForeColor = System.Drawing.Color.Firebrick;
+            this.lbl_totalerrores_mes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_totalerrores_mes.Location = new System.Drawing.Point(153, 8);
             this.lbl_totalerrores_mes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_mes.Name = "lbl_totalerrores_mes";
@@ -2224,7 +2196,7 @@
             // 
             this.lbl_totalerrores_total_mes.AutoSize = true;
             this.lbl_totalerrores_total_mes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_totalerrores_total_mes.ForeColor = System.Drawing.Color.Maroon;
+            this.lbl_totalerrores_total_mes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_totalerrores_total_mes.Location = new System.Drawing.Point(152, 59);
             this.lbl_totalerrores_total_mes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_total_mes.Name = "lbl_totalerrores_total_mes";
@@ -2248,7 +2220,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
             this.label11.Location = new System.Drawing.Point(6, 7);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
@@ -2327,7 +2299,7 @@
             // 
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
             this.label58.Location = new System.Drawing.Point(4, 4);
             this.label58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label58.Name = "label58";
@@ -2688,7 +2660,7 @@
             // 
             this.label73.AutoSize = true;
             this.label73.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label73.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
             this.label73.Location = new System.Drawing.Point(4, 8);
             this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label73.Name = "label73";
@@ -3649,7 +3621,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Firebrick;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(75)))), ((int)(((byte)(82)))));
             this.label9.Location = new System.Drawing.Point(4, 8);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
@@ -3671,7 +3643,7 @@
             // 
             this.lbl_parcialprocesados_mes.AutoSize = true;
             this.lbl_parcialprocesados_mes.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_parcialprocesados_mes.ForeColor = System.Drawing.Color.Firebrick;
+            this.lbl_parcialprocesados_mes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(75)))), ((int)(((byte)(82)))));
             this.lbl_parcialprocesados_mes.Location = new System.Drawing.Point(146, 2);
             this.lbl_parcialprocesados_mes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_parcialprocesados_mes.Name = "lbl_parcialprocesados_mes";
@@ -3681,7 +3653,7 @@
             // 
             // panel85
             // 
-            this.panel85.BackColor = System.Drawing.Color.White;
+            this.panel85.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel85.Controls.Add(this.label63);
             this.panel85.Controls.Add(this.panel86);
             this.panel85.Controls.Add(this.lbl_parcialinscriptos_mes);
@@ -3695,7 +3667,7 @@
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.ForeColor = System.Drawing.Color.Firebrick;
+            this.label63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(75)))), ((int)(((byte)(82)))));
             this.label63.Location = new System.Drawing.Point(4, 8);
             this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label63.Name = "label63";
@@ -3717,7 +3689,7 @@
             // 
             this.lbl_parcialinscriptos_mes.AutoSize = true;
             this.lbl_parcialinscriptos_mes.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_parcialinscriptos_mes.ForeColor = System.Drawing.Color.Firebrick;
+            this.lbl_parcialinscriptos_mes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(75)))), ((int)(((byte)(82)))));
             this.lbl_parcialinscriptos_mes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbl_parcialinscriptos_mes.Location = new System.Drawing.Point(146, 3);
             this.lbl_parcialinscriptos_mes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -3799,7 +3771,7 @@
             // 
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
             this.label60.Location = new System.Drawing.Point(4, 5);
             this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label60.Name = "label60";
@@ -3875,6 +3847,7 @@
             this.chart_tramites.Location = new System.Drawing.Point(4, 6);
             this.chart_tramites.Margin = new System.Windows.Forms.Padding(4);
             this.chart_tramites.Name = "chart_tramites";
+            this.chart_tramites.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             this.chart_tramites.RightToLeft = System.Windows.Forms.RightToLeft.No;
             series10.ChartArea = "ChartArea1";
             series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineRange;
@@ -3975,7 +3948,7 @@
             // 
             this.btn_top.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_top.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_top.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btn_top.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btn_top.Location = new System.Drawing.Point(464, 113);
             this.btn_top.Name = "btn_top";
             this.btn_top.Size = new System.Drawing.Size(123, 60);
@@ -4000,7 +3973,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
             this.label42.Location = new System.Drawing.Point(10, 5);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
@@ -4019,10 +3992,10 @@
             this.dg_topTramites.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg_topTramites.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(148)))));
             dataGridViewCellStyle25.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle25.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(148)))));
             dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dg_topTramites.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
@@ -4164,11 +4137,6 @@
             this.txtBox_empleado.Size = new System.Drawing.Size(123, 23);
             this.txtBox_empleado.TabIndex = 160;
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // frm_estadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -4267,8 +4235,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label txtBox_fecha;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPage_errores;
@@ -4458,7 +4424,6 @@
         private System.Windows.Forms.Label lbl_totaltramites;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.DataGridView dg_topErrores;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label19;

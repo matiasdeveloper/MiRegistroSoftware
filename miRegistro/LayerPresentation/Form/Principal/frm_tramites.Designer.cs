@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -83,15 +82,12 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.btn_refresh = new System.Windows.Forms.Button();
-            this.txtBox_fecha = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
@@ -109,6 +105,7 @@
             this.btn_insertar = new System.Windows.Forms.Button();
             this.btn_refreshdata = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.checkBox_inscripto = new System.Windows.Forms.CheckBox();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_tramites)).BeginInit();
             this.panel1.SuspendLayout();
@@ -126,17 +123,17 @@
             // 
             this.btn_simple_diaria.BackColor = System.Drawing.Color.White;
             this.btn_simple_diaria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_simple_diaria.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_simple_diaria.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
             this.btn_simple_diaria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_simple_diaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_simple_diaria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_simple_diaria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_simple_diaria.Location = new System.Drawing.Point(603, 12);
+            this.btn_simple_diaria.Location = new System.Drawing.Point(603, 7);
             this.btn_simple_diaria.Name = "btn_simple_diaria";
             this.btn_simple_diaria.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_simple_diaria.Size = new System.Drawing.Size(180, 39);
+            this.btn_simple_diaria.Size = new System.Drawing.Size(180, 45);
             this.btn_simple_diaria.TabIndex = 85;
-            this.btn_simple_diaria.Text = "Consulta rapida";
+            this.btn_simple_diaria.Text = "Consulta \r\nrapida";
             this.btn_simple_diaria.UseVisualStyleBackColor = false;
             this.btn_simple_diaria.Click += new System.EventHandler(this.btn_simple_diaria_Click);
             // 
@@ -144,17 +141,17 @@
             // 
             this.btn_simple_dominio.BackColor = System.Drawing.Color.White;
             this.btn_simple_dominio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_simple_dominio.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_simple_dominio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
             this.btn_simple_dominio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_simple_dominio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_simple_dominio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_simple_dominio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_simple_dominio.Location = new System.Drawing.Point(409, 12);
+            this.btn_simple_dominio.Location = new System.Drawing.Point(409, 7);
             this.btn_simple_dominio.Name = "btn_simple_dominio";
             this.btn_simple_dominio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_simple_dominio.Size = new System.Drawing.Size(180, 39);
+            this.btn_simple_dominio.Size = new System.Drawing.Size(180, 44);
             this.btn_simple_dominio.TabIndex = 83;
-            this.btn_simple_dominio.Text = "Consulta por dominio";
+            this.btn_simple_dominio.Text = "Consulta por \r\ndominio";
             this.btn_simple_dominio.UseVisualStyleBackColor = false;
             this.btn_simple_dominio.Click += new System.EventHandler(this.btn_simple_dominio_Click);
             // 
@@ -162,18 +159,18 @@
             // 
             this.btn_simple_empleado.BackColor = System.Drawing.Color.White;
             this.btn_simple_empleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_simple_empleado.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_simple_empleado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
             this.btn_simple_empleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_simple_empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_simple_empleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_simple_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_simple_empleado.Location = new System.Drawing.Point(202, 12);
+            this.btn_simple_empleado.Location = new System.Drawing.Point(202, 7);
             this.btn_simple_empleado.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.btn_simple_empleado.Name = "btn_simple_empleado";
             this.btn_simple_empleado.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_simple_empleado.Size = new System.Drawing.Size(193, 39);
+            this.btn_simple_empleado.Size = new System.Drawing.Size(193, 44);
             this.btn_simple_empleado.TabIndex = 81;
-            this.btn_simple_empleado.Text = "Consulta por empleado";
+            this.btn_simple_empleado.Text = "Consulta por \r\nempleado";
             this.btn_simple_empleado.UseVisualStyleBackColor = false;
             this.btn_simple_empleado.Click += new System.EventHandler(this.btn_simple_empleado_Click);
             // 
@@ -181,18 +178,18 @@
             // 
             this.btn_simple_fecha.BackColor = System.Drawing.Color.White;
             this.btn_simple_fecha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_simple_fecha.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_simple_fecha.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
             this.btn_simple_fecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_simple_fecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_simple_fecha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_simple_fecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_simple_fecha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_simple_fecha.Location = new System.Drawing.Point(8, 12);
+            this.btn_simple_fecha.Location = new System.Drawing.Point(8, 7);
             this.btn_simple_fecha.Name = "btn_simple_fecha";
             this.btn_simple_fecha.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_simple_fecha.Size = new System.Drawing.Size(180, 39);
+            this.btn_simple_fecha.Size = new System.Drawing.Size(180, 44);
             this.btn_simple_fecha.TabIndex = 5;
-            this.btn_simple_fecha.Text = "Consulta por fecha";
+            this.btn_simple_fecha.Text = "Consulta por \r\nfecha";
             this.btn_simple_fecha.UseVisualStyleBackColor = false;
             this.btn_simple_fecha.Click += new System.EventHandler(this.btn_simple_fecha_Click);
             // 
@@ -224,8 +221,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(6, 3);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
+            this.label1.Location = new System.Drawing.Point(4, 3);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 16);
@@ -238,7 +235,7 @@
             this.radioButton_complejas.AutoSize = true;
             this.radioButton_complejas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioButton_complejas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_complejas.Location = new System.Drawing.Point(17, 51);
+            this.radioButton_complejas.Location = new System.Drawing.Point(17, 52);
             this.radioButton_complejas.Name = "radioButton_complejas";
             this.radioButton_complejas.Size = new System.Drawing.Size(163, 21);
             this.radioButton_complejas.TabIndex = 81;
@@ -254,7 +251,7 @@
             this.radioButton_simple.Checked = true;
             this.radioButton_simple.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioButton_simple.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_simple.Location = new System.Drawing.Point(18, 25);
+            this.radioButton_simple.Location = new System.Drawing.Point(18, 26);
             this.radioButton_simple.Name = "radioButton_simple";
             this.radioButton_simple.Size = new System.Drawing.Size(139, 21);
             this.radioButton_simple.TabIndex = 80;
@@ -378,10 +375,10 @@
             this.dg_tramites.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg_tramites.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(148)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(148)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dg_tramites.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -409,7 +406,7 @@
             this.dg_tramites.DefaultCellStyle = dataGridViewCellStyle13;
             this.dg_tramites.EnableHeadersVisualStyles = false;
             this.dg_tramites.GridColor = System.Drawing.Color.SteelBlue;
-            this.dg_tramites.Location = new System.Drawing.Point(8, 177);
+            this.dg_tramites.Location = new System.Drawing.Point(12, 180);
             this.dg_tramites.MultiSelect = false;
             this.dg_tramites.Name = "dg_tramites";
             this.dg_tramites.ReadOnly = true;
@@ -425,7 +422,7 @@
             this.dg_tramites.RowHeadersVisible = false;
             this.dg_tramites.RowHeadersWidth = 51;
             this.dg_tramites.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_tramites.Size = new System.Drawing.Size(981, 457);
+            this.dg_tramites.Size = new System.Drawing.Size(986, 452);
             this.dg_tramites.TabIndex = 80;
             this.dg_tramites.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_tramites_CellContentClick);
             this.dg_tramites.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dg_tramites_CellFormatting);
@@ -475,7 +472,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Empleado.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Empleado.HeaderText = "Empleado";
+            this.Empleado.HeaderText = "Empleado Proceso";
             this.Empleado.MinimumWidth = 6;
             this.Empleado.Name = "Empleado";
             this.Empleado.ReadOnly = true;
@@ -624,7 +621,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
             this.label31.Location = new System.Drawing.Point(5, 119);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
@@ -650,7 +647,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(6, 20);
+            this.panel2.Location = new System.Drawing.Point(6, 19);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(170, 1);
@@ -674,7 +671,7 @@
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel13.Location = new System.Drawing.Point(5, 20);
+            this.panel13.Location = new System.Drawing.Point(5, 19);
             this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(170, 1);
@@ -722,7 +719,7 @@
             // 
             this.panel17.BackColor = System.Drawing.Color.Maroon;
             this.panel17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel17.Location = new System.Drawing.Point(5, 20);
+            this.panel17.Location = new System.Drawing.Point(5, 19);
             this.panel17.Margin = new System.Windows.Forms.Padding(4);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(170, 1);
@@ -730,10 +727,8 @@
             // 
             // panel18
             // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.panel18.Controls.Add(this.btn_refresh);
-            this.panel18.Controls.Add(this.txtBox_fecha);
-            this.panel18.Controls.Add(this.label41);
             this.panel18.Controls.Add(this.label42);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel18.Location = new System.Drawing.Point(0, 0);
@@ -748,36 +743,14 @@
             this.btn_refresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.btn_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_refresh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_refresh.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_refresh.Location = new System.Drawing.Point(5, 3);
+            this.btn_refresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(168)))));
+            this.btn_refresh.Location = new System.Drawing.Point(844, 4);
             this.btn_refresh.Name = "btn_refresh";
-            this.btn_refresh.Size = new System.Drawing.Size(187, 24);
+            this.btn_refresh.Size = new System.Drawing.Size(156, 23);
             this.btn_refresh.TabIndex = 159;
             this.btn_refresh.Text = "Actualizar datos";
             this.btn_refresh.UseVisualStyleBackColor = false;
             this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
-            // 
-            // txtBox_fecha
-            // 
-            this.txtBox_fecha.AutoSize = true;
-            this.txtBox_fecha.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_fecha.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBox_fecha.Location = new System.Drawing.Point(912, 8);
-            this.txtBox_fecha.Name = "txtBox_fecha";
-            this.txtBox_fecha.Size = new System.Drawing.Size(89, 16);
-            this.txtBox_fecha.TabIndex = 19;
-            this.txtBox_fecha.Text = "dd/mm/aaaa ";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label41.Location = new System.Drawing.Point(747, 7);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(160, 17);
-            this.label41.TabIndex = 18;
-            this.label41.Text = "Fecha y hora del servidor:";
             // 
             // label42
             // 
@@ -792,7 +765,7 @@
             // 
             // panel
             // 
-            this.panel.BackColor = System.Drawing.Color.White;
+            this.panel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel.Controls.Add(this.panel11);
             this.panel.Controls.Add(this.panel8);
             this.panel.Controls.Add(this.panel7);
@@ -844,11 +817,6 @@
             this.label5.TabIndex = 84;
             this.label5.Text = "Inserte, edite, inscriba, marque errores y elimine tramites.";
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -877,7 +845,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
             this.label40.Location = new System.Drawing.Point(6, 3);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
@@ -912,7 +880,7 @@
             // btn_complejo_fechaerrores
             // 
             this.btn_complejo_fechaerrores.BackColor = System.Drawing.Color.White;
-            this.btn_complejo_fechaerrores.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btn_complejo_fechaerrores.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
             this.btn_complejo_fechaerrores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_complejo_fechaerrores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_complejo_fechaerrores.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -930,7 +898,7 @@
             // btn_complejo_fechaempleado
             // 
             this.btn_complejo_fechaempleado.BackColor = System.Drawing.Color.White;
-            this.btn_complejo_fechaempleado.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btn_complejo_fechaempleado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
             this.btn_complejo_fechaempleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_complejo_fechaempleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_complejo_fechaempleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -948,7 +916,7 @@
             // btn_complejo_fechaprocesados
             // 
             this.btn_complejo_fechaprocesados.BackColor = System.Drawing.Color.White;
-            this.btn_complejo_fechaprocesados.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btn_complejo_fechaprocesados.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
             this.btn_complejo_fechaprocesados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_complejo_fechaprocesados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_complejo_fechaprocesados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -966,7 +934,7 @@
             // btn_complejo_fechainscriptos
             // 
             this.btn_complejo_fechainscriptos.BackColor = System.Drawing.Color.White;
-            this.btn_complejo_fechainscriptos.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btn_complejo_fechainscriptos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
             this.btn_complejo_fechainscriptos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_complejo_fechainscriptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_complejo_fechainscriptos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -991,7 +959,7 @@
             this.btn_savepdf.ForeColor = System.Drawing.Color.DarkCyan;
             this.btn_savepdf.Image = global::LayerPresentation.Properties.Resources.saveicon1;
             this.btn_savepdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_savepdf.Location = new System.Drawing.Point(12, 141);
+            this.btn_savepdf.Location = new System.Drawing.Point(12, 144);
             this.btn_savepdf.Name = "btn_savepdf";
             this.btn_savepdf.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
             this.btn_savepdf.Size = new System.Drawing.Size(157, 30);
@@ -1010,7 +978,7 @@
             this.btn_inscribir.ForeColor = System.Drawing.Color.Navy;
             this.btn_inscribir.Image = global::LayerPresentation.Properties.Resources.inscribe;
             this.btn_inscribir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inscribir.Location = new System.Drawing.Point(502, 141);
+            this.btn_inscribir.Location = new System.Drawing.Point(502, 144);
             this.btn_inscribir.Name = "btn_inscribir";
             this.btn_inscribir.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
             this.btn_inscribir.Size = new System.Drawing.Size(166, 30);
@@ -1029,7 +997,7 @@
             this.btn_error.ForeColor = System.Drawing.Color.Brown;
             this.btn_error.Image = global::LayerPresentation.Properties.Resources.erroricon;
             this.btn_error.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_error.Location = new System.Drawing.Point(670, 141);
+            this.btn_error.Location = new System.Drawing.Point(670, 144);
             this.btn_error.Name = "btn_error";
             this.btn_error.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
             this.btn_error.Size = new System.Drawing.Size(166, 30);
@@ -1048,7 +1016,7 @@
             this.btn_eliminar.ForeColor = System.Drawing.Color.Black;
             this.btn_eliminar.Image = global::LayerPresentation.Properties.Resources.delete2;
             this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_eliminar.Location = new System.Drawing.Point(838, 141);
+            this.btn_eliminar.Location = new System.Drawing.Point(838, 144);
             this.btn_eliminar.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -1065,10 +1033,10 @@
             this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editar.ForeColor = System.Drawing.Color.Goldenrod;
+            this.btn_editar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(145)))), ((int)(((byte)(61)))));
             this.btn_editar.Image = global::LayerPresentation.Properties.Resources.edit;
             this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_editar.Location = new System.Drawing.Point(396, 141);
+            this.btn_editar.Location = new System.Drawing.Point(396, 144);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
             this.btn_editar.Size = new System.Drawing.Size(104, 30);
@@ -1084,10 +1052,10 @@
             this.btn_insertar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_insertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_insertar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_insertar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(180)))), ((int)(((byte)(74)))));
+            this.btn_insertar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(217)))), ((int)(((byte)(85)))));
             this.btn_insertar.Image = global::LayerPresentation.Properties.Resources.upload;
             this.btn_insertar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_insertar.Location = new System.Drawing.Point(171, 141);
+            this.btn_insertar.Location = new System.Drawing.Point(171, 144);
             this.btn_insertar.Name = "btn_insertar";
             this.btn_insertar.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
             this.btn_insertar.Size = new System.Drawing.Size(223, 30);
@@ -1104,7 +1072,7 @@
             this.btn_refreshdata.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn_refreshdata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_refreshdata.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_refreshdata.Location = new System.Drawing.Point(968, 149);
+            this.btn_refreshdata.Location = new System.Drawing.Point(968, 152);
             this.btn_refreshdata.Name = "btn_refreshdata";
             this.btn_refreshdata.Size = new System.Drawing.Size(23, 22);
             this.btn_refreshdata.TabIndex = 82;
@@ -1122,12 +1090,25 @@
             this.label3.TabIndex = 92;
             this.label3.Text = "Datos historicos";
             // 
+            // checkBox_inscripto
+            // 
+            this.checkBox_inscripto.AutoSize = true;
+            this.checkBox_inscripto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
+            this.checkBox_inscripto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox_inscripto.Location = new System.Drawing.Point(520, 123);
+            this.checkBox_inscripto.Name = "checkBox_inscripto";
+            this.checkBox_inscripto.Size = new System.Drawing.Size(123, 21);
+            this.checkBox_inscripto.TabIndex = 120;
+            this.checkBox_inscripto.Text = "Inscribir mulitple";
+            this.checkBox_inscripto.UseVisualStyleBackColor = true;
+            // 
             // frm_tramites
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1005, 688);
+            this.Controls.Add(this.checkBox_inscripto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_savepdf);
             this.Controls.Add(this.panel3);
@@ -1210,19 +1191,22 @@
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Label txtBox_fecha;
-        private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel query_group_1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Panel query_group_2;
         private System.Windows.Forms.Button btn_savepdf;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkBox_inscripto;
+        private System.Windows.Forms.Button btn_refresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dominio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleado;
@@ -1234,10 +1218,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreInscripto;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_refresh;
     }
 }

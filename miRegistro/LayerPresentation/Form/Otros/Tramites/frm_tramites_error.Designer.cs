@@ -58,7 +58,7 @@
             // 
             // barra_titulo
             // 
-            this.barra_titulo.BackColor = System.Drawing.Color.DarkRed;
+            this.barra_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.barra_titulo.Controls.Add(this.lbl_id);
             this.barra_titulo.Controls.Add(this.lbl_tittle);
             this.barra_titulo.Controls.Add(this.btn_close);
@@ -72,24 +72,24 @@
             // lbl_id
             // 
             this.lbl_id.AutoSize = true;
-            this.lbl_id.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_id.Location = new System.Drawing.Point(224, 6);
+            this.lbl_id.Location = new System.Drawing.Point(195, 6);
             this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(28, 21);
+            this.lbl_id.Size = new System.Drawing.Size(27, 19);
             this.lbl_id.TabIndex = 9;
             this.lbl_id.Text = "00";
             // 
             // lbl_tittle
             // 
             this.lbl_tittle.AutoSize = true;
-            this.lbl_tittle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tittle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tittle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_tittle.Location = new System.Drawing.Point(23, 9);
+            this.lbl_tittle.Location = new System.Drawing.Point(67, 6);
             this.lbl_tittle.Name = "lbl_tittle";
-            this.lbl_tittle.Size = new System.Drawing.Size(199, 16);
+            this.lbl_tittle.Size = new System.Drawing.Size(127, 20);
             this.lbl_tittle.TabIndex = 8;
-            this.lbl_tittle.Text = "Marcar error en el tramite ID: ";
+            this.lbl_tittle.Text = "Marcar error ID:";
             // 
             // btn_close
             // 
@@ -199,7 +199,7 @@
             this.btn_cargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cargar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cargar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_cargar.Image = global::LayerPresentation.Properties.Resources.edit;
+            this.btn_cargar.Image = global::LayerPresentation.Properties.Resources.erroricon;
             this.btn_cargar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_cargar.Location = new System.Drawing.Point(26, 427);
             this.btn_cargar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -336,7 +336,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(325, 464);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);

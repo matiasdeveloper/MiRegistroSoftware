@@ -35,6 +35,13 @@ namespace LayerBusiness
         {
             _cdObject.InscribirTramite(id, cod_inscripto, cod_empleado);
         }
+        public void inscribirMultiple(int[] id, int cod_inscripto, int cod_empleado)
+        {
+            foreach(int i in id) 
+            {
+                _cdObject.InscribirTramite(i, cod_inscripto, cod_empleado);
+            }
+        }
         public void eliminarTramite(string id)
         {
             _cdObject.Delete(Convert.ToInt32(id));

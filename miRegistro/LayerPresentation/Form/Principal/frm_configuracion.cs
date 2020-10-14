@@ -196,10 +196,5 @@ namespace LayerPresentation
             refreshUserInfo();
             setAvatars();
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            txtBox_fecha.Text = DateTime.Now.ToString();
-        }
     }
 }

@@ -37,9 +37,15 @@ namespace LayerPresentation
 
             RefreshDashboard();
         }
+        public void RefreshAll() 
+        {
+            RefreshData();
+            RefreshDashboard();
+        }
         private void RefreshData()
         {
             _handlerEmpleados.GenerateEmployeesDataCache();
+            _handlerTramites.RefreshDataTramitesCache();
             _handlerTramites.RefreshDataDashboardCache();
             _handlerFormularios.RefreshDataFormulariosCache();
             _handlerFormularios.RefreshDataDashboardCache();
@@ -69,7 +75,6 @@ namespace LayerPresentation
             lbl_totaldiarios.Text = lbl_totaldiario_procesados.Text;
             lbl_porcentaje_diario_procesados.Text = "100%";
             lbl_porcentaje_diario_inscriptos.Text = CalculatePercentage(Convert.ToInt32(lbl_totaldiarios.Text), Convert.ToInt32(lbl_totaldiario_inscriptos.Text)).ToString() + "%";
-            chart_circle_diario.Titles.Add("Grafico de hoy");
             chart_circle_diario.Series["Series1"].IsValueShownAsLabel = true;
             chart_circle_diario.Series["Series1"].Points.AddXY("Procesados", lbl_totaldiario_procesados.Text);
             chart_circle_diario.Series["Series1"].Points.AddXY("Inscriptos", lbl_totaldiario_inscriptos.Text);
@@ -78,7 +83,6 @@ namespace LayerPresentation
             lbl_totalmensual.Text = lbl_totalmensual_procesados.Text;
             lbl_porcentaje_mensual_procesados.Text = "100%";
             lbl_porcentaje_mensual_inscriptos.Text = CalculatePercentage(Convert.ToInt32(lbl_totalmensual.Text), Convert.ToInt32(lbl_totalmensual_inscriptos.Text)).ToString() + "%";
-            chart_circle_mensual.Titles.Add("Grafico del mes");
             chart_circle_mensual.Series["Series1"].IsValueShownAsLabel = true;
             chart_circle_mensual.Series["Series1"].Points.AddXY("Procesados", lbl_totalmensual_procesados.Text);
             chart_circle_mensual.Series["Series1"].Points.AddXY("Inscriptos", lbl_totalmensual_inscriptos.Text);
@@ -160,26 +164,30 @@ namespace LayerPresentation
         private void btn_query_mensual_Click(object sender, EventArgs e)
         {
             DataTable dt = QuerySpecific.myQuery("Mes", currentDt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth, "", "", true);
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(1, "Todos mensual", DateTime.Now.Month.ToString(), dt, null, null, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString(),false, null, this);
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(1, "Todos mensual", DateTime.Now.Month.ToString(), dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString(),false, null, this);
             mv.Show();
         }
         private void btn_query_diaria_Click(object sender, EventArgs e)
         {
             DataTable dt = QuerySpecific.myQuery("Hoy", currentDt, DateTime.Now, DateTime.Now, "", "", true);
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(1, "Todos diario", DateTime.Now.Month.ToString(), dt, null, null, DateTime.Now.ToShortDateString(), DateTime.Now.ToShortDateString(), false, null, this);
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(1, "Todos diario", DateTime.Now.Month.ToString(), dt, DateTime.Now.ToShortDateString(), DateTime.Now.ToShortDateString(), false, null, this);
             mv.Show();
         }
         private void btn_query_ayer_Click(object sender, EventArgs e)
         {
             DataTable dt = QuerySpecific.myQuery("Ayer", currentDt, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), "", "", true);
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(1, "Todos ayer", DateTime.Now.Month.ToString(), dt, null, null, DateTime.Now.AddDays(-1).ToShortDateString(), DateTime.Now.AddDays(-1).ToShortDateString(), false, null, this);
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(1, "Todos ayer", DateTime.Now.Month.ToString(), dt, DateTime.Now.AddDays(-1).ToShortDateString(), DateTime.Now.AddDays(-1).ToShortDateString(), false, null, this);
             mv.Show();
         }
 
         // Crud Buttons
         private void btn_inscribir_Click(object sender, EventArgs e)
         {
-
+            if (checkBox_inscripto.Checked)
+            {
+                frm_tramites_inscribir_mult frm = new frm_tramites_inscribir_mult(DateTime.Today, currentDt, null, this);
+                frm.Show();
+            }
         }
         private void btn_insertar_Click(object sender, EventArgs e)
         {
@@ -192,11 +200,6 @@ namespace LayerPresentation
         {
             lbl_hora.Text = DateTime.Now.ToString("HH:mm:ss");
             lbl_fecha.Text = DateTime.Now.ToLongDateString();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            txtBox_fecha.Text = DateTime.Now.ToString();
         }
 
         private void frm_escritorio_Load(object sender, EventArgs e)

@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_refreshdata = new System.Windows.Forms.Button();
-            this.txtBox_fecha = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -40,7 +38,6 @@
             this.lbl_id_0 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_savepdf_0 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.btn_edit_0 = new System.Windows.Forms.Button();
             this.lbl_email_0 = new System.Windows.Forms.Label();
             this.lbl_permisos_0 = new System.Windows.Forms.Label();
@@ -64,7 +61,6 @@
             this.lbl_mesprocesados_0 = new System.Windows.Forms.Label();
             this.panel_1 = new System.Windows.Forms.Panel();
             this.btn_savepdf_1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.lbl_id_1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_edit_1 = new System.Windows.Forms.Button();
@@ -90,7 +86,6 @@
             this.lbl_mesprocesados_1 = new System.Windows.Forms.Label();
             this.panel_2 = new System.Windows.Forms.Panel();
             this.btn_savepdf_2 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.lbl_id_2 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.btn_edit_2 = new System.Windows.Forms.Button();
@@ -116,7 +111,6 @@
             this.lbl_mesprocesados_2 = new System.Windows.Forms.Label();
             this.panel_3 = new System.Windows.Forms.Panel();
             this.btn_savepdf_3 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.lbl_id_3 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.btn_edit_3 = new System.Windows.Forms.Button();
@@ -142,7 +136,6 @@
             this.lbl_mesprocesados_3 = new System.Windows.Forms.Label();
             this.panel_4 = new System.Windows.Forms.Panel();
             this.btn_savepdf_4 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
             this.lbl_id_4 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.btn_edit_4 = new System.Windows.Forms.Button();
@@ -168,7 +161,6 @@
             this.lbl_mesprocesados_4 = new System.Windows.Forms.Label();
             this.panel_5 = new System.Windows.Forms.Panel();
             this.btn_savepdf_5 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
             this.lbl_id_5 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.btn_edit_5 = new System.Windows.Forms.Button();
@@ -194,7 +186,6 @@
             this.lbl_mesprocesados_5 = new System.Windows.Forms.Label();
             this.panel_6 = new System.Windows.Forms.Panel();
             this.btn_savepdf_6 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
             this.lbl_id_6 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.btn_edit_6 = new System.Windows.Forms.Button();
@@ -220,7 +211,6 @@
             this.lbl_mesprocesados_6 = new System.Windows.Forms.Label();
             this.panel_7 = new System.Windows.Forms.Panel();
             this.btn_savepdf_7 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.lbl_id_7 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.btn_edit_7 = new System.Windows.Forms.Button();
@@ -271,6 +261,15 @@
             this.lbl_diaprocesados_8 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_8 = new System.Windows.Forms.Label();
+            this.lbl_user_0 = new System.Windows.Forms.Label();
+            this.lbl_user_1 = new System.Windows.Forms.Label();
+            this.lbl_user_2 = new System.Windows.Forms.Label();
+            this.lbl_user_3 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lbl_user_4 = new System.Windows.Forms.Label();
+            this.lbl_user_5 = new System.Windows.Forms.Label();
+            this.lbl_user_6 = new System.Windows.Forms.Label();
+            this.lbl_user_7 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel_0.SuspendLayout();
@@ -296,10 +295,8 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.panel5.Controls.Add(this.btn_refreshdata);
-            this.panel5.Controls.Add(this.txtBox_fecha);
-            this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
@@ -313,36 +310,14 @@
             this.btn_refreshdata.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_refreshdata.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.btn_refreshdata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_refreshdata.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_refreshdata.Location = new System.Drawing.Point(5, 3);
+            this.btn_refreshdata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(168)))));
+            this.btn_refreshdata.Location = new System.Drawing.Point(845, 4);
             this.btn_refreshdata.Name = "btn_refreshdata";
-            this.btn_refreshdata.Size = new System.Drawing.Size(187, 24);
+            this.btn_refreshdata.Size = new System.Drawing.Size(156, 23);
             this.btn_refreshdata.TabIndex = 158;
             this.btn_refreshdata.Text = "Actualizar datos";
             this.btn_refreshdata.UseVisualStyleBackColor = false;
             this.btn_refreshdata.Click += new System.EventHandler(this.btn_refreshdata_Click);
-            // 
-            // txtBox_fecha
-            // 
-            this.txtBox_fecha.AutoSize = true;
-            this.txtBox_fecha.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_fecha.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBox_fecha.Location = new System.Drawing.Point(898, 9);
-            this.txtBox_fecha.Name = "txtBox_fecha";
-            this.txtBox_fecha.Size = new System.Drawing.Size(89, 16);
-            this.txtBox_fecha.TabIndex = 19;
-            this.txtBox_fecha.Text = "dd/mm/aaaa ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(733, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 17);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Fecha y hora del servidor:";
             // 
             // label3
             // 
@@ -354,11 +329,6 @@
             this.label3.Size = new System.Drawing.Size(173, 20);
             this.label3.TabIndex = 15;
             this.label3.Text = "Control de empleados\r\n";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // flowLayoutPanel1
             // 
@@ -372,6 +342,7 @@
             this.flowLayoutPanel1.Controls.Add(this.panel_6);
             this.flowLayoutPanel1.Controls.Add(this.panel_7);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Controls.Add(this.label16);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(19, 37);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(962, 635);
@@ -380,10 +351,10 @@
             // panel_0
             // 
             this.panel_0.BackColor = System.Drawing.Color.Snow;
+            this.panel_0.Controls.Add(this.lbl_user_0);
             this.panel_0.Controls.Add(this.lbl_id_0);
             this.panel_0.Controls.Add(this.label1);
             this.panel_0.Controls.Add(this.btn_savepdf_0);
-            this.panel_0.Controls.Add(this.button2);
             this.panel_0.Controls.Add(this.btn_edit_0);
             this.panel_0.Controls.Add(this.lbl_email_0);
             this.panel_0.Controls.Add(this.lbl_permisos_0);
@@ -427,27 +398,13 @@
             this.btn_savepdf_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_savepdf_0.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_savepdf_0.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_savepdf_0.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_0.Location = new System.Drawing.Point(6, 277);
             this.btn_savepdf_0.Name = "btn_savepdf_0";
-            this.btn_savepdf_0.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_0.Size = new System.Drawing.Size(221, 27);
             this.btn_savepdf_0.TabIndex = 173;
             this.btn_savepdf_0.Text = "Exportar .pdf del mes";
             this.btn_savepdf_0.UseVisualStyleBackColor = true;
             this.btn_savepdf_0.Click += new System.EventHandler(this.btn_savepdf_0_Click);
-            // 
-            // button2
-            // 
-            this.button2.Enabled = false;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(118, 251);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 54);
-            this.button2.TabIndex = 172;
-            this.button2.Text = "Ver observaciones";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // btn_edit_0
             // 
@@ -455,8 +412,8 @@
             this.btn_edit_0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_0.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit_0.ForeColor = System.Drawing.Color.SandyBrown;
-            this.btn_edit_0.Location = new System.Drawing.Point(108, 74);
+            this.btn_edit_0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(145)))), ((int)(((byte)(61)))));
+            this.btn_edit_0.Location = new System.Drawing.Point(108, 97);
             this.btn_edit_0.Name = "btn_edit_0";
             this.btn_edit_0.Size = new System.Drawing.Size(119, 25);
             this.btn_edit_0.TabIndex = 171;
@@ -516,7 +473,7 @@
             this.btn_tramites_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tramites_0.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_tramites_0.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btn_tramites_0.Location = new System.Drawing.Point(6, 220);
+            this.btn_tramites_0.Location = new System.Drawing.Point(6, 246);
             this.btn_tramites_0.Name = "btn_tramites_0";
             this.btn_tramites_0.Size = new System.Drawing.Size(221, 27);
             this.btn_tramites_0.TabIndex = 160;
@@ -542,7 +499,7 @@
             this.panel93.Controls.Add(this.lbl_diaprocesados_0);
             this.panel93.Controls.Add(this.label9);
             this.panel93.Controls.Add(this.lbl_mesprocesados_0);
-            this.panel93.Location = new System.Drawing.Point(6, 103);
+            this.panel93.Location = new System.Drawing.Point(6, 129);
             this.panel93.Margin = new System.Windows.Forms.Padding(4);
             this.panel93.Name = "panel93";
             this.panel93.Size = new System.Drawing.Size(221, 111);
@@ -562,7 +519,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label11.Location = new System.Drawing.Point(5, 90);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
@@ -575,7 +532,7 @@
             // 
             this.lbl_meserrores_0.AutoSize = true;
             this.lbl_meserrores_0.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_meserrores_0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_meserrores_0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_meserrores_0.Location = new System.Drawing.Point(198, 89);
             this.lbl_meserrores_0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_meserrores_0.Name = "lbl_meserrores_0";
@@ -720,8 +677,8 @@
             // panel_1
             // 
             this.panel_1.BackColor = System.Drawing.Color.Snow;
+            this.panel_1.Controls.Add(this.lbl_user_1);
             this.panel_1.Controls.Add(this.btn_savepdf_1);
-            this.panel_1.Controls.Add(this.button4);
             this.panel_1.Controls.Add(this.lbl_id_1);
             this.panel_1.Controls.Add(this.label8);
             this.panel_1.Controls.Add(this.btn_edit_1);
@@ -743,27 +700,13 @@
             this.btn_savepdf_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_savepdf_1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_savepdf_1.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_savepdf_1.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_1.Location = new System.Drawing.Point(8, 273);
             this.btn_savepdf_1.Name = "btn_savepdf_1";
-            this.btn_savepdf_1.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_1.Size = new System.Drawing.Size(221, 27);
             this.btn_savepdf_1.TabIndex = 179;
             this.btn_savepdf_1.Text = "Exportar .pdf del mes";
             this.btn_savepdf_1.UseVisualStyleBackColor = true;
             this.btn_savepdf_1.Click += new System.EventHandler(this.btn_savepdf_1_Click);
-            // 
-            // button4
-            // 
-            this.button4.Enabled = false;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(118, 251);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 54);
-            this.button4.TabIndex = 178;
-            this.button4.Text = "Ver observaciones";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // lbl_id_1
             // 
@@ -795,8 +738,8 @@
             this.btn_edit_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit_1.ForeColor = System.Drawing.Color.SandyBrown;
-            this.btn_edit_1.Location = new System.Drawing.Point(108, 75);
+            this.btn_edit_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(145)))), ((int)(((byte)(61)))));
+            this.btn_edit_1.Location = new System.Drawing.Point(110, 97);
             this.btn_edit_1.Name = "btn_edit_1";
             this.btn_edit_1.Size = new System.Drawing.Size(119, 24);
             this.btn_edit_1.TabIndex = 171;
@@ -856,7 +799,7 @@
             this.btn_tramites_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tramites_1.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.btn_tramites_1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btn_tramites_1.Location = new System.Drawing.Point(6, 220);
+            this.btn_tramites_1.Location = new System.Drawing.Point(8, 242);
             this.btn_tramites_1.Name = "btn_tramites_1";
             this.btn_tramites_1.Size = new System.Drawing.Size(221, 27);
             this.btn_tramites_1.TabIndex = 160;
@@ -882,7 +825,7 @@
             this.panel3.Controls.Add(this.lbl_diaprocesados_1);
             this.panel3.Controls.Add(this.label20);
             this.panel3.Controls.Add(this.lbl_mesprocesados_1);
-            this.panel3.Location = new System.Drawing.Point(6, 103);
+            this.panel3.Location = new System.Drawing.Point(8, 125);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(221, 111);
@@ -902,7 +845,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label12.Location = new System.Drawing.Point(5, 90);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
@@ -915,7 +858,7 @@
             // 
             this.lbl_meserrores_1.AutoSize = true;
             this.lbl_meserrores_1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_meserrores_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_meserrores_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_meserrores_1.Location = new System.Drawing.Point(198, 89);
             this.lbl_meserrores_1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_meserrores_1.Name = "lbl_meserrores_1";
@@ -1060,8 +1003,8 @@
             // panel_2
             // 
             this.panel_2.BackColor = System.Drawing.Color.Snow;
+            this.panel_2.Controls.Add(this.lbl_user_2);
             this.panel_2.Controls.Add(this.btn_savepdf_2);
-            this.panel_2.Controls.Add(this.button7);
             this.panel_2.Controls.Add(this.lbl_id_2);
             this.panel_2.Controls.Add(this.label15);
             this.panel_2.Controls.Add(this.btn_edit_2);
@@ -1083,27 +1026,13 @@
             this.btn_savepdf_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_savepdf_2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_savepdf_2.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_savepdf_2.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_2.Location = new System.Drawing.Point(6, 273);
             this.btn_savepdf_2.Name = "btn_savepdf_2";
-            this.btn_savepdf_2.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_2.Size = new System.Drawing.Size(221, 27);
             this.btn_savepdf_2.TabIndex = 179;
             this.btn_savepdf_2.Text = "Exportar .pdf del mes";
             this.btn_savepdf_2.UseVisualStyleBackColor = true;
             this.btn_savepdf_2.Click += new System.EventHandler(this.btn_savepdf_2_Click);
-            // 
-            // button7
-            // 
-            this.button7.Enabled = false;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button7.Location = new System.Drawing.Point(118, 251);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(109, 54);
-            this.button7.TabIndex = 178;
-            this.button7.Text = "Ver observaciones";
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // lbl_id_2
             // 
@@ -1135,8 +1064,8 @@
             this.btn_edit_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit_2.ForeColor = System.Drawing.Color.SandyBrown;
-            this.btn_edit_2.Location = new System.Drawing.Point(108, 75);
+            this.btn_edit_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(145)))), ((int)(((byte)(61)))));
+            this.btn_edit_2.Location = new System.Drawing.Point(108, 97);
             this.btn_edit_2.Name = "btn_edit_2";
             this.btn_edit_2.Size = new System.Drawing.Size(119, 24);
             this.btn_edit_2.TabIndex = 171;
@@ -1196,7 +1125,7 @@
             this.btn_tramites_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tramites_2.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.btn_tramites_2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btn_tramites_2.Location = new System.Drawing.Point(6, 220);
+            this.btn_tramites_2.Location = new System.Drawing.Point(6, 242);
             this.btn_tramites_2.Name = "btn_tramites_2";
             this.btn_tramites_2.Size = new System.Drawing.Size(221, 27);
             this.btn_tramites_2.TabIndex = 160;
@@ -1222,7 +1151,7 @@
             this.pl.Controls.Add(this.lbl_diaprocesados_2);
             this.pl.Controls.Add(this.label34);
             this.pl.Controls.Add(this.lbl_mesprocesados_2);
-            this.pl.Location = new System.Drawing.Point(6, 103);
+            this.pl.Location = new System.Drawing.Point(6, 125);
             this.pl.Margin = new System.Windows.Forms.Padding(4);
             this.pl.Name = "pl";
             this.pl.Size = new System.Drawing.Size(221, 111);
@@ -1242,7 +1171,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label26.Location = new System.Drawing.Point(5, 90);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
@@ -1255,7 +1184,7 @@
             // 
             this.lbl_meserrores_2.AutoSize = true;
             this.lbl_meserrores_2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_meserrores_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_meserrores_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_meserrores_2.Location = new System.Drawing.Point(198, 89);
             this.lbl_meserrores_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_meserrores_2.Name = "lbl_meserrores_2";
@@ -1400,8 +1329,8 @@
             // panel_3
             // 
             this.panel_3.BackColor = System.Drawing.Color.Snow;
+            this.panel_3.Controls.Add(this.lbl_user_3);
             this.panel_3.Controls.Add(this.btn_savepdf_3);
-            this.panel_3.Controls.Add(this.button10);
             this.panel_3.Controls.Add(this.lbl_id_3);
             this.panel_3.Controls.Add(this.label19);
             this.panel_3.Controls.Add(this.btn_edit_3);
@@ -1423,27 +1352,13 @@
             this.btn_savepdf_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_savepdf_3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_savepdf_3.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_savepdf_3.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_3.Location = new System.Drawing.Point(6, 273);
             this.btn_savepdf_3.Name = "btn_savepdf_3";
-            this.btn_savepdf_3.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_3.Size = new System.Drawing.Size(221, 27);
             this.btn_savepdf_3.TabIndex = 179;
             this.btn_savepdf_3.Text = "Exportar .pdf del mes";
             this.btn_savepdf_3.UseVisualStyleBackColor = true;
             this.btn_savepdf_3.Click += new System.EventHandler(this.btn_savepdf_3_Click);
-            // 
-            // button10
-            // 
-            this.button10.Enabled = false;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button10.Location = new System.Drawing.Point(118, 251);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(109, 54);
-            this.button10.TabIndex = 178;
-            this.button10.Text = "Ver observaciones";
-            this.button10.UseVisualStyleBackColor = true;
             // 
             // lbl_id_3
             // 
@@ -1475,8 +1390,8 @@
             this.btn_edit_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit_3.ForeColor = System.Drawing.Color.SandyBrown;
-            this.btn_edit_3.Location = new System.Drawing.Point(108, 75);
+            this.btn_edit_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(145)))), ((int)(((byte)(61)))));
+            this.btn_edit_3.Location = new System.Drawing.Point(108, 97);
             this.btn_edit_3.Name = "btn_edit_3";
             this.btn_edit_3.Size = new System.Drawing.Size(119, 24);
             this.btn_edit_3.TabIndex = 171;
@@ -1536,7 +1451,7 @@
             this.btn_tramites_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tramites_3.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.btn_tramites_3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btn_tramites_3.Location = new System.Drawing.Point(6, 220);
+            this.btn_tramites_3.Location = new System.Drawing.Point(6, 242);
             this.btn_tramites_3.Name = "btn_tramites_3";
             this.btn_tramites_3.Size = new System.Drawing.Size(221, 27);
             this.btn_tramites_3.TabIndex = 160;
@@ -1562,7 +1477,7 @@
             this.panel20.Controls.Add(this.lbl_diaprocesados_3);
             this.panel20.Controls.Add(this.label48);
             this.panel20.Controls.Add(this.lbl_mesprocesados_3);
-            this.panel20.Location = new System.Drawing.Point(6, 103);
+            this.panel20.Location = new System.Drawing.Point(6, 125);
             this.panel20.Margin = new System.Windows.Forms.Padding(4);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(221, 111);
@@ -1582,7 +1497,7 @@
             // 
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label.Location = new System.Drawing.Point(5, 90);
             this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label.Name = "label";
@@ -1595,7 +1510,7 @@
             // 
             this.lbl_meserrores_3.AutoSize = true;
             this.lbl_meserrores_3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_meserrores_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_meserrores_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_meserrores_3.Location = new System.Drawing.Point(198, 89);
             this.lbl_meserrores_3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_meserrores_3.Name = "lbl_meserrores_3";
@@ -1740,8 +1655,8 @@
             // panel_4
             // 
             this.panel_4.BackColor = System.Drawing.Color.Snow;
+            this.panel_4.Controls.Add(this.lbl_user_4);
             this.panel_4.Controls.Add(this.btn_savepdf_4);
-            this.panel_4.Controls.Add(this.button16);
             this.panel_4.Controls.Add(this.lbl_id_4);
             this.panel_4.Controls.Add(this.label22);
             this.panel_4.Controls.Add(this.btn_edit_4);
@@ -1763,27 +1678,13 @@
             this.btn_savepdf_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_savepdf_4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_savepdf_4.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_savepdf_4.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_4.Location = new System.Drawing.Point(6, 276);
             this.btn_savepdf_4.Name = "btn_savepdf_4";
-            this.btn_savepdf_4.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_4.Size = new System.Drawing.Size(221, 27);
             this.btn_savepdf_4.TabIndex = 179;
             this.btn_savepdf_4.Text = "Exportar .pdf del mes";
             this.btn_savepdf_4.UseVisualStyleBackColor = true;
             this.btn_savepdf_4.Click += new System.EventHandler(this.btn_savepdf_4_Click);
-            // 
-            // button16
-            // 
-            this.button16.Enabled = false;
-            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button16.Location = new System.Drawing.Point(118, 251);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(109, 54);
-            this.button16.TabIndex = 178;
-            this.button16.Text = "Ver observaciones";
-            this.button16.UseVisualStyleBackColor = true;
             // 
             // lbl_id_4
             // 
@@ -1815,8 +1716,8 @@
             this.btn_edit_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit_4.ForeColor = System.Drawing.Color.SandyBrown;
-            this.btn_edit_4.Location = new System.Drawing.Point(108, 75);
+            this.btn_edit_4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(145)))), ((int)(((byte)(61)))));
+            this.btn_edit_4.Location = new System.Drawing.Point(108, 100);
             this.btn_edit_4.Name = "btn_edit_4";
             this.btn_edit_4.Size = new System.Drawing.Size(119, 24);
             this.btn_edit_4.TabIndex = 171;
@@ -1876,7 +1777,7 @@
             this.btn_tramites_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tramites_4.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.btn_tramites_4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btn_tramites_4.Location = new System.Drawing.Point(6, 220);
+            this.btn_tramites_4.Location = new System.Drawing.Point(6, 245);
             this.btn_tramites_4.Name = "btn_tramites_4";
             this.btn_tramites_4.Size = new System.Drawing.Size(221, 27);
             this.btn_tramites_4.TabIndex = 160;
@@ -1902,7 +1803,7 @@
             this.panel26.Controls.Add(this.lbl_diaprocesados_4);
             this.panel26.Controls.Add(this.label62);
             this.panel26.Controls.Add(this.lbl_mesprocesados_4);
-            this.panel26.Location = new System.Drawing.Point(6, 103);
+            this.panel26.Location = new System.Drawing.Point(6, 128);
             this.panel26.Margin = new System.Windows.Forms.Padding(4);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(221, 111);
@@ -1922,7 +1823,7 @@
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label54.Location = new System.Drawing.Point(5, 90);
             this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label54.Name = "label54";
@@ -1935,7 +1836,7 @@
             // 
             this.lbl_meserrores_4.AutoSize = true;
             this.lbl_meserrores_4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_meserrores_4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_meserrores_4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_meserrores_4.Location = new System.Drawing.Point(198, 89);
             this.lbl_meserrores_4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_meserrores_4.Name = "lbl_meserrores_4";
@@ -2080,8 +1981,8 @@
             // panel_5
             // 
             this.panel_5.BackColor = System.Drawing.Color.Snow;
+            this.panel_5.Controls.Add(this.lbl_user_5);
             this.panel_5.Controls.Add(this.btn_savepdf_5);
-            this.panel_5.Controls.Add(this.button20);
             this.panel_5.Controls.Add(this.lbl_id_5);
             this.panel_5.Controls.Add(this.label24);
             this.panel_5.Controls.Add(this.btn_edit_5);
@@ -2103,27 +2004,13 @@
             this.btn_savepdf_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_savepdf_5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_savepdf_5.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_savepdf_5.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_5.Location = new System.Drawing.Point(4, 276);
             this.btn_savepdf_5.Name = "btn_savepdf_5";
-            this.btn_savepdf_5.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_5.Size = new System.Drawing.Size(221, 27);
             this.btn_savepdf_5.TabIndex = 179;
             this.btn_savepdf_5.Text = "Exportar .pdf del mes";
             this.btn_savepdf_5.UseVisualStyleBackColor = true;
             this.btn_savepdf_5.Click += new System.EventHandler(this.btn_savepdf_5_Click);
-            // 
-            // button20
-            // 
-            this.button20.Enabled = false;
-            this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button20.Location = new System.Drawing.Point(118, 251);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(109, 54);
-            this.button20.TabIndex = 178;
-            this.button20.Text = "Ver observaciones";
-            this.button20.UseVisualStyleBackColor = true;
             // 
             // lbl_id_5
             // 
@@ -2155,8 +2042,8 @@
             this.btn_edit_5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit_5.ForeColor = System.Drawing.Color.SandyBrown;
-            this.btn_edit_5.Location = new System.Drawing.Point(108, 75);
+            this.btn_edit_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(145)))), ((int)(((byte)(61)))));
+            this.btn_edit_5.Location = new System.Drawing.Point(106, 100);
             this.btn_edit_5.Name = "btn_edit_5";
             this.btn_edit_5.Size = new System.Drawing.Size(119, 24);
             this.btn_edit_5.TabIndex = 171;
@@ -2216,7 +2103,7 @@
             this.btn_tramites_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tramites_5.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.btn_tramites_5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btn_tramites_5.Location = new System.Drawing.Point(6, 220);
+            this.btn_tramites_5.Location = new System.Drawing.Point(4, 245);
             this.btn_tramites_5.Name = "btn_tramites_5";
             this.btn_tramites_5.Size = new System.Drawing.Size(221, 27);
             this.btn_tramites_5.TabIndex = 160;
@@ -2242,7 +2129,7 @@
             this.panel32.Controls.Add(this.lbl_diaprocesados_5);
             this.panel32.Controls.Add(this.label76);
             this.panel32.Controls.Add(this.lbl_mesprocesados_5);
-            this.panel32.Location = new System.Drawing.Point(6, 103);
+            this.panel32.Location = new System.Drawing.Point(4, 128);
             this.panel32.Margin = new System.Windows.Forms.Padding(4);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(221, 111);
@@ -2262,7 +2149,7 @@
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label68.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label68.Location = new System.Drawing.Point(5, 90);
             this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label68.Name = "label68";
@@ -2275,7 +2162,7 @@
             // 
             this.lbl_meserrores_5.AutoSize = true;
             this.lbl_meserrores_5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_meserrores_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_meserrores_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_meserrores_5.Location = new System.Drawing.Point(198, 89);
             this.lbl_meserrores_5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_meserrores_5.Name = "lbl_meserrores_5";
@@ -2420,8 +2307,8 @@
             // panel_6
             // 
             this.panel_6.BackColor = System.Drawing.Color.Snow;
+            this.panel_6.Controls.Add(this.lbl_user_6);
             this.panel_6.Controls.Add(this.btn_savepdf_6);
-            this.panel_6.Controls.Add(this.button18);
             this.panel_6.Controls.Add(this.lbl_id_6);
             this.panel_6.Controls.Add(this.label27);
             this.panel_6.Controls.Add(this.btn_edit_6);
@@ -2443,27 +2330,13 @@
             this.btn_savepdf_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_savepdf_6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_savepdf_6.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_savepdf_6.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_6.Location = new System.Drawing.Point(6, 276);
             this.btn_savepdf_6.Name = "btn_savepdf_6";
-            this.btn_savepdf_6.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_6.Size = new System.Drawing.Size(221, 27);
             this.btn_savepdf_6.TabIndex = 179;
             this.btn_savepdf_6.Text = "Exportar .pdf del mes";
             this.btn_savepdf_6.UseVisualStyleBackColor = true;
             this.btn_savepdf_6.Click += new System.EventHandler(this.btn_savepdf_6_Click);
-            // 
-            // button18
-            // 
-            this.button18.Enabled = false;
-            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button18.Location = new System.Drawing.Point(118, 251);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(109, 54);
-            this.button18.TabIndex = 178;
-            this.button18.Text = "Ver observaciones";
-            this.button18.UseVisualStyleBackColor = true;
             // 
             // lbl_id_6
             // 
@@ -2495,8 +2368,8 @@
             this.btn_edit_6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit_6.ForeColor = System.Drawing.Color.SandyBrown;
-            this.btn_edit_6.Location = new System.Drawing.Point(108, 75);
+            this.btn_edit_6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(145)))), ((int)(((byte)(61)))));
+            this.btn_edit_6.Location = new System.Drawing.Point(108, 100);
             this.btn_edit_6.Name = "btn_edit_6";
             this.btn_edit_6.Size = new System.Drawing.Size(119, 24);
             this.btn_edit_6.TabIndex = 171;
@@ -2556,7 +2429,7 @@
             this.btn_tramites_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tramites_6.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.btn_tramites_6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btn_tramites_6.Location = new System.Drawing.Point(6, 220);
+            this.btn_tramites_6.Location = new System.Drawing.Point(6, 245);
             this.btn_tramites_6.Name = "btn_tramites_6";
             this.btn_tramites_6.Size = new System.Drawing.Size(221, 27);
             this.btn_tramites_6.TabIndex = 160;
@@ -2582,7 +2455,7 @@
             this.panel38.Controls.Add(this.lbl_diaprocesados_6);
             this.panel38.Controls.Add(this.label90);
             this.panel38.Controls.Add(this.lbl_mesprocesados_6);
-            this.panel38.Location = new System.Drawing.Point(6, 103);
+            this.panel38.Location = new System.Drawing.Point(6, 128);
             this.panel38.Margin = new System.Windows.Forms.Padding(4);
             this.panel38.Name = "panel38";
             this.panel38.Size = new System.Drawing.Size(221, 111);
@@ -2602,7 +2475,7 @@
             // 
             this.label82.AutoSize = true;
             this.label82.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label82.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label82.Location = new System.Drawing.Point(5, 90);
             this.label82.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label82.Name = "label82";
@@ -2615,7 +2488,7 @@
             // 
             this.lbl_meserrores_6.AutoSize = true;
             this.lbl_meserrores_6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_meserrores_6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_meserrores_6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_meserrores_6.Location = new System.Drawing.Point(198, 89);
             this.lbl_meserrores_6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_meserrores_6.Name = "lbl_meserrores_6";
@@ -2760,8 +2633,8 @@
             // panel_7
             // 
             this.panel_7.BackColor = System.Drawing.Color.Snow;
+            this.panel_7.Controls.Add(this.lbl_user_7);
             this.panel_7.Controls.Add(this.btn_savepdf_7);
-            this.panel_7.Controls.Add(this.button12);
             this.panel_7.Controls.Add(this.lbl_id_7);
             this.panel_7.Controls.Add(this.label30);
             this.panel_7.Controls.Add(this.btn_edit_7);
@@ -2783,27 +2656,13 @@
             this.btn_savepdf_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_savepdf_7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_savepdf_7.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_savepdf_7.Location = new System.Drawing.Point(6, 251);
+            this.btn_savepdf_7.Location = new System.Drawing.Point(6, 276);
             this.btn_savepdf_7.Name = "btn_savepdf_7";
-            this.btn_savepdf_7.Size = new System.Drawing.Size(109, 54);
+            this.btn_savepdf_7.Size = new System.Drawing.Size(221, 27);
             this.btn_savepdf_7.TabIndex = 179;
             this.btn_savepdf_7.Text = "Exportar .pdf del mes";
             this.btn_savepdf_7.UseVisualStyleBackColor = true;
             this.btn_savepdf_7.Click += new System.EventHandler(this.btn_savepdf_7_Click);
-            // 
-            // button12
-            // 
-            this.button12.Enabled = false;
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button12.Location = new System.Drawing.Point(118, 251);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(109, 54);
-            this.button12.TabIndex = 178;
-            this.button12.Text = "Ver observaciones";
-            this.button12.UseVisualStyleBackColor = true;
             // 
             // lbl_id_7
             // 
@@ -2835,8 +2694,8 @@
             this.btn_edit_7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_edit_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit_7.ForeColor = System.Drawing.Color.SandyBrown;
-            this.btn_edit_7.Location = new System.Drawing.Point(108, 75);
+            this.btn_edit_7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(145)))), ((int)(((byte)(61)))));
+            this.btn_edit_7.Location = new System.Drawing.Point(108, 100);
             this.btn_edit_7.Name = "btn_edit_7";
             this.btn_edit_7.Size = new System.Drawing.Size(119, 24);
             this.btn_edit_7.TabIndex = 171;
@@ -2896,7 +2755,7 @@
             this.btn_tramites_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tramites_7.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.btn_tramites_7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btn_tramites_7.Location = new System.Drawing.Point(6, 220);
+            this.btn_tramites_7.Location = new System.Drawing.Point(6, 245);
             this.btn_tramites_7.Name = "btn_tramites_7";
             this.btn_tramites_7.Size = new System.Drawing.Size(221, 27);
             this.btn_tramites_7.TabIndex = 160;
@@ -2922,7 +2781,7 @@
             this.panel44.Controls.Add(this.lbl_diaprocesados_7);
             this.panel44.Controls.Add(this.label104);
             this.panel44.Controls.Add(this.lbl_mesprocesados_7);
-            this.panel44.Location = new System.Drawing.Point(6, 103);
+            this.panel44.Location = new System.Drawing.Point(6, 128);
             this.panel44.Margin = new System.Windows.Forms.Padding(4);
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(221, 111);
@@ -2942,7 +2801,7 @@
             // 
             this.label96.AutoSize = true;
             this.label96.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label96.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label96.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.label96.Location = new System.Drawing.Point(5, 90);
             this.label96.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label96.Name = "label96";
@@ -2955,7 +2814,7 @@
             // 
             this.lbl_meserrores_7.AutoSize = true;
             this.lbl_meserrores_7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_meserrores_7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_meserrores_7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lbl_meserrores_7.Location = new System.Drawing.Point(198, 89);
             this.lbl_meserrores_7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_meserrores_7.Name = "lbl_meserrores_7";
@@ -3444,6 +3303,114 @@
             this.lbl_mesprocesados_8.TabIndex = 11;
             this.lbl_mesprocesados_8.Text = "0";
             // 
+            // lbl_user_0
+            // 
+            this.lbl_user_0.AutoSize = true;
+            this.lbl_user_0.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_0.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_0.Location = new System.Drawing.Point(12, 73);
+            this.lbl_user_0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_0.Name = "lbl_user_0";
+            this.lbl_user_0.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_0.TabIndex = 176;
+            this.lbl_user_0.Text = "Usuario";
+            // 
+            // lbl_user_1
+            // 
+            this.lbl_user_1.AutoSize = true;
+            this.lbl_user_1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_1.Location = new System.Drawing.Point(12, 74);
+            this.lbl_user_1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_1.Name = "lbl_user_1";
+            this.lbl_user_1.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_1.TabIndex = 180;
+            this.lbl_user_1.Text = "Usuario";
+            // 
+            // lbl_user_2
+            // 
+            this.lbl_user_2.AutoSize = true;
+            this.lbl_user_2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_2.Location = new System.Drawing.Point(12, 74);
+            this.lbl_user_2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_2.Name = "lbl_user_2";
+            this.lbl_user_2.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_2.TabIndex = 181;
+            this.lbl_user_2.Text = "Usuario";
+            // 
+            // lbl_user_3
+            // 
+            this.lbl_user_3.AutoSize = true;
+            this.lbl_user_3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_3.Location = new System.Drawing.Point(12, 74);
+            this.lbl_user_3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_3.Name = "lbl_user_3";
+            this.lbl_user_3.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_3.TabIndex = 181;
+            this.lbl_user_3.Text = "Usuario";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label16.Location = new System.Drawing.Point(241, 632);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(47, 16);
+            this.label16.TabIndex = 181;
+            this.label16.Text = "Usuario";
+            // 
+            // lbl_user_4
+            // 
+            this.lbl_user_4.AutoSize = true;
+            this.lbl_user_4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_4.Location = new System.Drawing.Point(12, 77);
+            this.lbl_user_4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_4.Name = "lbl_user_4";
+            this.lbl_user_4.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_4.TabIndex = 181;
+            this.lbl_user_4.Text = "Usuario";
+            // 
+            // lbl_user_5
+            // 
+            this.lbl_user_5.AutoSize = true;
+            this.lbl_user_5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_5.Location = new System.Drawing.Point(12, 77);
+            this.lbl_user_5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_5.Name = "lbl_user_5";
+            this.lbl_user_5.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_5.TabIndex = 181;
+            this.lbl_user_5.Text = "Usuario";
+            // 
+            // lbl_user_6
+            // 
+            this.lbl_user_6.AutoSize = true;
+            this.lbl_user_6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_6.Location = new System.Drawing.Point(12, 77);
+            this.lbl_user_6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_6.Name = "lbl_user_6";
+            this.lbl_user_6.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_6.TabIndex = 182;
+            this.lbl_user_6.Text = "Usuario";
+            // 
+            // lbl_user_7
+            // 
+            this.lbl_user_7.AutoSize = true;
+            this.lbl_user_7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_7.Location = new System.Drawing.Point(12, 75);
+            this.lbl_user_7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_7.Name = "lbl_user_7";
+            this.lbl_user_7.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_7.TabIndex = 181;
+            this.lbl_user_7.Text = "Usuario";
+            // 
             // frm_empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -3461,6 +3428,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.panel_0.ResumeLayout(false);
             this.panel_0.PerformLayout();
             this.panel93.ResumeLayout(false);
@@ -3505,8 +3473,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label txtBox_fecha;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -3532,7 +3498,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbl_mesprocesados_0;
         private System.Windows.Forms.Button btn_savepdf_0;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_edit_0;
         private System.Windows.Forms.Panel panel_1;
         private System.Windows.Forms.Button btn_edit_1;
@@ -3733,18 +3698,20 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label lbl_mesprocesados_8;
         private System.Windows.Forms.Button btn_savepdf_1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btn_savepdf_2;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btn_savepdf_3;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button btn_savepdf_4;
-        private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button btn_savepdf_5;
-        private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button btn_savepdf_6;
-        private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button btn_savepdf_7;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Label lbl_user_0;
+        private System.Windows.Forms.Label lbl_user_1;
+        private System.Windows.Forms.Label lbl_user_2;
+        private System.Windows.Forms.Label lbl_user_3;
+        private System.Windows.Forms.Label lbl_user_4;
+        private System.Windows.Forms.Label lbl_user_5;
+        private System.Windows.Forms.Label lbl_user_6;
+        private System.Windows.Forms.Label lbl_user_7;
+        private System.Windows.Forms.Label label16;
     }
 }

@@ -16,7 +16,7 @@ namespace LayerPresentation
 {
     public partial class frm_tramites_pantallaCompleta : Form
     {
-        public frm_tramites_pantallaCompleta(int id, string empleado, string mes, DataTable dt, int[] errores, int[] tramites, string desde, string hasta, bool isStatistics = true, frm_estadisticas frmStatistic = null, frm_escritorio frmEscritorio = null)
+        public frm_tramites_pantallaCompleta(int id, string empleado, string mes, DataTable dt, string desde, string hasta, bool isStatistics = true, frm_estadisticas frmStatistic = null, frm_escritorio frmEscritorio = null)
         {
             InitializeComponent();
 
@@ -26,8 +26,6 @@ namespace LayerPresentation
             this.empleado = empleado;
             this.mes = mes;
             this.data = dt;
-            this.errores = errores;
-            this.tramites = tramites;
             this.isStatistics = isStatistics;
 
             lbl_desde.Text = desde;
@@ -50,8 +48,6 @@ namespace LayerPresentation
         private string empleado;
         private string mes;
         private DataTable data;
-        private int[] errores;
-        private int[] tramites;
         private int selectedId = 0;
 
         private void InitializeData() 
@@ -59,17 +55,13 @@ namespace LayerPresentation
             dg_tramites.DataSource = null;
 
             dg_tramites.AutoGenerateColumns = false;
-            dg_tramites.DataSource = GetTableDate(data, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+            dg_tramites.DataSource = DataTramites.GetTableDate(data, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
             if (isStatistics) 
             {
                 lbl_id.Text = id.ToString();
                 lbl_mes.Text = mes;
                 lbl_user.Text = empleado;
-                lbl_totalerrores.Text = errores[0].ToString();
-                lbl_totaltramites.Text = tramites[0].ToString();
-                lbl_totalprocesados.Text = tramites[1].ToString();
-                lbl_totalinscriptos.Text = tramites[2].ToString();
             } 
             else 
             {
@@ -77,22 +69,6 @@ namespace LayerPresentation
                 lbl_mes.Text = mes;
                 lbl_user.Text = empleado;
             }
-        }
-        private DataTable GetTableDate(DataTable data, DateTime dt1, DateTime dt2)
-        {
-            DataTable tramites = CreatorTables.TramitesEmployeeTable();
-            dt2.AddDays(1);
-            foreach (DataRow fila in data.Rows)
-            {
-                if ((DateTime)fila[5] >= dt1 && (DateTime)fila[5] < dt2)
-                {                   
-                    CreatorTables.AddRowTramitesEmployeesTable(tramites, (int)fila[0], (string)fila[1], (string)fila[2],
-                        (string)fila[3], (string)fila[4], (DateTime)fila[5], (bool)fila[6], 
-                        (string)fila[7], (string)fila[8], (bool)fila[9], (string)fila[10]);
-                } 
-                else { /* fila.Delete(); */}
-            }
-            return tramites;
         }
 
         #region Tittle Bar
@@ -129,7 +105,7 @@ namespace LayerPresentation
                 if (Convert.ToBoolean(e.Value) == true)
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                    e.CellStyle.BackColor = Color.FromArgb(41, 217, 85);
                 }
             }
             if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Error")
@@ -137,12 +113,12 @@ namespace LayerPresentation
                 if (Convert.ToBoolean(e.Value) == true)
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
+                    e.CellStyle.BackColor = Color.FromArgb(242, 53, 53);
                 }
                 else
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                    e.CellStyle.BackColor = Color.FromArgb(41, 217, 85);
                 }
             }
 
@@ -151,12 +127,12 @@ namespace LayerPresentation
                 if (Convert.ToString(e.Value) == "Error Total")
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
+                    e.CellStyle.BackColor = Color.FromArgb(242, 53, 53);
                 }
                 else if (Convert.ToString(e.Value) == "Error Parcial")
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
+                    e.CellStyle.BackColor = Color.FromArgb(242, 145, 61);
                 }
             }
         }
@@ -226,7 +202,7 @@ namespace LayerPresentation
             var data = GetDataFromSelectedIndex();
             int id = selectedId;
 
-            frm_tramites_inscribir frm = new frm_tramites_inscribir(false, id, data[2], data[0], data[7], null, this);
+            frm_tramites_inscribir frm = new frm_tramites_inscribir(id, data[2], data[0], data[7], null, this);
             frm.Show();
         }
 
@@ -311,9 +287,6 @@ namespace LayerPresentation
                     int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
                     
                     this.data = dt;
-                    this.errores = errores;
-                    this.tramites = tramites;
-
                     break;
             }
 

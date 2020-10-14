@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menu = new System.Windows.Forms.Panel();
             this.btn_estadisticas = new System.Windows.Forms.Button();
             this.btn_empleados = new System.Windows.Forms.Button();
@@ -50,10 +51,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.barra_titulo = new System.Windows.Forms.Panel();
+            this.txtBox_fecha = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
             this.btn_minimize = new System.Windows.Forms.PictureBox();
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.panel_contenedor = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menu.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -67,7 +71,7 @@
             // 
             // menu
             // 
-            this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.menu.Controls.Add(this.btn_estadisticas);
             this.menu.Controls.Add(this.btn_empleados);
             this.menu.Controls.Add(this.btn_tramites);
@@ -89,10 +93,10 @@
             // 
             // btn_estadisticas
             // 
-            this.btn_estadisticas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_estadisticas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btn_estadisticas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_estadisticas.FlatAppearance.BorderSize = 0;
-            this.btn_estadisticas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btn_estadisticas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(148)))));
             this.btn_estadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_estadisticas.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_estadisticas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -111,10 +115,10 @@
             // 
             // btn_empleados
             // 
-            this.btn_empleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_empleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btn_empleados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_empleados.FlatAppearance.BorderSize = 0;
-            this.btn_empleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btn_empleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(148)))));
             this.btn_empleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_empleados.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_empleados.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -133,10 +137,10 @@
             // 
             // btn_tramites
             // 
-            this.btn_tramites.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_tramites.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btn_tramites.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_tramites.FlatAppearance.BorderSize = 0;
-            this.btn_tramites.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btn_tramites.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(148)))));
             this.btn_tramites.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tramites.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_tramites.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -155,10 +159,10 @@
             // 
             // btn_configuracion
             // 
-            this.btn_configuracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_configuracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btn_configuracion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_configuracion.FlatAppearance.BorderSize = 0;
-            this.btn_configuracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btn_configuracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(148)))));
             this.btn_configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_configuracion.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_configuracion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -177,7 +181,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(77)))));
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox2);
@@ -205,9 +209,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(70, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 17);
+            this.label1.Size = new System.Drawing.Size(115, 17);
             this.label1.TabIndex = 6;
-            this.label1.Text = "MATIAS DEVELOPER";
+            this.label1.Text = "Matias Developer";
             // 
             // pictureBox2
             // 
@@ -221,7 +225,7 @@
             // 
             // btn_logout
             // 
-            this.btn_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_logout.BackColor = System.Drawing.Color.Black;
             this.btn_logout.FlatAppearance.BorderSize = 0;
             this.btn_logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -229,7 +233,7 @@
             this.btn_logout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_logout.Image = global::LayerPresentation.Properties.Resources.status_green;
             this.btn_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_logout.Location = new System.Drawing.Point(0, 622);
+            this.btn_logout.Location = new System.Drawing.Point(0, 618);
             this.btn_logout.Margin = new System.Windows.Forms.Padding(2);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Padding = new System.Windows.Forms.Padding(0, 0, 13, 0);
@@ -243,7 +247,7 @@
             // 
             // btn_chat
             // 
-            this.btn_chat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_chat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btn_chat.Enabled = false;
             this.btn_chat.FlatAppearance.BorderSize = 0;
             this.btn_chat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
@@ -266,10 +270,10 @@
             // 
             // btn_escritorio
             // 
-            this.btn_escritorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_escritorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btn_escritorio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_escritorio.FlatAppearance.BorderSize = 0;
-            this.btn_escritorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btn_escritorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(148)))));
             this.btn_escritorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_escritorio.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_escritorio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -287,7 +291,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(77)))));
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lbl_electronico);
             this.panel2.Controls.Add(this.lbl_lastacess);
@@ -361,10 +365,10 @@
             // 
             // btn_stock
             // 
-            this.btn_stock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btn_stock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btn_stock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_stock.FlatAppearance.BorderSize = 0;
-            this.btn_stock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btn_stock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(148)))));
             this.btn_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_stock.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_stock.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -404,7 +408,9 @@
             // 
             // barra_titulo
             // 
-            this.barra_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.barra_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(77)))));
+            this.barra_titulo.Controls.Add(this.txtBox_fecha);
+            this.barra_titulo.Controls.Add(this.label41);
             this.barra_titulo.Controls.Add(this.btn_minimize);
             this.barra_titulo.Controls.Add(this.btn_close);
             this.barra_titulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -414,6 +420,28 @@
             this.barra_titulo.Size = new System.Drawing.Size(1005, 30);
             this.barra_titulo.TabIndex = 1;
             this.barra_titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barra_titulo_MouseDown);
+            // 
+            // txtBox_fecha
+            // 
+            this.txtBox_fecha.AutoSize = true;
+            this.txtBox_fecha.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_fecha.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtBox_fecha.Location = new System.Drawing.Point(811, 9);
+            this.txtBox_fecha.Name = "txtBox_fecha";
+            this.txtBox_fecha.Size = new System.Drawing.Size(137, 16);
+            this.txtBox_fecha.TabIndex = 21;
+            this.txtBox_fecha.Text = "dd/mm/aaaa hh:mm:ss";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label41.Location = new System.Drawing.Point(646, 8);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(160, 17);
+            this.label41.TabIndex = 20;
+            this.label41.Text = "Fecha y hora del servidor:";
             // 
             // btn_minimize
             // 
@@ -463,6 +491,11 @@
             this.panel4.Size = new System.Drawing.Size(1005, 688);
             this.panel4.TabIndex = 7;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frm_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,6 +518,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.barra_titulo.ResumeLayout(false);
+            this.barra_titulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             this.panel_contenedor.ResumeLayout(false);
@@ -520,5 +554,8 @@
         private System.Windows.Forms.Button btn_estadisticas;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label txtBox_fecha;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Timer timer1;
     }
 }

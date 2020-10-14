@@ -66,19 +66,19 @@ namespace LayerPresentation
 
         public void RefreshFormularios()
         {
-            dg_formularios_1.Enabled = true;
-            dg_formularios_2.Enabled = false;
-            dg_formularios_3.Enabled = false;
+            DataTable dt = DataFormularios.GetFormulariosCacheByID(Cn_HandlerFormularios.current);
+            currentDt = dt; 
 
-            currentDt = DataFormularios.GetFormulariosCacheByID(Cn_HandlerFormularios.current);
             mostarFormularios(dg_formularios_1, "Auto");
             mostarFormularios(dg_formularios_2, "Moto");
             mostarFormularios(dg_formularios_3, "Varios");
         }        
         private void mostarFormularios(DataGridView dt, string name)
         {
+            DataTable data = DataFormularios.GetTableForElement(currentDt, name);
+
             dt.AutoGenerateColumns = false;
-            dt.DataSource = DataFormularios.GetTableForElement(currentDt, name);
+            dt.DataSource = data;
         }
         
         private void mostrarAlertas() 
@@ -92,6 +92,7 @@ namespace LayerPresentation
             cb_categorias.DisplayMember = "Nombre";
             cb_categorias.ValueMember = "Id";
         }
+        
         // Set and delete fields for crud
         private void setFields()
         {
@@ -211,7 +212,6 @@ namespace LayerPresentation
                 txtBox_object.Enabled = true;
                 txtBox_numeracion.Enabled = true;
                 txtBox_stock.Enabled = true;
-                txtBox_fecha.Enabled = true;
 
                 txtBox_stock.ForeColor = Color.Black;
                 txtBox_stock.BackColor = Color.White;
@@ -253,7 +253,6 @@ namespace LayerPresentation
                     txtBox_object.Enabled = true;
                     txtBox_numeracion.Enabled = true;
                     txtBox_stock.Enabled = true;
-                    txtBox_fecha.Enabled = true;
 
                     setFields();
                     getColorForStock(Convert.ToInt32(txtBox_stock.Text), txtBox_stock);
@@ -367,19 +366,18 @@ namespace LayerPresentation
                 if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockAlto) 
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                    e.CellStyle.BackColor = Color.FromArgb(41, 217, 85);
                     if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockMedio)
                     {
                         e.CellStyle.ForeColor = Color.White;
-                        e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
+                        e.CellStyle.BackColor = Color.FromArgb(242, 145, 61);
                         if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockBajo)
                         {
                             e.CellStyle.ForeColor = Color.White;
-                            e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
+                            e.CellStyle.BackColor = Color.FromArgb(242, 53, 53);
                         }
                     }
                 }
-
             }
         }
         private void dg_formularios_2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -389,19 +387,18 @@ namespace LayerPresentation
                 if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockAlto)
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                    e.CellStyle.BackColor = Color.FromArgb(41, 217, 85);
                     if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockMedio)
                     {
                         e.CellStyle.ForeColor = Color.White;
-                        e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
+                        e.CellStyle.BackColor = Color.FromArgb(242, 145, 61);
                         if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockBajo)
                         {
                             e.CellStyle.ForeColor = Color.White;
-                            e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
+                            e.CellStyle.BackColor = Color.FromArgb(242, 53, 53);
                         }
                     }
                 }
-
             }
         }
         private void dg_formularios_3_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -411,21 +408,21 @@ namespace LayerPresentation
                 if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockAlto)
                 {
                     e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(81, 189, 51);
+                    e.CellStyle.BackColor = Color.FromArgb(41, 217, 85);
                     if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockMedio)
                     {
                         e.CellStyle.ForeColor = Color.White;
-                        e.CellStyle.BackColor = Color.FromArgb(228, 194, 78);
+                        e.CellStyle.BackColor = Color.FromArgb(242, 145, 61);
                         if (Convert.ToInt32(e.Value) <= Cn_HandlerFormularios.stockBajo)
                         {
                             e.CellStyle.ForeColor = Color.White;
-                            e.CellStyle.BackColor = Color.FromArgb(192, 25, 28);
+                            e.CellStyle.BackColor = Color.FromArgb(242, 53, 53);
                         }
                     }
                 }
-
             }
         }
+        
         // Functions for stock color
         private void setFieldsForStock()
         {
@@ -492,13 +489,10 @@ namespace LayerPresentation
                 rb_moto.Checked = true;
                 rb_varios.Checked = false;
 
-                dg_formularios_1.Enabled = false;
                 dg_formularios_1.Visible = false;
 
-                dg_formularios_2.Enabled = true;
                 dg_formularios_2.Visible = true;
 
-                dg_formularios_3.Enabled = false;
                 dg_formularios_3.Visible = false;
 
                 mostrarCategorias("Moto");
@@ -524,13 +518,10 @@ namespace LayerPresentation
                 rb_moto.Checked = false;
                 rb_varios.Checked = true;
 
-                dg_formularios_1.Enabled = false;
                 dg_formularios_1.Visible = false;
 
-                dg_formularios_2.Enabled = false;
                 dg_formularios_2.Visible = false;
 
-                dg_formularios_3.Enabled = true;
                 dg_formularios_3.Visible = true;
 
                 /*categories*/
@@ -557,13 +548,10 @@ namespace LayerPresentation
                 rb_moto.Checked = false;
                 rb_varios.Checked = false;
 
-                dg_formularios_1.Enabled = true;
                 dg_formularios_1.Visible = true;
 
-                dg_formularios_2.Enabled = false;
                 dg_formularios_2.Visible = false;
 
-                dg_formularios_3.Enabled = false;
                 dg_formularios_3.Visible = false;
 
                 /*categories*/
@@ -571,7 +559,6 @@ namespace LayerPresentation
                 mostrarCategorias("Auto");
                 txtBox_object.Text = "Auto";
                 txtBox_objeto.Text = "Auto";
-
             }
         }
 
@@ -594,7 +581,6 @@ namespace LayerPresentation
                         txtBox_object.Enabled = true;
                         txtBox_numeracion.Enabled = true;
                         txtBox_stock.Enabled = true;
-                        txtBox_fecha.Enabled = true;
 
                         setFields();
                         getColorForStock(Convert.ToInt32(txtBox_stock.Text), txtBox_stock);
@@ -621,7 +607,6 @@ namespace LayerPresentation
                         txtBox_object.Enabled = false;
                         txtBox_numeracion.Enabled = false;
                         txtBox_stock.Enabled = false;
-                        txtBox_fecha.Enabled = false;
 
                         setFieldsForStock();
                         getColorForStock(Convert.ToInt32(txtBox_stockAnterior.Text), txtBox_stockAnterior);
@@ -648,7 +633,6 @@ namespace LayerPresentation
                         txtBox_object.Enabled = true;
                         txtBox_numeracion.Enabled = true;
                         txtBox_stock.Enabled = true;
-                        txtBox_fecha.Enabled = true;
 
                         setFields();
                         getColorForStock(Convert.ToInt32(txtBox_stock.Text), txtBox_stock);
@@ -675,7 +659,6 @@ namespace LayerPresentation
                         txtBox_object.Enabled = false;
                         txtBox_numeracion.Enabled = false;
                         txtBox_stock.Enabled = false;
-                        txtBox_fecha.Enabled = false;
 
                         setFieldsForStock();
                         getColorForStock(Convert.ToInt32(txtBox_stockAnterior.Text), txtBox_stockAnterior);
@@ -702,7 +685,6 @@ namespace LayerPresentation
                         txtBox_object.Enabled = true;
                         txtBox_numeracion.Enabled = true;
                         txtBox_stock.Enabled = true;
-                        txtBox_fecha.Enabled = true;
 
                         setFields();
                         getColorForStock(Convert.ToInt32(txtBox_stock.Text), txtBox_stock);
@@ -744,7 +726,7 @@ namespace LayerPresentation
             {
                 if (dg_formularios_1.SelectedRows.Count > 0)
                 {
-                    _cnObject.actualizarFormularios((int)cb_categorias.SelectedValue, Convert.ToInt32(getElement()), txtBox_numeracion.Text, txtBox_stock.Text, txtBox_fecha.Text, getId(getElement()));
+                    _cnObject.actualizarFormularios((int)cb_categorias.SelectedValue, Convert.ToInt32(getElement()), txtBox_numeracion.Text, txtBox_stock.Text, DateTime.Now.ToString(), getId(getElement()));
                     frm_successdialog f = new frm_successdialog(2);
                     f.Show();
                     // Refresh data
@@ -765,7 +747,7 @@ namespace LayerPresentation
             {
                 if (dg_formularios_1.SelectedRows.Count > 0 || dg_formularios_2.SelectedRows.Count > 0 || dg_formularios_3.SelectedRows.Count > 0)
                 {
-                    _cnObject.actualizarStock(txtBox_stockNuevo.Text, txtBox_fecha.Text, getId(getElement()));
+                    _cnObject.actualizarStock(txtBox_stockNuevo.Text, DateTime.Now.ToString(), getId(getElement()));
                     frm_successdialog f = new frm_successdialog(3);
                     f.Show();
                     // Refresh data
@@ -806,7 +788,7 @@ namespace LayerPresentation
         {
             try
             {
-                _cnObject.insertarFormularios(cb_categorias.SelectedValue.ToString(), getElement(), txtBox_numeracion.Text, txtBox_stock.Text, txtBox_fecha.Text);
+                _cnObject.insertarFormularios(cb_categorias.SelectedValue.ToString(), getElement(), txtBox_numeracion.Text, txtBox_stock.Text, DateTime.Now.ToString());
                 frm_successdialog f = new frm_successdialog(0);
                 f.Show();
                 // Refresh data
@@ -860,12 +842,6 @@ namespace LayerPresentation
                 RefreshData();
                 RefreshAll();
             }
-        }
-
-        // Timer
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            txtBox_fecha.Text = DateTime.Now.ToString();
         }
 
         // Alerts
@@ -945,7 +921,7 @@ namespace LayerPresentation
         }
         private void btn_exportPdf_alertas_Click(object sender, EventArgs e)
         {
-            if (ExportInformePdf(GenerateInformeAlertas(), "InformeALERTAS"))
+            if (ExportInformePdf(GenerateInformeAlertas(), "InformeALERTAS_StockBajo"))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();

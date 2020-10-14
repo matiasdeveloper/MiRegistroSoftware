@@ -18,6 +18,7 @@ namespace LayerData
 
         public DataTable MostrarTodo()
         {
+            DataTable _tb = new DataTable();
             string q = "";
 
             q = @"SELECT id_formulario as ID, name_categoria as Categoria , name_elemento as Objeto,
@@ -32,10 +33,10 @@ namespace LayerData
             _command.CommandText = q;
             _read = _command.ExecuteReader();
 
-            _table.Load(_read);
+            _tb.Load(_read);
             _conn.closeConnection();
 
-            return _table;
+            return _tb;
         }
         public DataTable mostrar(int mostrarIn) 
         {

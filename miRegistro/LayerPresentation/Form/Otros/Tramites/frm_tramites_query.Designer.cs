@@ -1080,7 +1080,7 @@
             // 
             // barra_titulo
             // 
-            this.barra_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(34)))));
+            this.barra_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
             this.barra_titulo.Controls.Add(this.label1);
             this.barra_titulo.Controls.Add(this.lbl_name);
             this.barra_titulo.Controls.Add(this.btn_close);
