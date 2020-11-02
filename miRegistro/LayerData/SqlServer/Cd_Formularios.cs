@@ -155,6 +155,17 @@ namespace LayerData
 
             _conn.closeConnection();
         }
+        public void InsertCategoria(string objeto, string cat)
+        {
+            string q = "INSERT INTO CategoriasFormularios VALUES ('"+objeto+"', '"+cat+"')";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _command.CommandType = CommandType.Text;
+            _command.ExecuteNonQuery();
+
+            _conn.closeConnection();
+        }
 
         public void Update(int cod_categoria, int cod_elemento, string numeracion, int stock, DateTime datetime, int id)
         {

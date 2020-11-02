@@ -1626,7 +1626,7 @@
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label51.Location = new System.Drawing.Point(10, 9);
+            this.label51.Location = new System.Drawing.Point(10, 8);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(204, 16);
             this.label51.TabIndex = 14;

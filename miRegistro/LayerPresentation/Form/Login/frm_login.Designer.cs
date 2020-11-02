@@ -1,6 +1,6 @@
 ﻿namespace LayerPresentation
 {
-    partial class Login
+    partial class frm_login
     {
         /// <summary>
         /// Required designer variable.
@@ -205,7 +205,7 @@
             this.checkBox_guardar.Text = "Recordarme";
             this.checkBox_guardar.UseVisualStyleBackColor = true;
             // 
-            // Login
+            // frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -225,7 +225,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Login";
+            this.Name = "frm_login";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

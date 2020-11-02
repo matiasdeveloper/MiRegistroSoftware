@@ -395,7 +395,6 @@
             this.pn_1.Name = "pn_1";
             this.pn_1.Size = new System.Drawing.Size(281, 362);
             this.pn_1.TabIndex = 104;
-            this.pn_1.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_1_Paint);
             // 
             // lbl_totaldiario_inscriptos
             // 

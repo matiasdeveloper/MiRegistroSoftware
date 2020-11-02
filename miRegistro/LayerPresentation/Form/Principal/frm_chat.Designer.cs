@@ -367,7 +367,6 @@
             // 
             // pic_myuser
             // 
-            this.pic_myuser.BackgroundImage = global::LayerPresentation.Properties.Resources._001;
             this.pic_myuser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_myuser.Location = new System.Drawing.Point(78, 59);
             this.pic_myuser.Name = "pic_myuser";
@@ -744,7 +743,6 @@
             // 
             // picBox_UserConnected
             // 
-            this.picBox_UserConnected.BackgroundImage = global::LayerPresentation.Properties.Resources._001;
             this.picBox_UserConnected.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBox_UserConnected.Location = new System.Drawing.Point(48, 22);
             this.picBox_UserConnected.Name = "picBox_UserConnected";

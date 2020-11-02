@@ -40,7 +40,10 @@ namespace LayerBusiness
             _table = _cdObject.mostarCategorias(mostrarIn);
             return _table;
         }
-        
+        public void InsertarCategoriaFormularios(string objeto, string cat) 
+        {
+            _cdObject.InsertCategoria(objeto, cat);
+        }
         public void insertarFormularios(string cod_categoria, string cod_elemento, string numeracion, string stock, string datetime) 
         {
             _cdObject.Insert(Convert.ToInt32(cod_categoria),Convert.ToInt32(cod_elemento),numeracion, Convert.ToInt32(stock), Convert.ToDateTime(datetime));   

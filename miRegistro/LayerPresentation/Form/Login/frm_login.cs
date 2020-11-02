@@ -14,9 +14,9 @@ using LayerPresentation.Properties;
 
 namespace LayerPresentation
 {
-    public partial class Login : Form
+    public partial class frm_login : Form
     {
-        public Login()
+        public frm_login()
         {
             InitializeComponent();
         }
@@ -99,9 +99,9 @@ namespace LayerPresentation
                     RememberUser();
                     _cnObject.IntializeLoginUserData(txtBox_user.Text);
 
-                    //UserLoginCache.imageDefault = Properties.Settings.Default.UserImage;
-                    string permission = UserLoginCache.Priveleges;
-                    string name = UserLoginCache.Nombre_Corto;
+                    // Update last access
+                    _cnObject.UpdateLastAccess(UserLoginCache.IdUser, DateTime.Now);
+                    UserLoginCache.Fecha_UltimoAcceso = DateTime.Now;
 
                     // Charge Bienvenida
                     frm_principal _objUI = new frm_principal();
@@ -110,7 +110,6 @@ namespace LayerPresentation
                     Bienvenida objUI = new Bienvenida(_objUI);
                     objUI.Show();
                     objUI.FormClosed += Logout;
-
 
                     this.Opacity = 0;
                     this.Hide();

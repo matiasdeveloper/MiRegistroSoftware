@@ -205,16 +205,22 @@ namespace LayerPresentation
         private void frm_escritorio_Load(object sender, EventArgs e)
         {
             Intialize();
+            cargarPrivilegios();
         }
         private void btn_refreshdata_Click(object sender, EventArgs e)
         {
             RefreshData();
             RefreshDashboard();
         }
-
-        private void pn_1_Paint(object sender, PaintEventArgs e)
+        private void cargarPrivilegios()
         {
-
+            if (UserLoginCache.Priveleges == Privileges.Estandar)
+            {
+                // Code here
+                btn_inscribir.Enabled = false;
+                btn_insertar.Enabled = false;
+                btn_savepdf_empleado.Enabled = false;
+            }
         }
     }
 }

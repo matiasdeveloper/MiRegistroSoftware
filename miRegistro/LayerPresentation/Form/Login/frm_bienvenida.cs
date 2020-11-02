@@ -19,7 +19,9 @@ namespace LayerPresentation
         {
             InitializeComponent();
             frm = principal;
+            ColorSystem.frm = principal;
         }
+
         private Cn_Empleados _cnEmpleados = new Cn_Empleados();
         private Cn_Tramites _cnTramites = new Cn_Tramites();
         private Cn_Formularios _cnFormularios = new Cn_Formularios();
@@ -29,7 +31,7 @@ namespace LayerPresentation
         
         private void intializeText() 
         {
-           lbl_nombreCorto.Text = UserLoginCache.Nombre_Corto;
+            lbl_nombreCorto.Text = UserLoginCache.Nombre_Corto;
             lbl_privilegios.Text = UserLoginCache.Priveleges;
         }
         private void InitializeProgram() 
@@ -52,7 +54,6 @@ namespace LayerPresentation
                     timer1.Start();
                     count++;
                 }
-
             }
             else
             {

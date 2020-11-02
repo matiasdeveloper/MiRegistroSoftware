@@ -23,6 +23,10 @@ namespace LayerBusiness
         {
             _cdObject.Insert(dominio, fecha, cod_proceso, cod_empleadoProceso, observaciones, error, cod_error);
         }
+        public void InsertarCategoria(string nombre)
+        {
+            _cdObject.InsertCategoria(nombre);
+        }
         public void actualizarTramite(int id,string dominio, int cod_proceso, int cod_empleadoProceso, string observaciones, int error, int cod_error)
         {
             _cdObject.Update(id ,dominio, cod_proceso, cod_empleadoProceso, observaciones, error, cod_error);

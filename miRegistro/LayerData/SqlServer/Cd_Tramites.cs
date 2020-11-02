@@ -41,6 +41,17 @@ namespace LayerData.SqlServer
 
             _conn.closeConnection();
         }
+        public void InsertCategoria(string name) 
+        {
+            string q = "INSERT INTO Tipo_Tramites VALUES('"+name+"')";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _command.CommandType = CommandType.Text;
+            _command.ExecuteNonQuery();
+
+            _conn.closeConnection();
+        }
         public void Update(int id, string dominio, int cod_proceso, int cod_empleadoProceso, string observaciones, int error, int cod_error)
         {
             string q = @"UPDATE Tramites 

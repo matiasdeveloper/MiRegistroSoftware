@@ -34,14 +34,14 @@
             this.btn_empleados = new System.Windows.Forms.Button();
             this.btn_tramites = new System.Windows.Forms.Button();
             this.btn_configuracion = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.barra_dev = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_chat = new System.Windows.Forms.Button();
             this.btn_escritorio = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.barra_info = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_electronico = new System.Windows.Forms.Label();
             this.lbl_lastacess = new System.Windows.Forms.Label();
@@ -59,9 +59,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menu.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.barra_dev.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.barra_info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.barra_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
@@ -76,11 +76,11 @@
             this.menu.Controls.Add(this.btn_empleados);
             this.menu.Controls.Add(this.btn_tramites);
             this.menu.Controls.Add(this.btn_configuracion);
-            this.menu.Controls.Add(this.panel3);
+            this.menu.Controls.Add(this.barra_dev);
             this.menu.Controls.Add(this.btn_logout);
             this.menu.Controls.Add(this.btn_chat);
             this.menu.Controls.Add(this.btn_escritorio);
-            this.menu.Controls.Add(this.panel2);
+            this.menu.Controls.Add(this.barra_info);
             this.menu.Controls.Add(this.btn_stock);
             this.menu.Controls.Add(this.pictureBox1);
             this.menu.Controls.Add(this.panel1);
@@ -167,7 +167,7 @@
             this.btn_configuracion.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_configuracion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_configuracion.Location = new System.Drawing.Point(0, 377);
+            this.btn_configuracion.Location = new System.Drawing.Point(0, 381);
             this.btn_configuracion.Margin = new System.Windows.Forms.Padding(2);
             this.btn_configuracion.Name = "btn_configuracion";
             this.btn_configuracion.Padding = new System.Windows.Forms.Padding(0, 0, 33, 0);
@@ -179,17 +179,17 @@
             this.btn_configuracion.UseVisualStyleBackColor = false;
             this.btn_configuracion.Click += new System.EventHandler(this.btn_configuracion_Click);
             // 
-            // panel3
+            // barra_dev
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(77)))));
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 665);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(195, 53);
-            this.panel3.TabIndex = 5;
+            this.barra_dev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(77)))));
+            this.barra_dev.Controls.Add(this.label2);
+            this.barra_dev.Controls.Add(this.label1);
+            this.barra_dev.Controls.Add(this.pictureBox2);
+            this.barra_dev.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barra_dev.Location = new System.Drawing.Point(0, 665);
+            this.barra_dev.Name = "barra_dev";
+            this.barra_dev.Size = new System.Drawing.Size(195, 53);
+            this.barra_dev.TabIndex = 5;
             // 
             // label2
             // 
@@ -289,20 +289,20 @@
             this.btn_escritorio.UseVisualStyleBackColor = false;
             this.btn_escritorio.Click += new System.EventHandler(this.btn_escritorio_Click);
             // 
-            // panel2
+            // barra_info
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(77)))));
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.lbl_electronico);
-            this.panel2.Controls.Add(this.lbl_lastacess);
-            this.panel2.Controls.Add(this.lbl_permisos);
-            this.panel2.Controls.Add(this.lbl_nombre);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(195, 111);
-            this.panel2.TabIndex = 0;
+            this.barra_info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(77)))));
+            this.barra_info.Controls.Add(this.label3);
+            this.barra_info.Controls.Add(this.lbl_electronico);
+            this.barra_info.Controls.Add(this.lbl_lastacess);
+            this.barra_info.Controls.Add(this.lbl_permisos);
+            this.barra_info.Controls.Add(this.lbl_nombre);
+            this.barra_info.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barra_info.Location = new System.Drawing.Point(0, 0);
+            this.barra_info.Margin = new System.Windows.Forms.Padding(2);
+            this.barra_info.Name = "barra_info";
+            this.barra_info.Size = new System.Drawing.Size(195, 111);
+            this.barra_info.TabIndex = 0;
             // 
             // label3
             // 
@@ -426,7 +426,7 @@
             this.txtBox_fecha.AutoSize = true;
             this.txtBox_fecha.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_fecha.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBox_fecha.Location = new System.Drawing.Point(811, 9);
+            this.txtBox_fecha.Location = new System.Drawing.Point(819, 9);
             this.txtBox_fecha.Name = "txtBox_fecha";
             this.txtBox_fecha.Size = new System.Drawing.Size(137, 16);
             this.txtBox_fecha.TabIndex = 21;
@@ -437,7 +437,7 @@
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label41.Location = new System.Drawing.Point(646, 8);
+            this.label41.Location = new System.Drawing.Point(662, 8);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(160, 17);
             this.label41.TabIndex = 20;
@@ -511,11 +511,11 @@
             this.Text = "frm_principal";
             this.Load += new System.EventHandler(this.Frm_principal_Load);
             this.menu.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.barra_dev.ResumeLayout(false);
+            this.barra_dev.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.barra_info.ResumeLayout(false);
+            this.barra_info.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.barra_titulo.ResumeLayout(false);
             this.barra_titulo.PerformLayout();
@@ -536,14 +536,14 @@
         private System.Windows.Forms.PictureBox btn_close;
         private System.Windows.Forms.PictureBox btn_minimize;
         private System.Windows.Forms.Button btn_stock;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel barra_info;
         private System.Windows.Forms.Label lbl_lastacess;
         private System.Windows.Forms.Label lbl_permisos;
         private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.Button btn_escritorio;
         private System.Windows.Forms.Button btn_chat;
         private System.Windows.Forms.Button btn_logout;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel barra_dev;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;

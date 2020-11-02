@@ -16,6 +16,13 @@ namespace LayerData
         SqlCommand _command = new SqlCommand();
 
         #region LoginUser
+        public bool AddUser(List<string>[] data)
+        {
+            bool resultado = false;
+
+
+            return resultado;
+        }
         public int Autentificar(string user, string password) 
         {
             int resultado = -1;
@@ -39,6 +46,24 @@ namespace LayerData
             _conn.closeConnection();
             return resultado;
         }
+        public bool VerificarPassword(int id, string password)
+        {
+            bool resultado = false;
+            string q = "SELECT * FROM Users WHERE Id = " + id + " AND Contraseña = CAST('" + password + "' AS varbinary(MAX))";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _read = _command.ExecuteReader();
+
+            while (_read.Read())
+            {
+                resultado = true;
+            }
+
+            _conn.closeConnection();
+            return resultado;
+        }
+
         public DataTable IntializeLoginUserData(string user)
         {
             DataTable _dtTable = new DataTable();
@@ -218,6 +243,97 @@ namespace LayerData
             return _dtTable2;
         }
         #endregion
+
+        #region UpdateUsers
+        public void UpdateUser(int id,  string user)
+        {
+            string q = "UPDATE Users SET Usuario = '"+ user +"' WHERE Id = "+ id +"";
+            
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _command.CommandType = CommandType.Text;
+            _command.ExecuteNonQuery();
+
+            _conn.closeConnection();
+        }
+        public void UpdatePassword(int id, string password)
+        {
+            string q = "UPDATE Users SET Contraseña = CAST('"+ password +"' AS VARBINARY(MAX)) WHERE Id = "+ id +"";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _command.CommandType = CommandType.Text;
+            _command.ExecuteNonQuery();
+
+            _conn.closeConnection();
+        }
+        public void UpdatePrivileges(int id, string privilegesAdmin) 
+        {
+            string q = "UPDATE Users SET Type_user = " + privilegesAdmin + " WHERE Id = " + id + "";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _command.CommandType = CommandType.Text;
+            _command.ExecuteNonQuery();
+
+            _conn.closeConnection();
+        }
+        public void UpdateName(int id, string nombre)
+        {
+            string q = "UPDATE Info_users SET Nombre = '"+ nombre +"'WHERE Id = "+ id +"";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _command.CommandType = CommandType.Text;
+            _command.ExecuteNonQuery();
+
+            _conn.closeConnection();
+        }
+        public void UpdateShortName(int id, string shortnombre)
+        {
+            string q = "UPDATE Info_users SET Nombre_corto = '" + shortnombre + "' WHERE Id = "+ id +"";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _command.CommandType = CommandType.Text;
+            _command.ExecuteNonQuery();
+
+            _conn.closeConnection();
+        }
+        public void UpdateEmail(int id, string email)
+        {
+            string q = "UPDATE Info_users SET Email = '" + email + "' WHERE Id = "+id+"";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _command.CommandType = CommandType.Text;
+            _command.ExecuteNonQuery();
+
+            _conn.closeConnection();
+        }
+        public void UpdateCity(int id, string city)
+        {
+            string q = "UPDATE Info_users SET Ciudad = '" + city + "' WHERE Id = "+ id +"; ";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _command.CommandType = CommandType.Text;
+            _command.ExecuteNonQuery();
+
+            _conn.closeConnection();
+        }
+        public void UpdateLastAccess(int id, DateTime fecha)
+        {
+            string q = "UPDATE Info_users SET Fecha_ultimoacesso = CONVERT(VARCHAR, '" + fecha.ToString("MM/dd/yyyy") + "', 100) WHERE Id = " + id + "";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _command.CommandType = CommandType.Text;
+            _command.ExecuteNonQuery();
+
+            _conn.closeConnection();
+        }
+        #endregion 
 
         public void AnyMethod() 
         {

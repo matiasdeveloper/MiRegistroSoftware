@@ -14,15 +14,24 @@ namespace LayerBusiness
     {
         private Cd_Usuarios _cdObject = new Cd_Usuarios();
 
+        public bool AddUser(List<string>[] data) 
+        {
+            bool isOk = _cdObject.AddUser(data);
+            return isOk;
+        }
         public Tuple<bool, string> RecoverPassword(string userRequest) 
         {
             return _cdObject.RecoverPassword(userRequest);
         }
-
         public int verificarAuntetificacion(string user, string password)
         {
             int resultado = -1;
             resultado = _cdObject.Autentificar(user, password);
+            return resultado;
+        }
+        public bool verificarPassword(int id, string password) 
+        {
+            bool resultado = _cdObject.VerificarPassword(id, password);
             return resultado;
         }
         public DataTable IntializeLoginUserData(string user) 
@@ -37,6 +46,36 @@ namespace LayerBusiness
             _dtTable = _cdObject.FindDataFromSpecificUser(int.Parse(user));
             return _dtTable;
         }
+        #region Update User
+        public void UpdateUser(int id, string user) 
+        {
+            _cdObject.UpdateUser(id, user);
+        }
+        public void UpdatePassword(int id, string password) 
+        {
+            _cdObject.UpdatePassword(id, password);
+        }
+        public void UpdateName(int id, string name) 
+        {
+            _cdObject.UpdateName(id, name);
+        }
+        public void UpdateShortName(int id, string shortname) 
+        {
+            _cdObject.UpdateShortName(id, shortname);
+        }
+        public void UpdateEmail(int id, string email) 
+        {
+            _cdObject.UpdateEmail(id, email);
+        }
+        public void UpdateCity(int id, string city) 
+        {
+            _cdObject.UpdateCity(id, city);
+        }
+        public void UpdateLastAccess(int id, DateTime dt) 
+        {
+            _cdObject.UpdateLastAccess(id, dt);
+        }
+        #endregion
         public void EditProfile(string id, string user, string password, string nombre, string nombre_corto, string email)
         {
             _cdObject.EditProfile(Convert.ToInt32(id), user, password, nombre, nombre_corto, email);

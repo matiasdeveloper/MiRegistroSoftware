@@ -765,6 +765,54 @@ namespace LayerPresentation.Clases
 
             return new int[] { errores, parciales, totales };
         }
-        
+
+        public static int[] FindTramitesAll(DataTable tramites, DateTime fecha1, DateTime fecha2) 
+        {
+            DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
+            DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
+            dt2 = dt2.AddDays(1);
+
+            int total = 0;
+            int procesados = 0;
+            int inscriptos = 0;
+
+            // 0 total, 1 procesados, 2 inscriptos
+            foreach (DataRow fila in tramites.Rows)
+            {
+                DateTime date = (DateTime)fila[5];
+                if (date >= dt1 & date < dt2)
+                {
+                    if ((string)fila[4] == "Procesado")
+                    {
+                        total++;
+                        procesados++;
+                    }
+                    if((bool)fila[9] == true) 
+                    {
+                        inscriptos++;
+                    }
+                }
+            }
+
+            return new int[] { total, procesados, inscriptos };
+        }
+
+        public static string FindCumpleaños() 
+        {
+            LinkedListNode<Employee> employee = tmp.First;
+            string c = "";
+
+            for (int i = 0; i < tmp.Count; i++)
+            {
+                if (employee.Value.nombre != "Admin S." && employee.Value.fechaNacimiento == DateTime.Now)
+                {
+                    c = employee.Value.nombre;
+                    break;
+                }
+                employee = employee.Next;
+            }
+
+            return c;
+        }
     }
 }
