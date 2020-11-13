@@ -36,16 +36,27 @@ namespace LayerData.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=tcp:rna-argentina.database.windows.net,1433;Initial Catalog=MiRegistroCala" +
-            "fateSC;Persist Security Info=False;User ID=adminrna;Password=registro998P;Multip" +
-            "leActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Ti" +
-            "meout=30;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=rna-argentina.database.windows.net;Initial Catalog=MiRegistroCalafate" +
+            "SC;Persist Security Info=True;User ID=adminrna;Password=registro998P")]
         public string ConReal {
             get {
                 return ((string)(this["ConReal"]));
             }
             set {
                 this["ConReal"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-NITRO5\\SQLEXPRESS;Initial Catalog=miRegistro;Integrated Securi" +
+            "ty=True")]
+        public string ConPrueba {
+            get {
+                return ((string)(this["ConPrueba"]));
+            }
+            set {
+                this["ConPrueba"] = value;
             }
         }
     }

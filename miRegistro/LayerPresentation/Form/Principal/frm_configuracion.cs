@@ -27,6 +27,11 @@ namespace LayerPresentation
 
         private bool validatePassword = false;
 
+        private Image check = LayerPresentation.Properties.Resources.check;
+        private Image checkOff = LayerPresentation.Properties.Resources.cerrar;
+
+        private bool isGood = false;
+
         private void refreshUserInfo() 
         {
             lbl_nombreUser.Text = UserLoginCache.Nombre;
@@ -52,6 +57,7 @@ namespace LayerPresentation
             List<string> login = new List<string>();
             List<string> info = new List<string>();
             List<string> empleado = new List<string>();
+            List<string> result = new List<string>();
 
             login.Add(txtBox_newUser_user.Text);
             login.Add(txtBox_newUser_pass.Text);
@@ -66,10 +72,19 @@ namespace LayerPresentation
             empleado.Add(txtBox_newUser_nombreEmpleado.Text);
             empleado.Add(dtPick_newUser_contratacion.Value.ToString());
 
+            if (isGood) 
+            {
+                result.Add("True");
+            } else 
+            {
+                result.Add("False");
+            }
+
             all.Add(login);
             all.Add(info);
             all.Add(empleado);
-
+            all.Add(result);
+            
             return all.ToArray();
         }
        
@@ -487,30 +502,81 @@ namespace LayerPresentation
         // Insert to database
         private void btn_newUser_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Estas seguro que deseas añadir un nuevo usuario al sistema? " + "\nUsuario nuevo: " + txtBox_newUser_nombre.Text, "Atencion!", MessageBoxButtons.YesNo) == DialogResult.Yes) 
+            if(MessageBox.Show("Estas seguro que deseas añadir un nuevo usuario al sistema?" + "\nUsuario nuevo: " + txtBox_newUser_nombre.Text, "Atencion!", MessageBoxButtons.YesNo) == DialogResult.Yes) 
             {
-                if(MessageBox.Show("Acepta los terminos y condiciones de uso?", "MiRegistro", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK) 
+                if(MessageBox.Show("¿Acepta los terminos y condiciones de uso?" + "\n Sistemas MiRegistro desarrollado en infraestructuras de seguridad de Microsoft Azure.", "MiRegistro", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK) 
                 {
                     List<string>[] data = InitializeNewDataUser();
+                    if (data[3][0] == "True")
+                    {
+                        // Add user
+                        _cnObject.AddUser(data);
+                        frm_successdialog frm = new frm_successdialog(7);
+                        frm.Show();
+
+                        ClearFieldsNewUser();
+                    } else
+                    {
+                        MessageBox.Show("Verifique los datos ingresados y vuelva a intentarlo!", "Error 104!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
+        }
+        private void ClearFieldsNewUser() 
+        {
+            isGood = false;
+            txtBox_newUser_user.Text = "ingrese el usuario";
+            txtBox_newUser_pass.Text = "Ingrese la contraseña";
+            comboBox_privileges.SelectedIndex = -1;
+
+            txtBox_newUser_nombre.Text = "Ingrese el nombre";
+            txtBox_newUser_nombreCorto.Text = "Ingrese el nombre corto/apodo";
+            txtBox_newUser_ciudad.Text = "Ingrese la ciudad natal";
+            txtBox_newUser_email.Text = "Ingrese el email";
+
+            txtBox_newUser_nombreEmpleado.Text = "Ingrese el nombre del sistema (Ej: Mati A.)";
         }
         // Login info
         private void txtBox_newUser_user_Enter(object sender, EventArgs e)
         {
-            if (txtBox_newUser_user.Text == "Ingrese el usuario")
+            if (txtBox_newUser_user.Text == "ingrese el usuario")
             {
                 txtBox_newUser_user.ForeColor = Color.Black;
                 txtBox_newUser_user.Text = "";
-            }
+
+                pic_0.Visible = false;
+            } 
         }
         private void txtBox_newUser_user_Leave(object sender, EventArgs e)
         {
             if (txtBox_newUser_user.Text == "")
             {
                 txtBox_newUser_user.ForeColor = Color.LightGray;
-                txtBox_newUser_user.Text = "Ingrese el usuario";
+                txtBox_newUser_user.Text = "ingrese el usuario";
+
+                isGood = false;
             }
+            else
+            {
+                if (txtBox_newUser_user.Text.Length > 7)
+                {
+                    pic_0.Visible = true;
+                    pic_0.BackgroundImage = check;
+
+                    isGood = true;
+                } else 
+                {
+                    pic_0.Visible = true;
+                    pic_0.BackgroundImage = checkOff;
+
+                    isGood = false;
+                    MessageBox.Show("El usuario debe ser mayor o igual a 8 caracteres y no debe contener espacios!", "Atencion!");
+                }
+            }
+        }
+        private void txtBox_newUser_user_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
         }
         private void txtBox_newUser_pass_Enter(object sender, EventArgs e)
         {
@@ -528,7 +594,33 @@ namespace LayerPresentation
                 txtBox_newUser_pass.ForeColor = Color.LightGray;
                 txtBox_newUser_pass.Text = "Ingrese la contraseña";
                 txtBox_newUser_pass.UseSystemPasswordChar = false;
+
+                pic_1.Visible = false;
+
+                isGood = false;
             }
+            else
+            {
+                if (txtBox_newUser_pass.Text.Length > 4)
+                {
+                    pic_1.Visible = true;
+                    pic_1.BackgroundImage = check;
+
+                    isGood = true;
+                }
+                else
+                {
+                    pic_1.Visible = true;
+                    pic_1.BackgroundImage = checkOff;
+
+                    isGood = false;
+                    MessageBox.Show("La contraseña debe ser mayor que 5 (cinco) caracteres!", "Atencion!");
+                }
+            }
+        }
+        private void txtBox_newUser_pass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
         }
         private void comboBox_privileges_Enter(object sender, EventArgs e)
         {
@@ -604,6 +696,8 @@ namespace LayerPresentation
             {
                 txtBox_newUser_email.ForeColor = Color.Black;
                 txtBox_newUser_email.Text = "";
+
+                pic_2.Visible = false;
             }
         }
         private void txtBox_newUser_email_Leave(object sender, EventArgs e)
@@ -612,9 +706,42 @@ namespace LayerPresentation
             {
                 txtBox_newUser_email.ForeColor = Color.LightGray;
                 txtBox_newUser_email.Text = "Ingrese el email";
+
+                pic_2.Visible = false;
+
+                isGood = false;
+            }
+            else
+            {
+                if (IsValidEmail(txtBox_newUser_email.Text))
+                {
+                    pic_2.Visible = true;
+                    pic_2.BackgroundImage = check;
+
+                    isGood = true;
+                }
+                else
+                {
+                    pic_2.Visible = true;
+                    pic_2.BackgroundImage = checkOff;
+
+                    isGood = false;
+                    MessageBox.Show("Introduce un email valido '@outlook @gmail @yahoo @hotmail' para continuar!", "Atencion!");
+                }
             }
         }
-
+        bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         private void txtBox_newUser_nombreEmpleado_Enter(object sender, EventArgs e)
         {
             if (txtBox_newUser_nombreEmpleado.Text == "Ingrese el nombre del sistema (Ej: Mati A.)")
@@ -629,6 +756,28 @@ namespace LayerPresentation
             {
                 txtBox_newUser_nombreEmpleado.ForeColor = Color.LightGray;
                 txtBox_newUser_nombreEmpleado.Text = "Ingrese el nombre del sistema (Ej: Mati A.)";
+
+                pic_3.Visible = false;
+
+                isGood = false;
+            }
+            else
+            {
+                if (txtBox_newUser_nombreEmpleado.Text.Length > 4)
+                {
+                    pic_3.Visible = true;
+                    pic_3.BackgroundImage = check;
+
+                    isGood = true;
+                }
+                else
+                {
+                    pic_3.Visible = true;
+                    pic_3.BackgroundImage = checkOff;
+
+                    isGood = false;
+                    MessageBox.Show("El nombre del empleado debe contener al menos 4 caracteres y con el siguiente formato: (Ej: Nombre S.)!", "Atencion!");
+                }
             }
         }
         private void cargarPrivilegios()
@@ -648,6 +797,11 @@ namespace LayerPresentation
         {
             refreshUserInfo();
             cargarPrivilegios();
+        }
+
+        private void panel_newUser_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

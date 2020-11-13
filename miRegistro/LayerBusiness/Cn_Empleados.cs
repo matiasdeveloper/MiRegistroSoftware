@@ -40,8 +40,9 @@ namespace LayerBusiness
             DataTable TramitesEmployee = _cnT.mostrarByEmployee(id);
             DataTable AlertasEmployee = _cnA.mostrarAlertasFromUser(id.ToString());
 
-            string usuario = UserData.Rows[0][1].ToString();
+            string usuario = UserData.Rows[0][0].ToString();
             string nombre = Employee.Rows[0][1].ToString();
+            string nombreCorto = UserInfoData.Rows[0][2].ToString();
             string nombreCompleto = UserInfoData.Rows[0][1].ToString();
             string privilegios = UserData.Rows[0][1].ToString();
             string city = UserInfoData.Rows[0][3].ToString();
@@ -55,7 +56,7 @@ namespace LayerBusiness
             string salario = Employee.Rows[0][3].ToString();
             string observaciones = Employee.Rows[0][4].ToString();
 
-            Employee cache = new Employee(id, usuario, nombre, nombreCompleto, privilegios, city, email, fechaNacimiento, fechaAcceso, cellphone, tramitesMes, alertas, fechaContratacion, salario, observaciones);
+            Employee cache = new Employee(id, usuario, nombre, nombreCorto, nombreCompleto, privilegios, city, email, fechaNacimiento, fechaAcceso, cellphone, tramitesMes, alertas, fechaContratacion, salario, observaciones);
             
             return cache;
         }

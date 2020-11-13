@@ -35,6 +35,11 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_0 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lbl_user_0 = new System.Windows.Forms.Label();
             this.lbl_id_0 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_savepdf_0 = new System.Windows.Forms.Button();
@@ -60,6 +65,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_0 = new System.Windows.Forms.Label();
             this.panel_1 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.lbl_user_1 = new System.Windows.Forms.Label();
             this.btn_savepdf_1 = new System.Windows.Forms.Button();
             this.lbl_id_1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -85,6 +95,11 @@
             this.label20 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_1 = new System.Windows.Forms.Label();
             this.panel_2 = new System.Windows.Forms.Panel();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.lbl_user_2 = new System.Windows.Forms.Label();
             this.btn_savepdf_2 = new System.Windows.Forms.Button();
             this.lbl_id_2 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -110,6 +125,11 @@
             this.label34 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_2 = new System.Windows.Forms.Label();
             this.panel_3 = new System.Windows.Forms.Panel();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.lbl_user_3 = new System.Windows.Forms.Label();
             this.btn_savepdf_3 = new System.Windows.Forms.Button();
             this.lbl_id_3 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -135,6 +155,11 @@
             this.label48 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_3 = new System.Windows.Forms.Label();
             this.panel_4 = new System.Windows.Forms.Panel();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.lbl_user_4 = new System.Windows.Forms.Label();
             this.btn_savepdf_4 = new System.Windows.Forms.Button();
             this.lbl_id_4 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -160,6 +185,11 @@
             this.label62 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_4 = new System.Windows.Forms.Label();
             this.panel_5 = new System.Windows.Forms.Panel();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.lbl_user_5 = new System.Windows.Forms.Label();
             this.btn_savepdf_5 = new System.Windows.Forms.Button();
             this.lbl_id_5 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -185,6 +215,11 @@
             this.label76 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_5 = new System.Windows.Forms.Label();
             this.panel_6 = new System.Windows.Forms.Panel();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.lbl_user_6 = new System.Windows.Forms.Label();
             this.btn_savepdf_6 = new System.Windows.Forms.Button();
             this.lbl_id_6 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -210,6 +245,11 @@
             this.label90 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_6 = new System.Windows.Forms.Label();
             this.panel_7 = new System.Windows.Forms.Panel();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.lbl_user_7 = new System.Windows.Forms.Label();
             this.btn_savepdf_7 = new System.Windows.Forms.Button();
             this.lbl_id_7 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -261,15 +301,7 @@
             this.lbl_diaprocesados_8 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.lbl_mesprocesados_8 = new System.Windows.Forms.Label();
-            this.lbl_user_0 = new System.Windows.Forms.Label();
-            this.lbl_user_1 = new System.Windows.Forms.Label();
-            this.lbl_user_2 = new System.Windows.Forms.Label();
-            this.lbl_user_3 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.lbl_user_4 = new System.Windows.Forms.Label();
-            this.lbl_user_5 = new System.Windows.Forms.Label();
-            this.lbl_user_6 = new System.Windows.Forms.Label();
-            this.lbl_user_7 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel_0.SuspendLayout();
@@ -332,7 +364,7 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutPanel1.Controls.Add(this.panel_0);
             this.flowLayoutPanel1.Controls.Add(this.panel_1);
             this.flowLayoutPanel1.Controls.Add(this.panel_2);
@@ -350,7 +382,11 @@
             // 
             // panel_0
             // 
-            this.panel_0.BackColor = System.Drawing.Color.Snow;
+            this.panel_0.BackColor = System.Drawing.Color.White;
+            this.panel_0.Controls.Add(this.label4);
+            this.panel_0.Controls.Add(this.label5);
+            this.panel_0.Controls.Add(this.label13);
+            this.panel_0.Controls.Add(this.label21);
             this.panel_0.Controls.Add(this.lbl_user_0);
             this.panel_0.Controls.Add(this.lbl_id_0);
             this.panel_0.Controls.Add(this.label1);
@@ -367,6 +403,76 @@
             this.panel_0.Name = "panel_0";
             this.panel_0.Size = new System.Drawing.Size(233, 310);
             this.panel_0.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Location = new System.Drawing.Point(183, 74);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label4.Size = new System.Drawing.Size(47, 16);
+            this.label4.TabIndex = 180;
+            this.label4.Text = "Usuario";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Silver;
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.Location = new System.Drawing.Point(192, 42);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label5.Size = new System.Drawing.Size(36, 16);
+            this.label5.TabIndex = 179;
+            this.label5.Text = "Email";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Silver;
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label13.Location = new System.Drawing.Point(176, 26);
+            this.label13.Name = "label13";
+            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label13.Size = new System.Drawing.Size(52, 16);
+            this.label13.TabIndex = 178;
+            this.label13.Text = "Permisos";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Silver;
+            this.label21.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label21.Location = new System.Drawing.Point(145, 58);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label21.Size = new System.Drawing.Size(84, 16);
+            this.label21.TabIndex = 177;
+            this.label21.Text = "Ultimo acceso";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_user_0
+            // 
+            this.lbl_user_0.AutoSize = true;
+            this.lbl_user_0.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_0.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_0.Location = new System.Drawing.Point(12, 73);
+            this.lbl_user_0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_0.Name = "lbl_user_0";
+            this.lbl_user_0.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_0.TabIndex = 176;
+            this.lbl_user_0.Text = "Usuario";
             // 
             // lbl_id_0
             // 
@@ -676,7 +782,11 @@
             // 
             // panel_1
             // 
-            this.panel_1.BackColor = System.Drawing.Color.Snow;
+            this.panel_1.BackColor = System.Drawing.Color.White;
+            this.panel_1.Controls.Add(this.label23);
+            this.panel_1.Controls.Add(this.label29);
+            this.panel_1.Controls.Add(this.label35);
+            this.panel_1.Controls.Add(this.label36);
             this.panel_1.Controls.Add(this.lbl_user_1);
             this.panel_1.Controls.Add(this.btn_savepdf_1);
             this.panel_1.Controls.Add(this.lbl_id_1);
@@ -693,6 +803,76 @@
             this.panel_1.Name = "panel_1";
             this.panel_1.Size = new System.Drawing.Size(233, 310);
             this.panel_1.TabIndex = 1;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Silver;
+            this.label23.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label23.Location = new System.Drawing.Point(182, 74);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label23.Size = new System.Drawing.Size(47, 16);
+            this.label23.TabIndex = 184;
+            this.label23.Text = "Usuario";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Silver;
+            this.label29.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label29.Location = new System.Drawing.Point(195, 42);
+            this.label29.Name = "label29";
+            this.label29.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label29.Size = new System.Drawing.Size(36, 16);
+            this.label29.TabIndex = 183;
+            this.label29.Text = "Email";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.Silver;
+            this.label35.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label35.Location = new System.Drawing.Point(179, 26);
+            this.label35.Name = "label35";
+            this.label35.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label35.Size = new System.Drawing.Size(52, 16);
+            this.label35.TabIndex = 182;
+            this.label35.Text = "Permisos";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.Silver;
+            this.label36.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label36.Location = new System.Drawing.Point(148, 58);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label36.Name = "label36";
+            this.label36.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label36.Size = new System.Drawing.Size(84, 16);
+            this.label36.TabIndex = 181;
+            this.label36.Text = "Ultimo acceso";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_user_1
+            // 
+            this.lbl_user_1.AutoSize = true;
+            this.lbl_user_1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_1.Location = new System.Drawing.Point(12, 74);
+            this.lbl_user_1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_1.Name = "lbl_user_1";
+            this.lbl_user_1.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_1.TabIndex = 180;
+            this.lbl_user_1.Text = "Usuario";
             // 
             // btn_savepdf_1
             // 
@@ -1002,7 +1182,11 @@
             // 
             // panel_2
             // 
-            this.panel_2.BackColor = System.Drawing.Color.Snow;
+            this.panel_2.BackColor = System.Drawing.Color.White;
+            this.panel_2.Controls.Add(this.label39);
+            this.panel_2.Controls.Add(this.label41);
+            this.panel_2.Controls.Add(this.label43);
+            this.panel_2.Controls.Add(this.label44);
             this.panel_2.Controls.Add(this.lbl_user_2);
             this.panel_2.Controls.Add(this.btn_savepdf_2);
             this.panel_2.Controls.Add(this.lbl_id_2);
@@ -1020,13 +1204,83 @@
             this.panel_2.Size = new System.Drawing.Size(233, 310);
             this.panel_2.TabIndex = 2;
             // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.Silver;
+            this.label39.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label39.Location = new System.Drawing.Point(182, 73);
+            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label39.Name = "label39";
+            this.label39.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label39.Size = new System.Drawing.Size(47, 16);
+            this.label39.TabIndex = 185;
+            this.label39.Text = "Usuario";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.Silver;
+            this.label41.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label41.Location = new System.Drawing.Point(195, 41);
+            this.label41.Name = "label41";
+            this.label41.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label41.Size = new System.Drawing.Size(36, 16);
+            this.label41.TabIndex = 184;
+            this.label41.Text = "Email";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.Silver;
+            this.label43.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label43.Location = new System.Drawing.Point(179, 25);
+            this.label43.Name = "label43";
+            this.label43.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label43.Size = new System.Drawing.Size(52, 16);
+            this.label43.TabIndex = 183;
+            this.label43.Text = "Permisos";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.Silver;
+            this.label44.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label44.Location = new System.Drawing.Point(148, 57);
+            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label44.Name = "label44";
+            this.label44.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label44.Size = new System.Drawing.Size(84, 16);
+            this.label44.TabIndex = 182;
+            this.label44.Text = "Ultimo acceso";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_user_2
+            // 
+            this.lbl_user_2.AutoSize = true;
+            this.lbl_user_2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_2.Location = new System.Drawing.Point(12, 74);
+            this.lbl_user_2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_2.Name = "lbl_user_2";
+            this.lbl_user_2.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_2.TabIndex = 181;
+            this.lbl_user_2.Text = "Usuario";
+            // 
             // btn_savepdf_2
             // 
             this.btn_savepdf_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_savepdf_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_savepdf_2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_savepdf_2.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_savepdf_2.Location = new System.Drawing.Point(6, 273);
+            this.btn_savepdf_2.Location = new System.Drawing.Point(7, 273);
             this.btn_savepdf_2.Name = "btn_savepdf_2";
             this.btn_savepdf_2.Size = new System.Drawing.Size(221, 27);
             this.btn_savepdf_2.TabIndex = 179;
@@ -1328,7 +1582,11 @@
             // 
             // panel_3
             // 
-            this.panel_3.BackColor = System.Drawing.Color.Snow;
+            this.panel_3.BackColor = System.Drawing.Color.White;
+            this.panel_3.Controls.Add(this.label47);
+            this.panel_3.Controls.Add(this.label49);
+            this.panel_3.Controls.Add(this.label50);
+            this.panel_3.Controls.Add(this.label51);
             this.panel_3.Controls.Add(this.lbl_user_3);
             this.panel_3.Controls.Add(this.btn_savepdf_3);
             this.panel_3.Controls.Add(this.lbl_id_3);
@@ -1345,6 +1603,76 @@
             this.panel_3.Name = "panel_3";
             this.panel_3.Size = new System.Drawing.Size(233, 310);
             this.panel_3.TabIndex = 3;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.Silver;
+            this.label47.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label47.Location = new System.Drawing.Point(182, 74);
+            this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label47.Name = "label47";
+            this.label47.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label47.Size = new System.Drawing.Size(47, 16);
+            this.label47.TabIndex = 185;
+            this.label47.Text = "Usuario";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.Color.Silver;
+            this.label49.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label49.Location = new System.Drawing.Point(195, 42);
+            this.label49.Name = "label49";
+            this.label49.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label49.Size = new System.Drawing.Size(36, 16);
+            this.label49.TabIndex = 184;
+            this.label49.Text = "Email";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.Silver;
+            this.label50.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label50.Location = new System.Drawing.Point(179, 26);
+            this.label50.Name = "label50";
+            this.label50.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label50.Size = new System.Drawing.Size(52, 16);
+            this.label50.TabIndex = 183;
+            this.label50.Text = "Permisos";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.Color.Silver;
+            this.label51.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label51.Location = new System.Drawing.Point(148, 58);
+            this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label51.Name = "label51";
+            this.label51.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label51.Size = new System.Drawing.Size(84, 16);
+            this.label51.TabIndex = 182;
+            this.label51.Text = "Ultimo acceso";
+            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_user_3
+            // 
+            this.lbl_user_3.AutoSize = true;
+            this.lbl_user_3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_3.Location = new System.Drawing.Point(12, 74);
+            this.lbl_user_3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_3.Name = "lbl_user_3";
+            this.lbl_user_3.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_3.TabIndex = 181;
+            this.lbl_user_3.Text = "Usuario";
             // 
             // btn_savepdf_3
             // 
@@ -1654,7 +1982,11 @@
             // 
             // panel_4
             // 
-            this.panel_4.BackColor = System.Drawing.Color.Snow;
+            this.panel_4.BackColor = System.Drawing.Color.White;
+            this.panel_4.Controls.Add(this.label52);
+            this.panel_4.Controls.Add(this.label53);
+            this.panel_4.Controls.Add(this.label55);
+            this.panel_4.Controls.Add(this.label57);
             this.panel_4.Controls.Add(this.lbl_user_4);
             this.panel_4.Controls.Add(this.btn_savepdf_4);
             this.panel_4.Controls.Add(this.lbl_id_4);
@@ -1671,6 +2003,76 @@
             this.panel_4.Name = "panel_4";
             this.panel_4.Size = new System.Drawing.Size(233, 310);
             this.panel_4.TabIndex = 4;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.Color.Silver;
+            this.label52.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label52.Location = new System.Drawing.Point(179, 74);
+            this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label52.Name = "label52";
+            this.label52.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label52.Size = new System.Drawing.Size(47, 16);
+            this.label52.TabIndex = 185;
+            this.label52.Text = "Usuario";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.Color.Silver;
+            this.label53.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label53.Location = new System.Drawing.Point(190, 42);
+            this.label53.Name = "label53";
+            this.label53.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label53.Size = new System.Drawing.Size(36, 16);
+            this.label53.TabIndex = 184;
+            this.label53.Text = "Email";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.Color.Silver;
+            this.label55.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label55.Location = new System.Drawing.Point(176, 26);
+            this.label55.Name = "label55";
+            this.label55.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label55.Size = new System.Drawing.Size(52, 16);
+            this.label55.TabIndex = 183;
+            this.label55.Text = "Permisos";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.Silver;
+            this.label57.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label57.Location = new System.Drawing.Point(146, 58);
+            this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label57.Name = "label57";
+            this.label57.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label57.Size = new System.Drawing.Size(84, 16);
+            this.label57.TabIndex = 182;
+            this.label57.Text = "Ultimo acceso";
+            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_user_4
+            // 
+            this.lbl_user_4.AutoSize = true;
+            this.lbl_user_4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_4.Location = new System.Drawing.Point(12, 77);
+            this.lbl_user_4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_4.Name = "lbl_user_4";
+            this.lbl_user_4.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_4.TabIndex = 181;
+            this.lbl_user_4.Text = "Usuario";
             // 
             // btn_savepdf_4
             // 
@@ -1752,7 +2154,7 @@
             this.lbl_acceso_4.AutoSize = true;
             this.lbl_acceso_4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_acceso_4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_acceso_4.Location = new System.Drawing.Point(12, 58);
+            this.lbl_acceso_4.Location = new System.Drawing.Point(12, 60);
             this.lbl_acceso_4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_acceso_4.Name = "lbl_acceso_4";
             this.lbl_acceso_4.Size = new System.Drawing.Size(84, 16);
@@ -1980,7 +2382,11 @@
             // 
             // panel_5
             // 
-            this.panel_5.BackColor = System.Drawing.Color.Snow;
+            this.panel_5.BackColor = System.Drawing.Color.White;
+            this.panel_5.Controls.Add(this.label58);
+            this.panel_5.Controls.Add(this.label61);
+            this.panel_5.Controls.Add(this.label63);
+            this.panel_5.Controls.Add(this.label64);
             this.panel_5.Controls.Add(this.lbl_user_5);
             this.panel_5.Controls.Add(this.btn_savepdf_5);
             this.panel_5.Controls.Add(this.lbl_id_5);
@@ -1997,6 +2403,76 @@
             this.panel_5.Name = "panel_5";
             this.panel_5.Size = new System.Drawing.Size(233, 310);
             this.panel_5.TabIndex = 5;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.Silver;
+            this.label58.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label58.Location = new System.Drawing.Point(181, 74);
+            this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label58.Name = "label58";
+            this.label58.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label58.Size = new System.Drawing.Size(47, 16);
+            this.label58.TabIndex = 185;
+            this.label58.Text = "Usuario";
+            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.ForeColor = System.Drawing.Color.Silver;
+            this.label61.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label61.Location = new System.Drawing.Point(192, 42);
+            this.label61.Name = "label61";
+            this.label61.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label61.Size = new System.Drawing.Size(36, 16);
+            this.label61.TabIndex = 184;
+            this.label61.Text = "Email";
+            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.ForeColor = System.Drawing.Color.Silver;
+            this.label63.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label63.Location = new System.Drawing.Point(178, 26);
+            this.label63.Name = "label63";
+            this.label63.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label63.Size = new System.Drawing.Size(52, 16);
+            this.label63.TabIndex = 183;
+            this.label63.Text = "Permisos";
+            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.ForeColor = System.Drawing.Color.Silver;
+            this.label64.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label64.Location = new System.Drawing.Point(148, 58);
+            this.label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label64.Name = "label64";
+            this.label64.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label64.Size = new System.Drawing.Size(84, 16);
+            this.label64.TabIndex = 182;
+            this.label64.Text = "Ultimo acceso";
+            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_user_5
+            // 
+            this.lbl_user_5.AutoSize = true;
+            this.lbl_user_5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_5.Location = new System.Drawing.Point(12, 77);
+            this.lbl_user_5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_5.Name = "lbl_user_5";
+            this.lbl_user_5.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_5.TabIndex = 181;
+            this.lbl_user_5.Text = "Usuario";
             // 
             // btn_savepdf_5
             // 
@@ -2078,7 +2554,7 @@
             this.lbl_acceso_5.AutoSize = true;
             this.lbl_acceso_5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_acceso_5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_acceso_5.Location = new System.Drawing.Point(12, 58);
+            this.lbl_acceso_5.Location = new System.Drawing.Point(12, 60);
             this.lbl_acceso_5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_acceso_5.Name = "lbl_acceso_5";
             this.lbl_acceso_5.Size = new System.Drawing.Size(84, 16);
@@ -2306,7 +2782,11 @@
             // 
             // panel_6
             // 
-            this.panel_6.BackColor = System.Drawing.Color.Snow;
+            this.panel_6.BackColor = System.Drawing.Color.White;
+            this.panel_6.Controls.Add(this.label65);
+            this.panel_6.Controls.Add(this.label66);
+            this.panel_6.Controls.Add(this.label67);
+            this.panel_6.Controls.Add(this.label69);
             this.panel_6.Controls.Add(this.lbl_user_6);
             this.panel_6.Controls.Add(this.btn_savepdf_6);
             this.panel_6.Controls.Add(this.lbl_id_6);
@@ -2323,6 +2803,76 @@
             this.panel_6.Name = "panel_6";
             this.panel_6.Size = new System.Drawing.Size(233, 310);
             this.panel_6.TabIndex = 6;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.ForeColor = System.Drawing.Color.Silver;
+            this.label65.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label65.Location = new System.Drawing.Point(181, 74);
+            this.label65.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label65.Name = "label65";
+            this.label65.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label65.Size = new System.Drawing.Size(47, 16);
+            this.label65.TabIndex = 186;
+            this.label65.Text = "Usuario";
+            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ForeColor = System.Drawing.Color.Silver;
+            this.label66.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label66.Location = new System.Drawing.Point(192, 42);
+            this.label66.Name = "label66";
+            this.label66.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label66.Size = new System.Drawing.Size(36, 16);
+            this.label66.TabIndex = 185;
+            this.label66.Text = "Email";
+            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.Silver;
+            this.label67.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label67.Location = new System.Drawing.Point(178, 26);
+            this.label67.Name = "label67";
+            this.label67.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label67.Size = new System.Drawing.Size(52, 16);
+            this.label67.TabIndex = 184;
+            this.label67.Text = "Permisos";
+            this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.Color.Silver;
+            this.label69.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label69.Location = new System.Drawing.Point(148, 58);
+            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label69.Name = "label69";
+            this.label69.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label69.Size = new System.Drawing.Size(84, 16);
+            this.label69.TabIndex = 183;
+            this.label69.Text = "Ultimo acceso";
+            this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_user_6
+            // 
+            this.lbl_user_6.AutoSize = true;
+            this.lbl_user_6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_6.Location = new System.Drawing.Point(12, 77);
+            this.lbl_user_6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_6.Name = "lbl_user_6";
+            this.lbl_user_6.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_6.TabIndex = 182;
+            this.lbl_user_6.Text = "Usuario";
             // 
             // btn_savepdf_6
             // 
@@ -2404,7 +2954,7 @@
             this.lbl_acceso_6.AutoSize = true;
             this.lbl_acceso_6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_acceso_6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_acceso_6.Location = new System.Drawing.Point(12, 58);
+            this.lbl_acceso_6.Location = new System.Drawing.Point(12, 60);
             this.lbl_acceso_6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_acceso_6.Name = "lbl_acceso_6";
             this.lbl_acceso_6.Size = new System.Drawing.Size(84, 16);
@@ -2632,7 +3182,11 @@
             // 
             // panel_7
             // 
-            this.panel_7.BackColor = System.Drawing.Color.Snow;
+            this.panel_7.BackColor = System.Drawing.Color.White;
+            this.panel_7.Controls.Add(this.label71);
+            this.panel_7.Controls.Add(this.label72);
+            this.panel_7.Controls.Add(this.label75);
+            this.panel_7.Controls.Add(this.label77);
             this.panel_7.Controls.Add(this.lbl_user_7);
             this.panel_7.Controls.Add(this.btn_savepdf_7);
             this.panel_7.Controls.Add(this.lbl_id_7);
@@ -2649,6 +3203,76 @@
             this.panel_7.Name = "panel_7";
             this.panel_7.Size = new System.Drawing.Size(233, 310);
             this.panel_7.TabIndex = 7;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.ForeColor = System.Drawing.Color.Silver;
+            this.label71.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label71.Location = new System.Drawing.Point(181, 74);
+            this.label71.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label71.Name = "label71";
+            this.label71.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label71.Size = new System.Drawing.Size(47, 16);
+            this.label71.TabIndex = 185;
+            this.label71.Text = "Usuario";
+            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.ForeColor = System.Drawing.Color.Silver;
+            this.label72.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label72.Location = new System.Drawing.Point(192, 42);
+            this.label72.Name = "label72";
+            this.label72.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label72.Size = new System.Drawing.Size(36, 16);
+            this.label72.TabIndex = 184;
+            this.label72.Text = "Email";
+            this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.ForeColor = System.Drawing.Color.Silver;
+            this.label75.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label75.Location = new System.Drawing.Point(178, 26);
+            this.label75.Name = "label75";
+            this.label75.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label75.Size = new System.Drawing.Size(52, 16);
+            this.label75.TabIndex = 183;
+            this.label75.Text = "Permisos";
+            this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.ForeColor = System.Drawing.Color.Silver;
+            this.label77.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label77.Location = new System.Drawing.Point(148, 58);
+            this.label77.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label77.Name = "label77";
+            this.label77.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label77.Size = new System.Drawing.Size(84, 16);
+            this.label77.TabIndex = 182;
+            this.label77.Text = "Ultimo acceso";
+            this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_user_7
+            // 
+            this.lbl_user_7.AutoSize = true;
+            this.lbl_user_7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user_7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_user_7.Location = new System.Drawing.Point(12, 75);
+            this.lbl_user_7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_user_7.Name = "lbl_user_7";
+            this.lbl_user_7.Size = new System.Drawing.Size(47, 16);
+            this.lbl_user_7.TabIndex = 181;
+            this.lbl_user_7.Text = "Usuario";
             // 
             // btn_savepdf_7
             // 
@@ -2730,7 +3354,7 @@
             this.lbl_acceso_7.AutoSize = true;
             this.lbl_acceso_7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_acceso_7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_acceso_7.Location = new System.Drawing.Point(12, 58);
+            this.lbl_acceso_7.Location = new System.Drawing.Point(12, 60);
             this.lbl_acceso_7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_acceso_7.Name = "lbl_acceso_7";
             this.lbl_acceso_7.Size = new System.Drawing.Size(84, 16);
@@ -3303,54 +3927,6 @@
             this.lbl_mesprocesados_8.TabIndex = 11;
             this.lbl_mesprocesados_8.Text = "0";
             // 
-            // lbl_user_0
-            // 
-            this.lbl_user_0.AutoSize = true;
-            this.lbl_user_0.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_user_0.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_user_0.Location = new System.Drawing.Point(12, 73);
-            this.lbl_user_0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_user_0.Name = "lbl_user_0";
-            this.lbl_user_0.Size = new System.Drawing.Size(47, 16);
-            this.lbl_user_0.TabIndex = 176;
-            this.lbl_user_0.Text = "Usuario";
-            // 
-            // lbl_user_1
-            // 
-            this.lbl_user_1.AutoSize = true;
-            this.lbl_user_1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_user_1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_user_1.Location = new System.Drawing.Point(12, 74);
-            this.lbl_user_1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_user_1.Name = "lbl_user_1";
-            this.lbl_user_1.Size = new System.Drawing.Size(47, 16);
-            this.lbl_user_1.TabIndex = 180;
-            this.lbl_user_1.Text = "Usuario";
-            // 
-            // lbl_user_2
-            // 
-            this.lbl_user_2.AutoSize = true;
-            this.lbl_user_2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_user_2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_user_2.Location = new System.Drawing.Point(12, 74);
-            this.lbl_user_2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_user_2.Name = "lbl_user_2";
-            this.lbl_user_2.Size = new System.Drawing.Size(47, 16);
-            this.lbl_user_2.TabIndex = 181;
-            this.lbl_user_2.Text = "Usuario";
-            // 
-            // lbl_user_3
-            // 
-            this.lbl_user_3.AutoSize = true;
-            this.lbl_user_3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_user_3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_user_3.Location = new System.Drawing.Point(12, 74);
-            this.lbl_user_3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_user_3.Name = "lbl_user_3";
-            this.lbl_user_3.Size = new System.Drawing.Size(47, 16);
-            this.lbl_user_3.TabIndex = 181;
-            this.lbl_user_3.Text = "Usuario";
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -3362,54 +3938,6 @@
             this.label16.Size = new System.Drawing.Size(47, 16);
             this.label16.TabIndex = 181;
             this.label16.Text = "Usuario";
-            // 
-            // lbl_user_4
-            // 
-            this.lbl_user_4.AutoSize = true;
-            this.lbl_user_4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_user_4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_user_4.Location = new System.Drawing.Point(12, 77);
-            this.lbl_user_4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_user_4.Name = "lbl_user_4";
-            this.lbl_user_4.Size = new System.Drawing.Size(47, 16);
-            this.lbl_user_4.TabIndex = 181;
-            this.lbl_user_4.Text = "Usuario";
-            // 
-            // lbl_user_5
-            // 
-            this.lbl_user_5.AutoSize = true;
-            this.lbl_user_5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_user_5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_user_5.Location = new System.Drawing.Point(12, 77);
-            this.lbl_user_5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_user_5.Name = "lbl_user_5";
-            this.lbl_user_5.Size = new System.Drawing.Size(47, 16);
-            this.lbl_user_5.TabIndex = 181;
-            this.lbl_user_5.Text = "Usuario";
-            // 
-            // lbl_user_6
-            // 
-            this.lbl_user_6.AutoSize = true;
-            this.lbl_user_6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_user_6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_user_6.Location = new System.Drawing.Point(12, 77);
-            this.lbl_user_6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_user_6.Name = "lbl_user_6";
-            this.lbl_user_6.Size = new System.Drawing.Size(47, 16);
-            this.lbl_user_6.TabIndex = 182;
-            this.lbl_user_6.Text = "Usuario";
-            // 
-            // lbl_user_7
-            // 
-            this.lbl_user_7.AutoSize = true;
-            this.lbl_user_7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_user_7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_user_7.Location = new System.Drawing.Point(12, 75);
-            this.lbl_user_7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_user_7.Name = "lbl_user_7";
-            this.lbl_user_7.Size = new System.Drawing.Size(47, 16);
-            this.lbl_user_7.TabIndex = 181;
-            this.lbl_user_7.Text = "Usuario";
             // 
             // frm_empleados
             // 
@@ -3713,5 +4241,37 @@
         private System.Windows.Forms.Label lbl_user_6;
         private System.Windows.Forms.Label lbl_user_7;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label77;
     }
 }

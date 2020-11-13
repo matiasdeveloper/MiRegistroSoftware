@@ -117,4 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pic_1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        mgAAAJoB3TZBEQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFDSURBVDhPY/j/
+        /z8Ktt3mqWW9zbPRZqvXFuutXs+B+JnVVq/NQH4DEKuhq0cwGhqYrLZ5lgE1/ADi/zjwN+st3gUM/xkY
+        UQwAaQZK7kZTjBtv8d4KMwRsANCJRVgV4sNAl4ANsNzhrgIU+IahAA277Aj5H7InDVnsGyhMGIAm1SEJ
+        YsUgzZtvnP9/6t5LoCGpcHGgy+sZgIxNMAFsGKb5ysMv/5deOfDffpsfXA4UOyADnsEEbLZ6/596ft3/
+        oqPtBDVD8TMUA8L3Zv4//+D9/0sPPv2vPN5PSDMIPwPFwGZkwdSDlf/P338H1khAM8QLoBSGLpFysBxs
+        CD7NIAwORFBUADkY0Ri5LxuvZiCGRCMoMYASBRYF+DEsIUEIBkZQ8sSqEBtGT8pIhoBcgi9VYs9MyBjk
+        L1DAQmMHFMV4svN/BgAjW0/1SHSjbAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="pic_2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        mgAAAJoB3TZBEQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFDSURBVDhPY/j/
+        /z8Ktt3mqWW9zbPRZqvXFuutXs+B+JnVVq/NQH4DEKuhq0cwGhqYrLZ5lgE1/ADi/zjwN+st3gUM/xkY
+        UQwAaQZK7kZTjBtv8d4KMwRsANCJRVgV4sNAl4ANsNzhrgIU+IahAA277Aj5H7InDVnsGyhMGIAm1SEJ
+        YsUgzZtvnP9/6t5LoCGpcHGgy+sZgIxNMAFsGKb5ysMv/5deOfDffpsfXA4UOyADnsEEbLZ6/596ft3/
+        oqPtBDVD8TMUA8L3Zv4//+D9/0sPPv2vPN5PSDMIPwPFwGZkwdSDlf/P338H1khAM8QLoBSGLpFysBxs
+        CD7NIAwORFBUADkY0Ri5LxuvZiCGRCMoMYASBRYF+DEsIUEIBkZQ8sSqEBtGT8pIhoBcgi9VYs9MyBjk
+        L1DAQmMHFMV4svN/BgAjW0/1SHSjbAAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

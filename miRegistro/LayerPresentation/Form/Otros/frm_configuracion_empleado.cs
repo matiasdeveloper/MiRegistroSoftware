@@ -1,9 +1,11 @@
-﻿using System;
+﻿using LayerBusiness;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,25 +14,146 @@ namespace LayerPresentation
 {
     public partial class frm_configuracion_empleado : Form
     {
-        public frm_configuracion_empleado(int id, string name, string permisos)
+        public frm_configuracion_empleado(int id, List<string> user, List<string> info, List<string> empleado)
         {
             InitializeComponent();
-            this.id = id;
-            lbl_id.Text = id.ToString();
-            lbl_nombreUser.Text = name;
-            lbl_permisos.Text = permisos;
-        }
-        private int id;
 
-        private void mostraPanelConfig(Panel pn, Button btn)
-        {
-            pn.Visible = true;
-            btn.Visible = false;
+            this.id = id;
+            this.user = user;
+            this.info = info;
+            this.empleado = empleado;
+
+            InitializeData();
         }
-        private void ocultarPanelConfig(Panel pn, Button btn)
+
+        // Move form with mouse down in bar
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+        Cn_Usuarios _cnObject = new Cn_Usuarios();
+
+        private int id;
+        List<string> user;
+        List<string> info;
+        List<string> empleado;
+
+        private bool isGood = true;
+        private Image check = LayerPresentation.Properties.Resources.check;
+        private Image checkOff = LayerPresentation.Properties.Resources.cerrar;
+
+        private void InitializeData() 
         {
-            pn.Visible = false;
-            btn.Visible = true;
+            txtBox_newUser_user.Text = user[0];
+            txtBox_newUser_pass.Text = "sininformacion";
+
+            comboBox_privileges.SelectedIndex = Convert.ToInt32(user[2]);
+
+            txtBox_newUser_nombre.Text = info[0];
+            txtBox_newUser_nombreCorto.Text = info[1];
+            txtBox_newUser_ciudad.Text = info[2];
+            txtBox_newUser_email.Text = info[3];
+
+            txtBox_newUser_nombreEmpleado.Text = empleado[0];
+            txtBox_newUser_salario.Text = empleado[1];
+            txtBox_newUser_observaciones.Text = empleado[2];
+        }
+        private void ClearFields(int id) 
+        {
+            switch (id) 
+            {
+                case 0:
+                    txtBox_newUser_user.Text = user[0];
+                    txtBox_newUser_pass.Text = "sininformacion";
+                    txtBox_newUser_pass.ForeColor = Color.LightGray;
+                    break;
+                case 1:
+                    txtBox_newUser_nombre.Text = info[0];
+                    txtBox_newUser_nombreCorto.Text = info[1];
+                    txtBox_newUser_ciudad.Text = info[2];
+                    txtBox_newUser_email.Text = info[3];
+                    break;
+                case 2:
+                    txtBox_newUser_nombreEmpleado.Text = empleado[0];
+                    txtBox_newUser_salario.Text = empleado[1];
+                    txtBox_newUser_observaciones.Text = empleado[2];
+                    break;
+                default:
+                    InitializeData();
+                    break;
+            }
+        }
+        
+        private string[] InitializeUser() 
+        {
+            List<string> data = new List<string>();
+            data.Add(txtBox_newUser_user.Text);
+            user[0] = txtBox_newUser_user.Text;
+
+            data.Add(txtBox_newUser_pass.Text);
+
+            if(comboBox_privileges.SelectedIndex == 1) 
+            {
+                data.Add("Estandar");
+                user[2] = "1";
+
+            }
+            else 
+            {
+                data.Add("Administrador");
+                user[2] = "0";
+
+            }
+
+            if (checkBox_privileges.Checked) 
+            {
+                data.Add("1");
+            } else 
+            {
+                data.Add("0");
+            }
+            return data.ToArray();
+        }
+        private string[] InitializeInfo() 
+        {
+            List<string> data = new List<string>();
+            data.Add(txtBox_newUser_nombre.Text);
+            data.Add(txtBox_newUser_nombreCorto.Text);
+            data.Add(txtBox_newUser_ciudad.Text);
+            data.Add(txtBox_newUser_email.Text);
+            data.Add(dtPick_newUser_fechaNacimiento.Value.ToString("MM/dd/yyyy"));
+
+            info[0] = txtBox_newUser_nombre.Text;
+            info[1] = txtBox_newUser_nombreCorto.Text;
+            info[2] = txtBox_newUser_ciudad.Text;
+            info[3] = txtBox_newUser_email.Text;
+
+            return data.ToArray();
+        }
+        private string[] InitializeEmpleado() 
+        {
+            List<string> data = new List<string>();
+            data.Add(dtPick_newUser_contratacion.Value.ToString("MM/dd/yyyy"));
+            data.Add(txtBox_newUser_salario.Text);
+            data.Add(txtBox_newUser_observaciones.Text);
+
+            empleado[1] = txtBox_newUser_salario.Text;
+            empleado[2] = txtBox_newUser_observaciones.Text;
+
+            return data.ToArray();
+        }
+        bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         // Buttons
@@ -44,132 +167,330 @@ namespace LayerPresentation
             this.WindowState = FormWindowState.Minimized;
         }
 
-        // User
-        private void btn_cambiar1_Click(object sender, EventArgs e)
+        private void txtBox_newUser_user_Enter(object sender, EventArgs e)
         {
-            mostraPanelConfig(pn_expand_1, btn_cambiar1);
+            if (txtBox_newUser_user.Text == user[0])
+            {
+                txtBox_newUser_user.ForeColor = Color.Black;
+                txtBox_newUser_user.Text = "";
+
+                pic_0.Visible = false;
+            }
         }
-        private void btn_save_user_Click(object sender, EventArgs e)
+        private void txtBox_newUser_user_Leave(object sender, EventArgs e)
         {
-            ocultarPanelConfig(pn_expand_1, btn_cambiar1);
+            if (txtBox_newUser_user.Text == "")
+            {
+                txtBox_newUser_user.ForeColor = Color.LightGray;
+                txtBox_newUser_user.Text = user[0];
+
+                isGood = false;
+            }
+            else
+            {
+                if (txtBox_newUser_user.Text.Length > 7)
+                {
+                    pic_0.Visible = true;
+                    pic_0.BackgroundImage = check;
+
+                    isGood = true;
+                }
+                else
+                {
+                    pic_0.Visible = true;
+                    pic_0.BackgroundImage = checkOff;
+
+                    isGood = false;
+                    MessageBox.Show("El usuario debe ser mayor o igual a 8 caracteres y no debe contener espacios!", "Atencion!");
+                }
+            }
+        }
+        private void txtBox_newUser_user_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
         }
 
-        private void btn_cancelar1_Click(object sender, EventArgs e)
+        private void txtBox_newUser_pass_Enter(object sender, EventArgs e)
         {
-            ocultarPanelConfig(pn_expand_1, btn_cambiar1);
+            if (txtBox_newUser_pass.Text == "sininformacion")
+            {
+                txtBox_newUser_pass.ForeColor = Color.Black;
+                txtBox_newUser_pass.Text = "";
+                txtBox_newUser_pass.UseSystemPasswordChar = true;
+
+                pic_1.Visible = false;
+
+                isGood = false;
+            }
+        }
+        private void txtBox_newUser_pass_Leave(object sender, EventArgs e)
+        {
+            if (txtBox_newUser_pass.Text == "")
+            {
+                txtBox_newUser_pass.ForeColor = Color.LightGray;
+                txtBox_newUser_pass.Text = "sininformacion";
+                txtBox_newUser_pass.UseSystemPasswordChar = false;
+
+                pic_1.Visible = false;
+
+                isGood = false;
+            }
+            else
+            {
+                if (txtBox_newUser_pass.Text.Length > 4)
+                {
+                    pic_1.Visible = true;
+                    pic_1.BackgroundImage = check;
+
+                    isGood = true;
+                }
+                else
+                {
+                    pic_1.Visible = true;
+                    pic_1.BackgroundImage = checkOff;
+
+                    isGood = false;
+                    MessageBox.Show("La contraseña debe ser mayor que 5 (cinco) caracteres!", "Atencion!");
+                }
+            }
+
+        }
+        private void txtBox_newUser_pass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
         }
 
-        // Pass
-        private void btn_cambiar2_Click(object sender, EventArgs e)
+        private void comboBox_privileges_SelectedIndexChanged(object sender, EventArgs e)
         {
-            mostraPanelConfig(pn_expand_2, btn_cambiar2);
-        }
-        private void btn_save_pass_Click(object sender, EventArgs e)
-        {
-            ocultarPanelConfig(pn_expand_2, btn_cambiar2);
-        }
-
-        private void btn_cancelar2_Click(object sender, EventArgs e)
-        {
-            ocultarPanelConfig(pn_expand_2, btn_cambiar2);
-        }
-
-        // Name
-        private void btn_cambiar3_Click(object sender, EventArgs e)
-        {
-            mostraPanelConfig(pn_expand_3, btn_cambiar3);
-        }
-        private void btn_cancelar3_Click(object sender, EventArgs e)
-        {
-            ocultarPanelConfig(pn_expand_3, btn_cambiar3);
-        }
-        private void btn_save_nombre_Click(object sender, EventArgs e)
-        {
-            ocultarPanelConfig(pn_expand_3, btn_cambiar3);
+            if(comboBox_privileges.SelectedIndex == 0) 
+            {
+                checkBox_privileges.Enabled = true;
+                checkBox_privileges.Checked = false;
+            }
+            else 
+            {
+                checkBox_privileges.Checked = false;
+                checkBox_privileges.Enabled = false;
+            }
         }
 
-        // Email
-        private void btn_cambiar4_Click(object sender, EventArgs e)
+        private void txtBox_newUser_nombre_Enter(object sender, EventArgs e)
         {
-            mostraPanelConfig(pn_expand_4, btn_cambiar4);
+            if (txtBox_newUser_nombre.Text == info[0])
+            {
+                txtBox_newUser_nombre.ForeColor = Color.Black;
+                txtBox_newUser_nombre.Text = "";
+
+                isGood = true;
+            }
         }
-        private void btn_save_email_Click(object sender, EventArgs e)
+        private void txtBox_newUser_nombre_Leave(object sender, EventArgs e)
         {
-            ocultarPanelConfig(pn_expand_4, btn_cambiar4);
+            if (txtBox_newUser_nombre.Text == "")
+            {
+                txtBox_newUser_nombre.ForeColor = Color.LightGray;
+                txtBox_newUser_nombre.Text = info[0];
+
+                isGood = true;
+            } else 
+            {
+                if(txtBox_newUser_nombre.Text == info[0]) 
+                {
+                    isGood = true;
+                }
+            }
         }
-        private void btn_cancelar4_Click_1(object sender, EventArgs e)
+        private void txtBox_newUser_nombreCorto_Enter(object sender, EventArgs e)
         {
-            ocultarPanelConfig(pn_expand_4, btn_cambiar4);
+            if (txtBox_newUser_nombreCorto.Text == info[1])
+            {
+                txtBox_newUser_nombreCorto.ForeColor = Color.Black;
+                txtBox_newUser_nombreCorto.Text = "";
+
+                isGood = true;
+            }
+        }
+        private void txtBox_newUser_nombreCorto_Leave(object sender, EventArgs e)
+        {
+            if (txtBox_newUser_nombreCorto.Text == "")
+            {
+                txtBox_newUser_nombreCorto.ForeColor = Color.LightGray;
+                txtBox_newUser_nombreCorto.Text = info[1];
+
+                isGood = true;
+            }
+            else
+            {
+                if (txtBox_newUser_nombreCorto.Text == info[1])
+                {
+                    isGood = true;
+                }
+            }
+        }
+        private void txtBox_newUser_ciudad_Enter(object sender, EventArgs e)
+        {
+            if (txtBox_newUser_ciudad.Text == info[2])
+            {
+                txtBox_newUser_ciudad.ForeColor = Color.Black;
+                txtBox_newUser_ciudad.Text = "";
+
+                isGood = true;
+            }
+        }
+        private void txtBox_newUser_ciudad_Leave(object sender, EventArgs e)
+        {
+            if (txtBox_newUser_ciudad.Text == "")
+            {
+                txtBox_newUser_ciudad.ForeColor = Color.LightGray;
+                txtBox_newUser_ciudad.Text = info[2];
+
+                isGood = true;
+            }
+            else
+            {
+                if (txtBox_newUser_ciudad.Text == info[2])
+                {
+                    isGood = true;
+                }
+            }
         }
 
-        // City
-        private void btn_cambiar5_Click(object sender, EventArgs e)
+        private void txtBox_newUser_email_Enter(object sender, EventArgs e)
         {
-            mostraPanelConfig(pn_expand_5, btn_cambiar5);
+            if (txtBox_newUser_email.Text == info[3])
+            {
+                txtBox_newUser_email.ForeColor = Color.Black;
+                txtBox_newUser_email.Text = "";
+
+                pic_2.Visible = false;
+
+                isGood = true;
+            }
         }
-        private void btn_cancelar5_Click(object sender, EventArgs e)
+        private void txtBox_newUser_email_Leave(object sender, EventArgs e)
         {
-            ocultarPanelConfig(pn_expand_5, btn_cambiar5);
+            if (txtBox_newUser_email.Text == "")
+            {
+                txtBox_newUser_email.ForeColor = Color.LightGray;
+                txtBox_newUser_email.Text = info[3];
+
+                pic_2.Visible = false;
+            }
+            else
+            {
+                if (IsValidEmail(txtBox_newUser_email.Text))
+                {
+                    pic_2.Visible = true;
+                    pic_2.BackgroundImage = check;
+
+                    isGood = true;
+                }
+                else
+                {
+                    pic_2.Visible = true;
+                    pic_2.BackgroundImage = checkOff;
+
+                    isGood = false;
+                    MessageBox.Show("Introduce un email valido '@outlook @gmail @yahoo @hotmail' para continuar!", "Atencion!");
+                }
+            }
+
         }
-        private void btn_save_ciudad_Click(object sender, EventArgs e)
+        private void txtBox_newUser_observaciones_Enter(object sender, EventArgs e)
         {
-            ocultarPanelConfig(pn_expand_5, btn_cambiar5);
+            if (txtBox_newUser_observaciones.Text == empleado[2])
+            {
+                txtBox_newUser_observaciones.ForeColor = Color.Black;
+                txtBox_newUser_observaciones.Text = "";
+            }
+        }
+        private void txtBox_newUser_observaciones_Leave(object sender, EventArgs e)
+        {
+            if (txtBox_newUser_observaciones.Text == "")
+            {
+                txtBox_newUser_observaciones.ForeColor = Color.LightGray;
+                txtBox_newUser_observaciones.Text = empleado[2];
+            }
+        }
+        private void txtBox_newUser_salario_Enter(object sender, EventArgs e)
+        {
+            if (txtBox_newUser_salario.Text == empleado[1])
+            {
+                txtBox_newUser_salario.ForeColor = Color.Black;
+                txtBox_newUser_salario.Text = "";
+            }
+        }
+        private void txtBox_newUser_salario_Leave(object sender, EventArgs e)
+        {
+            if (txtBox_newUser_salario.Text == "")
+            {
+                txtBox_newUser_salario.ForeColor = Color.LightGray;
+                txtBox_newUser_salario.Text = empleado[1];
+            }
+        }
+        // Update click
+        private void btn_updatauser_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Estas seguro que deseas actualizar la informacion de sesion?" + "\nUsuario: " + txtBox_newUser_nombre.Text, "Atencion!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if (isGood && txtBox_newUser_pass.Text != "sininformacion") 
+                {
+                    string[] data = InitializeUser();
+                    // Update user sesion
+                    _cnObject.UpdateUserData(id, data);
+                    frm_successdialog frm = new frm_successdialog(8);
+                    frm.Show();
+
+                    ClearFields(0);
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese correctamente los datos!", "Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        private void btn_updateinfo_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Estas seguro que deseas actualizar la informacion?" + "\nUsuario: " + txtBox_newUser_nombre.Text, "Atencion!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if (isGood) 
+                {
+                    string[] data = InitializeInfo();
+                    // Update user info
+                    _cnObject.UpdateUserInfo(id, data);
+                    frm_successdialog frm = new frm_successdialog(8);
+                    frm.Show();
+
+                    ClearFields(1);
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese correctamente los datos!", "Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        private void btn_updateempleado_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Estas seguro que deseas actualizar la informacion de empleado?" + "\nEmpleado: " + txtBox_newUser_nombreEmpleado.Text, "Atencion!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string[] data = InitializeEmpleado();
+                // Update user empleado
+                _cnObject.UpdateUserEmpleado(id, data);
+                frm_successdialog frm = new frm_successdialog(8);
+                frm.Show();
+            }
         }
 
-        // Birthday
-        private void btn_cambiar6_Click(object sender, EventArgs e)
+        private void barra_titulo_MouseDown(object sender, MouseEventArgs e)
         {
-            mostraPanelConfig(pn_expand_6, btn_cambiar6);
-        }
-        private void btn_cancelar6_Click(object sender, EventArgs e)
-        {
-            ocultarPanelConfig(pn_expand_6, btn_cambiar6);
-        }
-        private void btn_save_fecha_Click(object sender, EventArgs e)
-        {
-            ocultarPanelConfig(pn_expand_6, btn_cambiar6);
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        // Name Employee
-        private void btn_cambiar7_Click(object sender, EventArgs e)
+        private void label50_MouseDown(object sender, MouseEventArgs e)
         {
-            mostraPanelConfig(pn_expand_7, btn_cambiar7);
-        }
-        private void btn_cancelar7_Click(object sender, EventArgs e)
-        {
-            ocultarPanelConfig(pn_expand_7, btn_cambiar7);
-        }
-        private void btn_save_nameEmployee_Click(object sender, EventArgs e)
-        {
-            ocultarPanelConfig(pn_expand_7, btn_cambiar7);
-        }
-
-        // Fecha Employee Contrat
-        private void btn_cambiar8_Click(object sender, EventArgs e)
-        {
-            mostraPanelConfig(pn_expand_8, btn_cambiar8);
-        }
-        private void btn_cancelar8_Click(object sender, EventArgs e)
-        {
-            ocultarPanelConfig(pn_expand_8, btn_cambiar8);
-        }
-        private void btn_save_fechaContratacion_Click(object sender, EventArgs e)
-        {
-            ocultarPanelConfig(pn_expand_8, btn_cambiar8);
-        }
-
-        // Permisos
-        private void btn_cambiar9_Click(object sender, EventArgs e)
-        {
-            mostraPanelConfig(pn_expand_9, btn_cambiar9);
-        }
-        private void btn_cancelar9_Click(object sender, EventArgs e)
-        {
-            ocultarPanelConfig(pn_expand_9, btn_cambiar9);
-        }
-        private void btn_save_permisos_Click(object sender, EventArgs e)
-        {
-            ocultarPanelConfig(pn_expand_9, btn_cambiar9);
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

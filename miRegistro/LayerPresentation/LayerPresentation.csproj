@@ -106,6 +106,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\DataUsers.cs" />
     <Compile Include="Clases\ColorSystem.cs" />
     <Compile Include="Clases\CreatorTables.cs" />
     <Compile Include="Clases\DataFormularios.cs" />

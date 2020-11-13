@@ -11,7 +11,10 @@
       <Value Profile="(Default)">Data Source=LAPTOP-NITRO5\SQLEXPRESS;Initial Catalog=miRegistro;Integrated Security=True</Value>
     </Setting>
     <Setting Name="ConReal" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Server=tcp:rna-argentina.database.windows.net,1433;Initial Catalog=MiRegistroCalafateSC;Persist Security Info=False;User ID=adminrna;Password=registro998P;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;</Value>
+      <Value Profile="(Default)">Data Source=rna-argentina.database.windows.net;Initial Catalog=MiRegistroCalafateSC;Persist Security Info=True;User ID=adminrna;Password=registro998P</Value>
+    </Setting>
+    <Setting Name="ConPrueba" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=LAPTOP-NITRO5\SQLEXPRESS;Initial Catalog=miRegistro;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

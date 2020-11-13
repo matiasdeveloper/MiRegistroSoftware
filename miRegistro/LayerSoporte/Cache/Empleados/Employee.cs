@@ -12,6 +12,7 @@ namespace LayerSoporte.Cache
         public int id;
         public string usuario;
         public string nombre;
+        public string nombreCorto;
         public string nombreCompleto;
         public string privilegios;
         public string city;
@@ -25,11 +26,12 @@ namespace LayerSoporte.Cache
         public string salario;
         public string observaciones;
 
-        public Employee(int id, string usuario, string nombre, string nombreCompleto, string privilegios, string city, string email, DateTime fechaNacimiento, DateTime fechaAcceso,string cellphone, DataTable tramitesMes, DataTable alertas, DateTime fechaContratacion, string salario, string observaciones)
+        public Employee(int id, string usuario, string nombre, string nombreCorto ,string nombreCompleto, string privilegios, string city, string email, DateTime fechaNacimiento, DateTime fechaAcceso,string cellphone, DataTable tramitesMes, DataTable alertas, DateTime fechaContratacion, string salario, string observaciones)
         {
             this.id = id;
             this.usuario = usuario;
-            this.nombreCompleto = nombre;
+            this.nombreCorto = nombreCorto;
+            this.nombreCompleto = nombreCompleto;
             this.nombre = nombre;
             this.privilegios = privilegios;
             this.city = city;

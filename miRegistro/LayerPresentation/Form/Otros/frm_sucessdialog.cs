@@ -45,6 +45,14 @@ namespace LayerPresentation
                     lbl_tittle.Text = "Excelente!!";
                     lbl_info.Text = "Consulta generada correctamente.";
                     break;
+                case 7:
+                    lbl_tittle.Text = "Excelente!";
+                    lbl_info.Text = "Usuario ingresado correctamente.";
+                    break;
+                case 8:
+                    lbl_tittle.Text = "Excelente!";
+                    lbl_info.Text = "Usuario actualizado correctamente.";
+                    break;
             }
         }
 

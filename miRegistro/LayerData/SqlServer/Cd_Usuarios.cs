@@ -16,13 +16,47 @@ namespace LayerData
         SqlCommand _command = new SqlCommand();
 
         #region LoginUser
-        public bool AddUser(List<string>[] data)
+        public bool AddUser(List<string> login, List<string> info, List<string> empleado)
         {
             bool resultado = false;
+            string query_user = "INSERT INTO Users VALUES('"+login[0]+"', CAST('"+login[1]+"' AS VARBINARY(MAX)), '"+login[2]+"', CAST('probando respuesta' AS VARBINARY(MAX)), '0')";
+            string query_info = " INSERT INTO Info_users VALUES(SCOPE_IDENTITY(),'"+info[0]+"','"+info[1]+"', '"+info[2]+"','"+info[3]+"', GETDATE(), GETDATE(), '-')";
 
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = query_user + "\n" +query_info;
+            _command.CommandType = CommandType.Text;
+            _command.ExecuteNonQuery();
+            _conn.closeConnection();
+
+            int lastId = GetLastId();
+
+            _command.Connection = _conn.openConnetion();
+            string query_empleado = "INSERT INTO Empleados VALUES('" + lastId + "', '" + empleado[0] + "', '" + empleado[1] + "', '1000', 'Ninguna')";
+            _command.CommandText = query_empleado;
+            _command.ExecuteNonQuery();
+            _conn.closeConnection();
 
             return resultado;
         }
+        public int GetLastId()
+        {
+            int id = 0;
+            string q = "SELECT COUNT(*) FROM Users";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _read = _command.ExecuteReader();
+
+            while (_read.Read())
+            {
+                id = _read.GetInt32(0);
+            }
+
+            _conn.closeConnection();
+
+            return id;
+        }
+        
         public int Autentificar(string user, string password) 
         {
             int resultado = -1;
@@ -245,6 +279,40 @@ namespace LayerData
         #endregion
 
         #region UpdateUsers
+        public void UpdateUserData(int id, string[] user)
+        {
+            string q = "UPDATE Users SET Usuario = '" + user[0] + "', Contraseña = CAST('" + user[1] + "' AS VARBINARY(MAX)), Type_user = '" + user[2] + "', isRoot = "+Convert.ToInt32(user[3])+" WHERE Id = " + id + "";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _command.CommandType = CommandType.Text;
+            _command.ExecuteNonQuery();
+
+            _conn.closeConnection();
+        }
+        public void UpdateUserInfo(int id, string[] info)
+        {
+            string q = "UPDATE Info_users SET Nombre = '" + info[0] + "', Nombre_corto = '" + info[1] + "', Ciudad = '" + info[2] + "', Email = '" + info[3] + "', Fecha_nacimiento = CONVERT(VARCHAR, '" + info[4] + "', 100) WHERE Id = " + id + "";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _command.CommandType = CommandType.Text;
+            _command.ExecuteNonQuery();
+
+            _conn.closeConnection();
+        }
+        public void UpdateUserEmpleado(int id, string[] empleado)
+        {
+            string q = "UPDATE Empleados SET Fecha_contratacion = CONVERT(VARCHAR, '" + empleado[0] + "', 100), Salario ='" + empleado[1]+"' , Observaciones = '"+empleado[2]+"' WHERE Cod_empleado = " + id + "";
+
+            _command.Connection = _conn.openConnetion();
+            _command.CommandText = q;
+            _command.CommandType = CommandType.Text;
+            _command.ExecuteNonQuery();
+
+            _conn.closeConnection();
+        }
+       
         public void UpdateUser(int id,  string user)
         {
             string q = "UPDATE Users SET Usuario = '"+ user +"' WHERE Id = "+ id +"";

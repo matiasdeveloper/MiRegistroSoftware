@@ -14,9 +14,9 @@ namespace LayerBusiness
     {
         private Cd_Usuarios _cdObject = new Cd_Usuarios();
 
-        public bool AddUser(List<string>[] data) 
+        public bool AddUser(List<string>[] data)
         {
-            bool isOk = _cdObject.AddUser(data);
+            bool isOk = _cdObject.AddUser(data[0], data[1], data[2]);
             return isOk;
         }
         public Tuple<bool, string> RecoverPassword(string userRequest) 
@@ -47,6 +47,18 @@ namespace LayerBusiness
             return _dtTable;
         }
         #region Update User
+        public void UpdateUserData(int id, string[] user) 
+        {
+            _cdObject.UpdateUserData(id, user);
+        }
+        public void UpdateUserInfo(int id, string[] info)
+        {
+            _cdObject.UpdateUserInfo(id, info);
+        }
+        public void UpdateUserEmpleado(int id, string[] empleado)
+        {
+            _cdObject.UpdateUserEmpleado(id, empleado);
+        }
         public void UpdateUser(int id, string user) 
         {
             _cdObject.UpdateUser(id, user);

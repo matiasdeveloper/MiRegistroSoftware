@@ -302,42 +302,50 @@ namespace LayerPresentation
         // Edit buttons
         private void btn_edit_0_Click(object sender, EventArgs e)
         {
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_0.Text),lbl_nombre_0.Text, lbl_permisos_0.Text);
+            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_0.Text));
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_0.Text),data[0], data[1], data[2]);
             frm.Show();
         }
         private void btn_edit_1_Click(object sender, EventArgs e)
         {
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_1.Text), lbl_nombre_1.Text, lbl_permisos_1.Text);
+            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_1.Text));
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_1.Text), data[0], data[1], data[2]);
             frm.Show();
         }
         private void btn_edit_2_Click(object sender, EventArgs e)
         {
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_2.Text), lbl_nombre_2.Text, lbl_permisos_2.Text);
+            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_2.Text));
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_2.Text), data[0], data[1], data[2]);
             frm.Show();
         }
         private void btn_edit_3_Click(object sender, EventArgs e)
         {
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_3.Text), lbl_nombre_3.Text, lbl_permisos_3.Text);
+            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_3.Text));
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_3.Text), data[0], data[1], data[2]);
             frm.Show();
         }
         private void btn_edit_4_Click(object sender, EventArgs e)
         {
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_4.Text), lbl_nombre_4.Text, lbl_permisos_4.Text);
+            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_4.Text));
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_4.Text), data[0], data[1], data[2]);
             frm.Show();
         }
         private void btn_edit_5_Click(object sender, EventArgs e)
         {
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_5.Text), lbl_nombre_5.Text, lbl_permisos_5.Text);
+            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_5.Text));
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_5.Text), data[0], data[1], data[2]);
             frm.Show();
         }
         private void btn_edit_6_Click(object sender, EventArgs e)
         {
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_6.Text), lbl_nombre_6.Text, lbl_permisos_6.Text);
+            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_6.Text));
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_6.Text), data[0], data[1], data[2]);
             frm.Show();
         }
         private void btn_edit_7_Click(object sender, EventArgs e)
         {
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_7.Text), lbl_nombre_7.Text, lbl_permisos_7.Text);
+            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_7.Text));
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_7.Text), data[0], data[1], data[2]);
             frm.Show();
         }
        
