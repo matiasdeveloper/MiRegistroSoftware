@@ -14,6 +14,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -60,6 +60,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Main_Logo_Mesa de trabajo 1.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -168,11 +171,11 @@
     <Compile Include="Form\Login\frm_login.Designer.cs">
       <DependentUpon>frm_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Login\Login_recoverPassword.cs">
+    <Compile Include="Form\Login\frm_recoverpassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Login\Login_recoverPassword.Designer.cs">
-      <DependentUpon>Login_recoverPassword.cs</DependentUpon>
+    <Compile Include="Form\Login\frm_recoverpassword.Designer.cs">
+      <DependentUpon>frm_recoverpassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Principal\frm_tramites.cs">
       <SubType>Form</SubType>
@@ -276,8 +279,8 @@
     <EmbeddedResource Include="Form\Login\frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Login\Login_recoverPassword.resx">
-      <DependentUpon>Login_recoverPassword.cs</DependentUpon>
+    <EmbeddedResource Include="Form\Login\frm_recoverpassword.resx">
+      <DependentUpon>frm_recoverpassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Otros\Tramites\frm_tramites_insertar.resx">
       <DependentUpon>frm_tramites_insertar.cs</DependentUpon>
@@ -342,7 +345,11 @@
       <Name>LayerSoporte</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Main_Logo_Mesa de trabajo 1.ico" />
+    <None Include="Resources\Main_Logo_Mesa de trabajo 1.png" />
+    <None Include="Resources\Main_Icon_Mesa de trabajo 1.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\alfiler.png" />
   </ItemGroup>

@@ -107,14 +107,15 @@ namespace LayerPresentation
                     frm_principal _objUI = new frm_principal();
                     _objUI.FormClosed += Logout;
 
-                    Bienvenida objUI = new Bienvenida(_objUI);
+                    frm_bienvenida objUI = new frm_bienvenida(_objUI, this);
                     objUI.Show();
-                    objUI.FormClosed += Logout;
+                    //objUI.FormClosed += Logout;
 
                     this.Opacity = 0;
-                    this.Hide();
                     this.ShowIcon = false;
                     this.ShowInTaskbar = false;
+
+                    this.Hide();
                 }
                 else
                 {
@@ -155,16 +156,20 @@ namespace LayerPresentation
             }
         }
         
-        private void Logout(object sender, FormClosedEventArgs e)
+        public void Logout(object sender, FormClosedEventArgs e)
         {
+            this.Show();
+            this.Opacity = 100;
+            this.WindowState = FormWindowState.Normal;
+
+            this.ShowIcon = true;
+            this.ShowInTaskbar = true;
+
             txtBox_pass.Clear();
             txtBox_user.Text = "Usuario";
             txtBox_user.Clear();
             txtBox_pass.Text = "Contraseña";
             txtBox_pass.UseSystemPasswordChar = false;
-            this.Show();
-            this.ShowIcon = true;
-            this.ShowInTaskbar = true;
             FindSavedUser();
         }
 

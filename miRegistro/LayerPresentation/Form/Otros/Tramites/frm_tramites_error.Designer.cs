@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_tramites_error));
             this.barra_titulo = new System.Windows.Forms.Panel();
             this.lbl_id = new System.Windows.Forms.Label();
             this.lbl_tittle = new System.Windows.Forms.Label();
@@ -72,11 +73,11 @@
             // lbl_id
             // 
             this.lbl_id.AutoSize = true;
-            this.lbl_id.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_id.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.ForeColor = System.Drawing.Color.LightGray;
             this.lbl_id.Location = new System.Drawing.Point(195, 6);
             this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(27, 19);
+            this.lbl_id.Size = new System.Drawing.Size(28, 21);
             this.lbl_id.TabIndex = 9;
             this.lbl_id.Text = "00";
             // 
@@ -109,7 +110,6 @@
             this.checkBox_errores.AutoSize = true;
             this.checkBox_errores.Checked = true;
             this.checkBox_errores.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_errores.Enabled = false;
             this.checkBox_errores.Location = new System.Drawing.Point(31, 201);
             this.checkBox_errores.Name = "checkBox_errores";
             this.checkBox_errores.Size = new System.Drawing.Size(102, 21);
@@ -361,10 +361,11 @@
             this.Controls.Add(this.barra_titulo);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_tramites_error";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "-";
+            this.Text = "Marcar error";
             this.Load += new System.EventHandler(this.frm_tramites_error_Load);
             this.barra_titulo.ResumeLayout(false);
             this.barra_titulo.PerformLayout();

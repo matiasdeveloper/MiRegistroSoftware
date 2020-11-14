@@ -13,12 +13,13 @@ using LayerSoporte.Cache;
 
 namespace LayerPresentation
 {
-    public partial class Bienvenida : Form
+    public partial class frm_bienvenida : Form
     {
-        public Bienvenida(frm_principal principal)
+        public frm_bienvenida(frm_principal principal, frm_login login)
         {
             InitializeComponent();
             frm = principal;
+            this.login = login;
             ColorSystem.frm = principal;
         }
 
@@ -27,6 +28,7 @@ namespace LayerPresentation
         private Cn_Formularios _cnFormularios = new Cn_Formularios();
 
         frm_principal frm;
+        frm_login login;
         int count = 0;
         
         private void intializeText() 
@@ -61,12 +63,13 @@ namespace LayerPresentation
                 if (this.Opacity == 0)
                 {
                     timer1.Stop();
-                    this.Close();
                     frm.Show();
                     frm.Opacity = 100;
+                    this.Close();
                 }
             }
         }
+
         private void Bienvenida_Load(object sender, EventArgs e)
         {
             intializeText();
@@ -74,6 +77,9 @@ namespace LayerPresentation
 
             this.Opacity = 0;
             timer1.Start();
+
+            this.ShowIcon = true;
+            this.ShowInTaskbar = false;
         }
     }
 }

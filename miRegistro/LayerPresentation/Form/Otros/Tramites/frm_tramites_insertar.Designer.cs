@@ -104,9 +104,9 @@
             this.comboBox_tipoError.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox_tipoError.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_tipoError.FormattingEnabled = true;
-            this.comboBox_tipoError.Location = new System.Drawing.Point(55, 333);
+            this.comboBox_tipoError.Location = new System.Drawing.Point(49, 333);
             this.comboBox_tipoError.Name = "comboBox_tipoError";
-            this.comboBox_tipoError.Size = new System.Drawing.Size(118, 25);
+            this.comboBox_tipoError.Size = new System.Drawing.Size(124, 25);
             this.comboBox_tipoError.TabIndex = 1;
             this.comboBox_tipoError.ValueMember = "Cod_Errores";
             // 
@@ -139,7 +139,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.ForeColor = System.Drawing.Color.Gray;
             this.label3.Location = new System.Drawing.Point(57, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 16);
@@ -150,7 +150,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.ForeColor = System.Drawing.Color.Gray;
             this.label7.Location = new System.Drawing.Point(57, 287);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 16);
@@ -162,7 +162,7 @@
             this.comboBox_empleados.DisplayMember = "Nombre";
             this.comboBox_empleados.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_empleados.FormattingEnabled = true;
-            this.comboBox_empleados.Location = new System.Drawing.Point(53, 212);
+            this.comboBox_empleados.Location = new System.Drawing.Point(49, 212);
             this.comboBox_empleados.Name = "comboBox_empleados";
             this.comboBox_empleados.Size = new System.Drawing.Size(252, 25);
             this.comboBox_empleados.TabIndex = 66;
@@ -182,7 +182,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.ForeColor = System.Drawing.Color.Gray;
             this.label5.Location = new System.Drawing.Point(57, 241);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(139, 16);
@@ -194,7 +194,7 @@
             this.comboBox_tramites.DisplayMember = "Nombre";
             this.comboBox_tramites.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_tramites.FormattingEnabled = true;
-            this.comboBox_tramites.Location = new System.Drawing.Point(53, 162);
+            this.comboBox_tramites.Location = new System.Drawing.Point(49, 162);
             this.comboBox_tramites.Name = "comboBox_tramites";
             this.comboBox_tramites.Size = new System.Drawing.Size(252, 25);
             this.comboBox_tramites.TabIndex = 61;
@@ -204,7 +204,7 @@
             // 
             this.textBox_dominio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_dominio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_dominio.Location = new System.Drawing.Point(53, 67);
+            this.textBox_dominio.Location = new System.Drawing.Point(49, 67);
             this.textBox_dominio.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.textBox_dominio.Name = "textBox_dominio";
             this.textBox_dominio.Size = new System.Drawing.Size(252, 22);
@@ -214,7 +214,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.ForeColor = System.Drawing.Color.Gray;
             this.label6.Location = new System.Drawing.Point(57, 191);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(245, 16);
@@ -225,7 +225,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.ForeColor = System.Drawing.Color.Gray;
             this.label2.Location = new System.Drawing.Point(57, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(228, 16);
@@ -236,7 +236,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.ForeColor = System.Drawing.Color.Gray;
             this.label4.Location = new System.Drawing.Point(57, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(224, 16);
@@ -288,7 +288,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DimGray;
+            this.label8.ForeColor = System.Drawing.Color.Gray;
             this.label8.Location = new System.Drawing.Point(57, 374);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 16);
@@ -325,7 +325,7 @@
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(136, 287);
+            this.label10.Location = new System.Drawing.Point(141, 287);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(14, 16);
             this.label10.TabIndex = 119;
@@ -427,7 +427,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_tramites_insertar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_tramites_insertar";
+            this.Text = "Insertar / Editar";
             this.Load += new System.EventHandler(this.frm_tramites_insertar_Load);
             this.barra_titulo.ResumeLayout(false);
             this.barra_titulo.PerformLayout();

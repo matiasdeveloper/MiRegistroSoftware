@@ -37,6 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_formularios_alerta));
             this.barra_titulo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_minimize = new System.Windows.Forms.PictureBox();
@@ -389,9 +390,10 @@
             this.Controls.Add(this.dg_formulariosAlert);
             this.Controls.Add(this.barra_titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_formularios_alerta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_formularios_alerta";
+            this.Text = "Alerta de stock";
             this.Load += new System.EventHandler(this.frm_formularios_alerta_Load);
             this.barra_titulo.ResumeLayout(false);
             this.barra_titulo.PerformLayout();

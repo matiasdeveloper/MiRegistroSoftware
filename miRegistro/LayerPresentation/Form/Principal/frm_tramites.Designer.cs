@@ -1128,6 +1128,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_tramites";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "0";
             this.Load += new System.EventHandler(this.frm_tramites_consultas_Load);
             this.panel9.ResumeLayout(false);

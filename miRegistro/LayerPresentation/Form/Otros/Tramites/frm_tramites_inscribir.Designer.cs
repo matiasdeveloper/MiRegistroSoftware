@@ -207,7 +207,7 @@
             // lbl_id
             // 
             resources.ApplyResources(this.lbl_id, "lbl_id");
-            this.lbl_id.ForeColor = System.Drawing.Color.White;
+            this.lbl_id.ForeColor = System.Drawing.Color.LightGray;
             this.lbl_id.Name = "lbl_id";
             // 
             // barra_titulo

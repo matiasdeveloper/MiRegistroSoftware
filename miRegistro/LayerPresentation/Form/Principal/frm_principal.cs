@@ -219,8 +219,6 @@ namespace LayerPresentation
             if (MessageBox.Show("Estas seguro que deseas cerrar sesion?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 this.Close();
-                frm_login log = new frm_login();
-                log.Show();
             }
         }
 

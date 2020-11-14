@@ -3951,6 +3951,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_empleados";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "frm_empleados";
             this.Load += new System.EventHandler(this.frm_empleados_Load);
             this.panel5.ResumeLayout(false);

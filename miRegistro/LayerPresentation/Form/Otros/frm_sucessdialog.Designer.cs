@@ -109,7 +109,7 @@
             this.Name = "frm_successdialog";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "-";
+            this.Text = "Exito";
             this.Load += new System.EventHandler(this.frm_successdialog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

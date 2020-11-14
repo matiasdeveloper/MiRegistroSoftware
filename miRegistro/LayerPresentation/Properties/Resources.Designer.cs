@@ -433,6 +433,26 @@ namespace LayerPresentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Main_Icon_Mesa_de_trabajo_1 {
+            get {
+                object obj = ResourceManager.GetObject("Main_Icon_Mesa de trabajo 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Main_Logo_Mesa_de_trabajo_1 {
+            get {
+                object obj = ResourceManager.GetObject("Main_Logo_Mesa de trabajo 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap masculino {
             get {
                 object obj = ResourceManager.GetObject("masculino", resourceCulture);

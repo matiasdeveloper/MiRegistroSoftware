@@ -1,6 +1,6 @@
 ﻿namespace LayerPresentation
 {
-    partial class Login_recoverPassword
+    partial class frm_recoverpassword
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_recoverPassword));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_recoverpassword));
             this.label1 = new System.Windows.Forms.Label();
             this.txtUserRequest = new System.Windows.Forms.TextBox();
             this.btn_send = new System.Windows.Forms.Button();
@@ -317,7 +317,7 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // Login_recoverPassword
+            // frm_recoverpassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -345,10 +345,10 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Login_recoverPassword";
+            this.Name = "frm_recoverpassword";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Enviar mi contraseña al correo electronico";
+            this.Text = "Restablecer Contraseña";
             this.Load += new System.EventHandler(this.Login_recoverPassword_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_recoverPassword_MouseDown);
             this.barra_titulo.ResumeLayout(false);

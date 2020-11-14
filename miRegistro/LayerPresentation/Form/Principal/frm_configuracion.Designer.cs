@@ -2430,6 +2430,8 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_configuracion";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "frm_configuracion";
             this.Load += new System.EventHandler(this.frm_configuracion_Load);
             this.panel_configUser.ResumeLayout(false);

@@ -918,10 +918,11 @@
             this.Controls.Add(this.barra_titulo);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_configuracion_empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_configuracion_empleado";
+            this.Text = "Configuracion empleado";
             this.barra_titulo.ResumeLayout(false);
             this.barra_titulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();

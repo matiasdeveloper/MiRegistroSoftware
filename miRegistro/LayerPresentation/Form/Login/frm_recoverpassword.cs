@@ -12,10 +12,10 @@ using LayerBusiness;
 
 namespace LayerPresentation
 {
-    public partial class Login_recoverPassword : Form
+    public partial class frm_recoverpassword : Form
     {
 
-        public Login_recoverPassword()
+        public frm_recoverpassword()
         {
             InitializeComponent();
         }
