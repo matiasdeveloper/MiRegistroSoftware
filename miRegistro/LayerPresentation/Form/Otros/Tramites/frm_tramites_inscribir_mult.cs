@@ -138,17 +138,6 @@ namespace LayerPresentation
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        private void dateTime_fecha_ValueChanged(object sender, EventArgs e)
-        {      
-            this.dg_tramites.AutoGenerateColumns = false;
-            this.dg_tramites.DataSource = DataTramites.GetTableDate(data, dateTime_fecha.Value, dateTime_fecha.Value);
-            this.dg_tramites.SelectAll();
-        }
-        private void frm_tramites_inscribir_mult_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void dg_tramites_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Inscripto")
@@ -172,6 +161,16 @@ namespace LayerPresentation
                     e.CellStyle.BackColor = Color.FromArgb(41, 217, 85);
                 }
             }
+        }
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            this.dg_tramites.AutoGenerateColumns = false;
+            this.dg_tramites.DataSource = DataTramites.GetTableDate(data, dateTime_fecha.Value, dateTime_fecha.Value.AddDays(1));
+            this.dg_tramites.SelectAll();
+        }
+        private void frm_tramites_inscribir_mult_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

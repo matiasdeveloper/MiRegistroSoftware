@@ -123,7 +123,7 @@
             // 
             this.btn_simple_diaria.BackColor = System.Drawing.Color.White;
             this.btn_simple_diaria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_simple_diaria.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
+            this.btn_simple_diaria.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btn_simple_diaria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_simple_diaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_simple_diaria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,7 +141,7 @@
             // 
             this.btn_simple_dominio.BackColor = System.Drawing.Color.White;
             this.btn_simple_dominio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_simple_dominio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
+            this.btn_simple_dominio.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btn_simple_dominio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_simple_dominio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_simple_dominio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,7 +159,7 @@
             // 
             this.btn_simple_empleado.BackColor = System.Drawing.Color.White;
             this.btn_simple_empleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_simple_empleado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
+            this.btn_simple_empleado.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btn_simple_empleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_simple_empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_simple_empleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -178,7 +178,7 @@
             // 
             this.btn_simple_fecha.BackColor = System.Drawing.Color.White;
             this.btn_simple_fecha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_simple_fecha.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
+            this.btn_simple_fecha.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btn_simple_fecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_simple_fecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_simple_fecha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1106,7 +1106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1005, 688);
             this.Controls.Add(this.checkBox_inscripto);
             this.Controls.Add(this.label3);
