@@ -11,7 +11,7 @@ namespace LayerData
 {
     class Db_Connection
     {
-        private static string strConnection = Properties.Settings.Default.Connection;
+        private static string strConnection = Properties.Settings.Default.connectionStrings;
 
         private SqlConnection conn = new SqlConnection(strConnection);
 

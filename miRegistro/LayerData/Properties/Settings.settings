@@ -2,18 +2,15 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LayerData.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="Connection" Type="(Connection string)" Scope="Application">
+    <Setting Name="connectionStrings" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=LAPTOP-NITRO5\SQLEXPRESS;Initial Catalog=miRegistro;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Server=tcp:rna-argentina.database.windows.net,1433;Initial Catalog=MiRegistroCalafateSC;Persist Security Info=False;User ID=adminrna;Password=registro998P;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=LAPTOP-NITRO5\SQLEXPRESS;Initial Catalog=miRegistro;Integrated Security=True</Value>
+      <Value Profile="(Default)">Server=tcp:rna-argentina.database.windows.net,1433;Initial Catalog=MiRegistroCalafateSC;Persist Security Info=False;User ID=adminrna;Password=registro998P;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;</Value>
     </Setting>
-    <Setting Name="ConReal" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Source=rna-argentina.database.windows.net;Initial Catalog=MiRegistroCalafateSC;Persist Security Info=True;User ID=adminrna;Password=registro998P</Value>
-    </Setting>
-    <Setting Name="ConPrueba" Type="System.String" Scope="User">
+    <Setting Name="ConnectionLocal" Type="System.String" Scope="User">
       <Value Profile="(Default)">Data Source=LAPTOP-NITRO5\SQLEXPRESS;Initial Catalog=miRegistro;Integrated Security=True</Value>
     </Setting>
   </Settings>
