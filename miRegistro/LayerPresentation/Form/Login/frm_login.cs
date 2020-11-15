@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using LayerBusiness;
 using LayerSoporte.Cache;
 using LayerPresentation.Properties;
+using LayerPresentation.Clases;
 
 namespace LayerPresentation
 {
@@ -132,25 +133,26 @@ namespace LayerPresentation
         {
             if (checkBox_guardar.Checked)
             {
-                Properties.Settings.Default.User = txtBox_user.Text;
-                Properties.Settings.Default.Pass = txtBox_pass.Text;
+                Properties.Settings.Default.user = Utilities_Encrypt_Decrypt.Encrypt(txtBox_user.Text);
+                Properties.Settings.Default.pass = Utilities_Encrypt_Decrypt.Encrypt(txtBox_pass.Text);
                 Properties.Settings.Default.Save();
-            } else 
+            } 
+            else 
             {
-                if (Properties.Settings.Default.User == txtBox_user.Text) 
+                if (Utilities_Encrypt_Decrypt.Decrypt(Properties.Settings.Default.user) == txtBox_user.Text) 
                 {
-                    Properties.Settings.Default.User = "";
-                    Properties.Settings.Default.Pass = "";
+                    Properties.Settings.Default.user = "";
+                    Properties.Settings.Default.pass = "";
                     Properties.Settings.Default.Save();
                 }
             }
         }
         private void FindSavedUser()
         {
-            if (!String.IsNullOrEmpty(Settings.Default.User)) 
+            if (!String.IsNullOrEmpty(Settings.Default.user)) 
             {
-                txtBox_user.Text = Properties.Settings.Default.User;
-                txtBox_pass.Text = Properties.Settings.Default.Pass;
+                txtBox_user.Text = Utilities_Encrypt_Decrypt.Decrypt(Properties.Settings.Default.user);
+                txtBox_pass.Text = Utilities_Encrypt_Decrypt.Decrypt(Properties.Settings.Default.pass);
                 txtBox_pass.UseSystemPasswordChar = true;
                 checkBox_guardar.Checked = true;
             }
@@ -180,10 +182,17 @@ namespace LayerPresentation
             //recoverPassword.ShowDialog();
         }
 
+        private void txtBox_user_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
+        private void txtBox_pass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
         private void Login_Load(object sender, EventArgs e)
         {
             FindSavedUser();
         }
-
     }
 }

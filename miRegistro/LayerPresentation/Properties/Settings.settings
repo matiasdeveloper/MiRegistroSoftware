@@ -14,10 +14,10 @@
     <Setting Name="UserImage" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>
-    <Setting Name="User" Type="System.String" Scope="User">
+    <Setting Name="user" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Pass" Type="System.String" Scope="User">
+    <Setting Name="pass" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="AlertaStock" Type="System.Boolean" Scope="User">

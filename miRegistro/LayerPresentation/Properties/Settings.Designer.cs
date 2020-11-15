@@ -74,24 +74,24 @@ namespace LayerPresentation.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string User {
+        public string user {
             get {
-                return ((string)(this["User"]));
+                return ((string)(this["user"]));
             }
             set {
-                this["User"] = value;
+                this["user"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Pass {
+        public string pass {
             get {
-                return ((string)(this["Pass"]));
+                return ((string)(this["pass"]));
             }
             set {
-                this["Pass"] = value;
+                this["pass"] = value;
             }
         }
         

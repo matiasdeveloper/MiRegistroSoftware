@@ -82,6 +82,7 @@
             this.txtBox_user.TabStop = false;
             this.txtBox_user.Text = "Usuario";
             this.txtBox_user.Enter += new System.EventHandler(this.txtBox_user_Enter);
+            this.txtBox_user.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_user_KeyPress);
             this.txtBox_user.Leave += new System.EventHandler(this.txtBox_user_Leave);
             // 
             // txtBox_pass
@@ -98,6 +99,7 @@
             this.txtBox_pass.TabIndex = 2;
             this.txtBox_pass.Text = "Contraseña";
             this.txtBox_pass.Enter += new System.EventHandler(this.txtBox_pass_Enter);
+            this.txtBox_pass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_pass_KeyPress);
             this.txtBox_pass.Leave += new System.EventHandler(this.txtBox_pass_Leave);
             // 
             // panel2
