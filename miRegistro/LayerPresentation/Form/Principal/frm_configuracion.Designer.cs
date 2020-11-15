@@ -199,6 +199,11 @@
             this.panel37 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btn_settings_advanced = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
             this.panel_configUser.SuspendLayout();
             this.pn_expand_6.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -243,6 +248,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_1)).BeginInit();
             this.panel37.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_configUser
@@ -262,10 +269,10 @@
             this.panel_configUser.Controls.Add(this.pn_expand_1);
             this.panel_configUser.Controls.Add(this.pn_1);
             this.panel_configUser.Controls.Add(this.panel12);
-            this.panel_configUser.Location = new System.Drawing.Point(603, 42);
+            this.panel_configUser.Location = new System.Drawing.Point(606, 35);
             this.panel_configUser.Margin = new System.Windows.Forms.Padding(4);
             this.panel_configUser.Name = "panel_configUser";
-            this.panel_configUser.Size = new System.Drawing.Size(389, 637);
+            this.panel_configUser.Size = new System.Drawing.Size(386, 563);
             this.panel_configUser.TabIndex = 5;
             // 
             // pn_expand_6
@@ -280,7 +287,7 @@
             this.pn_expand_6.Location = new System.Drawing.Point(0, 1340);
             this.pn_expand_6.Margin = new System.Windows.Forms.Padding(4);
             this.pn_expand_6.Name = "pn_expand_6";
-            this.pn_expand_6.Size = new System.Drawing.Size(370, 151);
+            this.pn_expand_6.Size = new System.Drawing.Size(367, 151);
             this.pn_expand_6.TabIndex = 13;
             this.pn_expand_6.Visible = false;
             // 
@@ -360,7 +367,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 1278);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(370, 62);
+            this.panel3.Size = new System.Drawing.Size(367, 62);
             this.panel3.TabIndex = 12;
             // 
             // panel4
@@ -370,7 +377,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(370, 1);
+            this.panel4.Size = new System.Drawing.Size(367, 1);
             this.panel4.TabIndex = 12;
             // 
             // panel5
@@ -380,7 +387,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 61);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(370, 1);
+            this.panel5.Size = new System.Drawing.Size(367, 1);
             this.panel5.TabIndex = 11;
             // 
             // btn_cambiar6
@@ -422,7 +429,7 @@
             this.pn_expand_5.Location = new System.Drawing.Point(0, 1127);
             this.pn_expand_5.Margin = new System.Windows.Forms.Padding(4);
             this.pn_expand_5.Name = "pn_expand_5";
-            this.pn_expand_5.Size = new System.Drawing.Size(370, 151);
+            this.pn_expand_5.Size = new System.Drawing.Size(367, 151);
             this.pn_expand_5.TabIndex = 11;
             this.pn_expand_5.Visible = false;
             // 
@@ -502,7 +509,7 @@
             this.pn_5.Location = new System.Drawing.Point(0, 1065);
             this.pn_5.Margin = new System.Windows.Forms.Padding(4);
             this.pn_5.Name = "pn_5";
-            this.pn_5.Size = new System.Drawing.Size(370, 62);
+            this.pn_5.Size = new System.Drawing.Size(367, 62);
             this.pn_5.TabIndex = 10;
             // 
             // panel23
@@ -512,7 +519,7 @@
             this.panel23.Location = new System.Drawing.Point(0, 0);
             this.panel23.Margin = new System.Windows.Forms.Padding(4);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(370, 1);
+            this.panel23.Size = new System.Drawing.Size(367, 1);
             this.panel23.TabIndex = 12;
             // 
             // panel20
@@ -522,7 +529,7 @@
             this.panel20.Location = new System.Drawing.Point(0, 61);
             this.panel20.Margin = new System.Windows.Forms.Padding(4);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(370, 1);
+            this.panel20.Size = new System.Drawing.Size(367, 1);
             this.panel20.TabIndex = 11;
             // 
             // btn_cambiar5
@@ -563,7 +570,7 @@
             this.pn_expand_4.Location = new System.Drawing.Point(0, 914);
             this.pn_expand_4.Margin = new System.Windows.Forms.Padding(4);
             this.pn_expand_4.Name = "pn_expand_4";
-            this.pn_expand_4.Size = new System.Drawing.Size(370, 151);
+            this.pn_expand_4.Size = new System.Drawing.Size(367, 151);
             this.pn_expand_4.TabIndex = 9;
             this.pn_expand_4.Visible = false;
             // 
@@ -643,7 +650,7 @@
             this.pn_4.Location = new System.Drawing.Point(0, 852);
             this.pn_4.Margin = new System.Windows.Forms.Padding(4);
             this.pn_4.Name = "pn_4";
-            this.pn_4.Size = new System.Drawing.Size(370, 62);
+            this.pn_4.Size = new System.Drawing.Size(367, 62);
             this.pn_4.TabIndex = 8;
             // 
             // panel22
@@ -653,7 +660,7 @@
             this.panel22.Location = new System.Drawing.Point(0, 0);
             this.panel22.Margin = new System.Windows.Forms.Padding(4);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(370, 1);
+            this.panel22.Size = new System.Drawing.Size(367, 1);
             this.panel22.TabIndex = 12;
             // 
             // panel18
@@ -663,7 +670,7 @@
             this.panel18.Location = new System.Drawing.Point(0, 61);
             this.panel18.Margin = new System.Windows.Forms.Padding(4);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(370, 1);
+            this.panel18.Size = new System.Drawing.Size(367, 1);
             this.panel18.TabIndex = 11;
             // 
             // btn_cambiar4
@@ -704,7 +711,7 @@
             this.pn_expand_3.Location = new System.Drawing.Point(0, 701);
             this.pn_expand_3.Margin = new System.Windows.Forms.Padding(4);
             this.pn_expand_3.Name = "pn_expand_3";
-            this.pn_expand_3.Size = new System.Drawing.Size(370, 151);
+            this.pn_expand_3.Size = new System.Drawing.Size(367, 151);
             this.pn_expand_3.TabIndex = 7;
             this.pn_expand_3.Visible = false;
             // 
@@ -785,7 +792,7 @@
             this.pn_3.Location = new System.Drawing.Point(0, 639);
             this.pn_3.Margin = new System.Windows.Forms.Padding(4);
             this.pn_3.Name = "pn_3";
-            this.pn_3.Size = new System.Drawing.Size(370, 62);
+            this.pn_3.Size = new System.Drawing.Size(367, 62);
             this.pn_3.TabIndex = 6;
             // 
             // panel25
@@ -795,7 +802,7 @@
             this.panel25.Location = new System.Drawing.Point(0, 0);
             this.panel25.Margin = new System.Windows.Forms.Padding(4);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(370, 1);
+            this.panel25.Size = new System.Drawing.Size(367, 1);
             this.panel25.TabIndex = 12;
             // 
             // panel17
@@ -805,7 +812,7 @@
             this.panel17.Location = new System.Drawing.Point(0, 61);
             this.panel17.Margin = new System.Windows.Forms.Padding(4);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(370, 1);
+            this.panel17.Size = new System.Drawing.Size(367, 1);
             this.panel17.TabIndex = 11;
             // 
             // btn_cambiar3
@@ -853,7 +860,7 @@
             this.pn_expand_2.Location = new System.Drawing.Point(0, 365);
             this.pn_expand_2.Margin = new System.Windows.Forms.Padding(4);
             this.pn_expand_2.Name = "pn_expand_2";
-            this.pn_expand_2.Size = new System.Drawing.Size(370, 274);
+            this.pn_expand_2.Size = new System.Drawing.Size(367, 274);
             this.pn_expand_2.TabIndex = 5;
             this.pn_expand_2.Visible = false;
             // 
@@ -913,6 +920,7 @@
             this.txtBox_passNueva1.TabIndex = 11;
             this.txtBox_passNueva1.Text = "Volver a introducir la contraseña";
             this.txtBox_passNueva1.Enter += new System.EventHandler(this.txtBox_passNueva1_Enter);
+            this.txtBox_passNueva1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_passNueva1_KeyPress);
             this.txtBox_passNueva1.Leave += new System.EventHandler(this.txtBox_passNueva1_Leave);
             // 
             // txtBox_passNueva
@@ -926,6 +934,7 @@
             this.txtBox_passNueva.TabIndex = 10;
             this.txtBox_passNueva.Text = "Nueva contraseña";
             this.txtBox_passNueva.Enter += new System.EventHandler(this.txtBox_passNueva_Enter);
+            this.txtBox_passNueva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_passNueva_KeyPress);
             this.txtBox_passNueva.Leave += new System.EventHandler(this.txtBox_passNueva_Leave);
             // 
             // panel19
@@ -971,6 +980,7 @@
             this.txtBox_passAntigua.TabIndex = 6;
             this.txtBox_passAntigua.Text = "Contraseña antigua";
             this.txtBox_passAntigua.Enter += new System.EventHandler(this.txtBox_passAntigua_Enter);
+            this.txtBox_passAntigua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_passAntigua_KeyPress);
             this.txtBox_passAntigua.Leave += new System.EventHandler(this.txtBox_passAntigua_Leave);
             // 
             // btn_cancelar2
@@ -1016,7 +1026,7 @@
             this.pn_2.Location = new System.Drawing.Point(0, 303);
             this.pn_2.Margin = new System.Windows.Forms.Padding(4);
             this.pn_2.Name = "pn_2";
-            this.pn_2.Size = new System.Drawing.Size(370, 62);
+            this.pn_2.Size = new System.Drawing.Size(367, 62);
             this.pn_2.TabIndex = 4;
             // 
             // panel26
@@ -1026,7 +1036,7 @@
             this.panel26.Location = new System.Drawing.Point(0, 0);
             this.panel26.Margin = new System.Windows.Forms.Padding(4);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(370, 1);
+            this.panel26.Size = new System.Drawing.Size(367, 1);
             this.panel26.TabIndex = 12;
             // 
             // panel16
@@ -1036,7 +1046,7 @@
             this.panel16.Location = new System.Drawing.Point(0, 61);
             this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(370, 1);
+            this.panel16.Size = new System.Drawing.Size(367, 1);
             this.panel16.TabIndex = 11;
             // 
             // btn_cambiar2
@@ -1077,7 +1087,7 @@
             this.pn_expand_1.Location = new System.Drawing.Point(0, 152);
             this.pn_expand_1.Margin = new System.Windows.Forms.Padding(4);
             this.pn_expand_1.Name = "pn_expand_1";
-            this.pn_expand_1.Size = new System.Drawing.Size(370, 151);
+            this.pn_expand_1.Size = new System.Drawing.Size(367, 151);
             this.pn_expand_1.TabIndex = 3;
             this.pn_expand_1.Visible = false;
             // 
@@ -1113,6 +1123,7 @@
             this.txtBox_usuario.Size = new System.Drawing.Size(316, 23);
             this.txtBox_usuario.TabIndex = 6;
             this.txtBox_usuario.Text = "Ingrese un nuevo usuario";
+            this.txtBox_usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_usuario_KeyPress);
             // 
             // btn_cancelar1
             // 
@@ -1158,7 +1169,7 @@
             this.pn_1.Location = new System.Drawing.Point(0, 90);
             this.pn_1.Margin = new System.Windows.Forms.Padding(4);
             this.pn_1.Name = "pn_1";
-            this.pn_1.Size = new System.Drawing.Size(370, 62);
+            this.pn_1.Size = new System.Drawing.Size(367, 62);
             this.pn_1.TabIndex = 2;
             // 
             // panel28
@@ -1168,7 +1179,7 @@
             this.panel28.Location = new System.Drawing.Point(0, 1);
             this.panel28.Margin = new System.Windows.Forms.Padding(4);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(370, 1);
+            this.panel28.Size = new System.Drawing.Size(367, 1);
             this.panel28.TabIndex = 13;
             // 
             // panel15
@@ -1178,7 +1189,7 @@
             this.panel15.Location = new System.Drawing.Point(0, 61);
             this.panel15.Margin = new System.Windows.Forms.Padding(4);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(370, 1);
+            this.panel15.Size = new System.Drawing.Size(367, 1);
             this.panel15.TabIndex = 10;
             // 
             // btn_cambiar1
@@ -1215,7 +1226,7 @@
             this.panel27.Location = new System.Drawing.Point(0, 0);
             this.panel27.Margin = new System.Windows.Forms.Padding(4);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(370, 1);
+            this.panel27.Size = new System.Drawing.Size(367, 1);
             this.panel27.TabIndex = 12;
             // 
             // panel12
@@ -1231,7 +1242,7 @@
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(370, 90);
+            this.panel12.Size = new System.Drawing.Size(367, 90);
             this.panel12.TabIndex = 1;
             // 
             // label4
@@ -1239,7 +1250,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkGray;
-            this.label4.Location = new System.Drawing.Point(285, 55);
+            this.label4.Location = new System.Drawing.Point(281, 55);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 15);
@@ -1263,7 +1274,7 @@
             this.lbl_lastacess.AutoSize = true;
             this.lbl_lastacess.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_lastacess.ForeColor = System.Drawing.Color.White;
-            this.lbl_lastacess.Location = new System.Drawing.Point(188, 70);
+            this.lbl_lastacess.Location = new System.Drawing.Point(184, 70);
             this.lbl_lastacess.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_lastacess.Name = "lbl_lastacess";
             this.lbl_lastacess.Size = new System.Drawing.Size(182, 15);
@@ -1332,7 +1343,7 @@
             this.check_stock.Checked = true;
             this.check_stock.CheckState = System.Windows.Forms.CheckState.Checked;
             this.check_stock.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.check_stock.Location = new System.Drawing.Point(7, 35);
+            this.check_stock.Location = new System.Drawing.Point(3, 35);
             this.check_stock.Name = "check_stock";
             this.check_stock.Size = new System.Drawing.Size(199, 21);
             this.check_stock.TabIndex = 20;
@@ -1346,7 +1357,7 @@
             this.check_cumpleaños.Checked = true;
             this.check_cumpleaños.CheckState = System.Windows.Forms.CheckState.Checked;
             this.check_cumpleaños.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.check_cumpleaños.Location = new System.Drawing.Point(7, 65);
+            this.check_cumpleaños.Location = new System.Drawing.Point(3, 65);
             this.check_cumpleaños.Name = "check_cumpleaños";
             this.check_cumpleaños.Size = new System.Drawing.Size(170, 21);
             this.check_cumpleaños.TabIndex = 21;
@@ -1360,7 +1371,7 @@
             this.check_tramites.Checked = true;
             this.check_tramites.CheckState = System.Windows.Forms.CheckState.Checked;
             this.check_tramites.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.check_tramites.Location = new System.Drawing.Point(7, 95);
+            this.check_tramites.Location = new System.Drawing.Point(3, 95);
             this.check_tramites.Name = "check_tramites";
             this.check_tramites.Size = new System.Drawing.Size(185, 21);
             this.check_tramites.TabIndex = 22;
@@ -1375,9 +1386,9 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(3, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 16);
+            this.label5.Size = new System.Drawing.Size(73, 16);
             this.label5.TabIndex = 23;
-            this.label5.Text = "Activar / Desactivar";
+            this.label5.Text = "Utilidades";
             // 
             // panel2
             // 
@@ -1386,9 +1397,9 @@
             this.panel2.Controls.Add(this.check_cumpleaños);
             this.panel2.Controls.Add(this.check_stock);
             this.panel2.Controls.Add(this.check_tramites);
-            this.panel2.Location = new System.Drawing.Point(361, 551);
+            this.panel2.Location = new System.Drawing.Point(403, 552);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(235, 128);
+            this.panel2.Size = new System.Drawing.Size(197, 128);
             this.panel2.TabIndex = 25;
             // 
             // panel6
@@ -1400,7 +1411,7 @@
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(233, 25);
+            this.panel6.Size = new System.Drawing.Size(195, 25);
             this.panel6.TabIndex = 27;
             // 
             // label41
@@ -1408,12 +1419,12 @@
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.DarkGray;
-            this.label41.Location = new System.Drawing.Point(180, 6);
+            this.label41.Location = new System.Drawing.Point(150, 4);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(43, 15);
+            this.label41.Size = new System.Drawing.Size(42, 15);
             this.label41.TabIndex = 27;
-            this.label41.Text = "Config";
+            this.label41.Text = "Varios";
             // 
             // panel_newFormulario
             // 
@@ -1423,9 +1434,9 @@
             this.panel_newFormulario.Controls.Add(this.textBox_newCategoria);
             this.panel_newFormulario.Controls.Add(this.panel8);
             this.panel_newFormulario.Enabled = false;
-            this.panel_newFormulario.Location = new System.Drawing.Point(8, 551);
+            this.panel_newFormulario.Location = new System.Drawing.Point(6, 146);
             this.panel_newFormulario.Name = "panel_newFormulario";
-            this.panel_newFormulario.Size = new System.Drawing.Size(347, 129);
+            this.panel_newFormulario.Size = new System.Drawing.Size(391, 129);
             this.panel_newFormulario.TabIndex = 26;
             // 
             // comboBox_objeto
@@ -1437,9 +1448,9 @@
             "Auto",
             "Moto",
             "Varios"});
-            this.comboBox_objeto.Location = new System.Drawing.Point(6, 32);
+            this.comboBox_objeto.Location = new System.Drawing.Point(6, 34);
             this.comboBox_objeto.Name = "comboBox_objeto";
-            this.comboBox_objeto.Size = new System.Drawing.Size(332, 25);
+            this.comboBox_objeto.Size = new System.Drawing.Size(371, 25);
             this.comboBox_objeto.TabIndex = 27;
             this.comboBox_objeto.Text = "Seleccione el objeto";
             this.comboBox_objeto.Enter += new System.EventHandler(this.comboBox_objeto_Enter);
@@ -1448,15 +1459,15 @@
             // btn_newCategoria
             // 
             this.btn_newCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_newCategoria.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_newCategoria.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(217)))), ((int)(((byte)(85)))));
             this.btn_newCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_newCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_newCategoria.ForeColor = System.Drawing.Color.Navy;
+            this.btn_newCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(217)))), ((int)(((byte)(85)))));
             this.btn_newCategoria.Location = new System.Drawing.Point(4, 99);
             this.btn_newCategoria.Name = "btn_newCategoria";
-            this.btn_newCategoria.Size = new System.Drawing.Size(332, 23);
+            this.btn_newCategoria.Size = new System.Drawing.Size(371, 23);
             this.btn_newCategoria.TabIndex = 27;
-            this.btn_newCategoria.Text = "Insertar categoria";
+            this.btn_newCategoria.Text = "Insertar nuevo tipo de formulario";
             this.btn_newCategoria.UseVisualStyleBackColor = true;
             this.btn_newCategoria.Click += new System.EventHandler(this.btn_newCategoria_Click);
             // 
@@ -1465,9 +1476,9 @@
             this.textBox_newCategoria.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_newCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_newCategoria.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox_newCategoria.Location = new System.Drawing.Point(6, 64);
+            this.textBox_newCategoria.Location = new System.Drawing.Point(6, 66);
             this.textBox_newCategoria.Name = "textBox_newCategoria";
-            this.textBox_newCategoria.Size = new System.Drawing.Size(332, 23);
+            this.textBox_newCategoria.Size = new System.Drawing.Size(371, 23);
             this.textBox_newCategoria.TabIndex = 28;
             this.textBox_newCategoria.Text = "INGRESE UNA NUEVA CATEGORIA (EJ: 31A)";
             this.textBox_newCategoria.Enter += new System.EventHandler(this.textBox_newCategoria_Enter);
@@ -1482,7 +1493,7 @@
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(345, 25);
+            this.panel8.Size = new System.Drawing.Size(389, 25);
             this.panel8.TabIndex = 27;
             // 
             // label40
@@ -1490,7 +1501,7 @@
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.DarkGray;
-            this.label40.Location = new System.Drawing.Point(267, 5);
+            this.label40.Location = new System.Drawing.Point(316, 5);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(69, 15);
@@ -1515,7 +1526,7 @@
             this.panel_newTramite.Controls.Add(this.textBox_tipoTramite);
             this.panel_newTramite.Controls.Add(this.panel10);
             this.panel_newTramite.Enabled = false;
-            this.panel_newTramite.Location = new System.Drawing.Point(8, 441);
+            this.panel_newTramite.Location = new System.Drawing.Point(6, 36);
             this.panel_newTramite.Name = "panel_newTramite";
             this.panel_newTramite.Size = new System.Drawing.Size(391, 101);
             this.panel_newTramite.TabIndex = 27;
@@ -1523,10 +1534,10 @@
             // btn_newCategoriaTramite
             // 
             this.btn_newCategoriaTramite.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_newCategoriaTramite.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_newCategoriaTramite.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(217)))), ((int)(((byte)(85)))));
             this.btn_newCategoriaTramite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_newCategoriaTramite.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_newCategoriaTramite.ForeColor = System.Drawing.Color.Navy;
+            this.btn_newCategoriaTramite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(217)))), ((int)(((byte)(85)))));
             this.btn_newCategoriaTramite.Location = new System.Drawing.Point(8, 66);
             this.btn_newCategoriaTramite.Name = "btn_newCategoriaTramite";
             this.btn_newCategoriaTramite.Size = new System.Drawing.Size(369, 23);
@@ -1539,7 +1550,7 @@
             // 
             this.textBox_tipoTramite.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_tipoTramite.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox_tipoTramite.Location = new System.Drawing.Point(10, 33);
+            this.textBox_tipoTramite.Location = new System.Drawing.Point(10, 34);
             this.textBox_tipoTramite.Name = "textBox_tipoTramite";
             this.textBox_tipoTramite.Size = new System.Drawing.Size(369, 23);
             this.textBox_tipoTramite.TabIndex = 28;
@@ -1564,7 +1575,7 @@
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.DarkGray;
-            this.label35.Location = new System.Drawing.Point(327, 5);
+            this.label35.Location = new System.Drawing.Point(335, 5);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(54, 15);
@@ -1587,9 +1598,9 @@
             this.panel34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel34.Controls.Add(this.flowLayoutPanel1);
             this.panel34.Controls.Add(this.panel35);
-            this.panel34.Location = new System.Drawing.Point(403, 44);
+            this.panel34.Location = new System.Drawing.Point(403, 35);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(193, 498);
+            this.panel34.Size = new System.Drawing.Size(197, 507);
             this.panel34.TabIndex = 29;
             // 
             // flowLayoutPanel1
@@ -1605,10 +1616,10 @@
             this.flowLayoutPanel1.Controls.Add(this.panel32);
             this.flowLayoutPanel1.Controls.Add(this.panel33);
             this.flowLayoutPanel1.Controls.Add(this.label52);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 35);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 37);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(186, 452);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(186, 461);
             this.flowLayoutPanel1.TabIndex = 29;
             // 
             // panel11
@@ -1862,7 +1873,7 @@
             this.panel35.Location = new System.Drawing.Point(0, 0);
             this.panel35.Margin = new System.Windows.Forms.Padding(4);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(191, 25);
+            this.panel35.Size = new System.Drawing.Size(195, 25);
             this.panel35.TabIndex = 27;
             // 
             // label24
@@ -1918,11 +1929,10 @@
             this.panel_newUser.Controls.Add(this.txtBox_newUser_user);
             this.panel_newUser.Controls.Add(this.panel37);
             this.panel_newUser.Enabled = false;
-            this.panel_newUser.Location = new System.Drawing.Point(8, 43);
+            this.panel_newUser.Location = new System.Drawing.Point(6, 281);
             this.panel_newUser.Name = "panel_newUser";
-            this.panel_newUser.Size = new System.Drawing.Size(391, 392);
+            this.panel_newUser.Size = new System.Drawing.Size(391, 400);
             this.panel_newUser.TabIndex = 30;
-            this.panel_newUser.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_newUser_Paint);
             // 
             // label51
             // 
@@ -2354,11 +2364,11 @@
             // btn_newUser
             // 
             this.btn_newUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_newUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_newUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(217)))), ((int)(((byte)(85)))));
             this.btn_newUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_newUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_newUser.ForeColor = System.Drawing.Color.Navy;
-            this.btn_newUser.Location = new System.Drawing.Point(77, 362);
+            this.btn_newUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(217)))), ((int)(((byte)(85)))));
+            this.btn_newUser.Location = new System.Drawing.Point(77, 368);
             this.btn_newUser.Name = "btn_newUser";
             this.btn_newUser.Size = new System.Drawing.Size(279, 23);
             this.btn_newUser.TabIndex = 27;
@@ -2397,7 +2407,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.DarkGray;
-            this.label26.Location = new System.Drawing.Point(276, 6);
+            this.label26.Location = new System.Drawing.Point(276, 5);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(109, 15);
@@ -2415,12 +2425,73 @@
             this.label25.TabIndex = 23;
             this.label25.Text = "Nuevo usuario";
             // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.btn_settings_advanced);
+            this.panel7.Controls.Add(this.panel9);
+            this.panel7.Location = new System.Drawing.Point(607, 605);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(385, 74);
+            this.panel7.TabIndex = 31;
+            // 
+            // btn_settings_advanced
+            // 
+            this.btn_settings_advanced.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_settings_advanced.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.btn_settings_advanced.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_settings_advanced.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_settings_advanced.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_settings_advanced.Location = new System.Drawing.Point(6, 37);
+            this.btn_settings_advanced.Name = "btn_settings_advanced";
+            this.btn_settings_advanced.Size = new System.Drawing.Size(371, 23);
+            this.btn_settings_advanced.TabIndex = 28;
+            this.btn_settings_advanced.Text = "Ver configuracion avanzada";
+            this.btn_settings_advanced.UseVisualStyleBackColor = true;
+            this.btn_settings_advanced.Click += new System.EventHandler(this.btn_settings_advanced_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(76)))));
+            this.panel9.Controls.Add(this.label53);
+            this.panel9.Controls.Add(this.label54);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(383, 25);
+            this.panel9.TabIndex = 27;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.Color.DarkGray;
+            this.label53.Location = new System.Drawing.Point(273, 5);
+            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(109, 15);
+            this.label53.TabIndex = 27;
+            this.label53.Text = "Para usuarios root";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.Color.White;
+            this.label54.Location = new System.Drawing.Point(3, 5);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(75, 16);
+            this.label54.TabIndex = 23;
+            this.label54.Text = "Avanzada";
+            // 
             // frm_configuracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1005, 688);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel_newUser);
             this.Controls.Add(this.panel34);
             this.Controls.Add(this.panel_newTramite);
@@ -2502,6 +2573,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_1)).EndInit();
             this.panel37.ResumeLayout(false);
             this.panel37.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2678,5 +2752,10 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Button btn_settings_advanced;
     }
 }

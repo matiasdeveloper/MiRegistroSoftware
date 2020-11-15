@@ -254,14 +254,21 @@ namespace LayerPresentation
         {
             if (txtBox_correo.Text != UserLoginCache.Email)
             {
-                // Save email 
-                _cnObject.UpdateEmail(UserLoginCache.IdUser, txtBox_correo.Text);
+                if (!IsValidEmail(txtBox_correo.Text))
+                {
+                    MessageBox.Show("Introduce un email valido '@outlook @gmail @yahoo @hotmail' para continuar!", "Atencion!");
+                }
+                else 
+                {
+                    // Save email 
+                    _cnObject.UpdateEmail(UserLoginCache.IdUser, txtBox_correo.Text);
 
-                UserLoginCache.Email = txtBox_correo.Text;
-                frm_successdialog f = new frm_successdialog(2);
-                f.Show();
+                    UserLoginCache.Email = txtBox_correo.Text;
+                    frm_successdialog f = new frm_successdialog(2);
+                    f.Show();
 
-                txtBox_correo.Text = UserLoginCache.Email;
+                    txtBox_correo.Text = UserLoginCache.Email;
+                }
             }
         }
         private void btn_save_ciudad_Click(object sender, EventArgs e)
@@ -793,15 +800,35 @@ namespace LayerPresentation
                 }
             }
         }
+        private void btn_settings_advanced_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Opcion deshabilitada!" + "\nEstamos trabajando para añadir nuevas funcionalidades", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
         private void frm_configuracion_Load(object sender, EventArgs e)
         {
             refreshUserInfo();
             cargarPrivilegios();
         }
 
-        private void panel_newUser_Paint(object sender, PaintEventArgs e)
+        private void txtBox_usuario_KeyPress(object sender, KeyPressEventArgs e)
         {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
 
+        private void txtBox_passAntigua_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+
+        }
+
+        private void txtBox_passNueva_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
+
+        private void txtBox_passNueva1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
         }
     }
 }
