@@ -39,16 +39,21 @@ namespace LayerPresentation
         public frm_formularios()
         {
             InitializeComponent();
+            Initialize();
         }
         // Functions
         // Refresh all UI
+        private void Initialize() 
+        {
+            mostrarCategorias("Auto");
+            mostrarAlertas();
+
+            this.dg_formularios_1.Sort(this.dg_formularios_1.Columns[4], ListSortDirection.Descending);
+        }
         private void RefreshAll() 
         {
             RefreshFormularios();
             RefreshDataStock();
-
-            mostrarCategorias("Auto");
-            mostrarAlertas();
         }
         // Refresh Data stock and Formularios
         public void RefreshDataStock()
@@ -163,6 +168,8 @@ namespace LayerPresentation
         // Only number in stock
         private void txtBox_stock_KeyPress(object sender, KeyPressEventArgs e)
         {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+
             //Para obligar a que sólo se introduzcan números
             if (Char.IsDigit(e.KeyChar))
             {
@@ -847,8 +854,14 @@ namespace LayerPresentation
         // Alerts
         private void btn_detalle_alerta_Click(object sender, EventArgs e)
         {
-            frm_formularios_alerta mv = new frm_formularios_alerta(true, getAlertSelectedId(), dg_alertas_1.CurrentRow.Cells["fecha"].Value.ToString(), dg_alertas_1.CurrentRow.Cells["user"].Value.ToString());
-            mv.Show();
+            if(dg_alertas_1.Rows.Count > 0) 
+            {
+                frm_formularios_alerta mv = new frm_formularios_alerta(true, getAlertSelectedId(), dg_alertas_1.CurrentRow.Cells["fecha"].Value.ToString(), dg_alertas_1.CurrentRow.Cells["user"].Value.ToString());
+                mv.Show();
+            } else 
+            {
+                MessageBox.Show("No hay alertas disponibles!", "Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
         private int getAlertSelectedId() 
         {
@@ -950,6 +963,27 @@ namespace LayerPresentation
                 btn_save.Enabled = false;
                 btn_delete.Enabled = false;
             }
+        }
+        private void txtBox_stockNuevo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+
+            //Para obligar a que sólo se introduzcan números
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan
+                e.Handled = true;
+            }
+
         }
         private void frm_formularios_Load(object sender, EventArgs e)
         {

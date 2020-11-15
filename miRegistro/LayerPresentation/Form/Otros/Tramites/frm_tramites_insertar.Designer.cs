@@ -209,6 +209,7 @@
             this.textBox_dominio.Name = "textBox_dominio";
             this.textBox_dominio.Size = new System.Drawing.Size(252, 22);
             this.textBox_dominio.TabIndex = 0;
+            this.textBox_dominio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_dominio_KeyPress);
             // 
             // label6
             // 

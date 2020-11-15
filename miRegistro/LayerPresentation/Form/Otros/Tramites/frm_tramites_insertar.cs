@@ -231,9 +231,14 @@ namespace LayerPresentation
                 }
             }
         }
+        private void textBox_dominio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
         private void frm_tramites_insertar_Load(object sender, EventArgs e)
         {
 
         }
+
     }
 }

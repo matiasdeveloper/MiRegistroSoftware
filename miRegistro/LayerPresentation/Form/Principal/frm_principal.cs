@@ -70,7 +70,7 @@ namespace LayerPresentation
         }
         private void BuscarAlertaStock(int StockMenorQue)
         {
-            if(Settings.Default.AlertaStock == true) 
+            if(Settings.Default.AlertaStock) 
             {
                 Cn_alertas objects = new Cn_alertas();
                 DataTable nuevaAlerta = _cnObject.buscarNuevasAlertas(StockMenorQue);
@@ -108,7 +108,7 @@ namespace LayerPresentation
         }
         private void BuscarAlertasCumpleaños() 
         {
-            if (Settings.Default.AlertaCumpleaños == true)
+            if (Settings.Default.AlertaCumpleaños)
             {
                 string c = Statistics.FindCumpleaños();
                 if(!String.IsNullOrEmpty(c)) 
@@ -229,7 +229,7 @@ namespace LayerPresentation
             
             cargarDatosUsuario();
             cargarColor(Properties.Settings.Default.Color);
-
+            
             BuscarAlertas();
         }
         private void timer1_Tick(object sender, EventArgs e)
