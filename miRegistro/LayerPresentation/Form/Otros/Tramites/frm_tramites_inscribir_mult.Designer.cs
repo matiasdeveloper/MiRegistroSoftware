@@ -145,7 +145,7 @@
             this.dg_tramites.DefaultCellStyle = dataGridViewCellStyle8;
             this.dg_tramites.EnableHeadersVisualStyles = false;
             this.dg_tramites.GridColor = System.Drawing.Color.SteelBlue;
-            this.dg_tramites.Location = new System.Drawing.Point(9, 118);
+            this.dg_tramites.Location = new System.Drawing.Point(9, 120);
             this.dg_tramites.Name = "dg_tramites";
             this.dg_tramites.ReadOnly = true;
             this.dg_tramites.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -153,13 +153,13 @@
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dg_tramites.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dg_tramites.RowHeadersWidth = 51;
             this.dg_tramites.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_tramites.Size = new System.Drawing.Size(570, 328);
+            this.dg_tramites.Size = new System.Drawing.Size(570, 326);
             this.dg_tramites.TabIndex = 100;
             this.dg_tramites.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dg_tramites_CellFormatting);
             // 
@@ -466,7 +466,10 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.panel1.ForeColor = System.Drawing.Color.DarkCyan;
             this.panel1.Location = new System.Drawing.Point(9, 36);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(147, 78);

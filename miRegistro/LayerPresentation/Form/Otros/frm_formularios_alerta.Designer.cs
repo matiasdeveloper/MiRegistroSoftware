@@ -42,7 +42,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_minimize = new System.Windows.Forms.PictureBox();
             this.btn_close = new System.Windows.Forms.PictureBox();
-            this.btn_refreshTable = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_fechayhora = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -112,21 +111,6 @@
             this.btn_close.TabIndex = 3;
             this.btn_close.TabStop = false;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // btn_refreshTable
-            // 
-            this.btn_refreshTable.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_refreshTable.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_refreshTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_refreshTable.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_refreshTable.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_refreshTable.Location = new System.Drawing.Point(790, 379);
-            this.btn_refreshTable.Name = "btn_refreshTable";
-            this.btn_refreshTable.Size = new System.Drawing.Size(89, 23);
-            this.btn_refreshTable.TabIndex = 7;
-            this.btn_refreshTable.Text = "Refresh";
-            this.btn_refreshTable.UseVisualStyleBackColor = true;
-            this.btn_refreshTable.Click += new System.EventHandler(this.btn_refreshTable_Click);
             // 
             // label2
             // 
@@ -366,7 +350,7 @@
             this.btn_savepdf.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_savepdf.ForeColor = System.Drawing.Color.DarkCyan;
             this.btn_savepdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_savepdf.Location = new System.Drawing.Point(630, 379);
+            this.btn_savepdf.Location = new System.Drawing.Point(725, 379);
             this.btn_savepdf.Name = "btn_savepdf";
             this.btn_savepdf.Size = new System.Drawing.Size(154, 23);
             this.btn_savepdf.TabIndex = 90;
@@ -386,7 +370,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbl_fechayhora);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btn_refreshTable);
             this.Controls.Add(this.dg_formulariosAlert);
             this.Controls.Add(this.barra_titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -410,7 +393,6 @@
         private System.Windows.Forms.Panel barra_titulo;
         private System.Windows.Forms.PictureBox btn_minimize;
         private System.Windows.Forms.PictureBox btn_close;
-        private System.Windows.Forms.Button btn_refreshTable;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_fechayhora;

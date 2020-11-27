@@ -58,18 +58,27 @@ namespace LayerPresentation
         }
         private void chargeDataAlert()
         {
-            if(isInitial == false) 
+            if (isInitial == false)
             {
                 // Initial program
                 Cn_Formularios objects = new Cn_Formularios();
                 dg_formulariosAlert.DataSource = objects.findAlert(stockBajo);
 
-                lbl_fechayhora.Text = fechaAlert;
-                lbl_numeroDeAlerta.Text = idAlert.ToString();
-                lbl_usuarioAlertado.Text = userAlert;
-            } else 
+                if (dg_formulariosAlert.Rows.Count > 0) 
+                {
+                    lbl_fechayhora.Text = fechaAlert;
+                    lbl_numeroDeAlerta.Text = idAlert.ToString();
+                    lbl_usuarioAlertado.Text = userAlert;
+                }
+                else 
+                {
+                    this.Opacity = 0;
+                    MessageBox.Show("Sin alertas disponibles por el momento!", "Enhorabuena!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+            } 
+            else 
             {
-                // Specific alert
                 Cn_alertas objects = new Cn_alertas();
                 int[] idForm = _cnObjectAlert.buscarDetallesAlerta(idAlert);
 
@@ -128,7 +137,7 @@ namespace LayerPresentation
         }
         private void btn_savepdf_Click(object sender, EventArgs e)
         {
-            if (ExportDataTramitesPdf(dg_formulariosAlert, "AlertasUsuariosRNA"))
+            if (ExportDataTramitesPdf(dg_formulariosAlert, "Alerta" + userAlert + "_"))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
