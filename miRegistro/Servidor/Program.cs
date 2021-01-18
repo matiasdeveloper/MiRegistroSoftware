@@ -4,7 +4,6 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using ChatServer.Chat;
 using System.Drawing;
-using System.Windows.Forms;
 
 namespace Servidor
 {
@@ -18,7 +17,7 @@ namespace Servidor
         [DllImport("kernel32.dll")]
         static extern IntPtr GetConsoleWindow();
 
-        static NotifyIcon notifyIcon = new NotifyIcon();
+        //static NotifyIcon notifyIcon = new NotifyIcon();
 
         static void Main(string[] args)
         {
@@ -34,14 +33,14 @@ namespace Servidor
 
         private static void CreateNotifyicon()
         {
-            notifyIcon.Icon = Icon.ExtractAssociatedIcon(@"C:\WINDOWS\system32\notepad.exe");
+            /*notifyIcon.Icon = Icon.ExtractAssociatedIcon(@"C:\WINDOWS\system32\notepad.exe");
             notifyIcon.Text = "Servidor";
             notifyIcon.Visible = true;
 
             ContextMenu menu = new ContextMenu();
             notifyIcon.ContextMenu = menu;
 
-            Application.Run();
+            Application.Run();*/
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using LayerBusiness;
+using LayerPresentation.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,12 @@ namespace LayerPresentation
 {
     public partial class frm_configuracion_empleado : Form
     {
+        // Move form with mouse down in bar
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
         public frm_configuracion_empleado(int id, List<string> user, List<string> info, List<string> empleado)
         {
             InitializeComponent();
@@ -25,14 +32,6 @@ namespace LayerPresentation
 
             InitializeData();
         }
-
-        // Move form with mouse down in bar
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
-        Cn_Usuarios _cnObject = new Cn_Usuarios();
 
         private int id;
         List<string> user;
@@ -143,6 +142,7 @@ namespace LayerPresentation
 
             return data.ToArray();
         }
+        
         bool IsValidEmail(string email)
         {
             try
@@ -155,18 +155,61 @@ namespace LayerPresentation
                 return false;
             }
         }
-
-        // Buttons
-        private void btn_close_Click(object sender, EventArgs e)
+        
+        // Update click
+        private void btn_updatauser_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            if (MessageBox.Show("Estas seguro que deseas actualizar la informacion de sesion?" + "\nUsuario: " + txtBox_newUser_nombre.Text, "Atencion!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if (isGood && txtBox_newUser_pass.Text != "sininformacion") 
+                {
+                    string[] data = InitializeUser();
+                    // Update user sesion
+                    Utilities_Common.layerBusiness.cn_usuarios.UpdateUserData(id, data);
+                    frm_successdialog frm = new frm_successdialog(8);
+                    frm.Show();
 
-        private void btn_minimize_Click(object sender, EventArgs e)
+                    ClearFields(0);
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese correctamente los datos!", "Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        private void btn_updateinfo_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-        }
+            if (MessageBox.Show("Estas seguro que deseas actualizar la informacion?" + "\nUsuario: " + txtBox_newUser_nombre.Text, "Atencion!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if (isGood) 
+                {
+                    string[] data = InitializeInfo();
+                    // Update user info
+                    Utilities_Common.layerBusiness.cn_usuarios.UpdateUserInfo(id, data);
+                    frm_successdialog frm = new frm_successdialog(8);
+                    frm.Show();
 
+                    ClearFields(1);
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese correctamente los datos!", "Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        private void btn_updateempleado_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Estas seguro que deseas actualizar la informacion de empleado?" + "\nEmpleado: " + txtBox_newUser_nombreEmpleado.Text, "Atencion!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string[] data = InitializeEmpleado();
+                // Update user empleado
+                Utilities_Common.layerBusiness.cn_usuarios.UpdateUserEmpleado(id, data);
+                frm_successdialog frm = new frm_successdialog(8);
+                frm.Show();
+            }
+        }
+        
+        // Events enter & leave
         private void txtBox_newUser_user_Enter(object sender, EventArgs e)
         {
             if (txtBox_newUser_user.Text == user[0])
@@ -262,12 +305,12 @@ namespace LayerPresentation
 
         private void comboBox_privileges_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBox_privileges.SelectedIndex == 0) 
+            if (comboBox_privileges.SelectedIndex == 0)
             {
                 checkBox_privileges.Enabled = true;
                 checkBox_privileges.Checked = false;
             }
-            else 
+            else
             {
                 checkBox_privileges.Checked = false;
                 checkBox_privileges.Enabled = false;
@@ -292,9 +335,10 @@ namespace LayerPresentation
                 txtBox_newUser_nombre.Text = info[0];
 
                 isGood = true;
-            } else 
+            }
+            else
             {
-                if(txtBox_newUser_nombre.Text == info[0]) 
+                if (txtBox_newUser_nombre.Text == info[0])
                 {
                     isGood = true;
                 }
@@ -327,6 +371,7 @@ namespace LayerPresentation
                 }
             }
         }
+
         private void txtBox_newUser_ciudad_Enter(object sender, EventArgs e)
         {
             if (txtBox_newUser_ciudad.Text == info[2])
@@ -396,6 +441,7 @@ namespace LayerPresentation
             }
 
         }
+
         private void txtBox_newUser_observaciones_Enter(object sender, EventArgs e)
         {
             if (txtBox_newUser_observaciones.Text == empleado[2])
@@ -412,6 +458,7 @@ namespace LayerPresentation
                 txtBox_newUser_observaciones.Text = empleado[2];
             }
         }
+
         private void txtBox_newUser_salario_Enter(object sender, EventArgs e)
         {
             if (txtBox_newUser_salario.Text == empleado[1])
@@ -428,69 +475,24 @@ namespace LayerPresentation
                 txtBox_newUser_salario.Text = empleado[1];
             }
         }
-        // Update click
-        private void btn_updatauser_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Estas seguro que deseas actualizar la informacion de sesion?" + "\nUsuario: " + txtBox_newUser_nombre.Text, "Atencion!", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                if (isGood && txtBox_newUser_pass.Text != "sininformacion") 
-                {
-                    string[] data = InitializeUser();
-                    // Update user sesion
-                    _cnObject.UpdateUserData(id, data);
-                    frm_successdialog frm = new frm_successdialog(8);
-                    frm.Show();
-
-                    ClearFields(0);
-                }
-                else
-                {
-                    MessageBox.Show("Ingrese correctamente los datos!", "Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-        private void btn_updateinfo_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Estas seguro que deseas actualizar la informacion?" + "\nUsuario: " + txtBox_newUser_nombre.Text, "Atencion!", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                if (isGood) 
-                {
-                    string[] data = InitializeInfo();
-                    // Update user info
-                    _cnObject.UpdateUserInfo(id, data);
-                    frm_successdialog frm = new frm_successdialog(8);
-                    frm.Show();
-
-                    ClearFields(1);
-                }
-                else
-                {
-                    MessageBox.Show("Ingrese correctamente los datos!", "Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-        private void btn_updateempleado_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Estas seguro que deseas actualizar la informacion de empleado?" + "\nEmpleado: " + txtBox_newUser_nombreEmpleado.Text, "Atencion!", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                string[] data = InitializeEmpleado();
-                // Update user empleado
-                _cnObject.UpdateUserEmpleado(id, data);
-                frm_successdialog frm = new frm_successdialog(8);
-                frm.Show();
-            }
-        }
-
+        
         private void barra_titulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
         private void label50_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btn_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -424,7 +424,6 @@
             this.dg_tramites.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_tramites.Size = new System.Drawing.Size(986, 452);
             this.dg_tramites.TabIndex = 80;
-            this.dg_tramites.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_tramites_CellContentClick);
             this.dg_tramites.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dg_tramites_CellFormatting);
             // 
             // Id

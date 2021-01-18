@@ -19,30 +19,28 @@ namespace LayerPresentation
         {
             InitializeComponent();
             frm = principal;
-            this.login = login;
-            ColorSystem.frm = principal;
         }
 
-        private Cn_Empleados _cnEmpleados = new Cn_Empleados();
-        private Cn_Tramites _cnTramites = new Cn_Tramites();
-        private Cn_Formularios _cnFormularios = new Cn_Formularios();
-
         frm_principal frm;
-        frm_login login;
         int count = 0;
         
-        private void intializeText() 
+        private void LoadDataForm() 
         {
             lbl_nombreCorto.Text = UserLoginCache.Nombre_Corto;
             lbl_privilegios.Text = UserLoginCache.Priveleges;
         }
-        private void InitializeProgram() 
+        private protected void InitializeProgram() 
         {
-            _cnEmpleados.GenerateEmployeesDataCache();
+            ColorSystem.frm = frm;
+
+            // Initialize layer
+            Utilities_Common.layerBusiness = new Utilities_LayerBusiness();
+
+            Utilities_Common.layerBusiness.cn_empleados.GenerateEmployeesDataCache();
             Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
 
-            _cnTramites.GenerateDataTramitesCache();
-            _cnFormularios.GenerateDataFormulariosCache();
+            Utilities_Common.layerBusiness.cn_tramites.GenerateDataTramitesCache();
+            Utilities_Common.layerBusiness.cn_formularios.GenerateDataFormulariosCache();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -72,7 +70,7 @@ namespace LayerPresentation
 
         private void Bienvenida_Load(object sender, EventArgs e)
         {
-            intializeText();
+            LoadDataForm();
             InitializeProgram();
 
             this.Opacity = 0;

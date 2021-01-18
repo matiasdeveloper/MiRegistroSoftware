@@ -1,4 +1,5 @@
 ﻿using LayerBusiness;
+using LayerPresentation.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,16 +15,22 @@ namespace LayerPresentation
 {
     public partial class frm_tramites_insertar : Form
     {
+        // Move form with mouse down in bar
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
         public frm_tramites_insertar(bool isEdit, int id, string[] data, frm_tramites frm = null, frm_tramites_pantallaCompleta frm1 = null)
         {
             InitializeComponent();
             DataTramites.DisplayEmpleados(comboBox_empleados);
 
-            displayTramites(comboBox_tramites);
-            displayErrores(comboBox_tipoError);
+            LoadComboBoxTramites(comboBox_tramites);
+            LoadComboBoxErrores(comboBox_tipoError);
 
-            _frmHandlerTPc = frm1;
-            _frmHandler = frm;
+            _frmTramitesPantallaCompleta = frm1;
+            _frmTramites = frm;
             this.isEdit = isEdit;
             this.id = id;
 
@@ -53,16 +60,9 @@ namespace LayerPresentation
                 btn_cargar.Image = LayerPresentation.Properties.Resources.edit;
             }        
         }
-        Cn_Tramites _cnObject = new Cn_Tramites();
 
-        frm_tramites_pantallaCompleta _frmHandlerTPc;
-        frm_tramites _frmHandler;
-
-        // Move form with mouse down in bar
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        frm_tramites_pantallaCompleta _frmTramitesPantallaCompleta;
+        frm_tramites _frmTramites;
         
         // Variables de carga
         private string dominio;
@@ -83,7 +83,7 @@ namespace LayerPresentation
         private bool iniciarCarga = true;
 
         // Display combobox
-        private void displayTramites(ComboBox cb)
+        private void LoadComboBoxTramites(ComboBox cb)
         {
             Cn_Tramites objects = new Cn_Tramites();
             DataTable dt = objects.mostarTramites();
@@ -91,7 +91,7 @@ namespace LayerPresentation
             cb.ValueMember = "Cod";
             cb.DataSource = dt;
         }
-        private void displayErrores(ComboBox cb)
+        private void LoadComboBoxErrores(ComboBox cb)
         {
             Cn_Tramites objects = new Cn_Tramites();
             DataTable dt = objects.mostarErrores();
@@ -101,7 +101,7 @@ namespace LayerPresentation
         }
 
         // Initialize Charge Tramites
-        private bool initVariables() 
+        private bool InitializeVariables() 
         {
             // Dominio
             dominio = textBox_dominio.Text;
@@ -168,7 +168,7 @@ namespace LayerPresentation
             }
             return iniciarCarga;
         }
-        private void deleteFields() 
+        private void DeleteFields() 
         {
             dateTime_fecha.Value = DateTime.Now;
 
@@ -178,50 +178,39 @@ namespace LayerPresentation
             checkBox_procesados.Checked = true;
             comboBox_tipoError.SelectedValue = 0;
         }
-        private void btn_close_Click(object sender, EventArgs e)
+        
+        private void RefreshData() 
         {
-            this.Close();
-        }
-        private void barra_titulo_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            if (_frmTramites != null)
+            {
+                _frmTramites.RefreshAll();
+            }
+            if (_frmTramitesPantallaCompleta != null)
+            {
+                _frmTramitesPantallaCompleta.RefreshDataTramites();
+            }
         }
         private void btn_cargar_Click(object sender, EventArgs e)
         {
-            if (initVariables()) 
+            if (InitializeVariables()) 
             {
                 try
                 {
                     if (!isEdit)
                     {
-                        _cnObject.insertarTramite(dominio, fecha, cod_tramite, cod_empleado, observaciones, error, cod_error);
-                        deleteFields();
+                        Utilities_Common.layerBusiness.cn_tramites.insertarTramite(dominio, fecha, cod_tramite, cod_empleado, observaciones, error, cod_error);
+                        DeleteFields();
+                        RefreshData();
                         frm_successdialog f = new frm_successdialog(0);
                         f.Show();
-                        if (_frmHandler != null)
-                        {
-                            _frmHandler.refreshAll();
-                        }
-                        if (_frmHandlerTPc != null)
-                        {
-                            _frmHandlerTPc.refreshData();
-                        }
                     }
                     else
                     {
-                        _cnObject.actualizarTramite(id, dominio, cod_tramite, cod_empleado, observaciones, error, cod_error);
-                        deleteFields();
+                        Utilities_Common.layerBusiness.cn_tramites.actualizarTramite(id, dominio, cod_tramite, cod_empleado, observaciones, error, cod_error);
+                        DeleteFields();
+                        RefreshData();
                         frm_successdialog f = new frm_successdialog(2);
                         f.Show();
-                        if (_frmHandler != null)
-                        {
-                            _frmHandler.refreshAll();
-                        }
-                        if (_frmHandlerTPc != null)
-                        {
-                            _frmHandlerTPc.refreshData();
-                        }
                         this.Close();
                     }
                 }
@@ -235,10 +224,18 @@ namespace LayerPresentation
         {
             e.Handled = (e.KeyChar == (char)Keys.Space);
         }
+        private void barra_titulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         private void frm_tramites_insertar_Load(object sender, EventArgs e)
         {
 
         }
-
     }
 }

@@ -431,7 +431,6 @@
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(1005, 647);
             this.tabControl.TabIndex = 19;
-            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tabPage_errores
             // 
@@ -3876,7 +3875,6 @@
             title2.Name = "Title1";
             title2.Text = "Grafico de tramites mensual por empleado";
             this.chart_tramites.Titles.Add(title2);
-            this.chart_tramites.Click += new System.EventHandler(this.chart_tramites_Click);
             // 
             // panel74
             // 
