@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 public static class DataSave
 {
-    public static bool saveInPdf(DataGridView dg, string user)
+    public static bool ExportDataGridViewPDF(DataGridView dg, string user)
     {
         bool isOk = false;
         if (dg.Rows.Count > 0)
@@ -92,7 +92,7 @@ public static class DataSave
         return isOk;
     }
 
-    public static bool ExportToPdf(DataTable dt, string user)
+    public static bool ExportDataTablePDF(DataTable dt, string user)
     {
         bool OK = false;
         System.Windows.Forms.SaveFileDialog sfd = new SaveFileDialog();

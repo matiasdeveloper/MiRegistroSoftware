@@ -20,47 +20,38 @@ namespace LayerPresentation
         {
             InitializeComponent();
         }
+
         DataTable currentDt = null;
 
-        Cn_Tramites _handlerTramites = new Cn_Tramites();
-        Cn_Empleados _handlerEmpleados = new Cn_Empleados();
-        Cn_Formularios _handlerFormularios = new Cn_Formularios();
-
         // Metodos
-        private void Intialize() 
+        private void Start()
+        {
+            InitializeForm();
+            RefreshStockParameters();
+            RefreshDesktopDashboard();
+        }
+        void InitializeForm()
         {
             DataTramites.DisplayEmpleados(comboBox_empleados);
-            currentDt = GetTramites(Cn_HandlerTramites.current);
-
-            RefreshStockParameters();
-            _handlerFormularios.RefreshDataDashboardCache();
-
-            RefreshDashboard();
+            currentDt = DataTramites.data;
         }
-        public void RefreshAll() 
+        public void RefreshAll()
         {
-            RefreshData();
-            RefreshDashboard();
+            Utilities_Common.RefreshAllData();
+            RefreshDesktopDashboard();
         }
-        private void RefreshData()
+        public void RefreshDesktopDashboard()
         {
-            _handlerEmpleados.GenerateEmployeesDataCache();
-            _handlerTramites.RefreshDataTramitesCache();
-            _handlerTramites.RefreshDataDashboardCache();
-            _handlerFormularios.RefreshDataFormulariosCache();
-            _handlerFormularios.RefreshDataDashboardCache();
-
-            Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
-        }
-        public void RefreshDashboard() 
-        {
+            // Delete old registers in charts
             chart_circle_diario.Series["Series1"].Points.Clear();
             chart_circle_mensual.Series["Series1"].Points.Clear();
 
+            // Charge data into the charts, labels and others
             ChargeDataTramites();
             ChargeDataFormularios();
         }
-        private void ChargeDataFormularios() 
+
+        private void ChargeDataFormularios()
         {
             lbl_stockalto.Text = Cn_HandlerFormularios.data.formularioCache.totalAltos.ToString();
             lbl_stockmedio.Text = Cn_HandlerFormularios.data.formularioCache.totalMedios.ToString();
@@ -68,71 +59,67 @@ namespace LayerPresentation
         }
         private void ChargeDataTramites()
         {
+            // Display All Information For Tramites
+
             Label[] Hoy = { lbl_totaldiario_procesados, lbl_totaldiario_inscriptos };
             Label[] Mes = { lbl_totalmensual_procesados, lbl_totalmensual_inscriptos };
 
             Statistics.DashboardStatisticHoy(Hoy);
-            lbl_totaldiarios.Text = lbl_totaldiario_procesados.Text;
-            lbl_porcentaje_diario_procesados.Text = "100%";
-            lbl_porcentaje_diario_inscriptos.Text = CalculatePercentage(Convert.ToInt32(lbl_totaldiarios.Text), Convert.ToInt32(lbl_totaldiario_inscriptos.Text)).ToString() + "%";
-            chart_circle_diario.Series["Series1"].IsValueShownAsLabel = true;
-            chart_circle_diario.Series["Series1"].Points.AddXY("Procesados", lbl_totaldiario_procesados.Text);
-            chart_circle_diario.Series["Series1"].Points.AddXY("Inscriptos", lbl_totaldiario_inscriptos.Text);
+            DisplayChartDiario();
 
             Statistics.DashboardStatisticMes(Mes);
-            lbl_totalmensual.Text = lbl_totalmensual_procesados.Text;
-            lbl_porcentaje_mensual_procesados.Text = "100%";
-            lbl_porcentaje_mensual_inscriptos.Text = CalculatePercentage(Convert.ToInt32(lbl_totalmensual.Text), Convert.ToInt32(lbl_totalmensual_inscriptos.Text)).ToString() + "%";
-            chart_circle_mensual.Series["Series1"].IsValueShownAsLabel = true;
-            chart_circle_mensual.Series["Series1"].Points.AddXY("Procesados", lbl_totalmensual_procesados.Text);
-            chart_circle_mensual.Series["Series1"].Points.AddXY("Inscriptos", lbl_totalmensual_inscriptos.Text);
+            DisplayChartMensual();
 
             string[] series = { "Empleados" };
             chart_mensual_empleados.Series[series[0]].IsValueShownAsLabel = true;
             chart_mensual_empleados.Series[series[0]].Points.Clear();
 
             Statistics.DashboardChartEmployees(chart_mensual_empleados, series, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-
             Statistics.DisplayTopErrores(dg_topErrores, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-        }
-        private double CalculatePercentage(int total, int value) 
-        {
-            float percentage = 0;
-            if(total > 0 & value > 0) 
-            {
-                percentage = (value * 100) / total;
-            }
-            var vOut = Math.Round(percentage, 0);
-            return vOut;
-        }
-        private bool ExportInformePdf(DataTable dt, string name)
-        {
-            string dia = DateTime.Now.Day + "-" + DateTime.Now.Month;
-            string user = name + "_" + dia;
+        } 
 
-            bool result = DataSave.ExportToPdf(dt, user);
-
-            return result;
-        }
-        private DataTable GetTramites(int id)
+        void DisplayChartDiario() 
         {
-            Tramites tmp = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(id);
-            DataTable table = tmp.data;
-            //MessageBox.Show(table.Rows.Count.ToString());
-            return table;
+            lbl_totaldiarios.Text = lbl_totaldiario_procesados.Text;
+            lbl_porcentaje_diario_procesados.Text = "100%";
+            lbl_porcentaje_diario_inscriptos.Text = Utilities.CalculatePercentage(Convert.ToInt32(lbl_totaldiarios.Text), Convert.ToInt32(lbl_totaldiario_inscriptos.Text)).ToString() + "%";
+            chart_circle_diario.Series["Series1"].IsValueShownAsLabel = true;
+            chart_circle_diario.Series["Series1"].Points.AddXY("Procesados", lbl_totaldiario_procesados.Text);
+            chart_circle_diario.Series["Series1"].Points.AddXY("Inscriptos", lbl_totaldiario_inscriptos.Text);
         }
+        void DisplayChartMensual()
+        {
+            lbl_totalmensual.Text = lbl_totalmensual_procesados.Text;
+            lbl_porcentaje_mensual_procesados.Text = "100%";
+            lbl_porcentaje_mensual_inscriptos.Text = Utilities.CalculatePercentage(Convert.ToInt32(lbl_totalmensual.Text), Convert.ToInt32(lbl_totalmensual_inscriptos.Text)).ToString() + "%";
+            chart_circle_mensual.Series["Series1"].IsValueShownAsLabel = true;
+            chart_circle_mensual.Series["Series1"].Points.AddXY("Procesados", lbl_totalmensual_procesados.Text);
+            chart_circle_mensual.Series["Series1"].Points.AddXY("Inscriptos", lbl_totalmensual_inscriptos.Text);
+        }
+        
         public void RefreshStockParameters()
         {
             Cn_HandlerFormularios.stockBajo = Settings.Default.StockBajo;
             Cn_HandlerFormularios.stockMedio = Settings.Default.StockMedio;
             Cn_HandlerFormularios.stockAlto = Settings.Default.StockAlto;
         }
+        private void LoadAccesPrivileges()
+        {
+            if (UserLoginCache.Priveleges == Privileges.Estandar)
+            {
+                // Code here
+                btn_inscribir.Enabled = false;
+                btn_insertar.Enabled = false;
+                btn_savepdf_empleado.Enabled = false;
+            }
+        }
+
         // Exportar Pdf Buttons
         private void btn_savepdf_stock_Click(object sender, EventArgs e)
         {
             DataTable dt = Cn_HandlerFormularios.data.GetCache().GetCurrentFormulario(Cn_HandlerFormularios.current).data;
 
-            if (ExportInformePdf(dt, "InformeFORMULARIOS"))
+            if (Utilites_Pdf.ExportDataTableInPdf(dt, "InformeFORMULARIOS"))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -140,7 +127,7 @@ namespace LayerPresentation
         }
         private void btn_savepdf_tramites_Click(object sender, EventArgs e)
         {
-            if (ExportInformePdf(currentDt, "TramitesRNA"))
+            if (Utilites_Pdf.ExportDataTableInPdf(currentDt, "TramitesRNA"))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -152,8 +139,8 @@ namespace LayerPresentation
             int id = Convert.ToInt32(empleado);
             string user = comboBox_empleados.GetItemText(comboBox_empleados.SelectedItem);
 
-            DataTable dt = DataTramites.GetTableDate(DataTramites.GetDataTramitesTableWithID(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-            if (ExportInformePdf(dt, user))
+            DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+            if (Utilites_Pdf.ExportDataTableInPdf(dt, user))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -185,7 +172,7 @@ namespace LayerPresentation
         {
             if (checkBox_inscripto.Checked)
             {
-                frm_tramites_inscribir_mult frm = new frm_tramites_inscribir_mult(DateTime.Today, currentDt, null, this);
+                frm_tramites_inscribir_mult frm = new frm_tramites_inscribir_mult(DateTime.Today, null, this);
                 frm.Show();
             }
         }
@@ -202,25 +189,17 @@ namespace LayerPresentation
             lbl_fecha.Text = DateTime.Now.ToLongDateString();
         }
 
-        private void frm_escritorio_Load(object sender, EventArgs e)
-        {
-            Intialize();
-            cargarPrivilegios();
-        }
         private void btn_refreshdata_Click(object sender, EventArgs e)
         {
-            RefreshData();
-            RefreshDashboard();
+            Utilities_Common.RefreshAllData();
+            RefreshDesktopDashboard();
         }
-        private void cargarPrivilegios()
+
+        // Load Windows Form
+        private void frm_escritorio_Load(object sender, EventArgs e)
         {
-            if (UserLoginCache.Priveleges == Privileges.Estandar)
-            {
-                // Code here
-                btn_inscribir.Enabled = false;
-                btn_insertar.Enabled = false;
-                btn_savepdf_empleado.Enabled = false;
-            }
+            Start();
+            LoadAccesPrivileges();
         }
     }
 }

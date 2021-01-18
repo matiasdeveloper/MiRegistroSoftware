@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LayerBusiness;
+using LayerPresentation.Clases;
 using LayerSoporte.Cache;
 
 namespace LayerPresentation
@@ -20,11 +21,6 @@ namespace LayerPresentation
             InitializeComponent();
         }
 
-        // Function
-        Cn_Usuarios _cnObject = new Cn_Usuarios();
-        Cn_Formularios _cnFormularios = new Cn_Formularios();
-        Cn_Tramites _cnTramites = new Cn_Tramites();
-
         private bool validatePassword = false;
 
         private Image check = LayerPresentation.Properties.Resources.check;
@@ -32,7 +28,8 @@ namespace LayerPresentation
 
         private bool isGood = false;
 
-        private void refreshUserInfo() 
+        // Load initial data from panel config my user
+        private void LoadUserInfo() 
         {
             lbl_nombreUser.Text = UserLoginCache.Nombre;
             lbl_user.Text = UserLoginCache.Username;
@@ -50,7 +47,8 @@ namespace LayerPresentation
             check_tramites.Checked = Properties.Settings.Default.AlertaTramites;
         }
 
-        private List<string>[] InitializeNewDataUser() 
+        // Initialize data from new user
+        private List<string>[] InitializeDataFromNewUser() 
         {
             List<List<string>> all = new List<List<string>>();
 
@@ -87,88 +85,123 @@ namespace LayerPresentation
             
             return all.ToArray();
         }
-       
-        private void mostraPanelConfig(Panel pn, Button btn)
+        
+        // Clear fields for new user panel
+        private void ClearFieldsNewUser()
+        {
+            isGood = false;
+            txtBox_newUser_user.Text = "ingrese el usuario";
+            txtBox_newUser_pass.Text = "Ingrese la contraseña";
+            comboBox_privileges.SelectedIndex = -1;
+
+            txtBox_newUser_nombre.Text = "Ingrese el nombre";
+            txtBox_newUser_nombreCorto.Text = "Ingrese el nombre corto/apodo";
+            txtBox_newUser_ciudad.Text = "Ingrese la ciudad natal";
+            txtBox_newUser_email.Text = "Ingrese el email";
+
+            txtBox_newUser_nombreEmpleado.Text = "Ingrese el nombre del sistema (Ej: Mati A.)";
+        }
+
+        // Mostrar u ocultar panel in config my user
+        private void MostrarPanelConfigUser(Panel pn, Button btn)
         {
             pn.Visible = true;
             btn.Enabled = false;
         }
-        private void ocultarPanelConfig(Panel pn, Button btn)
+        private void OcultarPanelConfigUser(Panel pn, Button btn)
         {
             pn.Visible = false;
             btn.Enabled = true;
         }
-        // Method
+
+        private bool ValidateOlderPassword(string password)
+        {
+            return Utilities_Common.layerBusiness.cn_usuarios.verificarPassword(UserLoginCache.IdUser, password);
+        }
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        
+        private void LoadAccessPrivileges()
+        {
+            if (UserLoginCache.Priveleges == Privileges.Administrador)
+            {
+                // Code here activate or desactive functions
+                panel_newTramite.Enabled = true;
+                panel_newFormulario.Enabled = true;
+                if (UserLoginCache.isRoot == 1)
+                {
+                    panel_newUser.Enabled = true;
+                }
+            }
+        }
+        // Methods
+        // Panel Configuration My User
         private void btn_cambiar1_Click(object sender, EventArgs e)
         {
-            mostraPanelConfig(pn_expand_1, btn_cambiar1);
+            MostrarPanelConfigUser(pn_expand_1, btn_cambiar1);
         }
-
         private void btn_cambiar2_Click(object sender, EventArgs e)
         {
-            mostraPanelConfig(pn_expand_2, btn_cambiar2);
+            MostrarPanelConfigUser(pn_expand_2, btn_cambiar2);
         }
-
         private void btn_cambiar3_Click(object sender, EventArgs e)
         {
-            mostraPanelConfig(pn_expand_3, btn_cambiar3);
+            MostrarPanelConfigUser(pn_expand_3, btn_cambiar3);
         }
-
         private void btn_cambiar4_Click(object sender, EventArgs e)
         {
-            mostraPanelConfig(pn_expand_4, btn_cambiar4);
+            MostrarPanelConfigUser(pn_expand_4, btn_cambiar4);
         }
-
         private void btn_cambiar5_Click(object sender, EventArgs e)
         {
-            mostraPanelConfig(pn_expand_5, btn_cambiar5);
+            MostrarPanelConfigUser(pn_expand_5, btn_cambiar5);
         }
-
         private void btn_cambiar6_Click(object sender, EventArgs e)
         {
-            mostraPanelConfig(pn_expand_6, btn_cambiar6);
+            MostrarPanelConfigUser(pn_expand_6, btn_cambiar6);
         }
-
         private void btn_cancelar1_Click(object sender, EventArgs e)
         {
-            ocultarPanelConfig(pn_expand_1, btn_cambiar1);
+            OcultarPanelConfigUser(pn_expand_1, btn_cambiar1);
         }
-
         private void btn_cancelar2_Click(object sender, EventArgs e)
         {
-            ocultarPanelConfig(pn_expand_2, btn_cambiar2);
+            OcultarPanelConfigUser(pn_expand_2, btn_cambiar2);
         }
-
         private void btn_cancelar3_Click(object sender, EventArgs e)
         {
-            ocultarPanelConfig(pn_expand_3, btn_cambiar3);
+            OcultarPanelConfigUser(pn_expand_3, btn_cambiar3);
         }
-
         private void btn_cancelar4_Click(object sender, EventArgs e)
         {
-            ocultarPanelConfig(pn_expand_4, btn_cambiar4);
+            OcultarPanelConfigUser(pn_expand_4, btn_cambiar4);
         }
-
         private void btn_cancelar5_Click(object sender, EventArgs e)
         {
-            ocultarPanelConfig(pn_expand_5, btn_cambiar5);
+            OcultarPanelConfigUser(pn_expand_5, btn_cambiar5);
         }
-
         private void btn_cancelar6_Click(object sender, EventArgs e)
         {
-            ocultarPanelConfig(pn_expand_6, btn_cambiar6);
+            OcultarPanelConfigUser(pn_expand_6, btn_cambiar6);
         }
-        private bool ValidateOldPassword(string password) 
-        {
-            return _cnObject.verificarPassword(UserLoginCache.IdUser, password);
-        }
+        
         // Events click in save config user
         private void btn_save_user_Click(object sender, EventArgs e)
         {
             if(txtBox_usuario.Text != UserLoginCache.Username) 
             {
                 // Save new user
-                _cnObject.UpdateUser(UserLoginCache.IdUser, txtBox_usuario.Text);
+                Utilities_Common.layerBusiness.cn_usuarios.UpdateUser(UserLoginCache.IdUser, txtBox_usuario.Text);
                 UserLoginCache.Username = txtBox_usuario.Text;
                 frm_successdialog f = new frm_successdialog(2);
                 f.Show();
@@ -188,7 +221,7 @@ namespace LayerPresentation
                         if (txtBox_passNueva.Text != txtBox_passAntigua.Text) 
                         {
                             // Save new password
-                            _cnObject.UpdatePassword(UserLoginCache.IdUser, txtBox_passNueva.Text);
+                            Utilities_Common.layerBusiness.cn_usuarios.UpdatePassword(UserLoginCache.IdUser, txtBox_passNueva.Text);
                             UserLoginCache.Password = txtBox_passNueva.Text;
                             frm_successdialog f = new frm_successdialog(2);
                             f.Show();
@@ -227,7 +260,7 @@ namespace LayerPresentation
             if(txtBox_nombreUsuario.Text != UserLoginCache.Nombre) 
             {
                 // Save name
-                _cnObject.UpdateName(UserLoginCache.IdUser, txtBox_nombreUsuario.Text);
+                Utilities_Common.layerBusiness.cn_usuarios.UpdateName(UserLoginCache.IdUser, txtBox_nombreUsuario.Text);
 
                 UserLoginCache.Nombre = txtBox_nombreUsuario.Text;
                 frm_successdialog f = new frm_successdialog(2);
@@ -241,7 +274,7 @@ namespace LayerPresentation
             if (txtBox_nombreCorto.Text != UserLoginCache.Nombre_Corto)
             {
                 // Save name short
-                _cnObject.UpdateShortName(UserLoginCache.IdUser, txtBox_nombreCorto.Text);
+                Utilities_Common.layerBusiness.cn_usuarios.UpdateShortName(UserLoginCache.IdUser, txtBox_nombreCorto.Text);
 
                 UserLoginCache.Nombre_Corto = txtBox_nombreCorto.Text;
                 frm_successdialog f = new frm_successdialog(2);
@@ -261,7 +294,7 @@ namespace LayerPresentation
                 else 
                 {
                     // Save email 
-                    _cnObject.UpdateEmail(UserLoginCache.IdUser, txtBox_correo.Text);
+                    Utilities_Common.layerBusiness.cn_usuarios.UpdateEmail(UserLoginCache.IdUser, txtBox_correo.Text);
 
                     UserLoginCache.Email = txtBox_correo.Text;
                     frm_successdialog f = new frm_successdialog(2);
@@ -276,7 +309,7 @@ namespace LayerPresentation
             if (txtBox_ciudad.Text != UserLoginCache.City)
             {
                 // Save city 
-                _cnObject.UpdateCity(UserLoginCache.IdUser, txtBox_ciudad.Text);
+                Utilities_Common.layerBusiness.cn_usuarios.UpdateCity(UserLoginCache.IdUser, txtBox_ciudad.Text);
 
                 UserLoginCache.City = txtBox_ciudad.Text;
                 frm_successdialog f = new frm_successdialog(2);
@@ -304,7 +337,7 @@ namespace LayerPresentation
                 txtBox_passAntigua.UseSystemPasswordChar = false;
             } else 
             {
-                if (ValidateOldPassword(txtBox_passAntigua.Text)) 
+                if (ValidateOlderPassword(txtBox_passAntigua.Text)) 
                 {
                     pictureBox_oldPassword.BackgroundImage = LayerPresentation.Properties.Resources.check;
                     pictureBox_oldPassword.Visible = true;
@@ -318,7 +351,6 @@ namespace LayerPresentation
                 }
             }
         }
-
         private void txtBox_passNueva_Enter(object sender, EventArgs e)
         {
             if (txtBox_passNueva.Text == "Nueva contraseña")
@@ -350,7 +382,6 @@ namespace LayerPresentation
                 }
             }
         }
-
         private void txtBox_passNueva1_Enter(object sender, EventArgs e)
         {
             if (txtBox_passNueva1.Text == "Volver a introducir la contraseña")
@@ -383,6 +414,9 @@ namespace LayerPresentation
                 }
             }
         }
+        
+        // Panel Utilities
+        // Utilities tramites
         private void check_tramites_CheckedChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.AlertaTramites = check_tramites.Checked;
@@ -398,10 +432,12 @@ namespace LayerPresentation
             Properties.Settings.Default.AlertaCumpleaños = check_cumpleaños.Checked;
             Properties.Settings.Default.Save();
         }
-        // New category
+        
+        // Panel New Category Formularios
+        // Save new category from formularios
         private void textBox_newCategoria_Enter(object sender, EventArgs e)
         {
-            if (textBox_newCategoria.Text == "INGRESE UNA NUEVA CATEGORIA (EJ: 31A)")
+            if (textBox_newCategoria.Text == "Ingrese una nueva categoria (EJ: 31A)")
             {
                 textBox_newCategoria.ForeColor = Color.Black;
                 textBox_newCategoria.Text = "";
@@ -420,16 +456,17 @@ namespace LayerPresentation
             if(textBox_newCategoria.Text != "" && textBox_newCategoria.Text != "INGRESE UNA NUEVA CATEGORIA (EJ: 31A)" && comboBox_objeto.SelectedIndex >= 0) 
             {
                 string objeto = comboBox_objeto.GetItemText(comboBox_objeto.SelectedItem);
-                _cnFormularios.InsertarCategoriaFormularios(objeto, textBox_newCategoria.Text);
+                Utilities_Common.layerBusiness.cn_formularios.InsertarCategoriaFormularios(objeto, textBox_newCategoria.Text);
+                Utilities_Common.RefreshFormulariosData();
                 frm_successdialog f = new frm_successdialog(0);
                 f.Show();
-                _cnFormularios.RefreshDataCategoriasCache();
             }
             else 
             {
                 MessageBox.Show("Los campos obligatorios estan vacios", "Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        
         private void comboBox_objeto_Enter(object sender, EventArgs e)
         {
             comboBox_objeto.ForeColor = Color.Black;
@@ -438,12 +475,14 @@ namespace LayerPresentation
         {
             comboBox_objeto.ForeColor = Color.DarkGray;
         }
-        // New tipo tramite
+        
+        // Panel New Category Tramites
+        // Save new tipo de tramite from tramites
         private void btn_newCategoriaTramite_Click(object sender, EventArgs e)
         {
             if(textBox_tipoTramite.Text != "") 
             {
-                _cnTramites.InsertarCategoria(textBox_tipoTramite.Text);
+                Utilities_Common.layerBusiness.cn_tramites.InsertarCategoria(textBox_tipoTramite.Text);
                 frm_successdialog f = new frm_successdialog(0);
                 f.Show();
             }
@@ -464,6 +503,8 @@ namespace LayerPresentation
                 textBox_tipoTramite.ForeColor = Color.DarkGray;
             }
         }
+        
+        // Panel Change Color
         // Color
         private void btn_color1_Click(object sender, EventArgs e)
         {
@@ -505,19 +546,20 @@ namespace LayerPresentation
         {
             ColorSystem.ChangeColor(btn_color10.BackColor);
         }
-        // New user
+        
+        // Panel New User
         // Insert to database
         private void btn_newUser_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("Estas seguro que deseas añadir un nuevo usuario al sistema?" + "\nUsuario nuevo: " + txtBox_newUser_nombre.Text, "Atencion!", MessageBoxButtons.YesNo) == DialogResult.Yes) 
             {
-                if(MessageBox.Show("¿Acepta los terminos y condiciones de uso?" + "\n Sistemas MiRegistro desarrollado en infraestructuras de seguridad de Microsoft Azure.", "MiRegistro", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK) 
+                if(MessageBox.Show("¿Acepta los terminos y condiciones de uso?" + "\n Sistemas MiRegistro desarrollado en infraestructuras de Microsoft Azure.", "MiRegistro", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK) 
                 {
-                    List<string>[] data = InitializeNewDataUser();
+                    List<string>[] data = InitializeDataFromNewUser();
                     if (data[3][0] == "True")
                     {
                         // Add user
-                        _cnObject.AddUser(data);
+                        Utilities_Common.layerBusiness.cn_usuarios.AddUser(data);
                         frm_successdialog frm = new frm_successdialog(7);
                         frm.Show();
 
@@ -529,20 +571,7 @@ namespace LayerPresentation
                 }
             }
         }
-        private void ClearFieldsNewUser() 
-        {
-            isGood = false;
-            txtBox_newUser_user.Text = "ingrese el usuario";
-            txtBox_newUser_pass.Text = "Ingrese la contraseña";
-            comboBox_privileges.SelectedIndex = -1;
-
-            txtBox_newUser_nombre.Text = "Ingrese el nombre";
-            txtBox_newUser_nombreCorto.Text = "Ingrese el nombre corto/apodo";
-            txtBox_newUser_ciudad.Text = "Ingrese la ciudad natal";
-            txtBox_newUser_email.Text = "Ingrese el email";
-
-            txtBox_newUser_nombreEmpleado.Text = "Ingrese el nombre del sistema (Ej: Mati A.)";
-        }
+        
         // Login info
         private void txtBox_newUser_user_Enter(object sender, EventArgs e)
         {
@@ -662,7 +691,6 @@ namespace LayerPresentation
                 txtBox_newUser_nombre.Text = "Ingrese el nombre";
             }
         }
-
         private void txtBox_newUser_nombreCorto_Enter(object sender, EventArgs e)
         {
             if (txtBox_newUser_nombreCorto.Text == "Ingrese el nombre corto/apodo")
@@ -679,7 +707,6 @@ namespace LayerPresentation
                 txtBox_newUser_nombreCorto.Text = "Ingrese el nombre corto/apodo";
             }
         }
-
         private void txtBox_newUser_ciudad_Enter(object sender, EventArgs e)
         {
             if (txtBox_newUser_ciudad.Text == "Ingrese la ciudad natal")
@@ -696,7 +723,6 @@ namespace LayerPresentation
                 txtBox_newUser_ciudad.Text = "Ingrese la ciudad natal";
             }
         }
-
         private void txtBox_newUser_email_Enter(object sender, EventArgs e)
         {
             if (txtBox_newUser_email.Text == "Ingrese el email")
@@ -737,18 +763,6 @@ namespace LayerPresentation
                 }
             }
         }
-        bool IsValidEmail(string email)
-        {
-            try
-            {
-                var addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == email;
-            }
-            catch
-            {
-                return false;
-            }
-        }
         private void txtBox_newUser_nombreEmpleado_Enter(object sender, EventArgs e)
         {
             if (txtBox_newUser_nombreEmpleado.Text == "Ingrese el nombre del sistema (Ej: Mati A.)")
@@ -787,48 +801,34 @@ namespace LayerPresentation
                 }
             }
         }
-        private void cargarPrivilegios()
+        
+        private void txtBox_usuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (UserLoginCache.Priveleges == Privileges.Administrador)
-            {
-                // Code here activate or desactive functions
-                panel_newTramite.Enabled = true;
-                panel_newFormulario.Enabled = true;
-                if (UserLoginCache.isRoot == 1) 
-                {
-                    panel_newUser.Enabled = true;
-                }
-            }
+            e.Handled = (e.KeyChar == (char)Keys.Space);
         }
+        private void txtBox_passAntigua_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+
+        }
+        private void txtBox_passNueva_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
+        private void txtBox_passNueva1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
+        
+        // Panel Advanced Configuration
         private void btn_settings_advanced_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Opcion deshabilitada!" + "\nEstamos trabajando para añadir nuevas funcionalidades", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void frm_configuracion_Load(object sender, EventArgs e)
         {
-            refreshUserInfo();
-            cargarPrivilegios();
-        }
-
-        private void txtBox_usuario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = (e.KeyChar == (char)Keys.Space);
-        }
-
-        private void txtBox_passAntigua_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = (e.KeyChar == (char)Keys.Space);
-
-        }
-
-        private void txtBox_passNueva_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = (e.KeyChar == (char)Keys.Space);
-        }
-
-        private void txtBox_passNueva1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = (e.KeyChar == (char)Keys.Space);
+            LoadUserInfo();
+            LoadAccessPrivileges();
         }
     }
 }

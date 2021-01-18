@@ -11,6 +11,12 @@ using System.Windows.Forms;
 
 public static class DataTramites
 {
+    public static DataTable data 
+    { 
+        get { return GetTramites(Cn_HandlerTramites.current); }
+        set { data = value; }
+    }
+
     // Display combobox empleados
     public static void DisplayEmpleados(ComboBox cb)
     {
@@ -38,7 +44,13 @@ public static class DataTramites
         return table;
     }
 
-    public static DataTable GetDataTramitesTableWithID(int id)
+    public static DataTable GetTramites(int id)
+    {
+        Tramites tmp = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(id);
+        DataTable table = tmp.data;
+        return table;
+    }
+    public static DataTable GetEmployeeDataTramites(int id)
     {
         LinkedList<Employee> tmp = Cn_Employee.data.GetCache().GetUsers();
         LinkedListNode<Employee> employee = tmp.First;

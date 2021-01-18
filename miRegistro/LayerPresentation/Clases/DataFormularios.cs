@@ -12,6 +12,11 @@ namespace LayerPresentation.Clases
 {
     public static class DataFormularios
     {
+        public static DataTable data 
+        {
+            get { return GetFormulariosCacheByID(Cn_HandlerFormularios.current); }
+            private set { data = value; }
+        }
         /// <summary>
         /// Get the cache for formularios
         /// </summary>

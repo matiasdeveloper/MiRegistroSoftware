@@ -10,17 +10,16 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using LayerBusiness;
 using LayerPresentation.Properties;
+using LayerPresentation.Clases;
 
 namespace LayerPresentation
 {
     public partial class frm_formularios_alerta : Form
     {
-        private Cn_Formularios _cnObject = new Cn_Formularios();
-        private Cn_alertas _cnObjectAlert = new Cn_alertas();
-
-        private int stockBajo = 0;
-        private int stockMedio = 0;
-        private int stockAlto = 0;
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         public frm_formularios_alerta(bool isInit, int id, string fecha, string usuario)
         {
@@ -31,32 +30,16 @@ namespace LayerPresentation
             userAlert = usuario;
         }
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        private int stockBajo = 0;
+        private int stockMedio = 0;
+        private int stockAlto = 0;
 
         private bool isInitial = false;
         private int idAlert;
         private string fechaAlert;
         private string userAlert;
 
-        private void barra_titulo_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btn_minimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-        private void chargeDataAlert()
+        private void LoadDataAlert()
         {
             if (isInitial == false)
             {
@@ -80,7 +63,7 @@ namespace LayerPresentation
             else 
             {
                 Cn_alertas objects = new Cn_alertas();
-                int[] idForm = _cnObjectAlert.buscarDetallesAlerta(idAlert);
+                int[] idForm = Utilities_Common.layerBusiness.cn_alertas.buscarDetallesAlerta(idAlert);
 
                 dg_formulariosAlert.DataSource = objects.mostrarSpecificAlert(idForm);
                 lbl_fechayhora.Text = fechaAlert;
@@ -88,21 +71,6 @@ namespace LayerPresentation
                 lbl_usuarioAlertado.Text = userAlert;
             }
         }
-
-        private void frm_formularios_alerta_Load(object sender, EventArgs e)
-        {
-            stockBajo = Settings.Default.StockBajo;
-            stockMedio = Settings.Default.StockMedio;
-            stockAlto = Settings.Default.StockAlto;
-
-            chargeDataAlert();
-        }
-
-        private void btn_refreshTable_Click(object sender, EventArgs e)
-        {
-            chargeDataAlert();
-        }
-
         private void dg_formulariosAlert_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (this.dg_formulariosAlert.Columns[e.ColumnIndex].Name == "Stocks")
@@ -125,23 +93,34 @@ namespace LayerPresentation
 
             }
         }
-        private bool ExportDataTramitesPdf(DataGridView dt, string name)
-        {
-            Random r = new Random();
-            string dia = DateTime.Now.Day + "-" + DateTime.Now.Month;
-            string user = name + "_" + dia;
-
-            bool result = DataSave.saveInPdf(dt, user);
-
-            return result;
-        }
         private void btn_savepdf_Click(object sender, EventArgs e)
         {
-            if (ExportDataTramitesPdf(dg_formulariosAlert, "Alerta" + userAlert + "_"))
+            if (Utilites_Pdf.ExportDataGridViewInPdf(dg_formulariosAlert, "Alerta" + userAlert + "_"))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
             }
+        }
+        private void barra_titulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btn_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void frm_formularios_alerta_Load(object sender, EventArgs e)
+        {
+            stockBajo = Settings.Default.StockBajo;
+            stockMedio = Settings.Default.StockMedio;
+            stockAlto = Settings.Default.StockAlto;
+
+            LoadDataAlert();
         }
     }
 }

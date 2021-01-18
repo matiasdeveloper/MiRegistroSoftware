@@ -15,6 +15,17 @@ namespace LayerPresentation
         public frm_successdialog(int isState)
         {
             InitializeComponent();
+
+            this.isState = isState;
+            InitializeState();
+        }
+        
+        private int isState;
+        int count = 0;
+        int opacity = 0;
+        
+        private void InitializeState() 
+        {
             switch (isState)
             {
                 case 0:
@@ -55,15 +66,6 @@ namespace LayerPresentation
                     break;
             }
         }
-
-        int count = 0;
-        int opacity = 0;
-
-        private void frm_successdialog_Load(object sender, EventArgs e)
-        {
-            this.Opacity = 0;
-            timer1.Start();
-        }
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
             count = 1;
@@ -72,7 +74,6 @@ namespace LayerPresentation
             timer1.Start();
             btn_aceptar.Enabled = false;
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (count == 0)
@@ -94,6 +95,12 @@ namespace LayerPresentation
                     this.Close();
                 }
             }
+        }
+
+        private void frm_successdialog_Load(object sender, EventArgs e)
+        {
+            this.Opacity = 0;
+            timer1.Start();
         }
     }
 }
