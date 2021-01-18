@@ -21,34 +21,32 @@ namespace LayerPresentation
         public frm_tramites()
         {
             InitializeComponent();
-            refreshData();
+            LoadDataTramites();
         }
-        // Variables
-        private Cn_Tramites _cnTramites = new Cn_Tramites();
-        private Cn_Empleados _cnEmpleados = new Cn_Empleados();
-
-        private DataTable currentDt;
-
+        // Variable
         private Button _currentBtn;
         private Panel _currentPanelQuery;
 
         private int selectedId = 0;
+        
         // Methods
-        public void refreshAll() 
+        public void RefreshAll() 
         {
-            _cnTramites.RefreshDataTramitesCache();
-            _cnEmpleados.GenerateEmployeesDataCache(); Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
-
-            refreshTramites(Cn_HandlerTramites.current);
-            refreshDashboard();
+            Utilities_Common.RefreshTramitesData();
+            RefreshDashboardData();
         }
-        public void refreshData() 
+        private void RefreshDashboardData() 
         {
-            refreshTramites(Cn_HandlerTramites.current);
-            refreshDashboard();
+            Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
+            LoadDataTramites();
+        }
+        private void LoadDataTramites() 
+        {
+            LoadTramites(Cn_HandlerTramites.current);
+            LoadDashboard();
         }
         // Charge priviliges when intialize the form
-        private void cargarPrivilegios() 
+        private void LoadAccessPrivileges() 
         {
             if (UserLoginCache.Priveleges == Privileges.Estandar)
             {
@@ -61,16 +59,15 @@ namespace LayerPresentation
             }
         }
         // Refresh data tramites
-        private void refreshTramites(int id) 
+        private void LoadTramites(int id) 
         {
             dg_tramites.AutoGenerateColumns = false;
-            DataTable dt = GetTramites(id);
-            currentDt = dt;
-            dg_tramites.DataSource = dt;
+            DataTable dt = DataTramites.data;
 
-            disableButton();
+            dg_tramites.DataSource = dt;
+            DisableButton();
         }
-        private void refreshDashboard()
+        private void LoadDashboard()
         {
             Tuple<int,int,int,int> dt = Cn_HandlerTramites.data.tramitesCache.GetTramitesHistory();
             lbl_totaltramites.Text = dt.Item1.ToString();
@@ -78,35 +75,34 @@ namespace LayerPresentation
             lbl_totalinscriptos.Text = dt.Item3.ToString();
             lbl_totalerrores.Text = dt.Item4.ToString();
         }
-        private DataTable GetTramites(int id)
+
+        /// <summary>
+        /// Load the data from the new query executed by the user. 
+        /// For example: Query for range of dates.
+        /// </summary>
+        /// <param name="dt"></param>
+        public void LoadDataQuery(DataTable dt) 
         {
-            Tramites tmp = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(id);
-            DataTable table = tmp.data;
-            //MessageBox.Show(table.Rows.Count.ToString());
-            return table;
-        }
-        // Refresh query specific tramites
-        public void RefreshQuery(DataTable dt) 
-        {
-            if(dt == currentDt) 
+            if(dt == DataTramites.data) 
             {
-                disableButton();
+                DisableButton();
             }
             dg_tramites.AutoGenerateColumns = false;
             dg_tramites.DataSource = dt;
         }
-        // Activate or desactivate active button in current query
-        private void activateButton(object senderBtn, Color color)
+
+        // Activate or desactivate button in current query
+        private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
             {
-                disableButton();
+                DisableButton();
                 _currentBtn = (Button)senderBtn;
                 _currentBtn.BackColor = Color.FromArgb(224, 224, 224);
                 _currentBtn.ForeColor = color;
             }
         }
-        private void disableButton()
+        private void DisableButton()
         {
             if (_currentBtn != null)
             {
@@ -116,17 +112,17 @@ namespace LayerPresentation
         }   
         
         // Activate or desactivate panel query
-        private void activatePanel(Panel pn) 
+        private void ActivatePanelQuery(Panel pn) 
         {
             if(pn != null) 
             {
-                disableButton();
-                disablePanel();
+                DisableButton();
+                DisablePanelQuery();
                 _currentPanelQuery = (Panel)pn;
                 _currentPanelQuery.Visible = true;
             }
         }
-        private void disablePanel() 
+        private void DisablePanelQuery() 
         {
             if(_currentPanelQuery != null) 
             {
@@ -152,9 +148,9 @@ namespace LayerPresentation
             return data;
         }
 
-        private void OpenFormQuery(string nombre, string query)
+        private void OpenNewFormInQuery(string nombre, string query)
         {
-            frm_tramites_query frm = new frm_tramites_query(nombre, query, currentDt, this);
+            frm_tramites_query frm = new frm_tramites_query(nombre, query, this);
             frm.Show();
         }
 
@@ -169,7 +165,7 @@ namespace LayerPresentation
             {
                 radioButton_simple.Checked = true;
                 // Display panel
-                activatePanel(query_group_1);
+                ActivatePanelQuery(query_group_1);
 
                 radioButton_complejas.Checked = false;
             }
@@ -184,7 +180,7 @@ namespace LayerPresentation
             {
                 radioButton_complejas.Checked = true;
                 // Display panel
-                activatePanel(query_group_2);
+                ActivatePanelQuery(query_group_2);
 
                 radioButton_simple.Checked = false;
             }
@@ -193,55 +189,55 @@ namespace LayerPresentation
         // Refresh
         private void btn_refreshdata_Click(object sender, EventArgs e)
         {
-            RefreshQuery(currentDt);
+            LoadDataQuery(DataTramites.data);
         }
         private void btn_refresh_Click(object sender, EventArgs e)
         {
-            _cnTramites.RefreshDataTramitesCache();
-            refreshTramites(Cn_HandlerTramites.current);
+            Utilities_Common.RefreshTramitesData();
+            RefreshDashboardData();
         }
 
         // Buttons for query panel
         private void btn_simple_fecha_Click(object sender, EventArgs e)
         {
-            activateButton(sender, Color.Blue);
-            OpenFormQuery("una o dos fechas", "Fecha");
+            ActivateButton(sender, Color.Blue);
+            OpenNewFormInQuery("una o dos fechas", "Fecha");
         }
 
         private void btn_simple_empleado_Click(object sender, EventArgs e)
         {
-            activateButton(sender, Color.Blue);
-            OpenFormQuery("empleado registrados", "Empleado");
+            ActivateButton(sender, Color.Blue);
+            OpenNewFormInQuery("empleado registrados", "Empleado");
         }
         private void btn_simple_dominio_Click(object sender, EventArgs e)
         {
-            activateButton(sender, Color.Blue);
-            OpenFormQuery("dominio del vehiculo", "Dominio");
+            ActivateButton(sender, Color.Blue);
+            OpenNewFormInQuery("dominio del vehiculo", "Dominio");
         }
         private void btn_simple_diaria_Click(object sender, EventArgs e)
         {
-            activateButton(sender, Color.Blue);
-            OpenFormQuery("diaria (Mes y Dia)", "Diaria");
+            ActivateButton(sender, Color.Blue);
+            OpenNewFormInQuery("diaria (Mes y Dia)", "Diaria");
         }
         private void btn_complejo_fechaempleado_Click(object sender, EventArgs e)
         {
-            activateButton(sender, Color.Blue);
-            OpenFormQuery("fecha y empleado", "Fecha_Empleado");
+            ActivateButton(sender, Color.Blue);
+            OpenNewFormInQuery("fecha y empleado", "Fecha_Empleado");
         }
         private void btn_complejo_fechaprocesados_Click(object sender, EventArgs e)
         {
-            activateButton(sender, Color.Blue);
-            OpenFormQuery("fecha y procesados", "Fecha_Procesado");
+            ActivateButton(sender, Color.Blue);
+            OpenNewFormInQuery("fecha y procesados", "Fecha_Procesado");
         }
         private void btn_complejo_fechainscriptos_Click(object sender, EventArgs e)
         {
-            activateButton(sender, Color.Blue);
-            OpenFormQuery("fecha e inscripto", "Fecha_Inscripto");
+            ActivateButton(sender, Color.Blue);
+            OpenNewFormInQuery("fecha e inscripto", "Fecha_Inscripto");
         }
         private void btn_complejo_fechaerrores_Click(object sender, EventArgs e)
         {
-            activateButton(sender, Color.Blue);
-            OpenFormQuery("fecha y errores", "Fecha_Errores");
+            ActivateButton(sender, Color.Blue);
+            OpenNewFormInQuery("fecha y errores", "Fecha_Errores");
         }
 
         // Button Crud
@@ -274,11 +270,11 @@ namespace LayerPresentation
                         var data = GetDataFromSelectedIndex();
                         int id = selectedId;
 
-                        _cnTramites.eliminarTramite(id.ToString());
+                        Utilities_Common.layerBusiness.cn_tramites.eliminarTramite(id.ToString());
                         frm_successdialog f = new frm_successdialog(1);
                         f.Show();
 
-                        refreshAll();
+                        RefreshAll();
                     }
                 }
                 catch (Exception ex)
@@ -299,7 +295,7 @@ namespace LayerPresentation
         {
             if (checkBox_inscripto.Checked) 
             {
-                frm_tramites_inscribir_mult frm = new frm_tramites_inscribir_mult(DateTime.Today, currentDt, this);
+                frm_tramites_inscribir_mult frm = new frm_tramites_inscribir_mult(DateTime.Today, this);
                 frm.Show();
             } 
             else 
@@ -312,7 +308,7 @@ namespace LayerPresentation
             }
         }
         
-        // Paint the datagrid
+        // Paint the datagridview
         private void dg_tramites_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Inscripto")
@@ -336,7 +332,6 @@ namespace LayerPresentation
                     e.CellStyle.BackColor = Color.FromArgb(41, 217, 85);
                 }
             }
-
             if (this.dg_tramites.Columns[e.ColumnIndex].Name == "TipoError")
             {
                 if (Convert.ToString(e.Value) == "Error Total")
@@ -351,36 +346,18 @@ namespace LayerPresentation
                 }
             }
         }
-
-        private void frm_tramites_consultas_Load(object sender, EventArgs e)
-        {
-            activatePanel(query_group_1);
-            cargarPrivilegios();
-        }
-
         private void btn_savepdf_Click(object sender, EventArgs e)
         {
-            if (ExportDataTramitesPdf(dg_tramites, "TramitesRNA"))
+            if (Utilites_Pdf.ExportDataGridViewInPdf(dg_tramites, "TramitesRNA"))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
             }
         }
-
-        private bool ExportDataTramitesPdf(DataGridView dt, string name)
+        private void frm_tramites_consultas_Load(object sender, EventArgs e)
         {
-            Random r = new Random();
-            string dia = DateTime.Now.Day + "-" + DateTime.Now.Month;
-            string user = name + "_" + dia;
-
-            bool result = DataSave.saveInPdf(dt, user);
-
-            return result;
-        }
-
-        private void dg_tramites_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            ActivatePanelQuery(query_group_1);
+            LoadAccessPrivileges();
         }
     }
 }

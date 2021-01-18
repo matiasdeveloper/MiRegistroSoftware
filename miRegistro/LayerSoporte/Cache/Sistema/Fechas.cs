@@ -9,6 +9,11 @@ namespace LayerSoporte.Cache
 {
     public static class Fechas
     {
+        public static DateTime dateNow 
+        {
+            get { return DateTime.Now; }
+            set { dateNow = value; }
+        }
         public static DateTime firstDayOfMonth { get; set; }
         public static DateTime lastDayOfMonth { get; set; }
         public static DateTime firstDayOfWeek { get; set; }

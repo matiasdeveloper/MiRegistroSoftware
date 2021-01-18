@@ -20,16 +20,11 @@ namespace LayerPresentation
             InitializeComponent();
         }
 
-        Cn_Tramites _handlerTramites = new Cn_Tramites();
-        Cn_Empleados _handlerEmpleados = new Cn_Empleados();
-
-        DateTime dateNow = DateTime.Now;
-
-        private void refreshDashboard() 
+        private void LoadDashboard() 
         {
             ChargeInfoEmployees();
         }
-        private void cargarPrivilegios()
+        private void LoadAccessPrivileges()
         {
             if (UserLoginCache.Priveleges == Privileges.Administrador)
             {
@@ -44,6 +39,7 @@ namespace LayerPresentation
                 }
             } 
         }
+
         private void ChargeInfoEmployees()
         {
             Panel[] panels = { panel_0, panel_1, panel_2, panel_3, panel_4, panel_5, panel_6, panel_7 };
@@ -56,351 +52,138 @@ namespace LayerPresentation
             Label[][] statistics = { InfoStatistic(0), InfoStatistic(1), InfoStatistic(2), InfoStatistic(3), InfoStatistic(4), InfoStatistic(5), InfoStatistic(6), InfoStatistic(7) };
             Statistics.DisplayEmployeeData(statistics);
         }
+        
         private Label[] InfoReference(int i) 
         {
             List<Label> info = new List<Label>();
-            switch (i) 
-            {
-                case 0:
-                    info.Add(lbl_permisos_0);
-                    info.Add(lbl_email_0);
-                    info.Add(lbl_acceso_0);
-                    info.Add(lbl_id_0);
-                    info.Add(lbl_user_0);
-                    break;
-                case 1:
-                    info.Add(lbl_permisos_1);
-                    info.Add(lbl_email_1);
-                    info.Add(lbl_acceso_1);
-                    info.Add(lbl_id_1);
-                    info.Add(lbl_user_1);
-                    break;
-                case 2:
-                    info.Add(lbl_permisos_2);
-                    info.Add(lbl_email_2);
-                    info.Add(lbl_acceso_2);
-                    info.Add(lbl_id_2);
-                    info.Add(lbl_user_2);
-                    break;
-                case 3:
-                    info.Add(lbl_permisos_3);
-                    info.Add(lbl_email_3);
-                    info.Add(lbl_acceso_3);
-                    info.Add(lbl_id_3);
-                    info.Add(lbl_user_3);
-                    break;
-                case 4:
-                    info.Add(lbl_permisos_4);
-                    info.Add(lbl_email_4);
-                    info.Add(lbl_acceso_4);
-                    info.Add(lbl_id_4);
-                    info.Add(lbl_user_4);
-                    break;
-                case 5:
-                    info.Add(lbl_permisos_5);
-                    info.Add(lbl_email_5);
-                    info.Add(lbl_acceso_5);
-                    info.Add(lbl_id_5);
-                    info.Add(lbl_user_5);
-                    break;
-                case 6:
-                    info.Add(lbl_permisos_6);
-                    info.Add(lbl_email_6);
-                    info.Add(lbl_acceso_6);
-                    info.Add(lbl_id_6);
-                    info.Add(lbl_user_6);
-                    break;
-                case 7:
-                    info.Add(lbl_permisos_7);
-                    info.Add(lbl_email_7);
-                    info.Add(lbl_acceso_7);
-                    info.Add(lbl_id_7);
-                    info.Add(lbl_user_7);
-                    break;
-            }
+
+            info.Add(Utilities.FindLabelInForm(this, String.Format("lbl_permisos_" + i)));
+            info.Add(Utilities.FindLabelInForm(this, String.Format("lbl_email_" + i)));
+            info.Add(Utilities.FindLabelInForm(this, String.Format("lbl_acceso_" + i)));
+            info.Add(Utilities.FindLabelInForm(this, String.Format("lbl_id_" + i)));
+            info.Add(Utilities.FindLabelInForm(this, String.Format("lbl_user_" + i)));
+
             return info.ToArray();
         }
         private Label[] InfoStatistic(int i)
         {
             List<Label> info = new List<Label>();
-            switch (i)
-            {
-                case 0:
-                    info.Add(lbl_diainscriptos_0);
-                    info.Add(lbl_diaprocesados_0);
-                    info.Add(lbl_mesinscriptos_0);
-                    info.Add(lbl_mesprocesados_0);
-                    info.Add(lbl_meserrores_0);
-                    break;
-                case 1:
-                    info.Add(lbl_diainscriptos_1);
-                    info.Add(lbl_diaprocesados_1);
-                    info.Add(lbl_mesinscriptos_1);
-                    info.Add(lbl_mesprocesados_1);
-                    info.Add(lbl_meserrores_1); break;
-                case 2:
-                    info.Add(lbl_diainscriptos_2);
-                    info.Add(lbl_diaprocesados_2);
-                    info.Add(lbl_mesinscriptos_2);
-                    info.Add(lbl_mesprocesados_2);
-                    info.Add(lbl_meserrores_2);
-                    break;
-                case 3:
-                    info.Add(lbl_diainscriptos_3);
-                    info.Add(lbl_diaprocesados_3);
-                    info.Add(lbl_mesinscriptos_3);
-                    info.Add(lbl_mesprocesados_3);
-                    info.Add(lbl_meserrores_3); break;
-                case 4:
-                    info.Add(lbl_diainscriptos_4);
-                    info.Add(lbl_diaprocesados_4);
-                    info.Add(lbl_mesinscriptos_4);
-                    info.Add(lbl_mesprocesados_4);
-                    info.Add(lbl_meserrores_4); break;
-                case 5:
-                    info.Add(lbl_diainscriptos_5);
-                    info.Add(lbl_diaprocesados_5);
-                    info.Add(lbl_mesinscriptos_5);
-                    info.Add(lbl_mesprocesados_5);
-                    info.Add(lbl_meserrores_5); break;
-                case 6:
-                    info.Add(lbl_diainscriptos_6);
-                    info.Add(lbl_diaprocesados_6);
-                    info.Add(lbl_mesinscriptos_6);
-                    info.Add(lbl_mesprocesados_6);
-                    info.Add(lbl_meserrores_6); break;
-                case 7:
-                    info.Add(lbl_diainscriptos_7);
-                    info.Add(lbl_diaprocesados_7);
-                    info.Add(lbl_mesinscriptos_7);
-                    info.Add(lbl_mesprocesados_7);
-                    info.Add(lbl_meserrores_7); break;
-            }
+
+            info.Add(Utilities.FindLabelInForm(this, String.Format("lbl_diainscriptos_" + i)));
+            info.Add(Utilities.FindLabelInForm(this, String.Format("lbl_diaprocesados_" + i)));
+            info.Add(Utilities.FindLabelInForm(this, String.Format("lbl_mesinscriptos_" + i)));
+            info.Add(Utilities.FindLabelInForm(this, String.Format("lbl_mesprocesados_" + i)));
+            info.Add(Utilities.FindLabelInForm(this, String.Format("lbl_meserrores_" + i)));
+
             return info.ToArray();
         }
-        private void refreshData() 
+        
+        private void RefreshData() 
         {
-            _handlerEmpleados.GenerateEmployeesDataCache();
-            _handlerTramites.RefreshDataDashboardCache();
-
+            Utilities_Common.RefreshEmplooyeeDataTramites();
             Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
+            LoadDashboard();
         }
-        private bool ExportDataTramitesPdf(Label lblid, Label lblname)
+
+        private void ShowEmployeeTramites(int num)
         {
-            Random r = new Random();
-            int id = Convert.ToInt32(lblid.Text);
-            string dia = dateNow.Day + "-" + dateNow.Month;
-            string user = lblname.Text + "_" + dia;
+            string labelid = String.Format("lbl_id_" + num);
+            Label lbl_id = Utilities.FindLabelInForm(this, labelid);
+            int id = Convert.ToInt32(lbl_id.Text);
 
-            DataTable dt = null;
-            dt = DataTramites.GetTableDate(DataTramites.GetDataTramitesTableWithID(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+            string labelemployee = String.Format("lbl_nombre_" + num);
+            Label lbl_employee = Utilities.FindLabelInForm(this, labelemployee);
 
-            bool result = DataSave.ExportToPdf(dt, user);
+            DataTable dt = DataTramites.GetEmployeeDataTramites(id);
+            string empleado = (string)lbl_employee.Text;
+            string mes = Fechas.dateNow.ToString();
 
-            return result;
+            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(num, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
+            mv.Show();
         }
 
         // Buttons and more
         private void btn_tramites_0_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(lbl_id_0.Text);
-            string empleado = (string)lbl_nombre_0.Text;
-            string mes = dateNow.Month.ToString();
-
-            DataTable dt = null;
-            dt = DataTramites.GetDataTramitesTableWithID(id);
-
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
-            mv.Show();
+            ShowEmployeeTramites(0);
         }
         private void btn_tramites_1_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(lbl_id_1.Text);
-            string empleado = (string)lbl_nombre_1.Text;
-            string mes = dateNow.Month.ToString();
-
-            DataTable dt = null;
-            dt = DataTramites.GetDataTramitesTableWithID(id);
-
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
-            mv.Show();
+            ShowEmployeeTramites(1);
         }
         private void btn_tramites_2_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(lbl_id_2.Text);
-            string empleado = (string)lbl_nombre_2.Text;
-            string mes = dateNow.Month.ToString();
-
-            DataTable dt = null;
-            dt = DataTramites.GetDataTramitesTableWithID(id);
-
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
-            mv.Show();
+            ShowEmployeeTramites(2);
         }
         private void btn_tramites_3_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(lbl_id_3.Text);
-            string empleado = (string)lbl_nombre_3.Text;
-            string mes = dateNow.Month.ToString();
-
-            DataTable dt = null;
-            dt = DataTramites.GetDataTramitesTableWithID(id);
-
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
-            mv.Show();
+            ShowEmployeeTramites(3);
         }
         private void btn_tramites_4_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(lbl_id_4.Text);
-            string empleado = (string)lbl_nombre_4.Text;
-            string mes = dateNow.Month.ToString();
-
-            DataTable dt = null;
-            dt = DataTramites.GetDataTramitesTableWithID(id);
-
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
-            mv.Show();
+            ShowEmployeeTramites(4);
         }
         private void btn_tramites_5_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(lbl_id_5.Text);
-            string empleado = (string)lbl_nombre_5.Text;
-            string mes = dateNow.Month.ToString();
-
-            DataTable dt = null;
-            dt = DataTramites.GetDataTramitesTableWithID(id);
-
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
-            mv.Show();
+            ShowEmployeeTramites(5);
         }
-
         private void btn_tramites_6_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(lbl_id_6.Text);
-            string empleado = (string)lbl_nombre_6.Text;
-            string mes = dateNow.Month.ToString();
-
-            DataTable dt = null;
-            dt = DataTramites.GetDataTramitesTableWithID(id);
-
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
-            mv.Show();
+            ShowEmployeeTramites(6);
         }
-
         private void btn_tramites_7_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(lbl_id_7.Text);
-            string empleado = (string)lbl_nombre_7.Text;
-            string mes = dateNow.Month.ToString();
+            ShowEmployeeTramites(7);
+        }
 
-            DataTable dt = null;
-            dt = DataTramites.GetDataTramitesTableWithID(id);
+        private void ShowEmployeeConfiguration(int id) 
+        {
+            List<string>[] data = DataUsers.GetUserData(id);
+            frm_configuracion_empleado frm = new frm_configuracion_empleado(id, data[0], data[1], data[2]);
+            frm.Show();
 
-            frm_tramites_pantallaCompleta mv = new frm_tramites_pantallaCompleta(id, empleado, mes, dt, Fechas.firstDayOfMonth.ToShortDateString(), Fechas.lastDayOfMonth.ToShortDateString());
-            mv.Show();
         }
         // Edit buttons
         private void btn_edit_0_Click(object sender, EventArgs e)
         {
-            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_0.Text));
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_0.Text),data[0], data[1], data[2]);
-            frm.Show();
+            ShowEmployeeConfiguration(Convert.ToInt32(lbl_id_0.Text));       
         }
         private void btn_edit_1_Click(object sender, EventArgs e)
         {
-            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_1.Text));
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_1.Text), data[0], data[1], data[2]);
-            frm.Show();
+            ShowEmployeeConfiguration(Convert.ToInt32(lbl_id_1.Text));
         }
         private void btn_edit_2_Click(object sender, EventArgs e)
         {
-            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_2.Text));
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_2.Text), data[0], data[1], data[2]);
-            frm.Show();
+            ShowEmployeeConfiguration(Convert.ToInt32(lbl_id_2.Text));
         }
         private void btn_edit_3_Click(object sender, EventArgs e)
         {
-            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_3.Text));
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_3.Text), data[0], data[1], data[2]);
-            frm.Show();
+            ShowEmployeeConfiguration(Convert.ToInt32(lbl_id_3.Text));
         }
         private void btn_edit_4_Click(object sender, EventArgs e)
         {
-            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_4.Text));
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_4.Text), data[0], data[1], data[2]);
-            frm.Show();
+            ShowEmployeeConfiguration(Convert.ToInt32(lbl_id_4.Text));
         }
         private void btn_edit_5_Click(object sender, EventArgs e)
         {
-            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_5.Text));
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_5.Text), data[0], data[1], data[2]);
-            frm.Show();
+            ShowEmployeeConfiguration(Convert.ToInt32(lbl_id_5.Text));
         }
         private void btn_edit_6_Click(object sender, EventArgs e)
         {
-            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_6.Text));
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_6.Text), data[0], data[1], data[2]);
-            frm.Show();
+            ShowEmployeeConfiguration(Convert.ToInt32(lbl_id_6.Text));
         }
         private void btn_edit_7_Click(object sender, EventArgs e)
         {
-            List<string>[] data = DataUsers.GetUserData(Convert.ToInt32(lbl_id_7.Text));
-            frm_configuracion_empleado frm = new frm_configuracion_empleado(Convert.ToInt32(lbl_id_7.Text), data[0], data[1], data[2]);
-            frm.Show();
+            ShowEmployeeConfiguration(Convert.ToInt32(lbl_id_7.Text));
         }
        
         // Save buttons
         private void btn_savepdf_0_Click(object sender, EventArgs e)
         {
-            if (ExportDataTramitesPdf(lbl_id_0, lbl_nombre_0)) 
-            {
-                frm_successdialog f = new frm_successdialog(5);
-                f.Show();
-            }
-        }
-        private void btn_savepdf_7_Click(object sender, EventArgs e)
-        {
-            if(ExportDataTramitesPdf(lbl_id_7, lbl_nombre_7)) 
-            {
-                frm_successdialog f = new frm_successdialog(5);
-                f.Show();
-            }
-        }
-        private void btn_savepdf_3_Click(object sender, EventArgs e)
-        {
-            if (ExportDataTramitesPdf(lbl_id_3, lbl_nombre_3)) 
-            {
-                frm_successdialog f = new frm_successdialog(5);
-                f.Show();
-            }
-        }
-        private void btn_savepdf_2_Click(object sender, EventArgs e)
-        {
-            if(ExportDataTramitesPdf(lbl_id_2, lbl_nombre_2)) 
-            {
-                frm_successdialog f = new frm_successdialog(5);
-                f.Show();
-            }
-        }
-        private void btn_savepdf_6_Click(object sender, EventArgs e)
-        {
-            if(ExportDataTramitesPdf(lbl_id_6, lbl_nombre_6)) 
-            {
-                frm_successdialog f = new frm_successdialog(5);
-                f.Show();
-            }
-        }
-        private void btn_savepdf_5_Click(object sender, EventArgs e)
-        {
-            if(ExportDataTramitesPdf(lbl_id_5, lbl_nombre_5)) 
-            {
-                frm_successdialog f = new frm_successdialog(5);
-                f.Show();
-            }
-        }
-        private void btn_savepdf_4_Click(object sender, EventArgs e)
-        {
-            if(ExportDataTramitesPdf(lbl_id_4, lbl_nombre_4)) 
+            int id = Convert.ToInt32(lbl_id_0);
+            DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+
+            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_0.Text))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -408,24 +191,92 @@ namespace LayerPresentation
         }
         private void btn_savepdf_1_Click(object sender, EventArgs e)
         {
-            if(ExportDataTramitesPdf(lbl_id_1, lbl_nombre_1)) 
+            int id = Convert.ToInt32(lbl_id_1);
+            DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+
+            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_1.Text))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
             }
         }
+        private void btn_savepdf_2_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(lbl_id_2);
+            DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
+            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_2.Text))
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private void btn_savepdf_3_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(lbl_id_3);
+            DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+
+            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_3.Text))
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private void btn_savepdf_4_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(lbl_id_4);
+            DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+
+            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_4.Text))
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private void btn_savepdf_5_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(lbl_id_5);
+            DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+
+            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_5.Text))
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private void btn_savepdf_6_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(lbl_id_6);
+            DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+
+            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_6.Text))
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        private void btn_savepdf_7_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(lbl_id_7);
+            DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+
+            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_7.Text))
+            {
+                frm_successdialog f = new frm_successdialog(5);
+                f.Show();
+            }
+        }
+        
         // Load
         private void frm_empleados_Load(object sender, EventArgs e)
         {
             Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
-            refreshDashboard();
-            cargarPrivilegios();
+            LoadDashboard();
+            LoadAccessPrivileges();
         }
         private void btn_refreshdata_Click(object sender, EventArgs e)
         {
-            refreshData();
-            refreshDashboard();
+            RefreshData();
         }
     }
 }

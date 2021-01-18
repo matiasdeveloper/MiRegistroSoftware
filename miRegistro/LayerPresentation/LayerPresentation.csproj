@@ -127,15 +127,21 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Alertas.cs" />
     <Compile Include="Clases\DataUsers.cs" />
     <Compile Include="Clases\ColorSystem.cs" />
     <Compile Include="Clases\CreatorTables.cs" />
     <Compile Include="Clases\DataFormularios.cs" />
     <Compile Include="Clases\DataSave.cs" />
     <Compile Include="Clases\DataTramites.cs" />
+    <Compile Include="Clases\FormExtend.cs" />
     <Compile Include="Clases\QuerySpecific.cs" />
     <Compile Include="Clases\Statistics.cs" />
+    <Compile Include="Clases\Utilites_Pdf.cs" />
+    <Compile Include="Clases\Utilities.cs" />
+    <Compile Include="Clases\Utilities_Common.cs" />
     <Compile Include="Clases\Utilities_Encrypt_Decrypt.cs" />
+    <Compile Include="Clases\Utilities_LayerBusiness.cs" />
     <Compile Include="Form\Login\frm_bienvenida.cs">
       <SubType>Form</SubType>
     </Compile>

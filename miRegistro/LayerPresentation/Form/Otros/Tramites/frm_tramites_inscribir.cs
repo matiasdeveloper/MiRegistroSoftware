@@ -26,8 +26,8 @@ namespace LayerPresentation
             InitializeComponent();
             DataTramites.DisplayEmpleados(comboBox_empleados);
 
-            this._handlerTPc = frm1;
-            this._handlerTramites = frm;
+            this._frmTramitesPantallaCompleta = frm1;
+            this._frmTramites = frm;
 
             lbl_dominio.Text = dominio;
             lbl_nombre.Text = nombre;
@@ -36,32 +36,36 @@ namespace LayerPresentation
             lbl_id.Text = id.ToString();
         }
 
-        Cn_Tramites _cnObject = new Cn_Tramites();
-
-        frm_tramites_pantallaCompleta _handlerTPc;
-        frm_tramites _handlerTramites;
+        frm_tramites_pantallaCompleta _frmTramitesPantallaCompleta;
+        frm_tramites _frmTramites;
 
         private int id;
         private int cod_empleado;
-        private bool initVariables()
+
+        private bool InitializeVariables()
         {
             bool isOk = true;
             cod_empleado = Convert.ToInt32(comboBox_empleados.SelectedValue);
             return isOk;
         }
-        private void deleteFields()
+        private void DeleteFields()
         {
             comboBox_empleados.SelectedIndex = 0;
         }
-
-        private void btn_close_Click_1(object sender, EventArgs e)
+        private void RefreshData() 
         {
-            this.Close();
+            if (_frmTramites != null)
+            {
+                _frmTramites.RefreshAll();
+            }
+            if (_frmTramitesPantallaCompleta != null)
+            {
+                _frmTramitesPantallaCompleta.RefreshDataTramites();
+            }
         }
-
         private void btn_cargar_Click_1(object sender, EventArgs e)
         {
-            if (initVariables())
+            if (InitializeVariables())
             {
                 try
                 {
@@ -76,25 +80,20 @@ namespace LayerPresentation
                         cod_empleado = 1;
                     }
 
-                    _cnObject.inscribirTramite(id, cod, cod_empleado);
-                    deleteFields();
+                    Utilities_Common.layerBusiness.cn_tramites.inscribirTramite(id, cod, cod_empleado);
+                    DeleteFields();
+                    RefreshData();
+
                     frm_successdialog f = new frm_successdialog(2);
                     f.Show();
-
-                    if(_handlerTramites != null) 
-                    {
-                        _handlerTramites.refreshAll();
-                    }
-                    if (_handlerTPc != null)
-                    {
-                        _handlerTPc.refreshData();
-                    }
-
-                    this.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString());
+                }
+                finally 
+                {
+                    this.Close();
                 }
             }
         }
@@ -103,6 +102,10 @@ namespace LayerPresentation
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        private void btn_close_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
         private void frm_tramites_inscribir_Load(object sender, EventArgs e)
         {

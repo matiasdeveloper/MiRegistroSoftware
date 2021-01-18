@@ -1,4 +1,5 @@
 ﻿using LayerBusiness;
+using LayerPresentation.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,8 +25,8 @@ namespace LayerPresentation
         {
             InitializeComponent();
 
-            _handlerTPc = frm1;
-            _handlerTramites = frm;
+            _frmTramitesPantallaCompleta = frm1;
+            _frmTramites = frm;
 
             lbl_dominio.Text = dominio;
             lbl_nombre.Text = nombre;
@@ -33,19 +34,17 @@ namespace LayerPresentation
             this.id = id;
             lbl_id.Text = id.ToString();
 
-            displayErrores(comboBox_tipoError);
+            LoadComboBoxErrores(comboBox_tipoError);
         }
 
-        Cn_Tramites _cnObject = new Cn_Tramites();
-
-        frm_tramites_pantallaCompleta _handlerTPc;
-        frm_tramites _handlerTramites;
+        frm_tramites_pantallaCompleta _frmTramitesPantallaCompleta;
+        frm_tramites _frmTramites;
 
         private int id;
         private int cod_error;
         private string observaciones;
 
-        private void displayErrores(ComboBox cb)
+        private void LoadComboBoxErrores(ComboBox cb)
         {
             Cn_Tramites objects = new Cn_Tramites();
             DataTable dt = objects.mostarErrores();
@@ -55,7 +54,8 @@ namespace LayerPresentation
             cb.DataSource = dt;
         }
 
-        private bool initVariables()
+        // Initialize variables previous to charge the error to the id tramite
+        private bool InitializeVariables()
         {
             bool isOk = true;
             if(textBox1.Text == "" || textBox1.Text == "Ingrese las observaciones del error") 
@@ -83,21 +83,26 @@ namespace LayerPresentation
 
             return isOk;
         }
-        private void deleteFields()
+        private void DeleteFields()
         {
             textBox1.Text = "Ingrese las observaciones del error";
             comboBox_tipoError.SelectedIndex = 0;
         }
-        
-        private void barra_titulo_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
 
+        private void RefreshData() 
+        {
+            if (_frmTramites != null)
+            {
+                _frmTramites.RefreshAll();
+            }
+            if (_frmTramitesPantallaCompleta != null)
+            {
+                _frmTramitesPantallaCompleta.RefreshDataTramites();
+            }
+        }
         private void btn_cargar_Click(object sender, EventArgs e)
         {
-            if (initVariables())
+            if (InitializeVariables())
             {
                 try
                 {
@@ -106,24 +111,20 @@ namespace LayerPresentation
                     {
                         cod = 1;
                     }
-                    _cnObject.actualizarError(id, observaciones, cod, cod_error);
-                    deleteFields();
+                    Utilities_Common.layerBusiness.cn_tramites.actualizarError(id, observaciones, cod, cod_error);
+                    DeleteFields();
+                    RefreshData();
+
                     frm_successdialog f = new frm_successdialog(2);
                     f.Show();
-
-                    if(_handlerTramites != null) 
-                    {
-                        _handlerTramites.refreshAll();
-                    }
-                    if(_handlerTPc != null) 
-                    {
-                        _handlerTPc.refreshData();
-                    }
-                    this.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString());
+                }
+                finally 
+                {
+                    this.Close();
                 }
             }
         }
@@ -149,7 +150,11 @@ namespace LayerPresentation
         {
             this.Close();
         }
-
+        private void barra_titulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
         private void frm_tramites_error_Load(object sender, EventArgs e)
         {
 

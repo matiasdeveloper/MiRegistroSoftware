@@ -1,4 +1,5 @@
 ﻿using LayerBusiness;
+using LayerPresentation.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,26 +21,22 @@ namespace LayerPresentation
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
 
-        public frm_tramites_inscribir_mult(DateTime fecha, DataTable dt, frm_tramites frm = null, frm_escritorio frm1 = null)
+        public frm_tramites_inscribir_mult(DateTime fecha, frm_tramites frm = null, frm_escritorio frm1 = null)
         {
             InitializeComponent();
             DataTramites.DisplayEmpleados(comboBox_empleados);
 
-            this._handlerEscritorio = frm1;
-            this._handlerTramites = frm;
+            this._frmEscritorio = frm1;
+            this._frmTramites = frm;
 
             this.fecha = fecha;
-            this.data= dt;
 
             InitializeData();
         }
 
-        Cn_Tramites _cnObject = new Cn_Tramites();
+        frm_escritorio _frmEscritorio;
+        frm_tramites _frmTramites;
 
-        frm_escritorio _handlerEscritorio;
-        frm_tramites _handlerTramites;
-
-        private DataTable data;
         private DateTime fecha;
         private int cod_empleado;
         private int[] id_selected;
@@ -49,20 +46,16 @@ namespace LayerPresentation
             this.dateTime_fecha.Value = new DateTime(fecha.Year, fecha.Month, fecha.Day);
 
             this.dg_tramites.AutoGenerateColumns = false;
-            this.dg_tramites.DataSource = DataTramites.GetTableDate(data, fecha, fecha.AddDays(1));
+            this.dg_tramites.DataSource = DataTramites.GetTableDate(DataTramites.data, fecha, fecha.AddDays(1));
             this.dg_tramites.SelectAll();
         }
-        private void deleteFields()
+        private void DeleteFields()
         {
             comboBox_empleados.SelectedIndex = 0;
             checkBox_inscripto.Checked = true;
         }
 
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        private bool initVariables()
+        private bool InitializeVariables()
         {
             bool isOk = true;
             cod_empleado = Convert.ToInt32(comboBox_empleados.SelectedValue);
@@ -88,9 +81,22 @@ namespace LayerPresentation
             } else { MessageBox.Show("Seleccione en la tabla los tramites que desea inscribir", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             return ids.ToArray();
         }
+        
+        private void RefreshData() 
+        {
+            if (_frmTramites != null)
+            {
+                _frmTramites.RefreshAll();
+            }
+            if (_frmEscritorio != null)
+            {
+                _frmEscritorio.RefreshAll();
+            }
+        }
+        
         private void btn_cargar_Click(object sender, EventArgs e)
         {
-            if (initVariables()) 
+            if (InitializeVariables()) 
             {
                 DialogResult dialogResult = MessageBox.Show("Estas seguro que deseas inscribir los tramites seleccionados?", "Atencion", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -98,6 +104,7 @@ namespace LayerPresentation
                     try
                     {
                         int cod = 0;
+
                         if (checkBox_inscripto.Checked)
                         {
                             cod = 1;
@@ -108,36 +115,26 @@ namespace LayerPresentation
                             cod_empleado = 1;
                         }
 
-                        _cnObject.inscribirMultiple(id_selected, cod, cod_empleado);
+                        Utilities_Common.layerBusiness.cn_tramites.inscribirMultiple(id_selected, cod, cod_empleado);
 
-                        deleteFields();
+                        DeleteFields();
+                        RefreshData();
+
                         frm_successdialog f = new frm_successdialog(2);
                         f.Show();
-
-                        if (_handlerTramites != null)
-                        {
-                            _handlerTramites.refreshAll();
-                        }
-                        if (_handlerEscritorio != null)
-                        {
-                            _handlerEscritorio.RefreshAll();
-                        }
-
-                        this.Close();
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.ToString());
                     }
+                    finally 
+                    {
+                        this.Close();
+                    }
                 }
             }
         }
 
-        private void barra_titulo_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
         private void dg_tramites_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Inscripto")
@@ -165,8 +162,18 @@ namespace LayerPresentation
         private void btn_refresh_Click(object sender, EventArgs e)
         {
             this.dg_tramites.AutoGenerateColumns = false;
-            this.dg_tramites.DataSource = DataTramites.GetTableDate(data, dateTime_fecha.Value, dateTime_fecha.Value.AddDays(1));
+            this.dg_tramites.DataSource = DataTramites.GetTableDate(DataTramites.data, dateTime_fecha.Value, dateTime_fecha.Value.AddDays(1));
             this.dg_tramites.SelectAll();
+        }
+
+        private void barra_titulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
         private void frm_tramites_inscribir_mult_Load(object sender, EventArgs e)
         {
