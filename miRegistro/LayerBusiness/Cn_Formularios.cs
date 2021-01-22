@@ -69,8 +69,8 @@ namespace LayerBusiness
         {
             List<int> a = new List<int>();
 
-            a.Add(consultasRapidas(50, Cn_HandlerFormularios.stockAlto));
-            a.Add(consultasRapidas(10, Cn_HandlerFormularios.stockMedio));
+            a.Add(consultasRapidas(Cn_HandlerFormularios.stockMedio + 1, Cn_HandlerFormularios.stockAlto));
+            a.Add(consultasRapidas(Cn_HandlerFormularios.stockBajo + 1, Cn_HandlerFormularios.stockMedio));
             a.Add(consultasRapidas(0, Cn_HandlerFormularios.stockBajo));
 
             return a.ToArray();
