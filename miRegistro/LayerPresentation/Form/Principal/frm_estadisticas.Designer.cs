@@ -417,7 +417,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
             this.label3.Location = new System.Drawing.Point(396, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 20);
+            this.label3.Size = new System.Drawing.Size(216, 22);
             this.label3.TabIndex = 15;
             this.label3.Text = "Estadisticas del registro\r\n";
             // 
@@ -438,10 +438,10 @@
             this.tabPage_errores.Controls.Add(this.panel42);
             this.tabPage_errores.Controls.Add(this.panel53);
             this.tabPage_errores.Controls.Add(this.panel38);
-            this.tabPage_errores.Location = new System.Drawing.Point(4, 26);
+            this.tabPage_errores.Location = new System.Drawing.Point(4, 30);
             this.tabPage_errores.Name = "tabPage_errores";
             this.tabPage_errores.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_errores.Size = new System.Drawing.Size(997, 617);
+            this.tabPage_errores.Size = new System.Drawing.Size(997, 613);
             this.tabPage_errores.TabIndex = 0;
             this.tabPage_errores.Text = "Errores";
             this.tabPage_errores.UseVisualStyleBackColor = true;
@@ -471,7 +471,7 @@
             this.label10.Location = new System.Drawing.Point(506, 181);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 45);
+            this.label10.Size = new System.Drawing.Size(157, 51);
             this.label10.TabIndex = 169;
             this.label10.Text = "Para ver informacion \r\nespecifca\r\npresione aqui";
             // 
@@ -483,7 +483,7 @@
             this.label54.Location = new System.Drawing.Point(412, 4);
             this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(226, 15);
+            this.label54.Size = new System.Drawing.Size(287, 17);
             this.label54.TabIndex = 166;
             this.label54.Text = "Datos de tramites procesados  e historico";
             // 
@@ -495,7 +495,7 @@
             this.label51.Location = new System.Drawing.Point(505, 60);
             this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(128, 15);
+            this.label51.Size = new System.Drawing.Size(162, 17);
             this.label51.TabIndex = 165;
             this.label51.Text = "Seleccione en la tabla";
             // 
@@ -507,7 +507,7 @@
             this.label44.Location = new System.Drawing.Point(530, 41);
             this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(74, 16);
+            this.label44.Size = new System.Drawing.Size(93, 19);
             this.label44.TabIndex = 164;
             this.label44.Text = "Empleado";
             // 
@@ -530,7 +530,7 @@
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(508, 82);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 23);
+            this.textBox1.Size = new System.Drawing.Size(121, 27);
             this.textBox1.TabIndex = 163;
             this.textBox1.Text = "Nombre";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -543,7 +543,7 @@
             this.label19.Location = new System.Drawing.Point(9, 4);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(206, 16);
+            this.label19.Size = new System.Drawing.Size(262, 19);
             this.label19.TabIndex = 112;
             this.label19.Text = "Top de empleados con errores";
             // 
@@ -565,7 +565,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dg_topErrores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dg_topErrores.ColumnHeadersHeight = 25;
+            this.dg_topErrores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_topErrores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Empleado,
@@ -605,6 +605,7 @@
             // 
             // Id
             // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Id.DataPropertyName = "Id";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -619,10 +620,11 @@
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
             this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Id.Width = 20;
+            this.Id.Width = 54;
             // 
             // Empleado
             // 
+            this.Empleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Empleado.DataPropertyName = "Empleado";
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -631,12 +633,14 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.Empleado.DefaultCellStyle = dataGridViewCellStyle3;
             this.Empleado.HeaderText = "Nombre empleado";
+            this.Empleado.MinimumWidth = 6;
             this.Empleado.Name = "Empleado";
             this.Empleado.ReadOnly = true;
-            this.Empleado.Width = 145;
+            this.Empleado.Width = 196;
             // 
             // Total
             // 
+            this.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Total.DataPropertyName = "Total";
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -652,6 +656,7 @@
             // 
             // ErroresParciales
             // 
+            this.ErroresParciales.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ErroresParciales.DataPropertyName = "Data1";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
@@ -666,10 +671,10 @@
             this.ErroresParciales.Name = "ErroresParciales";
             this.ErroresParciales.ReadOnly = true;
             this.ErroresParciales.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ErroresParciales.Width = 114;
             // 
             // ErroresTotales
             // 
+            this.ErroresTotales.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ErroresTotales.DataPropertyName = "Data2";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
@@ -684,7 +689,6 @@
             this.ErroresTotales.Name = "ErroresTotales";
             this.ErroresTotales.ReadOnly = true;
             this.ErroresTotales.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ErroresTotales.Width = 113;
             // 
             // panel73
             // 
@@ -726,7 +730,7 @@
             this.label40.Location = new System.Drawing.Point(7, 308);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(568, 15);
+            this.label40.Size = new System.Drawing.Size(701, 17);
             this.label40.TabIndex = 168;
             this.label40.Text = "Para visualizar mejor los datos mire el grafico \'Errores por tramites\' a la derec" +
     "ha con el detalle actual.";
@@ -739,7 +743,7 @@
             this.label55.Location = new System.Drawing.Point(320, 3);
             this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(172, 15);
+            this.label55.Size = new System.Drawing.Size(219, 17);
             this.label55.TabIndex = 167;
             this.label55.Text = "Datos de tramites procesados /";
             // 
@@ -751,7 +755,7 @@
             this.label31.Location = new System.Drawing.Point(489, 3);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(97, 15);
+            this.label31.Size = new System.Drawing.Size(123, 17);
             this.label31.TabIndex = 156;
             this.label31.Text = "Datos mensuales";
             // 
@@ -763,7 +767,7 @@
             this.label39.Location = new System.Drawing.Point(6, 6);
             this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(260, 16);
+            this.label39.Size = new System.Drawing.Size(326, 19);
             this.label39.TabIndex = 155;
             this.label39.Text = "Detalle de errores por cada empleado";
             // 
@@ -793,7 +797,7 @@
             this.lbl_name7.Location = new System.Drawing.Point(2, 4);
             this.lbl_name7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name7.Name = "lbl_name7";
-            this.lbl_name7.Size = new System.Drawing.Size(14, 18);
+            this.lbl_name7.Size = new System.Drawing.Size(18, 23);
             this.lbl_name7.TabIndex = 108;
             this.lbl_name7.Text = "-";
             this.lbl_name7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -806,7 +810,7 @@
             this.lbl_errorParcial_7.Location = new System.Drawing.Point(165, 27);
             this.lbl_errorParcial_7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorParcial_7.Name = "lbl_errorParcial_7";
-            this.lbl_errorParcial_7.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorParcial_7.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorParcial_7.TabIndex = 146;
             this.lbl_errorParcial_7.Text = "-";
             this.lbl_errorParcial_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -819,7 +823,7 @@
             this.lbl_countErrores7.Location = new System.Drawing.Point(165, 2);
             this.lbl_countErrores7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores7.Name = "lbl_countErrores7";
-            this.lbl_countErrores7.Size = new System.Drawing.Size(14, 18);
+            this.lbl_countErrores7.Size = new System.Drawing.Size(18, 23);
             this.lbl_countErrores7.TabIndex = 114;
             this.lbl_countErrores7.Text = "-";
             this.lbl_countErrores7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -832,7 +836,7 @@
             this.lbl_errorTotal_7.Location = new System.Drawing.Point(164, 52);
             this.lbl_errorTotal_7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorTotal_7.Name = "lbl_errorTotal_7";
-            this.lbl_errorTotal_7.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorTotal_7.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorTotal_7.TabIndex = 145;
             this.lbl_errorTotal_7.Text = "-";
             this.lbl_errorTotal_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -863,7 +867,7 @@
             this.label18.Location = new System.Drawing.Point(3, 29);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(93, 17);
+            this.label18.Size = new System.Drawing.Size(118, 21);
             this.label18.TabIndex = 142;
             this.label18.Text = "Error parcial: ";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -876,7 +880,7 @@
             this.label21.Location = new System.Drawing.Point(5, 55);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(75, 17);
+            this.label21.Size = new System.Drawing.Size(95, 21);
             this.label21.TabIndex = 143;
             this.label21.Text = "Error total:";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -907,7 +911,7 @@
             this.lbl_name8.Location = new System.Drawing.Point(3, 1);
             this.lbl_name8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name8.Name = "lbl_name8";
-            this.lbl_name8.Size = new System.Drawing.Size(14, 18);
+            this.lbl_name8.Size = new System.Drawing.Size(18, 23);
             this.lbl_name8.TabIndex = 107;
             this.lbl_name8.Text = "-";
             this.lbl_name8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -920,7 +924,7 @@
             this.lbl_countErrores8.Location = new System.Drawing.Point(168, 1);
             this.lbl_countErrores8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores8.Name = "lbl_countErrores8";
-            this.lbl_countErrores8.Size = new System.Drawing.Size(14, 18);
+            this.lbl_countErrores8.Size = new System.Drawing.Size(18, 23);
             this.lbl_countErrores8.TabIndex = 113;
             this.lbl_countErrores8.Text = "-";
             this.lbl_countErrores8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -942,7 +946,7 @@
             this.label32.Location = new System.Drawing.Point(3, 26);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(93, 17);
+            this.label32.Size = new System.Drawing.Size(118, 21);
             this.label32.TabIndex = 137;
             this.label32.Text = "Error parcial: ";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -955,7 +959,7 @@
             this.label33.Location = new System.Drawing.Point(4, 54);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(75, 17);
+            this.label33.Size = new System.Drawing.Size(95, 21);
             this.label33.TabIndex = 138;
             this.label33.Text = "Error total:";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -977,7 +981,7 @@
             this.lbl_errorParcial_8.Location = new System.Drawing.Point(166, 24);
             this.lbl_errorParcial_8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorParcial_8.Name = "lbl_errorParcial_8";
-            this.lbl_errorParcial_8.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorParcial_8.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorParcial_8.TabIndex = 141;
             this.lbl_errorParcial_8.Text = "-";
             this.lbl_errorParcial_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -990,7 +994,7 @@
             this.lbl_errorTotal_8.Location = new System.Drawing.Point(166, 53);
             this.lbl_errorTotal_8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorTotal_8.Name = "lbl_errorTotal_8";
-            this.lbl_errorTotal_8.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorTotal_8.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorTotal_8.TabIndex = 140;
             this.lbl_errorTotal_8.Text = "-";
             this.lbl_errorTotal_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1021,7 +1025,7 @@
             this.lbl_name6.Location = new System.Drawing.Point(5, 1);
             this.lbl_name6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name6.Name = "lbl_name6";
-            this.lbl_name6.Size = new System.Drawing.Size(14, 18);
+            this.lbl_name6.Size = new System.Drawing.Size(18, 23);
             this.lbl_name6.TabIndex = 107;
             this.lbl_name6.Text = "-";
             this.lbl_name6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1034,7 +1038,7 @@
             this.lbl_countErrores6.Location = new System.Drawing.Point(167, 3);
             this.lbl_countErrores6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores6.Name = "lbl_countErrores6";
-            this.lbl_countErrores6.Size = new System.Drawing.Size(14, 18);
+            this.lbl_countErrores6.Size = new System.Drawing.Size(18, 23);
             this.lbl_countErrores6.TabIndex = 113;
             this.lbl_countErrores6.Text = "-";
             this.lbl_countErrores6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1056,7 +1060,7 @@
             this.label23.Location = new System.Drawing.Point(4, 27);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(93, 17);
+            this.label23.Size = new System.Drawing.Size(118, 21);
             this.label23.TabIndex = 137;
             this.label23.Text = "Error parcial: ";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1069,7 +1073,7 @@
             this.label24.Location = new System.Drawing.Point(5, 55);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(75, 17);
+            this.label24.Size = new System.Drawing.Size(95, 21);
             this.label24.TabIndex = 138;
             this.label24.Text = "Error total:";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1091,7 +1095,7 @@
             this.lbl_errorParcial_6.Location = new System.Drawing.Point(166, 27);
             this.lbl_errorParcial_6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorParcial_6.Name = "lbl_errorParcial_6";
-            this.lbl_errorParcial_6.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorParcial_6.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorParcial_6.TabIndex = 141;
             this.lbl_errorParcial_6.Text = "-";
             this.lbl_errorParcial_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1104,7 +1108,7 @@
             this.lbl_errorTotal_6.Location = new System.Drawing.Point(166, 54);
             this.lbl_errorTotal_6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorTotal_6.Name = "lbl_errorTotal_6";
-            this.lbl_errorTotal_6.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorTotal_6.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorTotal_6.TabIndex = 140;
             this.lbl_errorTotal_6.Text = "-";
             this.lbl_errorTotal_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1135,7 +1139,7 @@
             this.lbl_name0.Location = new System.Drawing.Point(4, 3);
             this.lbl_name0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name0.Name = "lbl_name0";
-            this.lbl_name0.Size = new System.Drawing.Size(14, 18);
+            this.lbl_name0.Size = new System.Drawing.Size(18, 23);
             this.lbl_name0.TabIndex = 99;
             this.lbl_name0.Text = "-";
             this.lbl_name0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1148,7 +1152,7 @@
             this.lbl_countErrores0.Location = new System.Drawing.Point(166, 2);
             this.lbl_countErrores0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores0.Name = "lbl_countErrores0";
-            this.lbl_countErrores0.Size = new System.Drawing.Size(14, 18);
+            this.lbl_countErrores0.Size = new System.Drawing.Size(18, 23);
             this.lbl_countErrores0.TabIndex = 110;
             this.lbl_countErrores0.Text = "-";
             this.lbl_countErrores0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1170,7 +1174,7 @@
             this.label22.Location = new System.Drawing.Point(3, 29);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(93, 17);
+            this.label22.Size = new System.Drawing.Size(118, 21);
             this.label22.TabIndex = 117;
             this.label22.Text = "Error parcial: ";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1183,7 +1187,7 @@
             this.label25.Location = new System.Drawing.Point(5, 55);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(75, 17);
+            this.label25.Size = new System.Drawing.Size(95, 21);
             this.label25.TabIndex = 118;
             this.label25.Text = "Error total:";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1205,7 +1209,7 @@
             this.lbl_errorTotal_0.Location = new System.Drawing.Point(166, 51);
             this.lbl_errorTotal_0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorTotal_0.Name = "lbl_errorTotal_0";
-            this.lbl_errorTotal_0.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorTotal_0.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorTotal_0.TabIndex = 120;
             this.lbl_errorTotal_0.Text = "-";
             this.lbl_errorTotal_0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1218,7 +1222,7 @@
             this.lbl_errorParcial_0.Location = new System.Drawing.Point(166, 27);
             this.lbl_errorParcial_0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorParcial_0.Name = "lbl_errorParcial_0";
-            this.lbl_errorParcial_0.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorParcial_0.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorParcial_0.TabIndex = 121;
             this.lbl_errorParcial_0.Text = "-";
             this.lbl_errorParcial_0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1249,7 +1253,7 @@
             this.lbl_name2.Location = new System.Drawing.Point(2, 3);
             this.lbl_name2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name2.Name = "lbl_name2";
-            this.lbl_name2.Size = new System.Drawing.Size(14, 18);
+            this.lbl_name2.Size = new System.Drawing.Size(18, 23);
             this.lbl_name2.TabIndex = 104;
             this.lbl_name2.Text = "-";
             this.lbl_name2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1262,7 +1266,7 @@
             this.lbl_countErrores2.Location = new System.Drawing.Point(164, 2);
             this.lbl_countErrores2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores2.Name = "lbl_countErrores2";
-            this.lbl_countErrores2.Size = new System.Drawing.Size(14, 18);
+            this.lbl_countErrores2.Size = new System.Drawing.Size(18, 23);
             this.lbl_countErrores2.TabIndex = 112;
             this.lbl_countErrores2.Text = "-";
             this.lbl_countErrores2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1284,7 +1288,7 @@
             this.label26.Location = new System.Drawing.Point(3, 29);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(93, 17);
+            this.label26.Size = new System.Drawing.Size(118, 21);
             this.label26.TabIndex = 127;
             this.label26.Text = "Error parcial: ";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1297,7 +1301,7 @@
             this.label27.Location = new System.Drawing.Point(4, 55);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(75, 17);
+            this.label27.Size = new System.Drawing.Size(95, 21);
             this.label27.TabIndex = 128;
             this.label27.Text = "Error total:";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1319,7 +1323,7 @@
             this.lbl_errorTotal_2.Location = new System.Drawing.Point(163, 55);
             this.lbl_errorTotal_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorTotal_2.Name = "lbl_errorTotal_2";
-            this.lbl_errorTotal_2.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorTotal_2.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorTotal_2.TabIndex = 130;
             this.lbl_errorTotal_2.Text = "-";
             this.lbl_errorTotal_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1332,7 +1336,7 @@
             this.lbl_errorParcial_2.Location = new System.Drawing.Point(163, 29);
             this.lbl_errorParcial_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorParcial_2.Name = "lbl_errorParcial_2";
-            this.lbl_errorParcial_2.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorParcial_2.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorParcial_2.TabIndex = 131;
             this.lbl_errorParcial_2.Text = "-";
             this.lbl_errorParcial_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1363,7 +1367,7 @@
             this.lbl_name1.Location = new System.Drawing.Point(5, 1);
             this.lbl_name1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name1.Name = "lbl_name1";
-            this.lbl_name1.Size = new System.Drawing.Size(14, 18);
+            this.lbl_name1.Size = new System.Drawing.Size(18, 23);
             this.lbl_name1.TabIndex = 103;
             this.lbl_name1.Text = "-";
             this.lbl_name1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1376,7 +1380,7 @@
             this.lbl_countErrores1.Location = new System.Drawing.Point(165, 1);
             this.lbl_countErrores1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores1.Name = "lbl_countErrores1";
-            this.lbl_countErrores1.Size = new System.Drawing.Size(14, 18);
+            this.lbl_countErrores1.Size = new System.Drawing.Size(18, 23);
             this.lbl_countErrores1.TabIndex = 111;
             this.lbl_countErrores1.Text = "-";
             this.lbl_countErrores1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1398,7 +1402,7 @@
             this.label28.Location = new System.Drawing.Point(4, 26);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(93, 17);
+            this.label28.Size = new System.Drawing.Size(118, 21);
             this.label28.TabIndex = 122;
             this.label28.Text = "Error parcial: ";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1411,7 +1415,7 @@
             this.label29.Location = new System.Drawing.Point(5, 54);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(75, 17);
+            this.label29.Size = new System.Drawing.Size(95, 21);
             this.label29.TabIndex = 123;
             this.label29.Text = "Error total:";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1433,7 +1437,7 @@
             this.lbl_errorTotal_1.Location = new System.Drawing.Point(164, 54);
             this.lbl_errorTotal_1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorTotal_1.Name = "lbl_errorTotal_1";
-            this.lbl_errorTotal_1.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorTotal_1.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorTotal_1.TabIndex = 125;
             this.lbl_errorTotal_1.Text = "-";
             this.lbl_errorTotal_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1446,7 +1450,7 @@
             this.lbl_errorParcial_1.Location = new System.Drawing.Point(165, 27);
             this.lbl_errorParcial_1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorParcial_1.Name = "lbl_errorParcial_1";
-            this.lbl_errorParcial_1.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorParcial_1.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorParcial_1.TabIndex = 126;
             this.lbl_errorParcial_1.Text = "-";
             this.lbl_errorParcial_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1477,7 +1481,7 @@
             this.lbl_name5.Location = new System.Drawing.Point(3, 2);
             this.lbl_name5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name5.Name = "lbl_name5";
-            this.lbl_name5.Size = new System.Drawing.Size(14, 18);
+            this.lbl_name5.Size = new System.Drawing.Size(18, 23);
             this.lbl_name5.TabIndex = 108;
             this.lbl_name5.Text = "-";
             this.lbl_name5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1490,7 +1494,7 @@
             this.lbl_errorParcial_5.Location = new System.Drawing.Point(165, 27);
             this.lbl_errorParcial_5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorParcial_5.Name = "lbl_errorParcial_5";
-            this.lbl_errorParcial_5.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorParcial_5.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorParcial_5.TabIndex = 146;
             this.lbl_errorParcial_5.Text = "-";
             this.lbl_errorParcial_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1503,7 +1507,7 @@
             this.lbl_countErrores5.Location = new System.Drawing.Point(165, 2);
             this.lbl_countErrores5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores5.Name = "lbl_countErrores5";
-            this.lbl_countErrores5.Size = new System.Drawing.Size(14, 18);
+            this.lbl_countErrores5.Size = new System.Drawing.Size(18, 23);
             this.lbl_countErrores5.TabIndex = 114;
             this.lbl_countErrores5.Text = "-";
             this.lbl_countErrores5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1516,7 +1520,7 @@
             this.lbl_errorTotal_5.Location = new System.Drawing.Point(165, 54);
             this.lbl_errorTotal_5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorTotal_5.Name = "lbl_errorTotal_5";
-            this.lbl_errorTotal_5.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorTotal_5.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorTotal_5.TabIndex = 145;
             this.lbl_errorTotal_5.Text = "-";
             this.lbl_errorTotal_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1547,7 +1551,7 @@
             this.label30.Location = new System.Drawing.Point(3, 28);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(93, 17);
+            this.label30.Size = new System.Drawing.Size(118, 21);
             this.label30.TabIndex = 142;
             this.label30.Text = "Error parcial: ";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1560,7 +1564,7 @@
             this.label34.Location = new System.Drawing.Point(5, 54);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(75, 17);
+            this.label34.Size = new System.Drawing.Size(95, 21);
             this.label34.TabIndex = 143;
             this.label34.Text = "Error total:";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1591,7 +1595,7 @@
             this.lbl_name3.Location = new System.Drawing.Point(2, 1);
             this.lbl_name3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name3.Name = "lbl_name3";
-            this.lbl_name3.Size = new System.Drawing.Size(14, 18);
+            this.lbl_name3.Size = new System.Drawing.Size(18, 23);
             this.lbl_name3.TabIndex = 109;
             this.lbl_name3.Text = "-";
             this.lbl_name3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1604,7 +1608,7 @@
             this.lbl_countErrores3.Location = new System.Drawing.Point(165, 1);
             this.lbl_countErrores3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores3.Name = "lbl_countErrores3";
-            this.lbl_countErrores3.Size = new System.Drawing.Size(14, 18);
+            this.lbl_countErrores3.Size = new System.Drawing.Size(18, 23);
             this.lbl_countErrores3.TabIndex = 115;
             this.lbl_countErrores3.Text = "-";
             this.lbl_countErrores3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1626,7 +1630,7 @@
             this.label35.Location = new System.Drawing.Point(2, 26);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(93, 17);
+            this.label35.Size = new System.Drawing.Size(118, 21);
             this.label35.TabIndex = 132;
             this.label35.Text = "Error parcial: ";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1639,7 +1643,7 @@
             this.label36.Location = new System.Drawing.Point(3, 54);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(75, 17);
+            this.label36.Size = new System.Drawing.Size(95, 21);
             this.label36.TabIndex = 133;
             this.label36.Text = "Error total:";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1661,7 +1665,7 @@
             this.lbl_errorParcial_3.Location = new System.Drawing.Point(164, 24);
             this.lbl_errorParcial_3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorParcial_3.Name = "lbl_errorParcial_3";
-            this.lbl_errorParcial_3.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorParcial_3.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorParcial_3.TabIndex = 136;
             this.lbl_errorParcial_3.Text = "-";
             this.lbl_errorParcial_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1674,7 +1678,7 @@
             this.lbl_errorTotal_3.Location = new System.Drawing.Point(165, 52);
             this.lbl_errorTotal_3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorTotal_3.Name = "lbl_errorTotal_3";
-            this.lbl_errorTotal_3.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorTotal_3.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorTotal_3.TabIndex = 135;
             this.lbl_errorTotal_3.Text = "-";
             this.lbl_errorTotal_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1705,7 +1709,7 @@
             this.lbl_name4.Location = new System.Drawing.Point(3, 2);
             this.lbl_name4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name4.Name = "lbl_name4";
-            this.lbl_name4.Size = new System.Drawing.Size(14, 18);
+            this.lbl_name4.Size = new System.Drawing.Size(18, 23);
             this.lbl_name4.TabIndex = 107;
             this.lbl_name4.Text = "-";
             this.lbl_name4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1718,7 +1722,7 @@
             this.lbl_countErrores4.Location = new System.Drawing.Point(168, 2);
             this.lbl_countErrores4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countErrores4.Name = "lbl_countErrores4";
-            this.lbl_countErrores4.Size = new System.Drawing.Size(14, 18);
+            this.lbl_countErrores4.Size = new System.Drawing.Size(18, 23);
             this.lbl_countErrores4.TabIndex = 113;
             this.lbl_countErrores4.Text = "-";
             this.lbl_countErrores4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1740,7 +1744,7 @@
             this.label37.Location = new System.Drawing.Point(4, 28);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(93, 17);
+            this.label37.Size = new System.Drawing.Size(118, 21);
             this.label37.TabIndex = 137;
             this.label37.Text = "Error parcial: ";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1753,7 +1757,7 @@
             this.label38.Location = new System.Drawing.Point(5, 56);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(75, 17);
+            this.label38.Size = new System.Drawing.Size(95, 21);
             this.label38.TabIndex = 138;
             this.label38.Text = "Error total:";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1775,7 +1779,7 @@
             this.lbl_errorParcial_4.Location = new System.Drawing.Point(167, 25);
             this.lbl_errorParcial_4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorParcial_4.Name = "lbl_errorParcial_4";
-            this.lbl_errorParcial_4.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorParcial_4.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorParcial_4.TabIndex = 141;
             this.lbl_errorParcial_4.Text = "-";
             this.lbl_errorParcial_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1788,7 +1792,7 @@
             this.lbl_errorTotal_4.Location = new System.Drawing.Point(167, 53);
             this.lbl_errorTotal_4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_errorTotal_4.Name = "lbl_errorTotal_4";
-            this.lbl_errorTotal_4.Size = new System.Drawing.Size(14, 20);
+            this.lbl_errorTotal_4.Size = new System.Drawing.Size(16, 22);
             this.lbl_errorTotal_4.TabIndex = 140;
             this.lbl_errorTotal_4.Text = "-";
             this.lbl_errorTotal_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1867,7 +1871,7 @@
             this.label20.Location = new System.Drawing.Point(18, 224);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(294, 30);
+            this.label20.Size = new System.Drawing.Size(369, 34);
             this.label20.TabIndex = 132;
             this.label20.Text = "Para mas informacion de cada empleado dirijase \r\na la seccion \'Top empleados\' y p" +
     "resione \'Ver detalle\'";
@@ -1906,7 +1910,7 @@
             this.label14.Location = new System.Drawing.Point(4, 13);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(121, 16);
+            this.label14.Size = new System.Drawing.Size(151, 19);
             this.label14.TabIndex = 6;
             this.label14.Text = "TOTAL HISTORICO";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1936,7 +1940,7 @@
             this.label15.Location = new System.Drawing.Point(9, 68);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(111, 17);
+            this.label15.Size = new System.Drawing.Size(144, 21);
             this.label15.TabIndex = 109;
             this.label15.Text = "Errores parciales";
             this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1949,7 +1953,7 @@
             this.lbl_totalerrores_total_hist.Location = new System.Drawing.Point(53, 92);
             this.lbl_totalerrores_total_hist.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_total_hist.Name = "lbl_totalerrores_total_hist";
-            this.lbl_totalerrores_total_hist.Size = new System.Drawing.Size(22, 24);
+            this.lbl_totalerrores_total_hist.Size = new System.Drawing.Size(30, 33);
             this.lbl_totalerrores_total_hist.TabIndex = 128;
             this.lbl_totalerrores_total_hist.Text = "0";
             // 
@@ -1961,7 +1965,7 @@
             this.lbl_totalerrores_parcial_hist.Location = new System.Drawing.Point(53, 146);
             this.lbl_totalerrores_parcial_hist.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_parcial_hist.Name = "lbl_totalerrores_parcial_hist";
-            this.lbl_totalerrores_parcial_hist.Size = new System.Drawing.Size(22, 24);
+            this.lbl_totalerrores_parcial_hist.Size = new System.Drawing.Size(30, 33);
             this.lbl_totalerrores_parcial_hist.TabIndex = 126;
             this.lbl_totalerrores_parcial_hist.Text = "0";
             // 
@@ -1972,7 +1976,7 @@
             this.label17.Location = new System.Drawing.Point(16, 122);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(97, 17);
+            this.label17.Size = new System.Drawing.Size(126, 21);
             this.label17.TabIndex = 113;
             this.label17.Text = "Errores totales";
             this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1985,7 +1989,7 @@
             this.lbl_totalerrores_hist.Location = new System.Drawing.Point(52, 38);
             this.lbl_totalerrores_hist.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_hist.Name = "lbl_totalerrores_hist";
-            this.lbl_totalerrores_hist.Size = new System.Drawing.Size(24, 25);
+            this.lbl_totalerrores_hist.Size = new System.Drawing.Size(30, 32);
             this.lbl_totalerrores_hist.TabIndex = 123;
             this.lbl_totalerrores_hist.Text = "0";
             // 
@@ -2013,7 +2017,7 @@
             this.label62.Location = new System.Drawing.Point(7, 9);
             this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(117, 16);
+            this.label62.Size = new System.Drawing.Size(148, 19);
             this.label62.TabIndex = 6;
             this.label62.Text = "ERRORES DEL DIA";
             this.label62.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2043,7 +2047,7 @@
             this.label66.Location = new System.Drawing.Point(7, 34);
             this.label66.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(111, 17);
+            this.label66.Size = new System.Drawing.Size(144, 21);
             this.label66.TabIndex = 109;
             this.label66.Text = "Errores parciales";
             this.label66.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2055,7 +2059,7 @@
             this.label69.Location = new System.Drawing.Point(7, 59);
             this.label69.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(97, 17);
+            this.label69.Size = new System.Drawing.Size(126, 21);
             this.label69.TabIndex = 113;
             this.label69.Text = "Errores totales";
             this.label69.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2068,7 +2072,7 @@
             this.lbl_totalerrores_dia.Location = new System.Drawing.Point(153, 9);
             this.lbl_totalerrores_dia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_dia.Name = "lbl_totalerrores_dia";
-            this.lbl_totalerrores_dia.Size = new System.Drawing.Size(27, 19);
+            this.lbl_totalerrores_dia.Size = new System.Drawing.Size(32, 23);
             this.lbl_totalerrores_dia.TabIndex = 91;
             this.lbl_totalerrores_dia.Text = "00";
             // 
@@ -2080,7 +2084,7 @@
             this.lbl_totalerrores_parcial_dia.Location = new System.Drawing.Point(152, 31);
             this.lbl_totalerrores_parcial_dia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_parcial_dia.Name = "lbl_totalerrores_parcial_dia";
-            this.lbl_totalerrores_parcial_dia.Size = new System.Drawing.Size(28, 21);
+            this.lbl_totalerrores_parcial_dia.Size = new System.Drawing.Size(32, 23);
             this.lbl_totalerrores_parcial_dia.TabIndex = 99;
             this.lbl_totalerrores_parcial_dia.Text = "00";
             // 
@@ -2092,7 +2096,7 @@
             this.lbl_totalerrores_total_dia.Location = new System.Drawing.Point(152, 56);
             this.lbl_totalerrores_total_dia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_total_dia.Name = "lbl_totalerrores_total_dia";
-            this.lbl_totalerrores_total_dia.Size = new System.Drawing.Size(28, 21);
+            this.lbl_totalerrores_total_dia.Size = new System.Drawing.Size(32, 23);
             this.lbl_totalerrores_total_dia.TabIndex = 120;
             this.lbl_totalerrores_total_dia.Text = "00";
             // 
@@ -2120,7 +2124,7 @@
             this.lbl_tituloErrores.Location = new System.Drawing.Point(7, 10);
             this.lbl_tituloErrores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_tituloErrores.Name = "lbl_tituloErrores";
-            this.lbl_tituloErrores.Size = new System.Drawing.Size(120, 16);
+            this.lbl_tituloErrores.Size = new System.Drawing.Size(151, 19);
             this.lbl_tituloErrores.TabIndex = 6;
             this.lbl_tituloErrores.Text = "ERRORES DEL MES";
             this.lbl_tituloErrores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2133,7 +2137,7 @@
             this.lbl_totalerrores_mes.Location = new System.Drawing.Point(153, 8);
             this.lbl_totalerrores_mes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_mes.Name = "lbl_totalerrores_mes";
-            this.lbl_totalerrores_mes.Size = new System.Drawing.Size(27, 19);
+            this.lbl_totalerrores_mes.Size = new System.Drawing.Size(32, 23);
             this.lbl_totalerrores_mes.TabIndex = 11;
             this.lbl_totalerrores_mes.Text = "00";
             // 
@@ -2162,7 +2166,7 @@
             this.label13.Location = new System.Drawing.Point(7, 35);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(111, 17);
+            this.label13.Size = new System.Drawing.Size(144, 21);
             this.label13.TabIndex = 109;
             this.label13.Text = "Errores parciales";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2175,7 +2179,7 @@
             this.lbl_totalerrores_parcial_mes.Location = new System.Drawing.Point(152, 33);
             this.lbl_totalerrores_parcial_mes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_parcial_mes.Name = "lbl_totalerrores_parcial_mes";
-            this.lbl_totalerrores_parcial_mes.Size = new System.Drawing.Size(28, 21);
+            this.lbl_totalerrores_parcial_mes.Size = new System.Drawing.Size(32, 23);
             this.lbl_totalerrores_parcial_mes.TabIndex = 110;
             this.lbl_totalerrores_parcial_mes.Text = "00";
             // 
@@ -2186,7 +2190,7 @@
             this.label12.Location = new System.Drawing.Point(7, 60);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 17);
+            this.label12.Size = new System.Drawing.Size(126, 21);
             this.label12.TabIndex = 113;
             this.label12.Text = "Errores totales";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2199,7 +2203,7 @@
             this.lbl_totalerrores_total_mes.Location = new System.Drawing.Point(152, 59);
             this.lbl_totalerrores_total_mes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores_total_mes.Name = "lbl_totalerrores_total_mes";
-            this.lbl_totalerrores_total_mes.Size = new System.Drawing.Size(28, 21);
+            this.lbl_totalerrores_total_mes.Size = new System.Drawing.Size(32, 23);
             this.lbl_totalerrores_total_mes.TabIndex = 114;
             this.lbl_totalerrores_total_mes.Text = "00";
             // 
@@ -2211,7 +2215,7 @@
             this.label7.Location = new System.Drawing.Point(186, 5);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(140, 15);
+            this.label7.Size = new System.Drawing.Size(174, 17);
             this.label7.TabIndex = 84;
             this.label7.Text = "Mensuales y procesados";
             // 
@@ -2223,7 +2227,7 @@
             this.label11.Location = new System.Drawing.Point(6, 7);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(139, 16);
+            this.label11.Size = new System.Drawing.Size(173, 19);
             this.label11.TabIndex = 83;
             this.label11.Text = "Tramites con errores";
             // 
@@ -2243,10 +2247,10 @@
             this.btn_detalleTop.Controls.Add(this.panel79);
             this.btn_detalleTop.Controls.Add(this.panel76);
             this.btn_detalleTop.Controls.Add(this.panel74);
-            this.btn_detalleTop.Location = new System.Drawing.Point(4, 26);
+            this.btn_detalleTop.Location = new System.Drawing.Point(4, 30);
             this.btn_detalleTop.Name = "btn_detalleTop";
             this.btn_detalleTop.Padding = new System.Windows.Forms.Padding(3);
-            this.btn_detalleTop.Size = new System.Drawing.Size(997, 617);
+            this.btn_detalleTop.Size = new System.Drawing.Size(997, 613);
             this.btn_detalleTop.TabIndex = 1;
             this.btn_detalleTop.Text = "Tramites";
             this.btn_detalleTop.UseVisualStyleBackColor = true;
@@ -2290,7 +2294,7 @@
             this.label46.Location = new System.Drawing.Point(505, 1);
             this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(91, 15);
+            this.label46.Size = new System.Drawing.Size(113, 17);
             this.label46.TabIndex = 114;
             this.label46.Text = "Datos historicos";
             // 
@@ -2302,7 +2306,7 @@
             this.label58.Location = new System.Drawing.Point(4, 4);
             this.label58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(118, 16);
+            this.label58.Size = new System.Drawing.Size(141, 19);
             this.label58.TabIndex = 113;
             this.label58.Text = "Tramites historial";
             // 
@@ -2326,7 +2330,7 @@
             this.lbl_totaltramites.Location = new System.Drawing.Point(133, 3);
             this.lbl_totaltramites.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totaltramites.Name = "lbl_totaltramites";
-            this.lbl_totaltramites.Size = new System.Drawing.Size(23, 25);
+            this.lbl_totaltramites.Size = new System.Drawing.Size(28, 32);
             this.lbl_totaltramites.TabIndex = 12;
             this.lbl_totaltramites.Text = "0";
             // 
@@ -2339,7 +2343,7 @@
             this.label48.Location = new System.Drawing.Point(3, 8);
             this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(95, 16);
+            this.label48.Size = new System.Drawing.Size(114, 19);
             this.label48.TabIndex = 2;
             this.label48.Text = "Total tramites\r\n";
             // 
@@ -2373,7 +2377,7 @@
             this.lbl_totalerrores.Location = new System.Drawing.Point(133, 3);
             this.lbl_totalerrores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores.Name = "lbl_totalerrores";
-            this.lbl_totalerrores.Size = new System.Drawing.Size(23, 25);
+            this.lbl_totalerrores.Size = new System.Drawing.Size(28, 32);
             this.lbl_totalerrores.TabIndex = 12;
             this.lbl_totalerrores.Text = "0";
             // 
@@ -2395,7 +2399,7 @@
             this.label45.Location = new System.Drawing.Point(3, 9);
             this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(88, 16);
+            this.label45.Size = new System.Drawing.Size(107, 19);
             this.label45.TabIndex = 2;
             this.label45.Text = "Total errores";
             // 
@@ -2419,7 +2423,7 @@
             this.label47.Location = new System.Drawing.Point(3, 9);
             this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(122, 16);
+            this.label47.Size = new System.Drawing.Size(147, 19);
             this.label47.TabIndex = 2;
             this.label47.Text = "Total Tipo Tramite";
             // 
@@ -2431,7 +2435,7 @@
             this.lbl_totaltipos.Location = new System.Drawing.Point(133, 3);
             this.lbl_totaltipos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totaltipos.Name = "lbl_totaltipos";
-            this.lbl_totaltipos.Size = new System.Drawing.Size(23, 25);
+            this.lbl_totaltipos.Size = new System.Drawing.Size(28, 32);
             this.lbl_totaltipos.TabIndex = 12;
             this.lbl_totaltipos.Text = "0";
             // 
@@ -2465,7 +2469,7 @@
             this.lbl_totalinscriptos.Location = new System.Drawing.Point(133, 3);
             this.lbl_totalinscriptos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalinscriptos.Name = "lbl_totalinscriptos";
-            this.lbl_totalinscriptos.Size = new System.Drawing.Size(23, 25);
+            this.lbl_totalinscriptos.Size = new System.Drawing.Size(28, 32);
             this.lbl_totalinscriptos.TabIndex = 12;
             this.lbl_totalinscriptos.Text = "0";
             this.lbl_totalinscriptos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2478,7 +2482,7 @@
             this.label53.Location = new System.Drawing.Point(3, 9);
             this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(105, 16);
+            this.label53.Size = new System.Drawing.Size(128, 19);
             this.label53.TabIndex = 2;
             this.label53.Text = "Total Inscriptos";
             // 
@@ -2512,7 +2516,7 @@
             this.lbl_totalempleados.Location = new System.Drawing.Point(133, 3);
             this.lbl_totalempleados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalempleados.Name = "lbl_totalempleados";
-            this.lbl_totalempleados.Size = new System.Drawing.Size(23, 25);
+            this.lbl_totalempleados.Size = new System.Drawing.Size(28, 32);
             this.lbl_totalempleados.TabIndex = 12;
             this.lbl_totalempleados.Text = "0";
             // 
@@ -2524,7 +2528,7 @@
             this.label57.Location = new System.Drawing.Point(4, 9);
             this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(115, 16);
+            this.label57.Size = new System.Drawing.Size(143, 19);
             this.label57.TabIndex = 2;
             this.label57.Text = "Total Empleados";
             // 
@@ -2558,7 +2562,7 @@
             this.label50.Location = new System.Drawing.Point(3, 9);
             this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(117, 16);
+            this.label50.Size = new System.Drawing.Size(148, 19);
             this.label50.TabIndex = 2;
             this.label50.Text = "Total Procesados";
             // 
@@ -2570,7 +2574,7 @@
             this.lbl_totalprocesados.Location = new System.Drawing.Point(133, 3);
             this.lbl_totalprocesados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalprocesados.Name = "lbl_totalprocesados";
-            this.lbl_totalprocesados.Size = new System.Drawing.Size(23, 25);
+            this.lbl_totalprocesados.Size = new System.Drawing.Size(28, 32);
             this.lbl_totalprocesados.TabIndex = 12;
             this.lbl_totalprocesados.Text = "0";
             // 
@@ -2628,7 +2632,7 @@
             this.label6.Location = new System.Drawing.Point(13, 375);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(338, 30);
+            this.label6.Size = new System.Drawing.Size(420, 34);
             this.label6.TabIndex = 116;
             this.label6.Text = "Para mas informacion especifica de cada empleado \r\ndirijase a la seccion \'Top emp" +
     "leados\' y presione \'Ver detalle\'";
@@ -2651,7 +2655,7 @@
             this.label72.Location = new System.Drawing.Point(282, 7);
             this.label72.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(90, 15);
+            this.label72.Size = new System.Drawing.Size(115, 17);
             this.label72.TabIndex = 114;
             this.label72.Text = "Datos mesuales";
             // 
@@ -2663,7 +2667,7 @@
             this.label73.Location = new System.Drawing.Point(4, 8);
             this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(218, 16);
+            this.label73.Size = new System.Drawing.Size(272, 19);
             this.label73.TabIndex = 113;
             this.label73.Text = "Tramites consulta por empleado";
             // 
@@ -2715,7 +2719,7 @@
             this.label49.Location = new System.Drawing.Point(11, 10);
             this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(142, 16);
+            this.label49.Size = new System.Drawing.Size(178, 19);
             this.label49.TabIndex = 159;
             this.label49.Text = "Tramites procesados";
             // 
@@ -2765,7 +2769,7 @@
             this.lbl_countProcesados_8.Location = new System.Drawing.Point(143, 285);
             this.lbl_countProcesados_8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countProcesados_8.Name = "lbl_countProcesados_8";
-            this.lbl_countProcesados_8.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countProcesados_8.Size = new System.Drawing.Size(20, 25);
             this.lbl_countProcesados_8.TabIndex = 44;
             this.lbl_countProcesados_8.Text = "-";
             this.lbl_countProcesados_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2780,7 +2784,7 @@
             this.lbl_countProcesados_7.Location = new System.Drawing.Point(143, 253);
             this.lbl_countProcesados_7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countProcesados_7.Name = "lbl_countProcesados_7";
-            this.lbl_countProcesados_7.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countProcesados_7.Size = new System.Drawing.Size(20, 25);
             this.lbl_countProcesados_7.TabIndex = 39;
             this.lbl_countProcesados_7.Text = "-";
             this.lbl_countProcesados_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2795,7 +2799,7 @@
             this.lbl_countProcesados_6.Location = new System.Drawing.Point(143, 223);
             this.lbl_countProcesados_6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countProcesados_6.Name = "lbl_countProcesados_6";
-            this.lbl_countProcesados_6.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countProcesados_6.Size = new System.Drawing.Size(20, 25);
             this.lbl_countProcesados_6.TabIndex = 38;
             this.lbl_countProcesados_6.Text = "-";
             this.lbl_countProcesados_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2810,7 +2814,7 @@
             this.lblnombre_8.Location = new System.Drawing.Point(5, 282);
             this.lblnombre_8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombre_8.Name = "lblnombre_8";
-            this.lblnombre_8.Size = new System.Drawing.Size(14, 20);
+            this.lblnombre_8.Size = new System.Drawing.Size(16, 22);
             this.lblnombre_8.TabIndex = 42;
             this.lblnombre_8.Text = "-";
             this.lblnombre_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2825,7 +2829,7 @@
             this.lblnombre_7.Location = new System.Drawing.Point(6, 251);
             this.lblnombre_7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombre_7.Name = "lblnombre_7";
-            this.lblnombre_7.Size = new System.Drawing.Size(14, 20);
+            this.lblnombre_7.Size = new System.Drawing.Size(16, 22);
             this.lblnombre_7.TabIndex = 37;
             this.lblnombre_7.Text = "-";
             this.lblnombre_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2840,7 +2844,7 @@
             this.lblnombre_6.Location = new System.Drawing.Point(6, 220);
             this.lblnombre_6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombre_6.Name = "lblnombre_6";
-            this.lblnombre_6.Size = new System.Drawing.Size(14, 20);
+            this.lblnombre_6.Size = new System.Drawing.Size(16, 22);
             this.lblnombre_6.TabIndex = 36;
             this.lblnombre_6.Text = "-";
             this.lblnombre_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2900,7 +2904,7 @@
             this.lbl_countProcesados_3.Location = new System.Drawing.Point(142, 128);
             this.lbl_countProcesados_3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countProcesados_3.Name = "lbl_countProcesados_3";
-            this.lbl_countProcesados_3.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countProcesados_3.Size = new System.Drawing.Size(20, 25);
             this.lbl_countProcesados_3.TabIndex = 27;
             this.lbl_countProcesados_3.Text = "-";
             this.lbl_countProcesados_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2915,7 +2919,7 @@
             this.lbl_countProcesados_5.Location = new System.Drawing.Point(142, 191);
             this.lbl_countProcesados_5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countProcesados_5.Name = "lbl_countProcesados_5";
-            this.lbl_countProcesados_5.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countProcesados_5.Size = new System.Drawing.Size(20, 25);
             this.lbl_countProcesados_5.TabIndex = 26;
             this.lbl_countProcesados_5.Text = "-";
             this.lbl_countProcesados_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2930,7 +2934,7 @@
             this.lbl_countProcesados_4.Location = new System.Drawing.Point(142, 159);
             this.lbl_countProcesados_4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countProcesados_4.Name = "lbl_countProcesados_4";
-            this.lbl_countProcesados_4.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countProcesados_4.Size = new System.Drawing.Size(20, 25);
             this.lbl_countProcesados_4.TabIndex = 25;
             this.lbl_countProcesados_4.Text = "-";
             this.lbl_countProcesados_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2945,7 +2949,7 @@
             this.lbl_countProcesados_2.Location = new System.Drawing.Point(142, 98);
             this.lbl_countProcesados_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countProcesados_2.Name = "lbl_countProcesados_2";
-            this.lbl_countProcesados_2.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countProcesados_2.Size = new System.Drawing.Size(20, 25);
             this.lbl_countProcesados_2.TabIndex = 24;
             this.lbl_countProcesados_2.Text = "-";
             this.lbl_countProcesados_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2960,7 +2964,7 @@
             this.lbl_countProcesados_1.Location = new System.Drawing.Point(142, 66);
             this.lbl_countProcesados_1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countProcesados_1.Name = "lbl_countProcesados_1";
-            this.lbl_countProcesados_1.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countProcesados_1.Size = new System.Drawing.Size(20, 25);
             this.lbl_countProcesados_1.TabIndex = 23;
             this.lbl_countProcesados_1.Text = "-";
             this.lbl_countProcesados_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2975,7 +2979,7 @@
             this.lbl_countProcesados_0.Location = new System.Drawing.Point(142, 36);
             this.lbl_countProcesados_0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countProcesados_0.Name = "lbl_countProcesados_0";
-            this.lbl_countProcesados_0.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countProcesados_0.Size = new System.Drawing.Size(20, 25);
             this.lbl_countProcesados_0.TabIndex = 22;
             this.lbl_countProcesados_0.Text = "-";
             this.lbl_countProcesados_0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2990,7 +2994,7 @@
             this.lblnombre_3.Location = new System.Drawing.Point(5, 127);
             this.lblnombre_3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombre_3.Name = "lblnombre_3";
-            this.lblnombre_3.Size = new System.Drawing.Size(14, 20);
+            this.lblnombre_3.Size = new System.Drawing.Size(16, 22);
             this.lblnombre_3.TabIndex = 21;
             this.lblnombre_3.Text = "-";
             this.lblnombre_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3005,7 +3009,7 @@
             this.lblnombre_5.Location = new System.Drawing.Point(5, 189);
             this.lblnombre_5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombre_5.Name = "lblnombre_5";
-            this.lblnombre_5.Size = new System.Drawing.Size(14, 20);
+            this.lblnombre_5.Size = new System.Drawing.Size(16, 22);
             this.lblnombre_5.TabIndex = 20;
             this.lblnombre_5.Text = "-";
             this.lblnombre_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3020,7 +3024,7 @@
             this.lblnombre_4.Location = new System.Drawing.Point(5, 158);
             this.lblnombre_4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombre_4.Name = "lblnombre_4";
-            this.lblnombre_4.Size = new System.Drawing.Size(14, 20);
+            this.lblnombre_4.Size = new System.Drawing.Size(16, 22);
             this.lblnombre_4.TabIndex = 19;
             this.lblnombre_4.Text = "-";
             this.lblnombre_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3035,7 +3039,7 @@
             this.lblnombre_2.Location = new System.Drawing.Point(5, 96);
             this.lblnombre_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombre_2.Name = "lblnombre_2";
-            this.lblnombre_2.Size = new System.Drawing.Size(14, 20);
+            this.lblnombre_2.Size = new System.Drawing.Size(16, 22);
             this.lblnombre_2.TabIndex = 18;
             this.lblnombre_2.Text = "-";
             this.lblnombre_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3050,7 +3054,7 @@
             this.lblnombre_1.Location = new System.Drawing.Point(5, 65);
             this.lblnombre_1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombre_1.Name = "lblnombre_1";
-            this.lblnombre_1.Size = new System.Drawing.Size(14, 20);
+            this.lblnombre_1.Size = new System.Drawing.Size(16, 22);
             this.lblnombre_1.TabIndex = 17;
             this.lblnombre_1.Text = "-";
             this.lblnombre_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3065,7 +3069,7 @@
             this.lblnombre_0.Location = new System.Drawing.Point(8, 37);
             this.lblnombre_0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombre_0.Name = "lblnombre_0";
-            this.lblnombre_0.Size = new System.Drawing.Size(14, 20);
+            this.lblnombre_0.Size = new System.Drawing.Size(16, 22);
             this.lblnombre_0.TabIndex = 16;
             this.lblnombre_0.Text = "-";
             this.lblnombre_0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3127,7 +3131,7 @@
             this.label1.Location = new System.Drawing.Point(20, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 16);
+            this.label1.Size = new System.Drawing.Size(157, 19);
             this.label1.TabIndex = 158;
             this.label1.Text = "Tramites Inscriptos";
             // 
@@ -3177,7 +3181,7 @@
             this.lbl_countInscriptos_8.Location = new System.Drawing.Point(142, 287);
             this.lbl_countInscriptos_8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countInscriptos_8.Name = "lbl_countInscriptos_8";
-            this.lbl_countInscriptos_8.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countInscriptos_8.Size = new System.Drawing.Size(20, 25);
             this.lbl_countInscriptos_8.TabIndex = 44;
             this.lbl_countInscriptos_8.Text = "-";
             this.lbl_countInscriptos_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3192,7 +3196,7 @@
             this.lbl_countInscriptos_7.Location = new System.Drawing.Point(142, 256);
             this.lbl_countInscriptos_7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countInscriptos_7.Name = "lbl_countInscriptos_7";
-            this.lbl_countInscriptos_7.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countInscriptos_7.Size = new System.Drawing.Size(20, 25);
             this.lbl_countInscriptos_7.TabIndex = 39;
             this.lbl_countInscriptos_7.Text = "-";
             this.lbl_countInscriptos_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3207,7 +3211,7 @@
             this.lbl_countInscriptos_6.Location = new System.Drawing.Point(142, 225);
             this.lbl_countInscriptos_6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countInscriptos_6.Name = "lbl_countInscriptos_6";
-            this.lbl_countInscriptos_6.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countInscriptos_6.Size = new System.Drawing.Size(20, 25);
             this.lbl_countInscriptos_6.TabIndex = 38;
             this.lbl_countInscriptos_6.Text = "-";
             this.lbl_countInscriptos_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3222,7 +3226,7 @@
             this.lblnombreinscriptos_8.Location = new System.Drawing.Point(5, 286);
             this.lblnombreinscriptos_8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombreinscriptos_8.Name = "lblnombreinscriptos_8";
-            this.lblnombreinscriptos_8.Size = new System.Drawing.Size(14, 20);
+            this.lblnombreinscriptos_8.Size = new System.Drawing.Size(16, 22);
             this.lblnombreinscriptos_8.TabIndex = 42;
             this.lblnombreinscriptos_8.Text = "-";
             this.lblnombreinscriptos_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3237,7 +3241,7 @@
             this.lblnombreinscriptos_7.Location = new System.Drawing.Point(6, 255);
             this.lblnombreinscriptos_7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombreinscriptos_7.Name = "lblnombreinscriptos_7";
-            this.lblnombreinscriptos_7.Size = new System.Drawing.Size(14, 20);
+            this.lblnombreinscriptos_7.Size = new System.Drawing.Size(16, 22);
             this.lblnombreinscriptos_7.TabIndex = 37;
             this.lblnombreinscriptos_7.Text = "-";
             this.lblnombreinscriptos_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3252,7 +3256,7 @@
             this.lblnombreinscriptos_6.Location = new System.Drawing.Point(6, 224);
             this.lblnombreinscriptos_6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombreinscriptos_6.Name = "lblnombreinscriptos_6";
-            this.lblnombreinscriptos_6.Size = new System.Drawing.Size(14, 20);
+            this.lblnombreinscriptos_6.Size = new System.Drawing.Size(16, 22);
             this.lblnombreinscriptos_6.TabIndex = 36;
             this.lblnombreinscriptos_6.Text = "-";
             this.lblnombreinscriptos_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3312,7 +3316,7 @@
             this.lbl_countInscriptos_3.Location = new System.Drawing.Point(142, 133);
             this.lbl_countInscriptos_3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countInscriptos_3.Name = "lbl_countInscriptos_3";
-            this.lbl_countInscriptos_3.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countInscriptos_3.Size = new System.Drawing.Size(20, 25);
             this.lbl_countInscriptos_3.TabIndex = 27;
             this.lbl_countInscriptos_3.Text = "-";
             this.lbl_countInscriptos_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3327,7 +3331,7 @@
             this.lbl_countInscriptos_5.Location = new System.Drawing.Point(142, 194);
             this.lbl_countInscriptos_5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countInscriptos_5.Name = "lbl_countInscriptos_5";
-            this.lbl_countInscriptos_5.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countInscriptos_5.Size = new System.Drawing.Size(20, 25);
             this.lbl_countInscriptos_5.TabIndex = 26;
             this.lbl_countInscriptos_5.Text = "-";
             this.lbl_countInscriptos_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3342,7 +3346,7 @@
             this.lbl_countInscriptos_4.Location = new System.Drawing.Point(142, 163);
             this.lbl_countInscriptos_4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countInscriptos_4.Name = "lbl_countInscriptos_4";
-            this.lbl_countInscriptos_4.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countInscriptos_4.Size = new System.Drawing.Size(20, 25);
             this.lbl_countInscriptos_4.TabIndex = 25;
             this.lbl_countInscriptos_4.Text = "-";
             this.lbl_countInscriptos_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3357,7 +3361,7 @@
             this.lbl_countInscriptos_2.Location = new System.Drawing.Point(142, 103);
             this.lbl_countInscriptos_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countInscriptos_2.Name = "lbl_countInscriptos_2";
-            this.lbl_countInscriptos_2.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countInscriptos_2.Size = new System.Drawing.Size(20, 25);
             this.lbl_countInscriptos_2.TabIndex = 24;
             this.lbl_countInscriptos_2.Text = "-";
             this.lbl_countInscriptos_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3372,7 +3376,7 @@
             this.lbl_countInscriptos_1.Location = new System.Drawing.Point(142, 71);
             this.lbl_countInscriptos_1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countInscriptos_1.Name = "lbl_countInscriptos_1";
-            this.lbl_countInscriptos_1.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countInscriptos_1.Size = new System.Drawing.Size(20, 25);
             this.lbl_countInscriptos_1.TabIndex = 23;
             this.lbl_countInscriptos_1.Text = "-";
             this.lbl_countInscriptos_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3387,7 +3391,7 @@
             this.lbl_countInscriptos_0.Location = new System.Drawing.Point(143, 38);
             this.lbl_countInscriptos_0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_countInscriptos_0.Name = "lbl_countInscriptos_0";
-            this.lbl_countInscriptos_0.Size = new System.Drawing.Size(15, 20);
+            this.lbl_countInscriptos_0.Size = new System.Drawing.Size(20, 25);
             this.lbl_countInscriptos_0.TabIndex = 22;
             this.lbl_countInscriptos_0.Text = "-";
             this.lbl_countInscriptos_0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3402,7 +3406,7 @@
             this.lblnombreinscriptos_3.Location = new System.Drawing.Point(5, 131);
             this.lblnombreinscriptos_3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombreinscriptos_3.Name = "lblnombreinscriptos_3";
-            this.lblnombreinscriptos_3.Size = new System.Drawing.Size(14, 20);
+            this.lblnombreinscriptos_3.Size = new System.Drawing.Size(16, 22);
             this.lblnombreinscriptos_3.TabIndex = 21;
             this.lblnombreinscriptos_3.Text = "-";
             this.lblnombreinscriptos_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3417,7 +3421,7 @@
             this.lblnombreinscriptos_5.Location = new System.Drawing.Point(5, 193);
             this.lblnombreinscriptos_5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombreinscriptos_5.Name = "lblnombreinscriptos_5";
-            this.lblnombreinscriptos_5.Size = new System.Drawing.Size(14, 20);
+            this.lblnombreinscriptos_5.Size = new System.Drawing.Size(16, 22);
             this.lblnombreinscriptos_5.TabIndex = 20;
             this.lblnombreinscriptos_5.Text = "-";
             this.lblnombreinscriptos_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3432,7 +3436,7 @@
             this.lblnombreinscriptos_4.Location = new System.Drawing.Point(5, 162);
             this.lblnombreinscriptos_4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombreinscriptos_4.Name = "lblnombreinscriptos_4";
-            this.lblnombreinscriptos_4.Size = new System.Drawing.Size(14, 20);
+            this.lblnombreinscriptos_4.Size = new System.Drawing.Size(16, 22);
             this.lblnombreinscriptos_4.TabIndex = 19;
             this.lblnombreinscriptos_4.Text = "-";
             this.lblnombreinscriptos_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3447,7 +3451,7 @@
             this.lblnombreinscriptos_2.Location = new System.Drawing.Point(5, 100);
             this.lblnombreinscriptos_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombreinscriptos_2.Name = "lblnombreinscriptos_2";
-            this.lblnombreinscriptos_2.Size = new System.Drawing.Size(14, 20);
+            this.lblnombreinscriptos_2.Size = new System.Drawing.Size(16, 22);
             this.lblnombreinscriptos_2.TabIndex = 18;
             this.lblnombreinscriptos_2.Text = "-";
             this.lblnombreinscriptos_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3462,7 +3466,7 @@
             this.lblnombreinscriptos_1.Location = new System.Drawing.Point(5, 69);
             this.lblnombreinscriptos_1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombreinscriptos_1.Name = "lblnombreinscriptos_1";
-            this.lblnombreinscriptos_1.Size = new System.Drawing.Size(14, 20);
+            this.lblnombreinscriptos_1.Size = new System.Drawing.Size(16, 22);
             this.lblnombreinscriptos_1.TabIndex = 17;
             this.lblnombreinscriptos_1.Text = "-";
             this.lblnombreinscriptos_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3477,7 +3481,7 @@
             this.lblnombreinscriptos_0.Location = new System.Drawing.Point(6, 37);
             this.lblnombreinscriptos_0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombreinscriptos_0.Name = "lblnombreinscriptos_0";
-            this.lblnombreinscriptos_0.Size = new System.Drawing.Size(14, 20);
+            this.lblnombreinscriptos_0.Size = new System.Drawing.Size(16, 22);
             this.lblnombreinscriptos_0.TabIndex = 16;
             this.lblnombreinscriptos_0.Text = "-";
             this.lblnombreinscriptos_0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3530,7 +3534,7 @@
             this.label65.Location = new System.Drawing.Point(4, 8);
             this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(137, 16);
+            this.label65.Size = new System.Drawing.Size(175, 19);
             this.label65.TabIndex = 5;
             this.label65.Text = "Procesados de ayer";
             this.label65.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -3553,7 +3557,7 @@
             this.lbl_parcialprocesados_ayer.Location = new System.Drawing.Point(146, 2);
             this.lbl_parcialprocesados_ayer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_parcialprocesados_ayer.Name = "lbl_parcialprocesados_ayer";
-            this.lbl_parcialprocesados_ayer.Size = new System.Drawing.Size(23, 25);
+            this.lbl_parcialprocesados_ayer.Size = new System.Drawing.Size(28, 32);
             this.lbl_parcialprocesados_ayer.TabIndex = 12;
             this.lbl_parcialprocesados_ayer.Text = "0";
             this.lbl_parcialprocesados_ayer.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -3578,7 +3582,7 @@
             this.label68.Location = new System.Drawing.Point(4, 8);
             this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(125, 16);
+            this.label68.Size = new System.Drawing.Size(155, 19);
             this.label68.TabIndex = 5;
             this.label68.Text = "Inscriptos de ayer";
             this.label68.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -3600,7 +3604,7 @@
             this.lbl_parcialinscriptos_ayer.Location = new System.Drawing.Point(146, 2);
             this.lbl_parcialinscriptos_ayer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_parcialinscriptos_ayer.Name = "lbl_parcialinscriptos_ayer";
-            this.lbl_parcialinscriptos_ayer.Size = new System.Drawing.Size(23, 25);
+            this.lbl_parcialinscriptos_ayer.Size = new System.Drawing.Size(28, 32);
             this.lbl_parcialinscriptos_ayer.TabIndex = 11;
             this.lbl_parcialinscriptos_ayer.Text = "0";
             // 
@@ -3624,7 +3628,7 @@
             this.label9.Location = new System.Drawing.Point(4, 8);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(137, 16);
+            this.label9.Size = new System.Drawing.Size(177, 19);
             this.label9.TabIndex = 5;
             this.label9.Text = "Procesados del mes";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -3646,7 +3650,7 @@
             this.lbl_parcialprocesados_mes.Location = new System.Drawing.Point(146, 2);
             this.lbl_parcialprocesados_mes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_parcialprocesados_mes.Name = "lbl_parcialprocesados_mes";
-            this.lbl_parcialprocesados_mes.Size = new System.Drawing.Size(23, 25);
+            this.lbl_parcialprocesados_mes.Size = new System.Drawing.Size(28, 32);
             this.lbl_parcialprocesados_mes.TabIndex = 11;
             this.lbl_parcialprocesados_mes.Text = "0";
             // 
@@ -3670,7 +3674,7 @@
             this.label63.Location = new System.Drawing.Point(4, 8);
             this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(125, 16);
+            this.label63.Size = new System.Drawing.Size(157, 19);
             this.label63.TabIndex = 5;
             this.label63.Text = "Inscriptos del mes";
             this.label63.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -3693,7 +3697,7 @@
             this.lbl_parcialinscriptos_mes.Location = new System.Drawing.Point(146, 3);
             this.lbl_parcialinscriptos_mes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_parcialinscriptos_mes.Name = "lbl_parcialinscriptos_mes";
-            this.lbl_parcialinscriptos_mes.Size = new System.Drawing.Size(23, 25);
+            this.lbl_parcialinscriptos_mes.Size = new System.Drawing.Size(28, 32);
             this.lbl_parcialinscriptos_mes.TabIndex = 12;
             this.lbl_parcialinscriptos_mes.Text = "0";
             this.lbl_parcialinscriptos_mes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -3718,7 +3722,7 @@
             this.label61.Location = new System.Drawing.Point(4, 8);
             this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(133, 16);
+            this.label61.Size = new System.Drawing.Size(168, 19);
             this.label61.TabIndex = 5;
             this.label61.Text = "Procesados del dia";
             this.label61.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -3740,7 +3744,7 @@
             this.lbl_parcialprocesados_dia.Location = new System.Drawing.Point(146, 3);
             this.lbl_parcialprocesados_dia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_parcialprocesados_dia.Name = "lbl_parcialprocesados_dia";
-            this.lbl_parcialprocesados_dia.Size = new System.Drawing.Size(23, 25);
+            this.lbl_parcialprocesados_dia.Size = new System.Drawing.Size(28, 32);
             this.lbl_parcialprocesados_dia.TabIndex = 11;
             this.lbl_parcialprocesados_dia.Text = "0";
             // 
@@ -3762,7 +3766,7 @@
             this.label59.Location = new System.Drawing.Point(235, 3);
             this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(138, 15);
+            this.label59.Size = new System.Drawing.Size(175, 17);
             this.label59.TabIndex = 114;
             this.label59.Text = "Datos mesuales y diarios";
             // 
@@ -3774,7 +3778,7 @@
             this.label60.Location = new System.Drawing.Point(4, 5);
             this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(165, 16);
+            this.label60.Size = new System.Drawing.Size(200, 19);
             this.label60.TabIndex = 113;
             this.label60.Text = "Tramites consulta diaria";
             // 
@@ -3798,7 +3802,7 @@
             this.label2.Location = new System.Drawing.Point(4, 8);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 16);
+            this.label2.Size = new System.Drawing.Size(148, 19);
             this.label2.TabIndex = 5;
             this.label2.Text = "Inscriptos del dia";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -3821,7 +3825,7 @@
             this.lbl_parcialinscriptos_dia.Location = new System.Drawing.Point(146, 2);
             this.lbl_parcialinscriptos_dia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_parcialinscriptos_dia.Name = "lbl_parcialinscriptos_dia";
-            this.lbl_parcialinscriptos_dia.Size = new System.Drawing.Size(23, 25);
+            this.lbl_parcialinscriptos_dia.Size = new System.Drawing.Size(28, 32);
             this.lbl_parcialinscriptos_dia.TabIndex = 12;
             this.lbl_parcialinscriptos_dia.Text = "0";
             this.lbl_parcialinscriptos_dia.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -3902,7 +3906,7 @@
             this.label8.Location = new System.Drawing.Point(464, 182);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(126, 45);
+            this.label8.Size = new System.Drawing.Size(157, 51);
             this.label8.TabIndex = 168;
             this.label8.Text = "Para ver informacion \r\nespecifca\r\npresione aqui";
             // 
@@ -3914,7 +3918,7 @@
             this.label56.Location = new System.Drawing.Point(330, 2);
             this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(172, 15);
+            this.label56.Size = new System.Drawing.Size(219, 17);
             this.label56.TabIndex = 167;
             this.label56.Text = "Datos de tramites procesados /";
             // 
@@ -3926,7 +3930,7 @@
             this.label52.Location = new System.Drawing.Point(461, 61);
             this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(128, 15);
+            this.label52.Size = new System.Drawing.Size(162, 17);
             this.label52.TabIndex = 166;
             this.label52.Text = "Seleccione en la tabla";
             // 
@@ -3938,7 +3942,7 @@
             this.label43.Location = new System.Drawing.Point(485, 42);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(74, 16);
+            this.label43.Size = new System.Drawing.Size(93, 19);
             this.label43.TabIndex = 165;
             this.label43.Text = "Empleado";
             // 
@@ -3963,7 +3967,7 @@
             this.label4.Location = new System.Drawing.Point(499, 2);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 15);
+            this.label4.Size = new System.Drawing.Size(123, 17);
             this.label4.TabIndex = 158;
             this.label4.Text = "Datos mensuales";
             // 
@@ -3975,7 +3979,7 @@
             this.label42.Location = new System.Drawing.Point(10, 5);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(213, 16);
+            this.label42.Size = new System.Drawing.Size(269, 19);
             this.label42.TabIndex = 157;
             this.label42.Text = "Top de empleados con tramites";
             // 
@@ -4015,7 +4019,7 @@
             this.dg_topTramites.DefaultCellStyle = dataGridViewCellStyle15;
             this.dg_topTramites.EnableHeadersVisualStyles = false;
             this.dg_topTramites.GridColor = System.Drawing.Color.SteelBlue;
-            this.dg_topTramites.Location = new System.Drawing.Point(10, 31);
+            this.dg_topTramites.Location = new System.Drawing.Point(3, 31);
             this.dg_topTramites.MultiSelect = false;
             this.dg_topTramites.Name = "dg_topTramites";
             this.dg_topTramites.ReadOnly = true;
@@ -4031,12 +4035,13 @@
             this.dg_topTramites.RowHeadersVisible = false;
             this.dg_topTramites.RowHeadersWidth = 51;
             this.dg_topTramites.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_topTramites.Size = new System.Drawing.Size(446, 200);
+            this.dg_topTramites.Size = new System.Drawing.Size(455, 200);
             this.dg_topTramites.TabIndex = 112;
             this.dg_topTramites.SelectionChanged += new System.EventHandler(this.dg_topTramites_SelectionChanged);
             // 
             // Id1
             // 
+            this.Id1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Id1.DataPropertyName = "Id";
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -4051,10 +4056,11 @@
             this.Id1.Name = "Id1";
             this.Id1.ReadOnly = true;
             this.Id1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Id1.Width = 30;
+            this.Id1.Width = 54;
             // 
             // Empleado1
             // 
+            this.Empleado1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Empleado1.DataPropertyName = "Empleado";
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4063,12 +4069,14 @@
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
             this.Empleado1.DefaultCellStyle = dataGridViewCellStyle11;
             this.Empleado1.HeaderText = "Empleado";
+            this.Empleado1.MinimumWidth = 6;
             this.Empleado1.Name = "Empleado1";
             this.Empleado1.ReadOnly = true;
-            this.Empleado1.Width = 125;
+            this.Empleado1.Width = 122;
             // 
             // Total1
             // 
+            this.Total1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Total1.DataPropertyName = "Total";
             dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4076,14 +4084,16 @@
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
             this.Total1.DefaultCellStyle = dataGridViewCellStyle12;
-            this.Total1.HeaderText = "Total Tramites";
+            this.Total1.HeaderText = "Total";
             this.Total1.MinimumWidth = 6;
             this.Total1.Name = "Total1";
             this.Total1.ReadOnly = true;
             this.Total1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Total1.Width = 78;
             // 
             // Procesados
             // 
+            this.Procesados.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Procesados.DataPropertyName = "Data1";
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
@@ -4098,10 +4108,10 @@
             this.Procesados.Name = "Procesados";
             this.Procesados.ReadOnly = true;
             this.Procesados.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Procesados.Width = 95;
             // 
             // Inscriptos
             // 
+            this.Inscriptos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Inscriptos.DataPropertyName = "Data2";
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
@@ -4116,7 +4126,6 @@
             this.Inscriptos.Name = "Inscriptos";
             this.Inscriptos.ReadOnly = true;
             this.Inscriptos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Inscriptos.Width = 95;
             // 
             // panel75
             // 
@@ -4132,12 +4141,12 @@
             this.txtBox_empleado.Enabled = false;
             this.txtBox_empleado.Location = new System.Drawing.Point(464, 81);
             this.txtBox_empleado.Name = "txtBox_empleado";
-            this.txtBox_empleado.Size = new System.Drawing.Size(123, 23);
+            this.txtBox_empleado.Size = new System.Drawing.Size(123, 27);
             this.txtBox_empleado.TabIndex = 160;
             // 
             // frm_estadisticas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1005, 677);
@@ -4436,11 +4445,6 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Button btn_refreshdata;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Empleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ErroresParciales;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ErroresTotales;
         private System.Windows.Forms.Panel panel74;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label43;
@@ -4448,11 +4452,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.DataGridView dg_topTramites;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Empleado1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Procesados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Inscriptos;
         private System.Windows.Forms.Panel panel75;
         private System.Windows.Forms.TextBox txtBox_empleado;
         private System.Windows.Forms.Label label54;
@@ -4517,5 +4516,15 @@
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_errores;
         private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ErroresParciales;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ErroresTotales;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Empleado1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Procesados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inscriptos;
     }
 }

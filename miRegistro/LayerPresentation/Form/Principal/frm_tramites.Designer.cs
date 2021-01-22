@@ -60,17 +60,6 @@
             this.label36 = new System.Windows.Forms.Label();
             this.lbl_totalinscriptos = new System.Windows.Forms.Label();
             this.dg_tramites = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dominio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Etapa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Error = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.TipoError = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Inscripto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreInscripto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label31 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -106,6 +95,17 @@
             this.btn_refreshdata = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox_inscripto = new System.Windows.Forms.CheckBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dominio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Etapa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Error = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.TipoError = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inscripto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.NombreInscripto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_tramites)).BeginInit();
             this.panel1.SuspendLayout();
@@ -213,7 +213,7 @@
             this.label2.Location = new System.Drawing.Point(133, 4);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 15);
+            this.label2.Size = new System.Drawing.Size(76, 17);
             this.label2.TabIndex = 82;
             this.label2.Text = "Categoria";
             // 
@@ -225,7 +225,7 @@
             this.label1.Location = new System.Drawing.Point(4, 3);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 16);
+            this.label1.Size = new System.Drawing.Size(88, 19);
             this.label1.TabIndex = 14;
             this.label1.Text = "Consultas";
             // 
@@ -237,7 +237,7 @@
             this.radioButton_complejas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton_complejas.Location = new System.Drawing.Point(17, 52);
             this.radioButton_complejas.Name = "radioButton_complejas";
-            this.radioButton_complejas.Size = new System.Drawing.Size(163, 21);
+            this.radioButton_complejas.Size = new System.Drawing.Size(210, 25);
             this.radioButton_complejas.TabIndex = 81;
             this.radioButton_complejas.TabStop = true;
             this.radioButton_complejas.Text = "Consultas especificas";
@@ -253,7 +253,7 @@
             this.radioButton_simple.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton_simple.Location = new System.Drawing.Point(18, 26);
             this.radioButton_simple.Name = "radioButton_simple";
-            this.radioButton_simple.Size = new System.Drawing.Size(139, 21);
+            this.radioButton_simple.Size = new System.Drawing.Size(175, 25);
             this.radioButton_simple.TabIndex = 80;
             this.radioButton_simple.TabStop = true;
             this.radioButton_simple.Text = "Consultas simples";
@@ -269,7 +269,7 @@
             this.lbl_totalprocesados.Location = new System.Drawing.Point(137, 3);
             this.lbl_totalprocesados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalprocesados.Name = "lbl_totalprocesados";
-            this.lbl_totalprocesados.Size = new System.Drawing.Size(15, 16);
+            this.lbl_totalprocesados.Size = new System.Drawing.Size(19, 19);
             this.lbl_totalprocesados.TabIndex = 22;
             this.lbl_totalprocesados.Text = "0";
             // 
@@ -282,7 +282,7 @@
             this.label35.Location = new System.Drawing.Point(10, 3);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(119, 16);
+            this.label35.Size = new System.Drawing.Size(152, 18);
             this.label35.TabIndex = 15;
             this.label35.Text = "TOTAL DE TRAMITES:";
             // 
@@ -295,7 +295,7 @@
             this.label39.Location = new System.Drawing.Point(5, 2);
             this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(115, 16);
+            this.label39.Size = new System.Drawing.Size(144, 18);
             this.label39.TabIndex = 18;
             this.label39.Text = "TOTAL INSCRIPTOS:";
             // 
@@ -308,7 +308,7 @@
             this.label38.Location = new System.Drawing.Point(7, 3);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(129, 16);
+            this.label38.Size = new System.Drawing.Size(161, 18);
             this.label38.TabIndex = 17;
             this.label38.Text = "TOTAL PROCESADOS:";
             // 
@@ -321,7 +321,7 @@
             this.lbl_totaltramites.Location = new System.Drawing.Point(129, 3);
             this.lbl_totaltramites.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totaltramites.Name = "lbl_totaltramites";
-            this.lbl_totaltramites.Size = new System.Drawing.Size(15, 16);
+            this.lbl_totaltramites.Size = new System.Drawing.Size(19, 19);
             this.lbl_totaltramites.TabIndex = 19;
             this.lbl_totaltramites.Text = "0";
             // 
@@ -334,7 +334,7 @@
             this.lbl_totalerrores.Location = new System.Drawing.Point(125, 2);
             this.lbl_totalerrores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalerrores.Name = "lbl_totalerrores";
-            this.lbl_totalerrores.Size = new System.Drawing.Size(15, 16);
+            this.lbl_totalerrores.Size = new System.Drawing.Size(19, 19);
             this.lbl_totalerrores.TabIndex = 20;
             this.lbl_totalerrores.Text = "0";
             // 
@@ -347,7 +347,7 @@
             this.label36.Location = new System.Drawing.Point(11, 2);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(116, 16);
+            this.label36.Size = new System.Drawing.Size(147, 18);
             this.label36.TabIndex = 16;
             this.label36.Text = "TOTAL DE ERRORES:";
             // 
@@ -360,7 +360,7 @@
             this.lbl_totalinscriptos.Location = new System.Drawing.Point(116, 2);
             this.lbl_totalinscriptos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalinscriptos.Name = "lbl_totalinscriptos";
-            this.lbl_totalinscriptos.Size = new System.Drawing.Size(15, 16);
+            this.lbl_totalinscriptos.Size = new System.Drawing.Size(19, 19);
             this.lbl_totalinscriptos.TabIndex = 21;
             this.lbl_totalinscriptos.Text = "0";
             // 
@@ -392,9 +392,9 @@
             this.Error,
             this.TipoError,
             this.Inscripto,
+            this.NombreInscripto,
             this.Fecha,
-            this.Observaciones,
-            this.NombreInscripto});
+            this.Observaciones});
             this.dg_tramites.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -426,196 +426,6 @@
             this.dg_tramites.TabIndex = 80;
             this.dg_tramites.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dg_tramites_CellFormatting);
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Id.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Id.HeaderText = "ID";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Id.Width = 25;
-            // 
-            // Dominio
-            // 
-            this.Dominio.DataPropertyName = "Dominio";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.Dominio.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Dominio.HeaderText = "Dominio";
-            this.Dominio.MinimumWidth = 6;
-            this.Dominio.Name = "Dominio";
-            this.Dominio.ReadOnly = true;
-            this.Dominio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dominio.Width = 70;
-            // 
-            // Empleado
-            // 
-            this.Empleado.DataPropertyName = "Empleado";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Empleado.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Empleado.HeaderText = "Empleado Proceso";
-            this.Empleado.MinimumWidth = 6;
-            this.Empleado.Name = "Empleado";
-            this.Empleado.ReadOnly = true;
-            this.Empleado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Empleado.Width = 75;
-            // 
-            // Tramite
-            // 
-            this.Tramite.DataPropertyName = "Tramite";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Tramite.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Tramite.HeaderText = "Tramite";
-            this.Tramite.MinimumWidth = 6;
-            this.Tramite.Name = "Tramite";
-            this.Tramite.ReadOnly = true;
-            this.Tramite.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Tramite.Width = 210;
-            // 
-            // Etapa
-            // 
-            this.Etapa.DataPropertyName = "Etapa";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Etapa.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Etapa.HeaderText = "Etapa";
-            this.Etapa.MinimumWidth = 6;
-            this.Etapa.Name = "Etapa";
-            this.Etapa.ReadOnly = true;
-            this.Etapa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Etapa.Width = 75;
-            // 
-            // Error
-            // 
-            this.Error.DataPropertyName = "Error";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.NullValue = false;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Error.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Error.HeaderText = "Error";
-            this.Error.MinimumWidth = 6;
-            this.Error.Name = "Error";
-            this.Error.ReadOnly = true;
-            this.Error.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Error.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Error.Width = 50;
-            // 
-            // TipoError
-            // 
-            this.TipoError.DataPropertyName = "Tipo error";
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.TipoError.DefaultCellStyle = dataGridViewCellStyle8;
-            this.TipoError.HeaderText = "Tipo de error";
-            this.TipoError.MinimumWidth = 6;
-            this.TipoError.Name = "TipoError";
-            this.TipoError.ReadOnly = true;
-            this.TipoError.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.TipoError.Width = 90;
-            // 
-            // Inscripto
-            // 
-            this.Inscripto.DataPropertyName = "Inscripto";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.NullValue = false;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            this.Inscripto.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Inscripto.HeaderText = "Inscripto";
-            this.Inscripto.MinimumWidth = 6;
-            this.Inscripto.Name = "Inscripto";
-            this.Inscripto.ReadOnly = true;
-            this.Inscripto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Inscripto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Inscripto.Width = 70;
-            // 
-            // Fecha
-            // 
-            this.Fecha.DataPropertyName = "Fecha";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Fecha.DefaultCellStyle = dataGridViewCellStyle10;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Fecha.Width = 80;
-            // 
-            // Observaciones
-            // 
-            this.Observaciones.DataPropertyName = "Observaciones";
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            this.Observaciones.DefaultCellStyle = dataGridViewCellStyle11;
-            this.Observaciones.HeaderText = "Observaciones";
-            this.Observaciones.MinimumWidth = 6;
-            this.Observaciones.Name = "Observaciones";
-            this.Observaciones.ReadOnly = true;
-            this.Observaciones.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Observaciones.Width = 140;
-            // 
-            // NombreInscripto
-            // 
-            this.NombreInscripto.DataPropertyName = "Nombre Inscripto";
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.NombreInscripto.DefaultCellStyle = dataGridViewCellStyle12;
-            this.NombreInscripto.HeaderText = "Inscripto por";
-            this.NombreInscripto.Name = "NombreInscripto";
-            this.NombreInscripto.ReadOnly = true;
-            this.NombreInscripto.Width = 95;
-            // 
             // label31
             // 
             this.label31.AutoSize = true;
@@ -624,7 +434,7 @@
             this.label31.Location = new System.Drawing.Point(5, 119);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(62, 16);
+            this.label31.Size = new System.Drawing.Size(75, 19);
             this.label31.TabIndex = 81;
             this.label31.Text = "Tramites";
             // 
@@ -758,7 +568,7 @@
             this.label42.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label42.Location = new System.Drawing.Point(367, 6);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(151, 20);
+            this.label42.Size = new System.Drawing.Size(187, 22);
             this.label42.TabIndex = 15;
             this.label42.Text = "Tramites del registro\r\n";
             // 
@@ -812,7 +622,7 @@
             this.label5.Location = new System.Drawing.Point(690, 120);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(310, 15);
+            this.label5.Size = new System.Drawing.Size(395, 17);
             this.label5.TabIndex = 84;
             this.label5.Text = "Inserte, edite, inscriba, marque errores y elimine tramites.";
             // 
@@ -836,7 +646,7 @@
             this.label7.Location = new System.Drawing.Point(690, 3);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 15);
+            this.label7.Size = new System.Drawing.Size(144, 17);
             this.label7.TabIndex = 82;
             this.label7.Text = "Click para consultar";
             // 
@@ -848,7 +658,7 @@
             this.label40.Location = new System.Drawing.Point(6, 3);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(67, 16);
+            this.label40.Size = new System.Drawing.Size(81, 19);
             this.label40.TabIndex = 14;
             this.label40.Text = "Escritorio";
             // 
@@ -1085,7 +895,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label3.Location = new System.Drawing.Point(887, 635);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 17);
+            this.label3.Size = new System.Drawing.Size(122, 20);
             this.label3.TabIndex = 92;
             this.label3.Text = "Datos historicos";
             // 
@@ -1096,14 +906,212 @@
             this.checkBox_inscripto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.checkBox_inscripto.Location = new System.Drawing.Point(520, 123);
             this.checkBox_inscripto.Name = "checkBox_inscripto";
-            this.checkBox_inscripto.Size = new System.Drawing.Size(123, 21);
+            this.checkBox_inscripto.Size = new System.Drawing.Size(147, 24);
             this.checkBox_inscripto.TabIndex = 120;
             this.checkBox_inscripto.Text = "Inscribir mulitple";
             this.checkBox_inscripto.UseVisualStyleBackColor = true;
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Id.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Id.HeaderText = "ID";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Id.Width = 25;
+            // 
+            // Dominio
+            // 
+            this.Dominio.DataPropertyName = "Dominio";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Dominio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Dominio.HeaderText = "Dominio";
+            this.Dominio.MinimumWidth = 6;
+            this.Dominio.Name = "Dominio";
+            this.Dominio.ReadOnly = true;
+            this.Dominio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dominio.Width = 70;
+            // 
+            // Empleado
+            // 
+            this.Empleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Empleado.DataPropertyName = "Empleado";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Empleado.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Empleado.HeaderText = "Empleado";
+            this.Empleado.MinimumWidth = 6;
+            this.Empleado.Name = "Empleado";
+            this.Empleado.ReadOnly = true;
+            this.Empleado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Empleado.Width = 110;
+            // 
+            // Tramite
+            // 
+            this.Tramite.DataPropertyName = "Tramite";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Tramite.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Tramite.HeaderText = "Tramite";
+            this.Tramite.MinimumWidth = 6;
+            this.Tramite.Name = "Tramite";
+            this.Tramite.ReadOnly = true;
+            this.Tramite.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Tramite.Width = 210;
+            // 
+            // Etapa
+            // 
+            this.Etapa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Etapa.DataPropertyName = "Etapa";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Etapa.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Etapa.HeaderText = "Etapa";
+            this.Etapa.MinimumWidth = 6;
+            this.Etapa.Name = "Etapa";
+            this.Etapa.ReadOnly = true;
+            this.Etapa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Etapa.Width = 79;
+            // 
+            // Error
+            // 
+            this.Error.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Error.DataPropertyName = "Error";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.NullValue = false;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Error.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Error.HeaderText = "Error";
+            this.Error.MinimumWidth = 6;
+            this.Error.Name = "Error";
+            this.Error.ReadOnly = true;
+            this.Error.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Error.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Error.Width = 69;
+            // 
+            // TipoError
+            // 
+            this.TipoError.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.TipoError.DataPropertyName = "Tipo error";
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.TipoError.DefaultCellStyle = dataGridViewCellStyle8;
+            this.TipoError.HeaderText = "Tipo de error";
+            this.TipoError.MinimumWidth = 6;
+            this.TipoError.Name = "TipoError";
+            this.TipoError.ReadOnly = true;
+            this.TipoError.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.TipoError.Width = 6;
+            // 
+            // Inscripto
+            // 
+            this.Inscripto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Inscripto.DataPropertyName = "Inscripto";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.NullValue = false;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.Inscripto.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Inscripto.HeaderText = "Inscripto";
+            this.Inscripto.MinimumWidth = 6;
+            this.Inscripto.Name = "Inscripto";
+            this.Inscripto.ReadOnly = true;
+            this.Inscripto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Inscripto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Inscripto.Width = 99;
+            // 
+            // NombreInscripto
+            // 
+            this.NombreInscripto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.NombreInscripto.DataPropertyName = "Nombre Inscripto";
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            this.NombreInscripto.DefaultCellStyle = dataGridViewCellStyle10;
+            this.NombreInscripto.HeaderText = "Inscripto por";
+            this.NombreInscripto.MinimumWidth = 6;
+            this.NombreInscripto.Name = "NombreInscripto";
+            this.NombreInscripto.ReadOnly = true;
+            this.NombreInscripto.Width = 6;
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Fecha.DataPropertyName = "Fecha";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Fecha.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 6;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Fecha.Width = 82;
+            // 
+            // Observaciones
+            // 
+            this.Observaciones.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Observaciones.DataPropertyName = "Observaciones";
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.Observaciones.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Observaciones.HeaderText = "Observaciones";
+            this.Observaciones.MinimumWidth = 6;
+            this.Observaciones.Name = "Observaciones";
+            this.Observaciones.ReadOnly = true;
+            this.Observaciones.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // frm_tramites
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1005, 688);
@@ -1216,8 +1224,8 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Error;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoError;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Inscripto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreInscripto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreInscripto;
     }
 }
