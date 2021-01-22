@@ -26,7 +26,7 @@ namespace LayerPresentation
         public extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         public extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
+                
         private void RememberUser()
         {
             if (checkBox_guardar.Checked)
@@ -75,40 +75,34 @@ namespace LayerPresentation
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            try 
+            Cn_Usuarios _cnUsuarios = new Cn_Usuarios();
+
+            if (_cnUsuarios.verificarAuntetificacion(txtBox_user.Text, txtBox_pass.Text) > 0)
             {
-                if (Utilities_Common.layerBusiness.cn_usuarios.verificarAuntetificacion(txtBox_user.Text, txtBox_pass.Text) > 0)
-                {
-                    // Charge data from user
-                    RememberUser();
-                    Utilities_Common.layerBusiness.cn_usuarios.IntializeLoginUserData(txtBox_user.Text);
+                // Charge data from user
+                RememberUser();
+                _cnUsuarios.IntializeLoginUserData(txtBox_user.Text);
 
-                    // Update last access
-                    Utilities_Common.layerBusiness.cn_usuarios.UpdateLastAccess(UserLoginCache.IdUser, DateTime.Now);
-                    UserLoginCache.Fecha_UltimoAcceso = DateTime.Now;
+                // Update last access
+                _cnUsuarios.UpdateLastAccess(UserLoginCache.IdUser, DateTime.Now);
+                UserLoginCache.Fecha_UltimoAcceso = DateTime.Now;
 
-                    // Charge Bienvenida
-                    frm_principal _objUI = new frm_principal();
-                    _objUI.FormClosed += Logout;
+                // Charge Bienvenida
+                frm_principal _objUI = new frm_principal();
+                _objUI.FormClosed += Logout;
 
-                    frm_bienvenida objUI = new frm_bienvenida(_objUI, this);
-                    objUI.Show();
-                    //objUI.FormClosed += Logout;
+                frm_bienvenida objUI = new frm_bienvenida(_objUI, this);
+                objUI.Show();
 
-                    this.Opacity = 0;
-                    this.ShowIcon = false;
-                    this.ShowInTaskbar = false;
+                this.Opacity = 0;
+                this.ShowIcon = false;
+                this.ShowInTaskbar = false;
 
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Usuario o contraseña incorrectos! \nVuelve a intentarlo");
-                }
+                this.Hide();
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Usuario o contraseña incorrectos! \nVuelve a intentarlo");
             }
         }
 

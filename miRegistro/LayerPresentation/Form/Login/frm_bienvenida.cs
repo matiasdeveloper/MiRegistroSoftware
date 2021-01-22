@@ -33,6 +33,10 @@ namespace LayerPresentation
         {
             ColorSystem.frm = frm;
 
+            Cn_HandlerFormularios.stockBajo = LayerPresentation.Properties.Settings.Default.StockBajo;
+            Cn_HandlerFormularios.stockMedio = LayerPresentation.Properties.Settings.Default.StockMedio;
+            Cn_HandlerFormularios.stockAlto = LayerPresentation.Properties.Settings.Default.StockAlto;
+
             // Initialize layer
             Utilities_Common.layerBusiness = new Utilities_LayerBusiness();
 
@@ -40,6 +44,8 @@ namespace LayerPresentation
             Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
 
             Utilities_Common.layerBusiness.cn_tramites.GenerateDataTramitesCache();
+
+            Utilities_Common.layerBusiness.cn_formularios = new Cn_Formularios();
             Utilities_Common.layerBusiness.cn_formularios.GenerateDataFormulariosCache();
         }
         private void timer1_Tick(object sender, EventArgs e)
