@@ -14,6 +14,6 @@ public static class ColorSystem
     {
         LayerPresentation.Properties.Settings.Default.Color = color;
         LayerPresentation.Properties.Settings.Default.Save();
-        frm.cargarColor(color);
+        frm.LoadUserColor(color);
     }
 }

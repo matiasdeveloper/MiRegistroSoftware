@@ -12,6 +12,7 @@ using LayerBusiness;
 using LayerPresentation.Properties;
 using LayerSoporte.Cache;
 using LayerPresentation.Clases;
+using Bunifu.Framework.UI;
 
 namespace LayerPresentation
 {
@@ -20,9 +21,13 @@ namespace LayerPresentation
         public frm_principal()
         {
             InitializeComponent();
+
+            currentSidebarButton = btn_dashboard;
+            ActivateButtonSidebar(btn_dashboard);
+            OpenFormInPanel(new frm_escritorio());
         }
 
-        private Button currentButton;
+        private protected BunifuFlatButton currentSidebarButton;
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         public extern static void ReleaseCapture();
@@ -31,56 +36,141 @@ namespace LayerPresentation
 
         private void OpenFormInPanel(object Formhijo)
         {
-            if (this.panel_contenedor.Controls.Count > 0)
-                this.panel_contenedor.Controls.RemoveAt(0);
+            if (this.pn_contenedor.Controls.Count > 0)
+                this.pn_contenedor.Controls.RemoveAt(0);
             Form fh = Formhijo as Form;
             fh.TopLevel = false;
             fh.Dock = DockStyle.Fill;
-            this.panel_contenedor.Controls.Add(fh);
-            this.panel_contenedor.Tag = fh;
+            this.pn_contenedor.Controls.Add(fh);
+            this.pn_contenedor.Tag = fh;
             fh.Show();
         }
-        private void ActivateButton(object senderBtn, Color color) 
+        private void SidebarON()
         {
-            if(senderBtn != null) 
+            pn_sidebar.Visible = false;
+            TransitionSidebar.Show(pn_sidebar);
+        }
+
+        private void ActivateButtonSidebar(object senderBtn)
+        {
+            if (senderBtn != null)
             {
-                DisableButton();
-                currentButton = (Button)senderBtn;
-                currentButton.BackColor = Color.FromArgb(0, 104, 148);
-                currentButton.ForeColor = color;
+                DisableButtonSidebar();
+                currentSidebarButton = (BunifuFlatButton)senderBtn;
+                currentSidebarButton.Normalcolor = Color.Black;
+                currentSidebarButton.selected = true;
             }
         }
-        private void DisableButton() 
+        private void DisableButtonSidebar()
         {
-            if(currentButton != null) 
+            if (currentSidebarButton != null)
             {
-                currentButton.BackColor = Color.FromArgb(30, 30, 30);
-                currentButton.ForeColor = Color.White;
+                currentSidebarButton.selected = false;
+                currentSidebarButton.Normalcolor = Color.Transparent;
             }
         }
         
-        private void cargarDatosUsuario()
+        private void LoadUserData()
         {
             lbl_electronico.Text = UserLoginCache.Email;
             lbl_nombre.Text = UserLoginCache.Nombre;
             lbl_permisos.Text = UserLoginCache.Priveleges;
             lbl_lastacess.Text = UserLoginCache.Fecha_UltimoAcceso.ToShortDateString();
-
-            cargarPrivilegios();
         }
-        private void cargarPrivilegios()
+        private protected void LoadAccessPrivileges()
         {
             if (UserLoginCache.Priveleges == Privileges.Administrador)
             {
                 // Code here activate or desactive functions
             }
         }
-        public void cargarColor(Color color) 
+        public void LoadUserColor(Color color) 
         {
-            barra_info.BackColor = color;
-            barra_titulo.BackColor = color;
-            barra_dev.BackColor = color;
+            pn_sidebar.GradientBottomLeft = color;
+            pn_sidebar.GradientBottomRight = color;
+            pn_sidebar.GradientTopLeft = color;
+            pn_sidebar.GradientTopRight = color;
+
+            pn_tittle_bar.GradientBottomRight = color;
+            pn_tittle_bar.GradientTopLeft = color;
+
+            //pn_buttons.GradientBottomLeft = color;
+            //pn_buttons.GradientBottomRight = color;
+            pn_buttons.GradientTopLeft = color;
+            pn_buttons.GradientTopRight = color;
+
+            //pn_infouser.GradientBottomLeft = color;
+            //pn_userinfo.GradientBottomRight = color;
+            pn_infouser.GradientTopRight = color;
+            pn_infouser.GradientTopLeft = color;
+
+            //pn_brand.GradientBottomLeft = color;
+            //pn_brand.GradientBottomRight = color;
+            pn_brand.GradientTopLeft = color;
+            pn_brand.GradientTopRight = color;
         }
+        private protected void Logout()
+        {
+            if (MessageBox.Show("Estas seguro que deseas cerrar sesion?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        // Buttons Sidebar
+        private void btn_dashboard_Click(object sender, EventArgs e)
+        {
+            if (!(currentSidebarButton == sender))
+            {
+                ActivateButtonSidebar(sender);
+                OpenFormInPanel(new frm_escritorio());
+            }
+        }
+        private void btn_tramites_Click_1(object sender, EventArgs e)
+        {
+            if (!(currentSidebarButton == sender))
+            {
+                ActivateButtonSidebar(sender);
+                OpenFormInPanel(new frm_tramites());
+            }
+        }
+        private void btn_formularios_Click(object sender, EventArgs e)
+        {
+            if (!(currentSidebarButton == sender))
+            {
+                ActivateButtonSidebar(sender);
+                OpenFormInPanel(new frm_formularios());
+            }
+        }
+        private void btn_employees_Click(object sender, EventArgs e)
+        {
+            if (!(currentSidebarButton == sender))
+            {
+                ActivateButtonSidebar(sender);
+                OpenFormInPanel(new frm_empleados());
+            }
+        }
+        private void btn_statistics_Click(object sender, EventArgs e)
+        {
+            if (!(currentSidebarButton == sender))
+            {
+                ActivateButtonSidebar(sender);
+                OpenFormInPanel(new frm_estadisticas());
+            }
+        }
+        private void btn_config_Click(object sender, EventArgs e)
+        {
+            if (!(currentSidebarButton == sender))
+            {
+                ActivateButtonSidebar(sender);
+                OpenFormInPanel(new frm_configuracion());
+            }
+        }
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Logout();
+        }
+        // Tittle bar
         private void barra_titulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -94,79 +184,17 @@ namespace LayerPresentation
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        private void btn_stock_Click(object sender, EventArgs e)
-        {
-            if(!(currentButton == sender)) 
-            {
-                ActivateButton(sender, Color.White);
-                OpenFormInPanel(new frm_formularios());
-            }
-        }
-        private void btn_escritorio_Click(object sender, EventArgs e)
-        {
-            if(!(currentButton == sender)) 
-            {
-                ActivateButton(sender, Color.White);
-                OpenFormInPanel(new frm_escritorio());
-            }
-        }
-        private void btn_empleados_Click(object sender, EventArgs e)
-        {
-            if(!(currentButton == sender)) 
-            {
-                ActivateButton(sender, Color.White);
-                OpenFormInPanel(new frm_empleados());
-            }
-        }
-        private void btn_configuracion_Click(object sender, EventArgs e)
-        {
-            if(!(currentButton == sender)) 
-            {
-                ActivateButton(sender, Color.White);
-                OpenFormInPanel(new frm_configuracion());
-            }
-        }
-        private void btn_chat_Click(object sender, EventArgs e)
-        {
-            if(!(currentButton == sender)) 
-            {
-                ActivateButton(sender, Color.White);
-                //OpenFormInPanel(frm_Chat);
-            }
-        }
-        private void btn_tramites_Click(object sender, EventArgs e)
-        {
-            if (!(currentButton == sender))
-            {
-                ActivateButton(sender, Color.White);
-                OpenFormInPanel(new frm_tramites());
-            }
-        }
-        private void btn_estadisticas_Click(object sender, EventArgs e)
-        {
-            if (!(currentButton == sender))
-            {
-                ActivateButton(sender, Color.White);
-                OpenFormInPanel(new frm_estadisticas());
-            }
-        }
-        private void btn_logout_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Estas seguro que deseas cerrar sesion?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-
+        
         private void Frm_principal_Load(object sender, EventArgs e)
-        {
-            ActivateButton(btn_escritorio, Color.White);
-            OpenFormInPanel(new frm_escritorio());
-            
-            cargarDatosUsuario();
-            cargarColor(Properties.Settings.Default.Color);
+        {          
+            LoadUserData();
+            LoadAccessPrivileges();
+
+            LoadUserColor(Properties.Settings.Default.Color);
             
             Alertas.BuscarAlertas();
+
+            SidebarON();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
