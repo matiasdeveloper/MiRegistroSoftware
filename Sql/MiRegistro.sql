@@ -23,470 +23,509 @@ CREATE SCHEMA IF NOT EXISTS `matias_sqlfundamentalscourse` DEFAULT CHARACTER SET
 USE `MiRegistro` ;
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Security_user`
+-- Table `MiRegistro`.`PreguntaSeguridad`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Security_user` (
-  `Id` INT NOT NULL,
-  `Question_id` INT NULL,
-  `Answer` VARCHAR(45) NULL,
-  PRIMARY KEY (`Id`))
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`PreguntaSeguridad` (
+  `IdPregunta` INT NOT NULL AUTO_INCREMENT,
+  `Pregunta` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`IdPregunta`),
+  UNIQUE INDEX `Id_UNIQUE` (`IdPregunta` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Profile`
+-- Table `MiRegistro`.`UsuarioSeguridad`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Profile` (
-  `Id` INT NOT NULL,
-  `Name` VARCHAR(150) NULL,
-  `Nickname` VARCHAR(45) NULL,
-  `Date_birthday` DATE NULL,
-  PRIMARY KEY (`Id`))
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`UsuarioSeguridad` (
+  `IdUsuarioSeguridad` INT NOT NULL,
+  `FkIdPregunta` INT NOT NULL,
+  `Respuesta` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`IdUsuarioSeguridad`),
+  INDEX `FkPregunta_PreguntaId_idx` (`FkIdPregunta` ASC) VISIBLE,
+  CONSTRAINT `FkPregunta_PreguntaId`
+    FOREIGN KEY (`FkIdPregunta`)
+    REFERENCES `MiRegistro`.`PreguntaSeguridad` (`IdPregunta`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Users`
+-- Table `MiRegistro`.`Perfil`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Users` (
-  `Id` INT NOT NULL,
-  `Profile_id` INT NULL,
-  `Security_id` INT NULL,
-  `User` VARCHAR(45) NOT NULL,
-  `Password` VARCHAR(45) NOT NULL,
-  `Email` VARCHAR(45) NOT NULL,
-  `Last_access` DATE NULL,
-  PRIMARY KEY (`Id`),
-  UNIQUE INDEX `Id_UNIQUE` (`Id` ASC) VISIBLE,
-  UNIQUE INDEX `User_UNIQUE` (`User` ASC) VISIBLE,
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Perfil` (
+  `IdPerfil` INT NOT NULL,
+  `Nombre` VARCHAR(45) NULL,
+  `Apellido` VARCHAR(45) NULL,
+  `Nick` VARCHAR(10) NOT NULL,
+  `FechaCumpleaños` DATE NULL,
+  PRIMARY KEY (`IdPerfil`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `MiRegistro`.`Usuario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Usuario` (
+  `IdUsuario` INT NOT NULL AUTO_INCREMENT,
+  `FkIdPerfil` INT NOT NULL,
+  `FkIdSeguridad` INT NULL,
+  `Usuario` VARCHAR(45) NOT NULL,
+  `Contraseña` VARCHAR(45) NOT NULL,
+  `Email` VARCHAR(75) NOT NULL,
+  `UltimoAcceso` DATE NULL,
+  PRIMARY KEY (`IdUsuario`),
+  UNIQUE INDEX `Id_UNIQUE` (`IdUsuario` ASC) VISIBLE,
+  UNIQUE INDEX `User_UNIQUE` (`Usuario` ASC) VISIBLE,
   UNIQUE INDEX `Email_UNIQUE` (`Email` ASC) VISIBLE,
-  INDEX `Fk_security_idx` (`Security_id` ASC) VISIBLE,
-  INDEX `Fk_profile_idx` (`Profile_id` ASC) VISIBLE,
+  INDEX `Fk_security_idx` (`FkIdSeguridad` ASC) VISIBLE,
+  INDEX `Fk_profile_idx` (`FkIdPerfil` ASC) VISIBLE,
   CONSTRAINT `Fk_security`
-    FOREIGN KEY (`Security_id`)
-    REFERENCES `MiRegistro`.`Security_user` (`Id`)
+    FOREIGN KEY (`FkIdSeguridad`)
+    REFERENCES `MiRegistro`.`UsuarioSeguridad` (`IdUsuarioSeguridad`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `Fk_profile`
-    FOREIGN KEY (`Profile_id`)
-    REFERENCES `MiRegistro`.`Profile` (`Id`)
+    FOREIGN KEY (`FkIdPerfil`)
+    REFERENCES `MiRegistro`.`Perfil` (`IdPerfil`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Roles`
+-- Table `MiRegistro`.`Rol`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Roles` (
-  `Id` INT NOT NULL,
-  `Name` VARCHAR(45) NULL,
-  PRIMARY KEY (`Id`))
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Rol` (
+  `IdRol` INT NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(15) NULL,
+  PRIMARY KEY (`IdRol`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`User_roles`
+-- Table `MiRegistro`.`Usuario_Rol`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`User_roles` (
-  `User_id` INT NOT NULL,
-  `Role_id` INT NOT NULL,
-  `Start_time` DATE NULL,
-  `End_time` DATE NULL,
-  PRIMARY KEY (`User_id`, `Role_id`),
-  INDEX `Fk_roleid_idx` (`Role_id` ASC) VISIBLE,
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Usuario_Rol` (
+  `IdUsuario` INT NOT NULL,
+  `IdRol` INT NOT NULL,
+  `FechaInicio` DATE NULL,
+  `FechaFin` DATE NULL,
+  PRIMARY KEY (`IdUsuario`, `IdRol`),
+  INDEX `Fk_roleid_idx` (`IdRol` ASC) VISIBLE,
   CONSTRAINT `Fk_userid`
-    FOREIGN KEY (`User_id`)
-    REFERENCES `MiRegistro`.`Users` (`Id`)
+    FOREIGN KEY (`IdUsuario`)
+    REFERENCES `MiRegistro`.`Usuario` (`IdUsuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `Fk_roleid`
-    FOREIGN KEY (`Role_id`)
-    REFERENCES `MiRegistro`.`Roles` (`Id`)
+    FOREIGN KEY (`IdRol`)
+    REFERENCES `MiRegistro`.`Rol` (`IdRol`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Company`
+-- Table `MiRegistro`.`Empresa`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Company` (
-  `Id` INT NOT NULL,
-  `Name` INT NULL,
-  PRIMARY KEY (`Id`))
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Empresa` (
+  `IdEmpresa` INT NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(35) NOT NULL,
+  `FechaApertura` DATE NULL,
+  PRIMARY KEY (`IdEmpresa`),
+  UNIQUE INDEX `IdEmpresa_UNIQUE` (`IdEmpresa` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Employee`
+-- Table `MiRegistro`.`Empleado`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Employee` (
-  `Id` INT NOT NULL,
-  `User_id` INT NOT NULL,
-  `Company_id` INT NULL,
-  `Notes` VARCHAR(240) NULL,
-  `Status` TINYINT NULL,
-  PRIMARY KEY (`Id`, `User_id`),
-  INDEX `Fk_userid_idx` (`User_id` ASC) VISIBLE,
-  INDEX `Fk_company_id_idx` (`Company_id` ASC) VISIBLE,
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Empleado` (
+  `IdEmpleado` INT NOT NULL,
+  `FkIdUsuario` INT NOT NULL,
+  `FkIdEmpresa` INT NOT NULL,
+  `EstadoActual` TINYINT NULL,
+  PRIMARY KEY (`IdEmpleado`),
+  INDEX `Fk_userid_idx` (`FkIdUsuario` ASC) VISIBLE,
+  INDEX `Fk_company_id_idx` (`FkIdEmpresa` ASC) VISIBLE,
+  UNIQUE INDEX `IdEmpleado_UNIQUE` (`IdEmpleado` ASC) VISIBLE,
   CONSTRAINT `FkEmployee_userid`
-    FOREIGN KEY (`User_id`)
-    REFERENCES `MiRegistro`.`Users` (`Id`)
+    FOREIGN KEY (`FkIdUsuario`)
+    REFERENCES `MiRegistro`.`Usuario` (`IdUsuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `Fk_company_id`
-    FOREIGN KEY (`Company_id`)
-    REFERENCES `MiRegistro`.`Company` (`Id`)
+    FOREIGN KEY (`FkIdEmpresa`)
+    REFERENCES `MiRegistro`.`Empresa` (`IdEmpresa`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Country_adress`
+-- Table `MiRegistro`.`Pais`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Country_adress` (
-  `Id` INT NOT NULL,
-  `Country` INT NULL,
-  PRIMARY KEY (`Id`))
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Pais` (
+  `IdPais` INT NOT NULL AUTO_INCREMENT,
+  `NombrePais` VARCHAR(45) NULL,
+  PRIMARY KEY (`IdPais`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Adress`
+-- Table `MiRegistro`.`Direccion`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Adress` (
-  `Id` INT NOT NULL,
-  `Country_id` INT NULL,
-  `City` VARCHAR(45) NULL,
-  PRIMARY KEY (`Id`),
-  INDEX `Fk_countryid_idx` (`Country_id` ASC) VISIBLE,
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Direccion` (
+  `IdDireccion` INT NOT NULL AUTO_INCREMENT,
+  `FkIdPais` INT NULL DEFAULT 1,
+  `Ciudad` VARCHAR(45) NULL,
+  PRIMARY KEY (`IdDireccion`),
+  INDEX `Fk_countryid_idx` (`FkIdPais` ASC) VISIBLE,
   CONSTRAINT `Fk_countryid`
-    FOREIGN KEY (`Country_id`)
-    REFERENCES `MiRegistro`.`Country_adress` (`Id`)
+    FOREIGN KEY (`FkIdPais`)
+    REFERENCES `MiRegistro`.`Pais` (`IdPais`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Profile_Adress`
+-- Table `MiRegistro`.`Perfil_Direccion`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Profile_Adress` (
-  `Profile_id` INT NOT NULL,
-  `Adress_id` INT NOT NULL,
-  `Street` VARCHAR(45) NULL,
-  PRIMARY KEY (`Profile_id`, `Adress_id`),
-  INDEX `Fk_adressid_idx` (`Adress_id` ASC) VISIBLE,
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Perfil_Direccion` (
+  `IdPerfil` INT NOT NULL,
+  `IdDireccion` INT NOT NULL,
+  `Calle` VARCHAR(45) NULL,
+  PRIMARY KEY (`IdPerfil`, `IdDireccion`),
+  INDEX `Fk_adressid_idx` (`IdDireccion` ASC) VISIBLE,
   CONSTRAINT `Fk_profileid`
-    FOREIGN KEY (`Profile_id`)
-    REFERENCES `MiRegistro`.`Profile` (`Id`)
+    FOREIGN KEY (`IdPerfil`)
+    REFERENCES `MiRegistro`.`Perfil` (`IdPerfil`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `Fk_adressid`
-    FOREIGN KEY (`Adress_id`)
-    REFERENCES `MiRegistro`.`Adress` (`Id`)
+    FOREIGN KEY (`IdDireccion`)
+    REFERENCES `MiRegistro`.`Direccion` (`IdDireccion`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Company_Adress`
+-- Table `MiRegistro`.`Direccion_Empresa`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Company_Adress` (
-  `Company_id` INT NOT NULL,
-  `Adress_id` INT NOT NULL,
-  `Street` VARCHAR(45) NULL,
-  PRIMARY KEY (`Company_id`, `Adress_id`),
-  INDEX `Fk_addressid_idx` (`Adress_id` ASC) VISIBLE,
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Direccion_Empresa` (
+  `IdEmpresa` INT NOT NULL,
+  `IdDireccion` INT NOT NULL,
+  `Calle` VARCHAR(45) NULL,
+  PRIMARY KEY (`IdEmpresa`, `IdDireccion`),
+  INDEX `Fk_addressid_idx` (`IdDireccion` ASC) VISIBLE,
   CONSTRAINT `Fk_companyid`
-    FOREIGN KEY (`Company_id`)
-    REFERENCES `MiRegistro`.`Company` (`Id`)
+    FOREIGN KEY (`IdEmpresa`)
+    REFERENCES `MiRegistro`.`Empresa` (`IdEmpresa`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `Fk_addressid`
-    FOREIGN KEY (`Adress_id`)
-    REFERENCES `MiRegistro`.`Adress` (`Id`)
+    FOREIGN KEY (`IdDireccion`)
+    REFERENCES `MiRegistro`.`Direccion` (`IdDireccion`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Class_formularios`
+-- Table `MiRegistro`.`ClaseFormulario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Class_formularios` (
-  `Id` INT NOT NULL,
-  `Name` INT NULL,
-  PRIMARY KEY (`Id`),
-  UNIQUE INDEX `Id_UNIQUE` (`Id` ASC) VISIBLE)
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`ClaseFormulario` (
+  `IdClase` INT NOT NULL AUTO_INCREMENT,
+  `NombreClase` VARCHAR(12) NULL,
+  PRIMARY KEY (`IdClase`),
+  UNIQUE INDEX `Id_UNIQUE` (`IdClase` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Categoria_formularios`
+-- Table `MiRegistro`.`CategoriaFormulario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Categoria_formularios` (
-  `Id` INT NOT NULL,
-  `Name` INT NULL,
-  PRIMARY KEY (`Id`),
-  UNIQUE INDEX `Id_UNIQUE` (`Id` ASC) VISIBLE)
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`CategoriaFormulario` (
+  `IdCategoria` INT NOT NULL AUTO_INCREMENT,
+  `NombreCategoria` VARCHAR(15) NULL,
+  PRIMARY KEY (`IdCategoria`),
+  UNIQUE INDEX `Id_UNIQUE` (`IdCategoria` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Class_Categoria_Formularios`
+-- Table `MiRegistro`.`TipoFormulario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Class_Categoria_Formularios` (
-  `Id` INT NOT NULL,
-  `Class_id` INT NULL,
-  `Category_id` INT NULL,
-  PRIMARY KEY (`Id`),
-  UNIQUE INDEX `Id_UNIQUE` (`Id` ASC) VISIBLE,
-  INDEX `FkClass_Classid_idx` (`Class_id` ASC) VISIBLE,
-  INDEX `FkCategory_Categoryid_idx` (`Category_id` ASC) VISIBLE,
-  CONSTRAINT `FkClass_Classid`
-    FOREIGN KEY (`Class_id`)
-    REFERENCES `MiRegistro`.`Class_formularios` (`Id`)
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`TipoFormulario` (
+  `IdTipoFormulario` INT NOT NULL AUTO_INCREMENT,
+  `FkIdClase` INT NOT NULL DEFAULT 1,
+  `FkIdCategoria` INT NOT NULL DEFAULT 1,
+  PRIMARY KEY (`IdTipoFormulario`),
+  UNIQUE INDEX `Id_UNIQUE` (`IdTipoFormulario` ASC) VISIBLE,
+  INDEX `FkClass_ClassID_idx` (`FkIdClase` ASC) VISIBLE,
+  INDEX `FkClass_CategoryID_idx` (`FkIdCategoria` ASC) VISIBLE,
+  CONSTRAINT `Fk_TipoFormulario_IdClase`
+    FOREIGN KEY (`FkIdClase`)
+    REFERENCES `MiRegistro`.`ClaseFormulario` (`IdClase`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `FkCategory_Categoryid`
-    FOREIGN KEY (`Category_id`)
-    REFERENCES `MiRegistro`.`Categoria_formularios` (`Id`)
+  CONSTRAINT `Fk_TipoFormulario_IdCategoria`
+    FOREIGN KEY (`FkIdCategoria`)
+    REFERENCES `MiRegistro`.`CategoriaFormulario` (`IdCategoria`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Formularios`
+-- Table `MiRegistro`.`NumeracionFormulario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Formularios` (
-  `Id` INT NOT NULL,
-  `Company_id` INT NOT NULL,
-  `Category_id` INT NOT NULL,
-  `Last_upgrade` VARCHAR(45) NULL,
-  PRIMARY KEY (`Id`),
-  UNIQUE INDEX `Id_UNIQUE` (`Id` ASC) VISIBLE,
-  INDEX `Fk_companyid_idx` (`Company_id` ASC) VISIBLE,
-  INDEX `FkFormulario_categoryid_idx` (`Category_id` ASC) VISIBLE,
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`NumeracionFormulario` (
+  `IdNumearcion` INT NOT NULL,
+  `Numearcion` VARCHAR(15) NULL DEFAULT '444null',
+  `Stock` INT NULL DEFAULT 0,
+  `Deleted` TINYINT NULL,
+  PRIMARY KEY (`IdNumearcion`),
+  UNIQUE INDEX `Id_UNIQUE` (`IdNumearcion` ASC) VISIBLE)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `MiRegistro`.`Formulario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Formulario` (
+  `IdFormulario` INT NOT NULL AUTO_INCREMENT,
+  `FkIdEmpresa` INT NOT NULL,
+  `FkIdTipo` INT NOT NULL,
+  `FkIdNumeracion` INT NOT NULL,
+  `UltimaActualizacion` DATETIME NULL,
+  `Deleted` TINYINT NULL,
+  PRIMARY KEY (`IdFormulario`),
+  UNIQUE INDEX `Id_UNIQUE` (`IdFormulario` ASC) VISIBLE,
+  INDEX `Fk_companyid_idx` (`FkIdEmpresa` ASC) VISIBLE,
+  INDEX `FkFormulario_typeid_idx` (`FkIdTipo` ASC) VISIBLE,
+  INDEX `FkFormulario_numeracionid_idx` (`FkIdNumeracion` ASC) VISIBLE,
   CONSTRAINT `FkFormulario_companyid`
-    FOREIGN KEY (`Company_id`)
-    REFERENCES `MiRegistro`.`Company` (`Id`)
+    FOREIGN KEY (`FkIdEmpresa`)
+    REFERENCES `MiRegistro`.`Empresa` (`IdEmpresa`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `FkFormulario_categoryid`
-    FOREIGN KEY (`Category_id`)
-    REFERENCES `MiRegistro`.`Class_Categoria_Formularios` (`Id`)
+  CONSTRAINT `FkFormulario_typeid`
+    FOREIGN KEY (`FkIdTipo`)
+    REFERENCES `MiRegistro`.`TipoFormulario` (`IdTipoFormulario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FkFormulario_numeracionid`
+    FOREIGN KEY (`FkIdNumeracion`)
+    REFERENCES `MiRegistro`.`NumeracionFormulario` (`IdNumearcion`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Categorias_tramites`
+-- Table `MiRegistro`.`CategoriaTramite`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Categorias_tramites` (
-  `Id` INT NOT NULL,
-  `Name` VARCHAR(45) NULL,
-  PRIMARY KEY (`Id`))
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`CategoriaTramite` (
+  `IdCategoriaTramite` INT NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(20) NULL,
+  PRIMARY KEY (`IdCategoriaTramite`),
+  UNIQUE INDEX `IdCategoriaTramite_UNIQUE` (`IdCategoriaTramite` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Tramites`
+-- Table `MiRegistro`.`Tramite`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Tramites` (
-  `Id` INT NOT NULL,
-  `Dominio` VARCHAR(6) NULL,
-  `Date` DATE NULL,
-  `Tramite_id` INT NOT NULL,
-  `Company_id` INT NULL,
-  `Observaciones` VARCHAR(240) NULL,
-  `Deleted_at` DATE NULL,
-  PRIMARY KEY (`Id`),
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Tramite` (
+  `IdTramite` INT NOT NULL AUTO_INCREMENT,
+  `Dominio` VARCHAR(7) NOT NULL,
+  `FkIdCategoria` INT NOT NULL,
+  `FkIdEmpresa` INT NOT NULL,
+  `Fecha` DATE NULL,
+  `Observaciones` VARCHAR(60) NULL,
+  `Deleted` TINYINT NULL,
+  PRIMARY KEY (`IdTramite`),
   UNIQUE INDEX `Dominio_UNIQUE` (`Dominio` ASC) VISIBLE,
-  INDEX `Fk_tramiteid_idx` (`Tramite_id` ASC) VISIBLE,
-  INDEX `Fk_companyid_idx` (`Company_id` ASC) VISIBLE,
+  INDEX `Fk_tramiteid_idx` (`FkIdCategoria` ASC) VISIBLE,
+  INDEX `Fk_companyid_idx` (`FkIdEmpresa` ASC) VISIBLE,
   CONSTRAINT `Fk_tramiteid`
-    FOREIGN KEY (`Tramite_id`)
-    REFERENCES `MiRegistro`.`Categorias_tramites` (`Id`)
+    FOREIGN KEY (`FkIdCategoria`)
+    REFERENCES `MiRegistro`.`CategoriaTramite` (`IdCategoriaTramite`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `FkTramite_companyid`
-    FOREIGN KEY (`Company_id`)
-    REFERENCES `MiRegistro`.`Company` (`Id`)
+    FOREIGN KEY (`FkIdEmpresa`)
+    REFERENCES `MiRegistro`.`Empresa` (`IdEmpresa`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Numeracion_formularios`
+-- Table `MiRegistro`.`Parametro`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Numeracion_formularios` (
-  `Id` INT NOT NULL,
-  `Formulario_id` INT NOT NULL,
-  `Numearcion` VARCHAR(45) NOT NULL,
-  `Stock` INT NOT NULL,
-  `Deleted` TINYINT NULL,
-  PRIMARY KEY (`Id`),
-  UNIQUE INDEX `Id_UNIQUE` (`Id` ASC) VISIBLE,
-  UNIQUE INDEX `User_UNIQUE` (`Numearcion` ASC) VISIBLE,
-  INDEX `Fk_formularioid_idx` (`Formulario_id` ASC) VISIBLE,
-  CONSTRAINT `Fk_formularioid`
-    FOREIGN KEY (`Formulario_id`)
-    REFERENCES `MiRegistro`.`Formularios` (`Id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Parametro` (
+  `IdParametro` INT NOT NULL AUTO_INCREMENT,
+  `NombreParametro` VARCHAR(15) NULL,
+  PRIMARY KEY (`IdParametro`),
+  UNIQUE INDEX `Id_UNIQUE` (`IdParametro` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Parametros`
+-- Table `MiRegistro`.`Formulario_Parametro`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Parametros` (
-  `Id` INT NOT NULL,
-  `Name` INT NULL,
-  PRIMARY KEY (`Id`),
-  UNIQUE INDEX `Id_UNIQUE` (`Id` ASC) VISIBLE)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `MiRegistro`.`Formulario_parametros`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Formulario_parametros` (
-  `Formulario_id` INT NOT NULL,
-  `Parametros_id` INT NOT NULL,
-  `Value` INT NULL,
-  PRIMARY KEY (`Formulario_id`, `Parametros_id`),
-  INDEX `Fk_parametrosid_idx` (`Parametros_id` ASC) VISIBLE,
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Formulario_Parametro` (
+  `IdFormulario` INT NOT NULL,
+  `IdParametro` INT NOT NULL,
+  `ValorParametro` INT NULL DEFAULT 0,
+  PRIMARY KEY (`IdFormulario`, `IdParametro`),
+  INDEX `Fk_parametrosid_idx` (`IdParametro` ASC) VISIBLE,
   CONSTRAINT `FkParametros_formularioid`
-    FOREIGN KEY (`Formulario_id`)
-    REFERENCES `MiRegistro`.`Formularios` (`Id`)
+    FOREIGN KEY (`IdFormulario`)
+    REFERENCES `MiRegistro`.`Formulario` (`IdFormulario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `Fk_parametrosid`
-    FOREIGN KEY (`Parametros_id`)
-    REFERENCES `MiRegistro`.`Parametros` (`Id`)
+    FOREIGN KEY (`IdParametro`)
+    REFERENCES `MiRegistro`.`Parametro` (`IdParametro`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Alertas`
+-- Table `MiRegistro`.`CategoriaAlerta`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Alertas` (
-  `Id` INT NOT NULL,
-  `Employee_id` INT NOT NULL,
-  `Date` DATE NULL,
-  `Description` VARCHAR(240) NULL,
-  PRIMARY KEY (`Id`))
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`CategoriaAlerta` (
+  `IdCategoriaAlerta` INT NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(15) NULL,
+  PRIMARY KEY (`IdCategoriaAlerta`),
+  UNIQUE INDEX `IdCategoriaAlerta_UNIQUE` (`IdCategoriaAlerta` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Formulario_Alertas`
+-- Table `MiRegistro`.`Alerta`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Formulario_Alertas` (
-  `Formulario_id` INT NOT NULL,
-  `Alerta_id` INT NOT NULL,
-  PRIMARY KEY (`Formulario_id`, `Alerta_id`),
-  INDEX `Fk_alertasid_idx` (`Alerta_id` ASC) VISIBLE,
-  CONSTRAINT `FkFormulario_alertasid`
-    FOREIGN KEY (`Alerta_id`)
-    REFERENCES `MiRegistro`.`Alertas` (`Id`)
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Alerta` (
+  `IdAlerta` INT NOT NULL AUTO_INCREMENT,
+  `FkIdTipoAlerta` INT NULL,
+  `Descripcion` VARCHAR(45) NULL,
+  `EstadoActual` TINYINT NULL,
+  PRIMARY KEY (`IdAlerta`),
+  INDEX `FkAlerta_IdTipoAlerta_idx` (`FkIdTipoAlerta` ASC) VISIBLE,
+  CONSTRAINT `FkAlerta_IdTipoAlerta`
+    FOREIGN KEY (`FkIdTipoAlerta`)
+    REFERENCES `MiRegistro`.`CategoriaAlerta` (`IdCategoriaAlerta`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `MiRegistro`.`Formulario_Alerta`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Formulario_Alerta` (
+  `IdFormulario` INT NOT NULL,
+  `IdAlerta` INT NOT NULL,
+  `FkIdEmpleado` INT NULL,
+  `FechaAlerta` DATETIME NULL,
+  PRIMARY KEY (`IdFormulario`, `IdAlerta`),
+  INDEX `Fk_Formulario_IdAlerta_idx` (`IdAlerta` ASC) VISIBLE,
+  CONSTRAINT `Fk_Formulario_IdAlerta`
+    FOREIGN KEY (`IdAlerta`)
+    REFERENCES `MiRegistro`.`Alerta` (`IdAlerta`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `FkAlertas_formularioid`
-    FOREIGN KEY (`Formulario_id`)
-    REFERENCES `MiRegistro`.`Formularios` (`Id`)
+  CONSTRAINT `Fk_Alerta_IdFormulario`
+    FOREIGN KEY (`IdFormulario`)
+    REFERENCES `MiRegistro`.`Formulario` (`IdFormulario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Categoria_errores`
+-- Table `MiRegistro`.`CategoriaError`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Categoria_errores` (
-  `Id` INT NOT NULL,
-  `Name` VARCHAR(120) NULL,
-  PRIMARY KEY (`Id`))
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`CategoriaError` (
+  `IdCategoriaError` INT NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(15) NULL,
+  PRIMARY KEY (`IdCategoriaError`),
+  UNIQUE INDEX `IdCategoriaError_UNIQUE` (`IdCategoriaError` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Tramite_errores`
+-- Table `MiRegistro`.`Tramite_Error`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Tramite_errores` (
-  `Id` INT NOT NULL,
-  `Tramite_id` INT NOT NULL,
-  `Error_id` INT NOT NULL,
-  `Employee_id` INT NOT NULL,
-  `Resolved` TINYINT NULL,
-  PRIMARY KEY (`Id`),
-  INDEX `Fk_errorid_idx` (`Error_id` ASC) VISIBLE,
-  INDEX `Fk_employeeid_idx` (`Employee_id` ASC) VISIBLE,
-  INDEX `Fk_tramiteid_idx` (`Tramite_id` ASC) VISIBLE,
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Tramite_Error` (
+  `IdTramite` INT NOT NULL,
+  `IdCategoriaError` INT NOT NULL,
+  `FkIdEmpleado` INT NOT NULL,
+  `Resuelto` TINYINT NULL DEFAULT 0,
+  INDEX `Fk_errorid_idx` (`IdCategoriaError` ASC) VISIBLE,
+  INDEX `Fk_employeeid_idx` (`FkIdEmpleado` ASC) VISIBLE,
+  INDEX `Fk_tramiteid_idx` (`IdTramite` ASC) VISIBLE,
+  PRIMARY KEY (`IdTramite`, `IdCategoriaError`),
   CONSTRAINT `FkErrores_errorid`
-    FOREIGN KEY (`Error_id`)
-    REFERENCES `MiRegistro`.`Categoria_errores` (`Id`)
+    FOREIGN KEY (`IdCategoriaError`)
+    REFERENCES `MiRegistro`.`CategoriaError` (`IdCategoriaError`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `FkErrores_employeeid`
-    FOREIGN KEY (`Employee_id`)
-    REFERENCES `MiRegistro`.`Employee` (`Id`)
+    FOREIGN KEY (`FkIdEmpleado`)
+    REFERENCES `MiRegistro`.`Empleado` (`IdEmpleado`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `FkErrores_tramiteid`
-    FOREIGN KEY (`Tramite_id`)
-    REFERENCES `MiRegistro`.`Tramites` (`Id`)
+    FOREIGN KEY (`IdTramite`)
+    REFERENCES `MiRegistro`.`Tramite` (`IdTramite`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Etapas_tramites`
+-- Table `MiRegistro`.`EtapaTramite`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Etapas_tramites` (
-  `Id` INT NOT NULL,
-  `Name` VARCHAR(120) NULL,
-  PRIMARY KEY (`Id`))
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`EtapaTramite` (
+  `IdEtapaTramite` INT NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(14) NULL,
+  PRIMARY KEY (`IdEtapaTramite`),
+  UNIQUE INDEX `IdEtapaTramite_UNIQUE` (`IdEtapaTramite` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `MiRegistro`.`Tramite_proceso`
+-- Table `MiRegistro`.`Tramite_Proceso`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MiRegistro`.`Tramite_proceso` (
-  `Id` INT NOT NULL,
-  `Tramite_id` INT NOT NULL,
-  `Proceso_id` INT NOT NULL,
-  `Employee_id` INT NOT NULL,
-  `Status` TINYINT NULL DEFAULT 0,
-  PRIMARY KEY (`Id`),
-  INDEX `Fk_procesoid_idx` (`Proceso_id` ASC) VISIBLE,
-  INDEX `Fk_employeeid_idx` (`Employee_id` ASC) VISIBLE,
-  INDEX `Fk_tramiteid_idx` (`Tramite_id` ASC) VISIBLE,
-  CONSTRAINT `FkProceso_procesoid`
-    FOREIGN KEY (`Proceso_id`)
-    REFERENCES `MiRegistro`.`Etapas_tramites` (`Id`)
+CREATE TABLE IF NOT EXISTS `MiRegistro`.`Tramite_Proceso` (
+  `IdTramite` INT NOT NULL,
+  `IdEtapaTramite` INT NOT NULL,
+  `FkIdEmpleado` INT NOT NULL,
+  `EstadoActual` TINYINT NULL DEFAULT 0,
+  PRIMARY KEY (`IdTramite`, `IdEtapaTramite`),
+  INDEX `FkProceso_EtapaId_idx` (`IdEtapaTramite` ASC) VISIBLE,
+  INDEX `FkProceso_EmployeeId_idx` (`FkIdEmpleado` ASC) VISIBLE,
+  CONSTRAINT `FkProceso_EtapaId`
+    FOREIGN KEY (`IdEtapaTramite`)
+    REFERENCES `MiRegistro`.`EtapaTramite` (`IdEtapaTramite`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `FkProceso_employeeid`
-    FOREIGN KEY (`Employee_id`)
-    REFERENCES `MiRegistro`.`Employee` (`Id`)
+  CONSTRAINT `FkProceso_TramiteId`
+    FOREIGN KEY (`IdTramite`)
+    REFERENCES `MiRegistro`.`Tramite` (`IdTramite`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `FkProceso_tramiteid`
-    FOREIGN KEY (`Tramite_id`)
-    REFERENCES `MiRegistro`.`Tramites` (`Id`)
+  CONSTRAINT `FkProceso_EmployeeId`
+    FOREIGN KEY (`FkIdEmpleado`)
+    REFERENCES `MiRegistro`.`Empleado` (`IdEmpleado`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
