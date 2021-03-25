@@ -120,7 +120,6 @@
             // 
             // btn_minimize
             // 
-            this.btn_minimize.BackgroundImage = global::LayerPresentation.Properties.Resources.minimize;
             this.btn_minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_minimize.Location = new System.Drawing.Point(956, 5);
@@ -133,7 +132,6 @@
             // 
             // btn_close
             // 
-            this.btn_close.BackgroundImage = global::LayerPresentation.Properties.Resources.close;
             this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_close.Location = new System.Drawing.Point(977, 5);
@@ -325,8 +323,6 @@
             this.btn_savepdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_savepdf.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_savepdf.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btn_savepdf.Image = global::LayerPresentation.Properties.Resources.saveicon1;
-            this.btn_savepdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_savepdf.Location = new System.Drawing.Point(8, 75);
             this.btn_savepdf.Name = "btn_savepdf";
             this.btn_savepdf.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
@@ -344,7 +340,6 @@
             this.btn_inscribir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_inscribir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_inscribir.ForeColor = System.Drawing.Color.Navy;
-            this.btn_inscribir.Image = global::LayerPresentation.Properties.Resources.inscribe;
             this.btn_inscribir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_inscribir.Location = new System.Drawing.Point(376, 75);
             this.btn_inscribir.Name = "btn_inscribir";
@@ -363,7 +358,7 @@
             this.btn_error.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_error.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_error.ForeColor = System.Drawing.Color.Brown;
-            this.btn_error.Image = global::LayerPresentation.Properties.Resources.erroricon;
+            //this.btn_error.Image = global::LayerPresentation.Properties.Resources.erroricon;
             this.btn_error.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_error.Location = new System.Drawing.Point(598, 75);
             this.btn_error.Name = "btn_error";
@@ -382,7 +377,6 @@
             this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eliminar.ForeColor = System.Drawing.Color.Black;
-            this.btn_eliminar.Image = global::LayerPresentation.Properties.Resources.delete2;
             this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_eliminar.Location = new System.Drawing.Point(810, 75);
             this.btn_eliminar.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
@@ -402,7 +396,6 @@
             this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_editar.ForeColor = System.Drawing.Color.Goldenrod;
-            this.btn_editar.Image = global::LayerPresentation.Properties.Resources.edit;
             this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_editar.Location = new System.Drawing.Point(254, 75);
             this.btn_editar.Name = "btn_editar";

@@ -135,8 +135,8 @@ namespace LayerPresentation
                 dataGridViewUsers.Rows.Clear();
                 tabChat.SelectedIndex = 1;
 
-                Image image = new Bitmap(LayerPresentation.Properties.Resources.group);
-                dataGridViewUsers.Rows.Add("Todos", image);
+                //Image image = new Bitmap(LayerPresentation.Properties.Resources.group);
+                //dataGridViewUsers.Rows.Add("Todos", image);
 
                 LinkedList<User> tmp = client.GetUsers();
                 LinkedListNode<User> user = tmp.First;
@@ -206,7 +206,7 @@ namespace LayerPresentation
 
                 if (msg.msg == msg.from.nick + " se ha conectado..")
                 {
-                    image = new Bitmap(LayerPresentation.Properties.Resources.status_green);
+                    //image = new Bitmap(LayerPresentation.Properties.Resources.status_green);
                     dt.Rows.Add(image, message, date);
                 }
                 else
@@ -306,9 +306,9 @@ namespace LayerPresentation
             }
             else
             {
-                var bmp = new Bitmap(LayerPresentation.Properties.Resources.status_green);
-                dataGridViewUsers.Rows.Add(text, bmp);
-                dataGridView_chatAll.Rows.Add(bmp, text + " se ha conectado..");
+                //var bmp = new Bitmap(LayerPresentation.Properties.Resources.status_green);
+                //dataGridViewUsers.Rows.Add(text, bmp);
+                //dataGridView_chatAll.Rows.Add(bmp, text + " se ha conectado..");
             }
         }
         
@@ -625,8 +625,8 @@ namespace LayerPresentation
             context = null;
             lbl_nombre.Text = UserLoginCache.Username;
 
-            Image image = new Bitmap(LayerPresentation.Properties.Resources.group);
-            dataGridViewUsers.Rows.Add("Todos", image);
+            //Image image = new Bitmap(LayerPresentation.Properties.Resources.group);
+            //dataGridViewUsers.Rows.Add("Todos", image);
 
             tabChat.SelectedIndex = 1;
 

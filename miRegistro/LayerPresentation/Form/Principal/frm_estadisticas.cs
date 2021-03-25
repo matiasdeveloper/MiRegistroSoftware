@@ -121,7 +121,7 @@ namespace LayerPresentation
 
             #region CHART
             string[] series = { "Total tramites", "Procesados", "Inscriptos" };
-            Statistics.DashboardChartEmployees(chart_tramites, series, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth, false);
+            Statistics.LoadChartEmployee(chart_tramites, series, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth, false);
             #endregion
         }
         

@@ -12,6 +12,7 @@ using LayerBusiness;
 using LayerPresentation.Properties;
 using LayerSoporte.Cache;
 using LayerPresentation.Clases;
+using Bunifu.Framework.UI;
 
 namespace LayerPresentation
 {
@@ -23,8 +24,7 @@ namespace LayerPresentation
             Initialize();
         }
         DataTable currentDt;
-        private RadioButton currentOperation;
-        private int optionSelected = 1;
+        private BunifuCards currentPanelOpenInFront;
 
         // Functions
         // Refresh all UI
@@ -32,7 +32,6 @@ namespace LayerPresentation
         {
             ShowCategoriasFormularios("Auto");
             ShowAlertas();
-            currentOperation = rb_insert;
         }
         private void RefreshDashboardData() 
         {
@@ -43,13 +42,6 @@ namespace LayerPresentation
         {
             if (UserLoginCache.Priveleges == Privileges.Estandar)
             {
-                // Code here
-                btn_changeStockParameter.Enabled = false;
-
-                rb_insert.Enabled = false;
-                rb_deleteData.Enabled = false;
-                rb_update.Enabled = false;
-
                 btn_save.Enabled = false;
                 btn_delete.Enabled = false;
             }
@@ -67,9 +59,7 @@ namespace LayerPresentation
         {
             currentDt = DataFormularios.data; 
 
-            DisplayDataTableFormularios(dg_formularios_1, "Auto");
-            DisplayDataTableFormularios(dg_formularios_2, "Moto");
-            DisplayDataTableFormularios(dg_formularios_3, "Varios");
+           // DisplayDataTableFormularios(dg_formularios_1, "Auto");
         }        
         private void DisplayDataTableFormularios(DataGridView dt, string name)
         {
@@ -92,69 +82,17 @@ namespace LayerPresentation
         }
         
         // Set and delete fields for crud
-        private void SetFieldForTextBoxCRUD()
-        {
-            switch (txtBox_object.Text)
-            {
-                case "Auto":
-                    txtBox_numeracion.Text = dg_formularios_1.CurrentRow.Cells[3].Value.ToString();
-                    txtBox_stock.Text = dg_formularios_1.CurrentRow.Cells[4].Value.ToString();
-                    break;
-                case "Moto":
-                    txtBox_numeracion.Text = dg_formularios_2.CurrentRow.Cells[3].Value.ToString();
-                    txtBox_stock.Text = dg_formularios_2.CurrentRow.Cells[4].Value.ToString();
-                    break;
-                case "Varios":
-                    txtBox_numeracion.Text = dg_formularios_3.CurrentRow.Cells[3].Value.ToString();
-                    txtBox_stock.Text = dg_formularios_3.CurrentRow.Cells[4].Value.ToString();
-                    break;
-                default:
-                    txtBox_numeracion.Text = dg_formularios_1.CurrentRow.Cells[3].Value.ToString();
-                    txtBox_stock.Text = dg_formularios_1.CurrentRow.Cells[4].Value.ToString();
-                    break;
-            }
-        }
+
         private void DeleteFieldForTextBoxCRUD() 
         {
             txtBox_stock.Text = "";
             txtBox_numeracion.Text = "";
         }
-        
-        private string GetCurrentElement()
-        {
-            string s = "";
-            switch (txtBox_object.Text) 
-            {
-                case "Auto":
-                    s = "1";
-                    break;
-                case "Moto":
-                    s = "2";
-                    break;
-                case "Varios":
-                    s = "3";
-                    break;
-            }
-            return s;
-        }
+
         private string GetSelectedID(string element)
         {
             string idFormulario = "";
-            switch (element)
-            {
-                case "1":
-                    idFormulario = dg_formularios_1.CurrentRow.Cells["ID1"].Value.ToString();
-                    break;
-                case "2":
-                    idFormulario = dg_formularios_2.CurrentRow.Cells["ID2"].Value.ToString();
-                    break;
-                case "3":
-                    idFormulario = dg_formularios_3.CurrentRow.Cells["ID3"].Value.ToString();
-                    break;
-                default:
-                    idFormulario = dg_formularios_1.CurrentRow.Cells["ID1"].Value.ToString();
-                    break;
-            }
+            idFormulario = dg_formularios.CurrentRow.Cells["ColumnId"].Value.ToString();
             return idFormulario;
         }
 
@@ -180,68 +118,6 @@ namespace LayerPresentation
             }
         }
 
-        private bool AutoCheckedRadioButton(RadioButton rb_actual, RadioButton rb_1, RadioButton rb_2, string dg_name)
-        {
-            if (rb_actual.Checked == true)
-            {
-                MessageBox.Show("La opcion se encuentra seleccionada!");
-                return false;
-            }
-            else if (rb_1.Checked || rb_2.Checked && !rb_actual.Checked)
-            {
-                rb_actual.Checked = true;
-                rb_1.Checked = false;
-                rb_2.Checked = false;
-
-                LoadActualGrid(dg_name);
-                return true;
-            }
-            return false;
-        }
-        private void LoadActualGrid(string name)
-        {
-            switch (name)
-            {
-                case "dg_1":
-                    dg_formularios_1.Visible = true;
-                    dg_formularios_2.Visible = false;
-                    dg_formularios_3.Visible = false;
-                    break;
-                case "dg_2":
-                    dg_formularios_1.Visible = false;
-                    dg_formularios_2.Visible = true;
-                    dg_formularios_3.Visible = false;
-                    break;
-                case "dg_3":
-                    dg_formularios_1.Visible = false;
-                    dg_formularios_2.Visible = false;
-                    dg_formularios_3.Visible = true;
-                    break;
-            }
-        }
-
-        private void SetStockLabel()
-        {
-            switch (txtBox_objeto.Text)
-            {
-                case "Auto":
-                    txtBox_categoria_stock.Text = dg_formularios_1.CurrentRow.Cells["categoria1"].Value.ToString();
-                    txtBox_stockAnterior.Text = dg_formularios_1.CurrentRow.Cells[4].Value.ToString();
-                    break;
-                case "Moto":
-                    txtBox_categoria_stock.Text = dg_formularios_2.CurrentRow.Cells["categoria2"].Value.ToString();
-                    txtBox_stockAnterior.Text = dg_formularios_2.CurrentRow.Cells[4].Value.ToString();
-                    break;
-                case "Varios":
-                    txtBox_categoria_stock.Text = dg_formularios_3.CurrentRow.Cells["categoria3"].Value.ToString();
-                    txtBox_stockAnterior.Text = dg_formularios_3.CurrentRow.Cells[4].Value.ToString();
-                    break;
-                default:
-                    txtBox_categoria_stock.Text = dg_formularios_1.CurrentRow.Cells["categoria1"].Value.ToString();
-                    txtBox_stockAnterior.Text = dg_formularios_3.CurrentRow.Cells[4].Value.ToString();
-                    break;
-            }
-        }
         private void SetStockColor(int stock, TextBox txt)
         {
             if (stock != 0)
@@ -278,93 +154,12 @@ namespace LayerPresentation
                 rb_pressed.Checked = true;
                 currentOperation = rb_pressed;
 
-                LoadActualOperation(operation);
+                //LoadActualOperation(operation);
                 DeleteFieldForTextBoxCRUD();
                 return true;
             }
 
             return false;
-        }
-        private void LoadActualOperation(string operation)
-        {
-            switch (operation)
-            {
-                case "Insert":
-                    btn_save.Enabled = true;
-                    btn_update.Enabled = false;
-                    btn_delete.Enabled = false;
-                    btn_stock.Enabled = false;
-                    break;
-                case "Update":
-                    btn_save.Enabled = false;
-                    btn_update.Enabled = true;
-                    btn_delete.Enabled = false;
-                    btn_stock.Enabled = false;
-                    break;
-                case "Delete":
-                    btn_save.Enabled = false;
-                    btn_update.Enabled = false;
-                    btn_delete.Enabled = true;
-                    btn_stock.Enabled = false;
-                    break;
-                case "UpdateStock":
-                    btn_save.Enabled = false;
-                    btn_update.Enabled = false;
-                    btn_delete.Enabled = false;
-                    btn_stock.Enabled = true;
-                    break;
-            }
-        }
-
-        // Prevent false click
-        private void PreventFalseClickInDataGridView(DataGridView dg)
-        {
-            if (!dg.Enabled)
-            {
-                MessageBox.Show("Por favor, para insertar, actualizar, eliminar o cambiar el stock seleccione primero esta tabla en '1- Seleccione la tabla'");
-            }
-            switch (optionSelected)
-            {
-                case 1:
-                    rb_insert.Checked = false;
-                    rb_insert.Checked = true;
-                    break;
-                case 2:
-                    cb_categorias.Enabled = true;
-                    txtBox_object.Enabled = true;
-                    txtBox_numeracion.Enabled = true;
-                    txtBox_stock.Enabled = true;
-
-                    SetFieldForTextBoxCRUD();
-                    SetStockColor(Convert.ToInt32(txtBox_stock.Text), txtBox_stock);
-                    break;
-                case 3:
-                    rb_deleteData.Checked = false;
-                    rb_deleteData.Checked = true;
-
-                    cb_categorias.Enabled = false;
-                    txtBox_object.Enabled = false;
-                    txtBox_numeracion.Enabled = false;
-                    txtBox_stock.Enabled = false;
-
-                    txtBox_stock.ForeColor = Color.Black;
-                    txtBox_stock.BackColor = Color.White;
-
-                    SetFieldForTextBoxCRUD();
-                    break;
-                case 4:
-                    rb_updateStock.Checked = false;
-                    rb_updateStock.Checked = true;
-
-                    cb_categorias.Enabled = false;
-                    txtBox_object.Enabled = false;
-                    txtBox_numeracion.Enabled = false;
-                    txtBox_stock.Enabled = false;
-
-                    SetStockLabel();
-                    SetStockColor(Convert.ToInt32(txtBox_stockAnterior.Text), txtBox_stockAnterior);
-                    break;
-            }
         }
 
         private int GetAlertaSelectedId()
@@ -390,86 +185,9 @@ namespace LayerPresentation
         {
             Utilities_Common.OnlyNumbers(sender, e);
         }
-
-        // Select Operations for do
-        private void rb_insert_Click(object sender, EventArgs e)
-        {
-            if(AutoCheckedOperations(rb_insert, currentOperation, "Insert"))
-            {
-                // On operation complete
-                optionSelected = 1;
-
-                panel_stock.Visible = false;
-                panel_crud.Visible = true;
-
-                cb_categorias.Enabled = true;
-                txtBox_object.Enabled = true;
-                txtBox_numeracion.Enabled = true;
-                txtBox_stock.Enabled = true;
-
-                txtBox_stock.ForeColor = Color.Black;
-                txtBox_stock.BackColor = Color.White;
-            }
-        }        
-        private void rb_update_Click(object sender, EventArgs e)
-        {
-            if(dg_formularios_1.SelectedRows.Count > 0 || dg_formularios_2.SelectedRows.Count > 0 || dg_formularios_3.SelectedRows.Count > 0)
-            {
-                if (AutoCheckedOperations(rb_update, currentOperation, "Update"))
-                {
-                    // On operation complete
-                    optionSelected = 2;
-
-                    panel_stock.Visible = false;
-                    panel_crud.Visible = true;
-
-                    cb_categorias.Enabled = true;
-                    txtBox_object.Enabled = true;
-                    txtBox_numeracion.Enabled = true;
-                    txtBox_stock.Enabled = true;
-
-                    SetFieldForTextBoxCRUD();
-                    SetStockColor(Convert.ToInt32(txtBox_stock.Text), txtBox_stock);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, para actualizar un registro seleccione" +
-                    "\nprimero una fila en la tabla");
-            }
-        }
-        private void rb_deleteData_Click(object sender, EventArgs e)
-        {
-            if(dg_formularios_1.SelectedRows.Count > 0 || dg_formularios_2.SelectedRows.Count > 0 || dg_formularios_3.SelectedRows.Count > 0) 
-            {
-                if (AutoCheckedOperations(rb_deleteData, currentOperation, "Delete"))
-                {
-                    // On operation complete
-                    optionSelected = 3;
-
-                    panel_stock.Visible = false;
-                    panel_crud.Visible = true;
-
-                    cb_categorias.Enabled = false;
-                    txtBox_object.Enabled = false;
-                    txtBox_numeracion.Enabled = false;
-                    txtBox_stock.Enabled = false;
-
-                    txtBox_stock.ForeColor = Color.Black;
-                    txtBox_stock.BackColor = Color.White;
-
-                    SetFieldForTextBoxCRUD();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, para eliminar un registro seleccione" +
-                    "\n primero una fila en la tabla");
-            }
-        }
         private void rb_updateStock_Click(object sender, EventArgs e)
         {
-            if(dg_formularios_1.SelectedRows.Count > 0 || dg_formularios_2.SelectedRows.Count > 0 || dg_formularios_3.SelectedRows.Count > 0) 
+            /*if(dg_formularios_1.SelectedRows.Count > 0 || dg_formularios_2.SelectedRows.Count > 0 || dg_formularios_3.SelectedRows.Count > 0) 
             {
                 if(AutoCheckedOperations(rb_updateStock, currentOperation, "UpdateStock")) 
                 {
@@ -487,75 +205,13 @@ namespace LayerPresentation
                     SetStockLabel();
                     SetStockColor(Convert.ToInt32(txtBox_stockAnterior.Text), txtBox_stockAnterior);
                 }
-            }
+            }*/
         }
-                
-        // Datagridviews formatting celds for stock
-        private void Dg_Formularios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            PaintCellFormating(dg_formularios_1, sender, e);
-        }
-        private void dg_formularios_2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            PaintCellFormating(dg_formularios_2, sender, e);
-        }
-        private void dg_formularios_3_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            PaintCellFormating(dg_formularios_3, sender, e);
-        }
-               
-        // Select Table for Operations
-        private void rb_moto_Click(object sender, EventArgs e)
-        {
-            if(AutoCheckedRadioButton(rb_moto, rb_auto, rb_varios, "dg_2")) 
-            {
-                // On operation complete
-                // Change categories in the options
-                ShowCategoriasFormularios("Moto");
-                txtBox_object.Text = "Moto";
-                txtBox_objeto.Text = "Moto";
-            }
-        }
-        private void rb_varios_Click(object sender, EventArgs e)
-        {
-            if (AutoCheckedRadioButton(rb_varios, rb_auto, rb_moto, "dg_3")) 
-            {
-                // On operation complete
-                // Change categories in the options
-                ShowCategoriasFormularios("Varios");
-                txtBox_object.Text = "Varios";
-                txtBox_objeto.Text = "Varios";
-            }
-        }
-        private void rb_auto_Click(object sender, EventArgs e)
-        {
-            if(AutoCheckedRadioButton(rb_auto, rb_moto, rb_varios, "dg_1")) 
-            {
-                // On operation complete
-                // Change categories in the options
-                ShowCategoriasFormularios("Auto");
-                txtBox_object.Text = "Auto";
-                txtBox_objeto.Text = "Auto";
-            }
-        }        
         
-        private void dg_formularios_1_Click(object sender, EventArgs e)
-        {
-            PreventFalseClickInDataGridView(dg_formularios_1);
-        }
-        private void dg_formularios_2_Click(object sender, EventArgs e)
-        {
-            PreventFalseClickInDataGridView(dg_formularios_2);
-        }
-        private void dg_formularios_3_Click(object sender, EventArgs e)
-        {
-            PreventFalseClickInDataGridView(dg_formularios_3);
-        }
-
         // Crud
         private void btn_update_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 if (dg_formularios_1.SelectedRows.Count > 0)
                 {
@@ -572,13 +228,13 @@ namespace LayerPresentation
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-            }
+            }*/
         }
         private void btn_stock_Click(object sender, EventArgs e)
         {
             try
             {
-                if (dg_formularios_1.SelectedRows.Count > 0 || dg_formularios_2.SelectedRows.Count > 0 || dg_formularios_3.SelectedRows.Count > 0)
+               /* if (dg_formularios_1.SelectedRows.Count > 0 || dg_formularios_2.SelectedRows.Count > 0 || dg_formularios_3.SelectedRows.Count > 0)
                 {
                     Utilities_Common.layerBusiness.cn_formularios.actualizarStock(txtBox_stockNuevo.Text, DateTime.Now.ToString(), GetSelectedID(GetCurrentElement()));
                     frm_successdialog f = new frm_successdialog(3);
@@ -588,7 +244,7 @@ namespace LayerPresentation
                     RefreshDashboardData();
 
                     DeleteFieldForTextBoxCRUD();
-                }
+                }*/
             }
             catch (Exception ex)
             {
@@ -597,10 +253,10 @@ namespace LayerPresentation
         }
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            string idFormulario = GetSelectedID(GetCurrentElement());
+            string idFormulario = GetSelectedID("CurrentElement");
             try
             {
-                if (dg_formularios_1.SelectedRows.Count > 0 || dg_formularios_2.SelectedRows.Count > 0 || dg_formularios_3.SelectedRows.Count > 0)
+                /*if (dg_formularios_1.SelectedRows.Count > 0 || dg_formularios_2.SelectedRows.Count > 0 || dg_formularios_3.SelectedRows.Count > 0)
                 {
                     Utilities_Common.layerBusiness.cn_formularios.eliminarFormularios(idFormulario);
                     frm_successdialog f = new frm_successdialog(1);
@@ -610,7 +266,7 @@ namespace LayerPresentation
                     RefreshDashboardData();
 
                     DeleteFieldForTextBoxCRUD();
-                }
+                }*/
             }
             catch (Exception ex)
             {
@@ -621,7 +277,7 @@ namespace LayerPresentation
         {
             try
             {
-                Utilities_Common.layerBusiness.cn_formularios.insertarFormularios(cb_categorias.SelectedValue.ToString(), GetCurrentElement(), txtBox_numeracion.Text, txtBox_stock.Text, DateTime.Now.ToString());
+                Utilities_Common.layerBusiness.cn_formularios.insertarFormularios(cb_categorias.SelectedValue.ToString(), "CurrentElement", txtBox_numeracion.Text, txtBox_stock.Text, DateTime.Now.ToString());
                 frm_successdialog f = new frm_successdialog(0);
                 f.Show();
                 // Refresh data
@@ -636,19 +292,6 @@ namespace LayerPresentation
             }
         }
 
-        // Consultas rapidas
-        private void btn_stockbajo_Click(object sender, EventArgs e)
-        {
-            Alertas.BuscarRapido("bajo");
-        }
-        private void btn_stockmedio_Click(object sender, EventArgs e)
-        {
-            Alertas.BuscarRapido("medio");        
-        }
-        private void btn_stockalto_Click(object sender, EventArgs e)
-        {
-            Alertas.BuscarRapido("alto");
-        }
         private void btn_stockAlerta_Click(object sender, EventArgs e)
         {
             frm_formularios_alerta mv = new frm_formularios_alerta(false, 1, DateTime.Now.ToShortDateString(), UserLoginCache.Nombre);
@@ -658,7 +301,7 @@ namespace LayerPresentation
         // Stock parameters
         private void btn_changeStockParameter_Click(object sender, EventArgs e)
         {
-            if (Cn_HandlerFormularios.stockBajo.ToString() != txtBox_stockBajo.Text || Cn_HandlerFormularios.stockMedio.ToString() != txtBox_stockMedio.Text || txtBox_stockAlto.Text != txtBox_stockAlto.Text)
+            /*if (Cn_HandlerFormularios.stockBajo.ToString() != txtBox_stockBajo.Text || Cn_HandlerFormularios.stockMedio.ToString() != txtBox_stockMedio.Text || txtBox_stockAlto.Text != txtBox_stockAlto.Text)
             {
                 Settings.Default.StockBajo = Convert.ToInt32(txtBox_stockBajo.Text);
                 Settings.Default.StockMedio = Convert.ToInt32(txtBox_stockMedio.Text);
@@ -670,7 +313,7 @@ namespace LayerPresentation
                 // Refresh data
                 Utilities_Common.RefreshFormulariosData();
                 RefreshDashboardData();
-            }
+            }*/
         }
 
         // Alerts Details Button
@@ -697,27 +340,11 @@ namespace LayerPresentation
         }
         private void btn_savePdf_autos_Click(object sender, EventArgs e)
         {
-            if (Utilites_Pdf.ExportDataGridViewInPdf(dg_formularios_1, "FormulariosAUTO"))
+            /*if (Utilites_Pdf.ExportDataGridViewInPdf(dg_formularios_1, "FormulariosAUTO"))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
-            }
-        }
-        private void btn_savePdf_motos_Click(object sender, EventArgs e)
-        {
-            if (Utilites_Pdf.ExportDataGridViewInPdf(dg_formularios_2, "FormulariosMOTO"))
-            {
-                frm_successdialog f = new frm_successdialog(5);
-                f.Show();
-            }
-        }
-        private void btn_savePdf_varios_Click(object sender, EventArgs e)
-        {
-            if (Utilites_Pdf.ExportDataGridViewInPdf(dg_formularios_3, "FormulariosVARIOS"))
-            {
-                frm_successdialog f = new frm_successdialog(5);
-                f.Show();
-            }
+            }*/
         }
         private void btn_exportPdf_alertas_Click(object sender, EventArgs e)
         {
@@ -742,13 +369,34 @@ namespace LayerPresentation
         
         private void frm_formularios_Load(object sender, EventArgs e)
         {
-            RefreshDashboardData();
+            // RefreshDashboardData();
 
-            txtBox_stockBajo.Text = Cn_HandlerFormularios.stockBajo.ToString();
-            txtBox_stockMedio.Text = Cn_HandlerFormularios.stockMedio.ToString();
-            txtBox_stockAlto.Text = Cn_HandlerFormularios.stockAlto.ToString();
+           // txtBox_stockBajo.Text = Cn_HandlerFormularios.stockBajo.ToString();
+           // txtBox_stockMedio.Text = Cn_HandlerFormularios.stockMedio.ToString();
+           // txtBox_stockAlto.Text = Cn_HandlerFormularios.stockAlto.ToString();
 
-            LoadAccessPrivileges();
+            // LoadAccessPrivileges();
+        }
+
+        private void ShowMoreOptions(BunifuCards panel)
+        {
+            panel.Visible = false;
+            TransitionPnMore.Show(panel);
+        }
+
+        private void btn_acciones_formularios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_consultar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_exportar_formularios_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

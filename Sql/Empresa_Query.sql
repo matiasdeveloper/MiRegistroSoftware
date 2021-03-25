@@ -4,6 +4,7 @@ USE miregistro;
 INSERT INTO Empresa (Nombre, FechaApertura)
 VALUES ('Registro El Calafate', NOW());
 
+UPDATE Empresa SET Contraseña = '19573' WHERE IdEmpresa = 1;
 /* Insertar direccion empresa*/ 
 INSERT INTO Direccion_Empresa
 VALUES (1, 2, 'Av. 17 de Octubre');

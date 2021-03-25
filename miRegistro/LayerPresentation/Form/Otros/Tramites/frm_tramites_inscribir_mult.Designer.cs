@@ -96,7 +96,6 @@
             // 
             // btn_close
             // 
-            this.btn_close.BackgroundImage = global::LayerPresentation.Properties.Resources.close;
             this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_close.ImeMode = System.Windows.Forms.ImeMode.NoControl;

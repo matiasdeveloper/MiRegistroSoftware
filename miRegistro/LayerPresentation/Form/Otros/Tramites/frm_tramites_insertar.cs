@@ -21,63 +21,21 @@ namespace LayerPresentation
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        public frm_tramites_insertar(bool isEdit, int id, string[] data, frm_tramites frm = null, frm_tramites_pantallaCompleta frm1 = null)
+        public frm_tramites_insertar()
         {
             InitializeComponent();
-            DataTramites.DisplayEmpleados(comboBox_empleados);
 
+            DataTramites.DisplayEmpleados(comboBox_empleadoerror);
+            DataTramites.DisplayEmpleados(comboBox_empleadoinscripto);
+            DataTramites.DisplayEmpleados(comboBox_empleadoproceso);
             LoadComboBoxTramites(comboBox_tramites);
             LoadComboBoxErrores(comboBox_tipoError);
-
-            _frmTramitesPantallaCompleta = frm1;
-            _frmTramites = frm;
-            this.isEdit = isEdit;
-            this.id = id;
-
-            if (isEdit == true && data != null)
-            {
-                barra_titulo.BackColor = Color.Orange;
-                lbl_tittle.Text = "Editar tramite ID: " + id;
-                textBox_dominio.Text = data[0];
-
-                dateTime_fecha.Enabled = false;
-
-                int index = comboBox_tramites.FindStringExact(data[1]);
-                comboBox_tramites.SelectedValue = index + 1;
-
-                index = comboBox_empleados.FindString(data[2]);
-                comboBox_empleados.SelectedValue = index + 1;
-
-                if (data[3] == "Procesado")
-                { checkBox_procesados.Checked = true; } else { checkBox_procesados.Checked = false; }
-                if (data[4] == "True")
-                { checkBox_errores.Checked = true; } else { checkBox_errores.Checked = false; }
-                comboBox_tipoError.SelectedIndex = comboBox_tipoError.FindString(data[5]);
-                textBox_observaciones.Text = data[6];
-
-                btn_cargar.Text = "Actualizar tramite";
-                btn_cargar.FlatAppearance.BorderColor = Color.Orange;
-                btn_cargar.Image = LayerPresentation.Properties.Resources.edit;
-            }        
         }
 
-        frm_tramites_pantallaCompleta _frmTramitesPantallaCompleta;
-        frm_tramites _frmTramites;
-        
         // Variables de carga
-        private string dominio;
-        private int codigo;
-        private Random ran = new Random();
-        private DateTime fecha;
-        private int cod_tramite;
-        private int cod_empleado;
-        private int cod_etapa;
-        private int error;
-        private int cod_error;
-        private string observaciones;
-        // Variables de edicion
-        private bool isEdit;
-        private int id;
+        Tuple<string, DateTime, int> datosTramite;
+        Tuple<int, int, int, int> datosDetalleTramite;
+        Tuple<int, int, int, string> datosObservacionTramite;
 
         // Variable de errores
         private bool iniciarCarga = true;
@@ -101,42 +59,32 @@ namespace LayerPresentation
         }
 
         // Initialize Charge Tramites
-        private bool InitializeVariables() 
+        private void InitializeVariables() 
         {
-            // Dominio
-            dominio = textBox_dominio.Text;
-            if(string.IsNullOrEmpty(textBox_dominio.Text))
-            {
-                iniciarCarga = false;
-                MessageBox.Show("Campo de dominio vacio, por favor para continuar con la carga del tramite se debera ingresar un dominio (Ej: 'AA096UY')", "Atencion Dominio Vacio! Error detectado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return iniciarCarga;
-            }
-            // Fecha
-            fecha = new DateTime(dateTime_fecha.Value.Year, dateTime_fecha.Value.Month, dateTime_fecha.Value.Day, 0,0,0);
-            // Codifica las variables tramites, empleados y etapas
-            // Tramites
             string tramite = comboBox_tramites.SelectedValue.ToString();
-            cod_tramite = Convert.ToInt32(tramite);
-            // Empleados
-            string empleado = comboBox_empleados.SelectedValue.ToString();
-            cod_empleado = Convert.ToInt32(empleado);
-            // Etapas
-            cod_etapa = 1;
-            // Carga errores
-            if (checkBox_errores.Checked == true)
+            int cod_tramite = Convert.ToInt32(tramite);     
+            DateTime fecha = new DateTime(dateTime_fecha.Value.Year, dateTime_fecha.Value.Month, dateTime_fecha.Value.Day, 0, 0, 0);
+
+            datosTramite = new Tuple<string, DateTime, int>(textBox_dominio.Text, fecha, cod_tramite);
+
+            string empleado = comboBox_empleadoproceso.SelectedValue.ToString();
+            int cod_empleado = Convert.ToInt32(empleado);
+            string empleadoinscripto = comboBox_empleadoinscripto.SelectedValue.ToString();
+            int cod_empleadoinscripto = Convert.ToInt32(empleadoinscripto);
+            int cod_inscripto = 0;
+            if (checkBox_inscripto.Checked) 
+            {
+                cod_inscripto = 1;
+            }
+
+            datosDetalleTramite = new Tuple<int, int, int, int>(1, cod_empleado, cod_inscripto, cod_empleadoinscripto);
+
+            int error = 0;
+            if (checkBox_errores.Checked) 
             {
                 error = 1;
-                if (comboBox_tipoError.Text == "Sin Errores")
-                {
-                    iniciarCarga = false;
-                    MessageBox.Show("Por favor seleccione el tipo de error! (Ej: ERROR PARCIAL o ERROR TOTAL)", "Atencion Campo de tipo de error Vacio! Error detectado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
             }
-            else
-            {
-                error = 0;
-            }
-            // Tipo de error
+            int cod_error = 0;
             switch (comboBox_tipoError.Text)
             {
                 case "Sin errores":
@@ -158,84 +106,236 @@ namespace LayerPresentation
                     cod_error = 0;
                     break;
             }
-            // Carga las observaciones
-            observaciones = textBox_observaciones.Text;
-            if (checkBox_errores.Checked == true && string.IsNullOrEmpty(textBox_observaciones.Text))
-            {
-                iniciarCarga = false;
-                MessageBox.Show("Las observaciones se encuentran vacias y detectamos la casilla de error activada, por favor para continuar especifique el tipo de error en el campo de observaciones!", "Atencion especifique tipo de error! Error detectado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return iniciarCarga;
-            }
-            return iniciarCarga;
+            string empleadoerror = comboBox_empleadoerror.SelectedValue.ToString();
+            int cod_empleadoeerror = Convert.ToInt32(empleadoerror);
+
+            datosObservacionTramite = new Tuple<int, int, int, string>(error, cod_error, cod_empleadoeerror, textBox_observaciones.Text);
         }
         private void DeleteFields() 
         {
             dateTime_fecha.Value = DateTime.Now;
 
-            textBox_dominio.Text = "";
-            textBox_observaciones.Text = "No";
-            checkBox_errores.Checked = false;
+            textBox_dominio.Text = "Ej: AA000XX";
+            textBox_dominio.ForeColor = Color.Silver;
+
             checkBox_procesados.Checked = true;
+            checkBox_inscripto.Checked = false;
+            pn_inscribir.Visible = false;
+
+            checkBox_errores.Checked = false;
+            pn_categoriaerror.Visible = false;
+            textBox_observaciones.Text = "Sin observaciones";
+
             comboBox_tipoError.SelectedValue = 0;
         }
         
         private void RefreshData() 
         {
-            if (_frmTramites != null)
+            /*if (_frmTramites != null)
             {
                 _frmTramites.RefreshAll();
             }
             if (_frmTramitesPantallaCompleta != null)
             {
                 _frmTramitesPantallaCompleta.RefreshDataTramites();
-            }
+            }*/
         }
-        private void btn_cargar_Click(object sender, EventArgs e)
+        
+        private bool CargarTramite()
         {
-            if (InitializeVariables()) 
+            bool result = true;
+
+            InitializeVariables();
+            try
             {
-                try
-                {
-                    if (!isEdit)
-                    {
-                        Utilities_Common.layerBusiness.cn_tramites.insertarTramite(dominio, fecha, cod_tramite, cod_empleado, observaciones, error, cod_error);
-                        DeleteFields();
-                        RefreshData();
-                        frm_successdialog f = new frm_successdialog(0);
-                        f.Show();
-                    }
-                    else
-                    {
-                        Utilities_Common.layerBusiness.cn_tramites.actualizarTramite(id, dominio, cod_tramite, cod_empleado, observaciones, error, cod_error);
-                        DeleteFields();
-                        RefreshData();
-                        frm_successdialog f = new frm_successdialog(2);
-                        f.Show();
-                        this.Close();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
+                Utilities_Common.layerBusiness.cn_tramites.insertarTramite(datosTramite, datosDetalleTramite, datosObservacionTramite);
+                DeleteFields();
+                //RefreshData();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                result = false;
+            }
+
+            return result;
         }
-        private void textBox_dominio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = (e.KeyChar == (char)Keys.Space);
-        }
-        private void barra_titulo_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
         private void frm_tramites_insertar_Load(object sender, EventArgs e)
         {
 
+        }
+        private void btn_c1_siguiente_Click(object sender, EventArgs e)
+        {
+            if (ValidarTabDatos()) 
+            {
+                tab.SelectedIndex = 1;
+                c1.Checked = true;
+            }
+        }
+
+        bool ValidarTabDatos() 
+        {
+            bool s = true;
+            if(textBox_dominio.Text.Length < 4 || textBox_dominio.Text == "Ej: AA000XX") 
+            {
+                s = false;
+                return s;
+            }
+            if(comboBox_tramites.SelectedIndex < 0) 
+            {
+                s = false;
+                return s;
+            }
+            return s;
+        }
+        bool ValidarTabDetalle()
+        {
+            bool s = true;
+            if(comboBox_empleadoproceso.SelectedIndex < 0) 
+            {
+                s = false;
+                return s;
+            }
+            if(checkBox_inscripto.Checked && comboBox_empleadoinscripto.SelectedIndex < 0) 
+            {
+                s = false;
+                return s;
+            }
+            return s;
+        }
+        bool ValidarTabObservaciones() 
+        {
+            bool s = true;
+            if (checkBox_errores.Checked) 
+            {
+                if(comboBox_tipoError.SelectedIndex < 0 || comboBox_empleadoerror.SelectedIndex < 0) 
+                {
+                    s = false;
+                    return s;
+                }
+            }
+            return s;
+        }
+
+        private void btn_c2_siguiente_Click(object sender, EventArgs e)
+        {
+            if (ValidarTabDetalle()) 
+            {
+                tab.SelectedIndex = 2;
+                c2.Checked = true;
+            }
+        }
+        private void btn_c3_siguiente_Click(object sender, EventArgs e)
+        {
+            if (ValidarTabObservaciones()) 
+            {
+                // Insertar tramite
+                if (CargarTramite())
+                {
+                    tab.SelectedIndex = 3;
+                    c3.Checked = true;
+                    c4.Checked = true;
+                }
+            }
+        }
+        private void btn_c4_salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btn_c2_volver_Click(object sender, EventArgs e)
+        {
+            tab.SelectedIndex = 0;
+        }
+        private void btn_c3_volver_Click(object sender, EventArgs e)
+        {
+            tab.SelectedIndex = 1;
+        }
+        private void btn_c3_omitir_Click(object sender, EventArgs e)
+        {
+            if (ValidarTabObservaciones()) 
+            {
+                tab.SelectedIndex = 3;
+                // Insertar tramite
+            }
+        }
+        private void btn_c4_ingresartramite_Click(object sender, EventArgs e)
+        {
+            // Ingresar nuevo tramite
+            tab.SelectedIndex = 0;
+            DeleteFields();
+        }
+
+        private void c1_Click(object sender, EventArgs e)
+        {
+            c1.Checked = c1.Checked;
+        }
+        private void c2_Click(object sender, EventArgs e)
+        {
+            c2.Checked = c2.Checked;
+        }
+        private void c3_Click(object sender, EventArgs e)
+        {
+            c3.Checked = c3.Checked;
+        }
+        private void c4_Click(object sender, EventArgs e)
+        {
+            c4.Checked = c4.Checked;
+        }
+
+        private void btn_close_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btn_saveinfo_Click(object sender, EventArgs e)
+        {
+            checkBox_procesados.Checked = !checkBox_procesados.Checked;
+        }
+        private void btn_checkboxinscripto_Click(object sender, EventArgs e)
+        {
+            checkBox_inscripto.Checked = !checkBox_inscripto.Checked;
+            pn_inscribir.Visible = checkBox_inscripto.Checked;
+        }
+        private void checkBox_inscripto_OnChange(object sender, EventArgs e)
+        {
+            pn_inscribir.Visible = checkBox_inscripto.Checked;
+        }
+
+        private void checkBox_errores_OnChange(object sender, EventArgs e)
+        {
+            pn_categoriaerror.Visible = checkBox_errores.Checked;
+        }
+        
+        private void checkBox_procesados_Click(object sender, EventArgs e)
+        {
+            checkBox_procesados.Checked = checkBox_procesados.Checked;
+        }
+
+        private void textBox_dominio_Enter_1(object sender, EventArgs e)
+        {
+            if (textBox_dominio.Text == "Ej: AA000XX")
+            {
+                textBox_dominio.Text = "";
+                textBox_dominio.ForeColor = Color.Black;
+            }
+        }
+        private void textBox_dominio_Leave_1(object sender, EventArgs e)
+        {
+            if (textBox_dominio.Text == "")
+            {
+                textBox_dominio.Text = "Ej: AA000XX";
+                textBox_dominio.ForeColor = Color.Silver;
+            }
+        }
+        private void btn_checkboxerror_Click(object sender, EventArgs e)
+        {
+            checkBox_errores.Checked = !checkBox_errores.Checked;
+            pn_categoriaerror.Visible = checkBox_errores.Checked;
+        }
+
+        private void textBox_dominio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
         }
     }
 }

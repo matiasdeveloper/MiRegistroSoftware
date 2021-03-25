@@ -24,11 +24,30 @@ SELECT * FROM preguntaseguridad;
 /* Insert nuevos usuarios */
 
 INSERT INTO usuario(FkIdPerfil, Usuario, Contraseña, Email)
-VALUES(1, 'noelicalafate', '12345', 'noelivallejoss@gmail.com');
+VALUES(2, 'paolacalafate', '12345', 'paolacalafate@gmail.com');
 
 INSERT INTO perfil (IdPerfil, Nombre, Apellido, Nick, FechaCumpleaños)
-VALUES (1, 'Noeli', 'Vallejos', 'Noe', NOW());
+VALUES (2, 'Paola', 'Calafate', 'Pao', NOW());
 
-SELECT P.Nombre, P.Apellido, P.FechaCumpleaños, U.Usuario, U.Email
+INSERT INTO empleado (IdEmpleado, FkIdUsuario, FkIdEmpresa, EstadoActual)
+VALUES
+(
+	2,
+	3,
+    1,
+    1
+);
+
+DELETE FROM empleado WHERE idempleado = 1001;
+
+UPDATE empleado set IdEmpleado = 1 where IdEmpleado = 1001;
+
+SELECT * FROM usuario;
+SELECT * FROM empleado;
+
+SELECT U.IdUsuario, P.Nombre, P.Apellido, P.FechaCumpleaños, U.Usuario, U.Email
 FROM usuario U
 INNER JOIN perfil P ON P.IdPerfil = U.FkIdPerfil;
+
+ALTER TABLE usuario AUTO_INCREMENT = 1;
+DELETE FROM usuario WHERE idusuario = 2;

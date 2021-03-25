@@ -65,15 +65,44 @@ namespace LayerPresentation
             this.ShowIcon = true;
             this.ShowInTaskbar = true;
 
-            txtBox_pass.Clear();
-            txtBox_user.Text = "Usuario";
-            txtBox_user.Clear();
-            txtBox_pass.Text = "Contraseña";
+            txtBox_user.Text = "usuarioejemplo";
+            txtBox_pass.Text = "8 caracteres o mas";
             txtBox_pass.UseSystemPasswordChar = false;
             FindSavedUser();
         }
 
-        private void btn_login_Click(object sender, EventArgs e)
+        private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //MessageBox.Show("Para cambiar la contraseña o cualquier dato de su cuenta Comuniquese con el usuario root del sistema" + "\nGracias.","Atencion!", MessageBoxButtons.OK);
+            //var recoverPassword = new Login_recoverPassword();
+            //recoverPassword.ShowDialog();
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        private void Login_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btn_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void Login_Load(object sender, EventArgs e)
+        {
+            FindSavedUser();
+        }
+
+        private void btn_login_Click_1(object sender, EventArgs e)
         {
             Cn_Usuarios _cnUsuarios = new Cn_Usuarios();
 
@@ -106,80 +135,126 @@ namespace LayerPresentation
             }
         }
 
-        private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void txtBox_user_Enter_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Para cambiar la contraseña o cualquier dato de su cuenta Comuniquese con el usuario root del sistema" + "\nGracias.","Atencion!", MessageBoxButtons.OK);
-            //var recoverPassword = new Login_recoverPassword();
-            //recoverPassword.ShowDialog();
+            if (txtBox_user.Text == "usuarioejemplo")
+            {
+                txtBox_user.Text = "";
+                txtBox_user.ForeColor = Color.Black;
+            }
+        }
+        private void txtBox_user_Leave_1(object sender, EventArgs e)
+        {
+            if (txtBox_user.Text == "")
+            {
+                txtBox_user.Text = "usuarioejemplo";
+                txtBox_user.ForeColor = Color.Silver;
+            }
         }
 
-        private void txtBox_user_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtBox_pass_Enter_1(object sender, EventArgs e)
+        {
+            if (txtBox_pass.Text == "8 caracteres o mas")
+            {
+                txtBox_pass.Text = "";
+                txtBox_pass.ForeColor = Color.Black;
+                txtBox_pass.UseSystemPasswordChar = true;
+            }
+        }
+        private void txtBox_pass_Leave_1(object sender, EventArgs e)
+        {
+            if (txtBox_pass.Text == "")
+            {
+                txtBox_pass.Text = "8 caracteres o mas";
+                txtBox_pass.ForeColor = Color.Silver;
+                txtBox_pass.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void btn_saveinfo_Click(object sender, EventArgs e)
+        {
+            checkBox_guardar.Checked = !(checkBox_guardar.Checked);
+        }
+
+        private void txtBox_user_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             e.Handled = (e.KeyChar == (char)Keys.Space);
         }
+
         private void txtBox_pass_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = (e.KeyChar == (char)Keys.Space);
         }
 
-        private void txtBox_user_Enter(object sender, EventArgs e)
+
+        void MostrarOcultarPassword() 
         {
-            if (txtBox_user.Text == "Usuario")
+            if (txtBox_pass.Text != "8 caracteres o mas" || txtBox_pass.Text != "")
             {
-                txtBox_user.Text = "";
-                txtBox_user.ForeColor = Color.LightCyan;
+                if (txtBox_pass.UseSystemPasswordChar)
+                {
+                    txtBox_pass.UseSystemPasswordChar = false;
+                    btn_showpassword.Image = LayerPresentation.Properties.Resources.invisible_64px;
+                }
+                else
+                {
+                    txtBox_pass.UseSystemPasswordChar = true;
+                    btn_showpassword.Image = LayerPresentation.Properties.Resources.eye_64px;
+                }
             }
         }
-        private void txtBox_user_Leave(object sender, EventArgs e)
+        private void btn_showpassword_MouseEnter(object sender, EventArgs e)
+        {
+            MostrarOcultarPassword();
+        }
+
+        private void btn_showpassword_MouseLeave(object sender, EventArgs e)
+        {
+            MostrarOcultarPassword();
+        }
+
+        private void textboxUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
+        private void textboxUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtBox_user.Text == "usuarioejemplo")
+            {
+                txtBox_user.Text = "";
+                txtBox_user.ForeColor = Color.Black;
+            }
+        }
+        private void textboxUsuario_Leave(object sender, EventArgs e)
         {
             if (txtBox_user.Text == "")
             {
-                txtBox_user.Text = "Usuario";
-                txtBox_user.ForeColor = Color.DimGray;
+                txtBox_user.Text = "usuarioejemplo";
+                txtBox_user.ForeColor = Color.Silver;
             }
         }
 
-        private void txtBox_pass_Enter(object sender, EventArgs e)
+        private void textboxContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtBox_pass.Text == "Contraseña")
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
+        private void textboxContraseña_Enter(object sender, EventArgs e)
+        {
+            if (txtBox_pass.Text == "8 caracteres o mas")
             {
                 txtBox_pass.Text = "";
-                txtBox_pass.ForeColor = Color.LightCyan;
+                txtBox_pass.ForeColor = Color.Black;
                 txtBox_pass.UseSystemPasswordChar = true;
             }
         }
-        private void txtBox_pass_Leave(object sender, EventArgs e)
+        private void textboxContraseña_Leave(object sender, EventArgs e)
         {
             if (txtBox_pass.Text == "")
             {
-                txtBox_pass.Text = "Contraseña";
-                txtBox_pass.ForeColor = Color.DimGray;
+                txtBox_pass.Text = "8 caracteres o mas";
+                txtBox_pass.ForeColor = Color.Silver;
                 txtBox_pass.UseSystemPasswordChar = false;
             }
-        }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-        private void Login_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btn_minimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        private void Login_Load(object sender, EventArgs e)
-        {
-            FindSavedUser();
         }
     }
 }

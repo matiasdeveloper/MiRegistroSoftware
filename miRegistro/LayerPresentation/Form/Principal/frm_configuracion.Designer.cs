@@ -1310,7 +1310,6 @@
             // 
             // picBox_userImage
             // 
-            this.picBox_userImage.BackgroundImage = global::LayerPresentation.Properties.Resources.usuario1;
             this.picBox_userImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBox_userImage.Location = new System.Drawing.Point(457, 5);
             this.picBox_userImage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
@@ -2135,7 +2134,6 @@
             // 
             // pic_0
             // 
-            this.pic_0.BackgroundImage = global::LayerPresentation.Properties.Resources.check;
             this.pic_0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_0.Location = new System.Drawing.Point(491, 57);
             this.pic_0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);

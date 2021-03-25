@@ -176,7 +176,6 @@
             // 
             // btn_sendMessage
             // 
-            this.btn_sendMessage.BackgroundImage = global::LayerPresentation.Properties.Resources.send;
             this.btn_sendMessage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_sendMessage.FlatAppearance.BorderSize = 0;
             this.btn_sendMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -656,7 +655,6 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.BackgroundImage = global::LayerPresentation.Properties.Resources.telefono;
             this.pictureBox7.Location = new System.Drawing.Point(9, 283);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(16, 16);
@@ -665,7 +663,6 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.BackgroundImage = global::LayerPresentation.Properties.Resources.calendario;
             this.pictureBox6.Location = new System.Drawing.Point(9, 252);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(16, 16);
@@ -674,7 +671,6 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BackgroundImage = global::LayerPresentation.Properties.Resources.correo;
             this.pictureBox5.Location = new System.Drawing.Point(9, 221);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(16, 16);
@@ -683,7 +679,6 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackgroundImage = global::LayerPresentation.Properties.Resources.alfiler;
             this.pictureBox4.Location = new System.Drawing.Point(9, 190);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(16, 16);
@@ -785,7 +780,6 @@
             // 
             // picBox_Online
             // 
-            this.picBox_Online.BackgroundImage = global::LayerPresentation.Properties.Resources.status_green;
             this.picBox_Online.Location = new System.Drawing.Point(5, 16);
             this.picBox_Online.Name = "picBox_Online";
             this.picBox_Online.Size = new System.Drawing.Size(16, 16);
@@ -844,7 +838,6 @@
             // btn_whatsapp
             // 
             this.btn_whatsapp.BackColor = System.Drawing.Color.AliceBlue;
-            this.btn_whatsapp.BackgroundImage = global::LayerPresentation.Properties.Resources.whatsapp;
             this.btn_whatsapp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_whatsapp.FlatAppearance.BorderSize = 0;
             this.btn_whatsapp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -859,7 +852,6 @@
             // btn_clearchat
             // 
             this.btn_clearchat.BackColor = System.Drawing.Color.AliceBlue;
-            this.btn_clearchat.BackgroundImage = global::LayerPresentation.Properties.Resources.delete;
             this.btn_clearchat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_clearchat.FlatAppearance.BorderSize = 0;
             this.btn_clearchat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -874,7 +866,6 @@
             // btn_saveChat
             // 
             this.btn_saveChat.BackColor = System.Drawing.Color.AliceBlue;
-            this.btn_saveChat.BackgroundImage = global::LayerPresentation.Properties.Resources.save;
             this.btn_saveChat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_saveChat.FlatAppearance.BorderSize = 0;
             this.btn_saveChat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));

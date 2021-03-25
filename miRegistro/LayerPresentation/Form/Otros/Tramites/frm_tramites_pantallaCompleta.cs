@@ -161,7 +161,7 @@ namespace LayerPresentation
             d = data;
             int id = selectedId;
 
-            frm_tramites_insertar frm = new frm_tramites_insertar(true, id, d, null, this);
+            frm_tramites_insertar frm = new frm_tramites_insertar();
             frm.Show();
         }
 

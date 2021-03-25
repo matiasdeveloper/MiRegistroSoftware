@@ -1122,7 +1122,6 @@
             // 
             // btn_close
             // 
-            this.btn_close.BackgroundImage = global::LayerPresentation.Properties.Resources.close;
             this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_close.Location = new System.Drawing.Point(254, 7);
@@ -1136,14 +1135,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel_simple_diaria);
+            this.panel1.Controls.Add(this.panel_complejo_fechaprocesados);
             this.panel1.Controls.Add(this.panel_simple_empleado);
             this.panel1.Controls.Add(this.panel_simple_dominio);
             this.panel1.Controls.Add(this.panel_complejo_fechaerrores);
             this.panel1.Controls.Add(this.panel_complejo_fechaempleado);
             this.panel1.Controls.Add(this.panel_simple_fecha);
             this.panel1.Controls.Add(this.panel_complejo_fechainscriptos);
-            this.panel1.Controls.Add(this.panel_simple_diaria);
-            this.panel1.Controls.Add(this.panel_complejo_fechaprocesados);
             this.panel1.Location = new System.Drawing.Point(22, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(235, 290);

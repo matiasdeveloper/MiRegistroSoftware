@@ -21,7 +21,17 @@ namespace LayerPresentation.Clases
             var vOut = Math.Round(percentage, 0);
             return vOut;
         }
-
+        public static double CalculateDifferencePercentage(int val1, int val2)
+        {
+            float percentage = 0;
+            if (val1 > 0 & val2 > 0)
+            {
+                double diff = val1 - val2;
+                double val = (val1 + val2) / 2;
+                percentage = (float)(diff / val) * 100;
+            }
+            return percentage;
+        }
         public static Label FindLabelInForm(Form s, string label) 
         {
             Control[] ctrl = s.Controls.Find(label, true);

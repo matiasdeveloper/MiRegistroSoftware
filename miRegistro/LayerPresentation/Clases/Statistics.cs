@@ -17,28 +17,306 @@ namespace LayerPresentation.Clases
     {
         public static LinkedList<Employee> tmp;
 
-        public static void DashboardChartEmployees(Chart ch, string[] series, DateTime fecha1, DateTime fecha2, bool isSimple = true)
+        // New
+
+        /// <summary>
+        /// Return total for this month and the percentage with respect the past month.
+        /// Return total errores for this month and the percentage with respect the past month.
+        /// </summary>
+        public static float[] GetDashboardStatistic_MonthComplete()
+        {
+            DateTime fecha1 = Fechas.firstDayOfMonth;
+            DateTime fecha2 = Fechas.lastDayOfMonth;
+
+            DateTime fecha1_past = Fechas.firstDayOfMonth.AddMonths(-1);
+            DateTime fecha2_past = Fechas.lastDayOfMonth.AddMonths(-1);
+
+            DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
+            DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
+            dt2 = dt2.AddDays(1);
+
+            DateTime dt1_past = new DateTime(fecha1_past.Year, fecha1_past.Month, fecha1_past.Day, 0, 0, 0);
+            DateTime dt2_past = new DateTime(fecha2_past.Year, fecha2_past.Month, fecha2_past.Day, 0, 0, 0);
+            dt2_past = dt2_past.AddDays(1);
+
+            int procesado = 0;
+            int procesado_past = 0;
+            int errores = 0;
+            int errores_past = 0;
+
+            Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
+            foreach (DataRow fila in dt.data.Rows)
+            {
+                DateTime date = (DateTime)fila[5];
+                if (date >= dt1_past && date < dt2_past)
+                {
+                    procesado_past++;
+                    if ((bool)fila[6] == true)
+                    {
+                        errores_past++;
+                    }
+                }
+                if (date >= dt1 & date < dt2)
+                {
+                    procesado++;
+                    if ((bool)fila[6] == true)
+                    {
+                        errores++;
+                    }
+                }
+            }
+
+            double percentage = Utilities.CalculateDifferencePercentage(procesado, procesado_past);
+            double percentage_errores = Utilities.CalculateDifferencePercentage(errores, errores_past);
+
+            float[] r = { procesado, (float)percentage, errores, (float)percentage_errores };
+            return r;
+        }
+        /// <summary>
+        /// Return total for this day and the percentage with respect the past day.
+        /// Return total errores for this day and the percentage with respect the past day.
+        /// </summary>
+        public static float[] GetDashboardStatistic_DayComplete()
+        {
+            DateTime fecha1 = DateTime.Now;
+            DateTime fecha2 = fecha1;
+
+            DateTime fecha1_past = DateTime.Now.AddDays(-1);
+            DateTime fecha2_past = fecha1_past;
+
+            DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
+            DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
+            dt2 = dt2.AddDays(1);
+
+            DateTime dt1_past = new DateTime(fecha1_past.Year, fecha1_past.Month, fecha1_past.Day, 0, 0, 0);
+            DateTime dt2_past = new DateTime(fecha2_past.Year, fecha2_past.Month, fecha2_past.Day, 0, 0, 0);
+            dt2_past = dt2_past.AddDays(1);
+
+            int procesado = 0;
+            int procesado_past = 0;
+            int errores = 0;
+            int errores_past = 0;
+
+            Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
+            foreach (DataRow fila in dt.data.Rows)
+            {
+                DateTime date = (DateTime)fila[5];
+                if (date >= dt1_past && date < dt2_past)
+                {
+                    procesado_past++;
+                    if ((bool)fila[6] == true)
+                    {
+                        errores_past++;
+                    }
+                }
+                if (date >= dt1 & date < dt2)
+                {
+                    procesado++;
+                    if ((bool)fila[6] == true)
+                    {
+                        errores++;
+                    }
+                }
+            }
+
+            double percentage = Utilities.CalculateDifferencePercentage(procesado, procesado_past);
+            double percentage_errores = Utilities.CalculateDifferencePercentage(errores, errores_past);
+
+            float[] r = { procesado, (float)percentage, errores, (float)percentage_errores };
+            return r;
+        }
+
+        /// <summary>
+        /// Return total of procesados and inscriptos and optional the percentage difference between the month or day last
+        /// In this order you can get procesados and inscriptos
+        /// Or you get procesados, inscriptos, percentageProcesados, percentageInscriptos, procesados_past, inscriptos_past
+        /// </summary>
+        /// <param name="Ayer"></param>
+        public static int[] GetStatisticTramites(DateTime fecha1, DateTime fecha2, bool GetPercentage = false)
+        {
+            DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
+            DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
+            dt2 = dt2.AddDays(1);
+
+            int procesado = 0;
+            int inscriptos = 0;
+
+            int inscriptos_false = 0;
+
+            Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
+            foreach (DataRow fila in dt.data.Rows)
+            {
+                // Find total tramites procesados e inscriptos in current range
+                DateTime date = (DateTime)fila[5];
+                if (date >= dt1 & date < dt2)
+                {
+                    procesado++;
+                    if ((bool)fila[9] == true)
+                    {
+                        inscriptos++;
+                    } 
+                    else 
+                    {
+                        inscriptos_false++;
+                    }
+                }
+            }
+            List<int> result = new List<int>();
+            
+            if (GetPercentage) 
+            {
+                int percentageInscriptos = (int)Utilities.CalculatePercentage(procesado, inscriptos);
+
+                result.Add(procesado);
+                result.Add(inscriptos);
+                result.Add(100);
+                result.Add(percentageInscriptos);
+                result.Add(procesado); // False
+                result.Add(inscriptos_false);
+            } 
+            else 
+            {
+                result.Add(procesado);
+                result.Add(inscriptos);
+            }
+            return result.ToArray();
+        }
+
+        /// <summary>
+        /// Load the chart tramites for procesados or inscriptos or finished in specific range (Month, Daily, Year)
+        /// </summary>
+        /// <param name="ch"></param>
+        /// <param name="series"></param>
+        /// <param name="fecha1"></param>
+        /// <param name="fecha2"></param>
+        public static void LoadChartDetails(Chart ch, string range, string etapa, string series, DateTime fecha1, DateTime fecha2)
+        {
+            int[] details;
+
+            switch (range) 
+            {
+                case "Mes":
+                    details = FindDetailsInRange(range, etapa, fecha1, fecha2);
+                    ch.Series[series].Points.AddXY("1er semana", details[0]);
+                    ch.Series[series].Points.AddXY("2da semana", details[1]);
+                    ch.Series[series].Points.AddXY("3era semana", details[2]);
+                    ch.Series[series].Points.AddXY("4ta semana", details[3]);
+                    break;
+                case "Año":
+                    details = FindDetailsInRange(range, etapa, fecha1, fecha2);
+                    ch.Series[series].Points.AddXY("Enero", details[0]);
+                    ch.Series[series].Points.AddXY("Febrero", details[1]);
+                    ch.Series[series].Points.AddXY("Marzo", details[2]);
+                    ch.Series[series].Points.AddXY("Abril", details[3]);
+                    ch.Series[series].Points.AddXY("Mayo", details[4]);
+                    ch.Series[series].Points.AddXY("Junio", details[5]);
+                    ch.Series[series].Points.AddXY("Julio", details[6]);
+                    ch.Series[series].Points.AddXY("Agosto", details[7]);
+                    ch.Series[series].Points.AddXY("Septiembre", details[8]);
+                    ch.Series[series].Points.AddXY("Octubre", details[9]);
+                    ch.Series[series].Points.AddXY("Noviembre", details[10]);
+                    ch.Series[series].Points.AddXY("Diciembre", details[11]);
+                    break;
+            }
+        }
+        private static int[] FindDetailsInRange(string range, string etapa, DateTime fecha1, DateTime fecha2) 
+        {
+            List<int> details = new List<int>();
+
+            Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
+            int i = 4;
+            int daysToAdd = 8;
+
+            switch (range) 
+            {
+                case "Mes":
+                    i = 4;
+                    daysToAdd = 8;
+                    break;
+                case "Año":
+                    i = 12;
+                    daysToAdd = 31;
+                    break;
+            }
+            
+            for(int a = 0; a < i; a++) 
+            {
+                DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
+                DateTime dt2 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0).AddDays(daysToAdd);
+
+                int detailsToAdd = 0;
+                
+                foreach (DataRow fila in dt.data.Rows)
+                {
+                    DateTime date = (DateTime)fila[5];
+                    switch (etapa) 
+                    {
+                        case "Procesados":
+                            if (date >= dt1 & date < dt2 & date < fecha2)
+                            {
+                                detailsToAdd++;
+                            }
+                            break;
+                        case "Inscriptos":
+                            if (date >= dt1 & date < dt2 & date < fecha2)
+                            {
+                                if ((bool)fila[9] == true)
+                                {
+                                    detailsToAdd++;
+                                }
+                            }
+                            break;
+                        case "Finalizados":
+                            if (date >= dt1 & date < dt2 & date < fecha2)
+                            {
+                                if ((bool)fila[9] == true)
+                                {
+                                    detailsToAdd++;
+                                }
+                            }
+                            break;
+                    }
+                }
+
+                details.Add(detailsToAdd);
+            }
+
+            // Return si es mensual {1er semana, 2da, 3era, 4ta}
+            // Return si es anual {1er mes, ...}
+            return details.ToArray();
+        }
+
+        /// <summary>
+        /// Load the chart tramites for simple (procesados o inscriptos) or Load the chart tramites for complex (procesados & inscriptos & finished)
+        /// </summary>
+        /// <param name="ch"></param>
+        /// <param name="series"></param>
+        /// <param name="fecha1"></param>
+        /// <param name="fecha2"></param>
+        /// <param name="isSimple"></param>
+        public static void LoadChartEmployee(Chart ch, string[] series, DateTime fecha1, DateTime fecha2, bool isSimple = true)
         {
             DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
             DateTime dt2 = new DateTime(fecha2.Year, fecha2.Month, fecha2.Day, 0, 0, 0);
 
             LinkedListNode<Employee> employee = tmp.First;
-            
+
             int[] etapasMes;
+
             // Display stastic for all of employees into the chart series1
             for (int i = 0; i < tmp.Count; i++)
             {
                 if (employee.Value.nombre != "Admin S.")
                 {
-                    if (isSimple) 
+                    if (isSimple)
                     {
                         // By month and simple chart
                         etapasMes = FindEtapas(employee.Value.nombre, employee.Value.tramitesMes, dt1, dt2);
                         int total = etapasMes[1] + etapasMes[0];
 
                         ch.Series[series[0]].Points.AddXY(employee.Value.nombre, total);
-                    } 
-                    else 
+                    }
+                    else
                     {
                         // By month and all the chart
                         etapasMes = FindEtapas(employee.Value.nombre, employee.Value.tramitesMes, dt1, dt2);
@@ -52,6 +330,9 @@ namespace LayerPresentation.Clases
                 employee = employee.Next;
             }
         }
+
+        #region Old Methods
+        // Old 
         public static void DashboardChartEmployeesErrores(Chart ch, string[] series, DateTime fecha1, DateTime fecha2)
         {
             DateTime dt1 = new DateTime(fecha1.Year, fecha1.Month, fecha1.Day, 0, 0, 0);
@@ -173,6 +454,7 @@ namespace LayerPresentation.Clases
             Mes[0].Text = procesado.ToString();
             Mes[1].Text = inscriptos.ToString();
         }   
+        
         // Carga el total de: errores, parciales y totales (AYER, HOY, MES)
         public static void DashboardStatisticErrores(Label[] Hoy, Label[] Mes, Label[] Hist) 
         {
@@ -814,5 +1096,6 @@ namespace LayerPresentation.Clases
 
             return c;
         }
+        #endregion
     }
 }
