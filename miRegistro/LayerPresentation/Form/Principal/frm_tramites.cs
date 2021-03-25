@@ -1,4 +1,5 @@
-﻿using LayerBusiness;
+﻿using Bunifu.Framework.UI;
+using LayerBusiness;
 using LayerPresentation.Clases;
 using LayerSoporte.Cache;
 using MaterialDesignColors.Recommended;
@@ -22,6 +23,7 @@ namespace LayerPresentation
         {
             InitializeComponent();
             LoadDataTramites();
+            LoadDashboard();
         }
         // Variable
         private Button _currentBtn;
@@ -42,8 +44,13 @@ namespace LayerPresentation
         }
         private void LoadDataTramites() 
         {
-            LoadTramites(Cn_HandlerTramites.current);
-            LoadDashboard();
+            for(int i = 0; i < 10; i++) 
+            {
+                dg_tramites.Rows.Add("01", "AA000XX", "Transferencia", "Procesado", "Matias", "", "Sin errrores", "27/20/14", "Sin observaciones");
+                dg_tramites.Rows.Add("22", "AA000XX", "Inscripcion inicial", "Procesado", "Matias", "", "Sin errrores", "27/20/14", "Sin observaciones");
+                dg_tramites.Rows.Add("10", "AA000XX", "Desarrollo de software", "Procesado e inscripto", "Matias", "Noeli", "Error en la cedula", "27/20/14", "Todas las observaciones posibles");
+            }
+            //LoadTramites(Cn_HandlerTramites.current);
         }
         // Charge priviliges when intialize the form
         private void LoadAccessPrivileges() 
@@ -70,10 +77,7 @@ namespace LayerPresentation
         private void LoadDashboard()
         {
             Tuple<int,int,int,int> dt = Cn_HandlerTramites.data.tramitesCache.GetTramitesHistory();
-            lbl_totaltramites.Text = dt.Item1.ToString();
-            lbl_totalprocesados.Text = dt.Item2.ToString();
-            lbl_totalinscriptos.Text = dt.Item3.ToString();
-            lbl_totalerrores.Text = dt.Item4.ToString();
+            lbl_totaltramites.Text = "(" + dt.Item1.ToString() + "tramites)";
         }
 
         /// <summary>
@@ -153,38 +157,6 @@ namespace LayerPresentation
             frm_tramites_query frm = new frm_tramites_query(nombre, query, this);
             frm.Show();
         }
-
-        // Radio button categories
-        private void radioButton_simple_Click(object sender, EventArgs e)
-        {
-            if (radioButton_simple.Checked)
-            {
-                //MessageBox.Show("Opcion ya seleccionada!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                radioButton_simple.Checked = true;
-                // Display panel
-                ActivatePanelQuery(query_group_1);
-
-                radioButton_complejas.Checked = false;
-            }
-        }
-        private void radioButton_complejas_Click(object sender, EventArgs e)
-        {
-            if (radioButton_complejas.Checked)
-            {
-                //MessageBox.Show("Opcion ya seleccionada!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                radioButton_complejas.Checked = true;
-                // Display panel
-                ActivatePanelQuery(query_group_2);
-
-                radioButton_simple.Checked = false;
-            }
-        }
        
         // Refresh
         private void btn_refreshdata_Click(object sender, EventArgs e)
@@ -249,13 +221,7 @@ namespace LayerPresentation
             d = data;
             int id = selectedId;
 
-            frm_tramites_insertar frm = new frm_tramites_insertar(true, id, d, this);
-            frm.Show();
-        }
-        private void btn_insertar_Click(object sender, EventArgs e)
-        {
-            string[] d = null;
-            frm_tramites_insertar frm = new frm_tramites_insertar(false, 0, d, this);
+            frm_tramites_insertar frm = new frm_tramites_insertar();
             frm.Show();
         }
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -291,27 +257,11 @@ namespace LayerPresentation
             frm_tramites_error frm = new frm_tramites_error(id, data[2] ,data[0], data[7], this);
             frm.Show();
         }
-        private void btn_inscribir_Click(object sender, EventArgs e)
-        {
-            if (checkBox_inscripto.Checked) 
-            {
-                frm_tramites_inscribir_mult frm = new frm_tramites_inscribir_mult(DateTime.Today, this);
-                frm.Show();
-            } 
-            else 
-            {
-                var data = GetDataFromSelectedIndex();
-                int id = selectedId;
-
-                frm_tramites_inscribir frm = new frm_tramites_inscribir(id, data[2], data[0], data[7], this);
-                frm.Show();
-            }
-        }
         
         // Paint the datagridview
         private void dg_tramites_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Inscripto")
+           /* if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Inscripto")
             {
                 if (Convert.ToBoolean(e.Value) == true)
                 {
@@ -344,7 +294,7 @@ namespace LayerPresentation
                     e.CellStyle.ForeColor = Color.White;
                     e.CellStyle.BackColor = Color.FromArgb(242, 145, 61);
                 }
-            }
+            }*/
         }
         private void btn_savepdf_Click(object sender, EventArgs e)
         {
@@ -356,8 +306,80 @@ namespace LayerPresentation
         }
         private void frm_tramites_consultas_Load(object sender, EventArgs e)
         {
-            ActivatePanelQuery(query_group_1);
-            LoadAccessPrivileges();
+            //ActivatePanelQuery(query_group_1);
+            //LoadAccessPrivileges();
+        }
+
+        private void button_acciones_Click(object sender, EventArgs e)
+        {
+            if (pn_acciones.Visible)
+            {
+                pn_acciones.Visible = false;
+            }
+            else
+            {
+                ShowMoreOptions(pn_acciones);
+            }
+        }
+        private void ShowMoreOptions(BunifuCards panel)
+        {
+            panel.Visible = false;
+            TransitionPnMore.Show(panel);
+        }
+
+        private void button_consultar_Click(object sender, EventArgs e)
+        {
+            if (pn_consulta.Visible)
+            {
+                pn_consulta.Visible = false;
+            }
+            else
+            {
+                ShowMoreOptions(pn_consulta);
+            }
+        }
+
+        private void button_cancelarconsulta_Click(object sender, EventArgs e)
+        {
+            if (pn_consulta.Visible)
+            {
+                pn_consulta.Visible = false;
+                // Delete fields
+            }
+        }
+
+        // Multiples
+        private void btn_insertar_Click_1(object sender, EventArgs e)
+        {
+            frm_tramites_insertar frm = new frm_tramites_insertar();
+            frm.Show();
+        }
+        private void btn_inscribir_Click_1(object sender, EventArgs e)
+        {
+            frm_tramites_inscribir_mult frm = new frm_tramites_inscribir_mult(DateTime.Today, this);
+            frm.Show();
+        }
+        private void btn_refreshdata_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        // Acciones
+        private void btn_error_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        private void btn_inscribirsingle_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btn_editar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        private void btn_eliminar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

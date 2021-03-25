@@ -23,8 +23,8 @@ namespace LayerPresentation
 
         private bool validatePassword = false;
 
-        private Image check = LayerPresentation.Properties.Resources.check;
-        private Image checkOff = LayerPresentation.Properties.Resources.cerrar;
+        private Image check = LayerPresentation.Properties.Resources.r_right_arrow;
+        private Image checkOff = LayerPresentation.Properties.Resources.r_right_arrow;
 
         private bool isGood = false;
 
@@ -339,13 +339,13 @@ namespace LayerPresentation
             {
                 if (ValidateOlderPassword(txtBox_passAntigua.Text)) 
                 {
-                    pictureBox_oldPassword.BackgroundImage = LayerPresentation.Properties.Resources.check;
-                    pictureBox_oldPassword.Visible = true;
+                    //pictureBox_oldPassword.BackgroundImage = LayerPresentation.Properties.Resources.check;
+                    //pictureBox_oldPassword.Visible = true;
                     validatePassword = true;
                 }
                 else
                 {
-                    pictureBox_oldPassword.BackgroundImage = LayerPresentation.Properties.Resources.status_red;
+                    //pictureBox_oldPassword.BackgroundImage = LayerPresentation.Properties.Resources.status_red;
                     pictureBox_oldPassword.Visible = true;
                     MessageBox.Show("Contraseña antigua incorrecta", "Atencion!");
                 }
@@ -373,11 +373,11 @@ namespace LayerPresentation
                 if(txtBox_passNueva.Text != txtBox_passAntigua.Text) 
                 {
                     pictureBox_newPassword.Visible = true;
-                    pictureBox_newPassword.BackgroundImage = LayerPresentation.Properties.Resources.check;
+                    //pictureBox_newPassword.BackgroundImage = LayerPresentation.Properties.Resources.check;
                 } else 
                 {
                     pictureBox_newPassword.Visible = true;
-                    pictureBox_newPassword.BackgroundImage = LayerPresentation.Properties.Resources.status_red;
+                    //pictureBox_newPassword.BackgroundImage = LayerPresentation.Properties.Resources.status_red;
                     MessageBox.Show("La contraeña nueva no puede ser igual a la antigua!", "Atencion!");
                 }
             }
@@ -404,12 +404,12 @@ namespace LayerPresentation
                 if(txtBox_passNueva.Text == txtBox_passNueva1.Text) 
                 {
                     pictureBox_newPassword1.Visible = true;
-                    pictureBox_newPassword1.BackgroundImage = LayerPresentation.Properties.Resources.check;
+                    //pictureBox_newPassword1.BackgroundImage = LayerPresentation.Properties.Resources.check;
                 } 
                 else 
                 {
                     pictureBox_newPassword1.Visible = true;
-                    pictureBox_newPassword1.BackgroundImage = LayerPresentation.Properties.Resources.status_red;
+                    //pictureBox_newPassword1.BackgroundImage = LayerPresentation.Properties.Resources.status_red;
                     MessageBox.Show("Las contraseñas no coinciden!", "Atencion!");
                 }
             }

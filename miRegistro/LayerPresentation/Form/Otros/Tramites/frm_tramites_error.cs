@@ -25,23 +25,19 @@ namespace LayerPresentation
         {
             InitializeComponent();
 
-            _frmTramitesPantallaCompleta = frm1;
-            _frmTramites = frm;
-
             lbl_dominio.Text = dominio;
             lbl_nombre.Text = nombre;
             lbl_fecha.Text = fecha;
-            this.id = id;
+
+            this.idTramite = id;
             lbl_id.Text = id.ToString();
 
             LoadComboBoxErrores(comboBox_tipoError);
         }
 
-        frm_tramites_pantallaCompleta _frmTramitesPantallaCompleta;
-        frm_tramites _frmTramites;
-
-        private int id;
-        private int cod_error;
+        private int idTramite;
+        private int codCategoriaError;
+        private int codEmpleado;
         private string observaciones;
 
         private void LoadComboBoxErrores(ComboBox cb)
@@ -54,108 +50,131 @@ namespace LayerPresentation
             cb.DataSource = dt;
         }
 
-        // Initialize variables previous to charge the error to the id tramite
-        private bool InitializeVariables()
-        {
-            bool isOk = true;
-            if(textBox1.Text == "" || textBox1.Text == "Ingrese las observaciones del error") 
-            {
-                MessageBox.Show("Ingrese las observaciones del tramite!", "Atencion!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                isOk = false;
-                return isOk;
-            } else 
-            {
-                observaciones = textBox1.Text;
-            }
-            // Tipo de error
-            switch (comboBox_tipoError.Text)
-            {
-                case "Error Parcial":
-                    cod_error = 1;
-                    break;
-                case "Error Total":
-                    cod_error = 2;
-                    break;
-                default:
-                    cod_error = 1;
-                    break;
-            }
-
-            return isOk;
-        }
         private void DeleteFields()
         {
-            textBox1.Text = "Ingrese las observaciones del error";
+            txtbox_observaciones.Text = "Ingrese las observaciones del error";
             comboBox_tipoError.SelectedIndex = 0;
+            comboBox_empleadoerror.SelectedIndex = 0;
         }
 
         private void RefreshData() 
         {
-            if (_frmTramites != null)
+            /*if (_frmTramites != null)
             {
                 _frmTramites.RefreshAll();
             }
             if (_frmTramitesPantallaCompleta != null)
             {
                 _frmTramitesPantallaCompleta.RefreshDataTramites();
-            }
-        }
-        private void btn_cargar_Click(object sender, EventArgs e)
-        {
-            if (InitializeVariables())
-            {
-                try
-                {
-                    int cod = 0;
-                    if (checkBox_errores.Checked) 
-                    {
-                        cod = 1;
-                    }
-                    Utilities_Common.layerBusiness.cn_tramites.actualizarError(id, observaciones, cod, cod_error);
-                    DeleteFields();
-                    RefreshData();
-
-                    frm_successdialog f = new frm_successdialog(2);
-                    f.Show();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
-                finally 
-                {
-                    this.Close();
-                }
-            }
+            }*/
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Ingrese las observaciones del error")
+            if (txtbox_observaciones.Text == "Ingrese las observaciones del error")
             {
-                textBox1.Text = "";
-                textBox1.ForeColor = Color.Black;
+                txtbox_observaciones.Text = "";
+                txtbox_observaciones.ForeColor = Color.Black;
             }
         }
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+            if (txtbox_observaciones.Text == "")
             {
-                textBox1.Text = "Ingrese las observaciones del error";
-                textBox1.ForeColor = Color.LightGray;
+                txtbox_observaciones.Text = "Ingrese las observaciones del error";
+                txtbox_observaciones.ForeColor = Color.LightGray;
             }
         }
 
-        private void btn_close_Click(object sender, EventArgs e)
+        private void btn_c1_siguiente_Click(object sender, EventArgs e)
+        {
+            tab.SelectedIndex = 1;
+            c1.Checked = true;
+        }
+
+        private void btn_c2_volver_Click(object sender, EventArgs e)
+        {
+            tab.SelectedIndex = 0;
+        }
+
+        bool ValidarTabDetallesError()
+        {
+            bool s = true;
+            if (comboBox_tipoError.SelectedIndex < 0 || comboBox_empleadoerror.SelectedIndex < 0)
+            {
+                s = false;
+                return s;
+            }
+            if (txtbox_observaciones.Text != "" || txtbox_observaciones.Text != "Ingrese las observaciones del error")
+            {
+                s = false;
+                return s;
+            }
+            return s;
+        }
+
+        bool CargarError() 
+        {
+            bool result = true;
+            InitializeVariables();
+            try
+            {
+                Utilities_Common.layerBusiness.cn_tramites.actualizarError(idTramite, observaciones, 1, codCategoriaError);
+                DeleteFields();
+                //RefreshData();
+
+                frm_successdialog f = new frm_successdialog(2);
+                f.Show();
+            }
+            catch (Exception ex)
+            {
+                result = false;
+                MessageBox.Show(ex.ToString());
+            }
+            return result;
+        }
+
+        private void InitializeVariables()
+        {
+            int codError = Convert.ToInt32(comboBox_tipoError.SelectedValue.ToString());
+            codCategoriaError = codError;
+
+
+            int codEmpleado = Convert.ToInt32(comboBox_empleadoerror.SelectedValue.ToString());
+            this.codEmpleado = codEmpleado;
+
+            observaciones = textBox_observaciones.Text.ToLower();
+        }
+
+        private void btn_c2_siguiente_Click(object sender, EventArgs e)
+        {
+            // Cargar error
+            if (ValidarTabDetallesError()) 
+            {
+                if (CargarError()) 
+                {
+                    tab.SelectedIndex = 2;
+                    c2.Checked = true;
+                    c3.Checked = true;
+                }
+            }
+        }
+        private void btn_c4_ingresartramite_Click(object sender, EventArgs e)
+        {
+            tab.SelectedIndex = 0;
+            DeleteFields();
+        }
+
+        private void frm_tramites_error_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void btn_close_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
-        private void barra_titulo_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-        private void frm_tramites_error_Load(object sender, EventArgs e)
+
+        private void bunifuSeparator4_Load(object sender, EventArgs e)
         {
 
         }

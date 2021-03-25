@@ -19,9 +19,11 @@ namespace LayerBusiness
         private DataTramites d;
 
         #region Crud
-        public void insertarTramite(string dominio, DateTime fecha, int cod_proceso, int cod_empleadoProceso, string observaciones, int error, int cod_error)
+        // Variables de carga
+
+        public void insertarTramite(Tuple<string, DateTime, int> datosTramite, Tuple<int, int, int, int> datosDetalleTramite, Tuple<int, int, int, string> datosObservacionTramite)
         {
-            _cdObject.Insert(dominio, fecha, cod_proceso, cod_empleadoProceso, observaciones, error, cod_error);
+            _cdObject.Insert(datosTramite.Item1, datosTramite.Item2, datosTramite.Item3, datosDetalleTramite.Item2, datosObservacionTramite.Item4, datosObservacionTramite.Item1, datosObservacionTramite.Item2);
         }
         public void InsertarCategoria(string nombre)
         {

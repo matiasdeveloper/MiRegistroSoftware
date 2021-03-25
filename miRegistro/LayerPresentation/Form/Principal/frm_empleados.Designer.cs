@@ -3655,7 +3655,6 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.BackgroundImage = global::LayerPresentation.Properties.Resources.employee;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Location = new System.Drawing.Point(209, 5);
             this.pictureBox9.Name = "pictureBox9";

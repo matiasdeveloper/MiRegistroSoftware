@@ -102,5 +102,10 @@ namespace LayerPresentation
             this.Opacity = 0;
             timer1.Start();
         }
+
+        private void btn_c1_siguiente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

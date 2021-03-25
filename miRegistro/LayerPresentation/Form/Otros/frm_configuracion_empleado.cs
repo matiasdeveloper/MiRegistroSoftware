@@ -39,8 +39,8 @@ namespace LayerPresentation
         List<string> empleado;
 
         private bool isGood = true;
-        private Image check = LayerPresentation.Properties.Resources.check;
-        private Image checkOff = LayerPresentation.Properties.Resources.cerrar;
+        private Image check = LayerPresentation.Properties.Resources.r_negative;
+        private Image checkOff = LayerPresentation.Properties.Resources.r_negative;
 
         private void InitializeData() 
         {

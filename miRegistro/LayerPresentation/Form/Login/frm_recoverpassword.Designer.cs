@@ -257,7 +257,6 @@
             // 
             // btn_minimize
             // 
-            this.btn_minimize.BackgroundImage = global::LayerPresentation.Properties.Resources.minimize;
             this.btn_minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_minimize.Location = new System.Drawing.Point(576, 6);
@@ -270,7 +269,6 @@
             // 
             // btn_close
             // 
-            this.btn_close.BackgroundImage = global::LayerPresentation.Properties.Resources.close;
             this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_close.Location = new System.Drawing.Point(597, 6);
@@ -284,7 +282,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.BackgroundImage = global::LayerPresentation.Properties.Resources.glaciar;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 32);
@@ -307,7 +304,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::LayerPresentation.Properties.Resources.logo;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Help;
             this.pictureBox1.Location = new System.Drawing.Point(591, 370);

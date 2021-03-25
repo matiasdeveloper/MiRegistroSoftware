@@ -22,12 +22,15 @@ namespace LayerPresentation
         {
             InitializeComponent();
 
+            currentSidebarButtonSelected = selectedbutton;
             currentSidebarButton = btn_dashboard;
+
             ActivateButtonSidebar(btn_dashboard);
             OpenFormInPanel(new frm_escritorio());
         }
 
         private protected BunifuFlatButton currentSidebarButton;
+        private protected Panel currentSidebarButtonSelected;
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         public extern static void ReleaseCapture();
@@ -45,10 +48,15 @@ namespace LayerPresentation
             this.pn_contenedor.Tag = fh;
             fh.Show();
         }
-        private void SidebarON()
+        private void ShowSidebar()
         {
             pn_sidebar.Visible = false;
             TransitionSidebar.Show(pn_sidebar);
+        }
+        private void ShowMoreOptions(BunifuCards panel)
+        {
+            panel.Visible = false;
+            TransitionPnMore.Show(panel);
         }
 
         private void ActivateButtonSidebar(object senderBtn)
@@ -57,22 +65,20 @@ namespace LayerPresentation
             {
                 DisableButtonSidebar();
                 currentSidebarButton = (BunifuFlatButton)senderBtn;
-                currentSidebarButton.Normalcolor = Color.Black;
-                currentSidebarButton.selected = true;
+                currentSidebarButton.Textcolor = Color.FromArgb(1, 58, 122, 252);
+                currentSidebarButtonSelected.Location = new Point(currentSidebarButtonSelected.Location.X, currentSidebarButton.Location.Y);
             }
         }
         private void DisableButtonSidebar()
         {
             if (currentSidebarButton != null)
             {
-                currentSidebarButton.selected = false;
-                currentSidebarButton.Normalcolor = Color.Transparent;
+                currentSidebarButton.Textcolor = Color.FromArgb(1, 107, 107, 107);
             }
         }
         
         private void LoadUserData()
         {
-            lbl_electronico.Text = UserLoginCache.Email;
             lbl_nombre.Text = UserLoginCache.Nombre;
             lbl_permisos.Text = UserLoginCache.Priveleges;
             lbl_lastacess.Text = UserLoginCache.Fecha_UltimoAcceso.ToShortDateString();
@@ -86,29 +92,21 @@ namespace LayerPresentation
         }
         public void LoadUserColor(Color color) 
         {
-            pn_sidebar.GradientBottomLeft = color;
-            pn_sidebar.GradientBottomRight = color;
-            pn_sidebar.GradientTopLeft = color;
-            pn_sidebar.GradientTopRight = color;
-
-            pn_tittle_bar.GradientBottomRight = color;
-            pn_tittle_bar.GradientTopLeft = color;
+            //pn_sidebar.GradientBottomLeft = color;
+            //pn_sidebar.GradientBottomRight = color;
+            //pn_sidebar.GradientTopLeft = color;
+            //pn_sidebar.GradientTopRight = color;
 
             //pn_buttons.GradientBottomLeft = color;
             //pn_buttons.GradientBottomRight = color;
-            pn_buttons.GradientTopLeft = color;
-            pn_buttons.GradientTopRight = color;
 
             //pn_infouser.GradientBottomLeft = color;
             //pn_userinfo.GradientBottomRight = color;
-            pn_infouser.GradientTopRight = color;
-            pn_infouser.GradientTopLeft = color;
 
             //pn_brand.GradientBottomLeft = color;
             //pn_brand.GradientBottomRight = color;
-            pn_brand.GradientTopLeft = color;
-            pn_brand.GradientTopRight = color;
         }
+        
         private protected void Logout()
         {
             if (MessageBox.Show("Estas seguro que deseas cerrar sesion?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -176,13 +174,39 @@ namespace LayerPresentation
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        private void btn_close_Click(object sender, EventArgs e)
+
+        private void btn_moreaccount_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (pn_moreoptions.Visible)
+            {
+                pn_moreoptions.Visible = false;
+            }
+            else
+            {
+                ShowMoreOptions(pn_moreoptions);
+            }
         }
-        private void btn_minimize_Click(object sender, EventArgs e)
+        private void btn_notify_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            if (pn_notification.Visible)
+            {
+                pn_notification.Visible = false;
+            }
+            else
+            {
+                ShowMoreOptions(pn_notification);
+            }
+        }
+        private void btn_account_Click(object sender, EventArgs e)
+        {
+            if (pn_moreoptions.Visible)
+            {
+                pn_moreoptions.Visible = false;
+            }
+            else
+            {
+                ShowMoreOptions(pn_moreoptions);
+            }
         }
         
         private void Frm_principal_Load(object sender, EventArgs e)
@@ -194,11 +218,21 @@ namespace LayerPresentation
             
             Alertas.BuscarAlertas();
 
-            SidebarON();
+            ShowSidebar();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
             txtBox_fecha.Text = DateTime.Now.ToString();
+        }
+
+        private void pn_sidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

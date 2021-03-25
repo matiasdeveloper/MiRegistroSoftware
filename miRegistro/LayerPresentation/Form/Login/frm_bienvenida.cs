@@ -53,8 +53,8 @@ namespace LayerPresentation
             if (count == 0)
             {
                 if (this.Opacity < 1) this.Opacity += 0.05;
-                progressBar1.Value += 1;
-                if (progressBar1.Value == 100)
+                bunifuProgressBar1.Value += 1;
+                if (bunifuProgressBar1.Value == 100)
                 {
                     timer1.Stop();
                     timer1.Start();
@@ -84,6 +84,11 @@ namespace LayerPresentation
 
             this.ShowIcon = true;
             this.ShowInTaskbar = false;
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

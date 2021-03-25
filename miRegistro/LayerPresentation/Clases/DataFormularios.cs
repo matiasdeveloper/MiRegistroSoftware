@@ -81,5 +81,30 @@ namespace LayerPresentation.Clases
             }
             return cat;
         }
+
+        /// <summary>
+        /// Get the stock for element [1- Auto, 2- Moto, 3- Varios]
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public static int CountStockForElement(string name)
+        {
+            int stockBajo = 0;
+
+            DataTable formularios = CreatorTables.FormulariosTable();
+            foreach (DataRow fila in data.Rows)
+            {
+                if ((string)fila[2] == name)
+                {
+                    if((int)fila[4] <= LayerPresentation.Properties.Settings.Default.StockBajo) 
+                    {
+                        stockBajo++;
+                    }
+                }
+            }
+
+            return stockBajo;
+        }
     }
 }
