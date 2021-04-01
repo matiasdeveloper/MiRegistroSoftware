@@ -102,39 +102,6 @@ namespace LayerPresentation
             FindSavedUser();
         }
 
-        private void btn_login_Click_1(object sender, EventArgs e)
-        {
-            Cn_Usuarios _cnUsuarios = new Cn_Usuarios();
-
-            if (_cnUsuarios.verificarAuntetificacion(txtBox_user.Text, txtBox_pass.Text) > 0)
-            {
-                // Charge data from user
-                RememberUser();
-                _cnUsuarios.IntializeLoginUserData(txtBox_user.Text);
-
-                // Update last access
-                _cnUsuarios.UpdateLastAccess(UserLoginCache.IdUser, DateTime.Now);
-                UserLoginCache.Fecha_UltimoAcceso = DateTime.Now;
-
-                // Charge Bienvenida
-                frm_principal _objUI = new frm_principal();
-                _objUI.FormClosed += Logout;
-
-                frm_bienvenida objUI = new frm_bienvenida(_objUI, this);
-                objUI.Show();
-
-                this.Opacity = 0;
-                this.ShowIcon = false;
-                this.ShowInTaskbar = false;
-
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Usuario o contraseña incorrectos! \nVuelve a intentarlo");
-            }
-        }
-
         private void txtBox_user_Enter_1(object sender, EventArgs e)
         {
             if (txtBox_user.Text == "usuarioejemplo")
@@ -254,6 +221,39 @@ namespace LayerPresentation
                 txtBox_pass.Text = "8 caracteres o mas";
                 txtBox_pass.ForeColor = Color.Silver;
                 txtBox_pass.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            Cn_Usuarios _cnUsuarios = new Cn_Usuarios();
+
+            if (_cnUsuarios.verificarAuntetificacion(txtBox_user.Text, txtBox_pass.Text) > 0)
+            {
+                // Charge data from user
+                RememberUser();
+                _cnUsuarios.IntializeLoginUserData(txtBox_user.Text);
+
+                // Update last access
+                _cnUsuarios.UpdateLastAccess(UserLoginCache.IdUser, DateTime.Now);
+                UserLoginCache.Fecha_UltimoAcceso = DateTime.Now;
+
+                // Charge Bienvenida
+                frm_principal _objUI = new frm_principal();
+                _objUI.FormClosed += Logout;
+
+                frm_bienvenida objUI = new frm_bienvenida(_objUI, this);
+                objUI.Show();
+
+                this.Opacity = 0;
+                this.ShowIcon = false;
+                this.ShowInTaskbar = false;
+
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos! \nVuelve a intentarlo");
             }
         }
     }

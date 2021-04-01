@@ -29,37 +29,74 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_formularios));
-            this.label1 = new System.Windows.Forms.Label();
-            this.cb_categorias = new System.Windows.Forms.ComboBox();
-            this.Stock = new System.Windows.Forms.Label();
-            this.txtBox_stock = new System.Windows.Forms.TextBox();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.panel_crud = new System.Windows.Forms.Panel();
-            this.txtBox_object = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtBox_numeracion = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_update = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel_formularios = new System.Windows.Forms.Panel();
+            this.pn_addformularios = new Bunifu.Framework.UI.BunifuCards();
+            this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cb_categorias = new Guna.UI.WinForms.GunaComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_closeadd = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_save = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton7 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton8 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.txtBox_numeracion = new Guna.UI.WinForms.GunaTextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.txtBox_stock = new Guna.UI.WinForms.GunaTextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.pn_añadirnumeracion = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton6 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.gunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.gunaTextBox7 = new Guna.UI.WinForms.GunaTextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.pn_editarnumeracion = new Bunifu.Framework.UI.BunifuCards();
+            this.btn_close_editar_numeracion = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.gunaTextBox5 = new Guna.UI.WinForms.GunaTextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.gunaTextBox6 = new Guna.UI.WinForms.GunaTextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.pn_acciones_numeracion = new Bunifu.Framework.UI.BunifuCards();
+            this.btn_actualizarnumeracion = new Guna.UI.WinForms.GunaButton();
+            this.btn_eliminarnumeracion = new Guna.UI.WinForms.GunaButton();
+            this.bunifuSeparator4 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.btn_add_numeracion = new Guna.UI.WinForms.GunaButton();
+            this.btn_acciones_numeracion = new Guna.UI.WinForms.GunaButton();
+            this.dg_numeracion = new Guna.UI.WinForms.GunaDataGridView();
+            this.ColumnNumeracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnStockDetail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_refreshdata = new Guna.UI.WinForms.GunaButton();
+            this.gunaShadowPanel4 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.dg_alertas_1 = new Guna.UI.WinForms.GunaDataGridView();
+            this.ColumnAlertaCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAlertaUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAlertaFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_add_formulario = new Guna.UI.WinForms.GunaButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_totaltramites = new System.Windows.Forms.Label();
             this.pn_exportar_formularios = new Bunifu.Framework.UI.BunifuCards();
             this.label9 = new System.Windows.Forms.Label();
             this.bunifuCheckbox2 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.gunaComboBox3 = new Guna.UI.WinForms.GunaComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_cancelarinforme = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label14 = new System.Windows.Forms.Label();
             this.bunifuCheckbox3 = new Bunifu.Framework.UI.BunifuCheckbox();
@@ -70,17 +107,12 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.bunifuSeparator6 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.pn_editar_parametros = new Bunifu.Framework.UI.BunifuCards();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btn_moreaccount = new Bunifu.Framework.UI.BunifuImageButton();
-            this.gunaSwitch1 = new Guna.UI.WinForms.GunaSwitch();
-            this.label18 = new System.Windows.Forms.Label();
             this.pn_consulta_formularios = new Bunifu.Framework.UI.BunifuCards();
             this.label32 = new System.Windows.Forms.Label();
             this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.gunaComboBox2 = new Guna.UI.WinForms.GunaComboBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.button_cancelarconsulta = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_cancelarconsulta = new Bunifu.Framework.UI.BunifuThinButton2();
             this.button_buscar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_checkboxinscripto = new System.Windows.Forms.Label();
             this.checkBox_inscripto = new Bunifu.Framework.UI.BunifuCheckbox();
@@ -91,7 +123,51 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.bunifuSeparator5 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.pn_parametros_detail = new Bunifu.Framework.UI.BunifuCards();
+            this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.combobox_clases_datagridview = new Guna.UI.WinForms.GunaComboBox();
+            this.pn_acciones_formularios = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.btn_error = new Guna.UI.WinForms.GunaButton();
+            this.btn_eliminar = new Guna.UI.WinForms.GunaButton();
+            this.btn_editar = new Guna.UI.WinForms.GunaButton();
+            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.btn_editarparametros = new Guna.UI.WinForms.GunaButton();
+            this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.label25 = new System.Windows.Forms.Label();
+            this.button_consultar = new Guna.UI.WinForms.GunaButton();
+            this.btn_exportar_formularios = new Guna.UI.WinForms.GunaButton();
+            this.btn_acciones_formularios = new Guna.UI.WinForms.GunaButton();
+            this.pn_acciones_exportar = new Bunifu.Framework.UI.BunifuCards();
+            this.btn_exportar_actual = new Guna.UI.WinForms.GunaButton();
+            this.btn_exportar_informe = new Guna.UI.WinForms.GunaButton();
+            this.bunifuSeparator7 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.dg_formularios = new Guna.UI.WinForms.GunaDataGridView();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pn_dashboard_critic = new System.Windows.Forms.Panel();
+            this.gunaShadowPanel6 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.gunaGauge6 = new Guna.UI.WinForms.GunaGauge();
+            this.gunaShadowPanel8 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.lbl_stockbajo_autos = new System.Windows.Forms.Label();
+            this.lbl_stock02 = new System.Windows.Forms.Label();
+            this.pic_stock01 = new System.Windows.Forms.PictureBox();
+            this.gunaGauge4 = new Guna.UI.WinForms.GunaGauge();
+            this.gunaShadowPanel5 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.gunaGauge5 = new Guna.UI.WinForms.GunaGauge();
+            this.pn_parametros_details = new Bunifu.Framework.UI.BunifuCards();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaShadowPanel3 = new Guna.UI.WinForms.GunaShadowPanel();
             this.label21 = new System.Windows.Forms.Label();
@@ -108,277 +184,86 @@
             this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.panel_interacted = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btn_stock = new System.Windows.Forms.Button();
-            this.panel_stock = new System.Windows.Forms.Panel();
-            this.txtBox_categoria_stock = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtBox_objeto = new System.Windows.Forms.TextBox();
-            this.txtBox_stockAnterior = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtBox_nuevoStock_panel = new System.Windows.Forms.Label();
-            this.txtBox_stockNuevo = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.gunaShadowPanel4 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.dg_alertas_1 = new System.Windows.Forms.DataGridView();
-            this.Cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_detalle_alerta = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
-            this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.btn_add_numeracion = new Guna.UI.WinForms.GunaButton();
-            this.pn_acciones_numeracion = new Bunifu.Framework.UI.BunifuCards();
-            this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
-            this.bunifuSeparator4 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.btn_acciones_numeracion = new Guna.UI.WinForms.GunaButton();
-            this.btn_add_formulario = new Guna.UI.WinForms.GunaButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbl_totaltramites = new System.Windows.Forms.Label();
-            this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.combobox_clases_datagridview = new Guna.UI.WinForms.GunaComboBox();
-            this.pn_acciones_exportar = new Bunifu.Framework.UI.BunifuCards();
-            this.btn_exportar_actual = new Guna.UI.WinForms.GunaButton();
-            this.btn_exportar_informe = new Guna.UI.WinForms.GunaButton();
-            this.bunifuSeparator7 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.pn_acciones_formularios = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.btn_error = new Guna.UI.WinForms.GunaButton();
-            this.btn_eliminar = new Guna.UI.WinForms.GunaButton();
-            this.btn_editar = new Guna.UI.WinForms.GunaButton();
-            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.btn_acciones_formularios = new Guna.UI.WinForms.GunaButton();
-            this.label25 = new System.Windows.Forms.Label();
-            this.dg_formularios = new Guna.UI.WinForms.GunaDataGridView();
-            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_consultar = new Guna.UI.WinForms.GunaButton();
-            this.btn_exportar_formularios = new Guna.UI.WinForms.GunaButton();
-            this.gunaShadowPanel8 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.pn_dashboard = new Guna.UI.WinForms.GunaShadowPanel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.bunifuSeparator9 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.bunifuSeparator8 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pn_editar_parametros = new Bunifu.Framework.UI.BunifuCards();
+            this.btn_closeparametros = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btn_detailsparametros = new Bunifu.Framework.UI.BunifuImageButton();
+            this.gunaSwitch1 = new Guna.UI.WinForms.GunaSwitch();
+            this.label18 = new System.Windows.Forms.Label();
             this.elipse_datagridview = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.TransitionPnMore = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.panel_crud.SuspendLayout();
+            this.Elipse_datagridview_numeracion = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel_formularios.SuspendLayout();
+            this.pn_addformularios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_closeadd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_save)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton8)).BeginInit();
+            this.pn_añadirnumeracion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
+            this.pn_editarnumeracion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_close_editar_numeracion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            this.gunaShadowPanel2.SuspendLayout();
+            this.pn_acciones_numeracion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_numeracion)).BeginInit();
+            this.gunaShadowPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_alertas_1)).BeginInit();
             this.pn_exportar_formularios.SuspendLayout();
-            this.pn_editar_parametros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_moreaccount)).BeginInit();
             this.pn_consulta_formularios.SuspendLayout();
-            this.pn_parametros_detail.SuspendLayout();
+            this.gunaShadowPanel1.SuspendLayout();
+            this.pn_acciones_formularios.SuspendLayout();
+            this.pn_acciones_exportar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_formularios)).BeginInit();
+            this.pn_dashboard_critic.SuspendLayout();
+            this.gunaShadowPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.gunaShadowPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_stock01)).BeginInit();
+            this.gunaShadowPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pn_parametros_details.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.gunaShadowPanel3.SuspendLayout();
             this.gunaShadowPanel9.SuspendLayout();
             this.gunaShadowPanel10.SuspendLayout();
-            this.panel_interacted.SuspendLayout();
-            this.panel_stock.SuspendLayout();
-            this.gunaShadowPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_alertas_1)).BeginInit();
-            this.gunaShadowPanel2.SuspendLayout();
-            this.pn_acciones_numeracion.SuspendLayout();
-            this.gunaShadowPanel1.SuspendLayout();
-            this.pn_acciones_exportar.SuspendLayout();
-            this.pn_acciones_formularios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_formularios)).BeginInit();
+            this.pn_dashboard.SuspendLayout();
+            this.pn_editar_parametros.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_closeparametros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_detailsparametros)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(8, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Categoria";
-            // 
-            // cb_categorias
-            // 
-            this.TransitionPnMore.SetDecoration(this.cb_categorias, BunifuAnimatorNS.DecorationType.None);
-            this.cb_categorias.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_categorias.FormattingEnabled = true;
-            this.cb_categorias.Location = new System.Drawing.Point(91, 6);
-            this.cb_categorias.Name = "cb_categorias";
-            this.cb_categorias.Size = new System.Drawing.Size(168, 25);
-            this.cb_categorias.TabIndex = 7;
-            // 
-            // Stock
-            // 
-            this.Stock.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.Stock, BunifuAnimatorNS.DecorationType.None);
-            this.Stock.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Stock.ForeColor = System.Drawing.Color.Black;
-            this.Stock.Location = new System.Drawing.Point(24, 102);
-            this.Stock.Name = "Stock";
-            this.Stock.Size = new System.Drawing.Size(42, 17);
-            this.Stock.TabIndex = 3;
-            this.Stock.Text = "Stock";
-            // 
-            // txtBox_stock
-            // 
-            this.txtBox_stock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TransitionPnMore.SetDecoration(this.txtBox_stock, BunifuAnimatorNS.DecorationType.None);
-            this.txtBox_stock.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_stock.Location = new System.Drawing.Point(91, 103);
-            this.txtBox_stock.Name = "txtBox_stock";
-            this.txtBox_stock.Size = new System.Drawing.Size(167, 23);
-            this.txtBox_stock.TabIndex = 10;
-            this.txtBox_stock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_stock_KeyPress);
-            // 
-            // btn_save
-            // 
-            this.btn_save.BackColor = System.Drawing.Color.White;
-            this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TransitionPnMore.SetDecoration(this.btn_save, BunifuAnimatorNS.DecorationType.None);
-            this.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
-            this.btn_save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_save.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.ForeColor = System.Drawing.Color.Black;
-            this.btn_save.Location = new System.Drawing.Point(305, 48);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(190, 23);
-            this.btn_save.TabIndex = 11;
-            this.btn_save.Text = "Guardar nuevo registro";
-            this.btn_save.UseVisualStyleBackColor = false;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // panel_crud
-            // 
-            this.panel_crud.BackColor = System.Drawing.Color.White;
-            this.panel_crud.Controls.Add(this.txtBox_object);
-            this.panel_crud.Controls.Add(this.label8);
-            this.panel_crud.Controls.Add(this.txtBox_numeracion);
-            this.panel_crud.Controls.Add(this.label7);
-            this.panel_crud.Controls.Add(this.cb_categorias);
-            this.panel_crud.Controls.Add(this.Stock);
-            this.panel_crud.Controls.Add(this.txtBox_stock);
-            this.panel_crud.Controls.Add(this.label1);
-            this.TransitionPnMore.SetDecoration(this.panel_crud, BunifuAnimatorNS.DecorationType.None);
-            this.panel_crud.Location = new System.Drawing.Point(12, 45);
-            this.panel_crud.Name = "panel_crud";
-            this.panel_crud.Size = new System.Drawing.Size(268, 133);
-            this.panel_crud.TabIndex = 2;
-            // 
-            // txtBox_object
-            // 
-            this.txtBox_object.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TransitionPnMore.SetDecoration(this.txtBox_object, BunifuAnimatorNS.DecorationType.None);
-            this.txtBox_object.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_object.Location = new System.Drawing.Point(92, 38);
-            this.txtBox_object.Name = "txtBox_object";
-            this.txtBox_object.ReadOnly = true;
-            this.txtBox_object.Size = new System.Drawing.Size(166, 23);
-            this.txtBox_object.TabIndex = 8;
-            this.txtBox_object.Text = "Auto";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(5, 72);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 17);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Numearcion";
-            // 
-            // txtBox_numeracion
-            // 
-            this.txtBox_numeracion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TransitionPnMore.SetDecoration(this.txtBox_numeracion, BunifuAnimatorNS.DecorationType.None);
-            this.txtBox_numeracion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_numeracion.Location = new System.Drawing.Point(92, 70);
-            this.txtBox_numeracion.Name = "txtBox_numeracion";
-            this.txtBox_numeracion.Size = new System.Drawing.Size(166, 23);
-            this.txtBox_numeracion.TabIndex = 9;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(17, 42);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 17);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Objeto";
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.BackColor = System.Drawing.Color.White;
-            this.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TransitionPnMore.SetDecoration(this.btn_delete, BunifuAnimatorNS.DecorationType.None);
-            this.btn_delete.Enabled = false;
-            this.btn_delete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
-            this.btn_delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_delete.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.ForeColor = System.Drawing.Color.Black;
-            this.btn_delete.Location = new System.Drawing.Point(305, 118);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(190, 23);
-            this.btn_delete.TabIndex = 13;
-            this.btn_delete.Text = "Eliminar registro seleccionado";
-            this.btn_delete.UseVisualStyleBackColor = false;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
-            // 
-            // btn_update
-            // 
-            this.btn_update.BackColor = System.Drawing.Color.White;
-            this.btn_update.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TransitionPnMore.SetDecoration(this.btn_update, BunifuAnimatorNS.DecorationType.None);
-            this.btn_update.Enabled = false;
-            this.btn_update.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
-            this.btn_update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_update.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.ForeColor = System.Drawing.Color.Black;
-            this.btn_update.Location = new System.Drawing.Point(305, 83);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(190, 23);
-            this.btn_update.TabIndex = 12;
-            this.btn_update.Text = "Actualizar Registro Seleccionado";
-            this.btn_update.UseVisualStyleBackColor = false;
-            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(330, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 17);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Realize la operacion";
             // 
             // panel_formularios
             // 
             this.panel_formularios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.panel_formularios.Controls.Add(this.pn_editar_parametros);
-            this.panel_formularios.Controls.Add(this.pn_consulta_formularios);
-            this.panel_formularios.Controls.Add(this.pn_parametros_detail);
-            this.panel_formularios.Controls.Add(this.panel_interacted);
-            this.panel_formularios.Controls.Add(this.gunaShadowPanel4);
+            this.panel_formularios.Controls.Add(this.pn_addformularios);
+            this.panel_formularios.Controls.Add(this.pn_añadirnumeracion);
+            this.panel_formularios.Controls.Add(this.pn_editarnumeracion);
             this.panel_formularios.Controls.Add(this.gunaShadowPanel2);
+            this.panel_formularios.Controls.Add(this.btn_refreshdata);
+            this.panel_formularios.Controls.Add(this.gunaShadowPanel4);
             this.panel_formularios.Controls.Add(this.btn_add_formulario);
             this.panel_formularios.Controls.Add(this.label3);
             this.panel_formularios.Controls.Add(this.lbl_totaltramites);
-            this.panel_formularios.Controls.Add(this.gunaShadowPanel1);
-            this.panel_formularios.Controls.Add(this.gunaShadowPanel8);
             this.panel_formularios.Controls.Add(this.pn_exportar_formularios);
+            this.panel_formularios.Controls.Add(this.pn_consulta_formularios);
+            this.panel_formularios.Controls.Add(this.gunaShadowPanel1);
+            this.panel_formularios.Controls.Add(this.pn_dashboard_critic);
+            this.panel_formularios.Controls.Add(this.pn_parametros_details);
+            this.panel_formularios.Controls.Add(this.pn_dashboard);
+            this.panel_formularios.Controls.Add(this.pn_editar_parametros);
             this.TransitionPnMore.SetDecoration(this.panel_formularios, BunifuAnimatorNS.DecorationType.None);
             this.panel_formularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_formularios.ForeColor = System.Drawing.SystemColors.Control;
@@ -386,6 +271,958 @@
             this.panel_formularios.Name = "panel_formularios";
             this.panel_formularios.Size = new System.Drawing.Size(1005, 677);
             this.panel_formularios.TabIndex = 13;
+            this.panel_formularios.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_formularios_Paint);
+            // 
+            // pn_addformularios
+            // 
+            this.pn_addformularios.BackColor = System.Drawing.Color.White;
+            this.pn_addformularios.BorderRadius = 20;
+            this.pn_addformularios.BottomSahddow = true;
+            this.pn_addformularios.color = System.Drawing.Color.LightGray;
+            this.pn_addformularios.Controls.Add(this.gunaComboBox1);
+            this.pn_addformularios.Controls.Add(this.label1);
+            this.pn_addformularios.Controls.Add(this.cb_categorias);
+            this.pn_addformularios.Controls.Add(this.label2);
+            this.pn_addformularios.Controls.Add(this.btn_closeadd);
+            this.pn_addformularios.Controls.Add(this.btn_save);
+            this.pn_addformularios.Controls.Add(this.bunifuImageButton7);
+            this.pn_addformularios.Controls.Add(this.bunifuImageButton8);
+            this.pn_addformularios.Controls.Add(this.txtBox_numeracion);
+            this.pn_addformularios.Controls.Add(this.label49);
+            this.pn_addformularios.Controls.Add(this.txtBox_stock);
+            this.pn_addformularios.Controls.Add(this.label53);
+            this.TransitionPnMore.SetDecoration(this.pn_addformularios, BunifuAnimatorNS.DecorationType.None);
+            this.pn_addformularios.LeftSahddow = true;
+            this.pn_addformularios.Location = new System.Drawing.Point(244, 50);
+            this.pn_addformularios.Name = "pn_addformularios";
+            this.pn_addformularios.RightSahddow = true;
+            this.pn_addformularios.ShadowDepth = 40;
+            this.pn_addformularios.Size = new System.Drawing.Size(701, 54);
+            this.pn_addformularios.TabIndex = 275;
+            this.pn_addformularios.Visible = false;
+            // 
+            // gunaComboBox1
+            // 
+            this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaComboBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaComboBox1.BorderColor = System.Drawing.Color.White;
+            this.gunaComboBox1.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.gunaComboBox1, BunifuAnimatorNS.DecorationType.None);
+            this.gunaComboBox1.DisplayMember = "Nombre";
+            this.gunaComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.gunaComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gunaComboBox1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaComboBox1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaComboBox1.ForeColor = System.Drawing.Color.DarkGray;
+            this.gunaComboBox1.FormattingEnabled = true;
+            this.gunaComboBox1.Location = new System.Drawing.Point(51, 16);
+            this.gunaComboBox1.Name = "gunaComboBox1";
+            this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.gunaComboBox1.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.gunaComboBox1.Radius = 7;
+            this.gunaComboBox1.Size = new System.Drawing.Size(90, 28);
+            this.gunaComboBox1.TabIndex = 279;
+            this.gunaComboBox1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.gunaComboBox1.ValueMember = "cod_tipo";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(8, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 22);
+            this.label1.TabIndex = 280;
+            this.label1.Text = "Clase";
+            // 
+            // cb_categorias
+            // 
+            this.cb_categorias.BackColor = System.Drawing.Color.Transparent;
+            this.cb_categorias.BaseColor = System.Drawing.Color.White;
+            this.cb_categorias.BorderColor = System.Drawing.Color.White;
+            this.cb_categorias.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.cb_categorias, BunifuAnimatorNS.DecorationType.None);
+            this.cb_categorias.DisplayMember = "Nombre";
+            this.cb_categorias.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_categorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_categorias.FocusedColor = System.Drawing.Color.Empty;
+            this.cb_categorias.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_categorias.ForeColor = System.Drawing.Color.DarkGray;
+            this.cb_categorias.FormattingEnabled = true;
+            this.cb_categorias.Location = new System.Drawing.Point(216, 16);
+            this.cb_categorias.Name = "cb_categorias";
+            this.cb_categorias.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.cb_categorias.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cb_categorias.Radius = 7;
+            this.cb_categorias.Size = new System.Drawing.Size(114, 28);
+            this.cb_categorias.TabIndex = 278;
+            this.cb_categorias.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.cb_categorias.ValueMember = "cod_tipo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.label2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(147, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 22);
+            this.label2.TabIndex = 278;
+            this.label2.Text = "Categoria";
+            // 
+            // btn_closeadd
+            // 
+            this.btn_closeadd.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.btn_closeadd, BunifuAnimatorNS.DecorationType.None);
+            this.btn_closeadd.Image = ((System.Drawing.Image)(resources.GetObject("btn_closeadd.Image")));
+            this.btn_closeadd.ImageActive = null;
+            this.btn_closeadd.Location = new System.Drawing.Point(669, 16);
+            this.btn_closeadd.Name = "btn_closeadd";
+            this.btn_closeadd.Size = new System.Drawing.Size(23, 23);
+            this.btn_closeadd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_closeadd.TabIndex = 277;
+            this.btn_closeadd.TabStop = false;
+            this.btn_closeadd.Zoom = 9;
+            this.btn_closeadd.Click += new System.EventHandler(this.btn_closeadd_Click);
+            // 
+            // btn_save
+            // 
+            this.btn_save.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.btn_save, BunifuAnimatorNS.DecorationType.None);
+            this.btn_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.Image")));
+            this.btn_save.ImageActive = null;
+            this.btn_save.Location = new System.Drawing.Point(639, 16);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(23, 23);
+            this.btn_save.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_save.TabIndex = 276;
+            this.btn_save.TabStop = false;
+            this.btn_save.Zoom = 9;
+            // 
+            // bunifuImageButton7
+            // 
+            this.bunifuImageButton7.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.bunifuImageButton7, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton7.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton7.Image")));
+            this.bunifuImageButton7.ImageActive = null;
+            this.bunifuImageButton7.Location = new System.Drawing.Point(954, 16);
+            this.bunifuImageButton7.Name = "bunifuImageButton7";
+            this.bunifuImageButton7.Size = new System.Drawing.Size(31, 23);
+            this.bunifuImageButton7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton7.TabIndex = 252;
+            this.bunifuImageButton7.TabStop = false;
+            this.bunifuImageButton7.Zoom = 9;
+            // 
+            // bunifuImageButton8
+            // 
+            this.bunifuImageButton8.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.bunifuImageButton8, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton8.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton8.Image")));
+            this.bunifuImageButton8.ImageActive = null;
+            this.bunifuImageButton8.Location = new System.Drawing.Point(917, 16);
+            this.bunifuImageButton8.Name = "bunifuImageButton8";
+            this.bunifuImageButton8.Size = new System.Drawing.Size(31, 23);
+            this.bunifuImageButton8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton8.TabIndex = 251;
+            this.bunifuImageButton8.TabStop = false;
+            this.bunifuImageButton8.Zoom = 9;
+            // 
+            // txtBox_numeracion
+            // 
+            this.txtBox_numeracion.BackColor = System.Drawing.Color.Transparent;
+            this.txtBox_numeracion.BaseColor = System.Drawing.Color.White;
+            this.txtBox_numeracion.BorderColor = System.Drawing.Color.White;
+            this.txtBox_numeracion.BorderSize = 1;
+            this.txtBox_numeracion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TransitionPnMore.SetDecoration(this.txtBox_numeracion, BunifuAnimatorNS.DecorationType.None);
+            this.txtBox_numeracion.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtBox_numeracion.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtBox_numeracion.FocusedForeColor = System.Drawing.Color.Black;
+            this.txtBox_numeracion.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_numeracion.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtBox_numeracion.Location = new System.Drawing.Point(408, 15);
+            this.txtBox_numeracion.Name = "txtBox_numeracion";
+            this.txtBox_numeracion.PasswordChar = '\0';
+            this.txtBox_numeracion.Radius = 7;
+            this.txtBox_numeracion.Size = new System.Drawing.Size(108, 28);
+            this.txtBox_numeracion.TabIndex = 240;
+            this.txtBox_numeracion.Text = "Ingrese aqui";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label49, BunifuAnimatorNS.DecorationType.None);
+            this.label49.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.Color.Gray;
+            this.label49.Location = new System.Drawing.Point(329, 20);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(83, 22);
+            this.label49.TabIndex = 241;
+            this.label49.Text = "Numeracion";
+            // 
+            // txtBox_stock
+            // 
+            this.txtBox_stock.BackColor = System.Drawing.Color.Transparent;
+            this.txtBox_stock.BaseColor = System.Drawing.Color.White;
+            this.txtBox_stock.BorderColor = System.Drawing.Color.White;
+            this.txtBox_stock.BorderSize = 1;
+            this.txtBox_stock.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TransitionPnMore.SetDecoration(this.txtBox_stock, BunifuAnimatorNS.DecorationType.None);
+            this.txtBox_stock.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtBox_stock.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtBox_stock.FocusedForeColor = System.Drawing.Color.Black;
+            this.txtBox_stock.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_stock.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtBox_stock.Location = new System.Drawing.Point(557, 14);
+            this.txtBox_stock.Name = "txtBox_stock";
+            this.txtBox_stock.PasswordChar = '\0';
+            this.txtBox_stock.Radius = 7;
+            this.txtBox_stock.Size = new System.Drawing.Size(78, 28);
+            this.txtBox_stock.TabIndex = 242;
+            this.txtBox_stock.Text = "Stock aqui";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label53, BunifuAnimatorNS.DecorationType.None);
+            this.label53.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.Color.Gray;
+            this.label53.Location = new System.Drawing.Point(515, 19);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(42, 22);
+            this.label53.TabIndex = 243;
+            this.label53.Text = "Stock";
+            // 
+            // pn_añadirnumeracion
+            // 
+            this.pn_añadirnumeracion.BackColor = System.Drawing.Color.White;
+            this.pn_añadirnumeracion.BorderRadius = 20;
+            this.pn_añadirnumeracion.BottomSahddow = true;
+            this.pn_añadirnumeracion.color = System.Drawing.Color.WhiteSmoke;
+            this.pn_añadirnumeracion.Controls.Add(this.bunifuImageButton4);
+            this.pn_añadirnumeracion.Controls.Add(this.bunifuImageButton5);
+            this.pn_añadirnumeracion.Controls.Add(this.bunifuImageButton6);
+            this.pn_añadirnumeracion.Controls.Add(this.gunaTextBox4);
+            this.pn_añadirnumeracion.Controls.Add(this.label33);
+            this.pn_añadirnumeracion.Controls.Add(this.gunaTextBox7);
+            this.pn_añadirnumeracion.Controls.Add(this.label40);
+            this.TransitionPnMore.SetDecoration(this.pn_añadirnumeracion, BunifuAnimatorNS.DecorationType.None);
+            this.pn_añadirnumeracion.LeftSahddow = true;
+            this.pn_añadirnumeracion.Location = new System.Drawing.Point(648, 113);
+            this.pn_añadirnumeracion.Name = "pn_añadirnumeracion";
+            this.pn_añadirnumeracion.RightSahddow = true;
+            this.pn_añadirnumeracion.ShadowDepth = 40;
+            this.pn_añadirnumeracion.Size = new System.Drawing.Size(349, 54);
+            this.pn_añadirnumeracion.TabIndex = 264;
+            this.pn_añadirnumeracion.Visible = false;
+            // 
+            // bunifuImageButton4
+            // 
+            this.bunifuImageButton4.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.bunifuImageButton4, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
+            this.bunifuImageButton4.ImageActive = null;
+            this.bunifuImageButton4.Location = new System.Drawing.Point(318, 15);
+            this.bunifuImageButton4.Name = "bunifuImageButton4";
+            this.bunifuImageButton4.Size = new System.Drawing.Size(21, 21);
+            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton4.TabIndex = 276;
+            this.bunifuImageButton4.TabStop = false;
+            this.bunifuImageButton4.Zoom = 9;
+            // 
+            // bunifuImageButton5
+            // 
+            this.bunifuImageButton5.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.bunifuImageButton5, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
+            this.bunifuImageButton5.ImageActive = null;
+            this.bunifuImageButton5.Location = new System.Drawing.Point(954, 16);
+            this.bunifuImageButton5.Name = "bunifuImageButton5";
+            this.bunifuImageButton5.Size = new System.Drawing.Size(31, 23);
+            this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton5.TabIndex = 252;
+            this.bunifuImageButton5.TabStop = false;
+            this.bunifuImageButton5.Zoom = 9;
+            // 
+            // bunifuImageButton6
+            // 
+            this.bunifuImageButton6.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.bunifuImageButton6, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton6.Image")));
+            this.bunifuImageButton6.ImageActive = null;
+            this.bunifuImageButton6.Location = new System.Drawing.Point(917, 16);
+            this.bunifuImageButton6.Name = "bunifuImageButton6";
+            this.bunifuImageButton6.Size = new System.Drawing.Size(31, 23);
+            this.bunifuImageButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton6.TabIndex = 251;
+            this.bunifuImageButton6.TabStop = false;
+            this.bunifuImageButton6.Zoom = 9;
+            // 
+            // gunaTextBox4
+            // 
+            this.gunaTextBox4.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTextBox4.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox4.BorderColor = System.Drawing.Color.White;
+            this.gunaTextBox4.BorderSize = 1;
+            this.gunaTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TransitionPnMore.SetDecoration(this.gunaTextBox4, BunifuAnimatorNS.DecorationType.None);
+            this.gunaTextBox4.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox4.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox4.FocusedForeColor = System.Drawing.Color.Black;
+            this.gunaTextBox4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTextBox4.ForeColor = System.Drawing.Color.DarkGray;
+            this.gunaTextBox4.Location = new System.Drawing.Point(88, 13);
+            this.gunaTextBox4.Name = "gunaTextBox4";
+            this.gunaTextBox4.PasswordChar = '\0';
+            this.gunaTextBox4.Radius = 7;
+            this.gunaTextBox4.Size = new System.Drawing.Size(108, 28);
+            this.gunaTextBox4.TabIndex = 240;
+            this.gunaTextBox4.Text = "Ingrese aqui";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label33, BunifuAnimatorNS.DecorationType.None);
+            this.label33.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.Gray;
+            this.label33.Location = new System.Drawing.Point(9, 18);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(83, 22);
+            this.label33.TabIndex = 241;
+            this.label33.Text = "Numeracion";
+            // 
+            // gunaTextBox7
+            // 
+            this.gunaTextBox7.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTextBox7.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox7.BorderColor = System.Drawing.Color.White;
+            this.gunaTextBox7.BorderSize = 1;
+            this.gunaTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TransitionPnMore.SetDecoration(this.gunaTextBox7, BunifuAnimatorNS.DecorationType.None);
+            this.gunaTextBox7.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox7.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox7.FocusedForeColor = System.Drawing.Color.Black;
+            this.gunaTextBox7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTextBox7.ForeColor = System.Drawing.Color.DarkGray;
+            this.gunaTextBox7.Location = new System.Drawing.Point(240, 12);
+            this.gunaTextBox7.Name = "gunaTextBox7";
+            this.gunaTextBox7.PasswordChar = '\0';
+            this.gunaTextBox7.Radius = 7;
+            this.gunaTextBox7.Size = new System.Drawing.Size(78, 28);
+            this.gunaTextBox7.TabIndex = 242;
+            this.gunaTextBox7.Text = "Stock aqui";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label40, BunifuAnimatorNS.DecorationType.None);
+            this.label40.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.Gray;
+            this.label40.Location = new System.Drawing.Point(198, 17);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(42, 22);
+            this.label40.TabIndex = 243;
+            this.label40.Text = "Stock";
+            // 
+            // pn_editarnumeracion
+            // 
+            this.pn_editarnumeracion.BackColor = System.Drawing.Color.White;
+            this.pn_editarnumeracion.BorderRadius = 20;
+            this.pn_editarnumeracion.BottomSahddow = true;
+            this.pn_editarnumeracion.color = System.Drawing.Color.WhiteSmoke;
+            this.pn_editarnumeracion.Controls.Add(this.btn_close_editar_numeracion);
+            this.pn_editarnumeracion.Controls.Add(this.bunifuImageButton1);
+            this.pn_editarnumeracion.Controls.Add(this.bunifuImageButton2);
+            this.pn_editarnumeracion.Controls.Add(this.gunaTextBox5);
+            this.pn_editarnumeracion.Controls.Add(this.label46);
+            this.pn_editarnumeracion.Controls.Add(this.gunaTextBox6);
+            this.pn_editarnumeracion.Controls.Add(this.label52);
+            this.TransitionPnMore.SetDecoration(this.pn_editarnumeracion, BunifuAnimatorNS.DecorationType.None);
+            this.pn_editarnumeracion.LeftSahddow = true;
+            this.pn_editarnumeracion.Location = new System.Drawing.Point(653, 277);
+            this.pn_editarnumeracion.Name = "pn_editarnumeracion";
+            this.pn_editarnumeracion.RightSahddow = true;
+            this.pn_editarnumeracion.ShadowDepth = 40;
+            this.pn_editarnumeracion.Size = new System.Drawing.Size(349, 54);
+            this.pn_editarnumeracion.TabIndex = 263;
+            this.pn_editarnumeracion.Visible = false;
+            // 
+            // btn_close_editar_numeracion
+            // 
+            this.btn_close_editar_numeracion.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.btn_close_editar_numeracion, BunifuAnimatorNS.DecorationType.None);
+            this.btn_close_editar_numeracion.Image = ((System.Drawing.Image)(resources.GetObject("btn_close_editar_numeracion.Image")));
+            this.btn_close_editar_numeracion.ImageActive = null;
+            this.btn_close_editar_numeracion.Location = new System.Drawing.Point(318, 15);
+            this.btn_close_editar_numeracion.Name = "btn_close_editar_numeracion";
+            this.btn_close_editar_numeracion.Size = new System.Drawing.Size(23, 23);
+            this.btn_close_editar_numeracion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_close_editar_numeracion.TabIndex = 276;
+            this.btn_close_editar_numeracion.TabStop = false;
+            this.btn_close_editar_numeracion.Zoom = 9;
+            this.btn_close_editar_numeracion.Click += new System.EventHandler(this.btn_close_editar_numeracion_Click);
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.bunifuImageButton1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(954, 16);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(31, 23);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 252;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 9;
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.bunifuImageButton2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(917, 16);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(31, 23);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 251;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 9;
+            // 
+            // gunaTextBox5
+            // 
+            this.gunaTextBox5.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTextBox5.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox5.BorderColor = System.Drawing.Color.White;
+            this.gunaTextBox5.BorderSize = 1;
+            this.gunaTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TransitionPnMore.SetDecoration(this.gunaTextBox5, BunifuAnimatorNS.DecorationType.None);
+            this.gunaTextBox5.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox5.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox5.FocusedForeColor = System.Drawing.Color.Black;
+            this.gunaTextBox5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTextBox5.ForeColor = System.Drawing.Color.DarkGray;
+            this.gunaTextBox5.Location = new System.Drawing.Point(88, 13);
+            this.gunaTextBox5.Name = "gunaTextBox5";
+            this.gunaTextBox5.PasswordChar = '\0';
+            this.gunaTextBox5.Radius = 7;
+            this.gunaTextBox5.Size = new System.Drawing.Size(108, 28);
+            this.gunaTextBox5.TabIndex = 240;
+            this.gunaTextBox5.Text = "AAA15JX45";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label46, BunifuAnimatorNS.DecorationType.None);
+            this.label46.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.Gray;
+            this.label46.Location = new System.Drawing.Point(9, 18);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(83, 22);
+            this.label46.TabIndex = 241;
+            this.label46.Text = "Numeracion";
+            // 
+            // gunaTextBox6
+            // 
+            this.gunaTextBox6.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTextBox6.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox6.BorderColor = System.Drawing.Color.White;
+            this.gunaTextBox6.BorderSize = 1;
+            this.gunaTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TransitionPnMore.SetDecoration(this.gunaTextBox6, BunifuAnimatorNS.DecorationType.None);
+            this.gunaTextBox6.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox6.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox6.FocusedForeColor = System.Drawing.Color.Black;
+            this.gunaTextBox6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTextBox6.ForeColor = System.Drawing.Color.DarkGray;
+            this.gunaTextBox6.Location = new System.Drawing.Point(240, 12);
+            this.gunaTextBox6.Name = "gunaTextBox6";
+            this.gunaTextBox6.PasswordChar = '\0';
+            this.gunaTextBox6.Radius = 7;
+            this.gunaTextBox6.Size = new System.Drawing.Size(76, 28);
+            this.gunaTextBox6.TabIndex = 242;
+            this.gunaTextBox6.Text = "1450.00";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label52, BunifuAnimatorNS.DecorationType.None);
+            this.label52.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.Color.Gray;
+            this.label52.Location = new System.Drawing.Point(198, 17);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(42, 22);
+            this.label52.TabIndex = 243;
+            this.label52.Text = "Stock";
+            // 
+            // gunaShadowPanel2
+            // 
+            this.gunaShadowPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel2.BaseColor = System.Drawing.Color.White;
+            this.gunaShadowPanel2.Controls.Add(this.pn_acciones_numeracion);
+            this.gunaShadowPanel2.Controls.Add(this.btn_add_numeracion);
+            this.gunaShadowPanel2.Controls.Add(this.btn_acciones_numeracion);
+            this.gunaShadowPanel2.Controls.Add(this.dg_numeracion);
+            this.TransitionPnMore.SetDecoration(this.gunaShadowPanel2, BunifuAnimatorNS.DecorationType.None);
+            this.gunaShadowPanel2.Location = new System.Drawing.Point(684, 53);
+            this.gunaShadowPanel2.Name = "gunaShadowPanel2";
+            this.gunaShadowPanel2.Radius = 7;
+            this.gunaShadowPanel2.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel2.ShadowDepth = 30;
+            this.gunaShadowPanel2.ShadowShift = 3;
+            this.gunaShadowPanel2.Size = new System.Drawing.Size(306, 407);
+            this.gunaShadowPanel2.TabIndex = 261;
+            // 
+            // pn_acciones_numeracion
+            // 
+            this.pn_acciones_numeracion.BackColor = System.Drawing.Color.White;
+            this.pn_acciones_numeracion.BorderRadius = 20;
+            this.pn_acciones_numeracion.BottomSahddow = true;
+            this.pn_acciones_numeracion.color = System.Drawing.Color.White;
+            this.pn_acciones_numeracion.Controls.Add(this.btn_actualizarnumeracion);
+            this.pn_acciones_numeracion.Controls.Add(this.btn_eliminarnumeracion);
+            this.pn_acciones_numeracion.Controls.Add(this.bunifuSeparator4);
+            this.TransitionPnMore.SetDecoration(this.pn_acciones_numeracion, BunifuAnimatorNS.DecorationType.None);
+            this.pn_acciones_numeracion.LeftSahddow = true;
+            this.pn_acciones_numeracion.Location = new System.Drawing.Point(74, 54);
+            this.pn_acciones_numeracion.Name = "pn_acciones_numeracion";
+            this.pn_acciones_numeracion.RightSahddow = true;
+            this.pn_acciones_numeracion.ShadowDepth = 30;
+            this.pn_acciones_numeracion.Size = new System.Drawing.Size(222, 71);
+            this.pn_acciones_numeracion.TabIndex = 260;
+            this.pn_acciones_numeracion.Visible = false;
+            // 
+            // btn_actualizarnumeracion
+            // 
+            this.btn_actualizarnumeracion.AnimationHoverSpeed = 0.07F;
+            this.btn_actualizarnumeracion.AnimationSpeed = 0.03F;
+            this.btn_actualizarnumeracion.BackColor = System.Drawing.Color.Transparent;
+            this.btn_actualizarnumeracion.BaseColor = System.Drawing.Color.White;
+            this.btn_actualizarnumeracion.BorderColor = System.Drawing.Color.White;
+            this.btn_actualizarnumeracion.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_actualizarnumeracion, BunifuAnimatorNS.DecorationType.None);
+            this.btn_actualizarnumeracion.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_actualizarnumeracion.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_actualizarnumeracion.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_actualizarnumeracion.ForeColor = System.Drawing.Color.Black;
+            this.btn_actualizarnumeracion.Image = ((System.Drawing.Image)(resources.GetObject("btn_actualizarnumeracion.Image")));
+            this.btn_actualizarnumeracion.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_actualizarnumeracion.Location = new System.Drawing.Point(3, 4);
+            this.btn_actualizarnumeracion.Name = "btn_actualizarnumeracion";
+            this.btn_actualizarnumeracion.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_actualizarnumeracion.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btn_actualizarnumeracion.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_actualizarnumeracion.OnHoverImage = null;
+            this.btn_actualizarnumeracion.OnPressedColor = System.Drawing.Color.White;
+            this.btn_actualizarnumeracion.Radius = 7;
+            this.btn_actualizarnumeracion.Size = new System.Drawing.Size(216, 28);
+            this.btn_actualizarnumeracion.TabIndex = 251;
+            this.btn_actualizarnumeracion.Text = "Actualizar numeracion";
+            this.btn_actualizarnumeracion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_actualizarnumeracion.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_actualizarnumeracion.Click += new System.EventHandler(this.btn_actualizarnumeracion_Click);
+            // 
+            // btn_eliminarnumeracion
+            // 
+            this.btn_eliminarnumeracion.AnimationHoverSpeed = 0.07F;
+            this.btn_eliminarnumeracion.AnimationSpeed = 0.03F;
+            this.btn_eliminarnumeracion.BackColor = System.Drawing.Color.Transparent;
+            this.btn_eliminarnumeracion.BaseColor = System.Drawing.Color.White;
+            this.btn_eliminarnumeracion.BorderColor = System.Drawing.Color.White;
+            this.btn_eliminarnumeracion.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_eliminarnumeracion, BunifuAnimatorNS.DecorationType.None);
+            this.btn_eliminarnumeracion.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_eliminarnumeracion.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_eliminarnumeracion.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminarnumeracion.ForeColor = System.Drawing.Color.Black;
+            this.btn_eliminarnumeracion.Image = ((System.Drawing.Image)(resources.GetObject("btn_eliminarnumeracion.Image")));
+            this.btn_eliminarnumeracion.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_eliminarnumeracion.Location = new System.Drawing.Point(3, 38);
+            this.btn_eliminarnumeracion.Name = "btn_eliminarnumeracion";
+            this.btn_eliminarnumeracion.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_eliminarnumeracion.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btn_eliminarnumeracion.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_eliminarnumeracion.OnHoverImage = null;
+            this.btn_eliminarnumeracion.OnPressedColor = System.Drawing.Color.White;
+            this.btn_eliminarnumeracion.Radius = 7;
+            this.btn_eliminarnumeracion.Size = new System.Drawing.Size(216, 28);
+            this.btn_eliminarnumeracion.TabIndex = 248;
+            this.btn_eliminarnumeracion.Text = "Eliminar numeracion";
+            this.btn_eliminarnumeracion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_eliminarnumeracion.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_eliminarnumeracion.Click += new System.EventHandler(this.btn_eliminarnumeracion_Click);
+            // 
+            // bunifuSeparator4
+            // 
+            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
+            this.TransitionPnMore.SetDecoration(this.bunifuSeparator4, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuSeparator4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.bunifuSeparator4.LineThickness = 1;
+            this.bunifuSeparator4.Location = new System.Drawing.Point(-31, 19);
+            this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.bunifuSeparator4.Name = "bunifuSeparator4";
+            this.bunifuSeparator4.Size = new System.Drawing.Size(253, 30);
+            this.bunifuSeparator4.TabIndex = 255;
+            this.bunifuSeparator4.Transparency = 70;
+            this.bunifuSeparator4.Vertical = false;
+            // 
+            // btn_add_numeracion
+            // 
+            this.btn_add_numeracion.AnimationHoverSpeed = 0.07F;
+            this.btn_add_numeracion.AnimationSpeed = 0.03F;
+            this.btn_add_numeracion.BackColor = System.Drawing.Color.Transparent;
+            this.btn_add_numeracion.BaseColor = System.Drawing.Color.White;
+            this.btn_add_numeracion.BorderColor = System.Drawing.Color.Silver;
+            this.btn_add_numeracion.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_add_numeracion, BunifuAnimatorNS.DecorationType.None);
+            this.btn_add_numeracion.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_add_numeracion.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_add_numeracion.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_numeracion.ForeColor = System.Drawing.Color.Black;
+            this.btn_add_numeracion.Image = ((System.Drawing.Image)(resources.GetObject("btn_add_numeracion.Image")));
+            this.btn_add_numeracion.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_add_numeracion.Location = new System.Drawing.Point(13, 21);
+            this.btn_add_numeracion.Name = "btn_add_numeracion";
+            this.btn_add_numeracion.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_add_numeracion.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_add_numeracion.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_add_numeracion.OnHoverImage = null;
+            this.btn_add_numeracion.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_add_numeracion.Radius = 7;
+            this.btn_add_numeracion.Size = new System.Drawing.Size(178, 28);
+            this.btn_add_numeracion.TabIndex = 262;
+            this.btn_add_numeracion.Text = "Añadir numeracion";
+            this.btn_add_numeracion.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_add_numeracion.Click += new System.EventHandler(this.btn_add_numeracion_Click);
+            // 
+            // btn_acciones_numeracion
+            // 
+            this.btn_acciones_numeracion.AnimationHoverSpeed = 0.07F;
+            this.btn_acciones_numeracion.AnimationSpeed = 0.03F;
+            this.btn_acciones_numeracion.BackColor = System.Drawing.Color.Transparent;
+            this.btn_acciones_numeracion.BaseColor = System.Drawing.Color.White;
+            this.btn_acciones_numeracion.BorderColor = System.Drawing.Color.Silver;
+            this.btn_acciones_numeracion.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_acciones_numeracion, BunifuAnimatorNS.DecorationType.None);
+            this.btn_acciones_numeracion.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_acciones_numeracion.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_acciones_numeracion.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_acciones_numeracion.ForeColor = System.Drawing.Color.Black;
+            this.btn_acciones_numeracion.Image = ((System.Drawing.Image)(resources.GetObject("btn_acciones_numeracion.Image")));
+            this.btn_acciones_numeracion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btn_acciones_numeracion.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_acciones_numeracion.Location = new System.Drawing.Point(197, 21);
+            this.btn_acciones_numeracion.Name = "btn_acciones_numeracion";
+            this.btn_acciones_numeracion.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_acciones_numeracion.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_acciones_numeracion.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_acciones_numeracion.OnHoverImage = null;
+            this.btn_acciones_numeracion.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_acciones_numeracion.Radius = 7;
+            this.btn_acciones_numeracion.Size = new System.Drawing.Size(98, 28);
+            this.btn_acciones_numeracion.TabIndex = 261;
+            this.btn_acciones_numeracion.Text = "Acciones";
+            this.btn_acciones_numeracion.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_acciones_numeracion.Click += new System.EventHandler(this.btn_acciones_numeracion_Click);
+            // 
+            // dg_numeracion
+            // 
+            this.dg_numeracion.AllowUserToAddRows = false;
+            this.dg_numeracion.AllowUserToDeleteRows = false;
+            this.dg_numeracion.AllowUserToResizeColumns = false;
+            this.dg_numeracion.AllowUserToResizeRows = false;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            this.dg_numeracion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            this.dg_numeracion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dg_numeracion.BackgroundColor = System.Drawing.Color.White;
+            this.dg_numeracion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dg_numeracion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dg_numeracion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_numeracion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            this.dg_numeracion.ColumnHeadersHeight = 30;
+            this.dg_numeracion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dg_numeracion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnNumeracion,
+            this.ColumnStockDetail});
+            this.TransitionPnMore.SetDecoration(this.dg_numeracion, BunifuAnimatorNS.DecorationType.None);
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_numeracion.DefaultCellStyle = dataGridViewCellStyle23;
+            this.dg_numeracion.EnableHeadersVisualStyles = false;
+            this.dg_numeracion.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dg_numeracion.Location = new System.Drawing.Point(10, 56);
+            this.dg_numeracion.MultiSelect = false;
+            this.dg_numeracion.Name = "dg_numeracion";
+            this.dg_numeracion.ReadOnly = true;
+            this.dg_numeracion.RowHeadersVisible = false;
+            this.dg_numeracion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dg_numeracion.RowTemplate.Height = 30;
+            this.dg_numeracion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dg_numeracion.Size = new System.Drawing.Size(286, 342);
+            this.dg_numeracion.TabIndex = 263;
+            this.dg_numeracion.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.dg_numeracion.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dg_numeracion.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dg_numeracion.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dg_numeracion.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dg_numeracion.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dg_numeracion.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dg_numeracion.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dg_numeracion.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
+            this.dg_numeracion.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dg_numeracion.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dg_numeracion.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Gray;
+            this.dg_numeracion.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dg_numeracion.ThemeStyle.HeaderStyle.Height = 30;
+            this.dg_numeracion.ThemeStyle.ReadOnly = true;
+            this.dg_numeracion.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dg_numeracion.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dg_numeracion.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dg_numeracion.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dg_numeracion.ThemeStyle.RowsStyle.Height = 30;
+            this.dg_numeracion.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dg_numeracion.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // ColumnNumeracion
+            // 
+            this.ColumnNumeracion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnNumeracion.FillWeight = 27.7284F;
+            this.ColumnNumeracion.HeaderText = "Numeracion";
+            this.ColumnNumeracion.Name = "ColumnNumeracion";
+            this.ColumnNumeracion.ReadOnly = true;
+            this.ColumnNumeracion.Width = 176;
+            // 
+            // ColumnStockDetail
+            // 
+            this.ColumnStockDetail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnStockDetail.FillWeight = 337.9311F;
+            this.ColumnStockDetail.HeaderText = "Stock";
+            this.ColumnStockDetail.Name = "ColumnStockDetail";
+            this.ColumnStockDetail.ReadOnly = true;
+            // 
+            // btn_refreshdata
+            // 
+            this.btn_refreshdata.AnimationHoverSpeed = 0.07F;
+            this.btn_refreshdata.AnimationSpeed = 0.03F;
+            this.btn_refreshdata.BackColor = System.Drawing.Color.Transparent;
+            this.btn_refreshdata.BaseColor = System.Drawing.Color.White;
+            this.btn_refreshdata.BorderColor = System.Drawing.Color.Silver;
+            this.btn_refreshdata.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_refreshdata, BunifuAnimatorNS.DecorationType.None);
+            this.btn_refreshdata.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_refreshdata.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_refreshdata.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_refreshdata.ForeColor = System.Drawing.Color.Black;
+            this.btn_refreshdata.Image = ((System.Drawing.Image)(resources.GetObject("btn_refreshdata.Image")));
+            this.btn_refreshdata.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_refreshdata.Location = new System.Drawing.Point(946, 19);
+            this.btn_refreshdata.Name = "btn_refreshdata";
+            this.btn_refreshdata.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_refreshdata.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_refreshdata.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_refreshdata.OnHoverImage = null;
+            this.btn_refreshdata.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_refreshdata.Radius = 7;
+            this.btn_refreshdata.Size = new System.Drawing.Size(36, 28);
+            this.btn_refreshdata.TabIndex = 274;
+            this.btn_refreshdata.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_refreshdata.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            // 
+            // gunaShadowPanel4
+            // 
+            this.gunaShadowPanel4.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel4.BaseColor = System.Drawing.Color.White;
+            this.gunaShadowPanel4.Controls.Add(this.label31);
+            this.gunaShadowPanel4.Controls.Add(this.dg_alertas_1);
+            this.TransitionPnMore.SetDecoration(this.gunaShadowPanel4, BunifuAnimatorNS.DecorationType.None);
+            this.gunaShadowPanel4.Location = new System.Drawing.Point(686, 466);
+            this.gunaShadowPanel4.Name = "gunaShadowPanel4";
+            this.gunaShadowPanel4.Radius = 7;
+            this.gunaShadowPanel4.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel4.ShadowDepth = 20;
+            this.gunaShadowPanel4.ShadowShift = 3;
+            this.gunaShadowPanel4.Size = new System.Drawing.Size(307, 199);
+            this.gunaShadowPanel4.TabIndex = 263;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label31, BunifuAnimatorNS.DecorationType.None);
+            this.label31.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.Silver;
+            this.label31.Location = new System.Drawing.Point(10, 9);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(124, 23);
+            this.label31.TabIndex = 153;
+            this.label31.Text = "Ultimas alertas";
+            // 
+            // dg_alertas_1
+            // 
+            this.dg_alertas_1.AllowUserToAddRows = false;
+            this.dg_alertas_1.AllowUserToDeleteRows = false;
+            this.dg_alertas_1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            this.dg_alertas_1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle24;
+            this.dg_alertas_1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dg_alertas_1.BackgroundColor = System.Drawing.Color.White;
+            this.dg_alertas_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dg_alertas_1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dg_alertas_1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_alertas_1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            this.dg_alertas_1.ColumnHeadersHeight = 30;
+            this.dg_alertas_1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dg_alertas_1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnAlertaCodigo,
+            this.ColumnAlertaUsuario,
+            this.ColumnAlertaFecha});
+            this.TransitionPnMore.SetDecoration(this.dg_alertas_1, BunifuAnimatorNS.DecorationType.None);
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_alertas_1.DefaultCellStyle = dataGridViewCellStyle26;
+            this.dg_alertas_1.EnableHeadersVisualStyles = false;
+            this.dg_alertas_1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dg_alertas_1.Location = new System.Drawing.Point(13, 36);
+            this.dg_alertas_1.Name = "dg_alertas_1";
+            this.dg_alertas_1.ReadOnly = true;
+            this.dg_alertas_1.RowHeadersVisible = false;
+            this.dg_alertas_1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dg_alertas_1.RowTemplate.Height = 30;
+            this.dg_alertas_1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dg_alertas_1.Size = new System.Drawing.Size(276, 150);
+            this.dg_alertas_1.TabIndex = 162;
+            this.dg_alertas_1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.dg_alertas_1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dg_alertas_1.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dg_alertas_1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dg_alertas_1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dg_alertas_1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dg_alertas_1.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dg_alertas_1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dg_alertas_1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
+            this.dg_alertas_1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dg_alertas_1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dg_alertas_1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.DarkGray;
+            this.dg_alertas_1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dg_alertas_1.ThemeStyle.HeaderStyle.Height = 30;
+            this.dg_alertas_1.ThemeStyle.ReadOnly = true;
+            this.dg_alertas_1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dg_alertas_1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dg_alertas_1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dg_alertas_1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dg_alertas_1.ThemeStyle.RowsStyle.Height = 30;
+            this.dg_alertas_1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dg_alertas_1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // ColumnAlertaCodigo
+            // 
+            this.ColumnAlertaCodigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColumnAlertaCodigo.FillWeight = 27.7284F;
+            this.ColumnAlertaCodigo.HeaderText = "Cod";
+            this.ColumnAlertaCodigo.Name = "ColumnAlertaCodigo";
+            this.ColumnAlertaCodigo.ReadOnly = true;
+            this.ColumnAlertaCodigo.Width = 60;
+            // 
+            // ColumnAlertaUsuario
+            // 
+            this.ColumnAlertaUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColumnAlertaUsuario.FillWeight = 79.10687F;
+            this.ColumnAlertaUsuario.HeaderText = "Categoria Alerta";
+            this.ColumnAlertaUsuario.Name = "ColumnAlertaUsuario";
+            this.ColumnAlertaUsuario.ReadOnly = true;
+            this.ColumnAlertaUsuario.Width = 141;
+            // 
+            // ColumnAlertaFecha
+            // 
+            this.ColumnAlertaFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnAlertaFecha.FillWeight = 27.7284F;
+            this.ColumnAlertaFecha.HeaderText = "Fecha";
+            this.ColumnAlertaFecha.Name = "ColumnAlertaFecha";
+            this.ColumnAlertaFecha.ReadOnly = true;
+            // 
+            // btn_add_formulario
+            // 
+            this.btn_add_formulario.AnimationHoverSpeed = 0.07F;
+            this.btn_add_formulario.AnimationSpeed = 0.03F;
+            this.btn_add_formulario.BackColor = System.Drawing.Color.Transparent;
+            this.btn_add_formulario.BaseColor = System.Drawing.Color.White;
+            this.btn_add_formulario.BorderColor = System.Drawing.Color.Silver;
+            this.btn_add_formulario.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_add_formulario, BunifuAnimatorNS.DecorationType.None);
+            this.btn_add_formulario.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_add_formulario.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_add_formulario.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_formulario.ForeColor = System.Drawing.Color.Black;
+            this.btn_add_formulario.Image = ((System.Drawing.Image)(resources.GetObject("btn_add_formulario.Image")));
+            this.btn_add_formulario.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_add_formulario.Location = new System.Drawing.Point(762, 19);
+            this.btn_add_formulario.Name = "btn_add_formulario";
+            this.btn_add_formulario.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_add_formulario.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_add_formulario.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_add_formulario.OnHoverImage = null;
+            this.btn_add_formulario.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_add_formulario.Radius = 7;
+            this.btn_add_formulario.Size = new System.Drawing.Size(178, 28);
+            this.btn_add_formulario.TabIndex = 255;
+            this.btn_add_formulario.Text = "Agregar formulario";
+            this.btn_add_formulario.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_add_formulario.Click += new System.EventHandler(this.btn_add_formulario_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
+            this.label3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.label3.Location = new System.Drawing.Point(13, 22);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(170, 28);
+            this.label3.TabIndex = 157;
+            this.label3.Text = "Stock Formularios";
+            // 
+            // lbl_totaltramites
+            // 
+            this.lbl_totaltramites.BackColor = System.Drawing.Color.Transparent;
+            this.TransitionPnMore.SetDecoration(this.lbl_totaltramites, BunifuAnimatorNS.DecorationType.None);
+            this.lbl_totaltramites.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_totaltramites.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_totaltramites.Location = new System.Drawing.Point(184, 25);
+            this.lbl_totaltramites.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_totaltramites.Name = "lbl_totaltramites";
+            this.lbl_totaltramites.Size = new System.Drawing.Size(186, 16);
+            this.lbl_totaltramites.TabIndex = 156;
+            this.lbl_totaltramites.Text = "(100 formularios)";
             // 
             // pn_exportar_formularios
             // 
@@ -397,7 +1234,7 @@
             this.pn_exportar_formularios.Controls.Add(this.bunifuCheckbox2);
             this.pn_exportar_formularios.Controls.Add(this.gunaComboBox3);
             this.pn_exportar_formularios.Controls.Add(this.label10);
-            this.pn_exportar_formularios.Controls.Add(this.bunifuThinButton21);
+            this.pn_exportar_formularios.Controls.Add(this.btn_cancelarinforme);
             this.pn_exportar_formularios.Controls.Add(this.bunifuThinButton22);
             this.pn_exportar_formularios.Controls.Add(this.label14);
             this.pn_exportar_formularios.Controls.Add(this.bunifuCheckbox3);
@@ -485,31 +1322,32 @@
             this.label10.TabIndex = 264;
             this.label10.Text = "Clase";
             // 
-            // bunifuThinButton21
+            // btn_cancelarinforme
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 25;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Gray;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Gray;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Cancelar";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TransitionPnMore.SetDecoration(this.bunifuThinButton21, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 25;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Gray;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Gray;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(151, 273);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(114, 36);
-            this.bunifuThinButton21.TabIndex = 263;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_cancelarinforme.ActiveBorderThickness = 1;
+            this.btn_cancelarinforme.ActiveCornerRadius = 25;
+            this.btn_cancelarinforme.ActiveFillColor = System.Drawing.Color.Gray;
+            this.btn_cancelarinforme.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_cancelarinforme.ActiveLineColor = System.Drawing.Color.Gray;
+            this.btn_cancelarinforme.BackColor = System.Drawing.Color.White;
+            this.btn_cancelarinforme.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cancelarinforme.BackgroundImage")));
+            this.btn_cancelarinforme.ButtonText = "Cancelar";
+            this.btn_cancelarinforme.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TransitionPnMore.SetDecoration(this.btn_cancelarinforme, BunifuAnimatorNS.DecorationType.None);
+            this.btn_cancelarinforme.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelarinforme.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_cancelarinforme.IdleBorderThickness = 1;
+            this.btn_cancelarinforme.IdleCornerRadius = 25;
+            this.btn_cancelarinforme.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btn_cancelarinforme.IdleForecolor = System.Drawing.Color.Gray;
+            this.btn_cancelarinforme.IdleLineColor = System.Drawing.Color.Gray;
+            this.btn_cancelarinforme.Location = new System.Drawing.Point(151, 273);
+            this.btn_cancelarinforme.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_cancelarinforme.Name = "btn_cancelarinforme";
+            this.btn_cancelarinforme.Size = new System.Drawing.Size(114, 36);
+            this.btn_cancelarinforme.TabIndex = 263;
+            this.btn_cancelarinforme.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_cancelarinforme.Click += new System.EventHandler(this.btn_cancelarinforme_Click);
             // 
             // bunifuThinButton22
             // 
@@ -673,78 +1511,6 @@
             this.bunifuSeparator6.Transparency = 70;
             this.bunifuSeparator6.Vertical = false;
             // 
-            // pn_editar_parametros
-            // 
-            this.pn_editar_parametros.BackColor = System.Drawing.Color.White;
-            this.pn_editar_parametros.BorderRadius = 25;
-            this.pn_editar_parametros.BottomSahddow = true;
-            this.pn_editar_parametros.color = System.Drawing.Color.Transparent;
-            this.pn_editar_parametros.Controls.Add(this.label5);
-            this.pn_editar_parametros.Controls.Add(this.btn_moreaccount);
-            this.pn_editar_parametros.Controls.Add(this.gunaSwitch1);
-            this.pn_editar_parametros.Controls.Add(this.label18);
-            this.TransitionPnMore.SetDecoration(this.pn_editar_parametros, BunifuAnimatorNS.DecorationType.None);
-            this.pn_editar_parametros.LeftSahddow = true;
-            this.pn_editar_parametros.Location = new System.Drawing.Point(12, 400);
-            this.pn_editar_parametros.Name = "pn_editar_parametros";
-            this.pn_editar_parametros.RightSahddow = true;
-            this.pn_editar_parametros.ShadowDepth = 30;
-            this.pn_editar_parametros.Size = new System.Drawing.Size(668, 44);
-            this.pn_editar_parametros.TabIndex = 270;
-            this.pn_editar_parametros.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
-            this.label5.Font = new System.Drawing.Font("Poppins Thin", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(194, 12);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 22);
-            this.label5.TabIndex = 247;
-            this.label5.Text = "(Formulario seleccionado)";
-            // 
-            // btn_moreaccount
-            // 
-            this.btn_moreaccount.BackColor = System.Drawing.Color.White;
-            this.TransitionPnMore.SetDecoration(this.btn_moreaccount, BunifuAnimatorNS.DecorationType.None);
-            this.btn_moreaccount.Image = ((System.Drawing.Image)(resources.GetObject("btn_moreaccount.Image")));
-            this.btn_moreaccount.ImageActive = null;
-            this.btn_moreaccount.Location = new System.Drawing.Point(623, 10);
-            this.btn_moreaccount.Name = "btn_moreaccount";
-            this.btn_moreaccount.Size = new System.Drawing.Size(31, 23);
-            this.btn_moreaccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_moreaccount.TabIndex = 211;
-            this.btn_moreaccount.TabStop = false;
-            this.btn_moreaccount.Zoom = 9;
-            // 
-            // gunaSwitch1
-            // 
-            this.gunaSwitch1.BaseColor = System.Drawing.SystemColors.Control;
-            this.gunaSwitch1.CheckedOffColor = System.Drawing.Color.DarkGray;
-            this.gunaSwitch1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.TransitionPnMore.SetDecoration(this.gunaSwitch1, BunifuAnimatorNS.DecorationType.None);
-            this.gunaSwitch1.FillColor = System.Drawing.Color.White;
-            this.gunaSwitch1.Location = new System.Drawing.Point(11, 11);
-            this.gunaSwitch1.Name = "gunaSwitch1";
-            this.gunaSwitch1.Size = new System.Drawing.Size(36, 25);
-            this.gunaSwitch1.TabIndex = 0;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label18, BunifuAnimatorNS.DecorationType.None);
-            this.label18.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.label18.Location = new System.Drawing.Point(45, 11);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(151, 23);
-            this.label18.TabIndex = 86;
-            this.label18.Text = "Parametros de alerta";
-            // 
             // pn_consulta_formularios
             // 
             this.pn_consulta_formularios.BackColor = System.Drawing.Color.White;
@@ -755,7 +1521,7 @@
             this.pn_consulta_formularios.Controls.Add(this.bunifuCheckbox1);
             this.pn_consulta_formularios.Controls.Add(this.gunaComboBox2);
             this.pn_consulta_formularios.Controls.Add(this.label36);
-            this.pn_consulta_formularios.Controls.Add(this.button_cancelarconsulta);
+            this.pn_consulta_formularios.Controls.Add(this.btn_cancelarconsulta);
             this.pn_consulta_formularios.Controls.Add(this.button_buscar);
             this.pn_consulta_formularios.Controls.Add(this.btn_checkboxinscripto);
             this.pn_consulta_formularios.Controls.Add(this.checkBox_inscripto);
@@ -843,31 +1609,32 @@
             this.label36.TabIndex = 264;
             this.label36.Text = "Clase";
             // 
-            // button_cancelarconsulta
+            // btn_cancelarconsulta
             // 
-            this.button_cancelarconsulta.ActiveBorderThickness = 1;
-            this.button_cancelarconsulta.ActiveCornerRadius = 25;
-            this.button_cancelarconsulta.ActiveFillColor = System.Drawing.Color.Gray;
-            this.button_cancelarconsulta.ActiveForecolor = System.Drawing.Color.White;
-            this.button_cancelarconsulta.ActiveLineColor = System.Drawing.Color.Gray;
-            this.button_cancelarconsulta.BackColor = System.Drawing.Color.White;
-            this.button_cancelarconsulta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_cancelarconsulta.BackgroundImage")));
-            this.button_cancelarconsulta.ButtonText = "Cancelar";
-            this.button_cancelarconsulta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TransitionPnMore.SetDecoration(this.button_cancelarconsulta, BunifuAnimatorNS.DecorationType.None);
-            this.button_cancelarconsulta.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_cancelarconsulta.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button_cancelarconsulta.IdleBorderThickness = 1;
-            this.button_cancelarconsulta.IdleCornerRadius = 25;
-            this.button_cancelarconsulta.IdleFillColor = System.Drawing.Color.Transparent;
-            this.button_cancelarconsulta.IdleForecolor = System.Drawing.Color.Gray;
-            this.button_cancelarconsulta.IdleLineColor = System.Drawing.Color.Gray;
-            this.button_cancelarconsulta.Location = new System.Drawing.Point(151, 273);
-            this.button_cancelarconsulta.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.button_cancelarconsulta.Name = "button_cancelarconsulta";
-            this.button_cancelarconsulta.Size = new System.Drawing.Size(114, 36);
-            this.button_cancelarconsulta.TabIndex = 263;
-            this.button_cancelarconsulta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_cancelarconsulta.ActiveBorderThickness = 1;
+            this.btn_cancelarconsulta.ActiveCornerRadius = 25;
+            this.btn_cancelarconsulta.ActiveFillColor = System.Drawing.Color.Gray;
+            this.btn_cancelarconsulta.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_cancelarconsulta.ActiveLineColor = System.Drawing.Color.Gray;
+            this.btn_cancelarconsulta.BackColor = System.Drawing.Color.White;
+            this.btn_cancelarconsulta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cancelarconsulta.BackgroundImage")));
+            this.btn_cancelarconsulta.ButtonText = "Cancelar";
+            this.btn_cancelarconsulta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TransitionPnMore.SetDecoration(this.btn_cancelarconsulta, BunifuAnimatorNS.DecorationType.None);
+            this.btn_cancelarconsulta.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelarconsulta.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_cancelarconsulta.IdleBorderThickness = 1;
+            this.btn_cancelarconsulta.IdleCornerRadius = 25;
+            this.btn_cancelarconsulta.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btn_cancelarconsulta.IdleForecolor = System.Drawing.Color.Gray;
+            this.btn_cancelarconsulta.IdleLineColor = System.Drawing.Color.Gray;
+            this.btn_cancelarconsulta.Location = new System.Drawing.Point(151, 273);
+            this.btn_cancelarconsulta.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_cancelarconsulta.Name = "btn_cancelarconsulta";
+            this.btn_cancelarconsulta.Size = new System.Drawing.Size(114, 36);
+            this.btn_cancelarconsulta.TabIndex = 263;
+            this.btn_cancelarconsulta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_cancelarconsulta.Click += new System.EventHandler(this.btn_cancelarconsulta_Click);
             // 
             // button_buscar
             // 
@@ -1031,828 +1798,26 @@
             this.bunifuSeparator5.Transparency = 70;
             this.bunifuSeparator5.Vertical = false;
             // 
-            // pn_parametros_detail
-            // 
-            this.pn_parametros_detail.BackColor = System.Drawing.Color.White;
-            this.pn_parametros_detail.BorderRadius = 25;
-            this.pn_parametros_detail.BottomSahddow = true;
-            this.pn_parametros_detail.color = System.Drawing.Color.Transparent;
-            this.pn_parametros_detail.Controls.Add(this.flowLayoutPanel2);
-            this.TransitionPnMore.SetDecoration(this.pn_parametros_detail, BunifuAnimatorNS.DecorationType.None);
-            this.pn_parametros_detail.LeftSahddow = true;
-            this.pn_parametros_detail.Location = new System.Drawing.Point(12, 450);
-            this.pn_parametros_detail.Name = "pn_parametros_detail";
-            this.pn_parametros_detail.RightSahddow = true;
-            this.pn_parametros_detail.ShadowDepth = 30;
-            this.pn_parametros_detail.Size = new System.Drawing.Size(668, 153);
-            this.pn_parametros_detail.TabIndex = 271;
-            this.pn_parametros_detail.Visible = false;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.gunaShadowPanel3);
-            this.flowLayoutPanel2.Controls.Add(this.gunaShadowPanel9);
-            this.flowLayoutPanel2.Controls.Add(this.gunaShadowPanel10);
-            this.TransitionPnMore.SetDecoration(this.flowLayoutPanel2, BunifuAnimatorNS.DecorationType.None);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(8, 11);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(648, 133);
-            this.flowLayoutPanel2.TabIndex = 247;
-            this.flowLayoutPanel2.Visible = false;
-            // 
-            // gunaShadowPanel3
-            // 
-            this.gunaShadowPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaShadowPanel3.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel3.Controls.Add(this.label21);
-            this.gunaShadowPanel3.Controls.Add(this.gunaTextBox1);
-            this.gunaShadowPanel3.Controls.Add(this.label24);
-            this.gunaShadowPanel3.Controls.Add(this.label26);
-            this.TransitionPnMore.SetDecoration(this.gunaShadowPanel3, BunifuAnimatorNS.DecorationType.None);
-            this.gunaShadowPanel3.Location = new System.Drawing.Point(3, 3);
-            this.gunaShadowPanel3.Name = "gunaShadowPanel3";
-            this.gunaShadowPanel3.Radius = 3;
-            this.gunaShadowPanel3.ShadowColor = System.Drawing.Color.Black;
-            this.gunaShadowPanel3.ShadowDepth = 50;
-            this.gunaShadowPanel3.ShadowShift = 2;
-            this.gunaShadowPanel3.Size = new System.Drawing.Size(643, 39);
-            this.gunaShadowPanel3.TabIndex = 246;
-            // 
-            // label21
-            // 
-            this.TransitionPnMore.SetDecoration(this.label21, BunifuAnimatorNS.DecorationType.None);
-            this.label21.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.label21.Location = new System.Drawing.Point(274, 9);
-            this.label21.Name = "label21";
-            this.label21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label21.Size = new System.Drawing.Size(275, 22);
-            this.label21.TabIndex = 246;
-            this.label21.Text = "Menor o igual que";
-            // 
-            // gunaTextBox1
-            // 
-            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderSize = 1;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TransitionPnMore.SetDecoration(this.gunaTextBox1, BunifuAnimatorNS.DecorationType.None);
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.Color.Black;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTextBox1.ForeColor = System.Drawing.Color.DarkGray;
-            this.gunaTextBox1.Location = new System.Drawing.Point(551, 5);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.Radius = 7;
-            this.gunaTextBox1.Size = new System.Drawing.Size(85, 28);
-            this.gunaTextBox1.TabIndex = 239;
-            this.gunaTextBox1.Text = "10";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label24, BunifuAnimatorNS.DecorationType.None);
-            this.label24.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.label24.Location = new System.Drawing.Point(152, 8);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(40, 23);
-            this.label24.TabIndex = 88;
-            this.label24.Text = "bajo";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label26, BunifuAnimatorNS.DecorationType.None);
-            this.label26.Font = new System.Drawing.Font("Poppins Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Gray;
-            this.label26.Location = new System.Drawing.Point(10, 8);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(145, 23);
-            this.label26.TabIndex = 87;
-            this.label26.Text = "Parametros de stock";
-            // 
-            // gunaShadowPanel9
-            // 
-            this.gunaShadowPanel9.BackColor = System.Drawing.Color.Transparent;
-            this.gunaShadowPanel9.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel9.Controls.Add(this.label27);
-            this.gunaShadowPanel9.Controls.Add(this.gunaTextBox2);
-            this.gunaShadowPanel9.Controls.Add(this.label41);
-            this.gunaShadowPanel9.Controls.Add(this.label42);
-            this.TransitionPnMore.SetDecoration(this.gunaShadowPanel9, BunifuAnimatorNS.DecorationType.None);
-            this.gunaShadowPanel9.Location = new System.Drawing.Point(3, 47);
-            this.gunaShadowPanel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 3);
-            this.gunaShadowPanel9.Name = "gunaShadowPanel9";
-            this.gunaShadowPanel9.Radius = 3;
-            this.gunaShadowPanel9.ShadowColor = System.Drawing.Color.Black;
-            this.gunaShadowPanel9.ShadowDepth = 50;
-            this.gunaShadowPanel9.ShadowShift = 2;
-            this.gunaShadowPanel9.Size = new System.Drawing.Size(643, 39);
-            this.gunaShadowPanel9.TabIndex = 247;
-            // 
-            // label27
-            // 
-            this.TransitionPnMore.SetDecoration(this.label27, BunifuAnimatorNS.DecorationType.None);
-            this.label27.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.label27.Location = new System.Drawing.Point(274, 11);
-            this.label27.Name = "label27";
-            this.label27.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label27.Size = new System.Drawing.Size(275, 22);
-            this.label27.TabIndex = 248;
-            this.label27.Text = "Menor o igual que";
-            // 
-            // gunaTextBox2
-            // 
-            this.gunaTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox2.BorderColor = System.Drawing.Color.White;
-            this.gunaTextBox2.BorderSize = 1;
-            this.gunaTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TransitionPnMore.SetDecoration(this.gunaTextBox2, BunifuAnimatorNS.DecorationType.None);
-            this.gunaTextBox2.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox2.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox2.FocusedForeColor = System.Drawing.Color.Black;
-            this.gunaTextBox2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTextBox2.ForeColor = System.Drawing.Color.DarkGray;
-            this.gunaTextBox2.Location = new System.Drawing.Point(551, 7);
-            this.gunaTextBox2.Name = "gunaTextBox2";
-            this.gunaTextBox2.PasswordChar = '\0';
-            this.gunaTextBox2.Radius = 7;
-            this.gunaTextBox2.Size = new System.Drawing.Size(85, 28);
-            this.gunaTextBox2.TabIndex = 247;
-            this.gunaTextBox2.Text = "50";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label41, BunifuAnimatorNS.DecorationType.None);
-            this.label41.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.label41.Location = new System.Drawing.Point(152, 10);
-            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(53, 23);
-            this.label41.TabIndex = 89;
-            this.label41.Text = "medio";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label42, BunifuAnimatorNS.DecorationType.None);
-            this.label42.Font = new System.Drawing.Font("Poppins Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.Gray;
-            this.label42.Location = new System.Drawing.Point(10, 10);
-            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(145, 23);
-            this.label42.TabIndex = 88;
-            this.label42.Text = "Parametros de stock";
-            // 
-            // gunaShadowPanel10
-            // 
-            this.gunaShadowPanel10.BackColor = System.Drawing.Color.Transparent;
-            this.gunaShadowPanel10.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel10.Controls.Add(this.label43);
-            this.gunaShadowPanel10.Controls.Add(this.gunaTextBox3);
-            this.gunaShadowPanel10.Controls.Add(this.label44);
-            this.gunaShadowPanel10.Controls.Add(this.label45);
-            this.TransitionPnMore.SetDecoration(this.gunaShadowPanel10, BunifuAnimatorNS.DecorationType.None);
-            this.gunaShadowPanel10.Location = new System.Drawing.Point(3, 91);
-            this.gunaShadowPanel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 3);
-            this.gunaShadowPanel10.Name = "gunaShadowPanel10";
-            this.gunaShadowPanel10.Radius = 3;
-            this.gunaShadowPanel10.ShadowColor = System.Drawing.Color.Black;
-            this.gunaShadowPanel10.ShadowDepth = 50;
-            this.gunaShadowPanel10.ShadowShift = 2;
-            this.gunaShadowPanel10.Size = new System.Drawing.Size(643, 39);
-            this.gunaShadowPanel10.TabIndex = 248;
-            // 
-            // label43
-            // 
-            this.TransitionPnMore.SetDecoration(this.label43, BunifuAnimatorNS.DecorationType.None);
-            this.label43.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.label43.Location = new System.Drawing.Point(274, 11);
-            this.label43.Name = "label43";
-            this.label43.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label43.Size = new System.Drawing.Size(275, 22);
-            this.label43.TabIndex = 248;
-            this.label43.Text = "Menor o igual que";
-            // 
-            // gunaTextBox3
-            // 
-            this.gunaTextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox3.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox3.BorderColor = System.Drawing.Color.White;
-            this.gunaTextBox3.BorderSize = 1;
-            this.gunaTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TransitionPnMore.SetDecoration(this.gunaTextBox3, BunifuAnimatorNS.DecorationType.None);
-            this.gunaTextBox3.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox3.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox3.FocusedForeColor = System.Drawing.Color.Black;
-            this.gunaTextBox3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTextBox3.ForeColor = System.Drawing.Color.DarkGray;
-            this.gunaTextBox3.Location = new System.Drawing.Point(551, 7);
-            this.gunaTextBox3.Name = "gunaTextBox3";
-            this.gunaTextBox3.PasswordChar = '\0';
-            this.gunaTextBox3.Radius = 7;
-            this.gunaTextBox3.Size = new System.Drawing.Size(85, 28);
-            this.gunaTextBox3.TabIndex = 247;
-            this.gunaTextBox3.Text = "100";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label44, BunifuAnimatorNS.DecorationType.None);
-            this.label44.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.label44.Location = new System.Drawing.Point(152, 10);
-            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(36, 23);
-            this.label44.TabIndex = 90;
-            this.label44.Text = "alto";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label45, BunifuAnimatorNS.DecorationType.None);
-            this.label45.Font = new System.Drawing.Font("Poppins Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.Gray;
-            this.label45.Location = new System.Drawing.Point(10, 10);
-            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(145, 23);
-            this.label45.TabIndex = 89;
-            this.label45.Text = "Parametros de stock";
-            // 
-            // panel_interacted
-            // 
-            this.panel_interacted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.panel_interacted.Controls.Add(this.label4);
-            this.panel_interacted.Controls.Add(this.label2);
-            this.panel_interacted.Controls.Add(this.btn_delete);
-            this.panel_interacted.Controls.Add(this.btn_save);
-            this.panel_interacted.Controls.Add(this.btn_update);
-            this.panel_interacted.Controls.Add(this.btn_stock);
-            this.panel_interacted.Controls.Add(this.panel_crud);
-            this.panel_interacted.Controls.Add(this.panel_stock);
-            this.panel_interacted.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.TransitionPnMore.SetDecoration(this.panel_interacted, BunifuAnimatorNS.DecorationType.None);
-            this.panel_interacted.Location = new System.Drawing.Point(763, 19);
-            this.panel_interacted.Name = "panel_interacted";
-            this.panel_interacted.Size = new System.Drawing.Size(12, 29);
-            this.panel_interacted.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(75, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 17);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Introduzca los datos ";
-            // 
-            // btn_stock
-            // 
-            this.btn_stock.BackColor = System.Drawing.Color.White;
-            this.btn_stock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TransitionPnMore.SetDecoration(this.btn_stock, BunifuAnimatorNS.DecorationType.None);
-            this.btn_stock.Enabled = false;
-            this.btn_stock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
-            this.btn_stock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_stock.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_stock.ForeColor = System.Drawing.Color.Black;
-            this.btn_stock.Location = new System.Drawing.Point(305, 153);
-            this.btn_stock.Name = "btn_stock";
-            this.btn_stock.Size = new System.Drawing.Size(190, 23);
-            this.btn_stock.TabIndex = 14;
-            this.btn_stock.Text = "Actualizar Stock";
-            this.btn_stock.UseVisualStyleBackColor = false;
-            this.btn_stock.Click += new System.EventHandler(this.btn_stock_Click);
-            // 
-            // panel_stock
-            // 
-            this.panel_stock.BackColor = System.Drawing.Color.White;
-            this.panel_stock.Controls.Add(this.txtBox_categoria_stock);
-            this.panel_stock.Controls.Add(this.label13);
-            this.panel_stock.Controls.Add(this.txtBox_objeto);
-            this.panel_stock.Controls.Add(this.txtBox_stockAnterior);
-            this.panel_stock.Controls.Add(this.label11);
-            this.panel_stock.Controls.Add(this.txtBox_nuevoStock_panel);
-            this.panel_stock.Controls.Add(this.txtBox_stockNuevo);
-            this.panel_stock.Controls.Add(this.label12);
-            this.TransitionPnMore.SetDecoration(this.panel_stock, BunifuAnimatorNS.DecorationType.None);
-            this.panel_stock.Location = new System.Drawing.Point(12, 45);
-            this.panel_stock.Name = "panel_stock";
-            this.panel_stock.Size = new System.Drawing.Size(268, 133);
-            this.panel_stock.TabIndex = 15;
-            this.panel_stock.Visible = false;
-            // 
-            // txtBox_categoria_stock
-            // 
-            this.txtBox_categoria_stock.BackColor = System.Drawing.Color.White;
-            this.txtBox_categoria_stock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TransitionPnMore.SetDecoration(this.txtBox_categoria_stock, BunifuAnimatorNS.DecorationType.None);
-            this.txtBox_categoria_stock.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtBox_categoria_stock.Location = new System.Drawing.Point(97, 5);
-            this.txtBox_categoria_stock.Name = "txtBox_categoria_stock";
-            this.txtBox_categoria_stock.ReadOnly = true;
-            this.txtBox_categoria_stock.Size = new System.Drawing.Size(162, 23);
-            this.txtBox_categoria_stock.TabIndex = 24;
-            this.txtBox_categoria_stock.Text = "None";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label13, BunifuAnimatorNS.DecorationType.None);
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(28, 42);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(50, 17);
-            this.label13.TabIndex = 22;
-            this.label13.Text = "Objeto";
-            // 
-            // txtBox_objeto
-            // 
-            this.txtBox_objeto.BackColor = System.Drawing.Color.White;
-            this.txtBox_objeto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TransitionPnMore.SetDecoration(this.txtBox_objeto, BunifuAnimatorNS.DecorationType.None);
-            this.txtBox_objeto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_objeto.Location = new System.Drawing.Point(97, 37);
-            this.txtBox_objeto.Name = "txtBox_objeto";
-            this.txtBox_objeto.ReadOnly = true;
-            this.txtBox_objeto.Size = new System.Drawing.Size(162, 23);
-            this.txtBox_objeto.TabIndex = 23;
-            this.txtBox_objeto.Text = "Auto";
-            // 
-            // txtBox_stockAnterior
-            // 
-            this.txtBox_stockAnterior.BackColor = System.Drawing.Color.White;
-            this.txtBox_stockAnterior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TransitionPnMore.SetDecoration(this.txtBox_stockAnterior, BunifuAnimatorNS.DecorationType.None);
-            this.txtBox_stockAnterior.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_stockAnterior.Location = new System.Drawing.Point(96, 104);
-            this.txtBox_stockAnterior.Name = "txtBox_stockAnterior";
-            this.txtBox_stockAnterior.ReadOnly = true;
-            this.txtBox_stockAnterior.Size = new System.Drawing.Size(162, 23);
-            this.txtBox_stockAnterior.TabIndex = 21;
-            this.txtBox_stockAnterior.Text = "0";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label11, BunifuAnimatorNS.DecorationType.None);
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(18, 10);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 17);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Categoria";
-            // 
-            // txtBox_nuevoStock_panel
-            // 
-            this.txtBox_nuevoStock_panel.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.txtBox_nuevoStock_panel, BunifuAnimatorNS.DecorationType.None);
-            this.txtBox_nuevoStock_panel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_nuevoStock_panel.ForeColor = System.Drawing.Color.Black;
-            this.txtBox_nuevoStock_panel.Location = new System.Drawing.Point(5, 77);
-            this.txtBox_nuevoStock_panel.Name = "txtBox_nuevoStock_panel";
-            this.txtBox_nuevoStock_panel.Size = new System.Drawing.Size(85, 17);
-            this.txtBox_nuevoStock_panel.TabIndex = 14;
-            this.txtBox_nuevoStock_panel.Text = "Nuevo Stock";
-            // 
-            // txtBox_stockNuevo
-            // 
-            this.txtBox_stockNuevo.BackColor = System.Drawing.Color.White;
-            this.txtBox_stockNuevo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TransitionPnMore.SetDecoration(this.txtBox_stockNuevo, BunifuAnimatorNS.DecorationType.None);
-            this.txtBox_stockNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_stockNuevo.Location = new System.Drawing.Point(96, 72);
-            this.txtBox_stockNuevo.Name = "txtBox_stockNuevo";
-            this.txtBox_stockNuevo.Size = new System.Drawing.Size(162, 23);
-            this.txtBox_stockNuevo.TabIndex = 15;
-            this.txtBox_stockNuevo.Text = "0";
-            this.txtBox_stockNuevo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_stockNuevo_KeyPress);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label12, BunifuAnimatorNS.DecorationType.None);
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(3, 108);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 17);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Stock Anterior";
-            // 
-            // gunaShadowPanel4
-            // 
-            this.gunaShadowPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaShadowPanel4.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel4.Controls.Add(this.dg_alertas_1);
-            this.gunaShadowPanel4.Controls.Add(this.btn_detalle_alerta);
-            this.gunaShadowPanel4.Controls.Add(this.label31);
-            this.TransitionPnMore.SetDecoration(this.gunaShadowPanel4, BunifuAnimatorNS.DecorationType.None);
-            this.gunaShadowPanel4.Location = new System.Drawing.Point(686, 400);
-            this.gunaShadowPanel4.Name = "gunaShadowPanel4";
-            this.gunaShadowPanel4.Radius = 7;
-            this.gunaShadowPanel4.ShadowColor = System.Drawing.Color.Black;
-            this.gunaShadowPanel4.ShadowShift = 3;
-            this.gunaShadowPanel4.Size = new System.Drawing.Size(307, 265);
-            this.gunaShadowPanel4.TabIndex = 263;
-            // 
-            // dg_alertas_1
-            // 
-            this.dg_alertas_1.AllowUserToAddRows = false;
-            this.dg_alertas_1.AllowUserToDeleteRows = false;
-            this.dg_alertas_1.AllowUserToResizeColumns = false;
-            this.dg_alertas_1.AllowUserToResizeRows = false;
-            this.dg_alertas_1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dg_alertas_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dg_alertas_1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_alertas_1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            this.dg_alertas_1.ColumnHeadersHeight = 25;
-            this.dg_alertas_1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Cod,
-            this.fecha,
-            this.user});
-            this.dg_alertas_1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TransitionPnMore.SetDecoration(this.dg_alertas_1, BunifuAnimatorNS.DecorationType.None);
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_alertas_1.DefaultCellStyle = dataGridViewCellStyle17;
-            this.dg_alertas_1.EnableHeadersVisualStyles = false;
-            this.dg_alertas_1.GridColor = System.Drawing.Color.Maroon;
-            this.dg_alertas_1.Location = new System.Drawing.Point(22, 58);
-            this.dg_alertas_1.MultiSelect = false;
-            this.dg_alertas_1.Name = "dg_alertas_1";
-            this.dg_alertas_1.ReadOnly = true;
-            this.dg_alertas_1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_alertas_1.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
-            this.dg_alertas_1.RowHeadersVisible = false;
-            this.dg_alertas_1.RowHeadersWidth = 51;
-            this.dg_alertas_1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_alertas_1.Size = new System.Drawing.Size(265, 148);
-            this.dg_alertas_1.TabIndex = 0;
-            // 
-            // Cod
-            // 
-            this.Cod.DataPropertyName = "Codigo";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.LightCoral;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Cod.DefaultCellStyle = dataGridViewCellStyle14;
-            this.Cod.HeaderText = "Codigo";
-            this.Cod.MinimumWidth = 6;
-            this.Cod.Name = "Cod";
-            this.Cod.ReadOnly = true;
-            this.Cod.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Cod.Width = 60;
-            // 
-            // fecha
-            // 
-            this.fecha.DataPropertyName = "Fecha";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.LightCoral;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.fecha.DefaultCellStyle = dataGridViewCellStyle15;
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.MinimumWidth = 6;
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            this.fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.fecha.Width = 180;
-            // 
-            // user
-            // 
-            this.user.DataPropertyName = "Usuario alertado";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.LightCoral;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.user.DefaultCellStyle = dataGridViewCellStyle16;
-            this.user.HeaderText = "Usuario Alertado";
-            this.user.MinimumWidth = 6;
-            this.user.Name = "user";
-            this.user.ReadOnly = true;
-            this.user.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.user.Width = 155;
-            // 
-            // btn_detalle_alerta
-            // 
-            this.btn_detalle_alerta.BackColor = System.Drawing.Color.Transparent;
-            this.btn_detalle_alerta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TransitionPnMore.SetDecoration(this.btn_detalle_alerta, BunifuAnimatorNS.DecorationType.None);
-            this.btn_detalle_alerta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.btn_detalle_alerta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.btn_detalle_alerta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btn_detalle_alerta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_detalle_alerta.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_detalle_alerta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_detalle_alerta.Location = new System.Drawing.Point(22, 212);
-            this.btn_detalle_alerta.Name = "btn_detalle_alerta";
-            this.btn_detalle_alerta.Size = new System.Drawing.Size(265, 23);
-            this.btn_detalle_alerta.TabIndex = 25;
-            this.btn_detalle_alerta.Text = "Ver detalle del registro seleccionado";
-            this.btn_detalle_alerta.UseVisualStyleBackColor = false;
-            this.btn_detalle_alerta.Click += new System.EventHandler(this.btn_detalle_alerta_Click);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label31, BunifuAnimatorNS.DecorationType.None);
-            this.label31.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(178)))), ((int)(((byte)(225)))));
-            this.label31.Location = new System.Drawing.Point(19, 39);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(104, 16);
-            this.label31.TabIndex = 153;
-            this.label31.Text = "Ultimas alertas";
-            // 
-            // gunaShadowPanel2
-            // 
-            this.gunaShadowPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaShadowPanel2.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel2.Controls.Add(this.btn_add_numeracion);
-            this.gunaShadowPanel2.Controls.Add(this.pn_acciones_numeracion);
-            this.gunaShadowPanel2.Controls.Add(this.btn_acciones_numeracion);
-            this.TransitionPnMore.SetDecoration(this.gunaShadowPanel2, BunifuAnimatorNS.DecorationType.None);
-            this.gunaShadowPanel2.Location = new System.Drawing.Point(684, 53);
-            this.gunaShadowPanel2.Name = "gunaShadowPanel2";
-            this.gunaShadowPanel2.Radius = 7;
-            this.gunaShadowPanel2.ShadowColor = System.Drawing.Color.Black;
-            this.gunaShadowPanel2.ShadowShift = 3;
-            this.gunaShadowPanel2.Size = new System.Drawing.Size(306, 341);
-            this.gunaShadowPanel2.TabIndex = 261;
-            // 
-            // btn_add_numeracion
-            // 
-            this.btn_add_numeracion.AnimationHoverSpeed = 0.07F;
-            this.btn_add_numeracion.AnimationSpeed = 0.03F;
-            this.btn_add_numeracion.BackColor = System.Drawing.Color.Transparent;
-            this.btn_add_numeracion.BaseColor = System.Drawing.Color.White;
-            this.btn_add_numeracion.BorderColor = System.Drawing.Color.Silver;
-            this.btn_add_numeracion.BorderSize = 1;
-            this.TransitionPnMore.SetDecoration(this.btn_add_numeracion, BunifuAnimatorNS.DecorationType.None);
-            this.btn_add_numeracion.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_add_numeracion.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_add_numeracion.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add_numeracion.ForeColor = System.Drawing.Color.Black;
-            this.btn_add_numeracion.Image = ((System.Drawing.Image)(resources.GetObject("btn_add_numeracion.Image")));
-            this.btn_add_numeracion.ImageSize = new System.Drawing.Size(15, 15);
-            this.btn_add_numeracion.Location = new System.Drawing.Point(12, 21);
-            this.btn_add_numeracion.Name = "btn_add_numeracion";
-            this.btn_add_numeracion.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_add_numeracion.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_add_numeracion.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_add_numeracion.OnHoverImage = null;
-            this.btn_add_numeracion.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_add_numeracion.Radius = 7;
-            this.btn_add_numeracion.Size = new System.Drawing.Size(178, 28);
-            this.btn_add_numeracion.TabIndex = 262;
-            this.btn_add_numeracion.Text = "Añadir numeracion";
-            this.btn_add_numeracion.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            // 
-            // pn_acciones_numeracion
-            // 
-            this.pn_acciones_numeracion.BackColor = System.Drawing.Color.White;
-            this.pn_acciones_numeracion.BorderRadius = 20;
-            this.pn_acciones_numeracion.BottomSahddow = true;
-            this.pn_acciones_numeracion.color = System.Drawing.Color.White;
-            this.pn_acciones_numeracion.Controls.Add(this.gunaButton3);
-            this.pn_acciones_numeracion.Controls.Add(this.gunaButton4);
-            this.pn_acciones_numeracion.Controls.Add(this.bunifuSeparator4);
-            this.TransitionPnMore.SetDecoration(this.pn_acciones_numeracion, BunifuAnimatorNS.DecorationType.None);
-            this.pn_acciones_numeracion.LeftSahddow = true;
-            this.pn_acciones_numeracion.Location = new System.Drawing.Point(76, 54);
-            this.pn_acciones_numeracion.Name = "pn_acciones_numeracion";
-            this.pn_acciones_numeracion.RightSahddow = true;
-            this.pn_acciones_numeracion.ShadowDepth = 30;
-            this.pn_acciones_numeracion.Size = new System.Drawing.Size(222, 71);
-            this.pn_acciones_numeracion.TabIndex = 260;
-            this.pn_acciones_numeracion.Visible = false;
-            // 
-            // gunaButton3
-            // 
-            this.gunaButton3.AnimationHoverSpeed = 0.07F;
-            this.gunaButton3.AnimationSpeed = 0.03F;
-            this.gunaButton3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton3.BaseColor = System.Drawing.Color.White;
-            this.gunaButton3.BorderColor = System.Drawing.Color.White;
-            this.gunaButton3.BorderSize = 1;
-            this.TransitionPnMore.SetDecoration(this.gunaButton3, BunifuAnimatorNS.DecorationType.None);
-            this.gunaButton3.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton3.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton3.ForeColor = System.Drawing.Color.Black;
-            this.gunaButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton3.Image")));
-            this.gunaButton3.ImageSize = new System.Drawing.Size(15, 15);
-            this.gunaButton3.Location = new System.Drawing.Point(3, 4);
-            this.gunaButton3.Name = "gunaButton3";
-            this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.White;
-            this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.White;
-            this.gunaButton3.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.gunaButton3.OnHoverImage = null;
-            this.gunaButton3.OnPressedColor = System.Drawing.Color.White;
-            this.gunaButton3.Radius = 7;
-            this.gunaButton3.Size = new System.Drawing.Size(216, 28);
-            this.gunaButton3.TabIndex = 251;
-            this.gunaButton3.Text = "Actualizar numeracion";
-            this.gunaButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton3.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            // 
-            // gunaButton4
-            // 
-            this.gunaButton4.AnimationHoverSpeed = 0.07F;
-            this.gunaButton4.AnimationSpeed = 0.03F;
-            this.gunaButton4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton4.BaseColor = System.Drawing.Color.White;
-            this.gunaButton4.BorderColor = System.Drawing.Color.White;
-            this.gunaButton4.BorderSize = 1;
-            this.TransitionPnMore.SetDecoration(this.gunaButton4, BunifuAnimatorNS.DecorationType.None);
-            this.gunaButton4.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton4.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton4.ForeColor = System.Drawing.Color.Black;
-            this.gunaButton4.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton4.Image")));
-            this.gunaButton4.ImageSize = new System.Drawing.Size(15, 15);
-            this.gunaButton4.Location = new System.Drawing.Point(3, 38);
-            this.gunaButton4.Name = "gunaButton4";
-            this.gunaButton4.OnHoverBaseColor = System.Drawing.Color.White;
-            this.gunaButton4.OnHoverBorderColor = System.Drawing.Color.White;
-            this.gunaButton4.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.gunaButton4.OnHoverImage = null;
-            this.gunaButton4.OnPressedColor = System.Drawing.Color.White;
-            this.gunaButton4.Radius = 7;
-            this.gunaButton4.Size = new System.Drawing.Size(216, 28);
-            this.gunaButton4.TabIndex = 248;
-            this.gunaButton4.Text = "Eliminar numeracion";
-            this.gunaButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton4.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            // 
-            // bunifuSeparator4
-            // 
-            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
-            this.TransitionPnMore.SetDecoration(this.bunifuSeparator4, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuSeparator4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.bunifuSeparator4.LineThickness = 1;
-            this.bunifuSeparator4.Location = new System.Drawing.Point(-31, 19);
-            this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.bunifuSeparator4.Name = "bunifuSeparator4";
-            this.bunifuSeparator4.Size = new System.Drawing.Size(253, 30);
-            this.bunifuSeparator4.TabIndex = 255;
-            this.bunifuSeparator4.Transparency = 70;
-            this.bunifuSeparator4.Vertical = false;
-            // 
-            // btn_acciones_numeracion
-            // 
-            this.btn_acciones_numeracion.AnimationHoverSpeed = 0.07F;
-            this.btn_acciones_numeracion.AnimationSpeed = 0.03F;
-            this.btn_acciones_numeracion.BackColor = System.Drawing.Color.Transparent;
-            this.btn_acciones_numeracion.BaseColor = System.Drawing.Color.White;
-            this.btn_acciones_numeracion.BorderColor = System.Drawing.Color.Silver;
-            this.btn_acciones_numeracion.BorderSize = 1;
-            this.TransitionPnMore.SetDecoration(this.btn_acciones_numeracion, BunifuAnimatorNS.DecorationType.None);
-            this.btn_acciones_numeracion.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_acciones_numeracion.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_acciones_numeracion.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_acciones_numeracion.ForeColor = System.Drawing.Color.Black;
-            this.btn_acciones_numeracion.Image = ((System.Drawing.Image)(resources.GetObject("btn_acciones_numeracion.Image")));
-            this.btn_acciones_numeracion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btn_acciones_numeracion.ImageSize = new System.Drawing.Size(15, 15);
-            this.btn_acciones_numeracion.Location = new System.Drawing.Point(200, 21);
-            this.btn_acciones_numeracion.Name = "btn_acciones_numeracion";
-            this.btn_acciones_numeracion.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_acciones_numeracion.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_acciones_numeracion.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_acciones_numeracion.OnHoverImage = null;
-            this.btn_acciones_numeracion.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_acciones_numeracion.Radius = 7;
-            this.btn_acciones_numeracion.Size = new System.Drawing.Size(98, 28);
-            this.btn_acciones_numeracion.TabIndex = 261;
-            this.btn_acciones_numeracion.Text = "Acciones";
-            this.btn_acciones_numeracion.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            // 
-            // btn_add_formulario
-            // 
-            this.btn_add_formulario.AnimationHoverSpeed = 0.07F;
-            this.btn_add_formulario.AnimationSpeed = 0.03F;
-            this.btn_add_formulario.BackColor = System.Drawing.Color.Transparent;
-            this.btn_add_formulario.BaseColor = System.Drawing.Color.White;
-            this.btn_add_formulario.BorderColor = System.Drawing.Color.Silver;
-            this.btn_add_formulario.BorderSize = 1;
-            this.TransitionPnMore.SetDecoration(this.btn_add_formulario, BunifuAnimatorNS.DecorationType.None);
-            this.btn_add_formulario.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_add_formulario.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_add_formulario.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add_formulario.ForeColor = System.Drawing.Color.Black;
-            this.btn_add_formulario.Image = ((System.Drawing.Image)(resources.GetObject("btn_add_formulario.Image")));
-            this.btn_add_formulario.ImageSize = new System.Drawing.Size(15, 15);
-            this.btn_add_formulario.Location = new System.Drawing.Point(811, 19);
-            this.btn_add_formulario.Name = "btn_add_formulario";
-            this.btn_add_formulario.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_add_formulario.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_add_formulario.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_add_formulario.OnHoverImage = null;
-            this.btn_add_formulario.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_add_formulario.Radius = 7;
-            this.btn_add_formulario.Size = new System.Drawing.Size(178, 28);
-            this.btn_add_formulario.TabIndex = 255;
-            this.btn_add_formulario.Text = "Agregar formulario";
-            this.btn_add_formulario.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.TransitionPnMore.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
-            this.label3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.label3.Location = new System.Drawing.Point(13, 22);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 28);
-            this.label3.TabIndex = 157;
-            this.label3.Text = "Stock Formularios";
-            // 
-            // lbl_totaltramites
-            // 
-            this.lbl_totaltramites.BackColor = System.Drawing.Color.Transparent;
-            this.TransitionPnMore.SetDecoration(this.lbl_totaltramites, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_totaltramites.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_totaltramites.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_totaltramites.Location = new System.Drawing.Point(184, 25);
-            this.lbl_totaltramites.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_totaltramites.Name = "lbl_totaltramites";
-            this.lbl_totaltramites.Size = new System.Drawing.Size(186, 16);
-            this.lbl_totaltramites.TabIndex = 156;
-            this.lbl_totaltramites.Text = "(100 formularios)";
-            // 
             // gunaShadowPanel1
             // 
             this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.White;
             this.gunaShadowPanel1.Controls.Add(this.combobox_clases_datagridview);
-            this.gunaShadowPanel1.Controls.Add(this.pn_acciones_exportar);
             this.gunaShadowPanel1.Controls.Add(this.pn_acciones_formularios);
-            this.gunaShadowPanel1.Controls.Add(this.btn_acciones_formularios);
             this.gunaShadowPanel1.Controls.Add(this.label25);
-            this.gunaShadowPanel1.Controls.Add(this.dg_formularios);
             this.gunaShadowPanel1.Controls.Add(this.button_consultar);
             this.gunaShadowPanel1.Controls.Add(this.btn_exportar_formularios);
+            this.gunaShadowPanel1.Controls.Add(this.btn_acciones_formularios);
+            this.gunaShadowPanel1.Controls.Add(this.pn_acciones_exportar);
+            this.gunaShadowPanel1.Controls.Add(this.dg_formularios);
             this.TransitionPnMore.SetDecoration(this.gunaShadowPanel1, BunifuAnimatorNS.DecorationType.None);
             this.gunaShadowPanel1.Location = new System.Drawing.Point(10, 53);
             this.gunaShadowPanel1.Name = "gunaShadowPanel1";
             this.gunaShadowPanel1.Radius = 7;
             this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel1.ShadowDepth = 30;
             this.gunaShadowPanel1.ShadowShift = 3;
-            this.gunaShadowPanel1.Size = new System.Drawing.Size(668, 341);
+            this.gunaShadowPanel1.Size = new System.Drawing.Size(668, 407);
             this.gunaShadowPanel1.TabIndex = 254;
             // 
             // combobox_clases_datagridview
@@ -1884,98 +1849,6 @@
             this.combobox_clases_datagridview.TabIndex = 242;
             this.combobox_clases_datagridview.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
             // 
-            // pn_acciones_exportar
-            // 
-            this.pn_acciones_exportar.BackColor = System.Drawing.Color.White;
-            this.pn_acciones_exportar.BorderRadius = 20;
-            this.pn_acciones_exportar.BottomSahddow = true;
-            this.pn_acciones_exportar.color = System.Drawing.Color.White;
-            this.pn_acciones_exportar.Controls.Add(this.btn_exportar_actual);
-            this.pn_acciones_exportar.Controls.Add(this.btn_exportar_informe);
-            this.pn_acciones_exportar.Controls.Add(this.bunifuSeparator7);
-            this.TransitionPnMore.SetDecoration(this.pn_acciones_exportar, BunifuAnimatorNS.DecorationType.None);
-            this.pn_acciones_exportar.LeftSahddow = true;
-            this.pn_acciones_exportar.Location = new System.Drawing.Point(101, 55);
-            this.pn_acciones_exportar.Name = "pn_acciones_exportar";
-            this.pn_acciones_exportar.RightSahddow = true;
-            this.pn_acciones_exportar.ShadowDepth = 30;
-            this.pn_acciones_exportar.Size = new System.Drawing.Size(222, 71);
-            this.pn_acciones_exportar.TabIndex = 261;
-            this.pn_acciones_exportar.Visible = false;
-            // 
-            // btn_exportar_actual
-            // 
-            this.btn_exportar_actual.AnimationHoverSpeed = 0.07F;
-            this.btn_exportar_actual.AnimationSpeed = 0.03F;
-            this.btn_exportar_actual.BackColor = System.Drawing.Color.Transparent;
-            this.btn_exportar_actual.BaseColor = System.Drawing.Color.White;
-            this.btn_exportar_actual.BorderColor = System.Drawing.Color.White;
-            this.btn_exportar_actual.BorderSize = 1;
-            this.TransitionPnMore.SetDecoration(this.btn_exportar_actual, BunifuAnimatorNS.DecorationType.None);
-            this.btn_exportar_actual.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_exportar_actual.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_exportar_actual.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exportar_actual.ForeColor = System.Drawing.Color.Black;
-            this.btn_exportar_actual.Image = ((System.Drawing.Image)(resources.GetObject("btn_exportar_actual.Image")));
-            this.btn_exportar_actual.ImageSize = new System.Drawing.Size(15, 15);
-            this.btn_exportar_actual.Location = new System.Drawing.Point(3, 4);
-            this.btn_exportar_actual.Name = "btn_exportar_actual";
-            this.btn_exportar_actual.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_exportar_actual.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btn_exportar_actual.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_exportar_actual.OnHoverImage = null;
-            this.btn_exportar_actual.OnPressedColor = System.Drawing.Color.White;
-            this.btn_exportar_actual.Radius = 7;
-            this.btn_exportar_actual.Size = new System.Drawing.Size(216, 28);
-            this.btn_exportar_actual.TabIndex = 251;
-            this.btn_exportar_actual.Text = "Exportar vista actual";
-            this.btn_exportar_actual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_exportar_actual.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            // 
-            // btn_exportar_informe
-            // 
-            this.btn_exportar_informe.AnimationHoverSpeed = 0.07F;
-            this.btn_exportar_informe.AnimationSpeed = 0.03F;
-            this.btn_exportar_informe.BackColor = System.Drawing.Color.Transparent;
-            this.btn_exportar_informe.BaseColor = System.Drawing.Color.White;
-            this.btn_exportar_informe.BorderColor = System.Drawing.Color.White;
-            this.btn_exportar_informe.BorderSize = 1;
-            this.TransitionPnMore.SetDecoration(this.btn_exportar_informe, BunifuAnimatorNS.DecorationType.None);
-            this.btn_exportar_informe.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_exportar_informe.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_exportar_informe.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exportar_informe.ForeColor = System.Drawing.Color.Black;
-            this.btn_exportar_informe.Image = ((System.Drawing.Image)(resources.GetObject("btn_exportar_informe.Image")));
-            this.btn_exportar_informe.ImageSize = new System.Drawing.Size(15, 15);
-            this.btn_exportar_informe.Location = new System.Drawing.Point(3, 38);
-            this.btn_exportar_informe.Name = "btn_exportar_informe";
-            this.btn_exportar_informe.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_exportar_informe.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btn_exportar_informe.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_exportar_informe.OnHoverImage = null;
-            this.btn_exportar_informe.OnPressedColor = System.Drawing.Color.White;
-            this.btn_exportar_informe.Radius = 7;
-            this.btn_exportar_informe.Size = new System.Drawing.Size(216, 28);
-            this.btn_exportar_informe.TabIndex = 248;
-            this.btn_exportar_informe.Text = "Exportar informe";
-            this.btn_exportar_informe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_exportar_informe.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            // 
-            // bunifuSeparator7
-            // 
-            this.bunifuSeparator7.BackColor = System.Drawing.Color.Transparent;
-            this.TransitionPnMore.SetDecoration(this.bunifuSeparator7, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuSeparator7.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.bunifuSeparator7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.bunifuSeparator7.LineThickness = 1;
-            this.bunifuSeparator7.Location = new System.Drawing.Point(-31, 19);
-            this.bunifuSeparator7.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.bunifuSeparator7.Name = "bunifuSeparator7";
-            this.bunifuSeparator7.Size = new System.Drawing.Size(253, 30);
-            this.bunifuSeparator7.TabIndex = 255;
-            this.bunifuSeparator7.Transparency = 70;
-            this.bunifuSeparator7.Vertical = false;
-            // 
             // pn_acciones_formularios
             // 
             this.pn_acciones_formularios.BackColor = System.Drawing.Color.White;
@@ -1987,7 +1860,7 @@
             this.pn_acciones_formularios.Controls.Add(this.btn_eliminar);
             this.pn_acciones_formularios.Controls.Add(this.btn_editar);
             this.pn_acciones_formularios.Controls.Add(this.bunifuSeparator2);
-            this.pn_acciones_formularios.Controls.Add(this.gunaButton1);
+            this.pn_acciones_formularios.Controls.Add(this.btn_editarparametros);
             this.pn_acciones_formularios.Controls.Add(this.bunifuSeparator3);
             this.TransitionPnMore.SetDecoration(this.pn_acciones_formularios, BunifuAnimatorNS.DecorationType.None);
             this.pn_acciones_formularios.LeftSahddow = true;
@@ -2116,34 +1989,35 @@
             this.bunifuSeparator2.Transparency = 70;
             this.bunifuSeparator2.Vertical = false;
             // 
-            // gunaButton1
+            // btn_editarparametros
             // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.White;
-            this.gunaButton1.BorderColor = System.Drawing.Color.White;
-            this.gunaButton1.BorderSize = 1;
-            this.TransitionPnMore.SetDecoration(this.gunaButton1, BunifuAnimatorNS.DecorationType.None);
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.Black;
-            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
-            this.gunaButton1.ImageSize = new System.Drawing.Size(15, 15);
-            this.gunaButton1.Location = new System.Drawing.Point(3, 74);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.White;
-            this.gunaButton1.Radius = 7;
-            this.gunaButton1.Size = new System.Drawing.Size(183, 28);
-            this.gunaButton1.TabIndex = 257;
-            this.gunaButton1.Text = "Editar parametros";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_editarparametros.AnimationHoverSpeed = 0.07F;
+            this.btn_editarparametros.AnimationSpeed = 0.03F;
+            this.btn_editarparametros.BackColor = System.Drawing.Color.Transparent;
+            this.btn_editarparametros.BaseColor = System.Drawing.Color.White;
+            this.btn_editarparametros.BorderColor = System.Drawing.Color.White;
+            this.btn_editarparametros.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_editarparametros, BunifuAnimatorNS.DecorationType.None);
+            this.btn_editarparametros.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_editarparametros.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_editarparametros.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editarparametros.ForeColor = System.Drawing.Color.Black;
+            this.btn_editarparametros.Image = ((System.Drawing.Image)(resources.GetObject("btn_editarparametros.Image")));
+            this.btn_editarparametros.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_editarparametros.Location = new System.Drawing.Point(3, 74);
+            this.btn_editarparametros.Name = "btn_editarparametros";
+            this.btn_editarparametros.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_editarparametros.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btn_editarparametros.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_editarparametros.OnHoverImage = null;
+            this.btn_editarparametros.OnPressedColor = System.Drawing.Color.White;
+            this.btn_editarparametros.Radius = 7;
+            this.btn_editarparametros.Size = new System.Drawing.Size(183, 28);
+            this.btn_editarparametros.TabIndex = 257;
+            this.btn_editarparametros.Text = "Editar parametros";
+            this.btn_editarparametros.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_editarparametros.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_editarparametros.Click += new System.EventHandler(this.btn_editarparametros_Click);
             // 
             // bunifuSeparator3
             // 
@@ -2160,36 +2034,6 @@
             this.bunifuSeparator3.Transparency = 70;
             this.bunifuSeparator3.Vertical = false;
             // 
-            // btn_acciones_formularios
-            // 
-            this.btn_acciones_formularios.AnimationHoverSpeed = 0.07F;
-            this.btn_acciones_formularios.AnimationSpeed = 0.03F;
-            this.btn_acciones_formularios.BackColor = System.Drawing.Color.Transparent;
-            this.btn_acciones_formularios.BaseColor = System.Drawing.Color.White;
-            this.btn_acciones_formularios.BorderColor = System.Drawing.Color.Silver;
-            this.btn_acciones_formularios.BorderSize = 1;
-            this.TransitionPnMore.SetDecoration(this.btn_acciones_formularios, BunifuAnimatorNS.DecorationType.None);
-            this.btn_acciones_formularios.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_acciones_formularios.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_acciones_formularios.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_acciones_formularios.ForeColor = System.Drawing.Color.Black;
-            this.btn_acciones_formularios.Image = ((System.Drawing.Image)(resources.GetObject("btn_acciones_formularios.Image")));
-            this.btn_acciones_formularios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btn_acciones_formularios.ImageSize = new System.Drawing.Size(15, 15);
-            this.btn_acciones_formularios.Location = new System.Drawing.Point(559, 21);
-            this.btn_acciones_formularios.Name = "btn_acciones_formularios";
-            this.btn_acciones_formularios.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_acciones_formularios.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_acciones_formularios.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_acciones_formularios.OnHoverImage = null;
-            this.btn_acciones_formularios.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_acciones_formularios.Radius = 7;
-            this.btn_acciones_formularios.Size = new System.Drawing.Size(98, 28);
-            this.btn_acciones_formularios.TabIndex = 254;
-            this.btn_acciones_formularios.Text = "Acciones";
-            this.btn_acciones_formularios.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            this.btn_acciones_formularios.Click += new System.EventHandler(this.btn_acciones_formularios_Click);
-            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -2201,130 +2045,6 @@
             this.label25.Size = new System.Drawing.Size(44, 22);
             this.label25.TabIndex = 244;
             this.label25.Text = "Clase";
-            // 
-            // dg_formularios
-            // 
-            this.dg_formularios.AllowUserToAddRows = false;
-            this.dg_formularios.AllowUserToDeleteRows = false;
-            this.dg_formularios.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dg_formularios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dg_formularios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dg_formularios.BackgroundColor = System.Drawing.Color.White;
-            this.dg_formularios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dg_formularios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dg_formularios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_formularios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dg_formularios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dg_formularios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnId,
-            this.ColumnTipo,
-            this.ColumnCategoria,
-            this.ColumnStock,
-            this.ColumnEstado,
-            this.ColumnFecha});
-            this.TransitionPnMore.SetDecoration(this.dg_formularios, BunifuAnimatorNS.DecorationType.None);
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_formularios.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dg_formularios.EnableHeadersVisualStyles = false;
-            this.dg_formularios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dg_formularios.Location = new System.Drawing.Point(11, 55);
-            this.dg_formularios.Name = "dg_formularios";
-            this.dg_formularios.ReadOnly = true;
-            this.dg_formularios.RowHeadersVisible = false;
-            this.dg_formularios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dg_formularios.RowTemplate.Height = 30;
-            this.dg_formularios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_formularios.Size = new System.Drawing.Size(651, 279);
-            this.dg_formularios.TabIndex = 161;
-            this.dg_formularios.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.dg_formularios.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dg_formularios.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dg_formularios.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dg_formularios.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dg_formularios.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dg_formularios.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dg_formularios.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dg_formularios.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.dg_formularios.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dg_formularios.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dg_formularios.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dg_formularios.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dg_formularios.ThemeStyle.HeaderStyle.Height = 23;
-            this.dg_formularios.ThemeStyle.ReadOnly = true;
-            this.dg_formularios.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dg_formularios.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dg_formularios.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dg_formularios.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.Control;
-            this.dg_formularios.ThemeStyle.RowsStyle.Height = 30;
-            this.dg_formularios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dg_formularios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // ColumnId
-            // 
-            this.ColumnId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColumnId.FillWeight = 27.7284F;
-            this.ColumnId.HeaderText = "Id";
-            this.ColumnId.Name = "ColumnId";
-            this.ColumnId.ReadOnly = true;
-            this.ColumnId.Width = 42;
-            // 
-            // ColumnTipo
-            // 
-            this.ColumnTipo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColumnTipo.FillWeight = 27.7284F;
-            this.ColumnTipo.HeaderText = "Categoria";
-            this.ColumnTipo.Name = "ColumnTipo";
-            this.ColumnTipo.ReadOnly = true;
-            this.ColumnTipo.Width = 92;
-            // 
-            // ColumnCategoria
-            // 
-            this.ColumnCategoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnCategoria.FillWeight = 79.10687F;
-            this.ColumnCategoria.HeaderText = "Nombre";
-            this.ColumnCategoria.Name = "ColumnCategoria";
-            this.ColumnCategoria.ReadOnly = true;
-            this.ColumnCategoria.Width = 130;
-            // 
-            // ColumnStock
-            // 
-            this.ColumnStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColumnStock.FillWeight = 337.9311F;
-            this.ColumnStock.HeaderText = "Stock disponible";
-            this.ColumnStock.Name = "ColumnStock";
-            this.ColumnStock.ReadOnly = true;
-            this.ColumnStock.Width = 129;
-            // 
-            // ColumnEstado
-            // 
-            this.ColumnEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColumnEstado.FillWeight = 24.3108F;
-            this.ColumnEstado.HeaderText = "Estado";
-            this.ColumnEstado.Name = "ColumnEstado";
-            this.ColumnEstado.ReadOnly = true;
-            this.ColumnEstado.Width = 71;
-            // 
-            // ColumnFecha
-            // 
-            this.ColumnFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnFecha.FillWeight = 114.0579F;
-            this.ColumnFecha.HeaderText = "Ultima actualizacion";
-            this.ColumnFecha.Name = "ColumnFecha";
-            this.ColumnFecha.ReadOnly = true;
             // 
             // button_consultar
             // 
@@ -2384,19 +2104,1009 @@
             this.btn_exportar_formularios.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
             this.btn_exportar_formularios.Click += new System.EventHandler(this.btn_exportar_formularios_Click);
             // 
+            // btn_acciones_formularios
+            // 
+            this.btn_acciones_formularios.AnimationHoverSpeed = 0.07F;
+            this.btn_acciones_formularios.AnimationSpeed = 0.03F;
+            this.btn_acciones_formularios.BackColor = System.Drawing.Color.Transparent;
+            this.btn_acciones_formularios.BaseColor = System.Drawing.Color.White;
+            this.btn_acciones_formularios.BorderColor = System.Drawing.Color.Silver;
+            this.btn_acciones_formularios.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_acciones_formularios, BunifuAnimatorNS.DecorationType.None);
+            this.btn_acciones_formularios.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_acciones_formularios.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_acciones_formularios.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_acciones_formularios.ForeColor = System.Drawing.Color.Black;
+            this.btn_acciones_formularios.Image = ((System.Drawing.Image)(resources.GetObject("btn_acciones_formularios.Image")));
+            this.btn_acciones_formularios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btn_acciones_formularios.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_acciones_formularios.Location = new System.Drawing.Point(559, 21);
+            this.btn_acciones_formularios.Name = "btn_acciones_formularios";
+            this.btn_acciones_formularios.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_acciones_formularios.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_acciones_formularios.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_acciones_formularios.OnHoverImage = null;
+            this.btn_acciones_formularios.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_acciones_formularios.Radius = 7;
+            this.btn_acciones_formularios.Size = new System.Drawing.Size(98, 28);
+            this.btn_acciones_formularios.TabIndex = 254;
+            this.btn_acciones_formularios.Text = "Acciones";
+            this.btn_acciones_formularios.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_acciones_formularios.Click += new System.EventHandler(this.btn_acciones_formularios_Click);
+            // 
+            // pn_acciones_exportar
+            // 
+            this.pn_acciones_exportar.BackColor = System.Drawing.Color.White;
+            this.pn_acciones_exportar.BorderRadius = 20;
+            this.pn_acciones_exportar.BottomSahddow = true;
+            this.pn_acciones_exportar.color = System.Drawing.Color.White;
+            this.pn_acciones_exportar.Controls.Add(this.btn_exportar_actual);
+            this.pn_acciones_exportar.Controls.Add(this.btn_exportar_informe);
+            this.pn_acciones_exportar.Controls.Add(this.bunifuSeparator7);
+            this.TransitionPnMore.SetDecoration(this.pn_acciones_exportar, BunifuAnimatorNS.DecorationType.None);
+            this.pn_acciones_exportar.LeftSahddow = true;
+            this.pn_acciones_exportar.Location = new System.Drawing.Point(101, 55);
+            this.pn_acciones_exportar.Name = "pn_acciones_exportar";
+            this.pn_acciones_exportar.RightSahddow = true;
+            this.pn_acciones_exportar.ShadowDepth = 30;
+            this.pn_acciones_exportar.Size = new System.Drawing.Size(222, 71);
+            this.pn_acciones_exportar.TabIndex = 261;
+            this.pn_acciones_exportar.Visible = false;
+            // 
+            // btn_exportar_actual
+            // 
+            this.btn_exportar_actual.AnimationHoverSpeed = 0.07F;
+            this.btn_exportar_actual.AnimationSpeed = 0.03F;
+            this.btn_exportar_actual.BackColor = System.Drawing.Color.Transparent;
+            this.btn_exportar_actual.BaseColor = System.Drawing.Color.White;
+            this.btn_exportar_actual.BorderColor = System.Drawing.Color.White;
+            this.btn_exportar_actual.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_exportar_actual, BunifuAnimatorNS.DecorationType.None);
+            this.btn_exportar_actual.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_exportar_actual.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_exportar_actual.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exportar_actual.ForeColor = System.Drawing.Color.Black;
+            this.btn_exportar_actual.Image = ((System.Drawing.Image)(resources.GetObject("btn_exportar_actual.Image")));
+            this.btn_exportar_actual.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_exportar_actual.Location = new System.Drawing.Point(3, 4);
+            this.btn_exportar_actual.Name = "btn_exportar_actual";
+            this.btn_exportar_actual.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_exportar_actual.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btn_exportar_actual.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_exportar_actual.OnHoverImage = null;
+            this.btn_exportar_actual.OnPressedColor = System.Drawing.Color.White;
+            this.btn_exportar_actual.Radius = 7;
+            this.btn_exportar_actual.Size = new System.Drawing.Size(216, 28);
+            this.btn_exportar_actual.TabIndex = 251;
+            this.btn_exportar_actual.Text = "Exportar vista actual";
+            this.btn_exportar_actual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_exportar_actual.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_exportar_actual.Click += new System.EventHandler(this.btn_exportar_actual_Click);
+            // 
+            // btn_exportar_informe
+            // 
+            this.btn_exportar_informe.AnimationHoverSpeed = 0.07F;
+            this.btn_exportar_informe.AnimationSpeed = 0.03F;
+            this.btn_exportar_informe.BackColor = System.Drawing.Color.Transparent;
+            this.btn_exportar_informe.BaseColor = System.Drawing.Color.White;
+            this.btn_exportar_informe.BorderColor = System.Drawing.Color.White;
+            this.btn_exportar_informe.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_exportar_informe, BunifuAnimatorNS.DecorationType.None);
+            this.btn_exportar_informe.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_exportar_informe.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_exportar_informe.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exportar_informe.ForeColor = System.Drawing.Color.Black;
+            this.btn_exportar_informe.Image = ((System.Drawing.Image)(resources.GetObject("btn_exportar_informe.Image")));
+            this.btn_exportar_informe.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_exportar_informe.Location = new System.Drawing.Point(3, 38);
+            this.btn_exportar_informe.Name = "btn_exportar_informe";
+            this.btn_exportar_informe.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_exportar_informe.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btn_exportar_informe.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_exportar_informe.OnHoverImage = null;
+            this.btn_exportar_informe.OnPressedColor = System.Drawing.Color.White;
+            this.btn_exportar_informe.Radius = 7;
+            this.btn_exportar_informe.Size = new System.Drawing.Size(216, 28);
+            this.btn_exportar_informe.TabIndex = 248;
+            this.btn_exportar_informe.Text = "Exportar informe";
+            this.btn_exportar_informe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_exportar_informe.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_exportar_informe.Click += new System.EventHandler(this.btn_exportar_informe_Click);
+            // 
+            // bunifuSeparator7
+            // 
+            this.bunifuSeparator7.BackColor = System.Drawing.Color.Transparent;
+            this.TransitionPnMore.SetDecoration(this.bunifuSeparator7, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuSeparator7.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.bunifuSeparator7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.bunifuSeparator7.LineThickness = 1;
+            this.bunifuSeparator7.Location = new System.Drawing.Point(-31, 19);
+            this.bunifuSeparator7.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.bunifuSeparator7.Name = "bunifuSeparator7";
+            this.bunifuSeparator7.Size = new System.Drawing.Size(253, 30);
+            this.bunifuSeparator7.TabIndex = 255;
+            this.bunifuSeparator7.Transparency = 70;
+            this.bunifuSeparator7.Vertical = false;
+            // 
+            // dg_formularios
+            // 
+            this.dg_formularios.AllowUserToAddRows = false;
+            this.dg_formularios.AllowUserToDeleteRows = false;
+            this.dg_formularios.AllowUserToResizeRows = false;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            this.dg_formularios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
+            this.dg_formularios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dg_formularios.BackgroundColor = System.Drawing.Color.White;
+            this.dg_formularios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dg_formularios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dg_formularios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_formularios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            this.dg_formularios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dg_formularios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnId,
+            this.ColumnTipo,
+            this.ColumnCategoria,
+            this.ColumnStock,
+            this.ColumnEstado,
+            this.ColumnFecha});
+            this.TransitionPnMore.SetDecoration(this.dg_formularios, BunifuAnimatorNS.DecorationType.None);
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_formularios.DefaultCellStyle = dataGridViewCellStyle29;
+            this.dg_formularios.EnableHeadersVisualStyles = false;
+            this.dg_formularios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dg_formularios.Location = new System.Drawing.Point(11, 56);
+            this.dg_formularios.MultiSelect = false;
+            this.dg_formularios.Name = "dg_formularios";
+            this.dg_formularios.ReadOnly = true;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_formularios.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            this.dg_formularios.RowHeadersVisible = false;
+            this.dg_formularios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dg_formularios.RowTemplate.Height = 30;
+            this.dg_formularios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dg_formularios.Size = new System.Drawing.Size(651, 342);
+            this.dg_formularios.TabIndex = 161;
+            this.dg_formularios.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.dg_formularios.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dg_formularios.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dg_formularios.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dg_formularios.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dg_formularios.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dg_formularios.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dg_formularios.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dg_formularios.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.dg_formularios.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dg_formularios.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dg_formularios.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dg_formularios.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dg_formularios.ThemeStyle.HeaderStyle.Height = 23;
+            this.dg_formularios.ThemeStyle.ReadOnly = true;
+            this.dg_formularios.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dg_formularios.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dg_formularios.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dg_formularios.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dg_formularios.ThemeStyle.RowsStyle.Height = 30;
+            this.dg_formularios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dg_formularios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // ColumnId
+            // 
+            this.ColumnId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColumnId.FillWeight = 27.7284F;
+            this.ColumnId.HeaderText = "Id";
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            this.ColumnId.Width = 44;
+            // 
+            // ColumnTipo
+            // 
+            this.ColumnTipo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColumnTipo.FillWeight = 27.7284F;
+            this.ColumnTipo.HeaderText = "Categoria";
+            this.ColumnTipo.Name = "ColumnTipo";
+            this.ColumnTipo.ReadOnly = true;
+            this.ColumnTipo.Width = 92;
+            // 
+            // ColumnCategoria
+            // 
+            this.ColumnCategoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnCategoria.FillWeight = 79.10687F;
+            this.ColumnCategoria.HeaderText = "Nombre";
+            this.ColumnCategoria.Name = "ColumnCategoria";
+            this.ColumnCategoria.ReadOnly = true;
+            this.ColumnCategoria.Width = 130;
+            // 
+            // ColumnStock
+            // 
+            this.ColumnStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColumnStock.FillWeight = 337.9311F;
+            this.ColumnStock.HeaderText = "Stock disponible";
+            this.ColumnStock.Name = "ColumnStock";
+            this.ColumnStock.ReadOnly = true;
+            this.ColumnStock.Width = 131;
+            // 
+            // ColumnEstado
+            // 
+            this.ColumnEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColumnEstado.FillWeight = 24.3108F;
+            this.ColumnEstado.HeaderText = "Estado";
+            this.ColumnEstado.Name = "ColumnEstado";
+            this.ColumnEstado.ReadOnly = true;
+            this.ColumnEstado.Width = 73;
+            // 
+            // ColumnFecha
+            // 
+            this.ColumnFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnFecha.FillWeight = 114.0579F;
+            this.ColumnFecha.HeaderText = "Ultima actualizacion";
+            this.ColumnFecha.Name = "ColumnFecha";
+            this.ColumnFecha.ReadOnly = true;
+            // 
+            // pn_dashboard_critic
+            // 
+            this.pn_dashboard_critic.Controls.Add(this.gunaShadowPanel6);
+            this.pn_dashboard_critic.Controls.Add(this.gunaShadowPanel8);
+            this.pn_dashboard_critic.Controls.Add(this.gunaShadowPanel5);
+            this.TransitionPnMore.SetDecoration(this.pn_dashboard_critic, BunifuAnimatorNS.DecorationType.None);
+            this.pn_dashboard_critic.Location = new System.Drawing.Point(3, 526);
+            this.pn_dashboard_critic.Name = "pn_dashboard_critic";
+            this.pn_dashboard_critic.Size = new System.Drawing.Size(681, 145);
+            this.pn_dashboard_critic.TabIndex = 273;
+            // 
+            // gunaShadowPanel6
+            // 
+            this.gunaShadowPanel6.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel6.BaseColor = System.Drawing.Color.White;
+            this.gunaShadowPanel6.Controls.Add(this.label39);
+            this.gunaShadowPanel6.Controls.Add(this.label50);
+            this.gunaShadowPanel6.Controls.Add(this.label51);
+            this.gunaShadowPanel6.Controls.Add(this.pictureBox5);
+            this.gunaShadowPanel6.Controls.Add(this.gunaGauge6);
+            this.TransitionPnMore.SetDecoration(this.gunaShadowPanel6, BunifuAnimatorNS.DecorationType.None);
+            this.gunaShadowPanel6.Location = new System.Drawing.Point(460, 5);
+            this.gunaShadowPanel6.Name = "gunaShadowPanel6";
+            this.gunaShadowPanel6.Radius = 7;
+            this.gunaShadowPanel6.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel6.ShadowDepth = 20;
+            this.gunaShadowPanel6.ShadowShift = 3;
+            this.gunaShadowPanel6.Size = new System.Drawing.Size(215, 133);
+            this.gunaShadowPanel6.TabIndex = 272;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label39, BunifuAnimatorNS.DecorationType.None);
+            this.label39.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.label39.Location = new System.Drawing.Point(75, 80);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(54, 23);
+            this.label39.TabIndex = 213;
+            this.label39.Text = "Critico";
+            // 
+            // label50
+            // 
+            this.TransitionPnMore.SetDecoration(this.label50, BunifuAnimatorNS.DecorationType.None);
+            this.label50.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label50.Location = new System.Drawing.Point(120, 109);
+            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(28, 14);
+            this.label50.TabIndex = 209;
+            this.label50.Text = "0";
+            // 
+            // label51
+            // 
+            this.TransitionPnMore.SetDecoration(this.label51, BunifuAnimatorNS.DecorationType.None);
+            this.label51.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.Color.Silver;
+            this.label51.Location = new System.Drawing.Point(80, 108);
+            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(49, 14);
+            this.label51.TabIndex = 210;
+            this.label51.Text = "Varios:";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::LayerPresentation.Properties.Resources.r_negative;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.TransitionPnMore.SetDecoration(this.pictureBox5, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox5.Location = new System.Drawing.Point(67, 109);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(13, 13);
+            this.pictureBox5.TabIndex = 208;
+            this.pictureBox5.TabStop = false;
+            // 
+            // gunaGauge6
+            // 
+            this.gunaGauge6.BackThickness = 10;
+            this.TransitionPnMore.SetDecoration(this.gunaGauge6, BunifuAnimatorNS.DecorationType.None);
+            this.gunaGauge6.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGauge6.ForeColor = System.Drawing.Color.Silver;
+            this.gunaGauge6.IdleColor = System.Drawing.Color.Gainsboro;
+            this.gunaGauge6.Location = new System.Drawing.Point(17, -3);
+            this.gunaGauge6.Margin = new System.Windows.Forms.Padding(6);
+            this.gunaGauge6.MaximumColor = System.Drawing.Color.Maroon;
+            this.gunaGauge6.MinimumColor = System.Drawing.Color.Red;
+            this.gunaGauge6.Name = "gunaGauge6";
+            this.gunaGauge6.ShowText = true;
+            this.gunaGauge6.Size = new System.Drawing.Size(174, 117);
+            this.gunaGauge6.TabIndex = 207;
+            this.gunaGauge6.Thickness = 10;
+            // 
             // gunaShadowPanel8
             // 
             this.gunaShadowPanel8.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel8.BaseColor = System.Drawing.Color.White;
+            this.gunaShadowPanel8.Controls.Add(this.label28);
+            this.gunaShadowPanel8.Controls.Add(this.lbl_stockbajo_autos);
+            this.gunaShadowPanel8.Controls.Add(this.lbl_stock02);
+            this.gunaShadowPanel8.Controls.Add(this.pic_stock01);
+            this.gunaShadowPanel8.Controls.Add(this.gunaGauge4);
             this.TransitionPnMore.SetDecoration(this.gunaShadowPanel8, BunifuAnimatorNS.DecorationType.None);
-            this.gunaShadowPanel8.Location = new System.Drawing.Point(12, 400);
+            this.gunaShadowPanel8.Location = new System.Drawing.Point(7, 5);
             this.gunaShadowPanel8.Name = "gunaShadowPanel8";
             this.gunaShadowPanel8.Radius = 7;
             this.gunaShadowPanel8.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel8.ShadowDepth = 20;
             this.gunaShadowPanel8.ShadowShift = 3;
-            this.gunaShadowPanel8.Size = new System.Drawing.Size(668, 265);
+            this.gunaShadowPanel8.Size = new System.Drawing.Size(215, 133);
             this.gunaShadowPanel8.TabIndex = 269;
-            this.gunaShadowPanel8.Visible = false;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label28, BunifuAnimatorNS.DecorationType.None);
+            this.label28.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.label28.Location = new System.Drawing.Point(75, 80);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(54, 23);
+            this.label28.TabIndex = 211;
+            this.label28.Text = "Critico";
+            // 
+            // lbl_stockbajo_autos
+            // 
+            this.TransitionPnMore.SetDecoration(this.lbl_stockbajo_autos, BunifuAnimatorNS.DecorationType.None);
+            this.lbl_stockbajo_autos.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_stockbajo_autos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_stockbajo_autos.Location = new System.Drawing.Point(120, 109);
+            this.lbl_stockbajo_autos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_stockbajo_autos.Name = "lbl_stockbajo_autos";
+            this.lbl_stockbajo_autos.Size = new System.Drawing.Size(28, 14);
+            this.lbl_stockbajo_autos.TabIndex = 201;
+            this.lbl_stockbajo_autos.Text = "1";
+            // 
+            // lbl_stock02
+            // 
+            this.TransitionPnMore.SetDecoration(this.lbl_stock02, BunifuAnimatorNS.DecorationType.None);
+            this.lbl_stock02.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_stock02.ForeColor = System.Drawing.Color.Silver;
+            this.lbl_stock02.Location = new System.Drawing.Point(80, 108);
+            this.lbl_stock02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_stock02.Name = "lbl_stock02";
+            this.lbl_stock02.Size = new System.Drawing.Size(49, 14);
+            this.lbl_stock02.TabIndex = 202;
+            this.lbl_stock02.Text = "Autos:";
+            // 
+            // pic_stock01
+            // 
+            this.pic_stock01.BackgroundImage = global::LayerPresentation.Properties.Resources.r_negative;
+            this.pic_stock01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.TransitionPnMore.SetDecoration(this.pic_stock01, BunifuAnimatorNS.DecorationType.None);
+            this.pic_stock01.Location = new System.Drawing.Point(67, 109);
+            this.pic_stock01.Name = "pic_stock01";
+            this.pic_stock01.Size = new System.Drawing.Size(13, 13);
+            this.pic_stock01.TabIndex = 200;
+            this.pic_stock01.TabStop = false;
+            // 
+            // gunaGauge4
+            // 
+            this.gunaGauge4.BackThickness = 10;
+            this.TransitionPnMore.SetDecoration(this.gunaGauge4, BunifuAnimatorNS.DecorationType.None);
+            this.gunaGauge4.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGauge4.ForeColor = System.Drawing.Color.Silver;
+            this.gunaGauge4.IdleColor = System.Drawing.Color.Gainsboro;
+            this.gunaGauge4.Location = new System.Drawing.Point(17, -3);
+            this.gunaGauge4.Margin = new System.Windows.Forms.Padding(6);
+            this.gunaGauge4.MaximumColor = System.Drawing.Color.Maroon;
+            this.gunaGauge4.MinimumColor = System.Drawing.Color.Red;
+            this.gunaGauge4.Name = "gunaGauge4";
+            this.gunaGauge4.ShowText = true;
+            this.gunaGauge4.Size = new System.Drawing.Size(174, 117);
+            this.gunaGauge4.TabIndex = 4;
+            this.gunaGauge4.Thickness = 10;
+            this.gunaGauge4.Value = 10;
+            // 
+            // gunaShadowPanel5
+            // 
+            this.gunaShadowPanel5.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel5.BaseColor = System.Drawing.Color.White;
+            this.gunaShadowPanel5.Controls.Add(this.label38);
+            this.gunaShadowPanel5.Controls.Add(this.label47);
+            this.gunaShadowPanel5.Controls.Add(this.label48);
+            this.gunaShadowPanel5.Controls.Add(this.pictureBox4);
+            this.gunaShadowPanel5.Controls.Add(this.gunaGauge5);
+            this.TransitionPnMore.SetDecoration(this.gunaShadowPanel5, BunifuAnimatorNS.DecorationType.None);
+            this.gunaShadowPanel5.Location = new System.Drawing.Point(229, 5);
+            this.gunaShadowPanel5.Name = "gunaShadowPanel5";
+            this.gunaShadowPanel5.Radius = 7;
+            this.gunaShadowPanel5.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel5.ShadowDepth = 20;
+            this.gunaShadowPanel5.ShadowShift = 3;
+            this.gunaShadowPanel5.Size = new System.Drawing.Size(224, 133);
+            this.gunaShadowPanel5.TabIndex = 270;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label38, BunifuAnimatorNS.DecorationType.None);
+            this.label38.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.label38.Location = new System.Drawing.Point(72, 80);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(54, 23);
+            this.label38.TabIndex = 212;
+            this.label38.Text = "Critico";
+            // 
+            // label47
+            // 
+            this.TransitionPnMore.SetDecoration(this.label47, BunifuAnimatorNS.DecorationType.None);
+            this.label47.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label47.Location = new System.Drawing.Point(117, 109);
+            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(28, 14);
+            this.label47.TabIndex = 205;
+            this.label47.Text = "10";
+            // 
+            // label48
+            // 
+            this.TransitionPnMore.SetDecoration(this.label48, BunifuAnimatorNS.DecorationType.None);
+            this.label48.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.Silver;
+            this.label48.Location = new System.Drawing.Point(77, 108);
+            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(49, 14);
+            this.label48.TabIndex = 206;
+            this.label48.Text = "Motos:";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::LayerPresentation.Properties.Resources.r_negative;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.TransitionPnMore.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox4.Location = new System.Drawing.Point(64, 109);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(13, 13);
+            this.pictureBox4.TabIndex = 204;
+            this.pictureBox4.TabStop = false;
+            // 
+            // gunaGauge5
+            // 
+            this.gunaGauge5.BackThickness = 10;
+            this.TransitionPnMore.SetDecoration(this.gunaGauge5, BunifuAnimatorNS.DecorationType.None);
+            this.gunaGauge5.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGauge5.ForeColor = System.Drawing.Color.Silver;
+            this.gunaGauge5.IdleColor = System.Drawing.Color.Gainsboro;
+            this.gunaGauge5.Location = new System.Drawing.Point(14, -3);
+            this.gunaGauge5.Margin = new System.Windows.Forms.Padding(6);
+            this.gunaGauge5.MaximumColor = System.Drawing.Color.Maroon;
+            this.gunaGauge5.MinimumColor = System.Drawing.Color.Red;
+            this.gunaGauge5.Name = "gunaGauge5";
+            this.gunaGauge5.ShowText = true;
+            this.gunaGauge5.Size = new System.Drawing.Size(174, 117);
+            this.gunaGauge5.TabIndex = 203;
+            this.gunaGauge5.Thickness = 10;
+            this.gunaGauge5.Value = 50;
+            // 
+            // pn_parametros_details
+            // 
+            this.pn_parametros_details.BackColor = System.Drawing.Color.White;
+            this.pn_parametros_details.BorderRadius = 25;
+            this.pn_parametros_details.BottomSahddow = true;
+            this.pn_parametros_details.color = System.Drawing.Color.Transparent;
+            this.pn_parametros_details.Controls.Add(this.flowLayoutPanel2);
+            this.TransitionPnMore.SetDecoration(this.pn_parametros_details, BunifuAnimatorNS.DecorationType.None);
+            this.pn_parametros_details.LeftSahddow = true;
+            this.pn_parametros_details.Location = new System.Drawing.Point(11, 519);
+            this.pn_parametros_details.Name = "pn_parametros_details";
+            this.pn_parametros_details.RightSahddow = true;
+            this.pn_parametros_details.ShadowDepth = 25;
+            this.pn_parametros_details.Size = new System.Drawing.Size(668, 153);
+            this.pn_parametros_details.TabIndex = 271;
+            this.pn_parametros_details.Visible = false;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.gunaShadowPanel3);
+            this.flowLayoutPanel2.Controls.Add(this.gunaShadowPanel9);
+            this.flowLayoutPanel2.Controls.Add(this.gunaShadowPanel10);
+            this.TransitionPnMore.SetDecoration(this.flowLayoutPanel2, BunifuAnimatorNS.DecorationType.None);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(8, 11);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(648, 133);
+            this.flowLayoutPanel2.TabIndex = 247;
+            // 
+            // gunaShadowPanel3
+            // 
+            this.gunaShadowPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel3.BaseColor = System.Drawing.Color.White;
+            this.gunaShadowPanel3.Controls.Add(this.label21);
+            this.gunaShadowPanel3.Controls.Add(this.gunaTextBox1);
+            this.gunaShadowPanel3.Controls.Add(this.label24);
+            this.gunaShadowPanel3.Controls.Add(this.label26);
+            this.TransitionPnMore.SetDecoration(this.gunaShadowPanel3, BunifuAnimatorNS.DecorationType.None);
+            this.gunaShadowPanel3.Location = new System.Drawing.Point(3, 3);
+            this.gunaShadowPanel3.Name = "gunaShadowPanel3";
+            this.gunaShadowPanel3.Radius = 3;
+            this.gunaShadowPanel3.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel3.ShadowDepth = 20;
+            this.gunaShadowPanel3.ShadowShift = 2;
+            this.gunaShadowPanel3.Size = new System.Drawing.Size(643, 39);
+            this.gunaShadowPanel3.TabIndex = 246;
+            // 
+            // label21
+            // 
+            this.TransitionPnMore.SetDecoration(this.label21, BunifuAnimatorNS.DecorationType.None);
+            this.label21.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.label21.Location = new System.Drawing.Point(274, 9);
+            this.label21.Name = "label21";
+            this.label21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label21.Size = new System.Drawing.Size(275, 22);
+            this.label21.TabIndex = 246;
+            this.label21.Text = "Menor o igual que";
+            // 
+            // gunaTextBox1
+            // 
+            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox1.BorderColor = System.Drawing.Color.White;
+            this.gunaTextBox1.BorderSize = 1;
+            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TransitionPnMore.SetDecoration(this.gunaTextBox1, BunifuAnimatorNS.DecorationType.None);
+            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox1.FocusedForeColor = System.Drawing.Color.Black;
+            this.gunaTextBox1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTextBox1.ForeColor = System.Drawing.Color.DarkGray;
+            this.gunaTextBox1.Location = new System.Drawing.Point(551, 5);
+            this.gunaTextBox1.Name = "gunaTextBox1";
+            this.gunaTextBox1.PasswordChar = '\0';
+            this.gunaTextBox1.Radius = 7;
+            this.gunaTextBox1.Size = new System.Drawing.Size(85, 28);
+            this.gunaTextBox1.TabIndex = 239;
+            this.gunaTextBox1.Text = "10";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label24, BunifuAnimatorNS.DecorationType.None);
+            this.label24.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.label24.Location = new System.Drawing.Point(152, 8);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(40, 23);
+            this.label24.TabIndex = 88;
+            this.label24.Text = "bajo";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label26, BunifuAnimatorNS.DecorationType.None);
+            this.label26.Font = new System.Drawing.Font("Poppins Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Gray;
+            this.label26.Location = new System.Drawing.Point(10, 8);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(145, 23);
+            this.label26.TabIndex = 87;
+            this.label26.Text = "Parametros de stock";
+            // 
+            // gunaShadowPanel9
+            // 
+            this.gunaShadowPanel9.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel9.BaseColor = System.Drawing.Color.White;
+            this.gunaShadowPanel9.Controls.Add(this.label27);
+            this.gunaShadowPanel9.Controls.Add(this.gunaTextBox2);
+            this.gunaShadowPanel9.Controls.Add(this.label41);
+            this.gunaShadowPanel9.Controls.Add(this.label42);
+            this.TransitionPnMore.SetDecoration(this.gunaShadowPanel9, BunifuAnimatorNS.DecorationType.None);
+            this.gunaShadowPanel9.Location = new System.Drawing.Point(3, 47);
+            this.gunaShadowPanel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 3);
+            this.gunaShadowPanel9.Name = "gunaShadowPanel9";
+            this.gunaShadowPanel9.Radius = 3;
+            this.gunaShadowPanel9.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel9.ShadowDepth = 20;
+            this.gunaShadowPanel9.ShadowShift = 2;
+            this.gunaShadowPanel9.Size = new System.Drawing.Size(643, 39);
+            this.gunaShadowPanel9.TabIndex = 247;
+            // 
+            // label27
+            // 
+            this.TransitionPnMore.SetDecoration(this.label27, BunifuAnimatorNS.DecorationType.None);
+            this.label27.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.label27.Location = new System.Drawing.Point(274, 11);
+            this.label27.Name = "label27";
+            this.label27.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label27.Size = new System.Drawing.Size(275, 22);
+            this.label27.TabIndex = 248;
+            this.label27.Text = "Menor o igual que";
+            // 
+            // gunaTextBox2
+            // 
+            this.gunaTextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTextBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox2.BorderColor = System.Drawing.Color.White;
+            this.gunaTextBox2.BorderSize = 1;
+            this.gunaTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TransitionPnMore.SetDecoration(this.gunaTextBox2, BunifuAnimatorNS.DecorationType.None);
+            this.gunaTextBox2.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox2.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox2.FocusedForeColor = System.Drawing.Color.Black;
+            this.gunaTextBox2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTextBox2.ForeColor = System.Drawing.Color.DarkGray;
+            this.gunaTextBox2.Location = new System.Drawing.Point(551, 7);
+            this.gunaTextBox2.Name = "gunaTextBox2";
+            this.gunaTextBox2.PasswordChar = '\0';
+            this.gunaTextBox2.Radius = 7;
+            this.gunaTextBox2.Size = new System.Drawing.Size(85, 28);
+            this.gunaTextBox2.TabIndex = 247;
+            this.gunaTextBox2.Text = "50";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label41, BunifuAnimatorNS.DecorationType.None);
+            this.label41.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.label41.Location = new System.Drawing.Point(152, 10);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(53, 23);
+            this.label41.TabIndex = 89;
+            this.label41.Text = "medio";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label42, BunifuAnimatorNS.DecorationType.None);
+            this.label42.Font = new System.Drawing.Font("Poppins Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Gray;
+            this.label42.Location = new System.Drawing.Point(10, 10);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(145, 23);
+            this.label42.TabIndex = 88;
+            this.label42.Text = "Parametros de stock";
+            // 
+            // gunaShadowPanel10
+            // 
+            this.gunaShadowPanel10.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel10.BaseColor = System.Drawing.Color.White;
+            this.gunaShadowPanel10.Controls.Add(this.label43);
+            this.gunaShadowPanel10.Controls.Add(this.gunaTextBox3);
+            this.gunaShadowPanel10.Controls.Add(this.label44);
+            this.gunaShadowPanel10.Controls.Add(this.label45);
+            this.TransitionPnMore.SetDecoration(this.gunaShadowPanel10, BunifuAnimatorNS.DecorationType.None);
+            this.gunaShadowPanel10.Location = new System.Drawing.Point(3, 91);
+            this.gunaShadowPanel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 3);
+            this.gunaShadowPanel10.Name = "gunaShadowPanel10";
+            this.gunaShadowPanel10.Radius = 3;
+            this.gunaShadowPanel10.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel10.ShadowDepth = 20;
+            this.gunaShadowPanel10.ShadowShift = 2;
+            this.gunaShadowPanel10.Size = new System.Drawing.Size(643, 39);
+            this.gunaShadowPanel10.TabIndex = 248;
+            // 
+            // label43
+            // 
+            this.TransitionPnMore.SetDecoration(this.label43, BunifuAnimatorNS.DecorationType.None);
+            this.label43.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.label43.Location = new System.Drawing.Point(274, 11);
+            this.label43.Name = "label43";
+            this.label43.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label43.Size = new System.Drawing.Size(275, 22);
+            this.label43.TabIndex = 248;
+            this.label43.Text = "Menor o igual que";
+            // 
+            // gunaTextBox3
+            // 
+            this.gunaTextBox3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTextBox3.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox3.BorderColor = System.Drawing.Color.White;
+            this.gunaTextBox3.BorderSize = 1;
+            this.gunaTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TransitionPnMore.SetDecoration(this.gunaTextBox3, BunifuAnimatorNS.DecorationType.None);
+            this.gunaTextBox3.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox3.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox3.FocusedForeColor = System.Drawing.Color.Black;
+            this.gunaTextBox3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTextBox3.ForeColor = System.Drawing.Color.DarkGray;
+            this.gunaTextBox3.Location = new System.Drawing.Point(551, 7);
+            this.gunaTextBox3.Name = "gunaTextBox3";
+            this.gunaTextBox3.PasswordChar = '\0';
+            this.gunaTextBox3.Radius = 7;
+            this.gunaTextBox3.Size = new System.Drawing.Size(85, 28);
+            this.gunaTextBox3.TabIndex = 247;
+            this.gunaTextBox3.Text = "100";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label44, BunifuAnimatorNS.DecorationType.None);
+            this.label44.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.label44.Location = new System.Drawing.Point(152, 10);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(36, 23);
+            this.label44.TabIndex = 90;
+            this.label44.Text = "alto";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label45, BunifuAnimatorNS.DecorationType.None);
+            this.label45.Font = new System.Drawing.Font("Poppins Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.Gray;
+            this.label45.Location = new System.Drawing.Point(10, 10);
+            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(145, 23);
+            this.label45.TabIndex = 89;
+            this.label45.Text = "Parametros de stock";
+            // 
+            // pn_dashboard
+            // 
+            this.pn_dashboard.BackColor = System.Drawing.Color.Transparent;
+            this.pn_dashboard.BaseColor = System.Drawing.Color.White;
+            this.pn_dashboard.Controls.Add(this.label30);
+            this.pn_dashboard.Controls.Add(this.bunifuSeparator9);
+            this.pn_dashboard.Controls.Add(this.bunifuSeparator8);
+            this.pn_dashboard.Controls.Add(this.label29);
+            this.pn_dashboard.Controls.Add(this.label20);
+            this.pn_dashboard.Controls.Add(this.label19);
+            this.pn_dashboard.Controls.Add(this.label17);
+            this.pn_dashboard.Controls.Add(this.label6);
+            this.TransitionPnMore.SetDecoration(this.pn_dashboard, BunifuAnimatorNS.DecorationType.None);
+            this.pn_dashboard.Location = new System.Drawing.Point(10, 466);
+            this.pn_dashboard.Name = "pn_dashboard";
+            this.pn_dashboard.Radius = 7;
+            this.pn_dashboard.ShadowColor = System.Drawing.Color.Black;
+            this.pn_dashboard.ShadowDepth = 20;
+            this.pn_dashboard.ShadowShift = 3;
+            this.pn_dashboard.Size = new System.Drawing.Size(668, 56);
+            this.pn_dashboard.TabIndex = 270;
+            // 
+            // label30
+            // 
+            this.TransitionPnMore.SetDecoration(this.label30, BunifuAnimatorNS.DecorationType.None);
+            this.label30.Font = new System.Drawing.Font("Poppins ExtraLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Black;
+            this.label30.Location = new System.Drawing.Point(258, 32);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(157, 14);
+            this.label30.TabIndex = 259;
+            this.label30.Text = "Id de operacion: 1454b31";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuSeparator9
+            // 
+            this.bunifuSeparator9.BackColor = System.Drawing.Color.Transparent;
+            this.TransitionPnMore.SetDecoration(this.bunifuSeparator9, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuSeparator9.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.bunifuSeparator9.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.bunifuSeparator9.LineThickness = 1;
+            this.bunifuSeparator9.Location = new System.Drawing.Point(454, 0);
+            this.bunifuSeparator9.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.bunifuSeparator9.Name = "bunifuSeparator9";
+            this.bunifuSeparator9.Size = new System.Drawing.Size(20, 55);
+            this.bunifuSeparator9.TabIndex = 258;
+            this.bunifuSeparator9.Transparency = 70;
+            this.bunifuSeparator9.Vertical = true;
+            // 
+            // bunifuSeparator8
+            // 
+            this.bunifuSeparator8.BackColor = System.Drawing.Color.Transparent;
+            this.TransitionPnMore.SetDecoration(this.bunifuSeparator8, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuSeparator8.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.bunifuSeparator8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.bunifuSeparator8.LineThickness = 1;
+            this.bunifuSeparator8.Location = new System.Drawing.Point(197, 2);
+            this.bunifuSeparator8.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.bunifuSeparator8.Name = "bunifuSeparator8";
+            this.bunifuSeparator8.Size = new System.Drawing.Size(20, 55);
+            this.bunifuSeparator8.TabIndex = 257;
+            this.bunifuSeparator8.Transparency = 70;
+            this.bunifuSeparator8.Vertical = true;
+            this.bunifuSeparator8.Load += new System.EventHandler(this.bunifuSeparator8_Load);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label29, BunifuAnimatorNS.DecorationType.None);
+            this.label29.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.label29.Location = new System.Drawing.Point(256, 11);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(161, 23);
+            this.label29.TabIndex = 216;
+            this.label29.Text = "Actualizacion de stock";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label20, BunifuAnimatorNS.DecorationType.None);
+            this.label20.Font = new System.Drawing.Font("Poppins ExtraLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Silver;
+            this.label20.Location = new System.Drawing.Point(501, 31);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(139, 19);
+            this.label20.TabIndex = 215;
+            this.label20.Text = "emailuser@outlook.com";
+            // 
+            // label19
+            // 
+            this.TransitionPnMore.SetDecoration(this.label19, BunifuAnimatorNS.DecorationType.None);
+            this.label19.Font = new System.Drawing.Font("Poppins ExtraLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(47, 33);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(117, 14);
+            this.label19.TabIndex = 214;
+            this.label19.Text = "12/02/2020 13:58:00";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label17, BunifuAnimatorNS.DecorationType.None);
+            this.label17.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Silver;
+            this.label17.Location = new System.Drawing.Point(508, 11);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(118, 23);
+            this.label17.TabIndex = 213;
+            this.label17.Text = "Nombre Usuario";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label6, BunifuAnimatorNS.DecorationType.None);
+            this.label6.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.label6.Location = new System.Drawing.Point(28, 11);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(150, 23);
+            this.label6.TabIndex = 212;
+            this.label6.Text = "Ultima actualizacion";
+            // 
+            // pn_editar_parametros
+            // 
+            this.pn_editar_parametros.BackColor = System.Drawing.Color.White;
+            this.pn_editar_parametros.BorderRadius = 30;
+            this.pn_editar_parametros.BottomSahddow = true;
+            this.pn_editar_parametros.color = System.Drawing.Color.Transparent;
+            this.pn_editar_parametros.Controls.Add(this.btn_closeparametros);
+            this.pn_editar_parametros.Controls.Add(this.label5);
+            this.pn_editar_parametros.Controls.Add(this.btn_detailsparametros);
+            this.pn_editar_parametros.Controls.Add(this.gunaSwitch1);
+            this.pn_editar_parametros.Controls.Add(this.label18);
+            this.TransitionPnMore.SetDecoration(this.pn_editar_parametros, BunifuAnimatorNS.DecorationType.None);
+            this.pn_editar_parametros.LeftSahddow = true;
+            this.pn_editar_parametros.Location = new System.Drawing.Point(10, 473);
+            this.pn_editar_parametros.Name = "pn_editar_parametros";
+            this.pn_editar_parametros.RightSahddow = true;
+            this.pn_editar_parametros.ShadowDepth = 25;
+            this.pn_editar_parametros.Size = new System.Drawing.Size(670, 50);
+            this.pn_editar_parametros.TabIndex = 270;
+            this.pn_editar_parametros.Visible = false;
+            this.pn_editar_parametros.VisibleChanged += new System.EventHandler(this.pn_editar_parametros_VisibleChanged);
+            this.pn_editar_parametros.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_editar_parametros_Paint);
+            // 
+            // btn_closeparametros
+            // 
+            this.btn_closeparametros.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.btn_closeparametros, BunifuAnimatorNS.DecorationType.None);
+            this.btn_closeparametros.Image = global::LayerPresentation.Properties.Resources.multiply_60px;
+            this.btn_closeparametros.ImageActive = null;
+            this.btn_closeparametros.Location = new System.Drawing.Point(627, 14);
+            this.btn_closeparametros.Name = "btn_closeparametros";
+            this.btn_closeparametros.Size = new System.Drawing.Size(31, 23);
+            this.btn_closeparametros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_closeparametros.TabIndex = 248;
+            this.btn_closeparametros.TabStop = false;
+            this.btn_closeparametros.Zoom = 9;
+            this.btn_closeparametros.Click += new System.EventHandler(this.btn_closeparametros_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
+            this.label5.Font = new System.Drawing.Font("Poppins Thin", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.Location = new System.Drawing.Point(194, 15);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(163, 22);
+            this.label5.TabIndex = 247;
+            this.label5.Text = "(Formulario seleccionado)";
+            // 
+            // btn_detailsparametros
+            // 
+            this.btn_detailsparametros.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.btn_detailsparametros, BunifuAnimatorNS.DecorationType.None);
+            this.btn_detailsparametros.Image = ((System.Drawing.Image)(resources.GetObject("btn_detailsparametros.Image")));
+            this.btn_detailsparametros.ImageActive = null;
+            this.btn_detailsparametros.Location = new System.Drawing.Point(590, 14);
+            this.btn_detailsparametros.Name = "btn_detailsparametros";
+            this.btn_detailsparametros.Size = new System.Drawing.Size(31, 23);
+            this.btn_detailsparametros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_detailsparametros.TabIndex = 211;
+            this.btn_detailsparametros.TabStop = false;
+            this.btn_detailsparametros.Zoom = 9;
+            this.btn_detailsparametros.Click += new System.EventHandler(this.btn_detailsparametros_Click);
+            // 
+            // gunaSwitch1
+            // 
+            this.gunaSwitch1.BaseColor = System.Drawing.SystemColors.Control;
+            this.gunaSwitch1.CheckedOffColor = System.Drawing.Color.DarkGray;
+            this.gunaSwitch1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.TransitionPnMore.SetDecoration(this.gunaSwitch1, BunifuAnimatorNS.DecorationType.None);
+            this.gunaSwitch1.FillColor = System.Drawing.Color.White;
+            this.gunaSwitch1.Location = new System.Drawing.Point(11, 14);
+            this.gunaSwitch1.Name = "gunaSwitch1";
+            this.gunaSwitch1.Size = new System.Drawing.Size(36, 25);
+            this.gunaSwitch1.TabIndex = 0;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label18, BunifuAnimatorNS.DecorationType.None);
+            this.label18.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.label18.Location = new System.Drawing.Point(45, 14);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(151, 23);
+            this.label18.TabIndex = 86;
+            this.label18.Text = "Parametros de alerta";
             // 
             // elipse_datagridview
             // 
@@ -2407,22 +3117,29 @@
             // 
             this.TransitionPnMore.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.TransitionPnMore.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.TransitionPnMore.DefaultAnimation = animation2;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.TransitionPnMore.DefaultAnimation = animation3;
+            this.TransitionPnMore.MaxAnimationTime = 1000;
+            this.TransitionPnMore.TimeStep = 0.09F;
+            // 
+            // Elipse_datagridview_numeracion
+            // 
+            this.Elipse_datagridview_numeracion.ElipseRadius = 15;
+            this.Elipse_datagridview_numeracion.TargetControl = this.dg_numeracion;
             // 
             // frm_formularios
             // 
@@ -2440,18 +3157,50 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control de formularios";
             this.Load += new System.EventHandler(this.frm_formularios_Load);
-            this.panel_crud.ResumeLayout(false);
-            this.panel_crud.PerformLayout();
             this.panel_formularios.ResumeLayout(false);
             this.panel_formularios.PerformLayout();
+            this.pn_addformularios.ResumeLayout(false);
+            this.pn_addformularios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_closeadd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_save)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton8)).EndInit();
+            this.pn_añadirnumeracion.ResumeLayout(false);
+            this.pn_añadirnumeracion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).EndInit();
+            this.pn_editarnumeracion.ResumeLayout(false);
+            this.pn_editarnumeracion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_close_editar_numeracion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            this.gunaShadowPanel2.ResumeLayout(false);
+            this.pn_acciones_numeracion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dg_numeracion)).EndInit();
+            this.gunaShadowPanel4.ResumeLayout(false);
+            this.gunaShadowPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_alertas_1)).EndInit();
             this.pn_exportar_formularios.ResumeLayout(false);
             this.pn_exportar_formularios.PerformLayout();
-            this.pn_editar_parametros.ResumeLayout(false);
-            this.pn_editar_parametros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_moreaccount)).EndInit();
             this.pn_consulta_formularios.ResumeLayout(false);
             this.pn_consulta_formularios.PerformLayout();
-            this.pn_parametros_detail.ResumeLayout(false);
+            this.gunaShadowPanel1.ResumeLayout(false);
+            this.gunaShadowPanel1.PerformLayout();
+            this.pn_acciones_formularios.ResumeLayout(false);
+            this.pn_acciones_exportar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dg_formularios)).EndInit();
+            this.pn_dashboard_critic.ResumeLayout(false);
+            this.gunaShadowPanel6.ResumeLayout(false);
+            this.gunaShadowPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.gunaShadowPanel8.ResumeLayout(false);
+            this.gunaShadowPanel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_stock01)).EndInit();
+            this.gunaShadowPanel5.ResumeLayout(false);
+            this.gunaShadowPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.pn_parametros_details.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.gunaShadowPanel3.ResumeLayout(false);
             this.gunaShadowPanel3.PerformLayout();
@@ -2459,58 +3208,20 @@
             this.gunaShadowPanel9.PerformLayout();
             this.gunaShadowPanel10.ResumeLayout(false);
             this.gunaShadowPanel10.PerformLayout();
-            this.panel_interacted.ResumeLayout(false);
-            this.panel_interacted.PerformLayout();
-            this.panel_stock.ResumeLayout(false);
-            this.panel_stock.PerformLayout();
-            this.gunaShadowPanel4.ResumeLayout(false);
-            this.gunaShadowPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_alertas_1)).EndInit();
-            this.gunaShadowPanel2.ResumeLayout(false);
-            this.pn_acciones_numeracion.ResumeLayout(false);
-            this.gunaShadowPanel1.ResumeLayout(false);
-            this.gunaShadowPanel1.PerformLayout();
-            this.pn_acciones_exportar.ResumeLayout(false);
-            this.pn_acciones_formularios.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dg_formularios)).EndInit();
+            this.pn_dashboard.ResumeLayout(false);
+            this.pn_dashboard.PerformLayout();
+            this.pn_editar_parametros.ResumeLayout(false);
+            this.pn_editar_parametros.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_closeparametros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_detailsparametros)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cb_categorias;
-        private System.Windows.Forms.Label Stock;
-        private System.Windows.Forms.TextBox txtBox_stock;
-        private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Panel panel_crud;
-        private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.Button btn_update;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel_formularios;
-        private System.Windows.Forms.Panel panel_interacted;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtBox_numeracion;
-        private System.Windows.Forms.TextBox txtBox_object;
-        private System.Windows.Forms.Button btn_stock;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btn_detalle_alerta;
-        private System.Windows.Forms.DataGridView dg_alertas_1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Panel panel_stock;
-        private System.Windows.Forms.TextBox txtBox_categoria_stock;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtBox_objeto;
-        private System.Windows.Forms.TextBox txtBox_stockAnterior;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label txtBox_nuevoStock_panel;
-        private System.Windows.Forms.TextBox txtBox_stockNuevo;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn user;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_totaltramites;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
@@ -2534,8 +3245,8 @@
         private Guna.UI.WinForms.GunaButton btn_editar;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel2;
         private Bunifu.Framework.UI.BunifuCards pn_acciones_numeracion;
-        private Guna.UI.WinForms.GunaButton gunaButton3;
-        private Guna.UI.WinForms.GunaButton gunaButton4;
+        private Guna.UI.WinForms.GunaButton btn_actualizarnumeracion;
+        private Guna.UI.WinForms.GunaButton btn_eliminarnumeracion;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator4;
         private Guna.UI.WinForms.GunaButton btn_acciones_numeracion;
         private Guna.UI.WinForms.GunaButton btn_add_numeracion;
@@ -2543,10 +3254,10 @@
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel4;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private Guna.UI.WinForms.GunaButton btn_eliminar;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton btn_editarparametros;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
         private Bunifu.Framework.UI.BunifuCards pn_consulta_formularios;
-        private Bunifu.Framework.UI.BunifuThinButton2 button_cancelarconsulta;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_cancelarconsulta;
         private Bunifu.Framework.UI.BunifuThinButton2 button_buscar;
         private System.Windows.Forms.Label btn_checkboxinscripto;
         private Bunifu.Framework.UI.BunifuCheckbox checkBox_inscripto;
@@ -2566,7 +3277,7 @@
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox2;
         private Guna.UI.WinForms.GunaComboBox gunaComboBox3;
         private System.Windows.Forms.Label label10;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_cancelarinforme;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
         private System.Windows.Forms.Label label14;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox3;
@@ -2582,7 +3293,7 @@
         private Guna.UI.WinForms.GunaButton btn_exportar_informe;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator7;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel8;
-        private Bunifu.Framework.UI.BunifuCards pn_parametros_detail;
+        private Bunifu.Framework.UI.BunifuCards pn_parametros_details;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel3;
         private System.Windows.Forms.Label label21;
@@ -2600,8 +3311,74 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private Bunifu.Framework.UI.BunifuCards pn_editar_parametros;
-        private Bunifu.Framework.UI.BunifuImageButton btn_moreaccount;
+        private Bunifu.Framework.UI.BunifuImageButton btn_detailsparametros;
         private System.Windows.Forms.Label label5;
         private BunifuAnimatorNS.BunifuTransition TransitionPnMore;
+        private Bunifu.Framework.UI.BunifuImageButton btn_closeparametros;
+        private Guna.UI.WinForms.GunaGauge gunaGauge4;
+        private System.Windows.Forms.Label lbl_stockbajo_autos;
+        private System.Windows.Forms.Label lbl_stock02;
+        private System.Windows.Forms.PictureBox pic_stock01;
+        private System.Windows.Forms.Label label28;
+        private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel6;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private Guna.UI.WinForms.GunaGauge gunaGauge6;
+        private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel5;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private Guna.UI.WinForms.GunaGauge gunaGauge5;
+        private System.Windows.Forms.Panel pn_dashboard_critic;
+        private Guna.UI.WinForms.GunaShadowPanel pn_dashboard;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label6;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator9;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator8;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label30;
+        private Guna.UI.WinForms.GunaButton btn_refreshdata;
+        private Guna.UI.WinForms.GunaDataGridView dg_alertas_1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAlertaCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAlertaUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAlertaFecha;
+        private Bunifu.Framework.UI.BunifuCards pn_editarnumeracion;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Guna.UI.WinForms.GunaTextBox gunaTextBox5;
+        private System.Windows.Forms.Label label46;
+        private Guna.UI.WinForms.GunaTextBox gunaTextBox6;
+        private System.Windows.Forms.Label label52;
+        private Bunifu.Framework.UI.BunifuImageButton btn_close_editar_numeracion;
+        private Guna.UI.WinForms.GunaDataGridView dg_numeracion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumeracion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnStockDetail;
+        private Bunifu.Framework.UI.BunifuCards pn_añadirnumeracion;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton6;
+        private Guna.UI.WinForms.GunaTextBox gunaTextBox4;
+        private System.Windows.Forms.Label label33;
+        private Guna.UI.WinForms.GunaTextBox gunaTextBox7;
+        private System.Windows.Forms.Label label40;
+        private Bunifu.Framework.UI.BunifuElipse Elipse_datagridview_numeracion;
+        private Bunifu.Framework.UI.BunifuCards pn_addformularios;
+        private Bunifu.Framework.UI.BunifuImageButton btn_closeadd;
+        private Bunifu.Framework.UI.BunifuImageButton btn_save;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton7;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton8;
+        private Guna.UI.WinForms.GunaTextBox txtBox_numeracion;
+        private System.Windows.Forms.Label label49;
+        private Guna.UI.WinForms.GunaTextBox txtBox_stock;
+        private System.Windows.Forms.Label label53;
+        private Guna.UI.WinForms.GunaComboBox cb_categorias;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI.WinForms.GunaComboBox gunaComboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

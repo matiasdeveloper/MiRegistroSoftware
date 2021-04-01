@@ -29,6 +29,7 @@ namespace LayerPresentation
             OpenFormInPanel(new frm_escritorio());
         }
 
+        private protected BunifuCards currentPanelOpenInFront;
         private protected BunifuFlatButton currentSidebarButton;
         private protected Panel currentSidebarButtonSelected;
 
@@ -55,8 +56,23 @@ namespace LayerPresentation
         }
         private void ShowMoreOptions(BunifuCards panel)
         {
-            panel.Visible = false;
-            TransitionPnMore.Show(panel);
+            if (panel == currentPanelOpenInFront || panel.Visible == true)
+            {
+                currentPanelOpenInFront = null;
+                panel.Visible = false;
+            }
+            else
+            {
+                // Open panel
+                if (currentPanelOpenInFront != null)
+                {
+                    currentPanelOpenInFront.Visible = false;
+                }
+                currentPanelOpenInFront = panel;
+
+                panel.Visible = false;
+                TransitionPnMore.Show(panel);
+            }
         }
 
         private void ActivateButtonSidebar(object senderBtn)
@@ -80,7 +96,7 @@ namespace LayerPresentation
         private void LoadUserData()
         {
             lbl_nombre.Text = UserLoginCache.Nombre;
-            lbl_permisos.Text = UserLoginCache.Priveleges;
+            lbl_email.Text = UserLoginCache.Priveleges;
             lbl_lastacess.Text = UserLoginCache.Fecha_UltimoAcceso.ToShortDateString();
         }
         private protected void LoadAccessPrivileges()
@@ -177,38 +193,17 @@ namespace LayerPresentation
 
         private void btn_moreaccount_Click(object sender, EventArgs e)
         {
-            if (pn_moreoptions.Visible)
-            {
-                pn_moreoptions.Visible = false;
-            }
-            else
-            {
-                ShowMoreOptions(pn_moreoptions);
-            }
+            //ShowMoreOptions(pn_moreoptions);
         }
         private void btn_notify_Click(object sender, EventArgs e)
         {
-            if (pn_notification.Visible)
-            {
-                pn_notification.Visible = false;
-            }
-            else
-            {
-                ShowMoreOptions(pn_notification);
-            }
+            ShowMoreOptions(pn_notification);
         }
         private void btn_account_Click(object sender, EventArgs e)
         {
-            if (pn_moreoptions.Visible)
-            {
-                pn_moreoptions.Visible = false;
-            }
-            else
-            {
-                ShowMoreOptions(pn_moreoptions);
-            }
+            ShowMoreOptions(pn_moreoptions);
         }
-        
+
         private void Frm_principal_Load(object sender, EventArgs e)
         {          
             LoadUserData();
@@ -219,10 +214,6 @@ namespace LayerPresentation
             Alertas.BuscarAlertas();
 
             ShowSidebar();
-        }
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            txtBox_fecha.Text = DateTime.Now.ToString();
         }
 
         private void pn_sidebar_Paint(object sender, PaintEventArgs e)

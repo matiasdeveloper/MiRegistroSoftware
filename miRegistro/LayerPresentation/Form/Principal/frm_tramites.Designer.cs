@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_tramites));
             this.lbl_totaltramites = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -47,29 +47,23 @@
             this.ColumnFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnObservaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBox_user = new Guna.UI.WinForms.GunaTextBox();
-            this.btn_moreaccount = new Bunifu.Framework.UI.BunifuImageButton();
             this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btn_savepdf = new Guna.UI.WinForms.GunaButton();
-            this.btn_insertar = new Guna.UI.WinForms.GunaButton();
-            this.btn_eliminar = new Guna.UI.WinForms.GunaButton();
-            this.btn_inscribir = new Guna.UI.WinForms.GunaButton();
-            this.btn_editar = new Guna.UI.WinForms.GunaButton();
-            this.btn_refreshdata = new Guna.UI.WinForms.GunaButton();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.btn_savepdf = new Guna.UI.WinForms.GunaButton();
             this.gunaVSeparator2 = new Guna.UI.WinForms.GunaVSeparator();
             this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
             this.pn_acciones = new Bunifu.Framework.UI.BunifuCards();
             this.btn_error = new Guna.UI.WinForms.GunaButton();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.btn_eliminar = new Guna.UI.WinForms.GunaButton();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btn_inscribirsingle = new Guna.UI.WinForms.GunaButton();
+            this.btn_editar = new Guna.UI.WinForms.GunaButton();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.button_acciones = new Guna.UI.WinForms.GunaButton();
             this.button_consultar = new Guna.UI.WinForms.GunaButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_moreaccount = new Bunifu.Framework.UI.BunifuImageButton();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.pn_consulta = new Bunifu.Framework.UI.BunifuCards();
             this.button_cancelarconsulta = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -96,17 +90,39 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.TransitionPnMore = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.label7 = new System.Windows.Forms.Label();
-            this.btn_notify = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaVSeparator3 = new Guna.UI.WinForms.GunaVSeparator();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_notify = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_insertar = new Guna.UI.WinForms.GunaButton();
+            this.btn_inscribir = new Guna.UI.WinForms.GunaButton();
+            this.btn_refreshdata = new Guna.UI.WinForms.GunaButton();
+            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.gunaComboBox2 = new Guna.UI.WinForms.GunaComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.gunaDateTimePicker1 = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.btn_closeeditar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_detaileditar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pn_editar = new Bunifu.Framework.UI.BunifuCards();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dg_tramites)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_moreaccount)).BeginInit();
             this.gunaShadowPanel1.SuspendLayout();
             this.pn_acciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_moreaccount)).BeginInit();
             this.pn_consulta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_notify)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_notify)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_closeeditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_detaileditar)).BeginInit();
+            this.pn_editar.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_totaltramites
@@ -140,21 +156,21 @@
             this.dg_tramites.AllowUserToAddRows = false;
             this.dg_tramites.AllowUserToDeleteRows = false;
             this.dg_tramites.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dg_tramites.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dg_tramites.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dg_tramites.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg_tramites.BackgroundColor = System.Drawing.Color.White;
             this.dg_tramites.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg_tramites.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dg_tramites.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_tramites.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_tramites.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dg_tramites.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dg_tramites.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
@@ -167,20 +183,21 @@
             this.ColumnFecha,
             this.ColumnObservaciones});
             this.TransitionPnMore.SetDecoration(this.dg_tramites, BunifuAnimatorNS.DecorationType.None);
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_tramites.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_tramites.DefaultCellStyle = dataGridViewCellStyle3;
             this.dg_tramites.EnableHeadersVisualStyles = false;
             this.dg_tramites.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dg_tramites.Location = new System.Drawing.Point(11, 54);
+            this.dg_tramites.MultiSelect = false;
             this.dg_tramites.Name = "dg_tramites";
             this.dg_tramites.ReadOnly = true;
-            this.dg_tramites.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dg_tramites.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dg_tramites.RowHeadersVisible = false;
             this.dg_tramites.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dg_tramites.RowTemplate.Height = 30;
@@ -303,20 +320,6 @@
             this.txtBox_user.TabIndex = 240;
             this.txtBox_user.Text = "Buscar por dominio";
             // 
-            // btn_moreaccount
-            // 
-            this.btn_moreaccount.BackColor = System.Drawing.Color.White;
-            this.TransitionPnMore.SetDecoration(this.btn_moreaccount, BunifuAnimatorNS.DecorationType.None);
-            this.btn_moreaccount.Image = ((System.Drawing.Image)(resources.GetObject("btn_moreaccount.Image")));
-            this.btn_moreaccount.ImageActive = null;
-            this.btn_moreaccount.Location = new System.Drawing.Point(161, 19);
-            this.btn_moreaccount.Name = "btn_moreaccount";
-            this.btn_moreaccount.Size = new System.Drawing.Size(25, 20);
-            this.btn_moreaccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_moreaccount.TabIndex = 241;
-            this.btn_moreaccount.TabStop = false;
-            this.btn_moreaccount.Zoom = 9;
-            // 
             // gunaComboBox1
             // 
             this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
@@ -357,6 +360,34 @@
             this.label4.TabIndex = 244;
             this.label4.Text = "Filas por pagina";
             // 
+            // gunaShadowPanel1
+            // 
+            this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel1.BaseColor = System.Drawing.Color.White;
+            this.gunaShadowPanel1.Controls.Add(this.label16);
+            this.gunaShadowPanel1.Controls.Add(this.label15);
+            this.gunaShadowPanel1.Controls.Add(this.label14);
+            this.gunaShadowPanel1.Controls.Add(this.btn_savepdf);
+            this.gunaShadowPanel1.Controls.Add(this.gunaVSeparator2);
+            this.gunaShadowPanel1.Controls.Add(this.gunaVSeparator1);
+            this.gunaShadowPanel1.Controls.Add(this.pn_acciones);
+            this.gunaShadowPanel1.Controls.Add(this.button_acciones);
+            this.gunaShadowPanel1.Controls.Add(this.button_consultar);
+            this.gunaShadowPanel1.Controls.Add(this.gunaComboBox1);
+            this.gunaShadowPanel1.Controls.Add(this.label4);
+            this.gunaShadowPanel1.Controls.Add(this.btn_moreaccount);
+            this.gunaShadowPanel1.Controls.Add(this.txtBox_user);
+            this.gunaShadowPanel1.Controls.Add(this.gunaButton1);
+            this.gunaShadowPanel1.Controls.Add(this.dg_tramites);
+            this.TransitionPnMore.SetDecoration(this.gunaShadowPanel1, BunifuAnimatorNS.DecorationType.None);
+            this.gunaShadowPanel1.Location = new System.Drawing.Point(11, 53);
+            this.gunaShadowPanel1.Name = "gunaShadowPanel1";
+            this.gunaShadowPanel1.Radius = 7;
+            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel1.ShadowShift = 3;
+            this.gunaShadowPanel1.Size = new System.Drawing.Size(981, 590);
+            this.gunaShadowPanel1.TabIndex = 253;
+            // 
             // btn_savepdf
             // 
             this.btn_savepdf.AnimationHoverSpeed = 0.07F;
@@ -386,181 +417,6 @@
             this.btn_savepdf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_savepdf.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
             // 
-            // btn_insertar
-            // 
-            this.btn_insertar.AnimationHoverSpeed = 0.07F;
-            this.btn_insertar.AnimationSpeed = 0.03F;
-            this.btn_insertar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_insertar.BaseColor = System.Drawing.Color.White;
-            this.btn_insertar.BorderColor = System.Drawing.Color.Silver;
-            this.btn_insertar.BorderSize = 1;
-            this.TransitionPnMore.SetDecoration(this.btn_insertar, BunifuAnimatorNS.DecorationType.None);
-            this.btn_insertar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_insertar.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_insertar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_insertar.ForeColor = System.Drawing.Color.Black;
-            this.btn_insertar.Image = ((System.Drawing.Image)(resources.GetObject("btn_insertar.Image")));
-            this.btn_insertar.ImageSize = new System.Drawing.Size(15, 15);
-            this.btn_insertar.Location = new System.Drawing.Point(622, 19);
-            this.btn_insertar.Name = "btn_insertar";
-            this.btn_insertar.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_insertar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_insertar.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_insertar.OnHoverImage = null;
-            this.btn_insertar.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_insertar.Radius = 7;
-            this.btn_insertar.Size = new System.Drawing.Size(156, 28);
-            this.btn_insertar.TabIndex = 246;
-            this.btn_insertar.Text = "Agregar tramite";
-            this.btn_insertar.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            this.btn_insertar.Click += new System.EventHandler(this.btn_insertar_Click_1);
-            // 
-            // btn_eliminar
-            // 
-            this.btn_eliminar.AnimationHoverSpeed = 0.07F;
-            this.btn_eliminar.AnimationSpeed = 0.03F;
-            this.btn_eliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_eliminar.BaseColor = System.Drawing.Color.White;
-            this.btn_eliminar.BorderColor = System.Drawing.Color.White;
-            this.btn_eliminar.BorderSize = 1;
-            this.TransitionPnMore.SetDecoration(this.btn_eliminar, BunifuAnimatorNS.DecorationType.None);
-            this.btn_eliminar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_eliminar.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_eliminar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminar.ForeColor = System.Drawing.Color.Black;
-            this.btn_eliminar.Image = ((System.Drawing.Image)(resources.GetObject("btn_eliminar.Image")));
-            this.btn_eliminar.ImageSize = new System.Drawing.Size(15, 15);
-            this.btn_eliminar.Location = new System.Drawing.Point(3, 114);
-            this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_eliminar.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btn_eliminar.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_eliminar.OnHoverImage = null;
-            this.btn_eliminar.OnPressedColor = System.Drawing.Color.White;
-            this.btn_eliminar.Radius = 7;
-            this.btn_eliminar.Size = new System.Drawing.Size(183, 28);
-            this.btn_eliminar.TabIndex = 248;
-            this.btn_eliminar.Text = "Eliminar tramite";
-            this.btn_eliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_eliminar.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click_1);
-            // 
-            // btn_inscribir
-            // 
-            this.btn_inscribir.AnimationHoverSpeed = 0.07F;
-            this.btn_inscribir.AnimationSpeed = 0.03F;
-            this.btn_inscribir.BackColor = System.Drawing.Color.Transparent;
-            this.btn_inscribir.BaseColor = System.Drawing.Color.White;
-            this.btn_inscribir.BorderColor = System.Drawing.Color.Silver;
-            this.btn_inscribir.BorderSize = 1;
-            this.TransitionPnMore.SetDecoration(this.btn_inscribir, BunifuAnimatorNS.DecorationType.None);
-            this.btn_inscribir.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_inscribir.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_inscribir.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_inscribir.ForeColor = System.Drawing.Color.Black;
-            this.btn_inscribir.Image = ((System.Drawing.Image)(resources.GetObject("btn_inscribir.Image")));
-            this.btn_inscribir.ImageSize = new System.Drawing.Size(15, 15);
-            this.btn_inscribir.Location = new System.Drawing.Point(784, 19);
-            this.btn_inscribir.Name = "btn_inscribir";
-            this.btn_inscribir.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_inscribir.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_inscribir.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_inscribir.OnHoverImage = null;
-            this.btn_inscribir.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_inscribir.Radius = 7;
-            this.btn_inscribir.Size = new System.Drawing.Size(156, 28);
-            this.btn_inscribir.TabIndex = 249;
-            this.btn_inscribir.Text = "Inscribir tramites";
-            this.btn_inscribir.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            this.btn_inscribir.Click += new System.EventHandler(this.btn_inscribir_Click_1);
-            // 
-            // btn_editar
-            // 
-            this.btn_editar.AnimationHoverSpeed = 0.07F;
-            this.btn_editar.AnimationSpeed = 0.03F;
-            this.btn_editar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_editar.BaseColor = System.Drawing.Color.White;
-            this.btn_editar.BorderColor = System.Drawing.Color.White;
-            this.btn_editar.BorderSize = 1;
-            this.TransitionPnMore.SetDecoration(this.btn_editar, BunifuAnimatorNS.DecorationType.None);
-            this.btn_editar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_editar.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_editar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editar.ForeColor = System.Drawing.Color.Black;
-            this.btn_editar.Image = ((System.Drawing.Image)(resources.GetObject("btn_editar.Image")));
-            this.btn_editar.ImageSize = new System.Drawing.Size(15, 15);
-            this.btn_editar.Location = new System.Drawing.Point(3, 79);
-            this.btn_editar.Name = "btn_editar";
-            this.btn_editar.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_editar.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btn_editar.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_editar.OnHoverImage = null;
-            this.btn_editar.OnPressedColor = System.Drawing.Color.White;
-            this.btn_editar.Radius = 7;
-            this.btn_editar.Size = new System.Drawing.Size(183, 28);
-            this.btn_editar.TabIndex = 250;
-            this.btn_editar.Text = "Editar tramite";
-            this.btn_editar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_editar.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click_1);
-            // 
-            // btn_refreshdata
-            // 
-            this.btn_refreshdata.AnimationHoverSpeed = 0.07F;
-            this.btn_refreshdata.AnimationSpeed = 0.03F;
-            this.btn_refreshdata.BackColor = System.Drawing.Color.Transparent;
-            this.btn_refreshdata.BaseColor = System.Drawing.Color.White;
-            this.btn_refreshdata.BorderColor = System.Drawing.Color.Silver;
-            this.btn_refreshdata.BorderSize = 1;
-            this.TransitionPnMore.SetDecoration(this.btn_refreshdata, BunifuAnimatorNS.DecorationType.None);
-            this.btn_refreshdata.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_refreshdata.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_refreshdata.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_refreshdata.ForeColor = System.Drawing.Color.Black;
-            this.btn_refreshdata.Image = ((System.Drawing.Image)(resources.GetObject("btn_refreshdata.Image")));
-            this.btn_refreshdata.ImageSize = new System.Drawing.Size(15, 15);
-            this.btn_refreshdata.Location = new System.Drawing.Point(946, 19);
-            this.btn_refreshdata.Name = "btn_refreshdata";
-            this.btn_refreshdata.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_refreshdata.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_refreshdata.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_refreshdata.OnHoverImage = null;
-            this.btn_refreshdata.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_refreshdata.Radius = 7;
-            this.btn_refreshdata.Size = new System.Drawing.Size(36, 28);
-            this.btn_refreshdata.TabIndex = 252;
-            this.btn_refreshdata.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_refreshdata.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            this.btn_refreshdata.Click += new System.EventHandler(this.btn_refreshdata_Click_1);
-            // 
-            // gunaShadowPanel1
-            // 
-            this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaShadowPanel1.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel1.Controls.Add(this.btn_savepdf);
-            this.gunaShadowPanel1.Controls.Add(this.gunaVSeparator2);
-            this.gunaShadowPanel1.Controls.Add(this.gunaVSeparator1);
-            this.gunaShadowPanel1.Controls.Add(this.pn_acciones);
-            this.gunaShadowPanel1.Controls.Add(this.button_acciones);
-            this.gunaShadowPanel1.Controls.Add(this.button_consultar);
-            this.gunaShadowPanel1.Controls.Add(this.gunaComboBox1);
-            this.gunaShadowPanel1.Controls.Add(this.label4);
-            this.gunaShadowPanel1.Controls.Add(this.btn_moreaccount);
-            this.gunaShadowPanel1.Controls.Add(this.txtBox_user);
-            this.gunaShadowPanel1.Controls.Add(this.dg_tramites);
-            this.gunaShadowPanel1.Controls.Add(this.bunifuFlatButton1);
-            this.gunaShadowPanel1.Controls.Add(this.bunifuFlatButton6);
-            this.gunaShadowPanel1.Controls.Add(this.bunifuFlatButton2);
-            this.gunaShadowPanel1.Controls.Add(this.gunaButton1);
-            this.TransitionPnMore.SetDecoration(this.gunaShadowPanel1, BunifuAnimatorNS.DecorationType.None);
-            this.gunaShadowPanel1.Location = new System.Drawing.Point(11, 53);
-            this.gunaShadowPanel1.Name = "gunaShadowPanel1";
-            this.gunaShadowPanel1.Radius = 7;
-            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.gunaShadowPanel1.ShadowShift = 3;
-            this.gunaShadowPanel1.Size = new System.Drawing.Size(981, 590);
-            this.gunaShadowPanel1.TabIndex = 253;
-            // 
             // gunaVSeparator2
             // 
             this.gunaVSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -587,10 +443,10 @@
             this.pn_acciones.BorderRadius = 20;
             this.pn_acciones.BottomSahddow = true;
             this.pn_acciones.color = System.Drawing.Color.White;
+            this.pn_acciones.Controls.Add(this.bunifuSeparator1);
             this.pn_acciones.Controls.Add(this.btn_error);
             this.pn_acciones.Controls.Add(this.bunifuSeparator2);
             this.pn_acciones.Controls.Add(this.btn_eliminar);
-            this.pn_acciones.Controls.Add(this.bunifuSeparator1);
             this.pn_acciones.Controls.Add(this.btn_inscribirsingle);
             this.pn_acciones.Controls.Add(this.btn_editar);
             this.pn_acciones.Controls.Add(this.bunifuSeparator3);
@@ -648,6 +504,37 @@
             this.bunifuSeparator2.TabIndex = 255;
             this.bunifuSeparator2.Transparency = 70;
             this.bunifuSeparator2.Vertical = false;
+            this.bunifuSeparator2.Load += new System.EventHandler(this.bunifuSeparator2_Load);
+            // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.AnimationHoverSpeed = 0.07F;
+            this.btn_eliminar.AnimationSpeed = 0.03F;
+            this.btn_eliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_eliminar.BaseColor = System.Drawing.Color.White;
+            this.btn_eliminar.BorderColor = System.Drawing.Color.White;
+            this.btn_eliminar.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_eliminar, BunifuAnimatorNS.DecorationType.None);
+            this.btn_eliminar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_eliminar.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_eliminar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar.ForeColor = System.Drawing.Color.Black;
+            this.btn_eliminar.Image = ((System.Drawing.Image)(resources.GetObject("btn_eliminar.Image")));
+            this.btn_eliminar.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_eliminar.Location = new System.Drawing.Point(3, 114);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_eliminar.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btn_eliminar.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_eliminar.OnHoverImage = null;
+            this.btn_eliminar.OnPressedColor = System.Drawing.Color.White;
+            this.btn_eliminar.Radius = 7;
+            this.btn_eliminar.Size = new System.Drawing.Size(183, 28);
+            this.btn_eliminar.TabIndex = 248;
+            this.btn_eliminar.Text = "Eliminar tramite";
+            this.btn_eliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_eliminar.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click_1);
             // 
             // bunifuSeparator1
             // 
@@ -693,6 +580,36 @@
             this.btn_inscribirsingle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_inscribirsingle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
             this.btn_inscribirsingle.Click += new System.EventHandler(this.btn_inscribirsingle_Click);
+            // 
+            // btn_editar
+            // 
+            this.btn_editar.AnimationHoverSpeed = 0.07F;
+            this.btn_editar.AnimationSpeed = 0.03F;
+            this.btn_editar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_editar.BaseColor = System.Drawing.Color.White;
+            this.btn_editar.BorderColor = System.Drawing.Color.White;
+            this.btn_editar.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_editar, BunifuAnimatorNS.DecorationType.None);
+            this.btn_editar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_editar.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_editar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editar.ForeColor = System.Drawing.Color.Black;
+            this.btn_editar.Image = ((System.Drawing.Image)(resources.GetObject("btn_editar.Image")));
+            this.btn_editar.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_editar.Location = new System.Drawing.Point(3, 79);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_editar.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btn_editar.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_editar.OnHoverImage = null;
+            this.btn_editar.OnPressedColor = System.Drawing.Color.White;
+            this.btn_editar.Radius = 7;
+            this.btn_editar.Size = new System.Drawing.Size(183, 28);
+            this.btn_editar.TabIndex = 250;
+            this.btn_editar.Text = "Editar tramite";
+            this.btn_editar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_editar.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click_1);
             // 
             // bunifuSeparator3
             // 
@@ -768,113 +685,19 @@
             this.button_consultar.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
             this.button_consultar.Click += new System.EventHandler(this.button_consultar_Click);
             // 
-            // bunifuFlatButton1
+            // btn_moreaccount
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 3;
-            this.bunifuFlatButton1.ButtonText = "Mes";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TransitionPnMore.SetDecoration(this.bunifuFlatButton1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = false;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = false;
-            this.bunifuFlatButton1.IconZoom = 45D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(253, 22);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(42, 15);
-            this.bunifuFlatButton1.TabIndex = 256;
-            this.bunifuFlatButton1.Text = "Mes";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton6
-            // 
-            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton6.BorderRadius = 3;
-            this.bunifuFlatButton6.ButtonText = "Hoy";
-            this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TransitionPnMore.SetDecoration(this.bunifuFlatButton6, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.Iconimage = null;
-            this.bunifuFlatButton6.Iconimage_right = null;
-            this.bunifuFlatButton6.Iconimage_right_Selected = null;
-            this.bunifuFlatButton6.Iconimage_Selected = null;
-            this.bunifuFlatButton6.IconMarginLeft = 0;
-            this.bunifuFlatButton6.IconMarginRight = 0;
-            this.bunifuFlatButton6.IconRightVisible = false;
-            this.bunifuFlatButton6.IconRightZoom = 0D;
-            this.bunifuFlatButton6.IconVisible = false;
-            this.bunifuFlatButton6.IconZoom = 45D;
-            this.bunifuFlatButton6.IsTab = false;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(199, 20);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuFlatButton6.Name = "bunifuFlatButton6";
-            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.White;
-            this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton6.selected = false;
-            this.bunifuFlatButton6.Size = new System.Drawing.Size(48, 19);
-            this.bunifuFlatButton6.TabIndex = 255;
-            this.bunifuFlatButton6.Text = "Hoy";
-            this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton6.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton2
-            // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 3;
-            this.bunifuFlatButton2.ButtonText = "Todos";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TransitionPnMore.SetDecoration(this.bunifuFlatButton2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = null;
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = false;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = false;
-            this.bunifuFlatButton2.IconZoom = 45D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(302, 22);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(3, 7, 3, 7);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(51, 15);
-            this.bunifuFlatButton2.TabIndex = 257;
-            this.bunifuFlatButton2.Text = "Todos";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_moreaccount.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.btn_moreaccount, BunifuAnimatorNS.DecorationType.None);
+            this.btn_moreaccount.Image = ((System.Drawing.Image)(resources.GetObject("btn_moreaccount.Image")));
+            this.btn_moreaccount.ImageActive = null;
+            this.btn_moreaccount.Location = new System.Drawing.Point(161, 19);
+            this.btn_moreaccount.Name = "btn_moreaccount";
+            this.btn_moreaccount.Size = new System.Drawing.Size(25, 20);
+            this.btn_moreaccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_moreaccount.TabIndex = 241;
+            this.btn_moreaccount.TabStop = false;
+            this.btn_moreaccount.Zoom = 9;
             // 
             // gunaButton1
             // 
@@ -996,12 +819,13 @@
             // 
             // gunaRadioButton3
             // 
-            this.gunaRadioButton3.BaseColor = System.Drawing.Color.White;
-            this.gunaRadioButton3.CheckedOffColor = System.Drawing.Color.Gray;
+            this.gunaRadioButton3.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaRadioButton3.CheckedOffColor = System.Drawing.Color.Silver;
             this.gunaRadioButton3.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
             this.TransitionPnMore.SetDecoration(this.gunaRadioButton3, BunifuAnimatorNS.DecorationType.None);
             this.gunaRadioButton3.FillColor = System.Drawing.Color.White;
             this.gunaRadioButton3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaRadioButton3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gunaRadioButton3.Location = new System.Drawing.Point(21, 452);
             this.gunaRadioButton3.Name = "gunaRadioButton3";
             this.gunaRadioButton3.Size = new System.Drawing.Size(95, 20);
@@ -1011,12 +835,13 @@
             // 
             // gunaRadioButton2
             // 
-            this.gunaRadioButton2.BaseColor = System.Drawing.Color.White;
-            this.gunaRadioButton2.CheckedOffColor = System.Drawing.Color.Gray;
+            this.gunaRadioButton2.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaRadioButton2.CheckedOffColor = System.Drawing.Color.Silver;
             this.gunaRadioButton2.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
             this.TransitionPnMore.SetDecoration(this.gunaRadioButton2, BunifuAnimatorNS.DecorationType.None);
             this.gunaRadioButton2.FillColor = System.Drawing.Color.White;
             this.gunaRadioButton2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaRadioButton2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gunaRadioButton2.Location = new System.Drawing.Point(21, 426);
             this.gunaRadioButton2.Name = "gunaRadioButton2";
             this.gunaRadioButton2.Size = new System.Drawing.Size(103, 20);
@@ -1026,13 +851,13 @@
             // 
             // gunaRadioButton1
             // 
-            this.gunaRadioButton1.BaseColor = System.Drawing.Color.White;
-            this.gunaRadioButton1.Checked = true;
-            this.gunaRadioButton1.CheckedOffColor = System.Drawing.Color.Gray;
+            this.gunaRadioButton1.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaRadioButton1.CheckedOffColor = System.Drawing.Color.Silver;
             this.gunaRadioButton1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
             this.TransitionPnMore.SetDecoration(this.gunaRadioButton1, BunifuAnimatorNS.DecorationType.None);
             this.gunaRadioButton1.FillColor = System.Drawing.Color.White;
             this.gunaRadioButton1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaRadioButton1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gunaRadioButton1.Location = new System.Drawing.Point(21, 400);
             this.gunaRadioButton1.Name = "gunaRadioButton1";
             this.gunaRadioButton1.Size = new System.Drawing.Size(120, 20);
@@ -1313,22 +1138,23 @@
             // 
             this.TransitionPnMore.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.TransitionPnMore.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.TransitionPnMore.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.TransitionPnMore.DefaultAnimation = animation1;
+            this.TransitionPnMore.TimeStep = 0.09F;
             // 
             // label7
             // 
@@ -1341,34 +1167,6 @@
             this.label7.Size = new System.Drawing.Size(219, 22);
             this.label7.TabIndex = 260;
             this.label7.Text = "Mostrando 1 - 09 de 76 resultados";
-            // 
-            // btn_notify
-            // 
-            this.btn_notify.BackColor = System.Drawing.Color.White;
-            this.TransitionPnMore.SetDecoration(this.btn_notify, BunifuAnimatorNS.DecorationType.None);
-            this.btn_notify.Image = ((System.Drawing.Image)(resources.GetObject("btn_notify.Image")));
-            this.btn_notify.ImageActive = null;
-            this.btn_notify.Location = new System.Drawing.Point(959, 649);
-            this.btn_notify.Name = "btn_notify";
-            this.btn_notify.Size = new System.Drawing.Size(20, 20);
-            this.btn_notify.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_notify.TabIndex = 261;
-            this.btn_notify.TabStop = false;
-            this.btn_notify.Zoom = 9;
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
-            this.TransitionPnMore.SetDecoration(this.bunifuImageButton1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(929, 649);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(20, 20);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 262;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 9;
             // 
             // gunaButton2
             // 
@@ -1409,12 +1207,398 @@
             this.gunaVSeparator3.Size = new System.Drawing.Size(10, 26);
             this.gunaVSeparator3.TabIndex = 260;
             // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.bunifuImageButton1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(929, 649);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(20, 20);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 262;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 9;
+            // 
+            // btn_notify
+            // 
+            this.btn_notify.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.btn_notify, BunifuAnimatorNS.DecorationType.None);
+            this.btn_notify.Image = ((System.Drawing.Image)(resources.GetObject("btn_notify.Image")));
+            this.btn_notify.ImageActive = null;
+            this.btn_notify.Location = new System.Drawing.Point(959, 649);
+            this.btn_notify.Name = "btn_notify";
+            this.btn_notify.Size = new System.Drawing.Size(20, 20);
+            this.btn_notify.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_notify.TabIndex = 261;
+            this.btn_notify.TabStop = false;
+            this.btn_notify.Zoom = 9;
+            // 
+            // btn_insertar
+            // 
+            this.btn_insertar.AnimationHoverSpeed = 0.07F;
+            this.btn_insertar.AnimationSpeed = 0.03F;
+            this.btn_insertar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_insertar.BaseColor = System.Drawing.Color.White;
+            this.btn_insertar.BorderColor = System.Drawing.Color.Silver;
+            this.btn_insertar.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_insertar, BunifuAnimatorNS.DecorationType.None);
+            this.btn_insertar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_insertar.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_insertar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_insertar.ForeColor = System.Drawing.Color.Black;
+            this.btn_insertar.Image = ((System.Drawing.Image)(resources.GetObject("btn_insertar.Image")));
+            this.btn_insertar.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_insertar.Location = new System.Drawing.Point(622, 19);
+            this.btn_insertar.Name = "btn_insertar";
+            this.btn_insertar.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_insertar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_insertar.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_insertar.OnHoverImage = null;
+            this.btn_insertar.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_insertar.Radius = 7;
+            this.btn_insertar.Size = new System.Drawing.Size(156, 28);
+            this.btn_insertar.TabIndex = 246;
+            this.btn_insertar.Text = "Agregar tramite";
+            this.btn_insertar.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_insertar.Click += new System.EventHandler(this.btn_insertar_Click_1);
+            // 
+            // btn_inscribir
+            // 
+            this.btn_inscribir.AnimationHoverSpeed = 0.07F;
+            this.btn_inscribir.AnimationSpeed = 0.03F;
+            this.btn_inscribir.BackColor = System.Drawing.Color.Transparent;
+            this.btn_inscribir.BaseColor = System.Drawing.Color.White;
+            this.btn_inscribir.BorderColor = System.Drawing.Color.Silver;
+            this.btn_inscribir.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_inscribir, BunifuAnimatorNS.DecorationType.None);
+            this.btn_inscribir.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_inscribir.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_inscribir.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_inscribir.ForeColor = System.Drawing.Color.Black;
+            this.btn_inscribir.Image = ((System.Drawing.Image)(resources.GetObject("btn_inscribir.Image")));
+            this.btn_inscribir.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_inscribir.Location = new System.Drawing.Point(784, 19);
+            this.btn_inscribir.Name = "btn_inscribir";
+            this.btn_inscribir.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_inscribir.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_inscribir.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_inscribir.OnHoverImage = null;
+            this.btn_inscribir.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_inscribir.Radius = 7;
+            this.btn_inscribir.Size = new System.Drawing.Size(156, 28);
+            this.btn_inscribir.TabIndex = 249;
+            this.btn_inscribir.Text = "Inscribir tramites";
+            this.btn_inscribir.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_inscribir.Click += new System.EventHandler(this.btn_inscribir_Click_1);
+            // 
+            // btn_refreshdata
+            // 
+            this.btn_refreshdata.AnimationHoverSpeed = 0.07F;
+            this.btn_refreshdata.AnimationSpeed = 0.03F;
+            this.btn_refreshdata.BackColor = System.Drawing.Color.Transparent;
+            this.btn_refreshdata.BaseColor = System.Drawing.Color.White;
+            this.btn_refreshdata.BorderColor = System.Drawing.Color.Silver;
+            this.btn_refreshdata.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.btn_refreshdata, BunifuAnimatorNS.DecorationType.None);
+            this.btn_refreshdata.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_refreshdata.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_refreshdata.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_refreshdata.ForeColor = System.Drawing.Color.Black;
+            this.btn_refreshdata.Image = ((System.Drawing.Image)(resources.GetObject("btn_refreshdata.Image")));
+            this.btn_refreshdata.ImageSize = new System.Drawing.Size(15, 15);
+            this.btn_refreshdata.Location = new System.Drawing.Point(946, 19);
+            this.btn_refreshdata.Name = "btn_refreshdata";
+            this.btn_refreshdata.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_refreshdata.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_refreshdata.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_refreshdata.OnHoverImage = null;
+            this.btn_refreshdata.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_refreshdata.Radius = 7;
+            this.btn_refreshdata.Size = new System.Drawing.Size(36, 28);
+            this.btn_refreshdata.TabIndex = 252;
+            this.btn_refreshdata.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_refreshdata.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_refreshdata.Click += new System.EventHandler(this.btn_refreshdata_Click_1);
+            // 
+            // gunaTextBox1
+            // 
+            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox1.BorderColor = System.Drawing.Color.White;
+            this.gunaTextBox1.BorderSize = 1;
+            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TransitionPnMore.SetDecoration(this.gunaTextBox1, BunifuAnimatorNS.DecorationType.None);
+            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox1.FocusedForeColor = System.Drawing.Color.Black;
+            this.gunaTextBox1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTextBox1.ForeColor = System.Drawing.Color.DarkGray;
+            this.gunaTextBox1.Location = new System.Drawing.Point(41, 10);
+            this.gunaTextBox1.Name = "gunaTextBox1";
+            this.gunaTextBox1.PasswordChar = '\0';
+            this.gunaTextBox1.Radius = 7;
+            this.gunaTextBox1.Size = new System.Drawing.Size(32, 28);
+            this.gunaTextBox1.TabIndex = 240;
+            this.gunaTextBox1.Text = "10";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label9, BunifuAnimatorNS.DecorationType.None);
+            this.label9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Gray;
+            this.label9.Location = new System.Drawing.Point(14, 14);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(21, 22);
+            this.label9.TabIndex = 241;
+            this.label9.Text = "Id";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
+            this.label10.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Gray;
+            this.label10.Location = new System.Drawing.Point(93, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 22);
+            this.label10.TabIndex = 243;
+            this.label10.Text = "Dominio";
+            // 
+            // gunaTextBox2
+            // 
+            this.gunaTextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTextBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox2.BorderColor = System.Drawing.Color.White;
+            this.gunaTextBox2.BorderSize = 1;
+            this.gunaTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TransitionPnMore.SetDecoration(this.gunaTextBox2, BunifuAnimatorNS.DecorationType.None);
+            this.gunaTextBox2.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox2.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox2.FocusedForeColor = System.Drawing.Color.Black;
+            this.gunaTextBox2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTextBox2.ForeColor = System.Drawing.Color.DarkGray;
+            this.gunaTextBox2.Location = new System.Drawing.Point(158, 10);
+            this.gunaTextBox2.Name = "gunaTextBox2";
+            this.gunaTextBox2.PasswordChar = '\0';
+            this.gunaTextBox2.Radius = 7;
+            this.gunaTextBox2.Size = new System.Drawing.Size(75, 28);
+            this.gunaTextBox2.TabIndex = 242;
+            this.gunaTextBox2.Text = "AAXXX100";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label11, BunifuAnimatorNS.DecorationType.None);
+            this.label11.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gray;
+            this.label11.Location = new System.Drawing.Point(249, 14);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 22);
+            this.label11.TabIndex = 245;
+            this.label11.Text = "Categoria";
+            // 
+            // gunaComboBox2
+            // 
+            this.gunaComboBox2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaComboBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaComboBox2.BorderColor = System.Drawing.Color.White;
+            this.gunaComboBox2.BorderSize = 1;
+            this.TransitionPnMore.SetDecoration(this.gunaComboBox2, BunifuAnimatorNS.DecorationType.None);
+            this.gunaComboBox2.DisplayMember = "Nombre";
+            this.gunaComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.gunaComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gunaComboBox2.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaComboBox2.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaComboBox2.ForeColor = System.Drawing.Color.DarkGray;
+            this.gunaComboBox2.FormattingEnabled = true;
+            this.gunaComboBox2.Location = new System.Drawing.Point(324, 12);
+            this.gunaComboBox2.Name = "gunaComboBox2";
+            this.gunaComboBox2.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.gunaComboBox2.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.gunaComboBox2.Radius = 7;
+            this.gunaComboBox2.Size = new System.Drawing.Size(114, 28);
+            this.gunaComboBox2.TabIndex = 246;
+            this.gunaComboBox2.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.gunaComboBox2.ValueMember = "cod_tipo";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label12, BunifuAnimatorNS.DecorationType.None);
+            this.label12.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Gray;
+            this.label12.Location = new System.Drawing.Point(662, 14);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(98, 22);
+            this.label12.TabIndex = 247;
+            this.label12.Text = "Observaciones";
+            // 
+            // gunaTextBox3
+            // 
+            this.gunaTextBox3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTextBox3.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox3.BorderColor = System.Drawing.Color.White;
+            this.gunaTextBox3.BorderSize = 1;
+            this.gunaTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TransitionPnMore.SetDecoration(this.gunaTextBox3, BunifuAnimatorNS.DecorationType.None);
+            this.gunaTextBox3.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox3.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox3.FocusedForeColor = System.Drawing.Color.Black;
+            this.gunaTextBox3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTextBox3.ForeColor = System.Drawing.Color.DarkGray;
+            this.gunaTextBox3.Location = new System.Drawing.Point(761, 10);
+            this.gunaTextBox3.Name = "gunaTextBox3";
+            this.gunaTextBox3.PasswordChar = '\0';
+            this.gunaTextBox3.Radius = 7;
+            this.gunaTextBox3.Size = new System.Drawing.Size(139, 28);
+            this.gunaTextBox3.TabIndex = 248;
+            this.gunaTextBox3.Text = "Sin observaciones";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label13, BunifuAnimatorNS.DecorationType.None);
+            this.label13.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Gray;
+            this.label13.Location = new System.Drawing.Point(455, 14);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 22);
+            this.label13.TabIndex = 249;
+            this.label13.Text = "Fecha";
+            // 
+            // gunaDateTimePicker1
+            // 
+            this.gunaDateTimePicker1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaDateTimePicker1.BaseColor = System.Drawing.Color.White;
+            this.gunaDateTimePicker1.BorderColor = System.Drawing.Color.White;
+            this.gunaDateTimePicker1.BorderSize = 1;
+            this.gunaDateTimePicker1.CustomFormat = "MM/dd/yyyy";
+            this.TransitionPnMore.SetDecoration(this.gunaDateTimePicker1, BunifuAnimatorNS.DecorationType.None);
+            this.gunaDateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.gunaDateTimePicker1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.gunaDateTimePicker1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaDateTimePicker1.ForeColor = System.Drawing.Color.DarkGray;
+            this.gunaDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.gunaDateTimePicker1.Location = new System.Drawing.Point(506, 12);
+            this.gunaDateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.gunaDateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.gunaDateTimePicker1.Name = "gunaDateTimePicker1";
+            this.gunaDateTimePicker1.OnHoverBaseColor = System.Drawing.Color.White;
+            this.gunaDateTimePicker1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.gunaDateTimePicker1.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.gunaDateTimePicker1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaDateTimePicker1.Radius = 7;
+            this.gunaDateTimePicker1.Size = new System.Drawing.Size(145, 28);
+            this.gunaDateTimePicker1.TabIndex = 250;
+            this.gunaDateTimePicker1.Text = "03/10/2021";
+            this.gunaDateTimePicker1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.gunaDateTimePicker1.Value = new System.DateTime(2021, 3, 10, 11, 16, 33, 735);
+            // 
+            // btn_closeeditar
+            // 
+            this.btn_closeeditar.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.btn_closeeditar, BunifuAnimatorNS.DecorationType.None);
+            this.btn_closeeditar.Image = global::LayerPresentation.Properties.Resources.multiply_60px;
+            this.btn_closeeditar.ImageActive = null;
+            this.btn_closeeditar.Location = new System.Drawing.Point(958, 13);
+            this.btn_closeeditar.Name = "btn_closeeditar";
+            this.btn_closeeditar.Size = new System.Drawing.Size(23, 23);
+            this.btn_closeeditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_closeeditar.TabIndex = 252;
+            this.btn_closeeditar.TabStop = false;
+            this.btn_closeeditar.Zoom = 9;
+            this.btn_closeeditar.Click += new System.EventHandler(this.btn_closeeditar_Click);
+            // 
+            // btn_detaileditar
+            // 
+            this.btn_detaileditar.BackColor = System.Drawing.Color.White;
+            this.TransitionPnMore.SetDecoration(this.btn_detaileditar, BunifuAnimatorNS.DecorationType.None);
+            this.btn_detaileditar.Image = ((System.Drawing.Image)(resources.GetObject("btn_detaileditar.Image")));
+            this.btn_detaileditar.ImageActive = null;
+            this.btn_detaileditar.Location = new System.Drawing.Point(932, 13);
+            this.btn_detaileditar.Name = "btn_detaileditar";
+            this.btn_detaileditar.Size = new System.Drawing.Size(23, 23);
+            this.btn_detaileditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_detaileditar.TabIndex = 251;
+            this.btn_detaileditar.TabStop = false;
+            this.btn_detaileditar.Zoom = 9;
+            // 
+            // pn_editar
+            // 
+            this.pn_editar.BackColor = System.Drawing.Color.White;
+            this.pn_editar.BorderRadius = 20;
+            this.pn_editar.BottomSahddow = true;
+            this.pn_editar.color = System.Drawing.Color.WhiteSmoke;
+            this.pn_editar.Controls.Add(this.btn_closeeditar);
+            this.pn_editar.Controls.Add(this.btn_detaileditar);
+            this.pn_editar.Controls.Add(this.gunaDateTimePicker1);
+            this.pn_editar.Controls.Add(this.label13);
+            this.pn_editar.Controls.Add(this.gunaTextBox3);
+            this.pn_editar.Controls.Add(this.label12);
+            this.pn_editar.Controls.Add(this.gunaTextBox1);
+            this.pn_editar.Controls.Add(this.gunaComboBox2);
+            this.pn_editar.Controls.Add(this.label9);
+            this.pn_editar.Controls.Add(this.label11);
+            this.pn_editar.Controls.Add(this.gunaTextBox2);
+            this.pn_editar.Controls.Add(this.label10);
+            this.TransitionPnMore.SetDecoration(this.pn_editar, BunifuAnimatorNS.DecorationType.None);
+            this.pn_editar.LeftSahddow = true;
+            this.pn_editar.Location = new System.Drawing.Point(1, 139);
+            this.pn_editar.Name = "pn_editar";
+            this.pn_editar.RightSahddow = true;
+            this.pn_editar.ShadowDepth = 40;
+            this.pn_editar.Size = new System.Drawing.Size(997, 49);
+            this.pn_editar.TabIndex = 260;
+            this.pn_editar.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label14, BunifuAnimatorNS.DecorationType.None);
+            this.label14.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.label14.Location = new System.Drawing.Point(207, 19);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(33, 22);
+            this.label14.TabIndex = 264;
+            this.label14.Text = "Hoy";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label15, BunifuAnimatorNS.DecorationType.None);
+            this.label15.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label15.Location = new System.Drawing.Point(258, 19);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(33, 22);
+            this.label15.TabIndex = 265;
+            this.label15.Text = "Mes";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.TransitionPnMore.SetDecoration(this.label16, BunifuAnimatorNS.DecorationType.None);
+            this.label16.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label16.Location = new System.Drawing.Point(312, 19);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(36, 22);
+            this.label16.TabIndex = 266;
+            this.label16.Text = "Ayer";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // frm_tramites
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1004, 676);
+            this.Controls.Add(this.pn_editar);
             this.Controls.Add(this.gunaVSeparator3);
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.btn_notify);
@@ -1422,11 +1606,11 @@
             this.Controls.Add(this.btn_insertar);
             this.Controls.Add(this.btn_inscribir);
             this.Controls.Add(this.btn_refreshdata);
-            this.Controls.Add(this.pn_consulta);
             this.Controls.Add(this.label31);
-            this.Controls.Add(this.gunaShadowPanel1);
             this.Controls.Add(this.lbl_totaltramites);
             this.Controls.Add(this.gunaButton2);
+            this.Controls.Add(this.pn_consulta);
+            this.Controls.Add(this.gunaShadowPanel1);
             this.TransitionPnMore.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1437,14 +1621,18 @@
             this.Text = "z";
             this.Load += new System.EventHandler(this.frm_tramites_consultas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dg_tramites)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_moreaccount)).EndInit();
             this.gunaShadowPanel1.ResumeLayout(false);
             this.gunaShadowPanel1.PerformLayout();
             this.pn_acciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_moreaccount)).EndInit();
             this.pn_consulta.ResumeLayout(false);
             this.pn_consulta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_notify)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_notify)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_closeeditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_detaileditar)).EndInit();
+            this.pn_editar.ResumeLayout(false);
+            this.pn_editar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1499,10 +1687,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 button_cancelarconsulta;
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaVSeparator gunaVSeparator1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Guna.UI.WinForms.GunaVSeparator gunaVSeparator2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDomino;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCategoria;
@@ -1517,5 +1702,21 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Guna.UI.WinForms.GunaButton gunaButton2;
         private Guna.UI.WinForms.GunaVSeparator gunaVSeparator3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
+        private System.Windows.Forms.Label label9;
+        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
+        private Guna.UI.WinForms.GunaComboBox gunaComboBox2;
+        private Guna.UI.WinForms.GunaTextBox gunaTextBox3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private Guna.UI.WinForms.GunaDateTimePicker gunaDateTimePicker1;
+        private Bunifu.Framework.UI.BunifuImageButton btn_closeeditar;
+        private Bunifu.Framework.UI.BunifuImageButton btn_detaileditar;
+        private Bunifu.Framework.UI.BunifuCards pn_editar;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
     }
 }

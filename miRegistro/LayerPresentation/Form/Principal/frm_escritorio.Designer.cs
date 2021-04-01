@@ -29,37 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_escritorio));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_escritorio));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.chart_circle_diario = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lbl_porcentaje_inscriptos = new System.Windows.Forms.Label();
             this.lbl_porcentaje_procesados = new System.Windows.Forms.Label();
             this.lbl_tramites01 = new System.Windows.Forms.Label();
             this.lbl_tramites00 = new System.Windows.Forms.Label();
-            this.dg_topErrores = new System.Windows.Forms.DataGridView();
             this.lbl_totalmensual = new System.Windows.Forms.Label();
-            this.lbl_tramitesempleados01 = new System.Windows.Forms.Label();
             this.panel_04 = new System.Windows.Forms.Panel();
+            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.cb_tramitesempleados = new Guna.UI.WinForms.GunaComboBox();
             this.btndots_tramitesempleados = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.cb_tramitesempleados = new Bunifu.Framework.UI.BunifuDropdown();
             this.lbl_tramitesempleados00 = new System.Windows.Forms.Label();
             this.chart_tramitesempleados = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.Elipse_Panel04 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -86,28 +78,26 @@
             this.lbl_stock00 = new System.Windows.Forms.Label();
             this.lbl_stock01 = new System.Windows.Forms.Label();
             this.EBtn_dotstock = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btndots_stock = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbl_stockbajo_autos = new System.Windows.Forms.Label();
             this.lbl_stock02 = new System.Windows.Forms.Label();
             this.lbl_stockbajo_motos = new System.Windows.Forms.Label();
             this.lbl_stock03 = new System.Windows.Forms.Label();
             this.lbl_stockbajo = new System.Windows.Forms.Label();
             this.panel_02 = new System.Windows.Forms.Panel();
+            this.btndots_stock = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbl_stockbajo_percentage = new System.Windows.Forms.Label();
             this.pic_stock02 = new System.Windows.Forms.PictureBox();
             this.pic_stock01 = new System.Windows.Forms.PictureBox();
             this.chart_progress_stock = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.Elipse_Panel02 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.EBtn_dotstramitesempleados = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.Elipse_Panel_03 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel_03 = new System.Windows.Forms.Panel();
+            this.cb_tramites = new Guna.UI.WinForms.GunaComboBox();
             this.btndots_tramites = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbl_inscriptos = new System.Windows.Forms.Label();
             this.lbl_procesados = new System.Windows.Forms.Label();
-            this.bunifuSeparator5 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.cb_tramites = new Bunifu.Framework.UI.BunifuDropdown();
             this.dot_insciptos = new System.Windows.Forms.Panel();
             this.dot_procesados = new System.Windows.Forms.Panel();
             this.progress_inscriptos = new Bunifu.Framework.UI.BunifuProgressBar();
@@ -118,8 +108,6 @@
             this.dot_inscrit = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Elipse_Panel03 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Elipse_Panel06 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel_06 = new System.Windows.Forms.Panel();
-            this.btn_refreshdata = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbl_date = new System.Windows.Forms.Label();
             this.lbl_time = new System.Windows.Forms.Label();
             this.EBtn_dotstramites = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -128,21 +116,22 @@
             this.btn_accionesrapidas_inscribirt = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_accionesrapidas_insertart = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_accionesrapidas_consulta = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_accionesrapidas_stock = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label4 = new System.Windows.Forms.Label();
             this.Elipse_Panel05 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel_07 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
             this.Elipse_Panel_07 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel_08 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dg_toperror = new Guna.UI.WinForms.GunaDataGridView();
+            this.Top = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNumeracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnStockDetail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.label11 = new System.Windows.Forms.Label();
             this.panel_09 = new System.Windows.Forms.Panel();
+            this.cb_tramites_chart = new Guna.UI.WinForms.GunaComboBox();
             this.btndots_tramitesdetails = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuSeparator6 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.cb_tramites_chart = new Bunifu.Framework.UI.BunifuDropdown();
             this.btn_chart_tramitesfinalizados = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_chart_tramitesinscriptos = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lbl_tramites_00 = new System.Windows.Forms.Label();
@@ -153,10 +142,22 @@
             this.EBtn_dotsrefresh = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.EBtn_dotstramitesdetails = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_circle_diario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_topErrores)).BeginInit();
+            this.panel_11 = new System.Windows.Forms.Panel();
+            this.panel_10 = new System.Windows.Forms.Panel();
+            this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Elipse_Panel_10 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.Elipse_Panel_11 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.panel_12 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Elipse_Panel_12 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.dg_toptramites = new Guna.UI.WinForms.GunaDataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_04.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btndots_tramitesempleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_tramitesempleados)).BeginInit();
@@ -165,45 +166,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_erroresmensual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_porcentajediario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_porcentajemensual)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btndots_stock)).BeginInit();
             this.panel_02.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btndots_stock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_stock02)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_stock01)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             this.panel_03.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btndots_tramites)).BeginInit();
-            this.panel_06.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_refreshdata)).BeginInit();
             this.panel_05.SuspendLayout();
-            this.panel_07.SuspendLayout();
             this.panel_08.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_toperror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.panel_09.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btndots_tramitesdetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_tramites)).BeginInit();
+            this.panel_11.SuspendLayout();
+            this.panel_10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.panel_12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_toptramites)).BeginInit();
             this.SuspendLayout();
-            // 
-            // chart_circle_diario
-            // 
-            this.chart_circle_diario.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            chartArea1.Name = "ChartArea1";
-            this.chart_circle_diario.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart_circle_diario.Legends.Add(legend1);
-            this.chart_circle_diario.Location = new System.Drawing.Point(374, 138);
-            this.chart_circle_diario.Name = "chart_circle_diario";
-            this.chart_circle_diario.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart_circle_diario.Series.Add(series1);
-            this.chart_circle_diario.Size = new System.Drawing.Size(270, 227);
-            this.chart_circle_diario.TabIndex = 0;
-            this.chart_circle_diario.Text = "chart1";
-            title1.Name = "Title1";
-            title1.Text = "Grafico diario de tramites";
-            this.chart_circle_diario.Titles.Add(title1);
             // 
             // lbl_porcentaje_inscriptos
             // 
@@ -253,58 +235,6 @@
             this.lbl_tramites00.TabIndex = 2;
             this.lbl_tramites00.Text = "Procesados";
             // 
-            // dg_topErrores
-            // 
-            this.dg_topErrores.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
-            this.dg_topErrores.AllowUserToAddRows = false;
-            this.dg_topErrores.AllowUserToDeleteRows = false;
-            this.dg_topErrores.AllowUserToResizeColumns = false;
-            this.dg_topErrores.AllowUserToResizeRows = false;
-            this.dg_topErrores.BackgroundColor = System.Drawing.Color.White;
-            this.dg_topErrores.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dg_topErrores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_topErrores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dg_topErrores.ColumnHeadersHeight = 25;
-            this.dg_topErrores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Empleado,
-            this.Total});
-            this.dg_topErrores.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_topErrores.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dg_topErrores.EnableHeadersVisualStyles = false;
-            this.dg_topErrores.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dg_topErrores.Location = new System.Drawing.Point(6, 37);
-            this.dg_topErrores.MultiSelect = false;
-            this.dg_topErrores.Name = "dg_topErrores";
-            this.dg_topErrores.ReadOnly = true;
-            this.dg_topErrores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_topErrores.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dg_topErrores.RowHeadersVisible = false;
-            this.dg_topErrores.RowHeadersWidth = 51;
-            this.dg_topErrores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_topErrores.Size = new System.Drawing.Size(181, 276);
-            this.dg_topErrores.TabIndex = 111;
-            // 
             // lbl_totalmensual
             // 
             this.lbl_totalmensual.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -316,80 +246,110 @@
             this.lbl_totalmensual.TabIndex = 14;
             this.lbl_totalmensual.Text = "0";
             // 
-            // lbl_tramitesempleados01
-            // 
-            this.lbl_tramitesempleados01.AutoSize = true;
-            this.lbl_tramitesempleados01.Font = new System.Drawing.Font("Poppins ExtraLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tramitesempleados01.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.lbl_tramitesempleados01.Location = new System.Drawing.Point(149, 13);
-            this.lbl_tramitesempleados01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_tramitesempleados01.Name = "lbl_tramitesempleados01";
-            this.lbl_tramitesempleados01.Size = new System.Drawing.Size(120, 19);
-            this.lbl_tramitesempleados01.TabIndex = 181;
-            this.lbl_tramitesempleados01.Text = "Tramites procesados";
-            // 
             // panel_04
             // 
             this.panel_04.BackColor = System.Drawing.Color.White;
-            this.panel_04.Controls.Add(this.btndots_tramitesempleados);
-            this.panel_04.Controls.Add(this.chart_circle_diario);
-            this.panel_04.Controls.Add(this.bunifuSeparator2);
+            this.panel_04.Controls.Add(this.bunifuThinButton22);
+            this.panel_04.Controls.Add(this.bunifuThinButton23);
             this.panel_04.Controls.Add(this.cb_tramitesempleados);
+            this.panel_04.Controls.Add(this.btndots_tramitesempleados);
             this.panel_04.Controls.Add(this.lbl_tramitesempleados00);
-            this.panel_04.Controls.Add(this.lbl_tramitesempleados01);
             this.panel_04.Controls.Add(this.chart_tramitesempleados);
             this.panel_04.Location = new System.Drawing.Point(219, 454);
             this.panel_04.Name = "panel_04";
             this.panel_04.Size = new System.Drawing.Size(422, 206);
             this.panel_04.TabIndex = 184;
             // 
+            // bunifuThinButton22
+            // 
+            this.bunifuThinButton22.ActiveBorderThickness = 1;
+            this.bunifuThinButton22.ActiveCornerRadius = 20;
+            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(65)))), ((int)(((byte)(43)))));
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.ButtonText = "Inscriptos";
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.IdleBorderThickness = 1;
+            this.bunifuThinButton22.IdleCornerRadius = 20;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.LightGray;
+            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.Location = new System.Drawing.Point(117, 30);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.bunifuThinButton22.Name = "bunifuThinButton22";
+            this.bunifuThinButton22.Size = new System.Drawing.Size(73, 26);
+            this.bunifuThinButton22.TabIndex = 245;
+            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuThinButton23
+            // 
+            this.bunifuThinButton23.ActiveBorderThickness = 1;
+            this.bunifuThinButton23.ActiveCornerRadius = 20;
+            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton23.BackColor = System.Drawing.Color.White;
+            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
+            this.bunifuThinButton23.ButtonText = "Procesados";
+            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton23.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton23.IdleBorderThickness = 1;
+            this.bunifuThinButton23.IdleCornerRadius = 20;
+            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(213)))), ((int)(((byte)(144)))));
+            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton23.Location = new System.Drawing.Point(29, 30);
+            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.bunifuThinButton23.Name = "bunifuThinButton23";
+            this.bunifuThinButton23.Size = new System.Drawing.Size(93, 26);
+            this.bunifuThinButton23.TabIndex = 244;
+            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cb_tramitesempleados
+            // 
+            this.cb_tramitesempleados.BackColor = System.Drawing.Color.Transparent;
+            this.cb_tramitesempleados.BaseColor = System.Drawing.Color.White;
+            this.cb_tramitesempleados.BorderColor = System.Drawing.Color.White;
+            this.cb_tramitesempleados.BorderSize = 1;
+            this.cb_tramitesempleados.DisplayMember = "Nombre";
+            this.cb_tramitesempleados.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_tramitesempleados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_tramitesempleados.FocusedColor = System.Drawing.Color.Empty;
+            this.cb_tramitesempleados.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_tramitesempleados.ForeColor = System.Drawing.Color.LightGray;
+            this.cb_tramitesempleados.FormattingEnabled = true;
+            this.cb_tramitesempleados.Items.AddRange(new object[] {
+            "1 mes",
+            "1 mes ant.",
+            "1 año"});
+            this.cb_tramitesempleados.Location = new System.Drawing.Point(272, 6);
+            this.cb_tramitesempleados.Name = "cb_tramitesempleados";
+            this.cb_tramitesempleados.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(213)))), ((int)(((byte)(144)))));
+            this.cb_tramitesempleados.OnHoverItemForeColor = System.Drawing.Color.Black;
+            this.cb_tramitesempleados.Radius = 7;
+            this.cb_tramitesempleados.Size = new System.Drawing.Size(108, 28);
+            this.cb_tramitesempleados.StartIndex = 0;
+            this.cb_tramitesempleados.TabIndex = 243;
+            this.cb_tramitesempleados.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.cb_tramitesempleados.ValueMember = "cod_tipo";
+            // 
             // btndots_tramitesempleados
             // 
             this.btndots_tramitesempleados.BackColor = System.Drawing.Color.White;
             this.btndots_tramitesempleados.Image = ((System.Drawing.Image)(resources.GetObject("btndots_tramitesempleados.Image")));
             this.btndots_tramitesempleados.ImageActive = null;
-            this.btndots_tramitesempleados.Location = new System.Drawing.Point(385, 9);
+            this.btndots_tramitesempleados.Location = new System.Drawing.Point(386, 8);
             this.btndots_tramitesempleados.Name = "btndots_tramitesempleados";
-            this.btndots_tramitesempleados.Size = new System.Drawing.Size(27, 21);
+            this.btndots_tramitesempleados.Size = new System.Drawing.Size(27, 23);
             this.btndots_tramitesempleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btndots_tramitesempleados.TabIndex = 206;
+            this.btndots_tramitesempleados.TabIndex = 215;
             this.btndots_tramitesempleados.TabStop = false;
-            this.btndots_tramitesempleados.Zoom = 10;
-            // 
-            // bunifuSeparator2
-            // 
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(213)))), ((int)(((byte)(144)))));
-            this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(276, 26);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(87, 11);
-            this.bunifuSeparator2.TabIndex = 22;
-            this.bunifuSeparator2.Transparency = 255;
-            this.bunifuSeparator2.Vertical = false;
-            // 
-            // cb_tramitesempleados
-            // 
-            this.cb_tramitesempleados.BackColor = System.Drawing.Color.Transparent;
-            this.cb_tramitesempleados.BorderRadius = 5;
-            this.cb_tramitesempleados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cb_tramitesempleados.DisabledColor = System.Drawing.Color.Gray;
-            this.cb_tramitesempleados.ForeColor = System.Drawing.Color.DimGray;
-            this.cb_tramitesempleados.Items = new string[] {
-        "1 dia",
-        "1 semana",
-        "1 mes",
-        "1 mes ant.",
-        "1 año"};
-            this.cb_tramitesempleados.Location = new System.Drawing.Point(275, 8);
-            this.cb_tramitesempleados.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cb_tramitesempleados.Name = "cb_tramitesempleados";
-            this.cb_tramitesempleados.NomalColor = System.Drawing.Color.Transparent;
-            this.cb_tramitesempleados.onHoverColor = System.Drawing.Color.Transparent;
-            this.cb_tramitesempleados.selectedIndex = 2;
-            this.cb_tramitesempleados.Size = new System.Drawing.Size(105, 21);
-            this.cb_tramitesempleados.TabIndex = 197;
-            this.cb_tramitesempleados.onItemSelected += new System.EventHandler(this.cb_tramitesempleados_onItemSelected);
+            this.btndots_tramitesempleados.Zoom = 9;
             // 
             // lbl_tramitesempleados00
             // 
@@ -408,37 +368,37 @@
             // 
             this.chart_tramitesempleados.BackColor = System.Drawing.Color.Transparent;
             this.chart_tramitesempleados.BorderlineWidth = 0;
-            chartArea2.AxisX.IsReversed = true;
-            chartArea2.AxisX.LabelStyle.Font = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisX.MajorTickMark.Enabled = false;
-            chartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisY.InterlacedColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisY.IsLabelAutoFit = false;
-            chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Gray;
-            chartArea2.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea2.AxisY.LogarithmBase = 20D;
-            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisY.MajorTickMark.Enabled = false;
-            chartArea2.AxisY.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
-            chartArea2.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chart_tramitesempleados.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "Legend1";
-            this.chart_tramitesempleados.Legends.Add(legend2);
-            this.chart_tramitesempleados.Location = new System.Drawing.Point(18, 34);
+            chartArea1.AxisX.IsReversed = true;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisX.MajorTickMark.Enabled = false;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.InterlacedColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.IsLabelAutoFit = false;
+            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Gray;
+            chartArea1.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea1.AxisY.LogarithmBase = 20D;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.MajorTickMark.Enabled = false;
+            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chart_tramitesempleados.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.chart_tramitesempleados.Legends.Add(legend1);
+            this.chart_tramitesempleados.Location = new System.Drawing.Point(18, 48);
             this.chart_tramitesempleados.Name = "chart_tramitesempleados";
-            series2.ChartArea = "ChartArea1";
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(213)))), ((int)(((byte)(144)))));
-            series2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.IsValueShownAsLabel = true;
-            series2.Legend = "Legend1";
-            series2.Name = "Empleados";
-            series2.YValuesPerPoint = 4;
-            this.chart_tramitesempleados.Series.Add(series2);
-            this.chart_tramitesempleados.Size = new System.Drawing.Size(383, 172);
+            series1.ChartArea = "ChartArea1";
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(213)))), ((int)(((byte)(144)))));
+            series1.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.IsValueShownAsLabel = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Empleados";
+            series1.YValuesPerPoint = 4;
+            this.chart_tramitesempleados.Series.Add(series1);
+            this.chart_tramitesempleados.Size = new System.Drawing.Size(383, 158);
             this.chart_tramitesempleados.TabIndex = 189;
             this.chart_tramitesempleados.Text = "chart2";
             // 
@@ -713,20 +673,7 @@
             // EBtn_dotstock
             // 
             this.EBtn_dotstock.ElipseRadius = 11;
-            this.EBtn_dotstock.TargetControl = this.btndots_stock;
-            // 
-            // btndots_stock
-            // 
-            this.btndots_stock.BackColor = System.Drawing.Color.White;
-            this.btndots_stock.Image = ((System.Drawing.Image)(resources.GetObject("btndots_stock.Image")));
-            this.btndots_stock.ImageActive = null;
-            this.btndots_stock.Location = new System.Drawing.Point(160, 8);
-            this.btndots_stock.Name = "btndots_stock";
-            this.btndots_stock.Size = new System.Drawing.Size(27, 21);
-            this.btndots_stock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btndots_stock.TabIndex = 205;
-            this.btndots_stock.TabStop = false;
-            this.btndots_stock.Zoom = 10;
+            this.EBtn_dotstock.TargetControl = this;
             // 
             // lbl_stockbajo_autos
             // 
@@ -804,6 +751,19 @@
             this.panel_02.Size = new System.Drawing.Size(194, 206);
             this.panel_02.TabIndex = 204;
             // 
+            // btndots_stock
+            // 
+            this.btndots_stock.BackColor = System.Drawing.Color.White;
+            this.btndots_stock.Image = ((System.Drawing.Image)(resources.GetObject("btndots_stock.Image")));
+            this.btndots_stock.ImageActive = null;
+            this.btndots_stock.Location = new System.Drawing.Point(160, 9);
+            this.btndots_stock.Name = "btndots_stock";
+            this.btndots_stock.Size = new System.Drawing.Size(27, 23);
+            this.btndots_stock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btndots_stock.TabIndex = 212;
+            this.btndots_stock.TabStop = false;
+            this.btndots_stock.Zoom = 9;
+            // 
             // lbl_stockbajo_percentage
             // 
             this.lbl_stockbajo_percentage.BackColor = System.Drawing.Color.Transparent;
@@ -864,47 +824,16 @@
             this.Elipse_Panel02.ElipseRadius = 30;
             this.Elipse_Panel02.TargetControl = this.panel_02;
             // 
-            // chart1
-            // 
-            this.chart1.BackColor = System.Drawing.Color.Transparent;
-            this.chart1.BorderlineWidth = 0;
-            chartArea3.AxisX.IsReversed = true;
-            chartArea3.AxisX.LabelStyle.Font = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea3.AxisX.MajorTickMark.Enabled = false;
-            chartArea3.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
-            chartArea3.AxisY.LabelStyle.Font = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea3.AxisY.MajorTickMark.Enabled = false;
-            chartArea3.AxisY.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
-            chartArea3.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Enabled = false;
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(5, 38);
-            this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Color = System.Drawing.Color.Firebrick;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            series3.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(321, 97);
-            this.chart1.TabIndex = 205;
-            this.chart1.Text = "chart1";
-            // 
             // EBtn_dotstramitesempleados
             // 
             this.EBtn_dotstramitesempleados.ElipseRadius = 11;
-            this.EBtn_dotstramitesempleados.TargetControl = this.btndots_tramitesempleados;
+            this.EBtn_dotstramitesempleados.TargetControl = this;
             // 
             // pictureBox_logo
             // 
             this.pictureBox_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox_logo.Location = new System.Drawing.Point(144, 20);
+            this.pictureBox_logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_logo.Image")));
+            this.pictureBox_logo.Location = new System.Drawing.Point(23, 19);
             this.pictureBox_logo.Name = "pictureBox_logo";
             this.pictureBox_logo.Size = new System.Drawing.Size(25, 25);
             this.pictureBox_logo.TabIndex = 2;
@@ -918,11 +847,10 @@
             // panel_03
             // 
             this.panel_03.BackColor = System.Drawing.Color.White;
+            this.panel_03.Controls.Add(this.cb_tramites);
             this.panel_03.Controls.Add(this.btndots_tramites);
             this.panel_03.Controls.Add(this.lbl_inscriptos);
             this.panel_03.Controls.Add(this.lbl_procesados);
-            this.panel_03.Controls.Add(this.bunifuSeparator5);
-            this.panel_03.Controls.Add(this.cb_tramites);
             this.panel_03.Controls.Add(this.dot_insciptos);
             this.panel_03.Controls.Add(this.dot_procesados);
             this.panel_03.Controls.Add(this.progress_inscriptos);
@@ -932,23 +860,51 @@
             this.panel_03.Controls.Add(this.lbl_tramites01);
             this.panel_03.Controls.Add(this.lbl_porcentaje_inscriptos);
             this.panel_03.Controls.Add(this.lbl_porcentaje_procesados);
-            this.panel_03.Location = new System.Drawing.Point(656, 114);
+            this.panel_03.Location = new System.Drawing.Point(657, 325);
             this.panel_03.Name = "panel_03";
             this.panel_03.Size = new System.Drawing.Size(334, 111);
             this.panel_03.TabIndex = 205;
+            // 
+            // cb_tramites
+            // 
+            this.cb_tramites.BackColor = System.Drawing.Color.Transparent;
+            this.cb_tramites.BaseColor = System.Drawing.Color.White;
+            this.cb_tramites.BorderColor = System.Drawing.Color.White;
+            this.cb_tramites.BorderSize = 1;
+            this.cb_tramites.DisplayMember = "Nombre";
+            this.cb_tramites.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_tramites.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_tramites.FocusedColor = System.Drawing.Color.Empty;
+            this.cb_tramites.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_tramites.ForeColor = System.Drawing.Color.LightGray;
+            this.cb_tramites.FormattingEnabled = true;
+            this.cb_tramites.Items.AddRange(new object[] {
+            "1 mes",
+            "1 mes ant.",
+            "1 año"});
+            this.cb_tramites.Location = new System.Drawing.Point(189, 7);
+            this.cb_tramites.Name = "cb_tramites";
+            this.cb_tramites.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(65)))), ((int)(((byte)(43)))));
+            this.cb_tramites.OnHoverItemForeColor = System.Drawing.Color.Black;
+            this.cb_tramites.Radius = 7;
+            this.cb_tramites.Size = new System.Drawing.Size(108, 28);
+            this.cb_tramites.StartIndex = 0;
+            this.cb_tramites.TabIndex = 243;
+            this.cb_tramites.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.cb_tramites.ValueMember = "cod_tipo";
             // 
             // btndots_tramites
             // 
             this.btndots_tramites.BackColor = System.Drawing.Color.White;
             this.btndots_tramites.Image = ((System.Drawing.Image)(resources.GetObject("btndots_tramites.Image")));
             this.btndots_tramites.ImageActive = null;
-            this.btndots_tramites.Location = new System.Drawing.Point(299, 8);
+            this.btndots_tramites.Location = new System.Drawing.Point(302, 8);
             this.btndots_tramites.Name = "btndots_tramites";
-            this.btndots_tramites.Size = new System.Drawing.Size(27, 21);
+            this.btndots_tramites.Size = new System.Drawing.Size(27, 23);
             this.btndots_tramites.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btndots_tramites.TabIndex = 216;
+            this.btndots_tramites.TabIndex = 221;
             this.btndots_tramites.TabStop = false;
-            this.btndots_tramites.Zoom = 10;
+            this.btndots_tramites.Zoom = 9;
             // 
             // lbl_inscriptos
             // 
@@ -971,40 +927,6 @@
             this.lbl_procesados.Size = new System.Drawing.Size(39, 23);
             this.lbl_procesados.TabIndex = 214;
             this.lbl_procesados.Text = "5000";
-            // 
-            // bunifuSeparator5
-            // 
-            this.bunifuSeparator5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(77)))));
-            this.bunifuSeparator5.LineThickness = 1;
-            this.bunifuSeparator5.Location = new System.Drawing.Point(193, 26);
-            this.bunifuSeparator5.Name = "bunifuSeparator5";
-            this.bunifuSeparator5.Size = new System.Drawing.Size(87, 11);
-            this.bunifuSeparator5.TabIndex = 212;
-            this.bunifuSeparator5.Transparency = 255;
-            this.bunifuSeparator5.Vertical = false;
-            // 
-            // cb_tramites
-            // 
-            this.cb_tramites.BackColor = System.Drawing.Color.Transparent;
-            this.cb_tramites.BorderRadius = 5;
-            this.cb_tramites.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cb_tramites.DisabledColor = System.Drawing.Color.Gray;
-            this.cb_tramites.ForeColor = System.Drawing.Color.DimGray;
-            this.cb_tramites.Items = new string[] {
-        "1 dia",
-        "1 semana",
-        "1 mes",
-        "1 mes ant."};
-            this.cb_tramites.Location = new System.Drawing.Point(191, 8);
-            this.cb_tramites.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cb_tramites.Name = "cb_tramites";
-            this.cb_tramites.NomalColor = System.Drawing.Color.Transparent;
-            this.cb_tramites.onHoverColor = System.Drawing.Color.Transparent;
-            this.cb_tramites.selectedIndex = 0;
-            this.cb_tramites.Size = new System.Drawing.Size(105, 21);
-            this.cb_tramites.TabIndex = 213;
-            this.cb_tramites.onItemSelected += new System.EventHandler(this.cb_tramites_onItemSelected);
             // 
             // dot_insciptos
             // 
@@ -1054,7 +976,7 @@
             this.lbl_tramitesdetail_00.BackColor = System.Drawing.Color.Transparent;
             this.lbl_tramitesdetail_00.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tramitesdetail_00.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbl_tramitesdetail_00.Location = new System.Drawing.Point(9, 12);
+            this.lbl_tramitesdetail_00.Location = new System.Drawing.Point(10, 12);
             this.lbl_tramitesdetail_00.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_tramitesdetail_00.Name = "lbl_tramitesdetail_00";
             this.lbl_tramitesdetail_00.Size = new System.Drawing.Size(67, 23);
@@ -1090,52 +1012,27 @@
             // Elipse_Panel06
             // 
             this.Elipse_Panel06.ElipseRadius = 31;
-            this.Elipse_Panel06.TargetControl = this.panel_06;
-            // 
-            // panel_06
-            // 
-            this.panel_06.BackColor = System.Drawing.Color.White;
-            this.panel_06.Controls.Add(this.btn_refreshdata);
-            this.panel_06.Controls.Add(this.lbl_date);
-            this.panel_06.Controls.Add(this.pictureBox_logo);
-            this.panel_06.Controls.Add(this.lbl_time);
-            this.panel_06.Location = new System.Drawing.Point(792, 12);
-            this.panel_06.Name = "panel_06";
-            this.panel_06.Size = new System.Drawing.Size(194, 86);
-            this.panel_06.TabIndex = 208;
-            // 
-            // btn_refreshdata
-            // 
-            this.btn_refreshdata.BackColor = System.Drawing.Color.White;
-            this.btn_refreshdata.Image = ((System.Drawing.Image)(resources.GetObject("btn_refreshdata.Image")));
-            this.btn_refreshdata.ImageActive = null;
-            this.btn_refreshdata.Location = new System.Drawing.Point(170, -7);
-            this.btn_refreshdata.Name = "btn_refreshdata";
-            this.btn_refreshdata.Size = new System.Drawing.Size(25, 20);
-            this.btn_refreshdata.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_refreshdata.TabIndex = 209;
-            this.btn_refreshdata.TabStop = false;
-            this.btn_refreshdata.Zoom = 9;
+            this.Elipse_Panel06.TargetControl = this;
             // 
             // lbl_date
             // 
-            this.lbl_date.AutoSize = true;
             this.lbl_date.BackColor = System.Drawing.Color.Transparent;
             this.lbl_date.Font = new System.Drawing.Font("Poppins ExtraLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_date.Location = new System.Drawing.Point(2, 50);
+            this.lbl_date.ForeColor = System.Drawing.Color.Black;
+            this.lbl_date.Location = new System.Drawing.Point(6, 48);
             this.lbl_date.Name = "lbl_date";
             this.lbl_date.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_date.Size = new System.Drawing.Size(191, 19);
+            this.lbl_date.Size = new System.Drawing.Size(195, 19);
             this.lbl_date.TabIndex = 4;
             this.lbl_date.Text = "Sabado, 14 de noviembre del 2020";
             this.lbl_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_time
             // 
-            this.lbl_time.AutoSize = true;
             this.lbl_time.BackColor = System.Drawing.Color.Transparent;
             this.lbl_time.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_time.Location = new System.Drawing.Point(31, 18);
+            this.lbl_time.ForeColor = System.Drawing.Color.Black;
+            this.lbl_time.Location = new System.Drawing.Point(52, 15);
             this.lbl_time.Name = "lbl_time";
             this.lbl_time.Size = new System.Drawing.Size(111, 37);
             this.lbl_time.TabIndex = 3;
@@ -1145,7 +1042,7 @@
             // EBtn_dotstramites
             // 
             this.EBtn_dotstramites.ElipseRadius = 11;
-            this.EBtn_dotstramites.TargetControl = this.btndots_tramites;
+            this.EBtn_dotstramites.TargetControl = this;
             // 
             // panel_05
             // 
@@ -1154,14 +1051,12 @@
             this.panel_05.Controls.Add(this.btn_accionesrapidas_inscribirt);
             this.panel_05.Controls.Add(this.label5);
             this.panel_05.Controls.Add(this.btn_accionesrapidas_insertart);
-            this.panel_05.Controls.Add(this.label3);
-            this.panel_05.Controls.Add(this.btn_accionesrapidas_consulta);
             this.panel_05.Controls.Add(this.label2);
             this.panel_05.Controls.Add(this.btn_accionesrapidas_stock);
             this.panel_05.Controls.Add(this.label4);
-            this.panel_05.Location = new System.Drawing.Point(656, 240);
+            this.panel_05.Location = new System.Drawing.Point(657, 454);
             this.panel_05.Name = "panel_05";
-            this.panel_05.Size = new System.Drawing.Size(334, 265);
+            this.panel_05.Size = new System.Drawing.Size(334, 206);
             this.panel_05.TabIndex = 216;
             // 
             // label6
@@ -1170,7 +1065,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(21, 230);
+            this.label6.Location = new System.Drawing.Point(21, 177);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(227, 23);
@@ -1198,11 +1093,11 @@
             this.btn_accionesrapidas_inscribirt.IconVisible = true;
             this.btn_accionesrapidas_inscribirt.IconZoom = 40D;
             this.btn_accionesrapidas_inscribirt.IsTab = false;
-            this.btn_accionesrapidas_inscribirt.Location = new System.Drawing.Point(4, 199);
+            this.btn_accionesrapidas_inscribirt.Location = new System.Drawing.Point(4, 146);
             this.btn_accionesrapidas_inscribirt.Name = "btn_accionesrapidas_inscribirt";
             this.btn_accionesrapidas_inscribirt.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_accionesrapidas_inscribirt.OnHovercolor = System.Drawing.Color.Transparent;
-            this.btn_accionesrapidas_inscribirt.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(77)))));
+            this.btn_accionesrapidas_inscribirt.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
             this.btn_accionesrapidas_inscribirt.selected = false;
             this.btn_accionesrapidas_inscribirt.Size = new System.Drawing.Size(327, 48);
             this.btn_accionesrapidas_inscribirt.TabIndex = 198;
@@ -1218,7 +1113,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(20, 173);
+            this.label5.Location = new System.Drawing.Point(20, 120);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(209, 23);
@@ -1246,11 +1141,11 @@
             this.btn_accionesrapidas_insertart.IconVisible = true;
             this.btn_accionesrapidas_insertart.IconZoom = 40D;
             this.btn_accionesrapidas_insertart.IsTab = false;
-            this.btn_accionesrapidas_insertart.Location = new System.Drawing.Point(3, 142);
+            this.btn_accionesrapidas_insertart.Location = new System.Drawing.Point(3, 89);
             this.btn_accionesrapidas_insertart.Name = "btn_accionesrapidas_insertart";
             this.btn_accionesrapidas_insertart.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_accionesrapidas_insertart.OnHovercolor = System.Drawing.Color.Transparent;
-            this.btn_accionesrapidas_insertart.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(77)))));
+            this.btn_accionesrapidas_insertart.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
             this.btn_accionesrapidas_insertart.selected = false;
             this.btn_accionesrapidas_insertart.Size = new System.Drawing.Size(327, 48);
             this.btn_accionesrapidas_insertart.TabIndex = 196;
@@ -1260,61 +1155,13 @@
             this.btn_accionesrapidas_insertart.TextFont = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_accionesrapidas_insertart.Click += new System.EventHandler(this.btn_accionesrapidas_insertart_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(21, 118);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 23);
-            this.label3.TabIndex = 195;
-            this.label3.Text = "Ver todos los tramites del dia";
-            // 
-            // btn_accionesrapidas_consulta
-            // 
-            this.btn_accionesrapidas_consulta.Activecolor = System.Drawing.Color.Transparent;
-            this.btn_accionesrapidas_consulta.BackColor = System.Drawing.Color.Transparent;
-            this.btn_accionesrapidas_consulta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_accionesrapidas_consulta.BorderRadius = 0;
-            this.btn_accionesrapidas_consulta.ButtonText = "Consulta diaria";
-            this.btn_accionesrapidas_consulta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_accionesrapidas_consulta.DisabledColor = System.Drawing.Color.Transparent;
-            this.btn_accionesrapidas_consulta.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_accionesrapidas_consulta.Iconimage = null;
-            this.btn_accionesrapidas_consulta.Iconimage_right = null;
-            this.btn_accionesrapidas_consulta.Iconimage_right_Selected = null;
-            this.btn_accionesrapidas_consulta.Iconimage_Selected = null;
-            this.btn_accionesrapidas_consulta.IconMarginLeft = 0;
-            this.btn_accionesrapidas_consulta.IconMarginRight = 0;
-            this.btn_accionesrapidas_consulta.IconRightVisible = true;
-            this.btn_accionesrapidas_consulta.IconRightZoom = 0D;
-            this.btn_accionesrapidas_consulta.IconVisible = true;
-            this.btn_accionesrapidas_consulta.IconZoom = 40D;
-            this.btn_accionesrapidas_consulta.IsTab = false;
-            this.btn_accionesrapidas_consulta.Location = new System.Drawing.Point(4, 87);
-            this.btn_accionesrapidas_consulta.Name = "btn_accionesrapidas_consulta";
-            this.btn_accionesrapidas_consulta.Normalcolor = System.Drawing.Color.Transparent;
-            this.btn_accionesrapidas_consulta.OnHovercolor = System.Drawing.Color.Transparent;
-            this.btn_accionesrapidas_consulta.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(77)))));
-            this.btn_accionesrapidas_consulta.selected = false;
-            this.btn_accionesrapidas_consulta.Size = new System.Drawing.Size(327, 48);
-            this.btn_accionesrapidas_consulta.TabIndex = 194;
-            this.btn_accionesrapidas_consulta.Text = "Consulta diaria";
-            this.btn_accionesrapidas_consulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_accionesrapidas_consulta.Textcolor = System.Drawing.Color.DimGray;
-            this.btn_accionesrapidas_consulta.TextFont = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_accionesrapidas_consulta.Click += new System.EventHandler(this.btn_accionesrapidas_consulta_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(21, 63);
+            this.label2.Location = new System.Drawing.Point(20, 61);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(215, 23);
@@ -1342,11 +1189,11 @@
             this.btn_accionesrapidas_stock.IconVisible = true;
             this.btn_accionesrapidas_stock.IconZoom = 40D;
             this.btn_accionesrapidas_stock.IsTab = false;
-            this.btn_accionesrapidas_stock.Location = new System.Drawing.Point(4, 32);
+            this.btn_accionesrapidas_stock.Location = new System.Drawing.Point(3, 30);
             this.btn_accionesrapidas_stock.Name = "btn_accionesrapidas_stock";
             this.btn_accionesrapidas_stock.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_accionesrapidas_stock.OnHovercolor = System.Drawing.Color.Transparent;
-            this.btn_accionesrapidas_stock.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(77)))));
+            this.btn_accionesrapidas_stock.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
             this.btn_accionesrapidas_stock.selected = false;
             this.btn_accionesrapidas_stock.Size = new System.Drawing.Size(327, 48);
             this.btn_accionesrapidas_stock.TabIndex = 192;
@@ -1374,43 +1221,144 @@
             this.Elipse_Panel05.ElipseRadius = 30;
             this.Elipse_Panel05.TargetControl = this.panel_05;
             // 
-            // panel_07
-            // 
-            this.panel_07.BackColor = System.Drawing.Color.White;
-            this.panel_07.Controls.Add(this.chart1);
-            this.panel_07.Controls.Add(this.label12);
-            this.panel_07.Location = new System.Drawing.Point(656, 516);
-            this.panel_07.Name = "panel_07";
-            this.panel_07.Size = new System.Drawing.Size(334, 148);
-            this.panel_07.TabIndex = 217;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DarkGray;
-            this.label12.Location = new System.Drawing.Point(9, 12);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(153, 23);
-            this.label12.TabIndex = 191;
-            this.label12.Text = "Acciones destacadas";
-            // 
             // Elipse_Panel_07
             // 
             this.Elipse_Panel_07.ElipseRadius = 30;
-            this.Elipse_Panel_07.TargetControl = this.panel_07;
+            this.Elipse_Panel_07.TargetControl = this;
             // 
             // panel_08
             // 
             this.panel_08.BackColor = System.Drawing.Color.White;
-            this.panel_08.Controls.Add(this.dg_topErrores);
+            this.panel_08.Controls.Add(this.label8);
+            this.panel_08.Controls.Add(this.dg_toperror);
+            this.panel_08.Controls.Add(this.bunifuImageButton2);
             this.panel_08.Controls.Add(this.label11);
             this.panel_08.Location = new System.Drawing.Point(12, 338);
             this.panel_08.Name = "panel_08";
             this.panel_08.Size = new System.Drawing.Size(194, 322);
             this.panel_08.TabIndex = 218;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Poppins ExtraLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.label8.Location = new System.Drawing.Point(93, 13);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 19);
+            this.label8.TabIndex = 265;
+            this.label8.Text = "errores";
+            // 
+            // dg_toperror
+            // 
+            this.dg_toperror.AllowUserToAddRows = false;
+            this.dg_toperror.AllowUserToDeleteRows = false;
+            this.dg_toperror.AllowUserToResizeColumns = false;
+            this.dg_toperror.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dg_toperror.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dg_toperror.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dg_toperror.BackgroundColor = System.Drawing.Color.White;
+            this.dg_toperror.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dg_toperror.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dg_toperror.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_toperror.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dg_toperror.ColumnHeadersHeight = 30;
+            this.dg_toperror.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dg_toperror.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Top,
+            this.ColumnNumeracion,
+            this.ColumnStockDetail});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_toperror.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dg_toperror.EnableHeadersVisualStyles = false;
+            this.dg_toperror.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dg_toperror.Location = new System.Drawing.Point(10, 38);
+            this.dg_toperror.MultiSelect = false;
+            this.dg_toperror.Name = "dg_toperror";
+            this.dg_toperror.ReadOnly = true;
+            this.dg_toperror.RowHeadersVisible = false;
+            this.dg_toperror.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dg_toperror.RowTemplate.Height = 30;
+            this.dg_toperror.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dg_toperror.Size = new System.Drawing.Size(178, 271);
+            this.dg_toperror.TabIndex = 264;
+            this.dg_toperror.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.dg_toperror.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dg_toperror.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dg_toperror.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dg_toperror.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dg_toperror.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dg_toperror.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dg_toperror.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dg_toperror.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
+            this.dg_toperror.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dg_toperror.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dg_toperror.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Gray;
+            this.dg_toperror.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dg_toperror.ThemeStyle.HeaderStyle.Height = 30;
+            this.dg_toperror.ThemeStyle.ReadOnly = true;
+            this.dg_toperror.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dg_toperror.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dg_toperror.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dg_toperror.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dg_toperror.ThemeStyle.RowsStyle.Height = 30;
+            this.dg_toperror.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dg_toperror.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // Top
+            // 
+            this.Top.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Top.FillWeight = 312.8079F;
+            this.Top.HeaderText = "";
+            this.Top.Name = "Top";
+            this.Top.ReadOnly = true;
+            this.Top.Width = 23;
+            // 
+            // ColumnNumeracion
+            // 
+            this.ColumnNumeracion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ColumnNumeracion.FillWeight = 27.7284F;
+            this.ColumnNumeracion.HeaderText = "Empleado";
+            this.ColumnNumeracion.Name = "ColumnNumeracion";
+            this.ColumnNumeracion.ReadOnly = true;
+            this.ColumnNumeracion.Width = 98;
+            // 
+            // ColumnStockDetail
+            // 
+            this.ColumnStockDetail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnStockDetail.FillWeight = 125.1232F;
+            this.ColumnStockDetail.HeaderText = "Total";
+            this.ColumnStockDetail.Name = "ColumnStockDetail";
+            this.ColumnStockDetail.ReadOnly = true;
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(157, 10);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(27, 23);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 215;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 9;
             // 
             // label11
             // 
@@ -1418,19 +1366,18 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkGray;
-            this.label11.Location = new System.Drawing.Point(9, 10);
+            this.label11.Location = new System.Drawing.Point(4, 10);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 23);
+            this.label11.Size = new System.Drawing.Size(94, 23);
             this.label11.TabIndex = 191;
-            this.label11.Text = "Top errores";
+            this.label11.Text = "Top mensual\r\n";
             // 
             // panel_09
             // 
             this.panel_09.BackColor = System.Drawing.Color.White;
-            this.panel_09.Controls.Add(this.btndots_tramitesdetails);
-            this.panel_09.Controls.Add(this.bunifuSeparator6);
             this.panel_09.Controls.Add(this.cb_tramites_chart);
+            this.panel_09.Controls.Add(this.btndots_tramitesdetails);
             this.panel_09.Controls.Add(this.btn_chart_tramitesfinalizados);
             this.panel_09.Controls.Add(this.btn_chart_tramitesinscriptos);
             this.panel_09.Controls.Add(this.lbl_tramites_00);
@@ -1441,51 +1388,46 @@
             this.panel_09.Size = new System.Drawing.Size(422, 322);
             this.panel_09.TabIndex = 219;
             // 
+            // cb_tramites_chart
+            // 
+            this.cb_tramites_chart.BackColor = System.Drawing.Color.Transparent;
+            this.cb_tramites_chart.BaseColor = System.Drawing.Color.White;
+            this.cb_tramites_chart.BorderColor = System.Drawing.Color.White;
+            this.cb_tramites_chart.BorderSize = 1;
+            this.cb_tramites_chart.DisplayMember = "Nombre";
+            this.cb_tramites_chart.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_tramites_chart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_tramites_chart.FocusedColor = System.Drawing.Color.Empty;
+            this.cb_tramites_chart.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_tramites_chart.ForeColor = System.Drawing.Color.LightGray;
+            this.cb_tramites_chart.FormattingEnabled = true;
+            this.cb_tramites_chart.Items.AddRange(new object[] {
+            "1 mes",
+            "1 mes ant.",
+            "1 año"});
+            this.cb_tramites_chart.Location = new System.Drawing.Point(268, 7);
+            this.cb_tramites_chart.Name = "cb_tramites_chart";
+            this.cb_tramites_chart.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(65)))), ((int)(((byte)(43)))));
+            this.cb_tramites_chart.OnHoverItemForeColor = System.Drawing.Color.Black;
+            this.cb_tramites_chart.Radius = 7;
+            this.cb_tramites_chart.Size = new System.Drawing.Size(108, 28);
+            this.cb_tramites_chart.StartIndex = 0;
+            this.cb_tramites_chart.TabIndex = 242;
+            this.cb_tramites_chart.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.cb_tramites_chart.ValueMember = "cod_tipo";
+            // 
             // btndots_tramitesdetails
             // 
             this.btndots_tramitesdetails.BackColor = System.Drawing.Color.White;
             this.btndots_tramitesdetails.Image = ((System.Drawing.Image)(resources.GetObject("btndots_tramitesdetails.Image")));
             this.btndots_tramitesdetails.ImageActive = null;
-            this.btndots_tramitesdetails.Location = new System.Drawing.Point(385, 10);
+            this.btndots_tramitesdetails.Location = new System.Drawing.Point(382, 9);
             this.btndots_tramitesdetails.Name = "btndots_tramitesdetails";
-            this.btndots_tramitesdetails.Size = new System.Drawing.Size(27, 21);
+            this.btndots_tramitesdetails.Size = new System.Drawing.Size(27, 23);
             this.btndots_tramitesdetails.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btndots_tramitesdetails.TabIndex = 213;
+            this.btndots_tramitesdetails.TabIndex = 214;
             this.btndots_tramitesdetails.TabStop = false;
-            this.btndots_tramitesdetails.Zoom = 10;
-            // 
-            // bunifuSeparator6
-            // 
-            this.bunifuSeparator6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(65)))), ((int)(((byte)(43)))));
-            this.bunifuSeparator6.LineThickness = 1;
-            this.bunifuSeparator6.Location = new System.Drawing.Point(280, 25);
-            this.bunifuSeparator6.Name = "bunifuSeparator6";
-            this.bunifuSeparator6.Size = new System.Drawing.Size(87, 11);
-            this.bunifuSeparator6.TabIndex = 211;
-            this.bunifuSeparator6.Transparency = 255;
-            this.bunifuSeparator6.Vertical = false;
-            // 
-            // cb_tramites_chart
-            // 
-            this.cb_tramites_chart.BackColor = System.Drawing.Color.Transparent;
-            this.cb_tramites_chart.BorderRadius = 5;
-            this.cb_tramites_chart.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cb_tramites_chart.DisabledColor = System.Drawing.Color.Gray;
-            this.cb_tramites_chart.ForeColor = System.Drawing.Color.DimGray;
-            this.cb_tramites_chart.Items = new string[] {
-        "1 mes",
-        "1 mes ant.",
-        "1 año"};
-            this.cb_tramites_chart.Location = new System.Drawing.Point(277, 8);
-            this.cb_tramites_chart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cb_tramites_chart.Name = "cb_tramites_chart";
-            this.cb_tramites_chart.NomalColor = System.Drawing.Color.Transparent;
-            this.cb_tramites_chart.onHoverColor = System.Drawing.Color.Transparent;
-            this.cb_tramites_chart.selectedIndex = 0;
-            this.cb_tramites_chart.Size = new System.Drawing.Size(105, 21);
-            this.cb_tramites_chart.TabIndex = 212;
-            this.cb_tramites_chart.onItemSelected += new System.EventHandler(this.cb_tramites_chart_onItemSelected);
+            this.btndots_tramitesdetails.Zoom = 9;
             // 
             // btn_chart_tramitesfinalizados
             // 
@@ -1582,45 +1524,45 @@
             // 
             this.chart_tramites.BackColor = System.Drawing.Color.Transparent;
             this.chart_tramites.BorderlineWidth = 0;
-            chartArea4.AxisX.InterlacedColor = System.Drawing.Color.Transparent;
-            chartArea4.AxisX.LabelStyle.Font = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Silver;
-            chartArea4.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            chartArea4.AxisX.MajorGrid.Enabled = false;
-            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.SystemColors.ButtonFace;
-            chartArea4.AxisX.MajorTickMark.Enabled = false;
-            chartArea4.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
-            chartArea4.AxisX.MinorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea4.AxisY.InterlacedColor = System.Drawing.Color.Transparent;
-            chartArea4.AxisY.LabelStyle.Font = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.RosyBrown;
-            chartArea4.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.SystemColors.ButtonFace;
-            chartArea4.AxisY.MajorTickMark.Enabled = false;
-            chartArea4.BackColor = System.Drawing.Color.Transparent;
-            chartArea4.BorderColor = System.Drawing.Color.Transparent;
-            chartArea4.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea4.Name = "ChartArea1";
-            chartArea4.ShadowColor = System.Drawing.Color.White;
-            this.chart_tramites.ChartAreas.Add(chartArea4);
-            legend4.Enabled = false;
-            legend4.Name = "Legend1";
-            this.chart_tramites.Legends.Add(legend4);
+            chartArea2.AxisX.InterlacedColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisX.LabelStyle.Font = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Silver;
+            chartArea2.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.SystemColors.ButtonFace;
+            chartArea2.AxisX.MajorTickMark.Enabled = false;
+            chartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisX.MinorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisY.InterlacedColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.RosyBrown;
+            chartArea2.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.SystemColors.ButtonFace;
+            chartArea2.AxisY.MajorTickMark.Enabled = false;
+            chartArea2.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.BorderColor = System.Drawing.Color.Transparent;
+            chartArea2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea2.Name = "ChartArea1";
+            chartArea2.ShadowColor = System.Drawing.Color.White;
+            this.chart_tramites.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.chart_tramites.Legends.Add(legend2);
             this.chart_tramites.Location = new System.Drawing.Point(-2, 55);
             this.chart_tramites.Name = "chart_tramites";
             this.chart_tramites.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series4.BorderWidth = 3;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(65)))), ((int)(((byte)(43)))));
-            series4.Legend = "Legend1";
-            series4.MarkerBorderColor = System.Drawing.Color.Black;
-            series4.MarkerImageTransparentColor = System.Drawing.Color.Black;
-            series4.MarkerSize = 10;
-            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series4.Name = "Series1";
-            series4.YValuesPerPoint = 4;
-            this.chart_tramites.Series.Add(series4);
+            series2.BorderWidth = 3;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(65)))), ((int)(((byte)(43)))));
+            series2.Legend = "Legend1";
+            series2.MarkerBorderColor = System.Drawing.Color.Black;
+            series2.MarkerImageTransparentColor = System.Drawing.Color.Black;
+            series2.MarkerSize = 10;
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series2.Name = "Series1";
+            series2.YValuesPerPoint = 4;
+            this.chart_tramites.Series.Add(series2);
             this.chart_tramites.Size = new System.Drawing.Size(411, 262);
             this.chart_tramites.TabIndex = 206;
             this.chart_tramites.Text = "chart";
@@ -1638,47 +1580,253 @@
             // EBtn_dotsrefresh
             // 
             this.EBtn_dotsrefresh.ElipseRadius = 10;
-            this.EBtn_dotsrefresh.TargetControl = this.btn_refreshdata;
+            this.EBtn_dotsrefresh.TargetControl = this;
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // EBtn_dotstramitesdetails
             // 
             this.EBtn_dotstramitesdetails.ElipseRadius = 11;
-            this.EBtn_dotstramitesdetails.TargetControl = this.btndots_tramitesdetails;
+            this.EBtn_dotstramitesdetails.TargetControl = this;
             // 
-            // Empleado
+            // panel_11
             // 
-            this.Empleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Empleado.DataPropertyName = "Empleado";
+            this.panel_11.BackColor = System.Drawing.Color.White;
+            this.panel_11.Controls.Add(this.pictureBox_logo);
+            this.panel_11.Controls.Add(this.lbl_date);
+            this.panel_11.Controls.Add(this.lbl_time);
+            this.panel_11.Location = new System.Drawing.Point(785, 12);
+            this.panel_11.Name = "panel_11";
+            this.panel_11.Size = new System.Drawing.Size(205, 86);
+            this.panel_11.TabIndex = 210;
+            // 
+            // panel_10
+            // 
+            this.panel_10.BackColor = System.Drawing.Color.White;
+            this.panel_10.Controls.Add(this.gunaComboBox1);
+            this.panel_10.Controls.Add(this.bunifuImageButton1);
+            this.panel_10.Controls.Add(this.label10);
+            this.panel_10.Location = new System.Drawing.Point(657, 115);
+            this.panel_10.Name = "panel_10";
+            this.panel_10.Size = new System.Drawing.Size(334, 196);
+            this.panel_10.TabIndex = 220;
+            // 
+            // gunaComboBox1
+            // 
+            this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaComboBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaComboBox1.BorderColor = System.Drawing.Color.White;
+            this.gunaComboBox1.BorderSize = 1;
+            this.gunaComboBox1.DisplayMember = "Nombre";
+            this.gunaComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.gunaComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gunaComboBox1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaComboBox1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaComboBox1.ForeColor = System.Drawing.Color.LightGray;
+            this.gunaComboBox1.FormattingEnabled = true;
+            this.gunaComboBox1.Items.AddRange(new object[] {
+            "1 mes",
+            "1 mes ant.",
+            "1 año"});
+            this.gunaComboBox1.Location = new System.Drawing.Point(205, 7);
+            this.gunaComboBox1.Name = "gunaComboBox1";
+            this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(213)))), ((int)(((byte)(144)))));
+            this.gunaComboBox1.OnHoverItemForeColor = System.Drawing.Color.Black;
+            this.gunaComboBox1.Radius = 7;
+            this.gunaComboBox1.Size = new System.Drawing.Size(90, 28);
+            this.gunaComboBox1.StartIndex = 0;
+            this.gunaComboBox1.TabIndex = 244;
+            this.gunaComboBox1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.gunaComboBox1.ValueMember = "cod_tipo";
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(301, 8);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(27, 23);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 215;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 9;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DarkGray;
+            this.label10.Location = new System.Drawing.Point(9, 12);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(93, 23);
+            this.label10.TabIndex = 191;
+            this.label10.Text = "Top tramites";
+            // 
+            // Elipse_Panel_10
+            // 
+            this.Elipse_Panel_10.ElipseRadius = 30;
+            this.Elipse_Panel_10.TargetControl = this.panel_10;
+            // 
+            // Elipse_Panel_11
+            // 
+            this.Elipse_Panel_11.ElipseRadius = 30;
+            this.Elipse_Panel_11.TargetControl = this.panel_11;
+            // 
+            // panel_12
+            // 
+            this.panel_12.BackColor = System.Drawing.Color.White;
+            this.panel_12.Controls.Add(this.label13);
+            this.panel_12.Controls.Add(this.label12);
+            this.panel_12.Controls.Add(this.label9);
+            this.panel_12.Location = new System.Drawing.Point(657, 12);
+            this.panel_12.Name = "panel_12";
+            this.panel_12.Size = new System.Drawing.Size(116, 86);
+            this.panel_12.TabIndex = 221;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.label13.Location = new System.Drawing.Point(10, 16);
+            this.label13.Name = "label13";
+            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label13.Size = new System.Drawing.Size(95, 19);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "MiRegistro";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(24, 53);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 21);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "10";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Poppins ExtraLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(4, 38);
+            this.label9.Name = "label9";
+            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label9.Size = new System.Drawing.Size(107, 19);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Operaciones hoy";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Elipse_Panel_12
+            // 
+            this.Elipse_Panel_12.ElipseRadius = 30;
+            this.Elipse_Panel_12.TargetControl = this.panel_12;
+            // 
+            // dg_toptramites
+            // 
+            this.dg_toptramites.AllowUserToAddRows = false;
+            this.dg_toptramites.AllowUserToDeleteRows = false;
+            this.dg_toptramites.AllowUserToResizeColumns = false;
+            this.dg_toptramites.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dg_toptramites.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dg_toptramites.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dg_toptramites.BackgroundColor = System.Drawing.Color.White;
+            this.dg_toptramites.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dg_toptramites.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dg_toptramites.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.Empleado.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Empleado.HeaderText = "Nombre";
-            this.Empleado.MinimumWidth = 6;
-            this.Empleado.Name = "Empleado";
-            this.Empleado.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.DataPropertyName = "Total";
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_toptramites.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dg_toptramites.ColumnHeadersHeight = 30;
+            this.dg_toptramites.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dg_toptramites.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.Total.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 6;
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Total.Width = 60;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_toptramites.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dg_toptramites.EnableHeadersVisualStyles = false;
+            this.dg_toptramites.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dg_toptramites.Location = new System.Drawing.Point(665, 155);
+            this.dg_toptramites.MultiSelect = false;
+            this.dg_toptramites.Name = "dg_toptramites";
+            this.dg_toptramites.ReadOnly = true;
+            this.dg_toptramites.RowHeadersVisible = false;
+            this.dg_toptramites.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dg_toptramites.RowTemplate.Height = 30;
+            this.dg_toptramites.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dg_toptramites.Size = new System.Drawing.Size(316, 150);
+            this.dg_toptramites.TabIndex = 265;
+            this.dg_toptramites.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.dg_toptramites.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dg_toptramites.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dg_toptramites.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dg_toptramites.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dg_toptramites.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dg_toptramites.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dg_toptramites.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dg_toptramites.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
+            this.dg_toptramites.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dg_toptramites.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dg_toptramites.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Gray;
+            this.dg_toptramites.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dg_toptramites.ThemeStyle.HeaderStyle.Height = 30;
+            this.dg_toptramites.ThemeStyle.ReadOnly = true;
+            this.dg_toptramites.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dg_toptramites.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dg_toptramites.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dg_toptramites.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dg_toptramites.ThemeStyle.RowsStyle.Height = 30;
+            this.dg_toptramites.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dg_toptramites.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn1.FillWeight = 312.8079F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn2.FillWeight = 27.7284F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Empleado";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.FillWeight = 125.1232F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Total";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // frm_escritorio
             // 
@@ -1686,16 +1834,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1004, 681);
+            this.Controls.Add(this.dg_toptramites);
+            this.Controls.Add(this.panel_12);
+            this.Controls.Add(this.panel_10);
+            this.Controls.Add(this.panel_11);
             this.Controls.Add(this.panel_09);
             this.Controls.Add(this.panel_08);
-            this.Controls.Add(this.panel_07);
             this.Controls.Add(this.panel_05);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.panel_03);
             this.Controls.Add(this.panel_02);
             this.Controls.Add(this.panel_01);
             this.Controls.Add(this.panel_04);
-            this.Controls.Add(this.panel_06);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_escritorio";
             this.ShowIcon = false;
@@ -1703,8 +1853,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "}";
             this.Load += new System.EventHandler(this.frm_escritorio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart_circle_diario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_topErrores)).EndInit();
             this.panel_04.ResumeLayout(false);
             this.panel_04.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btndots_tramitesempleados)).EndInit();
@@ -1715,44 +1863,43 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_erroresmensual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_porcentajediario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_porcentajemensual)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btndots_stock)).EndInit();
             this.panel_02.ResumeLayout(false);
             this.panel_02.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btndots_stock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_stock02)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_stock01)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             this.panel_03.ResumeLayout(false);
             this.panel_03.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btndots_tramites)).EndInit();
-            this.panel_06.ResumeLayout(false);
-            this.panel_06.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_refreshdata)).EndInit();
             this.panel_05.ResumeLayout(false);
             this.panel_05.PerformLayout();
-            this.panel_07.ResumeLayout(false);
-            this.panel_07.PerformLayout();
             this.panel_08.ResumeLayout(false);
             this.panel_08.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_toperror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.panel_09.ResumeLayout(false);
             this.panel_09.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btndots_tramitesdetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_tramites)).EndInit();
+            this.panel_11.ResumeLayout(false);
+            this.panel_10.ResumeLayout(false);
+            this.panel_10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.panel_12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dg_toptramites)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart_circle_diario;
         private System.Windows.Forms.Label lbl_tramites01;
         private System.Windows.Forms.Label lbl_tramites00;
         private System.Windows.Forms.Label lbl_porcentaje_inscriptos;
         private System.Windows.Forms.Label lbl_porcentaje_procesados;
-        private System.Windows.Forms.DataGridView dg_topErrores;
         private System.Windows.Forms.Label lbl_totalmensual;
         private System.Windows.Forms.PictureBox pictureBox_logo;
-        private System.Windows.Forms.Label lbl_tramitesempleados01;
         private System.Windows.Forms.Panel panel_04;
         private Bunifu.Framework.UI.BunifuElipse Elipse_Panel04;
         private System.Windows.Forms.Panel panel_01;
@@ -1779,11 +1926,8 @@
         private System.Windows.Forms.Label lbl_stockbajo;
         private System.Windows.Forms.Panel panel_02;
         private Bunifu.Framework.UI.BunifuElipse Elipse_Panel02;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private Bunifu.Framework.UI.BunifuDropdown cb_tramitesempleados;
         private System.Windows.Forms.Label lbl_tramitesempleados00;
         private Bunifu.Framework.UI.BunifuElipse EBtn_dotstramitesempleados;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator4;
         private System.Windows.Forms.Label lbl_totalerroresdiarios;
         private System.Windows.Forms.PictureBox pic_erroresdiarios;
@@ -1807,9 +1951,6 @@
         private Bunifu.Framework.UI.BunifuElipse Elipse_Panel03;
         private Bunifu.Framework.UI.BunifuElipse Elipse_Panel06;
         private System.Windows.Forms.Label lbl_stockbajo_percentage;
-        private Bunifu.Framework.UI.BunifuImageButton btn_refreshdata;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator5;
-        private Bunifu.Framework.UI.BunifuDropdown cb_tramites;
         private Bunifu.Framework.UI.BunifuElipse EBtn_dotstramites;
         private System.Windows.Forms.Label lbl_procesados;
         private System.Windows.Forms.Label lbl_inscriptos;
@@ -1817,15 +1958,11 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuElipse Elipse_Panel05;
         private Bunifu.Framework.UI.BunifuFlatButton btn_accionesrapidas_stock;
-        private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_accionesrapidas_consulta;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuFlatButton btn_accionesrapidas_insertart;
         private System.Windows.Forms.Label label6;
         private Bunifu.Framework.UI.BunifuFlatButton btn_accionesrapidas_inscribirt;
-        private System.Windows.Forms.Panel panel_07;
-        private System.Windows.Forms.Label label12;
         private Bunifu.Framework.UI.BunifuElipse Elipse_Panel_07;
         private System.Windows.Forms.Panel panel_09;
         private System.Windows.Forms.Label lbl_tramites_00;
@@ -1834,22 +1971,44 @@
         private Bunifu.Framework.UI.BunifuElipse Elipse_Panel_08;
         private Bunifu.Framework.UI.BunifuElipse Elipse_Panel_09;
         private Bunifu.Framework.UI.BunifuElipse EBtn_dotsrefresh;
-        private System.Windows.Forms.Panel panel_06;
         private System.Windows.Forms.Label lbl_date;
         private System.Windows.Forms.Label lbl_time;
         private System.Windows.Forms.Timer timer1;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_chart_tramitesprocesados;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_tramites;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator6;
-        private Bunifu.Framework.UI.BunifuDropdown cb_tramites_chart;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_chart_tramitesfinalizados;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_chart_tramitesinscriptos;
-        private Bunifu.Framework.UI.BunifuImageButton btndots_stock;
-        private Bunifu.Framework.UI.BunifuImageButton btndots_tramitesempleados;
-        private Bunifu.Framework.UI.BunifuImageButton btndots_tramites;
-        private Bunifu.Framework.UI.BunifuImageButton btndots_tramitesdetails;
         private Bunifu.Framework.UI.BunifuElipse EBtn_dotstramitesdetails;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Empleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.Panel panel_10;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel_11;
+        private Bunifu.Framework.UI.BunifuElipse Elipse_Panel_10;
+        private Bunifu.Framework.UI.BunifuElipse Elipse_Panel_11;
+        private Bunifu.Framework.UI.BunifuImageButton btndots_stock;
+        private Bunifu.Framework.UI.BunifuImageButton btndots_tramitesdetails;
+        private Bunifu.Framework.UI.BunifuImageButton btndots_tramitesempleados;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuImageButton btndots_tramites;
+        private Guna.UI.WinForms.GunaComboBox cb_tramites_chart;
+        private Guna.UI.WinForms.GunaComboBox cb_tramitesempleados;
+        private Guna.UI.WinForms.GunaComboBox cb_tramites;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
+        private Guna.UI.WinForms.GunaDataGridView dg_toperror;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel_12;
+        private Bunifu.Framework.UI.BunifuElipse Elipse_Panel_12;
+        private Guna.UI.WinForms.GunaDataGridView dg_toptramites;
+        private Guna.UI.WinForms.GunaComboBox gunaComboBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Top;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumeracion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnStockDetail;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label9;
     }
 }

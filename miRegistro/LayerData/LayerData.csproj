@@ -46,11 +46,11 @@
     <Compile Include="Data\DataTramites.cs" />
     <Compile Include="MailServices\MasterMailServer.cs" />
     <Compile Include="MailServices\SystemSupportMail.cs" />
-    <Compile Include="SqlServer\Cd_Alertas.cs" />
-    <Compile Include="SqlServer\Cd_Formularios.cs" />
-    <Compile Include="SqlServer\Cd_Tramites.cs" />
-    <Compile Include="SqlServer\Cd_Usuarios.cs" />
-    <Compile Include="SqlServer\Db_Connection.cs" />
+    <Compile Include="SqlQuery\Cd_Alertas.cs" />
+    <Compile Include="SqlQuery\Cd_Formularios.cs" />
+    <Compile Include="SqlQuery\Cd_Tramites.cs" />
+    <Compile Include="SqlQuery\Cd_Usuarios.cs" />
+    <Compile Include="SqlConnect\Db_Connection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

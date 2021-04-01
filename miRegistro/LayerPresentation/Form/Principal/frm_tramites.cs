@@ -30,6 +30,7 @@ namespace LayerPresentation
         private Panel _currentPanelQuery;
 
         private int selectedId = 0;
+        private BunifuCards currentPanelOpenInFront;
         
         // Methods
         public void RefreshAll() 
@@ -312,31 +313,32 @@ namespace LayerPresentation
 
         private void button_acciones_Click(object sender, EventArgs e)
         {
-            if (pn_acciones.Visible)
-            {
-                pn_acciones.Visible = false;
-            }
-            else
-            {
-                ShowMoreOptions(pn_acciones);
-            }
+            ShowMoreOptions(pn_acciones);
         }
         private void ShowMoreOptions(BunifuCards panel)
         {
-            panel.Visible = false;
-            TransitionPnMore.Show(panel);
+            if (panel == currentPanelOpenInFront || panel.Visible == true)
+            {
+                currentPanelOpenInFront = null;
+                panel.Visible = false;
+            }
+            else
+            {
+                // Open panel
+                if (currentPanelOpenInFront != null)
+                {
+                    currentPanelOpenInFront.Visible = false;
+                }
+                currentPanelOpenInFront = panel;
+
+                panel.Visible = false;
+                TransitionPnMore.Show(panel);
+            }
         }
 
         private void button_consultar_Click(object sender, EventArgs e)
         {
-            if (pn_consulta.Visible)
-            {
-                pn_consulta.Visible = false;
-            }
-            else
-            {
-                ShowMoreOptions(pn_consulta);
-            }
+            ShowMoreOptions(pn_consulta);
         }
 
         private void button_cancelarconsulta_Click(object sender, EventArgs e)
@@ -375,11 +377,27 @@ namespace LayerPresentation
         }
         private void btn_editar_Click_1(object sender, EventArgs e)
         {
+            Point p = dg_tramites.PointToScreen(dg_tramites.GetCellDisplayRectangle(dg_tramites.CurrentCell.ColumnIndex, dg_tramites.CurrentCell.RowIndex, false).Location);
+            pn_editar.Location = new Point(pn_editar.Location.X, p.Y - 95);
 
+            ShowMoreOptions(pn_editar);
         }
         private void btn_eliminar_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuSeparator2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_closeeditar_Click(object sender, EventArgs e)
+        {
+            if (pn_editar.Visible) 
+            {
+                pn_editar.Visible = false;
+            }
         }
     }
 }
