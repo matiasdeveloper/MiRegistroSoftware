@@ -121,6 +121,9 @@
   <data name="eye_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eye_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="subtract_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\subtract_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="r_right_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\r_right_arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,7 +142,10 @@
   <data name="r_negative" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\r_negative.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="subtract_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\subtract_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="subtract_30px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\subtract_30px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="multiply_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\multiply_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

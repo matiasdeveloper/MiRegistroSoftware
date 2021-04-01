@@ -55,9 +55,10 @@ namespace LayerPresentation
             LoadPanel_2();
             LoadPanel_3();
             LoadPanel_4();
+            LoadPanel_8();
             LoadPanel_9();
+            LoadPanel_10();
         }
-
         void LoadPanel_1()
         {
             // Load data from tramites
@@ -161,6 +162,13 @@ namespace LayerPresentation
             Statistics.LoadChartEmployee(chart_tramitesempleados, series, first, last);
         }
 
+        void LoadPanel_8()
+        {
+            dg_toperror.Rows.Add("1", "Matias", 120);
+            dg_toperror.Rows.Add("2", "Noeli", 50);
+            dg_toperror.Rows.Add("3", "Paola", 10);
+            dg_toperror.Rows.Add("4", "Valeria", 1);
+        }
         void LoadPanel_9()
         {
             LoadDataPanel_09("Mes", "Procesados", Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
@@ -177,7 +185,15 @@ namespace LayerPresentation
                     break;
             }
         }
-        
+        void LoadPanel_10()
+        {
+            dg_toptramites.Rows.Add("1", "Matias", 120);
+            dg_toptramites.Rows.Add("2", "Noeli", 50);
+            dg_toptramites.Rows.Add("3", "Paola", 10);
+            dg_toptramites.Rows.Add("4", "Valeria", 1);
+        }
+
+
         private void ChargeDataTramites()
         {
             //Label[] Hoy = { lbl_total_procesados, lbl_total_inscriptos };
@@ -189,14 +205,13 @@ namespace LayerPresentation
             //Statistics.DashboardStatisticMes(Mes);
             //DisplayChartMensual();
 
-            Statistics.DisplayTopErrores(dg_topErrores, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
+            Statistics.DisplayTopErrores(dg_toperror, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
         } 
         void DisplayChartDiario() 
         {
             //lbl_totaldiario.Text = lbl_total_procesados.Text;
             lbl_porcentaje_procesados.Text = "100%";
             //lbl_porcentaje_inscriptos.Text = Utilities.CalculatePercentage(Convert.ToInt32(lbl_totaldiario.Text), Convert.ToInt32(lbl_total_inscriptos.Text)).ToString() + "%";
-            chart_circle_diario.Series["Series1"].IsValueShownAsLabel = true;
             //chart_circle_diario.Series["Series1"].Points.AddXY("Procesados", lbl_total_procesados.Text);
             //chart_circle_diario.Series["Series1"].Points.AddXY("Inscriptos", lbl_total_inscriptos.Text);
         }
@@ -319,7 +334,7 @@ namespace LayerPresentation
         private void cb_tramitesempleados_onItemSelected(object sender, EventArgs e)
         {
             // Panel 04
-            switch (cb_tramitesempleados.selectedValue.ToString())
+            switch (cb_tramitesempleados.SelectedValue.ToString())
             {
                 case "1 año":
                     int year = DateTime.Now.Year;
@@ -351,7 +366,7 @@ namespace LayerPresentation
             Label[] text_progress = { lbl_porcentaje_procesados, lbl_porcentaje_inscriptos };
 
             // Panel 03
-            switch (cb_tramites.selectedValue.ToString())
+            switch (cb_tramites.SelectedValue.ToString())
             {
                 case "1 año":
                     int year = DateTime.Now.Year;
@@ -379,7 +394,7 @@ namespace LayerPresentation
         private void cb_tramites_chart_onItemSelected(object sender, EventArgs e)
         {
             // Panel 09 Load Data Chart
-            switch (cb_tramites.selectedValue.ToString())
+            switch (cb_tramites.SelectedValue.ToString())
             {
                 case "1 año":
                     int year = DateTime.Now.Year;

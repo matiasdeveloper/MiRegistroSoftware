@@ -72,10 +72,6 @@ namespace LayerPresentation
             string empleadoinscripto = comboBox_empleadoinscripto.SelectedValue.ToString();
             int cod_empleadoinscripto = Convert.ToInt32(empleadoinscripto);
             int cod_inscripto = 0;
-            if (checkBox_inscripto.Checked) 
-            {
-                cod_inscripto = 1;
-            }
 
             datosDetalleTramite = new Tuple<int, int, int, int>(1, cod_empleado, cod_inscripto, cod_empleadoinscripto);
 
@@ -118,8 +114,6 @@ namespace LayerPresentation
             textBox_dominio.Text = "Ej: AA000XX";
             textBox_dominio.ForeColor = Color.Silver;
 
-            checkBox_procesados.Checked = true;
-            checkBox_inscripto.Checked = false;
             pn_inscribir.Visible = false;
 
             checkBox_errores.Checked = false;
@@ -197,7 +191,7 @@ namespace LayerPresentation
                 s = false;
                 return s;
             }
-            if(checkBox_inscripto.Checked && comboBox_empleadoinscripto.SelectedIndex < 0) 
+            if(comboBox_empleadoinscripto.SelectedIndex < 0) 
             {
                 s = false;
                 return s;
@@ -287,30 +281,10 @@ namespace LayerPresentation
         {
             this.Close();
         }
-        private void btn_saveinfo_Click(object sender, EventArgs e)
-        {
-            checkBox_procesados.Checked = !checkBox_procesados.Checked;
-        }
-        private void btn_checkboxinscripto_Click(object sender, EventArgs e)
-        {
-            checkBox_inscripto.Checked = !checkBox_inscripto.Checked;
-            pn_inscribir.Visible = checkBox_inscripto.Checked;
-        }
-        private void checkBox_inscripto_OnChange(object sender, EventArgs e)
-        {
-            pn_inscribir.Visible = checkBox_inscripto.Checked;
-        }
-
         private void checkBox_errores_OnChange(object sender, EventArgs e)
         {
             pn_categoriaerror.Visible = checkBox_errores.Checked;
         }
-        
-        private void checkBox_procesados_Click(object sender, EventArgs e)
-        {
-            checkBox_procesados.Checked = checkBox_procesados.Checked;
-        }
-
         private void textBox_dominio_Enter_1(object sender, EventArgs e)
         {
             if (textBox_dominio.Text == "Ej: AA000XX")
@@ -336,6 +310,25 @@ namespace LayerPresentation
         private void textBox_dominio_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
+
+        private void cb_etapa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cb_etapa.SelectedIndex) 
+            {
+                case 0:
+                    pn_inscribir.Visible = false;
+                    pn_observar.Visible = false;
+                    break;
+                case 1:
+                    pn_inscribir.Visible = true;
+                    pn_observar.Visible = false;
+                    break;
+                case 2:
+                    pn_observar.Visible = true;
+                    pn_inscribir.Visible = false;
+                    break;
+            }
         }
     }
 }

@@ -29,23 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation9 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_principal));
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            BunifuAnimatorNS.Animation animation10 = new BunifuAnimatorNS.Animation();
             this.ElipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.TransitionSidebar = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.txtBox_fecha = new System.Windows.Forms.Label();
             this.pn_contenedor = new System.Windows.Forms.Panel();
             this.pn_tittle = new System.Windows.Forms.Panel();
             this.btn_account = new Bunifu.Framework.UI.BunifuImageButton();
             this.pn_notify = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_notify = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.btn_moreaccount = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbl_nombre = new System.Windows.Forms.Label();
-            this.lbl_permisos = new System.Windows.Forms.Label();
+            this.lbl_email = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -82,6 +80,7 @@
             this.ElipseInfoUser = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.TransitionPnMore = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.label8 = new System.Windows.Forms.Label();
             this.pn_tittle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_account)).BeginInit();
             this.pn_notify.SuspendLayout();
@@ -94,11 +93,6 @@
             this.pn_notification.SuspendLayout();
             this.SuspendLayout();
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // ElipseForm
             // 
             this.ElipseForm.ElipseRadius = 10;
@@ -108,36 +102,22 @@
             // 
             this.TransitionSidebar.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.TransitionSidebar.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.TransitionSidebar.DefaultAnimation = animation1;
-            // 
-            // txtBox_fecha
-            // 
-            this.txtBox_fecha.BackColor = System.Drawing.Color.Transparent;
-            this.TransitionSidebar.SetDecoration(this.txtBox_fecha, BunifuAnimatorNS.DecorationType.None);
-            this.TransitionPnMore.SetDecoration(this.txtBox_fecha, BunifuAnimatorNS.DecorationType.None);
-            this.txtBox_fecha.Font = new System.Drawing.Font("Poppins Thin", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_fecha.ForeColor = System.Drawing.Color.DimGray;
-            this.txtBox_fecha.Location = new System.Drawing.Point(601, 22);
-            this.txtBox_fecha.Name = "txtBox_fecha";
-            this.txtBox_fecha.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtBox_fecha.Size = new System.Drawing.Size(97, 14);
-            this.txtBox_fecha.TabIndex = 21;
-            this.txtBox_fecha.Text = "dd/mm/aaaa hh:mm:ss";
+            animation9.AnimateOnlyDifferences = true;
+            animation9.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.BlindCoeff")));
+            animation9.LeafCoeff = 0F;
+            animation9.MaxTime = 1F;
+            animation9.MinTime = 0F;
+            animation9.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicCoeff")));
+            animation9.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicShift")));
+            animation9.MosaicSize = 0;
+            animation9.Padding = new System.Windows.Forms.Padding(0);
+            animation9.RotateCoeff = 0F;
+            animation9.RotateLimit = 0F;
+            animation9.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.ScaleCoeff")));
+            animation9.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.SlideCoeff")));
+            animation9.TimeCoeff = 0F;
+            animation9.TransparencyCoeff = 0F;
+            this.TransitionSidebar.DefaultAnimation = animation9;
             // 
             // pn_contenedor
             // 
@@ -155,12 +135,10 @@
             // 
             this.pn_tittle.BackColor = System.Drawing.Color.White;
             this.pn_tittle.Controls.Add(this.btn_account);
-            this.pn_tittle.Controls.Add(this.txtBox_fecha);
             this.pn_tittle.Controls.Add(this.pn_notify);
-            this.pn_tittle.Controls.Add(this.label2);
             this.pn_tittle.Controls.Add(this.btn_moreaccount);
             this.pn_tittle.Controls.Add(this.lbl_nombre);
-            this.pn_tittle.Controls.Add(this.lbl_permisos);
+            this.pn_tittle.Controls.Add(this.lbl_email);
             this.TransitionPnMore.SetDecoration(this.pn_tittle, BunifuAnimatorNS.DecorationType.None);
             this.TransitionSidebar.SetDecoration(this.pn_tittle, BunifuAnimatorNS.DecorationType.None);
             this.pn_tittle.Dock = System.Windows.Forms.DockStyle.Top;
@@ -226,20 +204,6 @@
             this.btn_notify.Zoom = 9;
             this.btn_notify.Click += new System.EventHandler(this.btn_notify_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.TransitionSidebar.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.TransitionPnMore.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.label2.Font = new System.Drawing.Font("Poppins Thin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(628, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 19);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Version 2.0.1";
-            // 
             // btn_moreaccount
             // 
             this.btn_moreaccount.BackColor = System.Drawing.Color.White;
@@ -247,7 +211,7 @@
             this.TransitionSidebar.SetDecoration(this.btn_moreaccount, BunifuAnimatorNS.DecorationType.None);
             this.btn_moreaccount.Image = ((System.Drawing.Image)(resources.GetObject("btn_moreaccount.Image")));
             this.btn_moreaccount.ImageActive = null;
-            this.btn_moreaccount.Location = new System.Drawing.Point(965, 8);
+            this.btn_moreaccount.Location = new System.Drawing.Point(962, 8);
             this.btn_moreaccount.Name = "btn_moreaccount";
             this.btn_moreaccount.Size = new System.Drawing.Size(25, 20);
             this.btn_moreaccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -267,24 +231,38 @@
             this.lbl_nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_nombre.Name = "lbl_nombre";
             this.lbl_nombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_nombre.Size = new System.Drawing.Size(167, 19);
+            this.lbl_nombre.Size = new System.Drawing.Size(164, 19);
             this.lbl_nombre.TabIndex = 0;
             this.lbl_nombre.Text = "Nombre y Apellido";
             // 
-            // lbl_permisos
+            // lbl_email
             // 
-            this.lbl_permisos.BackColor = System.Drawing.Color.Transparent;
-            this.TransitionSidebar.SetDecoration(this.lbl_permisos, BunifuAnimatorNS.DecorationType.None);
-            this.TransitionPnMore.SetDecoration(this.lbl_permisos, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_permisos.Font = new System.Drawing.Font("Poppins", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_permisos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_permisos.Location = new System.Drawing.Point(794, 21);
-            this.lbl_permisos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_permisos.Name = "lbl_permisos";
-            this.lbl_permisos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_permisos.Size = new System.Drawing.Size(142, 16);
-            this.lbl_permisos.TabIndex = 1;
-            this.lbl_permisos.Text = "Administrador";
+            this.lbl_email.BackColor = System.Drawing.Color.Transparent;
+            this.TransitionSidebar.SetDecoration(this.lbl_email, BunifuAnimatorNS.DecorationType.None);
+            this.TransitionPnMore.SetDecoration(this.lbl_email, BunifuAnimatorNS.DecorationType.None);
+            this.lbl_email.Font = new System.Drawing.Font("Poppins", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_email.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lbl_email.Location = new System.Drawing.Point(794, 21);
+            this.lbl_email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_email.Size = new System.Drawing.Size(142, 16);
+            this.lbl_email.TabIndex = 1;
+            this.lbl_email.Text = "Administrador";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.TransitionSidebar.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.TransitionPnMore.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.label2.Font = new System.Drawing.Font("Poppins Thin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(56, 673);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 19);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Version 2.0.1";
             // 
             // label4
             // 
@@ -361,7 +339,7 @@
             this.TransitionPnMore.SetDecoration(this.lbl_lastacess, BunifuAnimatorNS.DecorationType.None);
             this.lbl_lastacess.Font = new System.Drawing.Font("Poppins Light", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_lastacess.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_lastacess.Location = new System.Drawing.Point(100, 694);
+            this.lbl_lastacess.Location = new System.Drawing.Point(101, 693);
             this.lbl_lastacess.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_lastacess.Name = "lbl_lastacess";
             this.lbl_lastacess.Size = new System.Drawing.Size(54, 16);
@@ -376,7 +354,7 @@
             this.TransitionPnMore.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
             this.label3.Font = new System.Drawing.Font("Poppins Light", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(29, 694);
+            this.label3.Location = new System.Drawing.Point(30, 693);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 16);
@@ -404,6 +382,7 @@
             this.pn_sidebar.Controls.Add(this.label5);
             this.pn_sidebar.Controls.Add(this.bunifuSeparator1);
             this.pn_sidebar.Controls.Add(this.label4);
+            this.pn_sidebar.Controls.Add(this.label2);
             this.pn_sidebar.Controls.Add(this.selectedbutton);
             this.pn_sidebar.Controls.Add(this.label1);
             this.pn_sidebar.Controls.Add(this.btn_dashboard);
@@ -922,6 +901,7 @@
             this.pn_notification.BorderRadius = 20;
             this.pn_notification.BottomSahddow = true;
             this.pn_notification.color = System.Drawing.Color.White;
+            this.pn_notification.Controls.Add(this.label8);
             this.pn_notification.Controls.Add(this.label7);
             this.pn_notification.Controls.Add(this.bunifuSeparator6);
             this.pn_notification.Controls.Add(this.bunifuSeparator5);
@@ -1028,22 +1008,38 @@
             // 
             this.TransitionPnMore.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.TransitionPnMore.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.TransitionPnMore.DefaultAnimation = animation2;
+            animation10.AnimateOnlyDifferences = true;
+            animation10.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.BlindCoeff")));
+            animation10.LeafCoeff = 0F;
+            animation10.MaxTime = 1F;
+            animation10.MinTime = 0F;
+            animation10.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicCoeff")));
+            animation10.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicShift")));
+            animation10.MosaicSize = 0;
+            animation10.Padding = new System.Windows.Forms.Padding(0);
+            animation10.RotateCoeff = 0F;
+            animation10.RotateLimit = 0F;
+            animation10.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.ScaleCoeff")));
+            animation10.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.SlideCoeff")));
+            animation10.TimeCoeff = 0F;
+            animation10.TransparencyCoeff = 0F;
+            this.TransitionPnMore.DefaultAnimation = animation10;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.TransitionSidebar.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
+            this.TransitionPnMore.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
+            this.label8.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.label8.Location = new System.Drawing.Point(27, 58);
+            this.label8.Name = "label8";
+            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label8.Size = new System.Drawing.Size(129, 56);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Sin \r\nNotificaciones";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frm_principal
             // 
@@ -1061,7 +1057,6 @@
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Frm_principal_Load);
             this.pn_tittle.ResumeLayout(false);
-            this.pn_tittle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_account)).EndInit();
             this.pn_notify.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1080,7 +1075,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer timer1;
         private Bunifu.Framework.UI.BunifuElipse ElipseForm;
         private BunifuAnimatorNS.BunifuTransition TransitionSidebar;
         private Bunifu.Framework.UI.BunifuElipse ElipseBrand;
@@ -1098,13 +1092,12 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_config;
         private Bunifu.Framework.UI.BunifuFlatButton btn_statistics;
         private System.Windows.Forms.Panel pn_contenedor;
-        private System.Windows.Forms.Label txtBox_fecha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pn_tittle;
         private Bunifu.Framework.UI.BunifuImageButton btn_notify;
         private Bunifu.Framework.UI.BunifuImageButton btn_moreaccount;
         private System.Windows.Forms.Label lbl_nombre;
-        private System.Windows.Forms.Label lbl_permisos;
+        private System.Windows.Forms.Label lbl_email;
         private System.Windows.Forms.Panel pn_notify;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
@@ -1130,5 +1123,6 @@
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator4;
         private Bunifu.Framework.UI.BunifuFlatButton btn_close;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator9;
+        private System.Windows.Forms.Label label8;
     }
 }

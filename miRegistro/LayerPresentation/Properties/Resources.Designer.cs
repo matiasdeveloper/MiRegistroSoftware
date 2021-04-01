@@ -93,6 +93,16 @@ namespace LayerPresentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap multiply_60px {
+            get {
+                object obj = ResourceManager.GetObject("multiply_60px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap r_negative {
             get {
                 object obj = ResourceManager.GetObject("r_negative", resourceCulture);
@@ -136,6 +146,16 @@ namespace LayerPresentation.Properties {
         internal static System.Drawing.Bitmap subtract_30px {
             get {
                 object obj = ResourceManager.GetObject("subtract_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap subtract_30px1 {
+            get {
+                object obj = ResourceManager.GetObject("subtract_30px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
