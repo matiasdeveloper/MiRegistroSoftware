@@ -226,28 +226,26 @@ namespace LayerPresentation
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            Cn_Usuarios _cnUsuarios = new Cn_Usuarios();
-
-            if (_cnUsuarios.verificarAuntetificacion(txtBox_user.Text, txtBox_pass.Text) > 0)
+            CNegocioUsuario cnObject = new CNegocioUsuario();
+            if (cnObject.VerificarAutentificacion(txtBox_user.Text, txtBox_pass.Text))
             {
-                // Charge data from user
                 RememberUser();
-                _cnUsuarios.IntializeLoginUserData(txtBox_user.Text);
+                //_cnUsuarios.IntializeLoginUserData(txtBox_user.Text);
 
                 // Update last access
-                _cnUsuarios.UpdateLastAccess(UserLoginCache.IdUser, DateTime.Now);
+                //_cnUsuarios.UpdateLastAccess(UserLoginCache.IdUser, DateTime.Now);
                 UserLoginCache.Fecha_UltimoAcceso = DateTime.Now;
 
                 // Charge Bienvenida
-                frm_principal _objUI = new frm_principal();
-                _objUI.FormClosed += Logout;
+                frm_principal frmPrincipal = new frm_principal();
+                frmPrincipal.FormClosed += Logout;
 
-                frm_bienvenida objUI = new frm_bienvenida(_objUI, this);
-                objUI.Show();
+                frm_bienvenida frmBienvenida = new frm_bienvenida(frmPrincipal, this);
+                frmBienvenida.Show();
 
                 this.Opacity = 0;
                 this.ShowIcon = false;
-                this.ShowInTaskbar = false;
+                //this.ShowInTaskbar = false;
 
                 this.Hide();
             }

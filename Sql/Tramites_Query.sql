@@ -78,7 +78,7 @@ VALUES
 SELECT T.IdTramite AS ID, T.Dominio AS Dominio, Ct.Nombre AS Categoria, T.Fecha AS Fecha, T.Observaciones AS Observaciones,
 		Et.Nombre AS 'Proceso', P.Nick AS 'Quien Proceso', 
 		(SELECT Et1.Nombre FROM tramite T1 JOIN tramite_proceso Tp1 ON Tp1.IdTramite = T1.IdTramite
-			JOIN etapatramite Et1 ON Et1.IdEtapaTramite = Tp1.IdEtapaTramite WHERE T1.IdTramite = T.IdTramite AND Et1.IdEtapaTramite = '2') AS Inscripcion,
+			JOIN etapatramite Et1 ON Et1.IdEtapaTramite = Tp1.IdEtapaTramite WHERE T1.IdTramite = T.IdTramite AND Et1.IdEtapaTramite = '1') AS Inscripcion,
         (SELECT P2.Nick FROM tramite_proceso Tp2 
 		JOIN empleado E2 ON E2.IdEmpleado = Tp2.FkIdEmpleado
 		JOIN usuario U2 ON U2.IdUsuario = E2.FkIdUsuario

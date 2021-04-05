@@ -80,11 +80,11 @@ SELECT * FROM categoriaformulario;
 
 /* Consulta Categorias*/
 # Consulta Por Categoria
-(SELECT Tf.IdTipoFormulario AS 'ID', Clf.NombreClase AS 'NAME', Cf.NombreCategoria AS 'CATEGORY' 
+(SELECT Tf.IdTipoFormulario AS 'IdRelacion', Clf.IdClase, Clf.NombreClase AS 'Clase', Cf.NombreCategoria AS 'Categoria' 
 FROM tipoformulario Tf
 JOIN claseformulario Clf ON Clf.IdClase = Tf.FkIdClase
 JOIN categoriaformulario Cf ON Cf.IdCategoria = Tf.FKIdCategoria
-HAVING Clf.NombreClase = 'Moto');
+HAVING Clf.IdClase = '1');
 # Consulta Count
 (SELECT Tf.IdTipoFormulario AS 'ID', Clf.NombreClase AS 'NAME', Count(Cf.NombreCategoria) AS 'CATEGORY' 
 FROM tipoformulario Tf
@@ -110,23 +110,26 @@ VALUES (@last_id_numeracion, 1, 100),
 (@last_id_numeracion, 2, 50),
 (@last_id_numeracion, 3, 10);
 
-/*Consulta Formularios ID, EMPRESA, CLASE, CATEGORIA, NUMEREACION*/
-SELECT F.IdFormulario AS ID, E.Nombre AS Empresa, Clf.NombreClase AS Clase, Cf.NombreCategoria AS Categoria, N.Numearcion AS Numeracion, Sum(N.Stock) AS Stock, F.ultimaactualizacion
+/*Consulta Formularios ID, EMPRESA, CLASE, CATEGORIA*/
+/* Consulta Formularios por Clase */
+SELECT F.IdFormulario AS ID, E.Nombre AS Empresa, Clf.NombreClase AS Clase, Cf.NombreCategoria AS Categoria, N.numeracion AS Numeracion, Sum(N.Stock) AS Stock, F.ultimaactualizacion
 FROM Formulario F
 INNER JOIN TipoFormulario Tf ON Tf.IdTipoFormulario = F.FkIdTipo
 INNER JOIN Empresa E On E.IdEmpresa = F.FkIdEmpresa
 JOIN claseformulario Clf ON Clf.IdClase = Tf.FkIdClase
 JOIN categoriaformulario Cf ON Cf.IdCategoria = Tf.FKIdCategoria
 JOIN numeracionformulario N ON N.FkIdFormulario = F.IdFormulario
-GROUP BY N.IdNumearcion;
+WHERE Tf.FkIdClase = 1
+GROUP BY F.IdFormulario;
 
-SELECT N.numeracion, Clf.NombreClase AS Clase, Cf.NombreCategoria, Sum(N.Stock)
+/* Consulta por Numeracion*/
+SELECT N.numeracion AS Numeracion, Clf.NombreClase AS Clase, Cf.NombreCategoria AS Categoria, Sum(N.Stock) AS Stock
 FROM numeracionformulario N
 JOIN Formulario F ON F.IdFormulario = N.FkIdFormulario
 INNER JOIN TipoFormulario Tf ON Tf.IdTipoFormulario = F.FkIdTipo
 JOIN claseformulario Clf ON Clf.IdClase = Tf.FkIdClase
 JOIN categoriaformulario Cf ON Cf.IdCategoria = Tf.FKIdCategoria
-GROUP BY N.FkIdFormulario;
+GROUP BY N.IdNumeracion;
 
 /* Parametros formularios */
 INSERT INTO parametro (NombreParametro)
@@ -137,13 +140,18 @@ VALUES ('Stock alto'),
 /*Consulta parametros formulario*/
 SELECT * FROM parametro;
 
-SELECT F.IdFormulario AS ID, Clf.NombreClase AS Clase, Cf.NombreCategoria AS Categoria, P.NombreParametro, Fp.ValorParametro
+SELECT P.NombreParametro, Fp.ValorParametro
 FROM Formulario F
 JOIN formulario_parametro Fp ON Fp.IdFormulario = F.IdFormulario
 JOIN parametro P ON Fp.IdParametro = P.IdParametro
 INNER JOIN TipoFormulario Tf ON Tf.IdTipoFormulario = F.FkIdTipo
 JOIN claseformulario Clf ON Clf.IdClase = Tf.FkIdClase
 JOIN categoriaformulario Cf ON Cf.IdCategoria = Tf.FKIdCategoria
-ORDER BY Cf.NombreCategoria;
+WHERE F.IdFormulario = 1;
+
+/* Update parametro */
+UPDATE formulario_parametro
+SET ValorParametro = 120
+WHERE IdFormulario = 1 AND IdParametro = 1;
 
 

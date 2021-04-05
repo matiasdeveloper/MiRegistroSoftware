@@ -246,7 +246,7 @@ namespace LayerPresentation
         {
             DataTable dt = Cn_HandlerFormularios.data.GetCache().GetCurrentFormulario(Cn_HandlerFormularios.current).data;
 
-            if (Utilites_Pdf.ExportDataTableInPdf(dt, "InformeFORMULARIOS"))
+            if (UtilitiesPdf.ExportDataTableInPdf(dt, "InformeFORMULARIOS"))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -254,7 +254,7 @@ namespace LayerPresentation
         }
         private void btn_savepdf_tramites_Click(object sender, EventArgs e)
         {
-            if (Utilites_Pdf.ExportDataTableInPdf(currentDt, "TramitesRNA"))
+            if (UtilitiesPdf.ExportDataTableInPdf(currentDt, "TramitesRNA"))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -293,7 +293,7 @@ namespace LayerPresentation
         {
             DataTable dt = Cn_HandlerFormularios.data.GetCache().GetCurrentFormulario(Cn_HandlerFormularios.current).data;
 
-            if (Utilites_Pdf.ExportDataTableInPdf(dt, "InformeFORMULARIOS"))
+            if (UtilitiesPdf.ExportDataTableInPdf(dt, "InformeFORMULARIOS"))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();

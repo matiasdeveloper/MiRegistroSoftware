@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace LayerPresentation.Clases
 {
-    public static class Utilites_Pdf
+    public static class UtilitiesPdf
     {
         public static bool ExportDataTableInPdf(DataTable dt, string name)
         {
