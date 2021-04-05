@@ -48,7 +48,6 @@
     <Compile Include="CNegocioTramite.cs" />
     <Compile Include="CNegocioUsuario.cs" />
     <Compile Include="Older\Cn_alertas.cs" />
-    <Compile Include="Older\Cn_avatars.cs" />
     <Compile Include="Older\Cn_Empleados.cs" />
     <Compile Include="Older\Cn_Employee.cs" />
     <Compile Include="Older\Cn_Formularios.cs" />
