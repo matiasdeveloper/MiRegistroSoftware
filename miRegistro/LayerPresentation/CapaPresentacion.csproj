@@ -327,18 +327,6 @@
     <Compile Include="Form\Login\frm_bienvenida.Designer.cs">
       <DependentUpon>frm_bienvenida.cs</DependentUpon>
     </Compile>
-    <Compile Include="Chat\Chat.cs" />
-    <Compile Include="Chat\Client.cs" />
-    <Compile Include="Chat\Message.cs" />
-    <Compile Include="Chat\Serialization.cs" />
-    <Compile Include="Chat\User.cs" />
-    <Compile Include="Chat\BitMap.cs" />
-    <Compile Include="Form\Principal\frm_chat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Principal\frm_chat.Designer.cs">
-      <DependentUpon>frm_chat.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\Principal\frm_configuracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -452,9 +440,6 @@
     <Compile Include="System\Web\HttpContext.cs" />
     <EmbeddedResource Include="Form\Login\frm_bienvenida.resx">
       <DependentUpon>frm_bienvenida.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Principal\frm_chat.resx">
-      <DependentUpon>frm_chat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Principal\frm_configuracion.resx">
       <DependentUpon>frm_configuracion.cs</DependentUpon>
