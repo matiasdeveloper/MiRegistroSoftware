@@ -353,7 +353,7 @@ namespace LayerPresentation
         // Save Pdf and Informe
         private void btn_savePdf_informe_Click(object sender, EventArgs e)
         {
-            if (Utilites_Pdf.ExportDataTableInPdf(CreateFormulariosReport(), "InformeFORMULARIOS"))
+            if (UtilitiesPdf.ExportDataTableInPdf(CreateFormulariosReport(), "InformeFORMULARIOS"))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -369,7 +369,7 @@ namespace LayerPresentation
         }
         private void btn_exportPdf_alertas_Click(object sender, EventArgs e)
         {
-            if (Utilites_Pdf.ExportDataTableInPdf(CreateAlertasReport(), "InformeALERTAS_StockBajo"))
+            if (UtilitiesPdf.ExportDataTableInPdf(CreateAlertasReport(), "InformeALERTAS_StockBajo"))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();

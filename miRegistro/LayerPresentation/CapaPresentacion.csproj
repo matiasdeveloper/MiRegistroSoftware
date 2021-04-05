@@ -306,21 +306,21 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Alertas.cs" />
-    <Compile Include="Clases\DataUsers.cs" />
-    <Compile Include="Clases\ColorSystem.cs" />
-    <Compile Include="Clases\CreatorTables.cs" />
-    <Compile Include="Clases\DataFormularios.cs" />
+    <Compile Include="Older\Alertas.cs" />
+    <Compile Include="Older\DataUsers.cs" />
+    <Compile Include="Older\ColorSystem.cs" />
+    <Compile Include="Older\CreatorTables.cs" />
+    <Compile Include="Older\DataFormularios.cs" />
     <Compile Include="Clases\DataSave.cs" />
-    <Compile Include="Clases\DataTramites.cs" />
-    <Compile Include="Clases\FormExtend.cs" />
-    <Compile Include="Clases\QuerySpecific.cs" />
-    <Compile Include="Clases\Statistics.cs" />
-    <Compile Include="Clases\Utilites_Pdf.cs" />
-    <Compile Include="Clases\Utilities.cs" />
-    <Compile Include="Clases\Utilities_Common.cs" />
-    <Compile Include="Clases\Utilities_Encrypt_Decrypt.cs" />
-    <Compile Include="Clases\Utilities_LayerBusiness.cs" />
+    <Compile Include="Older\DataTramites.cs" />
+    <Compile Include="Older\FormExtend.cs" />
+    <Compile Include="Older\QuerySpecific.cs" />
+    <Compile Include="Older\Statistics.cs" />
+    <Compile Include="Clases\UtilitiesPdf.cs" />
+    <Compile Include="Older\Utilities.cs" />
+    <Compile Include="Older\Utilities_Common.cs" />
+    <Compile Include="Older\Utilities_Encrypt_Decrypt.cs" />
+    <Compile Include="Older\Utilities_LayerBusiness.cs" />
     <Compile Include="Form\Login\frm_bienvenida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -536,13 +536,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LayerBusiness\LayerBusiness.csproj">
+    <ProjectReference Include="..\LayerBusiness\CapaNegocio.csproj">
       <Project>{6a594a3b-366c-41e2-a754-c1df3b355de7}</Project>
-      <Name>LayerBusiness</Name>
+      <Name>CapaNegocio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LayerData\LayerData.csproj">
+    <ProjectReference Include="..\LayerData\CapaDatos.csproj">
       <Project>{24825E55-040F-47B2-98C3-A58964CE403A}</Project>
-      <Name>LayerData</Name>
+      <Name>CapaDatos</Name>
     </ProjectReference>
     <ProjectReference Include="..\LayerSoporte\LayerSoporte.csproj">
       <Project>{45f12642-097e-4b16-ba2a-75655d8594c6}</Project>

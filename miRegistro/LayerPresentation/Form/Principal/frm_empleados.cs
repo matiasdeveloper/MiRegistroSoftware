@@ -183,7 +183,7 @@ namespace LayerPresentation
             int id = Convert.ToInt32(lbl_id_0);
             DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_0.Text))
+            if (UtilitiesPdf.ExportDataTableInPdf(dt, lbl_nombre_0.Text))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -194,7 +194,7 @@ namespace LayerPresentation
             int id = Convert.ToInt32(lbl_id_1);
             DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_1.Text))
+            if (UtilitiesPdf.ExportDataTableInPdf(dt, lbl_nombre_1.Text))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -205,7 +205,7 @@ namespace LayerPresentation
             int id = Convert.ToInt32(lbl_id_2);
             DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_2.Text))
+            if (UtilitiesPdf.ExportDataTableInPdf(dt, lbl_nombre_2.Text))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -216,7 +216,7 @@ namespace LayerPresentation
             int id = Convert.ToInt32(lbl_id_3);
             DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_3.Text))
+            if (UtilitiesPdf.ExportDataTableInPdf(dt, lbl_nombre_3.Text))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -227,7 +227,7 @@ namespace LayerPresentation
             int id = Convert.ToInt32(lbl_id_4);
             DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_4.Text))
+            if (UtilitiesPdf.ExportDataTableInPdf(dt, lbl_nombre_4.Text))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -238,7 +238,7 @@ namespace LayerPresentation
             int id = Convert.ToInt32(lbl_id_5);
             DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_5.Text))
+            if (UtilitiesPdf.ExportDataTableInPdf(dt, lbl_nombre_5.Text))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -249,7 +249,7 @@ namespace LayerPresentation
             int id = Convert.ToInt32(lbl_id_6);
             DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_6.Text))
+            if (UtilitiesPdf.ExportDataTableInPdf(dt, lbl_nombre_6.Text))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -260,7 +260,7 @@ namespace LayerPresentation
             int id = Convert.ToInt32(lbl_id_7);
             DataTable dt = DataTramites.GetTableDate(DataTramites.GetEmployeeDataTramites(id), Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
 
-            if (Utilites_Pdf.ExportDataTableInPdf(dt, lbl_nombre_7.Text))
+            if (UtilitiesPdf.ExportDataTableInPdf(dt, lbl_nombre_7.Text))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();

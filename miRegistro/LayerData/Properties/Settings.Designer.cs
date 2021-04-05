@@ -12,7 +12,7 @@ namespace LayerData.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.6.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,10 +26,7 @@ namespace LayerData.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=tcp:rna-argentina.database.windows.net,1433;Initial Catalog=MiRegistroCala" +
-            "fateSC;Persist Security Info=False;User ID=adminrna;Password=registro998P;Multip" +
-            "leActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Ti" +
-            "meout=30;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=localhost;Database=miregistro;Uid=root;Pwd=19573;")]
         public string connectionStrings {
             get {
                 return ((string)(this["connectionStrings"]));
@@ -46,6 +43,21 @@ namespace LayerData.Properties {
             }
             set {
                 this["ConnectionLocal"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=tcp:rna-argentina.database.windows.net,1433;Initial Catalog=MiRegistroCala" +
+            "fateSC;Persist Security Info=False;User ID=adminrna;Password=registro998P;Multip" +
+            "leActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Ti" +
+            "meout=30;")]
+        public string ConnectionToAzure {
+            get {
+                return ((string)(this["ConnectionToAzure"]));
+            }
+            set {
+                this["ConnectionToAzure"] = value;
             }
         }
     }

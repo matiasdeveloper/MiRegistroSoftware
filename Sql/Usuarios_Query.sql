@@ -24,16 +24,16 @@ SELECT * FROM preguntaseguridad;
 /* Insert nuevos usuarios */
 
 INSERT INTO usuario(FkIdPerfil, Usuario, Contraseña, Email)
-VALUES(2, 'paolacalafate', '12345', 'paolacalafate@gmail.com');
+VALUES(3, 'valeriacalafate', '12345', 'valericalafate@gmail.com');
 
 INSERT INTO perfil (IdPerfil, Nombre, Apellido, Nick, FechaCumpleaños)
-VALUES (2, 'Paola', 'Calafate', 'Pao', NOW());
+VALUES (3, 'Valeria', 'Calafate', 'Pao', NOW());
 
 INSERT INTO empleado (IdEmpleado, FkIdUsuario, FkIdEmpresa, EstadoActual)
 VALUES
 (
-	2,
 	3,
+	5,
     1,
     1
 );
@@ -44,6 +44,9 @@ UPDATE empleado set IdEmpleado = 1 where IdEmpleado = 1001;
 
 SELECT * FROM usuario;
 SELECT * FROM empleado;
+
+/*Autentificar*/
+SELECT * FROM usuario WHERE usuario='noelicalafate' AND contraseña='12345' LIMIT 1;
 
 SELECT U.IdUsuario, P.Nombre, P.Apellido, P.FechaCumpleaños, U.Usuario, U.Email
 FROM usuario U

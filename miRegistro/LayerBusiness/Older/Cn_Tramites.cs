@@ -59,7 +59,7 @@ namespace LayerBusiness
         public DataTable mostrarTodo()
         {
             DataTable _table = new DataTable();
-           _table = _cdObject.mostrarTodo();
+           //_table = _cdObject.mostrarTodo();
             return _table;
         }
         // Query default

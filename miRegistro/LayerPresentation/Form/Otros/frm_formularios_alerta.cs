@@ -95,7 +95,7 @@ namespace LayerPresentation
         }
         private void btn_savepdf_Click(object sender, EventArgs e)
         {
-            if (Utilites_Pdf.ExportDataGridViewInPdf(dg_formulariosAlert, "Alerta" + userAlert + "_"))
+            if (UtilitiesPdf.ExportDataGridViewInPdf(dg_formulariosAlert, "Alerta" + userAlert + "_"))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
