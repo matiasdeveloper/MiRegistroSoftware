@@ -41,7 +41,7 @@ public class CDataUsuario
             UserLoginCache.Password = Encoding.UTF8.GetString(_read.GetSqlBinary(2).Value);
             UserLoginCache.Priveleges = _read.GetString(3);
             UserLoginCache.RespuestaSecurity = Encoding.UTF8.GetString(_read.GetSqlBinary(4).Value);
-            UserLoginCache.isRoot = _read.GetInt32(5);
+            //UserLoginCache.isRoot = _read.GetInt32(5);
             resultado = true;
         }
 
