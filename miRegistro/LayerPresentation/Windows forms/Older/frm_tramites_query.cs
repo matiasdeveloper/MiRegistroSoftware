@@ -142,14 +142,22 @@ namespace LayerPresentation
         {
             string empleado = comboBox_empleado.GetItemText(comboBox_empleado.SelectedItem);
             DataTable dt = QuerySpecific.myQuery("Empleado", currentDt, DateTime.Now, DateTime.Now, "", empleado, true);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
             //_frmTramites.LoadDataQuery(dt);
+=======
+            _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
             this.Close();
         }
         // Dominio
         private void btn_imprimirPorDominio_Click(object sender, EventArgs e)
         {
             DataTable dt = QuerySpecific.myQuery("Dominio", currentDt, DateTime.Now, DateTime.Now, txtBox_dominio.Text.ToUpper(), "", true);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
            // _frmTramites.LoadDataQuery(dt);
+=======
+            _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
             this.Close();
         }
         // Fechas
@@ -164,7 +172,11 @@ namespace LayerPresentation
                     {
                         DateTime dt1 = dateTimePicker_fecha1.Value;
                         DataTable dt = QuerySpecific.myQuery("Fecha", currentDt, dt1, dt1, "", "", true);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
                         //_frmTramites.LoadDataQuery(dt);
+=======
+                        _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
                         this.Close();
                     }
                     else
@@ -172,7 +184,11 @@ namespace LayerPresentation
                         DateTime dt1 = dateTimePicker_fecha1.Value;
                         DateTime dt2 = dateTimePicker_fecha2.Value;
                         DataTable dt = QuerySpecific.myQuery("Fecha", currentDt, dt1, dt2, "", "", true);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
                         //_frmTramites.LoadDataQuery(dt);
+=======
+                        _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
                         this.Close();
                     }
                 }
@@ -186,25 +202,41 @@ namespace LayerPresentation
         private void btn_imprimirPorHoy_Click(object sender, EventArgs e)
         {
             DataTable dt = QuerySpecific.myQuery("Hoy", currentDt, DateTime.Now, DateTime.Now, "", "", true);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
             //_frmTramites.LoadDataQuery(dt);
+=======
+            _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
             this.Close();
         }
         private void btn_imprimirPorAyer_Click(object sender, EventArgs e)
         {
             DataTable dt = QuerySpecific.myQuery("Ayer", currentDt, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), "", "", true);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
             //_frmTramites.LoadDataQuery(dt);
+=======
+            _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
             this.Close();
         }
         private void btn_imprimirPorSemana_Click(object sender, EventArgs e)
         {
             DataTable dt = QuerySpecific.myQuery("Semana", currentDt, Fechas.firstDayOfWeek, Fechas.lastDayOfWeek, "", "", true);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
             //_frmTramites.LoadDataQuery(dt);
+=======
+            _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
             this.Close();
         }
         private void btn_imprimirPorMes_Click(object sender, EventArgs e)
         {
             DataTable dt = QuerySpecific.myQuery("Mes", currentDt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth, "", "", true);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
             //_frmTramites.LoadDataQuery(dt);
+=======
+            _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
             this.Close();
         }
 
@@ -223,13 +255,21 @@ namespace LayerPresentation
                     if (values.Item2)
                     {
                         DataTable dt = QuerySpecific.myQuery("Fecha_Inscripto", currentDt, dateTimePicker_fecha9.Value, dateTimePicker_fecha9.Value, "", "", isError);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
                         //_frmTramites.LoadDataQuery(dt);
+=======
+                        _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
                         this.Close();
                     }
                     else
                     {
                         DataTable dt = QuerySpecific.myQuery("Fecha_Inscripto", currentDt, dateTimePicker_fecha9.Value, dateTimePicker_fecha10.Value, "", "", isError);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
                         //_frmTramites.LoadDataQuery(dt);
+=======
+                        _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
                         this.Close();
                     }
                 }
@@ -252,7 +292,11 @@ namespace LayerPresentation
                     {
                         DateTime dt1 = dateTimePicker_fecha3.Value;
                         DataTable dt = QuerySpecific.myQuery("Fecha_Empleado", currentDt, dt1, dt1, "", empleado, true);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
                         //_frmTramites.LoadDataQuery(dt);
+=======
+                        _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
                         this.Close();
                     }
                     else
@@ -261,7 +305,11 @@ namespace LayerPresentation
                         DateTime dt2 = dateTimePicker_fecha4.Value;
 
                         DataTable dt = QuerySpecific.myQuery("Fecha_Empleado", currentDt, dt1, dt2, "", empleado, true);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
                         //_frmTramites.LoadDataQuery(dt);
+=======
+                        _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
                         this.Close();
                     }
                 }
@@ -284,13 +332,21 @@ namespace LayerPresentation
                     if (values.Item2)
                     {
                         DataTable dt = QuerySpecific.myQuery("Fecha_Inscripto", currentDt, dateTimePicker_fecha7.Value, dateTimePicker_fecha7.Value, "", "", isIncripto);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
                         //_frmTramites.LoadDataQuery(dt);
+=======
+                        _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
                         this.Close();
                     }
                     else
                     {
                         DataTable dt = QuerySpecific.myQuery("Fecha_Inscripto", currentDt, dateTimePicker_fecha7.Value, dateTimePicker_fecha8.Value, "", "", isIncripto);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
                         //_frmTramites.LoadDataQuery(dt);
+=======
+                        _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
                         this.Close();
                     }
                 }
@@ -313,13 +369,21 @@ namespace LayerPresentation
                     if (values.Item2)
                     {
                         DataTable dt = QuerySpecific.myQuery("Fecha_Procesado", currentDt, dateTimePicker_fecha5.Value, dateTimePicker_fecha5.Value, "", "", etapa);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
                         //_frmTramites.LoadDataQuery(dt);
+=======
+                        _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
                         this.Close();
                     }
                     else
                     {
                         DataTable dt = QuerySpecific.myQuery("Fecha_Procesado", currentDt, dateTimePicker_fecha5.Value, dateTimePicker_fecha6.Value, "", "", etapa);
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_query.cs
                         //_frmTramites.LoadDataQuery(dt);
+=======
+                        _frmTramites.LoadDataQuery(dt);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_query.cs
                         this.Close();
                     }
                 }

@@ -74,6 +74,7 @@ namespace LayerPresentation
         /// <param name="labelName"></param>
         /// <param name="total"></param>
         private Label[] GetLabelArray(string labelName, int total) 
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Main/frm_estadisticas.cs
         {
             List<Label> lbl = new List<Label>();
 
@@ -94,6 +95,28 @@ namespace LayerPresentation
 
         private void LoadStatisticTramites()
         {
+=======
+        {
+            List<Label> lbl = new List<Label>();
+
+            for(int i = 0; i < total; i++) 
+            {
+                try 
+                {
+                    lbl.Add(Utilities.FindLabelInForm(this, String.Format(labelName + i)));
+                }
+                catch(Exception ex) 
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+
+            return lbl.ToArray();
+        }
+
+        private void LoadStatisticTramites()
+        {
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Principal/frm_estadisticas.cs
             // Historic
             Label[] lblHist = { lbl_totaltramites, lbl_totalprocesados, lbl_totalinscriptos, lbl_totalerrores, lbl_totalempleados, lbl_totaltipos };
             Statistics.DashboardStatisticHistory(lblHist);
@@ -165,13 +188,21 @@ namespace LayerPresentation
         }       
         private void btn_refreshdata_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Main/frm_estadisticas.cs
             //UtilitiesCommon.RefreshStatisticData();
+=======
+            Utilities_Common.RefreshStatisticData();
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Principal/frm_estadisticas.cs
             RefreshDashboardData();
         }
 
         private void frm_estadisticas_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Main/frm_estadisticas.cs
             //Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
+=======
+            Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Principal/frm_estadisticas.cs
             RefreshDashboardData();
         }
     }

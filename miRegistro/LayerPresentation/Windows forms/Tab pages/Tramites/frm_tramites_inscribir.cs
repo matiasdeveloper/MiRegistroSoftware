@@ -56,7 +56,11 @@ namespace LayerPresentation
         {
             if (_frmTramites != null)
             {
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Tab pages/Tramites/frm_tramites_inscribir.cs
                 //_frmTramites.RefreshAll();
+=======
+                _frmTramites.RefreshAll();
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_inscribir.cs
             }
             if (_frmTramitesPantallaCompleta != null)
             {
@@ -80,7 +84,11 @@ namespace LayerPresentation
                         cod_empleado = 1;
                     }
 
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Tab pages/Tramites/frm_tramites_inscribir.cs
                     //UtilitiesCommon.layerBusiness.cn_tramites.inscribirTramite(id, cod, cod_empleado);
+=======
+                    Utilities_Common.layerBusiness.cn_tramites.inscribirTramite(id, cod, cod_empleado);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_inscribir.cs
                     DeleteFields();
                     RefreshData();
 

@@ -63,7 +63,11 @@ namespace LayerPresentation
             else 
             {
                 Cn_alertas objects = new Cn_alertas();
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_formularios_alerta.cs
                 //int[] idForm = UtilitiesCommon.layerBusiness.cn_alertas.buscarDetallesAlerta(idAlert);
+=======
+                int[] idForm = Utilities_Common.layerBusiness.cn_alertas.buscarDetallesAlerta(idAlert);
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/frm_formularios_alerta.cs
 
                 //dg_formulariosAlert.DataSource = objects.mostrarSpecificAlert(idForm);
                 lbl_fechayhora.Text = fechaAlert;
@@ -95,7 +99,11 @@ namespace LayerPresentation
         }
         private void btn_savepdf_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_formularios_alerta.cs
             if (PdfExporter.ExportDataGridViewInPdf(dg_formulariosAlert, "Alerta" + userAlert + "_"))
+=======
+            if (Utilites_Pdf.ExportDataGridViewInPdf(dg_formulariosAlert, "Alerta" + userAlert + "_"))
+>>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/frm_formularios_alerta.cs
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
