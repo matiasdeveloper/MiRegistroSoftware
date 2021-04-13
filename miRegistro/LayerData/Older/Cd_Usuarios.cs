@@ -73,7 +73,7 @@ namespace LayerData
                 UserLoginCache.Password = Encoding.UTF8.GetString(_read.GetSqlBinary(2).Value);
                 UserLoginCache.Priveleges = _read.GetString(3);
                 UserLoginCache.RespuestaSecurity = Encoding.UTF8.GetString(_read.GetSqlBinary(4).Value);
-                UserLoginCache.isRoot = _read.GetInt32(5);
+                //UserLoginCache.isRoot = _read.GetInt32(5);
                 resultado = 1;
             }
 
@@ -108,7 +108,7 @@ namespace LayerData
             while (_read.Read())
             {
                 UserLoginCache.Nombre = _read.GetString(1);
-                UserLoginCache.Nombre_Corto = _read.GetString(2);
+                UserLoginCache.Nick = _read.GetString(2);
                 UserLoginCache.City = _read.GetString(3);
                 UserLoginCache.Email = _read.GetString(4);
                 UserLoginCache.Fecha_nacimiento = _read.GetDateTime(5);

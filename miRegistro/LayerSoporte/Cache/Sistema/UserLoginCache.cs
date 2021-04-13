@@ -14,11 +14,12 @@ namespace LayerSoporte.Cache
         public static string Password { get; set; }
         public static string Priveleges { get; set; }
         public static string RespuestaSecurity { get; set; }
-        public static int isRoot { get; set; }
+        public static bool isRoot { get; set; }
         
         // Employee
         public static string Nombre { get; set; }
-        public static string Nombre_Corto { get; set; }
+        public static string Apellido { get; set; }
+        public static string Nick { get; set; }
         public static string City { get; set; }
         public static string Email { get; set; }
         public static DateTime Fecha_nacimiento { get; set; }

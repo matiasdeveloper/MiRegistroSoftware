@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "LayerData\CapaDatos.csproj", "{24825E55-040F-47B2-98C3-A58964CE403A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LData", "LayerData\LData.csproj", "{24825E55-040F-47B2-98C3-A58964CE403A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "LayerBusiness\CapaNegocio.csproj", "{6A594A3B-366C-41E2-A754-C1DF3B355DE7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LBusiness", "LayerBusiness\LBusiness.csproj", "{6A594A3B-366C-41E2-A754-C1DF3B355DE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "LayerPresentation\CapaPresentacion.csproj", "{5877B5AF-6BC6-4A1B-8959-9E00A4920519}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LPresentation", "LayerPresentation\LPresentation.csproj", "{5877B5AF-6BC6-4A1B-8959-9E00A4920519}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayerSoporte", "LayerSoporte\LayerSoporte.csproj", "{45F12642-097E-4B16-BA2A-75655D8594C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LCache", "LayerSoporte\LCache.csproj", "{45F12642-097E-4B16-BA2A-75655D8594C6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A06A90A5-32F0-4BDA-A507-14C7ECFA82E5}"
 	ProjectSection(SolutionItems) = preProject
