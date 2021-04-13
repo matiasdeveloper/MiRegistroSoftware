@@ -86,11 +86,7 @@ namespace LayerPresentation
         {
             if (_frmTramites != null)
             {
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_inscribir_mult.cs
                 //_frmTramites.RefreshAll();
-=======
-                _frmTramites.RefreshAll();
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_inscribir_mult.cs
             }
             if (_frmEscritorio != null)
             {
@@ -119,12 +115,7 @@ namespace LayerPresentation
                             cod_empleado = 1;
                         }
 
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_inscribir_mult.cs
                         //UtilitiesCommon.layerBusiness.cn_tramites.inscribirMultiple(id_selected, cod, cod_empleado);
-=======
-                        Utilities_Common.layerBusiness.cn_tramites.inscribirMultiple(id_selected, cod, cod_empleado);
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_inscribir_mult.cs
-
                         DeleteFields();
                         RefreshData();
 

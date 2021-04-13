@@ -165,11 +165,7 @@ namespace LayerPresentation
                 {
                     string[] data = InitializeUser();
                     // Update user sesion
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_configuracion_empleado.cs
                     //UtilitiesCommon.layerBusiness.cn_usuarios.UpdateUserData(id, data);
-=======
-                    Utilities_Common.layerBusiness.cn_usuarios.UpdateUserData(id, data);
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/frm_configuracion_empleado.cs
                     frm_successdialog frm = new frm_successdialog(8);
                     frm.Show();
 
@@ -189,11 +185,7 @@ namespace LayerPresentation
                 {
                     string[] data = InitializeInfo();
                     // Update user info
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_configuracion_empleado.cs
                     //UtilitiesCommon.layerBusiness.cn_usuarios.UpdateUserInfo(id, data);
-=======
-                    Utilities_Common.layerBusiness.cn_usuarios.UpdateUserInfo(id, data);
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/frm_configuracion_empleado.cs
                     frm_successdialog frm = new frm_successdialog(8);
                     frm.Show();
 
@@ -211,11 +203,7 @@ namespace LayerPresentation
             {
                 string[] data = InitializeEmpleado();
                 // Update user empleado
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_configuracion_empleado.cs
                 //UtilitiesCommon.layerBusiness.cn_usuarios.UpdateUserEmpleado(id, data);
-=======
-                Utilities_Common.layerBusiness.cn_usuarios.UpdateUserEmpleado(id, data);
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/frm_configuracion_empleado.cs
                 frm_successdialog frm = new frm_successdialog(8);
                 frm.Show();
             }

@@ -320,6 +320,11 @@
     <Compile Include="Class\PdfExporter.cs" />
     <Compile Include="Class\UtilitiesCommon.cs" />
     <Compile Include="Class\Older %28Review and delete%29\Utilities_LayerBusiness.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Windows forms\Tab pages\frm_bienvenida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -465,6 +470,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows forms\Main\frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows forms\Older\frm_recoverpassword.resx">
       <DependentUpon>frm_recoverpassword.cs</DependentUpon>
@@ -504,11 +510,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>

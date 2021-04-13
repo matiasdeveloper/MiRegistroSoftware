@@ -73,6 +73,36 @@ namespace LayerPresentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Businessman_48px {
+            get {
+                object obj = ResourceManager.GetObject("Businessman_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Combo_Chart_64px {
+            get {
+                object obj = ResourceManager.GetObject("Combo Chart_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap compras_48px {
+            get {
+                object obj = ResourceManager.GetObject("compras_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eye_64px {
             get {
                 object obj = ResourceManager.GetObject("eye_64px", resourceCulture);
@@ -96,6 +126,56 @@ namespace LayerPresentation.Properties {
         internal static System.Drawing.Bitmap multiply_60px {
             get {
                 object obj = ResourceManager.GetObject("multiply_60px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Producto_48px {
+            get {
+                object obj = ResourceManager.GetObject("Producto_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap r_close {
+            get {
+                object obj = ResourceManager.GetObject("r_close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap r_info {
+            get {
+                object obj = ResourceManager.GetObject("r_info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap r_maximize {
+            get {
+                object obj = ResourceManager.GetObject("r_maximize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap r_minimize {
+            get {
+                object obj = ResourceManager.GetObject("r_minimize", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +236,16 @@ namespace LayerPresentation.Properties {
         internal static System.Drawing.Bitmap subtract_30px1 {
             get {
                 object obj = ResourceManager.GetObject("subtract_30px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Groups_48px {
+            get {
+                object obj = ResourceManager.GetObject("User Groups_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

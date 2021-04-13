@@ -21,11 +21,7 @@ namespace LayerPresentation
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_pantallaCompleta.cs
         
-=======
-
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_pantallaCompleta.cs
         public frm_tramites_pantallaCompleta(int id, string empleado, string mes, DataTable dt, string desde, string hasta, bool isStatistics = true, frm_estadisticas frmStatistic = null, frm_escritorio frmEscritorio = null)
         {
             InitializeComponent();
@@ -96,44 +92,27 @@ namespace LayerPresentation
         }
         public void RefreshDataTramites()
         {
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_pantallaCompleta.cs
             //UtilitiesCommon.RefreshTramitesData();
-=======
-            Utilities_Common.RefreshTramitesData();
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_pantallaCompleta.cs
             DataTable dt = null;
 
             // Refresh datatable!
             switch (empleado)
             {
                 case "Todos mensual":
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_pantallaCompleta.cs
                     //Tramites tmp = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
                     //DataTable table = tmp.data;
                     //dt = QuerySpecific.myQuery("Mes", table, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth, "", "", true);
-=======
-                    Tramites tmp = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
-                    DataTable table = tmp.data;
-                    dt = QuerySpecific.myQuery("Mes", table, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth, "", "", true);
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_pantallaCompleta.cs
                     this.data = dt;
 
                     break;
                 case "Todos diario":
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_pantallaCompleta.cs
                     //Tramites tmp1 = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
                     //DataTable table1 = tmp1.data;
                     //dt = QuerySpecific.myQuery("Hoy", table1, DateTime.Now, DateTime.Now, "", "", true);
-=======
-                    Tramites tmp1 = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
-                    DataTable table1 = tmp1.data;
-                    dt = QuerySpecific.myQuery("Hoy", table1, DateTime.Now, DateTime.Now, "", "", true);
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_pantallaCompleta.cs
                     this.data = dt;
 
                     break;
                 case "Todos ayer":
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_pantallaCompleta.cs
                     //Tramites tmp2 = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
                     //DataTable table2 = tmp2.data;
                     //dt = QuerySpecific.myQuery("Ayer", table2, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), "", "", true);
@@ -149,25 +128,6 @@ namespace LayerPresentation
                     this.data = dt;
                     break;
             }
-
-=======
-                    Tramites tmp2 = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
-                    DataTable table2 = tmp2.data;
-                    dt = QuerySpecific.myQuery("Ayer", table2, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), "", "", true);
-                    this.data = dt;
-
-                    break;
-                default:
-                    dt = DataTramites.GetEmployeeDataTramites(id);
-
-                    int[] tramites = Statistics.FindTramites(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-                    int[] errores = Statistics.FindErrores(empleado, dt, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth);
-
-                    this.data = dt;
-                    break;
-            }
-
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_pantallaCompleta.cs
             InitializeData();
             RefreshData();
         }
@@ -185,11 +145,7 @@ namespace LayerPresentation
 
         private void btn_savepdf_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_pantallaCompleta.cs
             if (PdfExporter.ExportDataGridViewInPdf(dg_tramites, "TramitesRNA"))
-=======
-            if (Utilites_Pdf.ExportDataGridViewInPdf(dg_tramites, "TramitesRNA"))
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_pantallaCompleta.cs
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
@@ -259,46 +215,30 @@ namespace LayerPresentation
             {
                 if (Convert.ToString(e.Value) == empleado)
                 {
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_pantallaCompleta.cs
                     e.CellStyle.ForeColor = System.Drawing.Color.White;
                     e.CellStyle.BackColor = System.Drawing.Color.FromArgb(0, 0, 35);
-=======
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(0, 0, 35);
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_pantallaCompleta.cs
                 }
             }
             if (this.dg_tramites.Columns[e.ColumnIndex].Name == "NombreInscripto")
             {
                 if (Convert.ToString(e.Value) == empleado)
                 {
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_pantallaCompleta.cs
                     e.CellStyle.ForeColor = System.Drawing.Color.White;
                     e.CellStyle.BackColor = System.Drawing.Color.FromArgb(0, 0, 35);
-=======
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(0, 0, 35);
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_pantallaCompleta.cs
                 }
             }
             if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Inscripto")
             {
                 if (Convert.ToBoolean(e.Value) == true)
                 {
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_pantallaCompleta.cs
                     e.CellStyle.ForeColor = System.Drawing.Color.White;
                     e.CellStyle.BackColor = System.Drawing.Color.FromArgb(41, 217, 85);
-=======
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(41, 217, 85);
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_pantallaCompleta.cs
                 }
             }
             if (this.dg_tramites.Columns[e.ColumnIndex].Name == "Error")
             {
                 if (Convert.ToBoolean(e.Value) == true)
                 {
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_pantallaCompleta.cs
                     e.CellStyle.ForeColor = System.Drawing.Color.White;
                     e.CellStyle.BackColor = System.Drawing.Color.FromArgb(242, 53, 53);
                 }
@@ -306,15 +246,6 @@ namespace LayerPresentation
                 {
                     e.CellStyle.ForeColor = System.Drawing.Color.White;
                     e.CellStyle.BackColor = System.Drawing.Color.FromArgb(41, 217, 85);
-=======
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(242, 53, 53);
-                }
-                else
-                {
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(41, 217, 85);
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_pantallaCompleta.cs
                 }
             }
 
@@ -322,7 +253,6 @@ namespace LayerPresentation
             {
                 if (Convert.ToString(e.Value) == "Error Total")
                 {
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Older/frm_tramites_pantallaCompleta.cs
                     e.CellStyle.ForeColor = System.Drawing.Color.White;
                     e.CellStyle.BackColor = System.Drawing.Color.FromArgb(242, 53, 53);
                 }
@@ -330,15 +260,6 @@ namespace LayerPresentation
                 {
                     e.CellStyle.ForeColor = System.Drawing.Color.White;
                     e.CellStyle.BackColor = System.Drawing.Color.FromArgb(242, 145, 61);
-=======
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(242, 53, 53);
-                }
-                else if (Convert.ToString(e.Value) == "Error Parcial")
-                {
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.BackColor = Color.FromArgb(242, 145, 61);
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Otros/Tramites/frm_tramites_pantallaCompleta.cs
                 }
             }
         }

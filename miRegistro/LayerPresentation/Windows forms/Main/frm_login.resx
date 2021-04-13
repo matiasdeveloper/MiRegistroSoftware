@@ -118,7 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Main/frm_login.resx
   <data name="gunaGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -149,7 +148,7 @@ es formar parte de las estadisticas.</value>
         6imKoiiKoiiK4tI0v0uvyciLxJ4gAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_login.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+ <data name="btn_login.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAARMAAAAnCAYAAAAsNay3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHdSURBVHhe7d0/axRBHMdhX1dAMcQYtNDCN2ARrOxs/Btj
@@ -168,19 +167,20 @@ es formar parte de las estadisticas.</value>
   </metadata>
   <data name="bunifuImageButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAoRJREFUSEvN
-        lb1rFFEUxUcbQQWN2og28a9Qe5XFIIissJ+szWKngga/ihUsJFZCxPgHxCqNhUUUlAREMGCjpRprhcRi
-        lYgx8XeeZ2d3Zmc/ghE8cHj7zj333jfvzZuNNoJSqTRWLpefmCctby5ochqud5JmpxzeHOTz+T3FYvFd
-        uhF8iz5i23AgaR7OeRoD7Sr8AdNNAmm0wpNdsT0Gscx6CnxTYr1e324pokhF2pAsOi2qVCo7rDUttYH4
-        SUFMo5akPXPCMJx1mhZ4yNqipTYQQ1G24awlaa+cMAxfOi1SDWk0fGqpDe2zgzOW1GjSRYbhPafpiWak
-        MV621AaN9hPUOa1hOCGN3wfhopIG8GO1Wj2gHOUyX4NN1ZTWBUw3lcj4nXFShyqScI75FHwMtZ2ifj/A
-        W9ML1Gg0tuK7jtaEan7DZbshM4ZHNqrhT0Zt3xh3aZdtMXK53DZih7VAL671hNOqZVtPbMHYa7u0Wr2d
-        H+AX2HW/aPheNf6UGgC24E26QAeX4HJKi0mjBZdJgqBucGZSFlnEMcbjaX0A5zbcSC8H57UzK9aDOufn
-        fq4kCFzrMCZoizyZcThuS3/UarXd7PPdjAKBtvVsRO4d1bAtG+z/Gcx6mzKLiLb2eyKd42fVsjUJVoIn
-        3GiZ55lfYFz1PKbtWY1WndM6818w/qIH6POBaUUGVqL/lnAPmN92UkzpQlqHtxzSPRyXppqtT1MA4oTN
-        05YC/Fl56FigQ+lG95ESlxSt9YWZsBS2bUFioVA4YikBYufhV3kstRotk1u3lAALPGrPa0shSbd9vd/b
-        wiL2UfSSp8q5yLbs9bQLeEfcaMlSSHoBsy/VX+Bf1f0fEEW/AWXluTCgwPpeAAAAAElFTkSuQmCC
-=======
+      iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAoRJREFUSEvN
+      lb1rFFEUxUcbQQWN2og28a9Qe5XFIIissJ+szWKngga/ihUsJFZCxPgHxCqNhUUUlAREMGCjpRprhcRi
+      lYgx8XeeZ2d3Zmc/ghE8cHj7zj333jfvzZuNNoJSqTRWLpefmCctby5ochqud5JmpxzeHOTz+T3FYvFd
+      uhF8iz5i23AgaR7OeRoD7Sr8AdNNAmm0wpNdsT0Gscx6CnxTYr1e324pokhF2pAsOi2qVCo7rDUttYH4
+      SUFMo5akPXPCMJx1mhZ4yNqipTYQQ1G24awlaa+cMAxfOi1SDWk0fGqpDe2zgzOW1GjSRYbhPafpiWak
+      MV621AaN9hPUOa1hOCGN3wfhopIG8GO1Wj2gHOUyX4NN1ZTWBUw3lcj4nXFShyqScI75FHwMtZ2ifj/A
+      W9ML1Gg0tuK7jtaEan7DZbshM4ZHNqrhT0Zt3xh3aZdtMXK53DZih7VAL671hNOqZVtPbMHYa7u0Wr2d
+      H+AX2HW/aPheNf6UGgC24E26QAeX4HJKi0mjBZdJgqBucGZSFlnEMcbjaX0A5zbcSC8H57UzK9aDOufn
+      fq4kCFzrMCZoizyZcThuS3/UarXd7PPdjAKBtvVsRO4d1bAtG+z/Gcx6mzKLiLb2eyKd42fVsjUJVoIn
+      3GiZ55lfYFz1PKbtWY1WndM6818w/qIH6POBaUUGVqL/lnAPmN92UkzpQlqHtxzSPRyXppqtT1MA4oTN
+      05YC/Fl56FigQ+lG95ESlxSt9YWZsBS2bUFioVA4YikBYufhV3kstRotk1u3lAALPGrPa0shSbd9vd/b
+      wiL2UfSSp8q5yLbs9bQLeEfcaMlSSHoBsy/VX+Bf1f0fEEW/AWXluTCgwPpeAAAAAElFTkSuQmCC
+    </value>
+  </data>
   <data name="pn_tittle_bar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -263,8 +263,7 @@ es formar parte de las estadisticas.</value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAXSURBVChTY1CwdvtPDB5ViBdTW6HbfwCk2aKBLiwOpgAA
         AABJRU5ErkJggg==
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Principal/frm_principal.resx
-</value>
+    </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2170,10 +2169,9 @@ es formar parte de las estadisticas.</value>
         AAAAAAAAAAAAAAAAgAAAAIABAADAAQAA4AMAAPAPAAA=
 </value>
   </data>
-<<<<<<< HEAD:miRegistro/LayerPresentation/Windows forms/Main/frm_login.resx
   <metadata name="gunaDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>141, 17</value>
-=======
+  </metadata>
   <metadata name="ElipseBrand.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>124, 48</value>
   </metadata>
@@ -2185,6 +2183,5 @@ es formar parte de las estadisticas.</value>
   </metadata>
   <metadata name="ElipseInfoUser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>273, 66</value>
->>>>>>> 53e7dd443230e3e11d0379924015b683904fdb8a:miRegistro/LayerPresentation/Form/Principal/frm_principal.resx
   </metadata>
 </root>
