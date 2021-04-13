@@ -81,7 +81,7 @@ namespace LayerPresentation
         private void RefreshData() 
         {
             //UtilitiesCommon.RefreshEmplooyeeDataTramites();
-            Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
+            //Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
             LoadDashboard();
         }
 
@@ -270,7 +270,7 @@ namespace LayerPresentation
         // Load
         private void frm_empleados_Load(object sender, EventArgs e)
         {
-            Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
+            //Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
             LoadDashboard();
             LoadAccessPrivileges();
         }

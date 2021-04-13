@@ -21,7 +21,7 @@ namespace LayerPresentation
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
+        
         public frm_tramites_pantallaCompleta(int id, string empleado, string mes, DataTable dt, string desde, string hasta, bool isStatistics = true, frm_estadisticas frmStatistic = null, frm_escritorio frmEscritorio = null)
         {
             InitializeComponent();
@@ -99,23 +99,23 @@ namespace LayerPresentation
             switch (empleado)
             {
                 case "Todos mensual":
-                    Tramites tmp = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
-                    DataTable table = tmp.data;
-                    dt = QuerySpecific.myQuery("Mes", table, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth, "", "", true);
+                    //Tramites tmp = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
+                    //DataTable table = tmp.data;
+                    //dt = QuerySpecific.myQuery("Mes", table, Fechas.firstDayOfMonth, Fechas.lastDayOfMonth, "", "", true);
                     this.data = dt;
 
                     break;
                 case "Todos diario":
-                    Tramites tmp1 = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
-                    DataTable table1 = tmp1.data;
-                    dt = QuerySpecific.myQuery("Hoy", table1, DateTime.Now, DateTime.Now, "", "", true);
+                    //Tramites tmp1 = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
+                    //DataTable table1 = tmp1.data;
+                    //dt = QuerySpecific.myQuery("Hoy", table1, DateTime.Now, DateTime.Now, "", "", true);
                     this.data = dt;
 
                     break;
                 case "Todos ayer":
-                    Tramites tmp2 = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
-                    DataTable table2 = tmp2.data;
-                    dt = QuerySpecific.myQuery("Ayer", table2, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), "", "", true);
+                    //Tramites tmp2 = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(Cn_HandlerTramites.current);
+                    //DataTable table2 = tmp2.data;
+                    //dt = QuerySpecific.myQuery("Ayer", table2, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), "", "", true);
                     this.data = dt;
 
                     break;

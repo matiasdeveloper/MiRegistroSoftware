@@ -171,7 +171,7 @@ namespace LayerPresentation
 
         private void frm_estadisticas_Load(object sender, EventArgs e)
         {
-            Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
+            //Statistics.tmp = Cn_Employee.data.GetCache().GetUsers();
             RefreshDashboardData();
         }
     }

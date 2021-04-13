@@ -121,9 +121,9 @@ namespace LayerPresentation
             lbl_stockbajo_autos.Text = autos.ToString();
             lbl_stockbajo_motos.Text = motos.ToString();
 
-            int total = (Cn_HandlerFormularios.data.formularioCache.totalAltos + Cn_HandlerFormularios.data.formularioCache.totalMedios + Cn_HandlerFormularios.data.formularioCache.totalBajos);
+            //int total = (Cn_HandlerFormularios.data.formularioCache.totalAltos + Cn_HandlerFormularios.data.formularioCache.totalMedios + Cn_HandlerFormularios.data.formularioCache.totalBajos);
 
-            LoadDataPanel_02(total, (autos + motos + varios), chart_progress_stock);
+            //LoadDataPanel_02(total, (autos + motos + varios), chart_progress_stock);
         }
         private void LoadDataPanel_02(int total, int stockbajo, BunifuCircleProgressbar chartProgress)
         {
@@ -244,13 +244,13 @@ namespace LayerPresentation
         // Exportar Pdf Buttons
         private void btn_savepdf_stock_Click(object sender, EventArgs e)
         {
-            DataTable dt = Cn_HandlerFormularios.data.GetCache().GetCurrentFormulario(Cn_HandlerFormularios.current).data;
+            //DataTable dt = Cn_HandlerFormularios.data.GetCache().GetCurrentFormulario(Cn_HandlerFormularios.current).data;
 
-            if (PdfExporter.ExportDataTableInPdf(dt, "InformeFORMULARIOS"))
+            /*if (PdfExporter.ExportDataTableInPdf(dt, "InformeFORMULARIOS"))
             {
                 frm_successdialog f = new frm_successdialog(5);
                 f.Show();
-            }
+            }*/
         }
         private void btn_savepdf_tramites_Click(object sender, EventArgs e)
         {
@@ -291,7 +291,7 @@ namespace LayerPresentation
         }
         private void btn_accionesrapidas_stock_Click(object sender, EventArgs e)
         {
-            DataTable dt = Cn_HandlerFormularios.data.GetCache().GetCurrentFormulario(Cn_HandlerFormularios.current).data;
+            DataTable dt = new DataTable(); // create dt
 
             if (PdfExporter.ExportDataTableInPdf(dt, "InformeFORMULARIOS"))
             {
