@@ -106,7 +106,6 @@
             this.btn_aceptar.Size = new System.Drawing.Size(201, 43);
             this.btn_aceptar.TabIndex = 241;
             this.btn_aceptar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_aceptar.Click += new System.EventHandler(this.btn_c1_siguiente_Click);
             // 
             // lbl_tittle
             // 

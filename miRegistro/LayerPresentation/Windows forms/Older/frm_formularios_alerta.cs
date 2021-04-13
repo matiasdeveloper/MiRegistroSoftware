@@ -64,7 +64,10 @@ namespace LayerPresentation
             {
                 Cn_alertas objects = new Cn_alertas();
                 //int[] idForm = UtilitiesCommon.layerBusiness.cn_alertas.buscarDetallesAlerta(idAlert);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 26889f9 (Solved new errors when compile new merge files)
                 //dg_formulariosAlert.DataSource = objects.mostrarSpecificAlert(idForm);
                 lbl_fechayhora.Text = fechaAlert;
                 lbl_numeroDeAlerta.Text = idAlert.ToString();

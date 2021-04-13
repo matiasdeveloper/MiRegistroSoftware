@@ -116,7 +116,10 @@ namespace LayerPresentation
                         }
 
                         //UtilitiesCommon.layerBusiness.cn_tramites.inscribirMultiple(id_selected, cod, cod_empleado);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 26889f9 (Solved new errors when compile new merge files)
                         DeleteFields();
                         RefreshData();
 

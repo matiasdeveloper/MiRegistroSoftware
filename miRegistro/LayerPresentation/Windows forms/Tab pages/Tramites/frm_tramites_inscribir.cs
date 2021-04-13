@@ -79,7 +79,10 @@ namespace LayerPresentation
                         cod = 0;
                         cod_empleado = 1;
                     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 26889f9 (Solved new errors when compile new merge files)
                     //UtilitiesCommon.layerBusiness.cn_tramites.inscribirTramite(id, cod, cod_empleado);
                     DeleteFields();
                     RefreshData();

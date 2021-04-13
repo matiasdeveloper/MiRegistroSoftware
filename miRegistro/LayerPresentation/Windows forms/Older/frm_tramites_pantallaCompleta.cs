@@ -128,7 +128,10 @@ namespace LayerPresentation
                     this.data = dt;
                     break;
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 26889f9 (Solved new errors when compile new merge files)
             InitializeData();
             RefreshData();
         }

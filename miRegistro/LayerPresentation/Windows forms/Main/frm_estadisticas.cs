@@ -91,7 +91,10 @@ namespace LayerPresentation
 
             return lbl.ToArray();
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 26889f9 (Solved new errors when compile new merge files)
         private void LoadStatisticTramites()
         {
             // Historic
@@ -166,6 +169,10 @@ namespace LayerPresentation
         private void btn_refreshdata_Click(object sender, EventArgs e)
         {
             //UtilitiesCommon.RefreshStatisticData();
+<<<<<<< HEAD
+=======
+            //Utilities_Common.RefreshStatisticData();
+>>>>>>> 26889f9 (Solved new errors when compile new merge files)
             RefreshDashboardData();
         }
 
