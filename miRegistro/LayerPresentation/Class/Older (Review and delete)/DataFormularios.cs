@@ -24,7 +24,7 @@ namespace LayerPresentation.Clases
         /// <returns></returns>
         public static DataTable GetFormulariosCacheByID(int id)
         {
-            LinkedList<Formulario> tmp = Cn_HandlerFormularios.data.formularioCache.GetFormularios();
+            LinkedList<Formulario> tmp = null;
             LinkedListNode<Formulario> formularios = tmp.First;
 
             DataTable table = new DataTable();

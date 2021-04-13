@@ -168,7 +168,7 @@ namespace LayerPresentation
         }        
         private void ShowCategoriasFormularios(string name) 
         {
-            cb_categorias.DataSource = DataFormularios.GetCategoriasForName(Cn_HandlerFormularios.data.formularioCache.GetCategorias(), name);
+            //cb_categorias.DataSource = DataFormularios.GetCategoriasForName(Cn_HandlerFormularios.data.formularioCache.GetCategorias(), name);
             cb_categorias.DisplayMember = "Nombre";
             cb_categorias.ValueMember = "Id";
         }    

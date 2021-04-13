@@ -44,7 +44,7 @@ namespace LayerPresentation.Clases
             int errores = 0;
             int errores_past = 0;
 
-            Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
+            Tramites dt = new Tramites(1, null);
             foreach (DataRow fila in dt.data.Rows)
             {
                 DateTime date = (DateTime)fila[5];
@@ -97,7 +97,7 @@ namespace LayerPresentation.Clases
             int errores = 0;
             int errores_past = 0;
 
-            Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
+            Tramites dt = new Tramites(1, null);
             foreach (DataRow fila in dt.data.Rows)
             {
                 DateTime date = (DateTime)fila[5];
@@ -143,7 +143,7 @@ namespace LayerPresentation.Clases
 
             int inscriptos_false = 0;
 
-            Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
+            Tramites dt = new Tramites(1, null);
             foreach (DataRow fila in dt.data.Rows)
             {
                 // Find total tramites procesados e inscriptos in current range
@@ -223,7 +223,7 @@ namespace LayerPresentation.Clases
         {
             List<int> details = new List<int>();
 
-            Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
+            Tramites dt = new Tramites(1, null);
             int i = 4;
             int daysToAdd = 8;
 
@@ -359,12 +359,12 @@ namespace LayerPresentation.Clases
 
         public static void DashboardStatisticHistory(Label[] labelStatistic) 
         {
-            labelStatistic[0].Text = Cn_HandlerTramites.data.tramitesCache.totalTramites.ToString();
+            /*labelStatistic[0].Text = Cn_HandlerTramites.data.tramitesCache.totalTramites.ToString();
             labelStatistic[1].Text = Cn_HandlerTramites.data.tramitesCache.totalProcesados.ToString();
             labelStatistic[2].Text = Cn_HandlerTramites.data.tramitesCache.totalInscriptos.ToString();
             labelStatistic[3].Text = Cn_HandlerTramites.data.tramitesCache.totalErrores.ToString();
             labelStatistic[4].Text = Cn_HandlerTramites.data.tramitesCache.totalEmpleados.ToString();
-            labelStatistic[5].Text = Cn_HandlerTramites.data.tramitesCache.totalTipos.ToString();
+            labelStatistic[5].Text = Cn_HandlerTramites.data.tramitesCache.totalTipos.ToString();*/
         }
         // Carga el total de: procesados e inscriptos (AYER,HOY,MES)
         public static void DashboardStatisticAyer(Label[] Ayer) 
@@ -379,7 +379,7 @@ namespace LayerPresentation.Clases
             int procesado = 0;
             int inscriptos = 0;
 
-            Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
+            Tramites dt = new Tramites(1, null);
             foreach (DataRow fila in dt.data.Rows)
             {
                 DateTime date = (DateTime)fila[5];
@@ -408,7 +408,7 @@ namespace LayerPresentation.Clases
             int procesado = 0;
             int inscriptos = 0;
 
-            Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
+            Tramites dt = new Tramites(1, null);
             foreach (DataRow fila in dt.data.Rows)
             {
                 DateTime date = (DateTime)fila[5];
@@ -437,7 +437,7 @@ namespace LayerPresentation.Clases
             int procesado = 0;
             int inscriptos = 0;
 
-            Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
+            Tramites dt = new Tramites(1, null);
             foreach (DataRow fila in dt.data.Rows)
             {
                 DateTime date = (DateTime)fila[5];
@@ -467,7 +467,7 @@ namespace LayerPresentation.Clases
             DateTime fecha1 = DateTime.Now;
             DateTime fecha2 = fecha1;
 
-            Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
+            Tramites dt = new Tramites(1, null);
 
             int[] e = FindErroresAll(dt.data, fecha1, fecha2);
 
@@ -480,7 +480,7 @@ namespace LayerPresentation.Clases
             DateTime fecha1 = Fechas.firstDayOfMonth;
             DateTime fecha2 = Fechas.lastDayOfMonth;
 
-            Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
+            Tramites dt = new Tramites(1, null);
 
             int[] e = FindErroresAll(dt.data, fecha1, fecha2);
 
@@ -493,7 +493,7 @@ namespace LayerPresentation.Clases
             DateTime fecha1 = new DateTime(1000, 1, 1, 0, 0, 0, 0);
             DateTime fecha2 = new DateTime(3000, 1, 1, 0, 0, 0, 0);
 
-            Tramites dt = Cn_HandlerTramites.data.tramitesCache.GetCurrentTramites(Cn_HandlerTramites.current);
+            Tramites dt = new Tramites(1, null);
 
             int[] e = FindErroresAll(dt.data, fecha1, fecha2);
 

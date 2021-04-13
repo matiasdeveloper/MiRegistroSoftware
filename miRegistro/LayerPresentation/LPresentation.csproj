@@ -309,7 +309,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Older %28Review and delete%29\Alertas.cs" />
     <Compile Include="Class\Older %28Review and delete%29\DataUsers.cs" />
     <Compile Include="Class\ColorController.cs" />
     <Compile Include="Class\Older %28Review and delete%29\CreatorTables.cs" />
@@ -524,13 +523,13 @@
       <Project>{6a594a3b-366c-41e2-a754-c1df3b355de7}</Project>
       <Name>LBusiness</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LayerData\LData.csproj">
-      <Project>{24825E55-040F-47B2-98C3-A58964CE403A}</Project>
-      <Name>LData</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LayerSoporte\LCache.csproj">
       <Project>{45f12642-097e-4b16-ba2a-75655d8594c6}</Project>
       <Name>LCache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LServices\LServices.csproj">
+      <Project>{664ec556-9775-4d1a-8e0c-1b663c3a5632}</Project>
+      <Name>LServices</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

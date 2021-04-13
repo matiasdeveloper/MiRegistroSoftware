@@ -27,7 +27,7 @@ public static class DataTramites
     }
     private static DataTable GetEmployes()
     {
-        LinkedList<Employee> tmp = Cn_Employee.data.GetCache().GetUsers();
+        LinkedList<Employee> tmp = null;
         LinkedListNode<Employee> employee = tmp.First;
 
         DataTable table = CreatorTables.EmployeeList();
@@ -46,13 +46,13 @@ public static class DataTramites
 
     public static DataTable GetTramites(int id)
     {
-        Tramites tmp = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(id);
-        DataTable table = tmp.data;
-        return table;
+        //Tramites tmp = Cn_HandlerTramites.data.GetCache().GetCurrentTramites(id);
+        //DataTable table = tmp.data;
+        return new DataTable();
     }
     public static DataTable GetEmployeeDataTramites(int id)
     {
-        LinkedList<Employee> tmp = Cn_Employee.data.GetCache().GetUsers();
+        LinkedList<Employee> tmp = null;
         LinkedListNode<Employee> employee = tmp.First;
 
         DataTable table = new DataTable();
