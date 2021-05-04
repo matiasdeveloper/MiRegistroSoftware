@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2754d8490bd64f8aa5480fb91c161b2f" Name="Diagram1">
+        <EntityTypeShape EntityType="miregistroModel.alerta" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.categoriaalerta" Width="1.5" PointX="3.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.categoriaerror" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.categoriaformulario" Width="1.5" PointX="1.5" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.categoriatramite" Width="1.5" PointX="0.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.claseformulario" Width="1.5" PointX="1.5" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.direccion" Width="1.5" PointX="0.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.direccion_empresa" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.empleado" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.empresa" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.etapatramite" Width="1.5" PointX="6" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.formulario" Width="1.5" PointX="6" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.formulario_alerta" Width="1.5" PointX="8.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.formulario_parametro" Width="1.5" PointX="11.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.numeracionformulario" Width="1.5" PointX="8.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.pais" Width="1.5" PointX="1.5" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.parametro" Width="1.5" PointX="9" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.perfil" Width="1.5" PointX="1.5" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.perfil_direccion" Width="1.5" PointX="5.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.preguntaseguridad" Width="1.5" PointX="1.5" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.rol" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.tipoformulario" Width="1.5" PointX="3.75" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.tramite" Width="1.5" PointX="3" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.tramite_error" Width="1.5" PointX="5.25" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.tramite_proceso" Width="1.5" PointX="8.25" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.usuario" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.usuario_rol" Width="1.5" PointX="9" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="miregistroModel.usuario_seguridad" Width="1.5" PointX="1.5" PointY="20.25" IsExpanded="true" />
+        <AssociationConnector Association="miregistroModel.Fk_Formulario_IdAlerta" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.FkAlerta_IdTipoAlerta" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.FkErrores_errorid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_TipoFormulario_IdCategoria" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_tramiteid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_TipoFormulario_IdClase" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_addressid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_adressid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_countryid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_companyid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_company_id" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.FkEmployee_userid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.FkErrores_employeeid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.FkProceso_EmployeeId" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.FkFormulario_companyid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.FkTramite_companyid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.FkProceso_EtapaId" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_Alerta_IdFormulario" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.FkFormulario_typeid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.FkNumeracion_FormularioId" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.FkParametros_formularioid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_parametrosid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_profile" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_profileid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.FkPregunta_PreguntaId" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_roleid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.FkErrores_tramiteid" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.FkProceso_TramiteId" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_security" ManuallyRouted="false" />
+        <AssociationConnector Association="miregistroModel.Fk_userid" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -20,10 +20,5 @@ namespace MiRegistro
             InitializeComponent();
             oLoginController = new LoginController(this);
         }
-
-        private void btn_login_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

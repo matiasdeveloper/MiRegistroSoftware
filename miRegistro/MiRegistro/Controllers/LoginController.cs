@@ -1,5 +1,4 @@
-﻿using Models.SqlConnect;
-using MiRegistro.Properties;
+﻿using MiRegistro.Properties;
 using MiRegistro;
 using System;
 using System.Collections.Generic;
@@ -8,32 +7,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Models;
+using MiRegistro.Models;
 
 namespace Controllers
 {
     public class LoginController
     {
+        LoginViewModel _model = new LoginViewModel();
         Login _view { get; set; }
 
         public LoginController(Login view) 
         {
             _view = view;
-            _view.Load += new EventHandler(PersistanteConnection);
             _view.Load += new EventHandler(FindSavedUser);
 
             _view.btn_login.Click += new EventHandler(Autentificar);
         }
 
-        private void PersistanteConnection(object sender, EventArgs e) 
-        {
-            PersistanteConnection pconn = new PersistanteConnection();
-        }
         private void FindSavedUser(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(Settings.Default.user))
+            usuario usuario = _model.FindSavedUser();
+            if (usuario.Usuario1 != null)
             {
-                _view.txtBox_user.Text = PasswordEncrypter.Decrypt(MiRegistro.Properties.Settings.Default.user);
-                _view.txtBox_pass.Text = PasswordEncrypter.Decrypt(MiRegistro.Properties.Settings.Default.pass);
+                _view.txtBox_user.Text = usuario.Usuario1;
+                _view.txtBox_pass.Text = usuario.Contraseña;
                 _view.txtBox_pass.UseSystemPasswordChar = true;
                 _view.checkBox_guardar.Checked = true;
             }
@@ -41,32 +38,13 @@ namespace Controllers
 
         private void Autentificar(object sender, EventArgs e)
         {
-            LoginViewModel model = new LoginViewModel();
-            if (model.ValidateLogin(_view.txtBox_user.Text, _view.txtBox_pass.Text)) 
+            if (_model.ValidateLogin(_view.txtBox_user.Text, _view.txtBox_pass.Text) != null) 
             {
                 OpenSystem();
-                RememberUser();
+                _model.RememberMe(_view.checkBox_guardar.Checked, _view.txtBox_user.Text, _view.txtBox_pass.Text);
             }
         }
 
-        private void RememberUser()
-        {
-            if (_view.checkBox_guardar.Checked)
-            {
-                MiRegistro.Properties.Settings.Default.user = PasswordEncrypter.Encrypt(_view.txtBox_user.Text);
-                MiRegistro.Properties.Settings.Default.pass = PasswordEncrypter.Encrypt(_view.txtBox_pass.Text);
-                MiRegistro.Properties.Settings.Default.Save();
-            }
-            else
-            {
-                if (PasswordEncrypter.Decrypt(MiRegistro.Properties.Settings.Default.user) == _view.txtBox_user.Text)
-                {
-                    MiRegistro.Properties.Settings.Default.user = "";
-                    MiRegistro.Properties.Settings.Default.pass = "";
-                    MiRegistro.Properties.Settings.Default.Save();
-                }
-            }
-        }
         private protected void OpenSystem()
         {
             //frm_principal frmPrincipal = new frm_principal();

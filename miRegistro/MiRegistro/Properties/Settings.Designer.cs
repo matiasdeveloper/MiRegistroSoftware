@@ -57,53 +57,5 @@ namespace MiRegistro.Properties {
                 this["Color"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("port = 3306;")]
-        public string Port {
-            get {
-                return ((string)(this["Port"]));
-            }
-            set {
-                this["Port"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("server = localhost;")]
-        public string Server {
-            get {
-                return ((string)(this["Server"]));
-            }
-            set {
-                this["Server"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("password = 19573database;")]
-        public string PassDb {
-            get {
-                return ((string)(this["PassDb"]));
-            }
-            set {
-                this["PassDb"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("userid = admin;")]
-        public string UserDb {
-            get {
-                return ((string)(this["UserDb"]));
-            }
-            set {
-                this["UserDb"] = value;
-            }
-        }
     }
 }

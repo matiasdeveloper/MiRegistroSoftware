@@ -1,0 +1,1894 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="miregistroModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="alerta">
+          <Key>
+            <PropertyRef Name="IdAlerta" />
+          </Key>
+          <Property Name="IdAlerta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FkIdTipoAlerta" Type="int" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="45" />
+          <Property Name="EstadoActual" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="categoriaalerta">
+          <Key>
+            <PropertyRef Name="IdCategoriaAlerta" />
+          </Key>
+          <Property Name="IdCategoriaAlerta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="115" />
+        </EntityType>
+        <EntityType Name="categoriaerror">
+          <Key>
+            <PropertyRef Name="IdCategoriaError" />
+          </Key>
+          <Property Name="IdCategoriaError" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="categoriaformulario">
+          <Key>
+            <PropertyRef Name="IdCategoria" />
+          </Key>
+          <Property Name="IdCategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreCategoria" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="categoriatramite">
+          <Key>
+            <PropertyRef Name="IdCategoriaTramite" />
+          </Key>
+          <Property Name="IdCategoriaTramite" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="claseformulario">
+          <Key>
+            <PropertyRef Name="IdClase" />
+          </Key>
+          <Property Name="IdClase" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreClase" Type="varchar" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="direccion">
+          <Key>
+            <PropertyRef Name="IdDireccion" />
+          </Key>
+          <Property Name="IdDireccion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FkIdPais" Type="int" />
+          <Property Name="Ciudad" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="direccion_empresa">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdDireccion" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="IdDireccion" Type="int" Nullable="false" />
+          <Property Name="Calle" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="empleado">
+          <Key>
+            <PropertyRef Name="IdEmpleado" />
+          </Key>
+          <Property Name="IdEmpleado" Type="int" Nullable="false" />
+          <Property Name="FkIdUsuario" Type="int" Nullable="false" />
+          <Property Name="FkIdEmpresa" Type="int" Nullable="false" />
+          <Property Name="EstadoActual" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="empresa">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="FechaApertura" Type="date" />
+          <Property Name="Contraseña" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="etapatramite">
+          <Key>
+            <PropertyRef Name="IdEtapaTramite" />
+          </Key>
+          <Property Name="IdEtapaTramite" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="14" />
+        </EntityType>
+        <EntityType Name="formulario">
+          <Key>
+            <PropertyRef Name="IdFormulario" />
+          </Key>
+          <Property Name="IdFormulario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FkIdEmpresa" Type="int" Nullable="false" />
+          <Property Name="FkIdTipo" Type="int" Nullable="false" />
+          <Property Name="UltimaActualizacion" Type="datetime" Precision="0" />
+          <Property Name="Alerta" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="formulario_alerta">
+          <Key>
+            <PropertyRef Name="IdFormulario" />
+            <PropertyRef Name="IdAlerta" />
+          </Key>
+          <Property Name="IdFormulario" Type="int" Nullable="false" />
+          <Property Name="IdAlerta" Type="int" Nullable="false" />
+          <Property Name="FkIdEmpleado" Type="int" />
+          <Property Name="FechaAlerta" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="formulario_parametro">
+          <Key>
+            <PropertyRef Name="IdFormulario" />
+            <PropertyRef Name="IdParametro" />
+          </Key>
+          <Property Name="IdFormulario" Type="int" Nullable="false" />
+          <Property Name="IdParametro" Type="int" Nullable="false" />
+          <Property Name="ValorParametro" Type="int" />
+        </EntityType>
+        <EntityType Name="numeracionformulario">
+          <Key>
+            <PropertyRef Name="IdNumeracion" />
+          </Key>
+          <Property Name="IdNumeracion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FkIdFormulario" Type="int" Nullable="false" />
+          <Property Name="Numeracion" Type="varchar" MaxLength="15" />
+          <Property Name="Stock" Type="int" />
+          <Property Name="Deleted" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="pais">
+          <Key>
+            <PropertyRef Name="IdPais" />
+          </Key>
+          <Property Name="IdPais" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NickPais" Type="char" MaxLength="2" />
+          <Property Name="NombrePais" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="parametro">
+          <Key>
+            <PropertyRef Name="IdParametro" />
+          </Key>
+          <Property Name="IdParametro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreParametro" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="perfil">
+          <Key>
+            <PropertyRef Name="IdPerfil" />
+          </Key>
+          <Property Name="IdPerfil" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="45" />
+          <Property Name="Apellido" Type="varchar" MaxLength="45" />
+          <Property Name="Nick" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="FechaCumpleaños" Type="date" />
+        </EntityType>
+        <EntityType Name="perfil_direccion">
+          <Key>
+            <PropertyRef Name="IdPerfil" />
+            <PropertyRef Name="IdDireccion" />
+          </Key>
+          <Property Name="IdPerfil" Type="int" Nullable="false" />
+          <Property Name="IdDireccion" Type="int" Nullable="false" />
+          <Property Name="Calle" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="preguntaseguridad">
+          <Key>
+            <PropertyRef Name="IdPregunta" />
+          </Key>
+          <Property Name="IdPregunta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Pregunta" Type="varchar" MaxLength="155" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rol">
+          <Key>
+            <PropertyRef Name="IdRol" />
+          </Key>
+          <Property Name="IdRol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="65" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="85" />
+        </EntityType>
+        <EntityType Name="tipoformulario">
+          <Key>
+            <PropertyRef Name="IdTipoFormulario" />
+          </Key>
+          <Property Name="IdTipoFormulario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FkIdClase" Type="int" Nullable="false" />
+          <Property Name="FkIdCategoria" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tramite">
+          <Key>
+            <PropertyRef Name="IdTramite" />
+          </Key>
+          <Property Name="IdTramite" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Dominio" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="FkIdCategoria" Type="int" Nullable="false" />
+          <Property Name="FkIdEmpresa" Type="int" Nullable="false" />
+          <Property Name="Fecha" Type="date" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="60" />
+          <Property Name="Deleted" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="tramite_error">
+          <Key>
+            <PropertyRef Name="IdTramite" />
+            <PropertyRef Name="IdCategoriaError" />
+          </Key>
+          <Property Name="IdTramite" Type="int" Nullable="false" />
+          <Property Name="IdCategoriaError" Type="int" Nullable="false" />
+          <Property Name="FkIdEmpleado" Type="int" Nullable="false" />
+          <Property Name="Resuelto" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="tramite_proceso">
+          <Key>
+            <PropertyRef Name="IdTramite" />
+            <PropertyRef Name="IdEtapaTramite" />
+          </Key>
+          <Property Name="IdTramite" Type="int" Nullable="false" />
+          <Property Name="IdEtapaTramite" Type="int" Nullable="false" />
+          <Property Name="FkIdEmpleado" Type="int" Nullable="false" />
+          <Property Name="EstadoActual" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FkIdPerfil" Type="int" Nullable="false" />
+          <Property Name="FkIdSeguridad" Type="int" />
+          <Property Name="Usuario" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="Contraseña" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="75" Nullable="false" />
+          <Property Name="UltimoAcceso" Type="date" />
+          <Property Name="Activo" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="usuario_rol">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+            <PropertyRef Name="IdRol" />
+          </Key>
+          <Property Name="IdUsuario" Type="int" Nullable="false" />
+          <Property Name="IdRol" Type="int" Nullable="false" />
+          <Property Name="FechaInicio" Type="date" />
+          <Property Name="FechaFin" Type="date" />
+        </EntityType>
+        <EntityType Name="usuario_seguridad">
+          <Key>
+            <PropertyRef Name="IdUsuarioSeguridad" />
+          </Key>
+          <Property Name="IdUsuarioSeguridad" Type="int" Nullable="false" />
+          <Property Name="FkIdPregunta" Type="int" Nullable="false" />
+          <Property Name="Respuesta" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <Association Name="Fk_addressid">
+          <End Role="direccion" Type="Self.direccion" Multiplicity="1" />
+          <End Role="direccion_empresa" Type="Self.direccion_empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="direccion">
+              <PropertyRef Name="IdDireccion" />
+            </Principal>
+            <Dependent Role="direccion_empresa">
+              <PropertyRef Name="IdDireccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_adressid">
+          <End Role="direccion" Type="Self.direccion" Multiplicity="1" />
+          <End Role="perfil_direccion" Type="Self.perfil_direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="direccion">
+              <PropertyRef Name="IdDireccion" />
+            </Principal>
+            <Dependent Role="perfil_direccion">
+              <PropertyRef Name="IdDireccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Alerta_IdFormulario">
+          <End Role="formulario" Type="Self.formulario" Multiplicity="1" />
+          <End Role="formulario_alerta" Type="Self.formulario_alerta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="formulario">
+              <PropertyRef Name="IdFormulario" />
+            </Principal>
+            <Dependent Role="formulario_alerta">
+              <PropertyRef Name="IdFormulario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_company_id">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="1" />
+          <End Role="empleado" Type="Self.empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="IdEmpresa" />
+            </Principal>
+            <Dependent Role="empleado">
+              <PropertyRef Name="FkIdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_companyid">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="1" />
+          <End Role="direccion_empresa" Type="Self.direccion_empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="IdEmpresa" />
+            </Principal>
+            <Dependent Role="direccion_empresa">
+              <PropertyRef Name="IdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_countryid">
+          <End Role="pais" Type="Self.pais" Multiplicity="0..1" />
+          <End Role="direccion" Type="Self.direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pais">
+              <PropertyRef Name="IdPais" />
+            </Principal>
+            <Dependent Role="direccion">
+              <PropertyRef Name="FkIdPais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Formulario_IdAlerta">
+          <End Role="alerta" Type="Self.alerta" Multiplicity="1" />
+          <End Role="formulario_alerta" Type="Self.formulario_alerta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="alerta">
+              <PropertyRef Name="IdAlerta" />
+            </Principal>
+            <Dependent Role="formulario_alerta">
+              <PropertyRef Name="IdAlerta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_parametrosid">
+          <End Role="parametro" Type="Self.parametro" Multiplicity="1" />
+          <End Role="formulario_parametro" Type="Self.formulario_parametro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="parametro">
+              <PropertyRef Name="IdParametro" />
+            </Principal>
+            <Dependent Role="formulario_parametro">
+              <PropertyRef Name="IdParametro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_profile">
+          <End Role="perfil" Type="Self.perfil" Multiplicity="1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="perfil">
+              <PropertyRef Name="IdPerfil" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="FkIdPerfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_profileid">
+          <End Role="perfil" Type="Self.perfil" Multiplicity="1" />
+          <End Role="perfil_direccion" Type="Self.perfil_direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="perfil">
+              <PropertyRef Name="IdPerfil" />
+            </Principal>
+            <Dependent Role="perfil_direccion">
+              <PropertyRef Name="IdPerfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_roleid">
+          <End Role="rol" Type="Self.rol" Multiplicity="1" />
+          <End Role="usuario_rol" Type="Self.usuario_rol" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rol">
+              <PropertyRef Name="IdRol" />
+            </Principal>
+            <Dependent Role="usuario_rol">
+              <PropertyRef Name="IdRol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_security">
+          <End Role="usuario_seguridad" Type="Self.usuario_seguridad" Multiplicity="0..1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario_seguridad">
+              <PropertyRef Name="IdUsuarioSeguridad" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="FkIdSeguridad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_TipoFormulario_IdCategoria">
+          <End Role="categoriaformulario" Type="Self.categoriaformulario" Multiplicity="1" />
+          <End Role="tipoformulario" Type="Self.tipoformulario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoriaformulario">
+              <PropertyRef Name="IdCategoria" />
+            </Principal>
+            <Dependent Role="tipoformulario">
+              <PropertyRef Name="FkIdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_TipoFormulario_IdClase">
+          <End Role="claseformulario" Type="Self.claseformulario" Multiplicity="1" />
+          <End Role="tipoformulario" Type="Self.tipoformulario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="claseformulario">
+              <PropertyRef Name="IdClase" />
+            </Principal>
+            <Dependent Role="tipoformulario">
+              <PropertyRef Name="FkIdClase" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_tramiteid">
+          <End Role="categoriatramite" Type="Self.categoriatramite" Multiplicity="1" />
+          <End Role="tramite" Type="Self.tramite" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoriatramite">
+              <PropertyRef Name="IdCategoriaTramite" />
+            </Principal>
+            <Dependent Role="tramite">
+              <PropertyRef Name="FkIdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_userid">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+          <End Role="usuario_rol" Type="Self.usuario_rol" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="usuario_rol">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkAlerta_IdTipoAlerta">
+          <End Role="categoriaalerta" Type="Self.categoriaalerta" Multiplicity="0..1" />
+          <End Role="alerta" Type="Self.alerta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoriaalerta">
+              <PropertyRef Name="IdCategoriaAlerta" />
+            </Principal>
+            <Dependent Role="alerta">
+              <PropertyRef Name="FkIdTipoAlerta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkEmployee_userid">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+          <End Role="empleado" Type="Self.empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="empleado">
+              <PropertyRef Name="FkIdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkErrores_employeeid">
+          <End Role="empleado" Type="Self.empleado" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tramite_error" Type="Self.tramite_error" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empleado">
+              <PropertyRef Name="IdEmpleado" />
+            </Principal>
+            <Dependent Role="tramite_error">
+              <PropertyRef Name="FkIdEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkErrores_errorid">
+          <End Role="categoriaerror" Type="Self.categoriaerror" Multiplicity="1" />
+          <End Role="tramite_error" Type="Self.tramite_error" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoriaerror">
+              <PropertyRef Name="IdCategoriaError" />
+            </Principal>
+            <Dependent Role="tramite_error">
+              <PropertyRef Name="IdCategoriaError" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkErrores_tramiteid">
+          <End Role="tramite" Type="Self.tramite" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tramite_error" Type="Self.tramite_error" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tramite">
+              <PropertyRef Name="IdTramite" />
+            </Principal>
+            <Dependent Role="tramite_error">
+              <PropertyRef Name="IdTramite" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkFormulario_companyid">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="1" />
+          <End Role="formulario" Type="Self.formulario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="IdEmpresa" />
+            </Principal>
+            <Dependent Role="formulario">
+              <PropertyRef Name="FkIdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkFormulario_typeid">
+          <End Role="tipoformulario" Type="Self.tipoformulario" Multiplicity="1" />
+          <End Role="formulario" Type="Self.formulario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipoformulario">
+              <PropertyRef Name="IdTipoFormulario" />
+            </Principal>
+            <Dependent Role="formulario">
+              <PropertyRef Name="FkIdTipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkNumeracion_FormularioId">
+          <End Role="formulario" Type="Self.formulario" Multiplicity="1" />
+          <End Role="numeracionformulario" Type="Self.numeracionformulario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="formulario">
+              <PropertyRef Name="IdFormulario" />
+            </Principal>
+            <Dependent Role="numeracionformulario">
+              <PropertyRef Name="FkIdFormulario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkParametros_formularioid">
+          <End Role="formulario" Type="Self.formulario" Multiplicity="1" />
+          <End Role="formulario_parametro" Type="Self.formulario_parametro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="formulario">
+              <PropertyRef Name="IdFormulario" />
+            </Principal>
+            <Dependent Role="formulario_parametro">
+              <PropertyRef Name="IdFormulario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkPregunta_PreguntaId">
+          <End Role="preguntaseguridad" Type="Self.preguntaseguridad" Multiplicity="1" />
+          <End Role="usuario_seguridad" Type="Self.usuario_seguridad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="preguntaseguridad">
+              <PropertyRef Name="IdPregunta" />
+            </Principal>
+            <Dependent Role="usuario_seguridad">
+              <PropertyRef Name="FkIdPregunta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkProceso_EmployeeId">
+          <End Role="empleado" Type="Self.empleado" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tramite_proceso" Type="Self.tramite_proceso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empleado">
+              <PropertyRef Name="IdEmpleado" />
+            </Principal>
+            <Dependent Role="tramite_proceso">
+              <PropertyRef Name="FkIdEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkProceso_EtapaId">
+          <End Role="etapatramite" Type="Self.etapatramite" Multiplicity="1" />
+          <End Role="tramite_proceso" Type="Self.tramite_proceso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="etapatramite">
+              <PropertyRef Name="IdEtapaTramite" />
+            </Principal>
+            <Dependent Role="tramite_proceso">
+              <PropertyRef Name="IdEtapaTramite" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkProceso_TramiteId">
+          <End Role="tramite" Type="Self.tramite" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tramite_proceso" Type="Self.tramite_proceso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tramite">
+              <PropertyRef Name="IdTramite" />
+            </Principal>
+            <Dependent Role="tramite_proceso">
+              <PropertyRef Name="IdTramite" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkTramite_companyid">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="1" />
+          <End Role="tramite" Type="Self.tramite" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="IdEmpresa" />
+            </Principal>
+            <Dependent Role="tramite">
+              <PropertyRef Name="FkIdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="miregistroModelStoreContainer">
+          <EntitySet Name="alerta" EntityType="Self.alerta" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="categoriaalerta" EntityType="Self.categoriaalerta" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="categoriaerror" EntityType="Self.categoriaerror" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="categoriaformulario" EntityType="Self.categoriaformulario" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="categoriatramite" EntityType="Self.categoriatramite" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="claseformulario" EntityType="Self.claseformulario" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="direccion" EntityType="Self.direccion" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="direccion_empresa" EntityType="Self.direccion_empresa" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="empleado" EntityType="Self.empleado" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="empresa" EntityType="Self.empresa" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="etapatramite" EntityType="Self.etapatramite" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="formulario" EntityType="Self.formulario" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="formulario_alerta" EntityType="Self.formulario_alerta" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="formulario_parametro" EntityType="Self.formulario_parametro" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="numeracionformulario" EntityType="Self.numeracionformulario" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="pais" EntityType="Self.pais" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="parametro" EntityType="Self.parametro" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="perfil" EntityType="Self.perfil" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="perfil_direccion" EntityType="Self.perfil_direccion" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="preguntaseguridad" EntityType="Self.preguntaseguridad" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="rol" EntityType="Self.rol" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="tipoformulario" EntityType="Self.tipoformulario" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="tramite" EntityType="Self.tramite" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="tramite_error" EntityType="Self.tramite_error" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="tramite_proceso" EntityType="Self.tramite_proceso" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="usuario_rol" EntityType="Self.usuario_rol" Schema="miregistro" store:Type="Tables" />
+          <EntitySet Name="usuario_seguridad" EntityType="Self.usuario_seguridad" Schema="miregistro" store:Type="Tables" />
+          <AssociationSet Name="Fk_addressid" Association="Self.Fk_addressid">
+            <End Role="direccion" EntitySet="direccion" />
+            <End Role="direccion_empresa" EntitySet="direccion_empresa" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_adressid" Association="Self.Fk_adressid">
+            <End Role="direccion" EntitySet="direccion" />
+            <End Role="perfil_direccion" EntitySet="perfil_direccion" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Alerta_IdFormulario" Association="Self.Fk_Alerta_IdFormulario">
+            <End Role="formulario" EntitySet="formulario" />
+            <End Role="formulario_alerta" EntitySet="formulario_alerta" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_company_id" Association="Self.Fk_company_id">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="empleado" EntitySet="empleado" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_companyid" Association="Self.Fk_companyid">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="direccion_empresa" EntitySet="direccion_empresa" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_countryid" Association="Self.Fk_countryid">
+            <End Role="pais" EntitySet="pais" />
+            <End Role="direccion" EntitySet="direccion" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Formulario_IdAlerta" Association="Self.Fk_Formulario_IdAlerta">
+            <End Role="alerta" EntitySet="alerta" />
+            <End Role="formulario_alerta" EntitySet="formulario_alerta" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_parametrosid" Association="Self.Fk_parametrosid">
+            <End Role="parametro" EntitySet="parametro" />
+            <End Role="formulario_parametro" EntitySet="formulario_parametro" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_profile" Association="Self.Fk_profile">
+            <End Role="perfil" EntitySet="perfil" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_profileid" Association="Self.Fk_profileid">
+            <End Role="perfil" EntitySet="perfil" />
+            <End Role="perfil_direccion" EntitySet="perfil_direccion" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_roleid" Association="Self.Fk_roleid">
+            <End Role="rol" EntitySet="rol" />
+            <End Role="usuario_rol" EntitySet="usuario_rol" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_security" Association="Self.Fk_security">
+            <End Role="usuario_seguridad" EntitySet="usuario_seguridad" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_TipoFormulario_IdCategoria" Association="Self.Fk_TipoFormulario_IdCategoria">
+            <End Role="categoriaformulario" EntitySet="categoriaformulario" />
+            <End Role="tipoformulario" EntitySet="tipoformulario" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_TipoFormulario_IdClase" Association="Self.Fk_TipoFormulario_IdClase">
+            <End Role="claseformulario" EntitySet="claseformulario" />
+            <End Role="tipoformulario" EntitySet="tipoformulario" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_tramiteid" Association="Self.Fk_tramiteid">
+            <End Role="categoriatramite" EntitySet="categoriatramite" />
+            <End Role="tramite" EntitySet="tramite" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_userid" Association="Self.Fk_userid">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="usuario_rol" EntitySet="usuario_rol" />
+          </AssociationSet>
+          <AssociationSet Name="FkAlerta_IdTipoAlerta" Association="Self.FkAlerta_IdTipoAlerta">
+            <End Role="categoriaalerta" EntitySet="categoriaalerta" />
+            <End Role="alerta" EntitySet="alerta" />
+          </AssociationSet>
+          <AssociationSet Name="FkEmployee_userid" Association="Self.FkEmployee_userid">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="empleado" EntitySet="empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FkErrores_employeeid" Association="Self.FkErrores_employeeid">
+            <End Role="empleado" EntitySet="empleado" />
+            <End Role="tramite_error" EntitySet="tramite_error" />
+          </AssociationSet>
+          <AssociationSet Name="FkErrores_errorid" Association="Self.FkErrores_errorid">
+            <End Role="categoriaerror" EntitySet="categoriaerror" />
+            <End Role="tramite_error" EntitySet="tramite_error" />
+          </AssociationSet>
+          <AssociationSet Name="FkErrores_tramiteid" Association="Self.FkErrores_tramiteid">
+            <End Role="tramite" EntitySet="tramite" />
+            <End Role="tramite_error" EntitySet="tramite_error" />
+          </AssociationSet>
+          <AssociationSet Name="FkFormulario_companyid" Association="Self.FkFormulario_companyid">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="formulario" EntitySet="formulario" />
+          </AssociationSet>
+          <AssociationSet Name="FkFormulario_typeid" Association="Self.FkFormulario_typeid">
+            <End Role="tipoformulario" EntitySet="tipoformulario" />
+            <End Role="formulario" EntitySet="formulario" />
+          </AssociationSet>
+          <AssociationSet Name="FkNumeracion_FormularioId" Association="Self.FkNumeracion_FormularioId">
+            <End Role="formulario" EntitySet="formulario" />
+            <End Role="numeracionformulario" EntitySet="numeracionformulario" />
+          </AssociationSet>
+          <AssociationSet Name="FkParametros_formularioid" Association="Self.FkParametros_formularioid">
+            <End Role="formulario" EntitySet="formulario" />
+            <End Role="formulario_parametro" EntitySet="formulario_parametro" />
+          </AssociationSet>
+          <AssociationSet Name="FkPregunta_PreguntaId" Association="Self.FkPregunta_PreguntaId">
+            <End Role="preguntaseguridad" EntitySet="preguntaseguridad" />
+            <End Role="usuario_seguridad" EntitySet="usuario_seguridad" />
+          </AssociationSet>
+          <AssociationSet Name="FkProceso_EmployeeId" Association="Self.FkProceso_EmployeeId">
+            <End Role="empleado" EntitySet="empleado" />
+            <End Role="tramite_proceso" EntitySet="tramite_proceso" />
+          </AssociationSet>
+          <AssociationSet Name="FkProceso_EtapaId" Association="Self.FkProceso_EtapaId">
+            <End Role="etapatramite" EntitySet="etapatramite" />
+            <End Role="tramite_proceso" EntitySet="tramite_proceso" />
+          </AssociationSet>
+          <AssociationSet Name="FkProceso_TramiteId" Association="Self.FkProceso_TramiteId">
+            <End Role="tramite" EntitySet="tramite" />
+            <End Role="tramite_proceso" EntitySet="tramite_proceso" />
+          </AssociationSet>
+          <AssociationSet Name="FkTramite_companyid" Association="Self.FkTramite_companyid">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="tramite" EntitySet="tramite" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="miregistroModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="alerta">
+          <Key>
+            <PropertyRef Name="IdAlerta" />
+          </Key>
+          <Property Name="IdAlerta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FkIdTipoAlerta" Type="Int32" />
+          <Property Name="Descripcion" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoActual" Type="SByte" />
+          <NavigationProperty Name="formulario_alerta" Relationship="Self.Fk_Formulario_IdAlerta" FromRole="alerta" ToRole="formulario_alerta" />
+          <NavigationProperty Name="categoriaalerta" Relationship="Self.FkAlerta_IdTipoAlerta" FromRole="alerta" ToRole="categoriaalerta" />
+        </EntityType>
+        <EntityType Name="categoriaalerta">
+          <Key>
+            <PropertyRef Name="IdCategoriaAlerta" />
+          </Key>
+          <Property Name="IdCategoriaAlerta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="115" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="alerta" Relationship="Self.FkAlerta_IdTipoAlerta" FromRole="categoriaalerta" ToRole="alerta" />
+        </EntityType>
+        <EntityType Name="categoriaerror">
+          <Key>
+            <PropertyRef Name="IdCategoriaError" />
+          </Key>
+          <Property Name="IdCategoriaError" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tramite_error" Relationship="Self.FkErrores_errorid" FromRole="categoriaerror" ToRole="tramite_error" />
+        </EntityType>
+        <EntityType Name="categoriaformulario">
+          <Key>
+            <PropertyRef Name="IdCategoria" />
+          </Key>
+          <Property Name="IdCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCategoria" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tipoformulario" Relationship="Self.Fk_TipoFormulario_IdCategoria" FromRole="categoriaformulario" ToRole="tipoformulario" />
+        </EntityType>
+        <EntityType Name="categoriatramite">
+          <Key>
+            <PropertyRef Name="IdCategoriaTramite" />
+          </Key>
+          <Property Name="IdCategoriaTramite" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tramite" Relationship="Self.Fk_tramiteid" FromRole="categoriatramite" ToRole="tramite" />
+        </EntityType>
+        <EntityType Name="claseformulario">
+          <Key>
+            <PropertyRef Name="IdClase" />
+          </Key>
+          <Property Name="IdClase" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreClase" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tipoformulario" Relationship="Self.Fk_TipoFormulario_IdClase" FromRole="claseformulario" ToRole="tipoformulario" />
+        </EntityType>
+        <EntityType Name="direccion">
+          <Key>
+            <PropertyRef Name="IdDireccion" />
+          </Key>
+          <Property Name="IdDireccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FkIdPais" Type="Int32" />
+          <Property Name="Ciudad" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="direccion_empresa" Relationship="Self.Fk_addressid" FromRole="direccion" ToRole="direccion_empresa" />
+          <NavigationProperty Name="perfil_direccion" Relationship="Self.Fk_adressid" FromRole="direccion" ToRole="perfil_direccion" />
+          <NavigationProperty Name="pais" Relationship="Self.Fk_countryid" FromRole="direccion" ToRole="pais" />
+        </EntityType>
+        <EntityType Name="direccion_empresa">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdDireccion" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="IdDireccion" Type="Int32" Nullable="false" />
+          <Property Name="Calle" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="direccion" Relationship="Self.Fk_addressid" FromRole="direccion_empresa" ToRole="direccion" />
+          <NavigationProperty Name="empresa" Relationship="Self.Fk_companyid" FromRole="direccion_empresa" ToRole="empresa" />
+        </EntityType>
+        <EntityType Name="empleado">
+          <Key>
+            <PropertyRef Name="IdEmpleado" />
+          </Key>
+          <Property Name="IdEmpleado" Type="Int32" Nullable="false" />
+          <Property Name="FkIdUsuario" Type="Int32" Nullable="false" />
+          <Property Name="FkIdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="EstadoActual" Type="SByte" />
+          <NavigationProperty Name="empresa" Relationship="Self.Fk_company_id" FromRole="empleado" ToRole="empresa" />
+          <NavigationProperty Name="usuario" Relationship="Self.FkEmployee_userid" FromRole="empleado" ToRole="usuario" />
+          <NavigationProperty Name="tramite_error" Relationship="Self.FkErrores_employeeid" FromRole="empleado" ToRole="tramite_error" />
+          <NavigationProperty Name="tramite_proceso" Relationship="Self.FkProceso_EmployeeId" FromRole="empleado" ToRole="tramite_proceso" />
+        </EntityType>
+        <EntityType Name="empresa">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaApertura" Type="DateTime" />
+          <Property Name="Contraseña" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="direccion_empresa" Relationship="Self.Fk_companyid" FromRole="empresa" ToRole="direccion_empresa" />
+          <NavigationProperty Name="empleado" Relationship="Self.Fk_company_id" FromRole="empresa" ToRole="empleado" />
+          <NavigationProperty Name="formulario" Relationship="Self.FkFormulario_companyid" FromRole="empresa" ToRole="formulario" />
+          <NavigationProperty Name="tramite" Relationship="Self.FkTramite_companyid" FromRole="empresa" ToRole="tramite" />
+        </EntityType>
+        <EntityType Name="etapatramite">
+          <Key>
+            <PropertyRef Name="IdEtapaTramite" />
+          </Key>
+          <Property Name="IdEtapaTramite" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tramite_proceso" Relationship="Self.FkProceso_EtapaId" FromRole="etapatramite" ToRole="tramite_proceso" />
+        </EntityType>
+        <EntityType Name="formulario">
+          <Key>
+            <PropertyRef Name="IdFormulario" />
+          </Key>
+          <Property Name="IdFormulario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FkIdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="FkIdTipo" Type="Int32" Nullable="false" />
+          <Property Name="UltimaActualizacion" Type="DateTime" />
+          <Property Name="Alerta" Type="SByte" />
+          <NavigationProperty Name="empresa" Relationship="Self.FkFormulario_companyid" FromRole="formulario" ToRole="empresa" />
+          <NavigationProperty Name="formulario_alerta" Relationship="Self.Fk_Alerta_IdFormulario" FromRole="formulario" ToRole="formulario_alerta" />
+          <NavigationProperty Name="tipoformulario" Relationship="Self.FkFormulario_typeid" FromRole="formulario" ToRole="tipoformulario" />
+          <NavigationProperty Name="numeracionformulario" Relationship="Self.FkNumeracion_FormularioId" FromRole="formulario" ToRole="numeracionformulario" />
+          <NavigationProperty Name="formulario_parametro" Relationship="Self.FkParametros_formularioid" FromRole="formulario" ToRole="formulario_parametro" />
+        </EntityType>
+        <EntityType Name="formulario_alerta">
+          <Key>
+            <PropertyRef Name="IdFormulario" />
+            <PropertyRef Name="IdAlerta" />
+          </Key>
+          <Property Name="IdFormulario" Type="Int32" Nullable="false" />
+          <Property Name="IdAlerta" Type="Int32" Nullable="false" />
+          <Property Name="FkIdEmpleado" Type="Int32" />
+          <Property Name="FechaAlerta" Type="DateTime" />
+          <NavigationProperty Name="alerta" Relationship="Self.Fk_Formulario_IdAlerta" FromRole="formulario_alerta" ToRole="alerta" />
+          <NavigationProperty Name="formulario" Relationship="Self.Fk_Alerta_IdFormulario" FromRole="formulario_alerta" ToRole="formulario" />
+        </EntityType>
+        <EntityType Name="formulario_parametro">
+          <Key>
+            <PropertyRef Name="IdFormulario" />
+            <PropertyRef Name="IdParametro" />
+          </Key>
+          <Property Name="IdFormulario" Type="Int32" Nullable="false" />
+          <Property Name="IdParametro" Type="Int32" Nullable="false" />
+          <Property Name="ValorParametro" Type="Int32" />
+          <NavigationProperty Name="formulario" Relationship="Self.FkParametros_formularioid" FromRole="formulario_parametro" ToRole="formulario" />
+          <NavigationProperty Name="parametro" Relationship="Self.Fk_parametrosid" FromRole="formulario_parametro" ToRole="parametro" />
+        </EntityType>
+        <EntityType Name="numeracionformulario">
+          <Key>
+            <PropertyRef Name="IdNumeracion" />
+          </Key>
+          <Property Name="IdNumeracion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FkIdFormulario" Type="Int32" Nullable="false" />
+          <Property Name="Numeracion" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Stock" Type="Int32" />
+          <Property Name="Deleted" Type="SByte" />
+          <NavigationProperty Name="formulario" Relationship="Self.FkNumeracion_FormularioId" FromRole="numeracionformulario" ToRole="formulario" />
+        </EntityType>
+        <EntityType Name="pais">
+          <Key>
+            <PropertyRef Name="IdPais" />
+          </Key>
+          <Property Name="IdPais" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NickPais" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="NombrePais" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="direccion" Relationship="Self.Fk_countryid" FromRole="pais" ToRole="direccion" />
+        </EntityType>
+        <EntityType Name="parametro">
+          <Key>
+            <PropertyRef Name="IdParametro" />
+          </Key>
+          <Property Name="IdParametro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreParametro" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="formulario_parametro" Relationship="Self.Fk_parametrosid" FromRole="parametro" ToRole="formulario_parametro" />
+        </EntityType>
+        <EntityType Name="perfil">
+          <Key>
+            <PropertyRef Name="IdPerfil" />
+          </Key>
+          <Property Name="IdPerfil" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Apellido" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Nick" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaCumpleaños" Type="DateTime" />
+          <NavigationProperty Name="usuario" Relationship="Self.Fk_profile" FromRole="perfil" ToRole="usuario" />
+          <NavigationProperty Name="perfil_direccion" Relationship="Self.Fk_profileid" FromRole="perfil" ToRole="perfil_direccion" />
+        </EntityType>
+        <EntityType Name="perfil_direccion">
+          <Key>
+            <PropertyRef Name="IdPerfil" />
+            <PropertyRef Name="IdDireccion" />
+          </Key>
+          <Property Name="IdPerfil" Type="Int32" Nullable="false" />
+          <Property Name="IdDireccion" Type="Int32" Nullable="false" />
+          <Property Name="Calle" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="direccion" Relationship="Self.Fk_adressid" FromRole="perfil_direccion" ToRole="direccion" />
+          <NavigationProperty Name="perfil" Relationship="Self.Fk_profileid" FromRole="perfil_direccion" ToRole="perfil" />
+        </EntityType>
+        <EntityType Name="preguntaseguridad">
+          <Key>
+            <PropertyRef Name="IdPregunta" />
+          </Key>
+          <Property Name="IdPregunta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Pregunta" Type="String" MaxLength="155" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="usuario_seguridad" Relationship="Self.FkPregunta_PreguntaId" FromRole="preguntaseguridad" ToRole="usuario_seguridad" />
+        </EntityType>
+        <EntityType Name="rol">
+          <Key>
+            <PropertyRef Name="IdRol" />
+          </Key>
+          <Property Name="IdRol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="65" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="85" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="usuario_rol" Relationship="Self.Fk_roleid" FromRole="rol" ToRole="usuario_rol" />
+        </EntityType>
+        <EntityType Name="tipoformulario">
+          <Key>
+            <PropertyRef Name="IdTipoFormulario" />
+          </Key>
+          <Property Name="IdTipoFormulario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FkIdClase" Type="Int32" Nullable="false" />
+          <Property Name="FkIdCategoria" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="categoriaformulario" Relationship="Self.Fk_TipoFormulario_IdCategoria" FromRole="tipoformulario" ToRole="categoriaformulario" />
+          <NavigationProperty Name="claseformulario" Relationship="Self.Fk_TipoFormulario_IdClase" FromRole="tipoformulario" ToRole="claseformulario" />
+          <NavigationProperty Name="formulario" Relationship="Self.FkFormulario_typeid" FromRole="tipoformulario" ToRole="formulario" />
+        </EntityType>
+        <EntityType Name="tramite">
+          <Key>
+            <PropertyRef Name="IdTramite" />
+          </Key>
+          <Property Name="IdTramite" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Dominio" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FkIdCategoria" Type="Int32" Nullable="false" />
+          <Property Name="FkIdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" />
+          <Property Name="Observaciones" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Deleted" Type="SByte" />
+          <NavigationProperty Name="categoriatramite" Relationship="Self.Fk_tramiteid" FromRole="tramite" ToRole="categoriatramite" />
+          <NavigationProperty Name="empresa" Relationship="Self.FkTramite_companyid" FromRole="tramite" ToRole="empresa" />
+          <NavigationProperty Name="tramite_error" Relationship="Self.FkErrores_tramiteid" FromRole="tramite" ToRole="tramite_error" />
+          <NavigationProperty Name="tramite_proceso" Relationship="Self.FkProceso_TramiteId" FromRole="tramite" ToRole="tramite_proceso" />
+        </EntityType>
+        <EntityType Name="tramite_error">
+          <Key>
+            <PropertyRef Name="IdTramite" />
+            <PropertyRef Name="IdCategoriaError" />
+          </Key>
+          <Property Name="IdTramite" Type="Int32" Nullable="false" />
+          <Property Name="IdCategoriaError" Type="Int32" Nullable="false" />
+          <Property Name="FkIdEmpleado" Type="Int32" Nullable="false" />
+          <Property Name="Resuelto" Type="SByte" />
+          <NavigationProperty Name="categoriaerror" Relationship="Self.FkErrores_errorid" FromRole="tramite_error" ToRole="categoriaerror" />
+          <NavigationProperty Name="empleado" Relationship="Self.FkErrores_employeeid" FromRole="tramite_error" ToRole="empleado" />
+          <NavigationProperty Name="tramite" Relationship="Self.FkErrores_tramiteid" FromRole="tramite_error" ToRole="tramite" />
+        </EntityType>
+        <EntityType Name="tramite_proceso">
+          <Key>
+            <PropertyRef Name="IdTramite" />
+            <PropertyRef Name="IdEtapaTramite" />
+          </Key>
+          <Property Name="IdTramite" Type="Int32" Nullable="false" />
+          <Property Name="IdEtapaTramite" Type="Int32" Nullable="false" />
+          <Property Name="FkIdEmpleado" Type="Int32" Nullable="false" />
+          <Property Name="EstadoActual" Type="SByte" />
+          <NavigationProperty Name="empleado" Relationship="Self.FkProceso_EmployeeId" FromRole="tramite_proceso" ToRole="empleado" />
+          <NavigationProperty Name="etapatramite" Relationship="Self.FkProceso_EtapaId" FromRole="tramite_proceso" ToRole="etapatramite" />
+          <NavigationProperty Name="tramite" Relationship="Self.FkProceso_TramiteId" FromRole="tramite_proceso" ToRole="tramite" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FkIdPerfil" Type="Int32" Nullable="false" />
+          <Property Name="FkIdSeguridad" Type="Int32" />
+          <Property Name="Usuario1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Contraseña" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="75" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UltimoAcceso" Type="DateTime" />
+          <Property Name="Activo" Type="SByte" />
+          <NavigationProperty Name="empleado" Relationship="Self.FkEmployee_userid" FromRole="usuario" ToRole="empleado" />
+          <NavigationProperty Name="perfil" Relationship="Self.Fk_profile" FromRole="usuario" ToRole="perfil" />
+          <NavigationProperty Name="usuario_seguridad" Relationship="Self.Fk_security" FromRole="usuario" ToRole="usuario_seguridad" />
+          <NavigationProperty Name="usuario_rol" Relationship="Self.Fk_userid" FromRole="usuario" ToRole="usuario_rol" />
+        </EntityType>
+        <EntityType Name="usuario_rol">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+            <PropertyRef Name="IdRol" />
+          </Key>
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+          <Property Name="IdRol" Type="Int32" Nullable="false" />
+          <Property Name="FechaInicio" Type="DateTime" />
+          <Property Name="FechaFin" Type="DateTime" />
+          <NavigationProperty Name="rol" Relationship="Self.Fk_roleid" FromRole="usuario_rol" ToRole="rol" />
+          <NavigationProperty Name="usuario" Relationship="Self.Fk_userid" FromRole="usuario_rol" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="usuario_seguridad">
+          <Key>
+            <PropertyRef Name="IdUsuarioSeguridad" />
+          </Key>
+          <Property Name="IdUsuarioSeguridad" Type="Int32" Nullable="false" />
+          <Property Name="FkIdPregunta" Type="Int32" Nullable="false" />
+          <Property Name="Respuesta" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="preguntaseguridad" Relationship="Self.FkPregunta_PreguntaId" FromRole="usuario_seguridad" ToRole="preguntaseguridad" />
+          <NavigationProperty Name="usuario" Relationship="Self.Fk_security" FromRole="usuario_seguridad" ToRole="usuario" />
+        </EntityType>
+        <Association Name="Fk_Formulario_IdAlerta">
+          <End Role="alerta" Type="Self.alerta" Multiplicity="1" />
+          <End Role="formulario_alerta" Type="Self.formulario_alerta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="alerta">
+              <PropertyRef Name="IdAlerta" />
+            </Principal>
+            <Dependent Role="formulario_alerta">
+              <PropertyRef Name="IdAlerta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkAlerta_IdTipoAlerta">
+          <End Role="categoriaalerta" Type="Self.categoriaalerta" Multiplicity="0..1" />
+          <End Role="alerta" Type="Self.alerta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoriaalerta">
+              <PropertyRef Name="IdCategoriaAlerta" />
+            </Principal>
+            <Dependent Role="alerta">
+              <PropertyRef Name="FkIdTipoAlerta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkErrores_errorid">
+          <End Role="categoriaerror" Type="Self.categoriaerror" Multiplicity="1" />
+          <End Role="tramite_error" Type="Self.tramite_error" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoriaerror">
+              <PropertyRef Name="IdCategoriaError" />
+            </Principal>
+            <Dependent Role="tramite_error">
+              <PropertyRef Name="IdCategoriaError" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_TipoFormulario_IdCategoria">
+          <End Role="categoriaformulario" Type="Self.categoriaformulario" Multiplicity="1" />
+          <End Role="tipoformulario" Type="Self.tipoformulario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoriaformulario">
+              <PropertyRef Name="IdCategoria" />
+            </Principal>
+            <Dependent Role="tipoformulario">
+              <PropertyRef Name="FkIdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_tramiteid">
+          <End Role="categoriatramite" Type="Self.categoriatramite" Multiplicity="1" />
+          <End Role="tramite" Type="Self.tramite" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoriatramite">
+              <PropertyRef Name="IdCategoriaTramite" />
+            </Principal>
+            <Dependent Role="tramite">
+              <PropertyRef Name="FkIdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_TipoFormulario_IdClase">
+          <End Role="claseformulario" Type="Self.claseformulario" Multiplicity="1" />
+          <End Role="tipoformulario" Type="Self.tipoformulario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="claseformulario">
+              <PropertyRef Name="IdClase" />
+            </Principal>
+            <Dependent Role="tipoformulario">
+              <PropertyRef Name="FkIdClase" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_addressid">
+          <End Role="direccion" Type="Self.direccion" Multiplicity="1" />
+          <End Role="direccion_empresa" Type="Self.direccion_empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="direccion">
+              <PropertyRef Name="IdDireccion" />
+            </Principal>
+            <Dependent Role="direccion_empresa">
+              <PropertyRef Name="IdDireccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_adressid">
+          <End Role="direccion" Type="Self.direccion" Multiplicity="1" />
+          <End Role="perfil_direccion" Type="Self.perfil_direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="direccion">
+              <PropertyRef Name="IdDireccion" />
+            </Principal>
+            <Dependent Role="perfil_direccion">
+              <PropertyRef Name="IdDireccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_countryid">
+          <End Role="pais" Type="Self.pais" Multiplicity="0..1" />
+          <End Role="direccion" Type="Self.direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pais">
+              <PropertyRef Name="IdPais" />
+            </Principal>
+            <Dependent Role="direccion">
+              <PropertyRef Name="FkIdPais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_companyid">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="1" />
+          <End Role="direccion_empresa" Type="Self.direccion_empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="IdEmpresa" />
+            </Principal>
+            <Dependent Role="direccion_empresa">
+              <PropertyRef Name="IdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_company_id">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="1" />
+          <End Role="empleado" Type="Self.empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="IdEmpresa" />
+            </Principal>
+            <Dependent Role="empleado">
+              <PropertyRef Name="FkIdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkEmployee_userid">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+          <End Role="empleado" Type="Self.empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="empleado">
+              <PropertyRef Name="FkIdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkErrores_employeeid">
+          <End Role="empleado" Type="Self.empleado" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tramite_error" Type="Self.tramite_error" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empleado">
+              <PropertyRef Name="IdEmpleado" />
+            </Principal>
+            <Dependent Role="tramite_error">
+              <PropertyRef Name="FkIdEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkProceso_EmployeeId">
+          <End Role="empleado" Type="Self.empleado" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tramite_proceso" Type="Self.tramite_proceso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empleado">
+              <PropertyRef Name="IdEmpleado" />
+            </Principal>
+            <Dependent Role="tramite_proceso">
+              <PropertyRef Name="FkIdEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkFormulario_companyid">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="1" />
+          <End Role="formulario" Type="Self.formulario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="IdEmpresa" />
+            </Principal>
+            <Dependent Role="formulario">
+              <PropertyRef Name="FkIdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkTramite_companyid">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="1" />
+          <End Role="tramite" Type="Self.tramite" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="IdEmpresa" />
+            </Principal>
+            <Dependent Role="tramite">
+              <PropertyRef Name="FkIdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkProceso_EtapaId">
+          <End Role="etapatramite" Type="Self.etapatramite" Multiplicity="1" />
+          <End Role="tramite_proceso" Type="Self.tramite_proceso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="etapatramite">
+              <PropertyRef Name="IdEtapaTramite" />
+            </Principal>
+            <Dependent Role="tramite_proceso">
+              <PropertyRef Name="IdEtapaTramite" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Alerta_IdFormulario">
+          <End Role="formulario" Type="Self.formulario" Multiplicity="1" />
+          <End Role="formulario_alerta" Type="Self.formulario_alerta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="formulario">
+              <PropertyRef Name="IdFormulario" />
+            </Principal>
+            <Dependent Role="formulario_alerta">
+              <PropertyRef Name="IdFormulario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkFormulario_typeid">
+          <End Role="tipoformulario" Type="Self.tipoformulario" Multiplicity="1" />
+          <End Role="formulario" Type="Self.formulario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipoformulario">
+              <PropertyRef Name="IdTipoFormulario" />
+            </Principal>
+            <Dependent Role="formulario">
+              <PropertyRef Name="FkIdTipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkNumeracion_FormularioId">
+          <End Role="formulario" Type="Self.formulario" Multiplicity="1" />
+          <End Role="numeracionformulario" Type="Self.numeracionformulario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="formulario">
+              <PropertyRef Name="IdFormulario" />
+            </Principal>
+            <Dependent Role="numeracionformulario">
+              <PropertyRef Name="FkIdFormulario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkParametros_formularioid">
+          <End Role="formulario" Type="Self.formulario" Multiplicity="1" />
+          <End Role="formulario_parametro" Type="Self.formulario_parametro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="formulario">
+              <PropertyRef Name="IdFormulario" />
+            </Principal>
+            <Dependent Role="formulario_parametro">
+              <PropertyRef Name="IdFormulario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_parametrosid">
+          <End Role="parametro" Type="Self.parametro" Multiplicity="1" />
+          <End Role="formulario_parametro" Type="Self.formulario_parametro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="parametro">
+              <PropertyRef Name="IdParametro" />
+            </Principal>
+            <Dependent Role="formulario_parametro">
+              <PropertyRef Name="IdParametro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_profile">
+          <End Role="perfil" Type="Self.perfil" Multiplicity="1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="perfil">
+              <PropertyRef Name="IdPerfil" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="FkIdPerfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_profileid">
+          <End Role="perfil" Type="Self.perfil" Multiplicity="1" />
+          <End Role="perfil_direccion" Type="Self.perfil_direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="perfil">
+              <PropertyRef Name="IdPerfil" />
+            </Principal>
+            <Dependent Role="perfil_direccion">
+              <PropertyRef Name="IdPerfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkPregunta_PreguntaId">
+          <End Role="preguntaseguridad" Type="Self.preguntaseguridad" Multiplicity="1" />
+          <End Role="usuario_seguridad" Type="Self.usuario_seguridad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="preguntaseguridad">
+              <PropertyRef Name="IdPregunta" />
+            </Principal>
+            <Dependent Role="usuario_seguridad">
+              <PropertyRef Name="FkIdPregunta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_roleid">
+          <End Role="rol" Type="Self.rol" Multiplicity="1" />
+          <End Role="usuario_rol" Type="Self.usuario_rol" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rol">
+              <PropertyRef Name="IdRol" />
+            </Principal>
+            <Dependent Role="usuario_rol">
+              <PropertyRef Name="IdRol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkErrores_tramiteid">
+          <End Role="tramite" Type="Self.tramite" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tramite_error" Type="Self.tramite_error" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tramite">
+              <PropertyRef Name="IdTramite" />
+            </Principal>
+            <Dependent Role="tramite_error">
+              <PropertyRef Name="IdTramite" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FkProceso_TramiteId">
+          <End Role="tramite" Type="Self.tramite" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tramite_proceso" Type="Self.tramite_proceso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tramite">
+              <PropertyRef Name="IdTramite" />
+            </Principal>
+            <Dependent Role="tramite_proceso">
+              <PropertyRef Name="IdTramite" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_security">
+          <End Role="usuario_seguridad" Type="Self.usuario_seguridad" Multiplicity="0..1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario_seguridad">
+              <PropertyRef Name="IdUsuarioSeguridad" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="FkIdSeguridad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_userid">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+          <End Role="usuario_rol" Type="Self.usuario_rol" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="usuario_rol">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="miregistroEntity" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="alerta" EntityType="Self.alerta" />
+          <EntitySet Name="categoriaalerta" EntityType="Self.categoriaalerta" />
+          <EntitySet Name="categoriaerror" EntityType="Self.categoriaerror" />
+          <EntitySet Name="categoriaformulario" EntityType="Self.categoriaformulario" />
+          <EntitySet Name="categoriatramite" EntityType="Self.categoriatramite" />
+          <EntitySet Name="claseformulario" EntityType="Self.claseformulario" />
+          <EntitySet Name="direccion" EntityType="Self.direccion" />
+          <EntitySet Name="direccion_empresa" EntityType="Self.direccion_empresa" />
+          <EntitySet Name="empleado" EntityType="Self.empleado" />
+          <EntitySet Name="empresa" EntityType="Self.empresa" />
+          <EntitySet Name="etapatramite" EntityType="Self.etapatramite" />
+          <EntitySet Name="formulario" EntityType="Self.formulario" />
+          <EntitySet Name="formulario_alerta" EntityType="Self.formulario_alerta" />
+          <EntitySet Name="formulario_parametro" EntityType="Self.formulario_parametro" />
+          <EntitySet Name="numeracionformulario" EntityType="Self.numeracionformulario" />
+          <EntitySet Name="pais" EntityType="Self.pais" />
+          <EntitySet Name="parametro" EntityType="Self.parametro" />
+          <EntitySet Name="perfil" EntityType="Self.perfil" />
+          <EntitySet Name="perfil_direccion" EntityType="Self.perfil_direccion" />
+          <EntitySet Name="preguntaseguridad" EntityType="Self.preguntaseguridad" />
+          <EntitySet Name="rol" EntityType="Self.rol" />
+          <EntitySet Name="tipoformulario" EntityType="Self.tipoformulario" />
+          <EntitySet Name="tramite" EntityType="Self.tramite" />
+          <EntitySet Name="tramite_error" EntityType="Self.tramite_error" />
+          <EntitySet Name="tramite_proceso" EntityType="Self.tramite_proceso" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" />
+          <EntitySet Name="usuario_rol" EntityType="Self.usuario_rol" />
+          <EntitySet Name="usuario_seguridad" EntityType="Self.usuario_seguridad" />
+          <AssociationSet Name="Fk_Formulario_IdAlerta" Association="Self.Fk_Formulario_IdAlerta">
+            <End Role="alerta" EntitySet="alerta" />
+            <End Role="formulario_alerta" EntitySet="formulario_alerta" />
+          </AssociationSet>
+          <AssociationSet Name="FkAlerta_IdTipoAlerta" Association="Self.FkAlerta_IdTipoAlerta">
+            <End Role="categoriaalerta" EntitySet="categoriaalerta" />
+            <End Role="alerta" EntitySet="alerta" />
+          </AssociationSet>
+          <AssociationSet Name="FkErrores_errorid" Association="Self.FkErrores_errorid">
+            <End Role="categoriaerror" EntitySet="categoriaerror" />
+            <End Role="tramite_error" EntitySet="tramite_error" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_TipoFormulario_IdCategoria" Association="Self.Fk_TipoFormulario_IdCategoria">
+            <End Role="categoriaformulario" EntitySet="categoriaformulario" />
+            <End Role="tipoformulario" EntitySet="tipoformulario" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_tramiteid" Association="Self.Fk_tramiteid">
+            <End Role="categoriatramite" EntitySet="categoriatramite" />
+            <End Role="tramite" EntitySet="tramite" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_TipoFormulario_IdClase" Association="Self.Fk_TipoFormulario_IdClase">
+            <End Role="claseformulario" EntitySet="claseformulario" />
+            <End Role="tipoformulario" EntitySet="tipoformulario" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_addressid" Association="Self.Fk_addressid">
+            <End Role="direccion" EntitySet="direccion" />
+            <End Role="direccion_empresa" EntitySet="direccion_empresa" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_adressid" Association="Self.Fk_adressid">
+            <End Role="direccion" EntitySet="direccion" />
+            <End Role="perfil_direccion" EntitySet="perfil_direccion" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_countryid" Association="Self.Fk_countryid">
+            <End Role="pais" EntitySet="pais" />
+            <End Role="direccion" EntitySet="direccion" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_companyid" Association="Self.Fk_companyid">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="direccion_empresa" EntitySet="direccion_empresa" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_company_id" Association="Self.Fk_company_id">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="empleado" EntitySet="empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FkEmployee_userid" Association="Self.FkEmployee_userid">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="empleado" EntitySet="empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FkErrores_employeeid" Association="Self.FkErrores_employeeid">
+            <End Role="empleado" EntitySet="empleado" />
+            <End Role="tramite_error" EntitySet="tramite_error" />
+          </AssociationSet>
+          <AssociationSet Name="FkProceso_EmployeeId" Association="Self.FkProceso_EmployeeId">
+            <End Role="empleado" EntitySet="empleado" />
+            <End Role="tramite_proceso" EntitySet="tramite_proceso" />
+          </AssociationSet>
+          <AssociationSet Name="FkFormulario_companyid" Association="Self.FkFormulario_companyid">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="formulario" EntitySet="formulario" />
+          </AssociationSet>
+          <AssociationSet Name="FkTramite_companyid" Association="Self.FkTramite_companyid">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="tramite" EntitySet="tramite" />
+          </AssociationSet>
+          <AssociationSet Name="FkProceso_EtapaId" Association="Self.FkProceso_EtapaId">
+            <End Role="etapatramite" EntitySet="etapatramite" />
+            <End Role="tramite_proceso" EntitySet="tramite_proceso" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Alerta_IdFormulario" Association="Self.Fk_Alerta_IdFormulario">
+            <End Role="formulario" EntitySet="formulario" />
+            <End Role="formulario_alerta" EntitySet="formulario_alerta" />
+          </AssociationSet>
+          <AssociationSet Name="FkFormulario_typeid" Association="Self.FkFormulario_typeid">
+            <End Role="tipoformulario" EntitySet="tipoformulario" />
+            <End Role="formulario" EntitySet="formulario" />
+          </AssociationSet>
+          <AssociationSet Name="FkNumeracion_FormularioId" Association="Self.FkNumeracion_FormularioId">
+            <End Role="formulario" EntitySet="formulario" />
+            <End Role="numeracionformulario" EntitySet="numeracionformulario" />
+          </AssociationSet>
+          <AssociationSet Name="FkParametros_formularioid" Association="Self.FkParametros_formularioid">
+            <End Role="formulario" EntitySet="formulario" />
+            <End Role="formulario_parametro" EntitySet="formulario_parametro" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_parametrosid" Association="Self.Fk_parametrosid">
+            <End Role="parametro" EntitySet="parametro" />
+            <End Role="formulario_parametro" EntitySet="formulario_parametro" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_profile" Association="Self.Fk_profile">
+            <End Role="perfil" EntitySet="perfil" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_profileid" Association="Self.Fk_profileid">
+            <End Role="perfil" EntitySet="perfil" />
+            <End Role="perfil_direccion" EntitySet="perfil_direccion" />
+          </AssociationSet>
+          <AssociationSet Name="FkPregunta_PreguntaId" Association="Self.FkPregunta_PreguntaId">
+            <End Role="preguntaseguridad" EntitySet="preguntaseguridad" />
+            <End Role="usuario_seguridad" EntitySet="usuario_seguridad" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_roleid" Association="Self.Fk_roleid">
+            <End Role="rol" EntitySet="rol" />
+            <End Role="usuario_rol" EntitySet="usuario_rol" />
+          </AssociationSet>
+          <AssociationSet Name="FkErrores_tramiteid" Association="Self.FkErrores_tramiteid">
+            <End Role="tramite" EntitySet="tramite" />
+            <End Role="tramite_error" EntitySet="tramite_error" />
+          </AssociationSet>
+          <AssociationSet Name="FkProceso_TramiteId" Association="Self.FkProceso_TramiteId">
+            <End Role="tramite" EntitySet="tramite" />
+            <End Role="tramite_proceso" EntitySet="tramite_proceso" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_security" Association="Self.Fk_security">
+            <End Role="usuario_seguridad" EntitySet="usuario_seguridad" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_userid" Association="Self.Fk_userid">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="usuario_rol" EntitySet="usuario_rol" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="miregistroModelStoreContainer" CdmEntityContainer="miregistroEntity">
+          <EntitySetMapping Name="alerta">
+            <EntityTypeMapping TypeName="miregistroModel.alerta">
+              <MappingFragment StoreEntitySet="alerta">
+                <ScalarProperty Name="IdAlerta" ColumnName="IdAlerta" />
+                <ScalarProperty Name="FkIdTipoAlerta" ColumnName="FkIdTipoAlerta" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="EstadoActual" ColumnName="EstadoActual" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categoriaalerta">
+            <EntityTypeMapping TypeName="miregistroModel.categoriaalerta">
+              <MappingFragment StoreEntitySet="categoriaalerta">
+                <ScalarProperty Name="IdCategoriaAlerta" ColumnName="IdCategoriaAlerta" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categoriaerror">
+            <EntityTypeMapping TypeName="miregistroModel.categoriaerror">
+              <MappingFragment StoreEntitySet="categoriaerror">
+                <ScalarProperty Name="IdCategoriaError" ColumnName="IdCategoriaError" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categoriaformulario">
+            <EntityTypeMapping TypeName="miregistroModel.categoriaformulario">
+              <MappingFragment StoreEntitySet="categoriaformulario">
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+                <ScalarProperty Name="NombreCategoria" ColumnName="NombreCategoria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categoriatramite">
+            <EntityTypeMapping TypeName="miregistroModel.categoriatramite">
+              <MappingFragment StoreEntitySet="categoriatramite">
+                <ScalarProperty Name="IdCategoriaTramite" ColumnName="IdCategoriaTramite" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="claseformulario">
+            <EntityTypeMapping TypeName="miregistroModel.claseformulario">
+              <MappingFragment StoreEntitySet="claseformulario">
+                <ScalarProperty Name="IdClase" ColumnName="IdClase" />
+                <ScalarProperty Name="NombreClase" ColumnName="NombreClase" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="direccion">
+            <EntityTypeMapping TypeName="miregistroModel.direccion">
+              <MappingFragment StoreEntitySet="direccion">
+                <ScalarProperty Name="IdDireccion" ColumnName="IdDireccion" />
+                <ScalarProperty Name="FkIdPais" ColumnName="FkIdPais" />
+                <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="direccion_empresa">
+            <EntityTypeMapping TypeName="miregistroModel.direccion_empresa">
+              <MappingFragment StoreEntitySet="direccion_empresa">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdDireccion" ColumnName="IdDireccion" />
+                <ScalarProperty Name="Calle" ColumnName="Calle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="empleado">
+            <EntityTypeMapping TypeName="miregistroModel.empleado">
+              <MappingFragment StoreEntitySet="empleado">
+                <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+                <ScalarProperty Name="FkIdUsuario" ColumnName="FkIdUsuario" />
+                <ScalarProperty Name="FkIdEmpresa" ColumnName="FkIdEmpresa" />
+                <ScalarProperty Name="EstadoActual" ColumnName="EstadoActual" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="empresa">
+            <EntityTypeMapping TypeName="miregistroModel.empresa">
+              <MappingFragment StoreEntitySet="empresa">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="FechaApertura" ColumnName="FechaApertura" />
+                <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="etapatramite">
+            <EntityTypeMapping TypeName="miregistroModel.etapatramite">
+              <MappingFragment StoreEntitySet="etapatramite">
+                <ScalarProperty Name="IdEtapaTramite" ColumnName="IdEtapaTramite" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="formulario">
+            <EntityTypeMapping TypeName="miregistroModel.formulario">
+              <MappingFragment StoreEntitySet="formulario">
+                <ScalarProperty Name="IdFormulario" ColumnName="IdFormulario" />
+                <ScalarProperty Name="FkIdEmpresa" ColumnName="FkIdEmpresa" />
+                <ScalarProperty Name="FkIdTipo" ColumnName="FkIdTipo" />
+                <ScalarProperty Name="UltimaActualizacion" ColumnName="UltimaActualizacion" />
+                <ScalarProperty Name="Alerta" ColumnName="Alerta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="formulario_alerta">
+            <EntityTypeMapping TypeName="miregistroModel.formulario_alerta">
+              <MappingFragment StoreEntitySet="formulario_alerta">
+                <ScalarProperty Name="IdFormulario" ColumnName="IdFormulario" />
+                <ScalarProperty Name="IdAlerta" ColumnName="IdAlerta" />
+                <ScalarProperty Name="FkIdEmpleado" ColumnName="FkIdEmpleado" />
+                <ScalarProperty Name="FechaAlerta" ColumnName="FechaAlerta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="formulario_parametro">
+            <EntityTypeMapping TypeName="miregistroModel.formulario_parametro">
+              <MappingFragment StoreEntitySet="formulario_parametro">
+                <ScalarProperty Name="IdFormulario" ColumnName="IdFormulario" />
+                <ScalarProperty Name="IdParametro" ColumnName="IdParametro" />
+                <ScalarProperty Name="ValorParametro" ColumnName="ValorParametro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="numeracionformulario">
+            <EntityTypeMapping TypeName="miregistroModel.numeracionformulario">
+              <MappingFragment StoreEntitySet="numeracionformulario">
+                <ScalarProperty Name="IdNumeracion" ColumnName="IdNumeracion" />
+                <ScalarProperty Name="FkIdFormulario" ColumnName="FkIdFormulario" />
+                <ScalarProperty Name="Numeracion" ColumnName="Numeracion" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pais">
+            <EntityTypeMapping TypeName="miregistroModel.pais">
+              <MappingFragment StoreEntitySet="pais">
+                <ScalarProperty Name="IdPais" ColumnName="IdPais" />
+                <ScalarProperty Name="NickPais" ColumnName="NickPais" />
+                <ScalarProperty Name="NombrePais" ColumnName="NombrePais" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="parametro">
+            <EntityTypeMapping TypeName="miregistroModel.parametro">
+              <MappingFragment StoreEntitySet="parametro">
+                <ScalarProperty Name="IdParametro" ColumnName="IdParametro" />
+                <ScalarProperty Name="NombreParametro" ColumnName="NombreParametro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="perfil">
+            <EntityTypeMapping TypeName="miregistroModel.perfil">
+              <MappingFragment StoreEntitySet="perfil">
+                <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Nick" ColumnName="Nick" />
+                <ScalarProperty Name="FechaCumpleaños" ColumnName="FechaCumpleaños" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="perfil_direccion">
+            <EntityTypeMapping TypeName="miregistroModel.perfil_direccion">
+              <MappingFragment StoreEntitySet="perfil_direccion">
+                <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
+                <ScalarProperty Name="IdDireccion" ColumnName="IdDireccion" />
+                <ScalarProperty Name="Calle" ColumnName="Calle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="preguntaseguridad">
+            <EntityTypeMapping TypeName="miregistroModel.preguntaseguridad">
+              <MappingFragment StoreEntitySet="preguntaseguridad">
+                <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
+                <ScalarProperty Name="Pregunta" ColumnName="Pregunta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rol">
+            <EntityTypeMapping TypeName="miregistroModel.rol">
+              <MappingFragment StoreEntitySet="rol">
+                <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipoformulario">
+            <EntityTypeMapping TypeName="miregistroModel.tipoformulario">
+              <MappingFragment StoreEntitySet="tipoformulario">
+                <ScalarProperty Name="IdTipoFormulario" ColumnName="IdTipoFormulario" />
+                <ScalarProperty Name="FkIdClase" ColumnName="FkIdClase" />
+                <ScalarProperty Name="FkIdCategoria" ColumnName="FkIdCategoria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tramite">
+            <EntityTypeMapping TypeName="miregistroModel.tramite">
+              <MappingFragment StoreEntitySet="tramite">
+                <ScalarProperty Name="IdTramite" ColumnName="IdTramite" />
+                <ScalarProperty Name="Dominio" ColumnName="Dominio" />
+                <ScalarProperty Name="FkIdCategoria" ColumnName="FkIdCategoria" />
+                <ScalarProperty Name="FkIdEmpresa" ColumnName="FkIdEmpresa" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tramite_error">
+            <EntityTypeMapping TypeName="miregistroModel.tramite_error">
+              <MappingFragment StoreEntitySet="tramite_error">
+                <ScalarProperty Name="IdTramite" ColumnName="IdTramite" />
+                <ScalarProperty Name="IdCategoriaError" ColumnName="IdCategoriaError" />
+                <ScalarProperty Name="FkIdEmpleado" ColumnName="FkIdEmpleado" />
+                <ScalarProperty Name="Resuelto" ColumnName="Resuelto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tramite_proceso">
+            <EntityTypeMapping TypeName="miregistroModel.tramite_proceso">
+              <MappingFragment StoreEntitySet="tramite_proceso">
+                <ScalarProperty Name="IdTramite" ColumnName="IdTramite" />
+                <ScalarProperty Name="IdEtapaTramite" ColumnName="IdEtapaTramite" />
+                <ScalarProperty Name="FkIdEmpleado" ColumnName="FkIdEmpleado" />
+                <ScalarProperty Name="EstadoActual" ColumnName="EstadoActual" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuario">
+            <EntityTypeMapping TypeName="miregistroModel.usuario">
+              <MappingFragment StoreEntitySet="usuario">
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="FkIdPerfil" ColumnName="FkIdPerfil" />
+                <ScalarProperty Name="FkIdSeguridad" ColumnName="FkIdSeguridad" />
+                <ScalarProperty Name="Usuario1" ColumnName="Usuario" />
+                <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="UltimoAcceso" ColumnName="UltimoAcceso" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuario_rol">
+            <EntityTypeMapping TypeName="miregistroModel.usuario_rol">
+              <MappingFragment StoreEntitySet="usuario_rol">
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuario_seguridad">
+            <EntityTypeMapping TypeName="miregistroModel.usuario_seguridad">
+              <MappingFragment StoreEntitySet="usuario_seguridad">
+                <ScalarProperty Name="IdUsuarioSeguridad" ColumnName="IdUsuarioSeguridad" />
+                <ScalarProperty Name="FkIdPregunta" ColumnName="FkIdPregunta" />
+                <ScalarProperty Name="Respuesta" ColumnName="Respuesta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

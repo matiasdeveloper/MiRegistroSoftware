@@ -594,10 +594,7 @@
   <ItemGroup>
     <None Include="Resources\multiply_60px.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App.Data\" />
-    <Folder Include="App.Start\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

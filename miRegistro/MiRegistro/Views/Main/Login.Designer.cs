@@ -72,7 +72,7 @@ namespace MiRegistro
             this.checkBox_guardar.FillColor = System.Drawing.Color.White;
             this.checkBox_guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_guardar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.checkBox_guardar.Location = new System.Drawing.Point(39, 296);
+            this.checkBox_guardar.Location = new System.Drawing.Point(38, 286);
             this.checkBox_guardar.Name = "checkBox_guardar";
             this.checkBox_guardar.Size = new System.Drawing.Size(199, 20);
             this.checkBox_guardar.TabIndex = 251;
@@ -84,7 +84,7 @@ namespace MiRegistro
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(27, 116);
+            this.label3.Location = new System.Drawing.Point(26, 111);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(253, 30);
@@ -104,7 +104,7 @@ namespace MiRegistro
             this.txtBox_user.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtBox_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_user.ForeColor = System.Drawing.Color.Silver;
-            this.txtBox_user.Location = new System.Drawing.Point(39, 188);
+            this.txtBox_user.Location = new System.Drawing.Point(38, 178);
             this.txtBox_user.Name = "txtBox_user";
             this.txtBox_user.PasswordChar = '\0';
             this.txtBox_user.Radius = 7;
@@ -118,7 +118,7 @@ namespace MiRegistro
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(81)))));
-            this.label4.Location = new System.Drawing.Point(103, 25);
+            this.label4.Location = new System.Drawing.Point(103, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 37);
             this.label4.TabIndex = 244;
@@ -129,7 +129,7 @@ namespace MiRegistro
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(39, 229);
+            this.label6.Location = new System.Drawing.Point(38, 219);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(146, 15);
@@ -141,7 +141,7 @@ namespace MiRegistro
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(39, 166);
+            this.label5.Location = new System.Drawing.Point(38, 156);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 15);
@@ -153,7 +153,7 @@ namespace MiRegistro
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.label2.Location = new System.Drawing.Point(66, 24);
+            this.label2.Location = new System.Drawing.Point(66, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 34);
             this.label2.TabIndex = 245;
@@ -164,7 +164,7 @@ namespace MiRegistro
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(25, 81);
+            this.label1.Location = new System.Drawing.Point(24, 76);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 29);
@@ -183,7 +183,7 @@ namespace MiRegistro
             this.txtBox_pass.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtBox_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_pass.ForeColor = System.Drawing.Color.Silver;
-            this.txtBox_pass.Location = new System.Drawing.Point(39, 251);
+            this.txtBox_pass.Location = new System.Drawing.Point(38, 241);
             this.txtBox_pass.Name = "txtBox_pass";
             this.txtBox_pass.PasswordChar = '●';
             this.txtBox_pass.Radius = 7;
@@ -207,7 +207,7 @@ namespace MiRegistro
             this.btn_login.ForeColor = System.Drawing.Color.White;
             this.btn_login.Image = ((System.Drawing.Image)(resources.GetObject("btn_login.Image")));
             this.btn_login.ImageSize = new System.Drawing.Size(0, 0);
-            this.btn_login.Location = new System.Drawing.Point(39, 330);
+            this.btn_login.Location = new System.Drawing.Point(38, 320);
             this.btn_login.Name = "btn_login";
             this.btn_login.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
             this.btn_login.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -218,7 +218,6 @@ namespace MiRegistro
             this.btn_login.Size = new System.Drawing.Size(275, 28);
             this.btn_login.TabIndex = 252;
             this.btn_login.Text = "Ingresar al sistema";
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // gunaGradientPanel1
             // 
@@ -237,10 +236,10 @@ namespace MiRegistro
             this.gunaGradientPanel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
             this.gunaGradientPanel1.GradientColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
             this.gunaGradientPanel1.GradientColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.gunaGradientPanel1.Location = new System.Drawing.Point(354, 0);
+            this.gunaGradientPanel1.Location = new System.Drawing.Point(349, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
             this.gunaGradientPanel1.Quality = 50;
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(450, 443);
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(457, 434);
             this.gunaGradientPanel1.TabIndex = 253;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
@@ -344,7 +343,7 @@ namespace MiRegistro
             this.linkLabel.AutoSize = true;
             this.linkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.linkLabel.Location = new System.Drawing.Point(105, 370);
+            this.linkLabel.Location = new System.Drawing.Point(104, 360);
             this.linkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel.Name = "linkLabel";
             this.linkLabel.Size = new System.Drawing.Size(140, 13);
@@ -361,7 +360,7 @@ namespace MiRegistro
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(804, 443);
+            this.ClientSize = new System.Drawing.Size(806, 434);
             this.Controls.Add(this.linkLabel);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Controls.Add(this.btn_login);
@@ -376,6 +375,7 @@ namespace MiRegistro
             this.Controls.Add(this.txtBox_pass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.gunaGradientPanel1.ResumeLayout(false);
             this.gunaGradientPanel1.PerformLayout();
