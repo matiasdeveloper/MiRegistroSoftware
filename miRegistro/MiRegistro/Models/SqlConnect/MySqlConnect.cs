@@ -6,28 +6,24 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace Models
 {
-    public class MySqlConnect : IConnector
+    public class MySqlConnect
     {
         public string connectionString { get; set; }
+        public MySqlConnection MySqlConnection { get; set; }
 
-        public MySql.Data.MySqlClient.MySqlConnection sqlConnection { get; set; }
-        public string server { get; set; } 
-        public string port { get; set; }
-        public string user { get; set; }
-        public string password { get; set; }
-
-        public MySql.Data.MySqlClient.MySqlConnection OpenConnection()
+        public MySqlConnection OpenConnection()
         {
             try
             {
-                using (sqlConnection = new MySql.Data.MySqlClient.MySqlConnection(connectionString))
+                using (MySqlConnection = new MySqlConnection(connectionString))
                 {
-                    if (sqlConnection.State == ConnectionState.Closed)
+                    if (MySqlConnection.State == ConnectionState.Closed)
                     {
-                        sqlConnection.Open();
+                        MySqlConnection.Open();
                     }
                 }
             }
@@ -35,16 +31,16 @@ namespace Models
             {
                 Debug.Write("Error connection DB" + ex);
             }
-            return sqlConnection;
+            return MySqlConnection;
         }
 
-        public MySql.Data.MySqlClient.MySqlConnection CloseConnection()
+        public MySqlConnection CloseConnection()
         {
-            if (sqlConnection.State == ConnectionState.Open)
+            if (MySqlConnection.State == ConnectionState.Open)
             {
-                sqlConnection.Close();
+                MySqlConnection.Close();
             }
-            return sqlConnection;
+            return MySqlConnection;
         }
     }
 }

@@ -11,17 +11,5 @@
     <Setting Name="Color" Type="System.Drawing.Font" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Port" Type="System.String" Scope="User">
-      <Value Profile="(Default)">port = 3306;</Value>
-    </Setting>
-    <Setting Name="Server" Type="System.String" Scope="User">
-      <Value Profile="(Default)">server = localhost;</Value>
-    </Setting>
-    <Setting Name="PassDb" Type="System.String" Scope="User">
-      <Value Profile="(Default)">password = 19573database;</Value>
-    </Setting>
-    <Setting Name="UserDb" Type="System.String" Scope="User">
-      <Value Profile="(Default)">userid = admin;</Value>
-    </Setting>
   </Settings>
 </SettingsFile>
