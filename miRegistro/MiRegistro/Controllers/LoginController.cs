@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Models;
 using MiRegistro.Models;
+using MiRegistro.Views.Main;
 
 namespace Controllers
 {
@@ -50,13 +51,12 @@ namespace Controllers
             //frm_principal frmPrincipal = new frm_principal();
             //frmPrincipal.FormClosed += Logout;
 
-            //frm_bienvenida frmBienvenida = new frm_bienvenida(frmPrincipal, _view);
-            //frmBienvenida.Show();
+            SplashWelcome splashScreen = new SplashWelcome("");
+            splashScreen.Show();
 
             _view.Opacity = 0;
             _view.ShowIcon = false;
             _view.ShowInTaskbar = false;
-
             _view.Hide();
         }
 

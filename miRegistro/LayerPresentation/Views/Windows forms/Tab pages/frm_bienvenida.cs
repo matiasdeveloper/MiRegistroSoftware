@@ -48,28 +48,7 @@ namespace LayerPresentation
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (count == 0)
-            {
-                if (this.Opacity < 1) this.Opacity += 0.05;
-                bunifuProgressBar1.Value += 1;
-                if (bunifuProgressBar1.Value == 100)
-                {
-                    timer1.Stop();
-                    timer1.Start();
-                    count++;
-                }
-            }
-            else
-            {
-                this.Opacity -= 0.02;
-                if (this.Opacity == 0)
-                {
-                    timer1.Stop();
-                    frm.Show();
-                    frm.Opacity = 100;
-                    this.Close();
-                }
-            }
+
         }
 
         private void Bienvenida_Load(object sender, EventArgs e)
