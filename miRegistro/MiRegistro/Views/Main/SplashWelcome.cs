@@ -1,4 +1,5 @@
 ﻿using MiRegistro.Controllers;
+using MiRegistro.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,14 +15,15 @@ namespace MiRegistro.Views.Main
     public partial class SplashWelcome : Form
     {
         protected WelcomeController oWelcomeController;
-        public SplashWelcome(string user)
+        public SplashWelcome(UserTableViewModel usuario)
         {
             InitializeComponent();
             oWelcomeController = new WelcomeController(this);
+            oWelcomeController.LoadDataUser(usuario);
         }
 
         public int countTimer = 0;
-        public int imageToSplash = 0;
-        public int totalImageToSplash = 2;
+        public int imageToSplash = 1;
+        public int totalImageToSplash = 3;
     }
 }

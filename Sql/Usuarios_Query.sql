@@ -46,11 +46,27 @@ SELECT * FROM usuario;
 SELECT * FROM empleado;
 
 /*Autentificar*/
-SELECT * FROM usuario WHERE usuario='noelicalafate' AND contraseña='12345' LIMIT 1;
+SELECT * FROM usuario WHERE usuario='noelicalafate' AND contraseña='12345' AND activo = 1 LIMIT 1;
 
-SELECT U.IdUsuario, P.Nombre, P.Apellido, P.FechaCumpleaños, U.Usuario, U.Email
+SELECT U.IdUsuario,  U.Usuario, U.Email, U.activo, P.Nombre, P.Apellido, P.nick, P.FechaCumpleaños, Er.nombre
 FROM usuario U
-INNER JOIN perfil P ON P.IdPerfil = U.FkIdPerfil;
+INNER JOIN perfil P ON P.IdPerfil = U.FkIdPerfil
+JOIN empleado E ON E.FkIdUsuario = U.IdUsuario
+JOIN empresa Er ON Er.IdEmpresa = E.FkIdEmpresa;
 
 ALTER TABLE usuario AUTO_INCREMENT = 1;
 DELETE FROM usuario WHERE idusuario = 2;
+
+/*Rol Insert*/
+INSERT INTO usuario_rol (IdUsuario, IdRol, FechaInicio, FechaFin)
+VALUES (3, 4, NOW(), '2022-12-01');
+
+/*Rol Query*/
+SELECT U.Usuario, R.IdRol, R.Nombre
+FROM usuario_rol Ur
+INNER JOIN usuario U ON U.IdUsuario = Ur.IdUsuario
+INNER JOIN rol R ON R.IdRol = Ur.IdRol
+WHERE Ur.FechaFin >= NOW();
+
+UPDATE rol SET Nombre = "Gestor caja" WHERE IdRol = "6";
+

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,20 +12,68 @@ namespace Models
 {
     public class LoginViewModel
     { 
-        public usuario ValidateLogin(string user, string password)
+        public UserTableViewModel ValidateLogin(string user, string password)
         {
-            usuario result = null;
+            UserTableViewModel result = null;
             try 
             {
                 using (MiRegistroEntity db = new MiRegistroEntity())
                 {
-                    var lst = from d in db.usuario
-                              where d.Usuario1 == user && d.Contraseña == password && d.Activo == 1
-                              select d;
+                    var lst = db.usuario
+                                .Join
+                                (
+                                 db.perfil,
+                                 U => U.IdUsuario,
+                                 P => P.IdPerfil,
+                                 (U, P) => new
+                                 {
+                                     U,
+                                     P
+                                 }
+                                )
+                                .Join
+                                (
+                                    db.empleado,
+                                    xU => xU.U.IdUsuario,
+                                    E => E.FkIdUsuario,
+                                    (xU, E) => new
+                                    {
+                                        xU,
+                                        E
+                                    }
+                                )
+                                .Join
+                                (
+                                    db.empresa,
+                                    xE => xE.E.FkIdEmpresa,
+                                    E => E.IdEmpresa,
+                                    (xE, E) => new 
+                                    {
+                                        xE,
+                                        E
+                                    }
+                                )
+                                .Where
+                                (
+                                   x => x.xE.xU.U.Usuario1 == user && x.xE.xU.U.Contraseña == password
+                                )
+                                .Select(x => new UserTableViewModel{
+                                    Id = x.xE.xU.U.IdUsuario,
+                                    Usuario = x.xE.xU.U.Usuario1,
+                                    Activo = x.xE.xU.U.Activo,
+                                    Email = x.xE.xU.U.Email,
+                                    Nombre = x.xE.xU.P.Nombre,
+                                    Apellido = x.xE.xU.P.Apellido,
+                                    Nick = x.xE.xU.P.Nick,
+                                    FechaCumpleaños = (DateTime)x.xE.xU.P.FechaCumpleaños,
+                                    Empresa = x.E.Nombre
+                                })
+                                .ToList().Take(1);
 
                     if (lst.Count() > 0)
                     {
-                        usuario oUser = lst.First();
+                        UserTableViewModel oUser = lst.First();
+                        oUser.Privileges =  GetValidUserPrivileges(oUser.Id);
                         return oUser;
                     }
                 }
@@ -38,11 +87,78 @@ namespace Models
             return result;
         }
 
+        public List<UserPrivilegesTableViewModel> GetValidUserPrivileges(int iduser)
+        {
+            List<UserPrivilegesTableViewModel> result = null;
+            try
+            {
+                using (MiRegistroEntity db = new MiRegistroEntity())
+                {
+                    DateTime today = DateTime.Now.Date;
+                    var lst = db.usuario_rol
+                                .Join
+                                (
+                                 db.usuario,
+                                 UR => UR.IdUsuario,
+                                 U => U.IdUsuario,
+                                 (UR, U) => new
+                                 {
+                                     UR,
+                                     U
+                                 }
+                                )
+                                .Join
+                                (
+                                db.rol,
+                                xUR => xUR.UR.IdRol,
+                                R => R.IdRol,
+                                (xUR, R) => new 
+                                {
+                                    xUR.UR,
+                                    R
+                                }
+                                )
+                                .Where
+                                (
+                                   x => x.UR.IdUsuario == iduser && x.UR.FechaFin >= today
+                                )
+                                .Select(x => new UserPrivilegesTableViewModel
+                                {
+                                    privilegeName = x.UR.rol.Nombre,
+                                    description = x.UR.rol.Descripcion,
+                                    inicioDate = (DateTime)x.UR.FechaInicio,
+                                    finDate = (DateTime)x.UR.FechaFin
+                                })
+                                .ToList();
+
+                    string query = @"SELECT U.Usuario, R.IdRol, R.Nombre
+                                        FROM usuario_rol Ur
+                                        INNER JOIN usuario U ON U.IdUsuario = Ur.IdUsuario
+                                        INNER JOIN rol R ON R.IdRol = Ur.IdRol;";
+
+                    if (lst.Count() > 0)
+                    {
+                        result = lst.ToList();
+                        return result;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex);
+                return result;
+            }
+
+            return result;
+        }
         public usuario FindSavedUser() 
         {
             usuario usuario = new usuario();
-            usuario.Usuario1 = PasswordEncrypter.Decrypt(MiRegistro.Properties.Settings.Default.user);
-            usuario.Contraseña = PasswordEncrypter.Decrypt(MiRegistro.Properties.Settings.Default.pass);
+            if(MiRegistro.Properties.Settings.Default.user != null) 
+            {
+                usuario.Usuario1 = PasswordEncrypter.Decrypt(MiRegistro.Properties.Settings.Default.user);
+                usuario.Contraseña = PasswordEncrypter.Decrypt(MiRegistro.Properties.Settings.Default.pass);
+            }
             return usuario;
         }
         public void RememberMe(bool remember, string user, string password)
@@ -55,11 +171,14 @@ namespace Models
             }
             else
             {
-                if (PasswordEncrypter.Decrypt(MiRegistro.Properties.Settings.Default.user) == user)
+                if(MiRegistro.Properties.Settings.Default.user != null) 
                 {
-                    MiRegistro.Properties.Settings.Default.user = "";
-                    MiRegistro.Properties.Settings.Default.pass = "";
-                    MiRegistro.Properties.Settings.Default.Save();
+                    if (PasswordEncrypter.Decrypt(MiRegistro.Properties.Settings.Default.user) == user)
+                    {
+                        MiRegistro.Properties.Settings.Default.user = "";
+                        MiRegistro.Properties.Settings.Default.pass = "";
+                        MiRegistro.Properties.Settings.Default.Save();
+                    }
                 }
             }
         }

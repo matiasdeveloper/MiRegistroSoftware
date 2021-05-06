@@ -14,6 +14,7 @@ namespace Controllers
 {
     public class LoginController
     {
+        FormModel _formModel = new FormModel();
         LoginViewModel _model = new LoginViewModel();
         Login _view { get; set; }
 
@@ -21,8 +22,21 @@ namespace Controllers
         {
             _view = view;
             _view.Load += new EventHandler(FindSavedUser);
+            _view.timerslider.Tick += new EventHandler(Slider);
 
             _view.btn_login.Click += new EventHandler(Autentificar);
+        }
+
+        public void Slider(object sender, EventArgs e)
+        {
+            if (_view.dataToShow == _view.totalDataToShow)
+            {
+                _view.dataToShow = 0;
+            }
+            _view.dataToShow++;
+            _view.sliderpicture.BackgroundImage = _formModel.GetImageResource("login", _view.dataToShow);
+            _view.lbl_title.Text = (string)MiRegistro.Properties.Settings.Default["slidetittle" + _view.dataToShow];
+            _view.lbl_description.Text = (string)MiRegistro.Properties.Settings.Default["slide" + _view.dataToShow];
         }
 
         private void FindSavedUser(object sender, EventArgs e)
@@ -32,26 +46,27 @@ namespace Controllers
             {
                 _view.txtBox_user.Text = usuario.Usuario1;
                 _view.txtBox_pass.Text = usuario.Contraseña;
-                _view.txtBox_pass.UseSystemPasswordChar = true;
+                _view.txtBox_pass.PasswordChar = '*';
                 _view.checkBox_guardar.Checked = true;
             }
         }
 
         private void Autentificar(object sender, EventArgs e)
         {
-            if (_model.ValidateLogin(_view.txtBox_user.Text, _view.txtBox_pass.Text) != null) 
+            UserTableViewModel usuario = _model.ValidateLogin(_view.txtBox_user.Text, _view.txtBox_pass.Text);
+            if(usuario != null) 
             {
-                OpenSystem();
+                OpenSystem(usuario);
                 _model.RememberMe(_view.checkBox_guardar.Checked, _view.txtBox_user.Text, _view.txtBox_pass.Text);
             }
         }
 
-        private protected void OpenSystem()
+        private protected void OpenSystem(UserTableViewModel usuario)
         {
             //frm_principal frmPrincipal = new frm_principal();
             //frmPrincipal.FormClosed += Logout;
 
-            SplashWelcome splashScreen = new SplashWelcome("");
+            SplashWelcome splashScreen = new SplashWelcome(usuario);
             splashScreen.Show();
 
             _view.Opacity = 0;

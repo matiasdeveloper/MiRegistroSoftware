@@ -399,7 +399,6 @@
             resources.ApplyResources(this.txtbox_observaciones, "txtbox_observaciones");
             this.txtbox_observaciones.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.txtbox_observaciones.MaxLength = 240;
-            this.txtbox_observaciones.MultiLine = true;
             this.txtbox_observaciones.Name = "txtbox_observaciones";
             this.txtbox_observaciones.PasswordChar = '\0';
             this.txtbox_observaciones.Radius = 7;

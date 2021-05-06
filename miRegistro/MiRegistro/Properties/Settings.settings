@@ -8,8 +8,26 @@
     <Setting Name="pass" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Color" Type="System.Drawing.Font" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="termsandconditions" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="slide2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Para cargar un nuevo formulario diríjase a la sección de formularios, en donde, podrá manipular las diversas clases de formularios con su numeración y stock independientes de cada formulario.</Value>
+    </Setting>
+    <Setting Name="slide1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Para cargar un nuevo tramite ingresar en tramites y luego hacer click en ingresar nuevo tramite la cual lo guiara mediante una serie de pasos a seguir colocando la informacion correspondiente al tramite.</Value>
+    </Setting>
+    <Setting Name="slide3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Para generar estadísticas diríjase a la sección de estadística, en donde, podrá manipular la información, generar informes, generar gráficos, comparar datos, exportar documentos pdf y llevar un control de su registro de una forma muy intuitiva.</Value>
+    </Setting>
+    <Setting Name="slidetittle1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Añadir tramites</Value>
+    </Setting>
+    <Setting Name="slidetittle2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Añadir formularios</Value>
+    </Setting>
+    <Setting Name="slidetittle3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Gestionar estadisticas</Value>
     </Setting>
   </Settings>
 </SettingsFile>

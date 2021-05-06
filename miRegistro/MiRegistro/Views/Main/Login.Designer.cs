@@ -33,7 +33,6 @@ namespace MiRegistro
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.checkBox_guardar = new Guna.UI.WinForms.GunaCheckBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtBox_user = new Guna.UI.WinForms.GunaTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,22 +40,27 @@ namespace MiRegistro
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBox_pass = new Guna.UI.WinForms.GunaTextBox();
-            this.btn_login = new Guna.UI.WinForms.GunaButton();
-            this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
-            this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
-            this.gunaCirclePictureBox4 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lbl_registro = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.linkLabel = new System.Windows.Forms.LinkLabel();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.timerslider = new System.Windows.Forms.Timer(this.components);
+            this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
+            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
+            this.circle_slide3 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.circle_slide2 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.circle_slide1 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.slide = new Guna.UI.WinForms.GunaPanel();
+            this.sliderpicture = new Guna.UI.WinForms.GunaPictureBox();
+            this.lbl_title = new System.Windows.Forms.Label();
+            this.lbl_description = new System.Windows.Forms.Label();
+            this.btn_login = new Guna.UI.WinForms.GunaButton();
             this.gunaGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circle_slide3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circle_slide2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circle_slide1)).BeginInit();
+            this.slide.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sliderpicture)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -70,27 +74,13 @@ namespace MiRegistro
             this.checkBox_guardar.CheckedOffColor = System.Drawing.Color.Gray;
             this.checkBox_guardar.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
             this.checkBox_guardar.FillColor = System.Drawing.Color.White;
-            this.checkBox_guardar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_guardar.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_guardar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.checkBox_guardar.Location = new System.Drawing.Point(38, 282);
+            this.checkBox_guardar.Location = new System.Drawing.Point(38, 277);
             this.checkBox_guardar.Name = "checkBox_guardar";
-            this.checkBox_guardar.Size = new System.Drawing.Size(221, 20);
+            this.checkBox_guardar.Size = new System.Drawing.Size(125, 20);
             this.checkBox_guardar.TabIndex = 251;
-            this.checkBox_guardar.Text = "Recordar usuario y contraseña";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(27, 106);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(278, 42);
-            this.label3.TabIndex = 250;
-            this.label3.Text = "Ingresar con el usuario root o con usuario de \r\nempleado designado por el encarga" +
-    "do.";
+            this.checkBox_guardar.Text = "Recordar cuenta";
             // 
             // txtBox_user
             // 
@@ -129,12 +119,12 @@ namespace MiRegistro
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(38, 216);
+            this.label6.Location = new System.Drawing.Point(38, 213);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 21);
+            this.label6.Size = new System.Drawing.Size(83, 21);
             this.label6.TabIndex = 247;
-            this.label6.Text = "Ingrese la contraseña";
+            this.label6.Text = "Contraseña";
             // 
             // label5
             // 
@@ -144,9 +134,9 @@ namespace MiRegistro
             this.label5.Location = new System.Drawing.Point(38, 153);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 21);
+            this.label5.Size = new System.Drawing.Size(57, 21);
             this.label5.TabIndex = 246;
-            this.label5.Text = "Ingrese el usuario";
+            this.label5.Text = "Usuario";
             // 
             // label2
             // 
@@ -162,12 +152,12 @@ namespace MiRegistro
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Poppins", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(24, 75);
+            this.label1.Location = new System.Drawing.Point(26, 77);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 37);
+            this.label1.Size = new System.Drawing.Size(151, 35);
             this.label1.TabIndex = 243;
             this.label1.Text = "Iniciar sesion";
             // 
@@ -183,7 +173,7 @@ namespace MiRegistro
             this.txtBox_pass.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtBox_pass.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_pass.ForeColor = System.Drawing.Color.Silver;
-            this.txtBox_pass.Location = new System.Drawing.Point(38, 238);
+            this.txtBox_pass.Location = new System.Drawing.Point(38, 235);
             this.txtBox_pass.Name = "txtBox_pass";
             this.txtBox_pass.PasswordChar = '\0';
             this.txtBox_pass.Radius = 7;
@@ -191,6 +181,184 @@ namespace MiRegistro
             this.txtBox_pass.Size = new System.Drawing.Size(275, 28);
             this.txtBox_pass.TabIndex = 249;
             this.txtBox_pass.Text = "8 caracteres o mas";
+            this.txtBox_pass.Enter += new System.EventHandler(this.txtBox_pass_Enter);
+            this.txtBox_pass.Leave += new System.EventHandler(this.txtBox_pass_Leave);
+            // 
+            // linkLabel
+            // 
+            this.linkLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.linkLabel.AutoSize = true;
+            this.linkLabel.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel.LinkColor = System.Drawing.Color.Gainsboro;
+            this.linkLabel.Location = new System.Drawing.Point(167, 278);
+            this.linkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabel.Name = "linkLabel";
+            this.linkLabel.Size = new System.Drawing.Size(146, 19);
+            this.linkLabel.TabIndex = 254;
+            this.linkLabel.TabStop = true;
+            this.linkLabel.Text = "Olvidaste la contraseña?";
+            // 
+            // gunaDragControl1
+            // 
+            this.gunaDragControl1.TargetControl = this;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Poppins ExtraLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.Location = new System.Drawing.Point(29, 108);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(190, 38);
+            this.label3.TabIndex = 250;
+            this.label3.Text = "Ingrese con usuario root o con un\r\nusuario diario\r\n";
+            // 
+            // timerslider
+            // 
+            this.timerslider.Enabled = true;
+            this.timerslider.Interval = 5000;
+            // 
+            // gunaGradientPanel1
+            // 
+            this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
+            this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel1.Controls.Add(this.gunaControlBox2);
+            this.gunaGradientPanel1.Controls.Add(this.gunaControlBox1);
+            this.gunaGradientPanel1.Controls.Add(this.slide);
+            this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.gunaGradientPanel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.gunaGradientPanel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.gunaGradientPanel1.GradientColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.gunaGradientPanel1.GradientColor4 = System.Drawing.Color.Black;
+            this.gunaGradientPanel1.Location = new System.Drawing.Point(345, 0);
+            this.gunaGradientPanel1.Name = "gunaGradientPanel1";
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(448, 422);
+            this.gunaGradientPanel1.TabIndex = 272;
+            this.gunaGradientPanel1.Text = "gunaGradientPanel1";
+            // 
+            // gunaControlBox2
+            // 
+            this.gunaControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox2.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox2.AnimationSpeed = 0.03F;
+            this.gunaControlBox2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
+            this.gunaControlBox2.IconColor = System.Drawing.Color.White;
+            this.gunaControlBox2.IconSize = 15F;
+            this.gunaControlBox2.Location = new System.Drawing.Point(388, 8);
+            this.gunaControlBox2.Name = "gunaControlBox2";
+            this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox2.Size = new System.Drawing.Size(20, 20);
+            this.gunaControlBox2.TabIndex = 274;
+            // 
+            // gunaControlBox1
+            // 
+            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox1.AnimationSpeed = 0.03F;
+            this.gunaControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaControlBox1.IconColor = System.Drawing.Color.White;
+            this.gunaControlBox1.IconSize = 15F;
+            this.gunaControlBox1.Location = new System.Drawing.Point(415, 8);
+            this.gunaControlBox1.Name = "gunaControlBox1";
+            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.Size = new System.Drawing.Size(20, 20);
+            this.gunaControlBox1.TabIndex = 273;
+            // 
+            // circle_slide3
+            // 
+            this.circle_slide3.BackColor = System.Drawing.Color.Transparent;
+            this.circle_slide3.BaseColor = System.Drawing.Color.Gray;
+            this.circle_slide3.Location = new System.Drawing.Point(190, 284);
+            this.circle_slide3.Name = "circle_slide3";
+            this.circle_slide3.Size = new System.Drawing.Size(10, 10);
+            this.circle_slide3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circle_slide3.TabIndex = 270;
+            this.circle_slide3.TabStop = false;
+            this.circle_slide3.UseTransfarantBackground = false;
+            this.circle_slide3.Visible = false;
+            // 
+            // circle_slide2
+            // 
+            this.circle_slide2.BackColor = System.Drawing.Color.Transparent;
+            this.circle_slide2.BaseColor = System.Drawing.Color.Gray;
+            this.circle_slide2.Location = new System.Drawing.Point(176, 284);
+            this.circle_slide2.Name = "circle_slide2";
+            this.circle_slide2.Size = new System.Drawing.Size(10, 10);
+            this.circle_slide2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circle_slide2.TabIndex = 267;
+            this.circle_slide2.TabStop = false;
+            this.circle_slide2.UseTransfarantBackground = false;
+            this.circle_slide2.Visible = false;
+            // 
+            // circle_slide1
+            // 
+            this.circle_slide1.BackColor = System.Drawing.Color.Transparent;
+            this.circle_slide1.BaseColor = System.Drawing.Color.White;
+            this.circle_slide1.Location = new System.Drawing.Point(161, 284);
+            this.circle_slide1.Name = "circle_slide1";
+            this.circle_slide1.Size = new System.Drawing.Size(10, 10);
+            this.circle_slide1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circle_slide1.TabIndex = 268;
+            this.circle_slide1.TabStop = false;
+            this.circle_slide1.UseTransfarantBackground = false;
+            this.circle_slide1.Visible = false;
+            // 
+            // slide
+            // 
+            this.slide.BackColor = System.Drawing.Color.Transparent;
+            this.slide.Controls.Add(this.sliderpicture);
+            this.slide.Controls.Add(this.lbl_title);
+            this.slide.Controls.Add(this.circle_slide3);
+            this.slide.Controls.Add(this.lbl_description);
+            this.slide.Controls.Add(this.circle_slide2);
+            this.slide.Controls.Add(this.circle_slide1);
+            this.slide.Location = new System.Drawing.Point(41, 57);
+            this.slide.Name = "slide";
+            this.slide.Size = new System.Drawing.Size(369, 307);
+            this.slide.TabIndex = 275;
+            // 
+            // sliderpicture
+            // 
+            this.sliderpicture.BackColor = System.Drawing.Color.Transparent;
+            this.sliderpicture.BackgroundImage = global::MiRegistro.Properties.Resources.login1;
+            this.sliderpicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sliderpicture.BaseColor = System.Drawing.Color.White;
+            this.sliderpicture.Location = new System.Drawing.Point(96, 3);
+            this.sliderpicture.Name = "sliderpicture";
+            this.sliderpicture.Size = new System.Drawing.Size(170, 170);
+            this.sliderpicture.TabIndex = 272;
+            this.sliderpicture.TabStop = false;
+            // 
+            // lbl_title
+            // 
+            this.lbl_title.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_title.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title.ForeColor = System.Drawing.Color.White;
+            this.lbl_title.Location = new System.Drawing.Point(96, 183);
+            this.lbl_title.Name = "lbl_title";
+            this.lbl_title.Size = new System.Drawing.Size(170, 21);
+            this.lbl_title.TabIndex = 216;
+            this.lbl_title.Text = "Añadir tramites";
+            this.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_description
+            // 
+            this.lbl_description.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_description.Font = new System.Drawing.Font("Poppins Thin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_description.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_description.Location = new System.Drawing.Point(5, 205);
+            this.lbl_description.Name = "lbl_description";
+            this.lbl_description.Size = new System.Drawing.Size(355, 76);
+            this.lbl_description.TabIndex = 271;
+            this.lbl_description.Text = resources.GetString("lbl_description.Text");
+            this.lbl_description.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btn_login
             // 
@@ -206,162 +374,26 @@ namespace MiRegistro
             this.btn_login.ForeColor = System.Drawing.Color.White;
             this.btn_login.Image = ((System.Drawing.Image)(resources.GetObject("btn_login.Image")));
             this.btn_login.ImageSize = new System.Drawing.Size(0, 0);
-            this.btn_login.Location = new System.Drawing.Point(38, 314);
+            this.btn_login.Location = new System.Drawing.Point(38, 310);
             this.btn_login.Name = "btn_login";
-            this.btn_login.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_login.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_login.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_login.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_login.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_login.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
             this.btn_login.OnHoverImage = null;
-            this.btn_login.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_login.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
             this.btn_login.Radius = 10;
             this.btn_login.Size = new System.Drawing.Size(275, 30);
             this.btn_login.TabIndex = 252;
             this.btn_login.Text = "Ingresar al sistema";
-            // 
-            // gunaGradientPanel1
-            // 
-            this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
-            this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaGradientPanel1.Controls.Add(this.gunaSeparator1);
-            this.gunaGradientPanel1.Controls.Add(this.gunaCirclePictureBox4);
-            this.gunaGradientPanel1.Controls.Add(this.gunaCirclePictureBox2);
-            this.gunaGradientPanel1.Controls.Add(this.gunaCirclePictureBox1);
-            this.gunaGradientPanel1.Controls.Add(this.label7);
-            this.gunaGradientPanel1.Controls.Add(this.lbl_registro);
-            this.gunaGradientPanel1.Controls.Add(this.label9);
-            this.gunaGradientPanel1.Controls.Add(this.label10);
-            this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gunaGradientPanel1.GradientColor1 = System.Drawing.Color.Black;
-            this.gunaGradientPanel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.gunaGradientPanel1.GradientColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.gunaGradientPanel1.GradientColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.gunaGradientPanel1.Location = new System.Drawing.Point(349, 0);
-            this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Quality = 50;
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(457, 434);
-            this.gunaGradientPanel1.TabIndex = 253;
-            this.gunaGradientPanel1.Text = "gunaGradientPanel1";
-            // 
-            // gunaSeparator1
-            // 
-            this.gunaSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaSeparator1.LineColor = System.Drawing.Color.White;
-            this.gunaSeparator1.Location = new System.Drawing.Point(19, 164);
-            this.gunaSeparator1.Name = "gunaSeparator1";
-            this.gunaSeparator1.Size = new System.Drawing.Size(412, 10);
-            this.gunaSeparator1.TabIndex = 271;
-            this.gunaSeparator1.Thickness = 3;
-            // 
-            // gunaCirclePictureBox4
-            // 
-            this.gunaCirclePictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaCirclePictureBox4.BaseColor = System.Drawing.Color.Gray;
-            this.gunaCirclePictureBox4.Location = new System.Drawing.Point(223, 215);
-            this.gunaCirclePictureBox4.Name = "gunaCirclePictureBox4";
-            this.gunaCirclePictureBox4.Size = new System.Drawing.Size(10, 10);
-            this.gunaCirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox4.TabIndex = 270;
-            this.gunaCirclePictureBox4.TabStop = false;
-            this.gunaCirclePictureBox4.UseTransfarantBackground = false;
-            // 
-            // gunaCirclePictureBox2
-            // 
-            this.gunaCirclePictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.Gray;
-            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(195, 215);
-            this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
-            this.gunaCirclePictureBox2.Size = new System.Drawing.Size(10, 10);
-            this.gunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox2.TabIndex = 268;
-            this.gunaCirclePictureBox2.TabStop = false;
-            this.gunaCirclePictureBox2.UseTransfarantBackground = false;
-            // 
-            // gunaCirclePictureBox1
-            // 
-            this.gunaCirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(209, 215);
-            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(10, 10);
-            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox1.TabIndex = 267;
-            this.gunaCirclePictureBox1.TabStop = false;
-            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.LightGray;
-            this.label7.Location = new System.Drawing.Point(108, 245);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 15);
-            this.label7.TabIndex = 226;
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_registro
-            // 
-            this.lbl_registro.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_registro.ForeColor = System.Drawing.Color.White;
-            this.lbl_registro.Location = new System.Drawing.Point(129, 92);
-            this.lbl_registro.Name = "lbl_registro";
-            this.lbl_registro.Size = new System.Drawing.Size(192, 28);
-            this.lbl_registro.TabIndex = 214;
-            this.lbl_registro.Text = "Registro del Calafate";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.label9.Location = new System.Drawing.Point(68, 116);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(285, 31);
-            this.label9.TabIndex = 215;
-            this.label9.Text = "Bienvenido de vuelta";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(166, 190);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 15);
-            this.label10.TabIndex = 216;
-            this.label10.Text = "Añadir tramites";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // linkLabel
-            // 
-            this.linkLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.linkLabel.AutoSize = true;
-            this.linkLabel.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.linkLabel.Location = new System.Drawing.Point(83, 349);
-            this.linkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabel.Name = "linkLabel";
-            this.linkLabel.Size = new System.Drawing.Size(162, 19);
-            this.linkLabel.TabIndex = 254;
-            this.linkLabel.TabStop = true;
-            this.linkLabel.Text = "Ha olvidado su contraseña?";
-            // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(806, 434);
-            this.Controls.Add(this.linkLabel);
+            this.ClientSize = new System.Drawing.Size(793, 422);
             this.Controls.Add(this.gunaGradientPanel1);
+            this.Controls.Add(this.linkLabel);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.checkBox_guardar);
             this.Controls.Add(this.label3);
@@ -377,10 +409,11 @@ namespace MiRegistro
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.gunaGradientPanel1.ResumeLayout(false);
-            this.gunaGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circle_slide3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circle_slide2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circle_slide1)).EndInit();
+            this.slide.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sliderpicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,21 +427,23 @@ namespace MiRegistro
         public Guna.UI.WinForms.GunaTextBox txtBox_pass;
         public System.Windows.Forms.LinkLabel linkLabel;
         public Guna.UI.WinForms.GunaButton btn_login;
-        public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label1;
-        public Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
-        public Guna.UI.WinForms.GunaSeparator gunaSeparator1;
-        public Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox4;
-        public Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox2;
-        public Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
-        public System.Windows.Forms.Label label7;
-        public System.Windows.Forms.Label lbl_registro;
-        public System.Windows.Forms.Label label9;
-        public System.Windows.Forms.Label label10;
+        public Guna.UI.WinForms.GunaCirclePictureBox circle_slide3;
+        public Guna.UI.WinForms.GunaCirclePictureBox circle_slide1;
+        public Guna.UI.WinForms.GunaCirclePictureBox circle_slide2;
+        public System.Windows.Forms.Label lbl_title;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
+        public System.Windows.Forms.Label label3;
+        private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
+        public System.Windows.Forms.Label lbl_description;
+        public Guna.UI.WinForms.GunaPictureBox sliderpicture;
+        private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
+        private Guna.UI.WinForms.GunaControlBox gunaControlBox2;
+        public System.Windows.Forms.Timer timerslider;
+        private Guna.UI.WinForms.GunaPanel slide;
     }
 }
