@@ -894,7 +894,6 @@
             this.textBox_observaciones.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_observaciones.Location = new System.Drawing.Point(48, 151);
             this.textBox_observaciones.MaxLength = 240;
-            this.textBox_observaciones.MultiLine = true;
             this.textBox_observaciones.Name = "textBox_observaciones";
             this.textBox_observaciones.PasswordChar = '\0';
             this.textBox_observaciones.Radius = 7;

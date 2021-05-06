@@ -49,12 +49,92 @@ namespace MiRegistro.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Drawing.Font Color {
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool termsandconditions {
             get {
-                return ((global::System.Drawing.Font)(this["Color"]));
+                return ((bool)(this["termsandconditions"]));
             }
             set {
-                this["Color"] = value;
+                this["termsandconditions"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Para cargar un nuevo formulario diríjase a la sección de formularios, en donde, p" +
+            "odrá manipular las diversas clases de formularios con su numeración y stock inde" +
+            "pendientes de cada formulario.")]
+        public string slide2 {
+            get {
+                return ((string)(this["slide2"]));
+            }
+            set {
+                this["slide2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Para cargar un nuevo tramite ingresar en tramites y luego hacer click en ingresar" +
+            " nuevo tramite la cual lo guiara mediante una serie de pasos a seguir colocando " +
+            "la informacion correspondiente al tramite.")]
+        public string slide1 {
+            get {
+                return ((string)(this["slide1"]));
+            }
+            set {
+                this["slide1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Para generar estadísticas diríjase a la sección de estadística, en donde, podrá m" +
+            "anipular la información, generar informes, generar gráficos, comparar datos, exp" +
+            "ortar documentos pdf y llevar un control de su registro de una forma muy intuiti" +
+            "va.")]
+        public string slide3 {
+            get {
+                return ((string)(this["slide3"]));
+            }
+            set {
+                this["slide3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Añadir tramites")]
+        public string slidetittle1 {
+            get {
+                return ((string)(this["slidetittle1"]));
+            }
+            set {
+                this["slidetittle1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Añadir formularios")]
+        public string slidetittle2 {
+            get {
+                return ((string)(this["slidetittle2"]));
+            }
+            set {
+                this["slidetittle2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Gestionar estadisticas")]
+        public string slidetittle3 {
+            get {
+                return ((string)(this["slidetittle3"]));
+            }
+            set {
+                this["slidetittle3"] = value;
             }
         }
     }

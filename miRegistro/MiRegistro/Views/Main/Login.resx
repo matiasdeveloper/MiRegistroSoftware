@@ -123,13 +123,9 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="gunaGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEUSURBVGhD7c9fK0NxAMdhb8Q65uCYmXXMjCKx5k9IaCEh
-        JLSQ0NwspSSlJKWklKSUpJSklKSUpJSklJSSlJKU2s3H7y24/148L+DJyKxI4amcw1M1byxgVS9i1Sxh
-        RZfJiq3grV3FW7dGdv06dsMGduMmdtMWOc3b5LbsGLvkte7htO3jtB/gxA/Jjx/h6zjG13lCQdcp/u4z
-        4xx/zwWFvZcE+q4I9F9TNHBDcPCW4NCdcY87/IA78og7+kRx4plQ4oXQ2Csl42+EJ94JT34Yn5ROfRGZ
-        /iYy80NZ8pfy2TSKKKKIIooooogiiiiiiCKKKKKIIooooogiiiiiiCKKKKKIIooooogiiiiiiCKKKPKP
-        SJo/gIgCseRB+HsAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA6SURBVChTY7Cq+vPfvOTDf5O8x/+NMq7910s69V8nZu9/
+        jbAN/9UClvxX9pz+X8G56/+oQroq7PoPACsC5oP00HiKAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btn_login.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -148,4 +144,10 @@
   <metadata name="gunaDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>134, 17</value>
   </metadata>
+  <metadata name="timerslider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>274, 21</value>
+  </metadata>
+  <data name="lbl_description.Text" xml:space="preserve">
+    <value>Para cargar un nuevo tramite ingresar en tramites y luego hacer click en ingresar nuevo tramite la cual lo guiara mediante una serie de pasos a seguir colocando la informacion correspondiente al tramite.</value>
+  </data>
 </root>
