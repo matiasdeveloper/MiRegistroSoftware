@@ -13,7 +13,7 @@ namespace MiRegistro
 {
     public partial class Login : Form
     {
-        protected LoginController oLoginController;
+        public LoginController oLoginController;
         public int dataToShow = 1;
         public int totalDataToShow = 3;
 

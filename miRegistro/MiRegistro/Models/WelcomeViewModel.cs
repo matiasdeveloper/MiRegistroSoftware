@@ -12,8 +12,6 @@ namespace MiRegistro.Models
 {
     public class WelcomeViewModel
     {
-        private ObjectCache cacheUser = MemoryCache.Default;
-
         public void SetTermConditionStatus(bool status)
         {
             MiRegistro.Properties.Settings.Default.termsandconditions = status;
@@ -22,14 +20,6 @@ namespace MiRegistro.Models
         public bool GetTermConditionStatus()
         {
             return MiRegistro.Properties.Settings.Default.termsandconditions;
-        }
-        public void SetCacheUser(UserTableViewModel usuario) 
-        {
-            CacheItemPolicy policy = new CacheItemPolicy();
-            // Indicamos la prioridad de la politica.
-            policy.Priority = CacheItemPriority.Default;
-
-            cacheUser.Set("DataUser", usuario, policy);
         }
     }
 }

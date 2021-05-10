@@ -45,10 +45,10 @@ namespace MiRegistro.Views.Main
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.sliderpicture = new Guna.UI.WinForms.GunaPictureBox();
             this.lbl_privileges = new System.Windows.Forms.Label();
             this.lbl_nick = new System.Windows.Forms.Label();
             this.btn_next = new Guna.UI.WinForms.GunaGradientButton();
-            this.sliderpicture = new Guna.UI.WinForms.GunaPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderpicture)).BeginInit();
             this.SuspendLayout();
@@ -185,6 +185,18 @@ namespace MiRegistro.Views.Main
             this.panel1.Size = new System.Drawing.Size(409, 372);
             this.panel1.TabIndex = 262;
             // 
+            // sliderpicture
+            // 
+            this.sliderpicture.BackgroundImage = global::MiRegistro.Properties.Resources.splash3;
+            this.sliderpicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sliderpicture.BaseColor = System.Drawing.Color.White;
+            this.sliderpicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sliderpicture.Location = new System.Drawing.Point(0, 0);
+            this.sliderpicture.Name = "sliderpicture";
+            this.sliderpicture.Size = new System.Drawing.Size(409, 372);
+            this.sliderpicture.TabIndex = 259;
+            this.sliderpicture.TabStop = false;
+            // 
             // lbl_privileges
             // 
             this.lbl_privileges.Font = new System.Drawing.Font("Poppins ExtraLight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -235,18 +247,6 @@ namespace MiRegistro.Views.Main
             this.btn_next.TabIndex = 256;
             this.btn_next.Text = "Continuar a MiRegistro";
             this.btn_next.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // sliderpicture
-            // 
-            this.sliderpicture.BackgroundImage = global::MiRegistro.Properties.Resources.splash3;
-            this.sliderpicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.sliderpicture.BaseColor = System.Drawing.Color.White;
-            this.sliderpicture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sliderpicture.Location = new System.Drawing.Point(0, 0);
-            this.sliderpicture.Name = "sliderpicture";
-            this.sliderpicture.Size = new System.Drawing.Size(409, 372);
-            this.sliderpicture.TabIndex = 259;
-            this.sliderpicture.TabStop = false;
             // 
             // SplashWelcome
             // 

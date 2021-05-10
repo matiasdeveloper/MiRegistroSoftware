@@ -63,14 +63,11 @@ namespace Controllers
 
         private protected void OpenSystem(UserTableViewModel usuario)
         {
-            //frm_principal frmPrincipal = new frm_principal();
-            //frmPrincipal.FormClosed += Logout;
-
-            SplashWelcome splashScreen = new SplashWelcome(usuario);
+            SplashWelcome splashScreen = new SplashWelcome(usuario, _view);
             splashScreen.Show();
 
             _view.Opacity = 0;
-            _view.ShowIcon = false;
+            _view.ShowIcon = true;
             _view.ShowInTaskbar = false;
             _view.Hide();
         }

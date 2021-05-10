@@ -47,20 +47,20 @@ namespace MiRegistro
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
             this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
-            this.circle_slide3 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.circle_slide2 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.circle_slide1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.slide = new Guna.UI.WinForms.GunaPanel();
             this.sliderpicture = new Guna.UI.WinForms.GunaPictureBox();
             this.lbl_title = new System.Windows.Forms.Label();
+            this.circle_slide3 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.lbl_description = new System.Windows.Forms.Label();
+            this.circle_slide2 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.circle_slide1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.btn_login = new Guna.UI.WinForms.GunaButton();
             this.gunaGradientPanel1.SuspendLayout();
+            this.slide.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sliderpicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circle_slide3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circle_slide2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circle_slide1)).BeginInit();
-            this.slide.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderpicture)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -98,7 +98,6 @@ namespace MiRegistro
             this.txtBox_user.Name = "txtBox_user";
             this.txtBox_user.PasswordChar = '\0';
             this.txtBox_user.Radius = 7;
-            this.txtBox_user.SelectedText = "";
             this.txtBox_user.Size = new System.Drawing.Size(275, 28);
             this.txtBox_user.TabIndex = 248;
             this.txtBox_user.Text = "usuarioejemplo";
@@ -177,7 +176,6 @@ namespace MiRegistro
             this.txtBox_pass.Name = "txtBox_pass";
             this.txtBox_pass.PasswordChar = '\0';
             this.txtBox_pass.Radius = 7;
-            this.txtBox_pass.SelectedText = "";
             this.txtBox_pass.Size = new System.Drawing.Size(275, 28);
             this.txtBox_pass.TabIndex = 249;
             this.txtBox_pass.Text = "8 caracteres o mas";
@@ -271,45 +269,6 @@ namespace MiRegistro
             this.gunaControlBox1.Size = new System.Drawing.Size(20, 20);
             this.gunaControlBox1.TabIndex = 273;
             // 
-            // circle_slide3
-            // 
-            this.circle_slide3.BackColor = System.Drawing.Color.Transparent;
-            this.circle_slide3.BaseColor = System.Drawing.Color.Gray;
-            this.circle_slide3.Location = new System.Drawing.Point(190, 284);
-            this.circle_slide3.Name = "circle_slide3";
-            this.circle_slide3.Size = new System.Drawing.Size(10, 10);
-            this.circle_slide3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circle_slide3.TabIndex = 270;
-            this.circle_slide3.TabStop = false;
-            this.circle_slide3.UseTransfarantBackground = false;
-            this.circle_slide3.Visible = false;
-            // 
-            // circle_slide2
-            // 
-            this.circle_slide2.BackColor = System.Drawing.Color.Transparent;
-            this.circle_slide2.BaseColor = System.Drawing.Color.Gray;
-            this.circle_slide2.Location = new System.Drawing.Point(176, 284);
-            this.circle_slide2.Name = "circle_slide2";
-            this.circle_slide2.Size = new System.Drawing.Size(10, 10);
-            this.circle_slide2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circle_slide2.TabIndex = 267;
-            this.circle_slide2.TabStop = false;
-            this.circle_slide2.UseTransfarantBackground = false;
-            this.circle_slide2.Visible = false;
-            // 
-            // circle_slide1
-            // 
-            this.circle_slide1.BackColor = System.Drawing.Color.Transparent;
-            this.circle_slide1.BaseColor = System.Drawing.Color.White;
-            this.circle_slide1.Location = new System.Drawing.Point(161, 284);
-            this.circle_slide1.Name = "circle_slide1";
-            this.circle_slide1.Size = new System.Drawing.Size(10, 10);
-            this.circle_slide1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circle_slide1.TabIndex = 268;
-            this.circle_slide1.TabStop = false;
-            this.circle_slide1.UseTransfarantBackground = false;
-            this.circle_slide1.Visible = false;
-            // 
             // slide
             // 
             this.slide.BackColor = System.Drawing.Color.Transparent;
@@ -348,6 +307,19 @@ namespace MiRegistro
             this.lbl_title.Text = "Añadir tramites";
             this.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // circle_slide3
+            // 
+            this.circle_slide3.BackColor = System.Drawing.Color.Transparent;
+            this.circle_slide3.BaseColor = System.Drawing.Color.Gray;
+            this.circle_slide3.Location = new System.Drawing.Point(190, 284);
+            this.circle_slide3.Name = "circle_slide3";
+            this.circle_slide3.Size = new System.Drawing.Size(10, 10);
+            this.circle_slide3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circle_slide3.TabIndex = 270;
+            this.circle_slide3.TabStop = false;
+            this.circle_slide3.UseTransfarantBackground = false;
+            this.circle_slide3.Visible = false;
+            // 
             // lbl_description
             // 
             this.lbl_description.BackColor = System.Drawing.Color.Transparent;
@@ -359,6 +331,32 @@ namespace MiRegistro
             this.lbl_description.TabIndex = 271;
             this.lbl_description.Text = resources.GetString("lbl_description.Text");
             this.lbl_description.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // circle_slide2
+            // 
+            this.circle_slide2.BackColor = System.Drawing.Color.Transparent;
+            this.circle_slide2.BaseColor = System.Drawing.Color.Gray;
+            this.circle_slide2.Location = new System.Drawing.Point(176, 284);
+            this.circle_slide2.Name = "circle_slide2";
+            this.circle_slide2.Size = new System.Drawing.Size(10, 10);
+            this.circle_slide2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circle_slide2.TabIndex = 267;
+            this.circle_slide2.TabStop = false;
+            this.circle_slide2.UseTransfarantBackground = false;
+            this.circle_slide2.Visible = false;
+            // 
+            // circle_slide1
+            // 
+            this.circle_slide1.BackColor = System.Drawing.Color.Transparent;
+            this.circle_slide1.BaseColor = System.Drawing.Color.White;
+            this.circle_slide1.Location = new System.Drawing.Point(161, 284);
+            this.circle_slide1.Name = "circle_slide1";
+            this.circle_slide1.Size = new System.Drawing.Size(10, 10);
+            this.circle_slide1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circle_slide1.TabIndex = 268;
+            this.circle_slide1.TabStop = false;
+            this.circle_slide1.UseTransfarantBackground = false;
+            this.circle_slide1.Visible = false;
             // 
             // btn_login
             // 
@@ -409,11 +407,11 @@ namespace MiRegistro
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.gunaGradientPanel1.ResumeLayout(false);
+            this.slide.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sliderpicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circle_slide3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circle_slide2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circle_slide1)).EndInit();
-            this.slide.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sliderpicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

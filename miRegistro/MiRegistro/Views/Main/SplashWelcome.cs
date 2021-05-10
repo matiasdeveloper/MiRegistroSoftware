@@ -14,12 +14,15 @@ namespace MiRegistro.Views.Main
 {
     public partial class SplashWelcome : Form
     {
+        public Login loginParent;
         protected WelcomeController oWelcomeController;
-        public SplashWelcome(UserTableViewModel usuario)
+        public SplashWelcome(UserTableViewModel usuario, Login login)
         {
             InitializeComponent();
             oWelcomeController = new WelcomeController(this);
             oWelcomeController.LoadDataUser(usuario);
+
+            loginParent = login;
         }
 
         public int countTimer = 0;

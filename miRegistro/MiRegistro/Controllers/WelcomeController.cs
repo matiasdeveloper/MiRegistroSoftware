@@ -34,7 +34,7 @@ namespace MiRegistro.Controllers
             _view.lbl_companyname.Text = usuario.Empresa;
             _view.lbl_privileges.Text = GetPrivilegesText(usuario.Privileges);
 
-            _model.SetCacheUser(usuario);
+            _formModel.SetCacheUser(usuario);
         }
 
         private string GetPrivilegesText(List<UserPrivilegesTableViewModel> listprivileges)
@@ -135,7 +135,11 @@ namespace MiRegistro.Controllers
         {
            if (_view.checkbox_terms.Checked && _view.progress_bar.Value == 100)
            {
-                _view.Opacity = 0;
+                Main main = new Main();
+                main.Show();
+                main.FormClosed += _view.loginParent.oLoginController.Logout;
+
+                _view.Close();
             }
         }
     }
