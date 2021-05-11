@@ -21,7 +21,6 @@ namespace LayerPresentation
         public Login()
         {
             InitializeComponent();
-
             oLoginController = new LoginController(this);
         }
 
