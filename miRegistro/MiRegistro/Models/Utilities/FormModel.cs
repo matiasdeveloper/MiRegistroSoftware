@@ -8,7 +8,7 @@ using System.Runtime.Caching;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiRegistro.Models
+namespace Models
 {
     public class FormModel
     {

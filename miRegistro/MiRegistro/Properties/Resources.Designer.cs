@@ -63,6 +63,16 @@ namespace MiRegistro.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_employee {
+            get {
+                object obj = ResourceManager.GetObject("icon_employee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_slidedown_1 {
             get {
                 object obj = ResourceManager.GetObject("icon_slidedown_1", resourceCulture);
@@ -113,6 +123,26 @@ namespace MiRegistro.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap r_negative {
+            get {
+                object obj = ResourceManager.GetObject("r_negative", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap r_positive {
+            get {
+                object obj = ResourceManager.GetObject("r_positive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap splash1 {
             get {
                 object obj = ResourceManager.GetObject("splash1", resourceCulture);
@@ -136,6 +166,26 @@ namespace MiRegistro.Properties {
         internal static System.Drawing.Bitmap splash3 {
             get {
                 object obj = ResourceManager.GetObject("splash3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap splash4 {
+            get {
+                object obj = ResourceManager.GetObject("splash4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap splash5 {
+            get {
+                object obj = ResourceManager.GetObject("splash5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

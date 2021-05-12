@@ -5,7 +5,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LayerPresentation.Clases
+namespace Models
 {
     public static class Percentage
     {

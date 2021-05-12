@@ -12,7 +12,7 @@ namespace LayerPresentation.Models.SqlConnect
         {
             SqlConnector sqlConnector = new SqlConnector(new MySqlConnect());
             // Set default connection string
-            SqlConnector.connector.connectionString = Properties.Settings.Default.ConnProduction;
+           // SqlConnector.connector.connectionString = Properties.Settings.Default.ConnProduction;
         }
     }
 }

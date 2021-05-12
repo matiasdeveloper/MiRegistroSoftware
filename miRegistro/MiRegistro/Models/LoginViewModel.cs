@@ -182,19 +182,5 @@ namespace Models
                 }
             }
         }
-
-        /*
-        while (_read.Read())
-        {
-            UserCache.IdUser = _read.GetInt32(0);
-            UserCache.IdPerfil = _read.GetInt32(1);
-            UserCache.IdSecurity = _read.GetInt32(2);
-            UserCache.User = _read.GetString(3);
-            UserCache.Email = _read.GetString(4);
-            UserCache.LastAcess = _read.GetDateTime(5);
-            UserCache.isRoot = _read.GetInt32(6);
-            result = true;
-        }
-        */
     }
 }

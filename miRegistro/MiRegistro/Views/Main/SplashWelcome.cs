@@ -1,5 +1,5 @@
-﻿using MiRegistro.Controllers;
-using MiRegistro.Models;
+﻿using Controllers;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +27,6 @@ namespace MiRegistro.Views.Main
 
         public int countTimer = 0;
         public int imageToSplash = 1;
-        public int totalImageToSplash = 3;
+        public int totalImageToSplash = 5;
     }
 }

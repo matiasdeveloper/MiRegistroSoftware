@@ -141,7 +141,8 @@ namespace LayerPresentation
         }
         private void LoadDataPanel_03(DateTime first, DateTime last, BunifuProgressBar[] progressbars, Label[] progresstexts)
         {
-            /*int[] result = Statistics.GetStatisticTramites(first, last, true);
+            /*
+            int[] result = Statistics.GetStatisticTramites(first, last, true);
             progressbars[0].Value = result[2];
             progressbars[1].Value = result[3];
             progresstexts[0].Text = result[2].ToString() + "%";

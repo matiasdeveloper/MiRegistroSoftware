@@ -1,6 +1,6 @@
-﻿using MiRegistro.Models;
-using MiRegistro.Properties;
+﻿using MiRegistro.Properties;
 using MiRegistro.Views.Main;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -9,7 +9,7 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiRegistro.Controllers
+namespace Controllers
 {
     public class WelcomeController
     {
@@ -83,6 +83,8 @@ namespace MiRegistro.Controllers
                 _view.checkbox_terms.Enabled = false;
                 _view.checkbox_terms.Checked = true;
             }
+
+            LoadFechaDataCache();
         }
 
         public void OnCheckBoxClick(object sender, EventArgs e) 
@@ -141,6 +143,26 @@ namespace MiRegistro.Controllers
 
                 _view.Close();
             }
+        }
+
+        public void LoadFechaDataCache()
+        {
+            FechaModel.firstDayOfWeek = FirstDayOfWeek(DateTime.Now);
+            FechaModel.lastDayOfWeek = FechaModel.firstDayOfWeek.AddDays(6);
+
+            DateTime dateNow = DateTime.Now;
+
+            FechaModel.firstDayOfMonth = new DateTime(dateNow.Year, dateNow.Month, 1);
+            FechaModel.lastDayOfMonth = FechaModel.firstDayOfMonth.AddMonths(1).AddDays(-1);
+        }
+
+        public static DateTime FirstDayOfWeek(DateTime dt)
+        {
+            var culture = System.Threading.Thread.CurrentThread.CurrentCulture;
+            var diff = dt.DayOfWeek - culture.DateTimeFormat.FirstDayOfWeek;
+            if (diff < 0)
+                diff += 7;
+            return dt.AddDays(-diff).Date;
         }
     }
 }

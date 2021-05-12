@@ -65,7 +65,7 @@
     </Reference>
     <Reference Include="Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\MiRegistro Resources\Frameworks\Guna.UI.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\MiRegistro Resources\Frameworks\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
@@ -182,13 +182,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\WelcomeController.cs" />
+    <Compile Include="Models\DashboardViewModel.cs" />
+    <Compile Include="Models\Static\ColorSystem.cs" />
+    <Compile Include="Models\Static\PasswordEncrypter.cs" />
+    <Compile Include="Models\Static\Percentage.cs" />
+    <Compile Include="Models\TableViewModel\DashboardTableViewModel.cs" />
+    <Compile Include="Models\Utilities\FechaModel.cs" />
     <Compile Include="Models\MainViewModel.cs" />
+    <Compile Include="Models\TableViewModel\TramitesTableViewModel.cs" />
     <Compile Include="Models\TableViewModel\UserPrivilegesTableViewModel.cs" />
     <Compile Include="Models\TableViewModel\UserTableViewModel.cs" />
     <Compile Include="Models\Utilities\FormModel.cs" />
+    <Compile Include="Models\Utilities\StatisticModel.cs" />
+    <Compile Include="Models\Utilities\UtilitiesModel.cs" />
     <Compile Include="Models\WelcomeViewModel.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -196,11 +206,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
-    <Compile Include="Views\Form1.cs">
+    <Compile Include="Views\Main\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Views\Main\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Main\Login.cs">
       <SubType>Form</SubType>
@@ -226,9 +236,7 @@
     <Compile Include="Models\claseformulario.cs">
       <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Clases\Utilities\PasswordEncrypter.cs" />
-    <Compile Include="Models\Clases\Utilities\Percentage.cs" />
-    <Compile Include="Models\Clases\Utilities\Statistics.cs" />
+    <Compile Include="Models\ClasesOlder\Utilities\Statistics.cs" />
     <Compile Include="Models\direccion.cs">
       <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>
@@ -327,6 +335,9 @@
     <Compile Include="Views\Main\SplashWelcome.Designer.cs">
       <DependentUpon>SplashWelcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Main\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Main\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +391,9 @@
       <DependentUpon>EntityDataModel.edmx</DependentUpon>
       <LastGenOutput>EntityDataModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icon_employee.png" />
+    <None Include="Resources\splash5.jpg" />
+    <None Include="Resources\splash4.jpg" />
     <None Include="Resources\icon_slidedown_1.png" />
     <None Include="Resources\male_user_100px.png" />
     <None Include="Resources\login3.png" />

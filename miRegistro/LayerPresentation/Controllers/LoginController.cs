@@ -20,7 +20,7 @@ namespace LayerPresentation.Controllers
             _view.Load += new EventHandler(PersistanteConnection);
             _view.Load += new EventHandler(FindSavedUser);
 
-            _view.btn_login.Click += new EventHandler(Autentificar);
+            //_view.btn_login.Click += new EventHandler(Autentificar);
         }
         private void PersistanteConnection(object sender, EventArgs e) 
         {

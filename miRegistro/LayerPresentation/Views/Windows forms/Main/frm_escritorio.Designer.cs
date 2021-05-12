@@ -718,7 +718,7 @@
             // 
             // pic_stock02
             // 
-            this.pic_stock02.BackgroundImage = global::LayerPresentation.Properties.Resources.r_negative;
+            //this.pic_stock02.BackgroundImage = global::LayerPresentation.Properties.Resources.r_negative;
             this.pic_stock02.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pic_stock02.Location = new System.Drawing.Point(106, 182);
             this.pic_stock02.Name = "pic_stock02";

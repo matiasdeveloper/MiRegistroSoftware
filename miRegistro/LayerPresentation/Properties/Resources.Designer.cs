@@ -63,6 +63,7 @@ namespace LayerPresentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap backgroundBienvenida {
             get {
                 object obj = ResourceManager.GetObject("backgroundBienvenida", resourceCulture);
@@ -76,6 +77,8 @@ namespace LayerPresentation.Properties {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 742947b (Adding logic in Dashboard and design interface)
         internal static System.Drawing.Bitmap Businessman_48px {
             get {
                 object obj = ResourceManager.GetObject("Businessman_48px", resourceCulture);
