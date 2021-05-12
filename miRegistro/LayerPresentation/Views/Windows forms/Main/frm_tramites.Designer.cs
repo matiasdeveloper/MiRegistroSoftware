@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_tramites));
             this.lbl_totaltramites = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -155,7 +155,7 @@
             this.label31.Location = new System.Drawing.Point(13, 22);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(90, 28);
+            this.label31.Size = new System.Drawing.Size(86, 28);
             this.label31.TabIndex = 81;
             this.label31.Text = "Tramites";
             // 
@@ -164,21 +164,21 @@
             this.dg_tramites.AllowUserToAddRows = false;
             this.dg_tramites.AllowUserToDeleteRows = false;
             this.dg_tramites.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dg_tramites.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dg_tramites.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dg_tramites.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg_tramites.BackgroundColor = System.Drawing.Color.White;
             this.dg_tramites.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg_tramites.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dg_tramites.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_tramites.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_tramites.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dg_tramites.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dg_tramites.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
@@ -191,14 +191,14 @@
             this.ColumnFecha,
             this.ColumnObservaciones});
             this.TransitionPnMore.SetDecoration(this.dg_tramites, BunifuAnimatorNS.DecorationType.None);
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_tramites.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_tramites.DefaultCellStyle = dataGridViewCellStyle9;
             this.dg_tramites.EnableHeadersVisualStyles = false;
             this.dg_tramites.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dg_tramites.Location = new System.Drawing.Point(11, 54);
@@ -240,8 +240,8 @@
             // 
             this.ColumnId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnId.DataPropertyName = "Id";
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Poppins Thin", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColumnId.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins Thin", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColumnId.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColumnId.FillWeight = 24.3108F;
             this.ColumnId.HeaderText = "Id";
             this.ColumnId.Name = "ColumnId";
@@ -251,8 +251,8 @@
             // ColumnDomino
             // 
             this.ColumnDomino.DataPropertyName = "Dominio";
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Gray;
-            this.ColumnDomino.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Gray;
+            this.ColumnDomino.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColumnDomino.FillWeight = 24.3108F;
             this.ColumnDomino.HeaderText = "Dominio";
             this.ColumnDomino.Name = "ColumnDomino";
@@ -262,8 +262,8 @@
             // 
             this.ColumnCategoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColumnCategoria.DataPropertyName = "Categoria";
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColumnCategoria.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColumnCategoria.DefaultCellStyle = dataGridViewCellStyle5;
             this.ColumnCategoria.HeaderText = "Categoria";
             this.ColumnCategoria.Name = "ColumnCategoria";
             this.ColumnCategoria.ReadOnly = true;
@@ -272,8 +272,8 @@
             // ColumnProcesado
             // 
             this.ColumnProcesado.DataPropertyName = "Estado";
-            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.ColumnProcesado.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.ColumnProcesado.DefaultCellStyle = dataGridViewCellStyle6;
             this.ColumnProcesado.FillWeight = 24.3108F;
             this.ColumnProcesado.HeaderText = "Estado";
             this.ColumnProcesado.Name = "ColumnProcesado";
@@ -304,8 +304,8 @@
             // ColumnEstado
             // 
             this.ColumnEstado.DataPropertyName = "Errores";
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Italic);
-            this.ColumnEstado.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Italic);
+            this.ColumnEstado.DefaultCellStyle = dataGridViewCellStyle7;
             this.ColumnEstado.FillWeight = 24.3108F;
             this.ColumnEstado.HeaderText = "Errores";
             this.ColumnEstado.Name = "ColumnEstado";
@@ -324,8 +324,8 @@
             // 
             this.ColumnObservaciones.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColumnObservaciones.DataPropertyName = "Observaciones";
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColumnObservaciones.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColumnObservaciones.DefaultCellStyle = dataGridViewCellStyle8;
             this.ColumnObservaciones.FillWeight = 24.3108F;
             this.ColumnObservaciones.HeaderText = "Observaciones";
             this.ColumnObservaciones.Name = "ColumnObservaciones";
@@ -348,6 +348,7 @@
             this.txtBox_user.Name = "txtBox_user";
             this.txtBox_user.PasswordChar = '\0';
             this.txtBox_user.Radius = 7;
+            this.txtBox_user.SelectedText = "";
             this.txtBox_user.Size = new System.Drawing.Size(181, 28);
             this.txtBox_user.TabIndex = 240;
             this.txtBox_user.Text = "Buscar por dominio";
@@ -389,7 +390,7 @@
             this.label4.ForeColor = System.Drawing.Color.Silver;
             this.label4.Location = new System.Drawing.Point(566, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 22);
+            this.label4.Size = new System.Drawing.Size(107, 21);
             this.label4.TabIndex = 244;
             this.label4.Text = "Filas por pagina";
             // 
@@ -618,7 +619,7 @@
             this.button_ayer.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.button_ayer.Location = new System.Drawing.Point(312, 20);
             this.button_ayer.Name = "button_ayer";
-            this.button_ayer.Size = new System.Drawing.Size(36, 22);
+            this.button_ayer.Size = new System.Drawing.Size(36, 21);
             this.button_ayer.TabIndex = 266;
             this.button_ayer.Text = "Ayer";
             this.button_ayer.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -634,7 +635,7 @@
             this.button_mes.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.button_mes.Location = new System.Drawing.Point(258, 20);
             this.button_mes.Name = "button_mes";
-            this.button_mes.Size = new System.Drawing.Size(33, 22);
+            this.button_mes.Size = new System.Drawing.Size(33, 21);
             this.button_mes.TabIndex = 265;
             this.button_mes.Text = "Mes";
             this.button_mes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -650,7 +651,7 @@
             this.button_hoy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
             this.button_hoy.Location = new System.Drawing.Point(207, 20);
             this.button_hoy.Name = "button_hoy";
-            this.button_hoy.Size = new System.Drawing.Size(33, 22);
+            this.button_hoy.Size = new System.Drawing.Size(33, 21);
             this.button_hoy.TabIndex = 264;
             this.button_hoy.Text = "Hoy";
             this.button_hoy.Click += new System.EventHandler(this.button_hoy_Click);
@@ -856,7 +857,7 @@
             this.label7.Location = new System.Drawing.Point(44, 243);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 22);
+            this.label7.Size = new System.Drawing.Size(121, 21);
             this.label7.TabIndex = 265;
             this.label7.Text = "Tramite observado";
             // 
@@ -955,7 +956,7 @@
             this.gunaRadioButton2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gunaRadioButton2.Location = new System.Drawing.Point(21, 450);
             this.gunaRadioButton2.Name = "gunaRadioButton2";
-            this.gunaRadioButton2.Size = new System.Drawing.Size(103, 20);
+            this.gunaRadioButton2.Size = new System.Drawing.Size(102, 20);
             this.gunaRadioButton2.TabIndex = 260;
             this.gunaRadioButton2.Text = "Con errores";
             this.gunaRadioButton2.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
@@ -985,7 +986,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
             this.label8.Location = new System.Drawing.Point(13, 396);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 22);
+            this.label8.Size = new System.Drawing.Size(82, 21);
             this.label8.TabIndex = 258;
             this.label8.Text = "Con errores";
             // 
@@ -1024,7 +1025,7 @@
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
             this.label22.Location = new System.Drawing.Point(13, 333);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(214, 22);
+            this.label22.Size = new System.Drawing.Size(214, 21);
             this.label22.TabIndex = 256;
             this.label22.Text = "Ingrese el empleado que inscribio";
             // 
@@ -1061,7 +1062,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
             this.label2.Location = new System.Drawing.Point(13, 270);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(212, 22);
+            this.label2.Size = new System.Drawing.Size(212, 21);
             this.label2.TabIndex = 253;
             this.label2.Text = "Ingrese el empleado que proceso";
             // 
@@ -1075,7 +1076,7 @@
             this.btn_checkboxinscripto.Location = new System.Drawing.Point(44, 214);
             this.btn_checkboxinscripto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btn_checkboxinscripto.Name = "btn_checkboxinscripto";
-            this.btn_checkboxinscripto.Size = new System.Drawing.Size(109, 22);
+            this.btn_checkboxinscripto.Size = new System.Drawing.Size(108, 21);
             this.btn_checkboxinscripto.TabIndex = 251;
             this.btn_checkboxinscripto.Text = "Tramite inscripto";
             // 
@@ -1103,7 +1104,7 @@
             this.btn_checkboxprocesado.Location = new System.Drawing.Point(44, 185);
             this.btn_checkboxprocesado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btn_checkboxprocesado.Name = "btn_checkboxprocesado";
-            this.btn_checkboxprocesado.Size = new System.Drawing.Size(122, 22);
+            this.btn_checkboxprocesado.Size = new System.Drawing.Size(121, 21);
             this.btn_checkboxprocesado.TabIndex = 249;
             this.btn_checkboxprocesado.Text = "Tramite procesado";
             // 
@@ -1129,7 +1130,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
             this.label5.Location = new System.Drawing.Point(11, 156);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 22);
+            this.label5.Size = new System.Drawing.Size(127, 21);
             this.label5.TabIndex = 247;
             this.label5.Text = "Seleccione la etapa";
             // 
@@ -1168,7 +1169,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
             this.label1.Location = new System.Drawing.Point(11, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 22);
+            this.label1.Size = new System.Drawing.Size(71, 21);
             this.label1.TabIndex = 239;
             this.label1.Text = "Categoria";
             // 
@@ -1208,7 +1209,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
             this.label3.Location = new System.Drawing.Point(7, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 22);
+            this.label3.Size = new System.Drawing.Size(122, 21);
             this.label3.TabIndex = 237;
             this.label3.Text = "Ingrese una fecha ";
             // 
@@ -1222,7 +1223,7 @@
             this.label6.Location = new System.Drawing.Point(7, 6);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label6.Size = new System.Drawing.Size(140, 22);
+            this.label6.Size = new System.Drawing.Size(140, 21);
             this.label6.TabIndex = 86;
             this.label6.Text = "Consulta de tramites";
             // 
@@ -1250,22 +1251,22 @@
             // 
             this.TransitionPnMore.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.TransitionPnMore.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.TransitionPnMore.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.TransitionPnMore.DefaultAnimation = animation1;
             this.TransitionPnMore.TimeStep = 0.06F;
             // 
             // lbl_paging
@@ -1276,7 +1277,7 @@
             this.lbl_paging.ForeColor = System.Drawing.Color.DarkGray;
             this.lbl_paging.Location = new System.Drawing.Point(38, 646);
             this.lbl_paging.Name = "lbl_paging";
-            this.lbl_paging.Size = new System.Drawing.Size(219, 22);
+            this.lbl_paging.Size = new System.Drawing.Size(219, 21);
             this.lbl_paging.TabIndex = 260;
             this.lbl_paging.Text = "Mostrando 1 - 09 de 76 resultados";
             // 
@@ -1453,6 +1454,7 @@
             this.gunaTextBox1.Name = "gunaTextBox1";
             this.gunaTextBox1.PasswordChar = '\0';
             this.gunaTextBox1.Radius = 7;
+            this.gunaTextBox1.SelectedText = "";
             this.gunaTextBox1.Size = new System.Drawing.Size(32, 28);
             this.gunaTextBox1.TabIndex = 240;
             this.gunaTextBox1.Text = "10";
@@ -1465,7 +1467,7 @@
             this.label9.ForeColor = System.Drawing.Color.Gray;
             this.label9.Location = new System.Drawing.Point(14, 14);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(21, 22);
+            this.label9.Size = new System.Drawing.Size(21, 21);
             this.label9.TabIndex = 241;
             this.label9.Text = "Id";
             // 
@@ -1477,7 +1479,7 @@
             this.label10.ForeColor = System.Drawing.Color.Gray;
             this.label10.Location = new System.Drawing.Point(93, 14);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 22);
+            this.label10.Size = new System.Drawing.Size(60, 21);
             this.label10.TabIndex = 243;
             this.label10.Text = "Dominio";
             // 
@@ -1498,6 +1500,7 @@
             this.gunaTextBox2.Name = "gunaTextBox2";
             this.gunaTextBox2.PasswordChar = '\0';
             this.gunaTextBox2.Radius = 7;
+            this.gunaTextBox2.SelectedText = "";
             this.gunaTextBox2.Size = new System.Drawing.Size(75, 28);
             this.gunaTextBox2.TabIndex = 242;
             this.gunaTextBox2.Text = "AAXXX100";
@@ -1510,7 +1513,7 @@
             this.label11.ForeColor = System.Drawing.Color.Gray;
             this.label11.Location = new System.Drawing.Point(249, 14);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 22);
+            this.label11.Size = new System.Drawing.Size(69, 21);
             this.label11.TabIndex = 245;
             this.label11.Text = "Categoria";
             // 
@@ -1546,7 +1549,7 @@
             this.label12.ForeColor = System.Drawing.Color.Gray;
             this.label12.Location = new System.Drawing.Point(662, 14);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 22);
+            this.label12.Size = new System.Drawing.Size(98, 21);
             this.label12.TabIndex = 247;
             this.label12.Text = "Observaciones";
             // 
@@ -1567,6 +1570,7 @@
             this.gunaTextBox3.Name = "gunaTextBox3";
             this.gunaTextBox3.PasswordChar = '\0';
             this.gunaTextBox3.Radius = 7;
+            this.gunaTextBox3.SelectedText = "";
             this.gunaTextBox3.Size = new System.Drawing.Size(139, 28);
             this.gunaTextBox3.TabIndex = 248;
             this.gunaTextBox3.Text = "Sin observaciones";
@@ -1579,7 +1583,7 @@
             this.label13.ForeColor = System.Drawing.Color.Gray;
             this.label13.Location = new System.Drawing.Point(455, 14);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 22);
+            this.label13.Size = new System.Drawing.Size(46, 21);
             this.label13.TabIndex = 249;
             this.label13.Text = "Fecha";
             // 

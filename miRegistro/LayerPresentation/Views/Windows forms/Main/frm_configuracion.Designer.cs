@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_configuracion));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel_newUser = new System.Windows.Forms.Panel();
             this.label51 = new System.Windows.Forms.Label();
@@ -235,9 +235,9 @@
             this.panel_newUser.Controls.Add(this.txtBox_newUser_user);
             this.panel_newUser.Controls.Add(this.panel37);
             this.panel_newUser.Enabled = false;
-            this.panel_newUser.Location = new System.Drawing.Point(250, 13);
+            this.panel_newUser.Location = new System.Drawing.Point(259, 13);
             this.panel_newUser.Name = "panel_newUser";
-            this.panel_newUser.Size = new System.Drawing.Size(19, 14);
+            this.panel_newUser.Size = new System.Drawing.Size(10, 10);
             this.panel_newUser.TabIndex = 30;
             this.panel_newUser.Visible = false;
             // 
@@ -705,7 +705,7 @@
             this.panel37.Location = new System.Drawing.Point(0, 0);
             this.panel37.Margin = new System.Windows.Forms.Padding(4);
             this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(17, 25);
+            this.panel37.Size = new System.Drawing.Size(8, 25);
             this.panel37.TabIndex = 27;
             // 
             // label26
@@ -739,7 +739,7 @@
             this.label23.Location = new System.Drawing.Point(12, 18);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(158, 28);
+            this.label23.Size = new System.Drawing.Size(151, 28);
             this.label23.TabIndex = 83;
             this.label23.Text = "Configuraciones";
             // 
@@ -798,7 +798,7 @@
             this.gunaCheckBox6.ForeColor = System.Drawing.Color.Gray;
             this.gunaCheckBox6.Location = new System.Drawing.Point(19, 118);
             this.gunaCheckBox6.Name = "gunaCheckBox6";
-            this.gunaCheckBox6.Size = new System.Drawing.Size(188, 20);
+            this.gunaCheckBox6.Size = new System.Drawing.Size(186, 20);
             this.gunaCheckBox6.TabIndex = 5;
             this.gunaCheckBox6.Text = "Alertas de errores (Local)";
             this.gunaCheckBox6.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
@@ -813,7 +813,7 @@
             this.gunaCheckBox5.ForeColor = System.Drawing.Color.Gray;
             this.gunaCheckBox5.Location = new System.Drawing.Point(19, 93);
             this.gunaCheckBox5.Name = "gunaCheckBox5";
-            this.gunaCheckBox5.Size = new System.Drawing.Size(177, 20);
+            this.gunaCheckBox5.Size = new System.Drawing.Size(175, 20);
             this.gunaCheckBox5.TabIndex = 4;
             this.gunaCheckBox5.Text = "Alertas de stock (Local)";
             this.gunaCheckBox5.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
@@ -828,7 +828,7 @@
             this.gunaCheckBox4.ForeColor = System.Drawing.Color.Gray;
             this.gunaCheckBox4.Location = new System.Drawing.Point(19, 43);
             this.gunaCheckBox4.Name = "gunaCheckBox4";
-            this.gunaCheckBox4.Size = new System.Drawing.Size(189, 20);
+            this.gunaCheckBox4.Size = new System.Drawing.Size(187, 20);
             this.gunaCheckBox4.TabIndex = 3;
             this.gunaCheckBox4.Text = "Alertas de errores (Email)";
             this.gunaCheckBox4.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
@@ -844,7 +844,7 @@
             this.gunaCheckBox3.ForeColor = System.Drawing.Color.Gray;
             this.gunaCheckBox3.Location = new System.Drawing.Point(19, 168);
             this.gunaCheckBox3.Name = "gunaCheckBox3";
-            this.gunaCheckBox3.Size = new System.Drawing.Size(263, 20);
+            this.gunaCheckBox3.Size = new System.Drawing.Size(260, 20);
             this.gunaCheckBox3.TabIndex = 2;
             this.gunaCheckBox3.Text = "Alertas de cargas de tramites (Local)";
             this.gunaCheckBox3.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
@@ -860,7 +860,7 @@
             this.gunaCheckBox2.ForeColor = System.Drawing.Color.Gray;
             this.gunaCheckBox2.Location = new System.Drawing.Point(19, 143);
             this.gunaCheckBox2.Name = "gunaCheckBox2";
-            this.gunaCheckBox2.Size = new System.Drawing.Size(222, 20);
+            this.gunaCheckBox2.Size = new System.Drawing.Size(220, 20);
             this.gunaCheckBox2.TabIndex = 1;
             this.gunaCheckBox2.Text = "Alertas de cumpleaños (Local)";
             this.gunaCheckBox2.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
@@ -875,7 +875,7 @@
             this.gunaCheckBox1.ForeColor = System.Drawing.Color.Gray;
             this.gunaCheckBox1.Location = new System.Drawing.Point(19, 68);
             this.gunaCheckBox1.Name = "gunaCheckBox1";
-            this.gunaCheckBox1.Size = new System.Drawing.Size(178, 20);
+            this.gunaCheckBox1.Size = new System.Drawing.Size(176, 20);
             this.gunaCheckBox1.TabIndex = 0;
             this.gunaCheckBox1.Text = "Alertas de stock (Email)";
             this.gunaCheckBox1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
@@ -918,7 +918,7 @@
             this.gunaCheckBox9.ForeColor = System.Drawing.Color.Gray;
             this.gunaCheckBox9.Location = new System.Drawing.Point(19, 42);
             this.gunaCheckBox9.Name = "gunaCheckBox9";
-            this.gunaCheckBox9.Size = new System.Drawing.Size(194, 20);
+            this.gunaCheckBox9.Size = new System.Drawing.Size(193, 20);
             this.gunaCheckBox9.TabIndex = 3;
             this.gunaCheckBox9.Text = "Notificaciones de usuarios";
             this.gunaCheckBox9.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
@@ -933,7 +933,7 @@
             this.gunaCheckBox12.ForeColor = System.Drawing.Color.Gray;
             this.gunaCheckBox12.Location = new System.Drawing.Point(19, 67);
             this.gunaCheckBox12.Name = "gunaCheckBox12";
-            this.gunaCheckBox12.Size = new System.Drawing.Size(193, 20);
+            this.gunaCheckBox12.Size = new System.Drawing.Size(192, 20);
             this.gunaCheckBox12.TabIndex = 0;
             this.gunaCheckBox12.Text = "Notificaciones del sistema";
             this.gunaCheckBox12.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
@@ -995,6 +995,7 @@
             this.textBox_tipoTramite.Name = "textBox_tipoTramite";
             this.textBox_tipoTramite.PasswordChar = '\0';
             this.textBox_tipoTramite.Radius = 7;
+            this.textBox_tipoTramite.SelectedText = "";
             this.textBox_tipoTramite.Size = new System.Drawing.Size(259, 28);
             this.textBox_tipoTramite.TabIndex = 239;
             this.textBox_tipoTramite.Text = "Ingrese nombre de categoria";
@@ -1093,6 +1094,7 @@
             this.textBox_newCategoria.Name = "textBox_newCategoria";
             this.textBox_newCategoria.PasswordChar = '\0';
             this.textBox_newCategoria.Radius = 7;
+            this.textBox_newCategoria.SelectedText = "";
             this.textBox_newCategoria.Size = new System.Drawing.Size(259, 28);
             this.textBox_newCategoria.TabIndex = 239;
             this.textBox_newCategoria.Text = "Ingrese nombre de categoria";
@@ -1407,6 +1409,7 @@
             this.txtBox_nick.Name = "txtBox_nick";
             this.txtBox_nick.PasswordChar = '\0';
             this.txtBox_nick.Radius = 7;
+            this.txtBox_nick.SelectedText = "";
             this.txtBox_nick.Size = new System.Drawing.Size(104, 28);
             this.txtBox_nick.TabIndex = 248;
             this.txtBox_nick.Text = "@MRegistro";
@@ -1428,6 +1431,7 @@
             this.txtBox_apellido.Name = "txtBox_apellido";
             this.txtBox_apellido.PasswordChar = '\0';
             this.txtBox_apellido.Radius = 7;
+            this.txtBox_apellido.SelectedText = "";
             this.txtBox_apellido.Size = new System.Drawing.Size(146, 28);
             this.txtBox_apellido.TabIndex = 247;
             this.txtBox_apellido.Text = "Apellido";
@@ -1448,6 +1452,7 @@
             this.txtBox_nombre.Name = "txtBox_nombre";
             this.txtBox_nombre.PasswordChar = '\0';
             this.txtBox_nombre.Radius = 7;
+            this.txtBox_nombre.SelectedText = "";
             this.txtBox_nombre.Size = new System.Drawing.Size(146, 28);
             this.txtBox_nombre.TabIndex = 246;
             this.txtBox_nombre.Text = "Nombre";
@@ -1468,6 +1473,7 @@
             this.txtBox_correo.Name = "txtBox_correo";
             this.txtBox_correo.PasswordChar = '\0';
             this.txtBox_correo.Radius = 7;
+            this.txtBox_correo.SelectedText = "";
             this.txtBox_correo.Size = new System.Drawing.Size(348, 28);
             this.txtBox_correo.TabIndex = 245;
             this.txtBox_correo.Text = "myemail@miregistro.com";
@@ -1501,6 +1507,7 @@
             this.txtBox_usuario.Name = "txtBox_usuario";
             this.txtBox_usuario.PasswordChar = '\0';
             this.txtBox_usuario.Radius = 7;
+            this.txtBox_usuario.SelectedText = "";
             this.txtBox_usuario.Size = new System.Drawing.Size(254, 28);
             this.txtBox_usuario.TabIndex = 243;
             this.txtBox_usuario.Text = "Miusuarioregisrociudad";
@@ -1565,6 +1572,7 @@
             this.gunaTextBox8.Name = "gunaTextBox8";
             this.gunaTextBox8.PasswordChar = '\0';
             this.gunaTextBox8.Radius = 7;
+            this.gunaTextBox8.SelectedText = "";
             this.gunaTextBox8.Size = new System.Drawing.Size(316, 28);
             this.gunaTextBox8.TabIndex = 268;
             this.gunaTextBox8.Text = "Contraseña antigua";
@@ -1585,6 +1593,7 @@
             this.gunaTextBox7.Name = "gunaTextBox7";
             this.gunaTextBox7.PasswordChar = '\0';
             this.gunaTextBox7.Radius = 7;
+            this.gunaTextBox7.SelectedText = "";
             this.gunaTextBox7.Size = new System.Drawing.Size(316, 28);
             this.gunaTextBox7.TabIndex = 267;
             this.gunaTextBox7.Text = "Nueva contraseña";
@@ -1605,6 +1614,7 @@
             this.gunaTextBox6.Name = "gunaTextBox6";
             this.gunaTextBox6.PasswordChar = '\0';
             this.gunaTextBox6.Radius = 7;
+            this.gunaTextBox6.SelectedText = "";
             this.gunaTextBox6.Size = new System.Drawing.Size(316, 28);
             this.gunaTextBox6.TabIndex = 266;
             this.gunaTextBox6.Text = "Confirma la contraseña";
@@ -1850,34 +1860,34 @@
             this.gunaDataGridView1.AllowUserToDeleteRows = false;
             this.gunaDataGridView1.AllowUserToResizeColumns = false;
             this.gunaDataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gunaDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gunaDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gunaDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.gunaDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gunaDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gunaDataGridView1.ColumnHeadersHeight = 30;
             this.gunaDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gunaDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.gunaDataGridView1.EnableHeadersVisualStyles = false;
             this.gunaDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.gunaDataGridView1.Location = new System.Drawing.Point(13, 33);
@@ -1887,11 +1897,11 @@
             this.gunaDataGridView1.RowHeadersVisible = false;
             this.gunaDataGridView1.RowHeadersWidth = 51;
             this.gunaDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gunaDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gunaDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gunaDataGridView1.RowTemplate.Height = 30;
             this.gunaDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gunaDataGridView1.Size = new System.Drawing.Size(268, 127);
@@ -1996,35 +2006,35 @@
             this.dg_numeracion.AllowUserToDeleteRows = false;
             this.dg_numeracion.AllowUserToResizeColumns = false;
             this.dg_numeracion.AllowUserToResizeRows = false;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
-            this.dg_numeracion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dg_numeracion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dg_numeracion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg_numeracion.BackgroundColor = System.Drawing.Color.White;
             this.dg_numeracion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg_numeracion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dg_numeracion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_numeracion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins ExtraLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_numeracion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dg_numeracion.ColumnHeadersHeight = 30;
             this.dg_numeracion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dg_numeracion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnNumeracion,
             this.ColumnInicio,
             this.ColumnFin});
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_numeracion.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_numeracion.DefaultCellStyle = dataGridViewCellStyle8;
             this.dg_numeracion.EnableHeadersVisualStyles = false;
             this.dg_numeracion.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dg_numeracion.Location = new System.Drawing.Point(11, 40);
@@ -2034,11 +2044,11 @@
             this.dg_numeracion.RowHeadersVisible = false;
             this.dg_numeracion.RowHeadersWidth = 51;
             this.dg_numeracion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dg_numeracion.RowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dg_numeracion.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dg_numeracion.RowTemplate.Height = 30;
             this.dg_numeracion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_numeracion.Size = new System.Drawing.Size(367, 101);
@@ -2078,8 +2088,8 @@
             // ColumnInicio
             // 
             this.ColumnInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColumnInicio.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColumnInicio.DefaultCellStyle = dataGridViewCellStyle7;
             this.ColumnInicio.FillWeight = 22.60666F;
             this.ColumnInicio.HeaderText = "Inicio";
             this.ColumnInicio.MinimumWidth = 6;
@@ -2165,6 +2175,7 @@
             this.gunaTextBox9.Name = "gunaTextBox9";
             this.gunaTextBox9.PasswordChar = '\0';
             this.gunaTextBox9.Radius = 7;
+            this.gunaTextBox9.SelectedText = "";
             this.gunaTextBox9.Size = new System.Drawing.Size(259, 28);
             this.gunaTextBox9.TabIndex = 239;
             this.gunaTextBox9.Text = "Ingrese nombre del error";

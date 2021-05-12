@@ -39,11 +39,11 @@ namespace MiRegistro.Views.Main
         }
         private void btn_empleados_Click(object sender, EventArgs e)
         {
-            oMainController.ActivateButtonSidebar(sender);
+            //oMainController.ActivateButtonSidebar(sender);
         }
         private void btn_estadisticas_Click(object sender, EventArgs e)
         {
-            oMainController.ActivateButtonSidebar(sender);
+            //oMainController.ActivateButtonSidebar(sender);
         }
         private void gunaAdvenceButton6_Click(object sender, EventArgs e)
         {

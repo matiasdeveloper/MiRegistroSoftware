@@ -83,7 +83,7 @@ namespace Controllers
 
             _view.txtBox_user.Text = "usuarioejemplo";
             _view.txtBox_pass.Text = "8 caracteres o mas";
-            _view.txtBox_pass.UseSystemPasswordChar = false;
+            _view.txtBox_pass.PasswordChar = (char)0;
         }
 
     }

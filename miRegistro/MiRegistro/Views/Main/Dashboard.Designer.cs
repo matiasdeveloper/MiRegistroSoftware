@@ -30,23 +30,30 @@ namespace MiRegistro.Views
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.dash_panel10 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.btn_accionesrapidas_insertar = new Guna.UI.WinForms.GunaAdvenceButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_accionesrapidas_stock = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btn_accionesrapidas_inscribir = new Guna.UI.WinForms.GunaAdvenceButton();
             this.dash_panel6 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
             this.dg_toptramites = new Guna.UI.WinForms.GunaDataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.dash_panel2 = new Guna.UI.WinForms.GunaShadowPanel();
             this.label13 = new System.Windows.Forms.Label();
@@ -57,11 +64,17 @@ namespace MiRegistro.Views
             this.lbl_time = new System.Windows.Forms.Label();
             this.lbl_date = new System.Windows.Forms.Label();
             this.dash_panel9 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.label14 = new System.Windows.Forms.Label();
             this.lbl_tramitesempleados00 = new System.Windows.Forms.Label();
             this.dash_panel7 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.label8 = new System.Windows.Forms.Label();
             this.dg_toperror = new Guna.UI.WinForms.GunaDataGridView();
+            this.Top = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNumeracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnStockDetail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.dash_panel5 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.label3 = new System.Windows.Forms.Label();
             this.lbl_tramites_00 = new System.Windows.Forms.Label();
             this.dash_panel4 = new Guna.UI.WinForms.GunaShadowPanel();
             this.lbl_stockbajo_percentage = new System.Windows.Forms.Label();
@@ -103,23 +116,10 @@ namespace MiRegistro.Views
             this.lbl_tramitesdetail_00 = new System.Windows.Forms.Label();
             this.cb_tramites = new Guna.UI.WinForms.GunaComboBox();
             this.dash_panel8 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.btn_accionesrapidas_stock = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btn_accionesrapidas_insertar = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btn_accionesrapidas_inscribir = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.progress_procesados = new Guna.UI.WinForms.GunaProgressBar();
             this.progress_inscriptos = new Guna.UI.WinForms.GunaProgressBar();
-            this.Top = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNumeracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnStockDetail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.progress_procesados = new Guna.UI.WinForms.GunaProgressBar();
+            this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.dash_panel10.SuspendLayout();
             this.dash_panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_toptramites)).BeginInit();
@@ -139,8 +139,8 @@ namespace MiRegistro.Views
             ((System.ComponentModel.ISupportInitialize)(this.pic_porcentajediario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_erroresmensual)).BeginInit();
             this.dash_panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaDragControl1
@@ -166,6 +166,41 @@ namespace MiRegistro.Views
             this.dash_panel10.ShadowShift = 2;
             this.dash_panel10.Size = new System.Drawing.Size(334, 206);
             this.dash_panel10.TabIndex = 275;
+            // 
+            // btn_accionesrapidas_insertar
+            // 
+            this.btn_accionesrapidas_insertar.AnimationHoverSpeed = 0.07F;
+            this.btn_accionesrapidas_insertar.AnimationSpeed = 0.03F;
+            this.btn_accionesrapidas_insertar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_accionesrapidas_insertar.BaseColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_insertar.BorderColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_insertar.CheckedBaseColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_insertar.CheckedBorderColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_insertar.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_accionesrapidas_insertar.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_accionesrapidas_insertar.CheckedImage")));
+            this.btn_accionesrapidas_insertar.CheckedLineColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_insertar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_accionesrapidas_insertar.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_accionesrapidas_insertar.Font = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_accionesrapidas_insertar.ForeColor = System.Drawing.Color.Black;
+            this.btn_accionesrapidas_insertar.Image = null;
+            this.btn_accionesrapidas_insertar.ImageOffsetX = 5;
+            this.btn_accionesrapidas_insertar.ImageSize = new System.Drawing.Size(19, 19);
+            this.btn_accionesrapidas_insertar.LineColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_insertar.LineRight = 4;
+            this.btn_accionesrapidas_insertar.Location = new System.Drawing.Point(12, 91);
+            this.btn_accionesrapidas_insertar.Name = "btn_accionesrapidas_insertar";
+            this.btn_accionesrapidas_insertar.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_insertar.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_insertar.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_accionesrapidas_insertar.OnHoverImage = null;
+            this.btn_accionesrapidas_insertar.OnHoverLineColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_insertar.OnPressedColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_insertar.Radius = 3;
+            this.btn_accionesrapidas_insertar.Size = new System.Drawing.Size(237, 32);
+            this.btn_accionesrapidas_insertar.TabIndex = 201;
+            this.btn_accionesrapidas_insertar.Text = "Insertar nuevo tramite";
+            this.btn_accionesrapidas_insertar.TextOffsetX = 6;
             // 
             // label6
             // 
@@ -219,6 +254,76 @@ namespace MiRegistro.Views
             this.label2.TabIndex = 193;
             this.label2.Text = "Exportar infome de stock en pdf";
             // 
+            // btn_accionesrapidas_stock
+            // 
+            this.btn_accionesrapidas_stock.AnimationHoverSpeed = 0.07F;
+            this.btn_accionesrapidas_stock.AnimationSpeed = 0.03F;
+            this.btn_accionesrapidas_stock.BackColor = System.Drawing.Color.Transparent;
+            this.btn_accionesrapidas_stock.BaseColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_stock.BorderColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_stock.CheckedBaseColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_stock.CheckedBorderColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_stock.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_accionesrapidas_stock.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_accionesrapidas_stock.CheckedImage")));
+            this.btn_accionesrapidas_stock.CheckedLineColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_stock.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_accionesrapidas_stock.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_accionesrapidas_stock.Font = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_accionesrapidas_stock.ForeColor = System.Drawing.Color.Black;
+            this.btn_accionesrapidas_stock.Image = null;
+            this.btn_accionesrapidas_stock.ImageOffsetX = 5;
+            this.btn_accionesrapidas_stock.ImageSize = new System.Drawing.Size(19, 19);
+            this.btn_accionesrapidas_stock.LineColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_stock.LineRight = 4;
+            this.btn_accionesrapidas_stock.Location = new System.Drawing.Point(12, 36);
+            this.btn_accionesrapidas_stock.Name = "btn_accionesrapidas_stock";
+            this.btn_accionesrapidas_stock.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_stock.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_stock.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_accionesrapidas_stock.OnHoverImage = null;
+            this.btn_accionesrapidas_stock.OnHoverLineColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_stock.OnPressedColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_stock.Radius = 3;
+            this.btn_accionesrapidas_stock.Size = new System.Drawing.Size(237, 32);
+            this.btn_accionesrapidas_stock.TabIndex = 200;
+            this.btn_accionesrapidas_stock.Text = "Exportar informe stock";
+            this.btn_accionesrapidas_stock.TextOffsetX = 6;
+            // 
+            // btn_accionesrapidas_inscribir
+            // 
+            this.btn_accionesrapidas_inscribir.AnimationHoverSpeed = 0.07F;
+            this.btn_accionesrapidas_inscribir.AnimationSpeed = 0.03F;
+            this.btn_accionesrapidas_inscribir.BackColor = System.Drawing.Color.Transparent;
+            this.btn_accionesrapidas_inscribir.BaseColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_inscribir.BorderColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_inscribir.CheckedBaseColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_inscribir.CheckedBorderColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_inscribir.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_accionesrapidas_inscribir.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_accionesrapidas_inscribir.CheckedImage")));
+            this.btn_accionesrapidas_inscribir.CheckedLineColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_inscribir.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_accionesrapidas_inscribir.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_accionesrapidas_inscribir.Font = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_accionesrapidas_inscribir.ForeColor = System.Drawing.Color.Black;
+            this.btn_accionesrapidas_inscribir.Image = null;
+            this.btn_accionesrapidas_inscribir.ImageOffsetX = 5;
+            this.btn_accionesrapidas_inscribir.ImageSize = new System.Drawing.Size(19, 19);
+            this.btn_accionesrapidas_inscribir.LineColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_inscribir.LineRight = 4;
+            this.btn_accionesrapidas_inscribir.Location = new System.Drawing.Point(12, 148);
+            this.btn_accionesrapidas_inscribir.Name = "btn_accionesrapidas_inscribir";
+            this.btn_accionesrapidas_inscribir.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_inscribir.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_inscribir.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.btn_accionesrapidas_inscribir.OnHoverImage = null;
+            this.btn_accionesrapidas_inscribir.OnHoverLineColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_inscribir.OnPressedColor = System.Drawing.Color.White;
+            this.btn_accionesrapidas_inscribir.Radius = 3;
+            this.btn_accionesrapidas_inscribir.Size = new System.Drawing.Size(237, 32);
+            this.btn_accionesrapidas_inscribir.TabIndex = 202;
+            this.btn_accionesrapidas_inscribir.Text = "Inscribir tramites";
+            this.btn_accionesrapidas_inscribir.TextOffsetX = 6;
+            // 
             // dash_panel6
             // 
             this.dash_panel6.BackColor = System.Drawing.Color.Transparent;
@@ -234,6 +339,33 @@ namespace MiRegistro.Views
             this.dash_panel6.ShadowShift = 2;
             this.dash_panel6.Size = new System.Drawing.Size(334, 196);
             this.dash_panel6.TabIndex = 277;
+            // 
+            // gunaComboBox1
+            // 
+            this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaComboBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaComboBox1.BorderColor = System.Drawing.Color.White;
+            this.gunaComboBox1.BorderSize = 0;
+            this.gunaComboBox1.DisplayMember = "Nombre";
+            this.gunaComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.gunaComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gunaComboBox1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaComboBox1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaComboBox1.ForeColor = System.Drawing.Color.LightGray;
+            this.gunaComboBox1.FormattingEnabled = true;
+            this.gunaComboBox1.Items.AddRange(new object[] {
+            "1 mes",
+            "1 mes ant.",
+            "1 año"});
+            this.gunaComboBox1.Location = new System.Drawing.Point(187, 7);
+            this.gunaComboBox1.Name = "gunaComboBox1";
+            this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.WhiteSmoke;
+            this.gunaComboBox1.OnHoverItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
+            this.gunaComboBox1.Radius = 7;
+            this.gunaComboBox1.Size = new System.Drawing.Size(108, 28);
+            this.gunaComboBox1.StartIndex = 0;
+            this.gunaComboBox1.TabIndex = 266;
+            this.gunaComboBox1.ValueMember = "cod_tipo";
             // 
             // dg_toptramites
             // 
@@ -305,6 +437,38 @@ namespace MiRegistro.Views
             this.dg_toptramites.ThemeStyle.RowsStyle.Height = 30;
             this.dg_toptramites.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dg_toptramites.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn1.FillWeight = 312.8079F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn2.FillWeight = 27.7284F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Empleado";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.FillWeight = 125.1232F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Total";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // label10
             // 
@@ -439,6 +603,20 @@ namespace MiRegistro.Views
             this.dash_panel9.Size = new System.Drawing.Size(422, 206);
             this.dash_panel9.TabIndex = 270;
             // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Poppins", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label14.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label14.Location = new System.Drawing.Point(37, 51);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(344, 120);
+            this.label14.TabIndex = 243;
+            this.label14.Text = "Opcion\r\nDeshabilitada";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // lbl_tramitesempleados00
             // 
             this.lbl_tramitesempleados00.AutoSize = true;
@@ -467,6 +645,19 @@ namespace MiRegistro.Views
             this.dash_panel7.ShadowShift = 2;
             this.dash_panel7.Size = new System.Drawing.Size(194, 317);
             this.dash_panel7.TabIndex = 271;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Poppins ExtraLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label8.Location = new System.Drawing.Point(87, 15);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 19);
+            this.label8.TabIndex = 265;
+            this.label8.Text = "mensual";
             // 
             // dg_toperror
             // 
@@ -539,6 +730,38 @@ namespace MiRegistro.Views
             this.dg_toperror.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dg_toperror.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // Top
+            // 
+            this.Top.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.Top.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Top.FillWeight = 312.8079F;
+            this.Top.HeaderText = "";
+            this.Top.MinimumWidth = 6;
+            this.Top.Name = "Top";
+            this.Top.ReadOnly = true;
+            this.Top.Width = 23;
+            // 
+            // ColumnNumeracion
+            // 
+            this.ColumnNumeracion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ColumnNumeracion.FillWeight = 27.7284F;
+            this.ColumnNumeracion.HeaderText = "Empleado";
+            this.ColumnNumeracion.MinimumWidth = 6;
+            this.ColumnNumeracion.Name = "ColumnNumeracion";
+            this.ColumnNumeracion.ReadOnly = true;
+            this.ColumnNumeracion.Width = 98;
+            // 
+            // ColumnStockDetail
+            // 
+            this.ColumnStockDetail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnStockDetail.FillWeight = 125.1232F;
+            this.ColumnStockDetail.HeaderText = "Total";
+            this.ColumnStockDetail.MinimumWidth = 6;
+            this.ColumnStockDetail.Name = "ColumnStockDetail";
+            this.ColumnStockDetail.ReadOnly = true;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -566,6 +789,20 @@ namespace MiRegistro.Views
             this.dash_panel5.ShadowShift = 2;
             this.dash_panel5.Size = new System.Drawing.Size(422, 321);
             this.dash_panel5.TabIndex = 272;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Poppins", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label3.Location = new System.Drawing.Point(39, 100);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(344, 120);
+            this.label3.TabIndex = 244;
+            this.label3.Text = "Opcion\r\nDeshabilitada";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbl_tramites_00
             // 
@@ -1095,149 +1332,9 @@ namespace MiRegistro.Views
             this.dash_panel8.Size = new System.Drawing.Size(334, 111);
             this.dash_panel8.TabIndex = 276;
             // 
-            // btn_accionesrapidas_stock
-            // 
-            this.btn_accionesrapidas_stock.AnimationHoverSpeed = 0.07F;
-            this.btn_accionesrapidas_stock.AnimationSpeed = 0.03F;
-            this.btn_accionesrapidas_stock.BackColor = System.Drawing.Color.Transparent;
-            this.btn_accionesrapidas_stock.BaseColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_stock.BorderColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_stock.CheckedBaseColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_stock.CheckedBorderColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_stock.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_accionesrapidas_stock.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_accionesrapidas_stock.CheckedImage")));
-            this.btn_accionesrapidas_stock.CheckedLineColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_stock.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_accionesrapidas_stock.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_accionesrapidas_stock.Font = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_accionesrapidas_stock.ForeColor = System.Drawing.Color.Black;
-            this.btn_accionesrapidas_stock.Image = null;
-            this.btn_accionesrapidas_stock.ImageOffsetX = 5;
-            this.btn_accionesrapidas_stock.ImageSize = new System.Drawing.Size(19, 19);
-            this.btn_accionesrapidas_stock.LineColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_stock.LineRight = 4;
-            this.btn_accionesrapidas_stock.Location = new System.Drawing.Point(12, 36);
-            this.btn_accionesrapidas_stock.Name = "btn_accionesrapidas_stock";
-            this.btn_accionesrapidas_stock.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_stock.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_stock.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_accionesrapidas_stock.OnHoverImage = null;
-            this.btn_accionesrapidas_stock.OnHoverLineColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_stock.OnPressedColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_stock.Radius = 3;
-            this.btn_accionesrapidas_stock.Size = new System.Drawing.Size(237, 32);
-            this.btn_accionesrapidas_stock.TabIndex = 200;
-            this.btn_accionesrapidas_stock.Text = "Exportar informe stock";
-            this.btn_accionesrapidas_stock.TextOffsetX = 6;
-            // 
-            // btn_accionesrapidas_insertar
-            // 
-            this.btn_accionesrapidas_insertar.AnimationHoverSpeed = 0.07F;
-            this.btn_accionesrapidas_insertar.AnimationSpeed = 0.03F;
-            this.btn_accionesrapidas_insertar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_accionesrapidas_insertar.BaseColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_insertar.BorderColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_insertar.CheckedBaseColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_insertar.CheckedBorderColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_insertar.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_accionesrapidas_insertar.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_accionesrapidas_insertar.CheckedImage")));
-            this.btn_accionesrapidas_insertar.CheckedLineColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_insertar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_accionesrapidas_insertar.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_accionesrapidas_insertar.Font = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_accionesrapidas_insertar.ForeColor = System.Drawing.Color.Black;
-            this.btn_accionesrapidas_insertar.Image = null;
-            this.btn_accionesrapidas_insertar.ImageOffsetX = 5;
-            this.btn_accionesrapidas_insertar.ImageSize = new System.Drawing.Size(19, 19);
-            this.btn_accionesrapidas_insertar.LineColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_insertar.LineRight = 4;
-            this.btn_accionesrapidas_insertar.Location = new System.Drawing.Point(12, 91);
-            this.btn_accionesrapidas_insertar.Name = "btn_accionesrapidas_insertar";
-            this.btn_accionesrapidas_insertar.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_insertar.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_insertar.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_accionesrapidas_insertar.OnHoverImage = null;
-            this.btn_accionesrapidas_insertar.OnHoverLineColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_insertar.OnPressedColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_insertar.Radius = 3;
-            this.btn_accionesrapidas_insertar.Size = new System.Drawing.Size(237, 32);
-            this.btn_accionesrapidas_insertar.TabIndex = 201;
-            this.btn_accionesrapidas_insertar.Text = "Insertar nuevo tramite";
-            this.btn_accionesrapidas_insertar.TextOffsetX = 6;
-            // 
-            // btn_accionesrapidas_inscribir
-            // 
-            this.btn_accionesrapidas_inscribir.AnimationHoverSpeed = 0.07F;
-            this.btn_accionesrapidas_inscribir.AnimationSpeed = 0.03F;
-            this.btn_accionesrapidas_inscribir.BackColor = System.Drawing.Color.Transparent;
-            this.btn_accionesrapidas_inscribir.BaseColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_inscribir.BorderColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_inscribir.CheckedBaseColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_inscribir.CheckedBorderColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_inscribir.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_accionesrapidas_inscribir.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_accionesrapidas_inscribir.CheckedImage")));
-            this.btn_accionesrapidas_inscribir.CheckedLineColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_inscribir.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_accionesrapidas_inscribir.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_accionesrapidas_inscribir.Font = new System.Drawing.Font("Poppins Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_accionesrapidas_inscribir.ForeColor = System.Drawing.Color.Black;
-            this.btn_accionesrapidas_inscribir.Image = null;
-            this.btn_accionesrapidas_inscribir.ImageOffsetX = 5;
-            this.btn_accionesrapidas_inscribir.ImageSize = new System.Drawing.Size(19, 19);
-            this.btn_accionesrapidas_inscribir.LineColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_inscribir.LineRight = 4;
-            this.btn_accionesrapidas_inscribir.Location = new System.Drawing.Point(12, 148);
-            this.btn_accionesrapidas_inscribir.Name = "btn_accionesrapidas_inscribir";
-            this.btn_accionesrapidas_inscribir.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_inscribir.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_inscribir.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.btn_accionesrapidas_inscribir.OnHoverImage = null;
-            this.btn_accionesrapidas_inscribir.OnHoverLineColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_inscribir.OnPressedColor = System.Drawing.Color.White;
-            this.btn_accionesrapidas_inscribir.Radius = 3;
-            this.btn_accionesrapidas_inscribir.Size = new System.Drawing.Size(237, 32);
-            this.btn_accionesrapidas_inscribir.TabIndex = 202;
-            this.btn_accionesrapidas_inscribir.Text = "Inscribir tramites";
-            this.btn_accionesrapidas_inscribir.TextOffsetX = 6;
-            // 
-            // gunaCirclePictureBox1
-            // 
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(6, 52);
-            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(12, 12);
-            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox1.TabIndex = 279;
-            this.gunaCirclePictureBox1.TabStop = false;
-            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
-            // 
-            // gunaCirclePictureBox2
-            // 
-            this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(6, 84);
-            this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
-            this.gunaCirclePictureBox2.Size = new System.Drawing.Size(12, 12);
-            this.gunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox2.TabIndex = 280;
-            this.gunaCirclePictureBox2.TabStop = false;
-            this.gunaCirclePictureBox2.UseTransfarantBackground = false;
-            // 
-            // progress_procesados
-            // 
-            this.progress_procesados.BorderColor = System.Drawing.Color.Black;
-            this.progress_procesados.ColorStyle = Guna.UI.WinForms.ColorStyle.Default;
-            this.progress_procesados.IdleColor = System.Drawing.Color.Gainsboro;
-            this.progress_procesados.Location = new System.Drawing.Point(103, 54);
-            this.progress_procesados.Name = "progress_procesados";
-            this.progress_procesados.ProgressMaxColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
-            this.progress_procesados.ProgressMinColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.progress_procesados.Radius = 3;
-            this.progress_procesados.Size = new System.Drawing.Size(188, 11);
-            this.progress_procesados.TabIndex = 281;
-            this.progress_procesados.Value = 50;
-            // 
             // progress_inscriptos
             // 
+            this.progress_inscriptos.BackColor = System.Drawing.Color.Transparent;
             this.progress_inscriptos.BorderColor = System.Drawing.Color.Black;
             this.progress_inscriptos.ColorStyle = Guna.UI.WinForms.ColorStyle.Default;
             this.progress_inscriptos.IdleColor = System.Drawing.Color.Gainsboro;
@@ -1250,137 +1347,42 @@ namespace MiRegistro.Views
             this.progress_inscriptos.TabIndex = 282;
             this.progress_inscriptos.Value = 33;
             // 
-            // Top
+            // progress_procesados
             // 
-            this.Top.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.Top.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Top.FillWeight = 312.8079F;
-            this.Top.HeaderText = "";
-            this.Top.MinimumWidth = 6;
-            this.Top.Name = "Top";
-            this.Top.ReadOnly = true;
-            this.Top.Width = 23;
+            this.progress_procesados.BackColor = System.Drawing.Color.Transparent;
+            this.progress_procesados.BorderColor = System.Drawing.Color.Black;
+            this.progress_procesados.ColorStyle = Guna.UI.WinForms.ColorStyle.Default;
+            this.progress_procesados.IdleColor = System.Drawing.Color.Gainsboro;
+            this.progress_procesados.Location = new System.Drawing.Point(103, 54);
+            this.progress_procesados.Name = "progress_procesados";
+            this.progress_procesados.ProgressMaxColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.progress_procesados.ProgressMinColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.progress_procesados.Radius = 3;
+            this.progress_procesados.Size = new System.Drawing.Size(188, 11);
+            this.progress_procesados.TabIndex = 281;
+            this.progress_procesados.Value = 50;
             // 
-            // ColumnNumeracion
+            // gunaCirclePictureBox2
             // 
-            this.ColumnNumeracion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ColumnNumeracion.FillWeight = 27.7284F;
-            this.ColumnNumeracion.HeaderText = "Empleado";
-            this.ColumnNumeracion.MinimumWidth = 6;
-            this.ColumnNumeracion.Name = "ColumnNumeracion";
-            this.ColumnNumeracion.ReadOnly = true;
-            this.ColumnNumeracion.Width = 98;
+            this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(6, 84);
+            this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
+            this.gunaCirclePictureBox2.Size = new System.Drawing.Size(12, 12);
+            this.gunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox2.TabIndex = 280;
+            this.gunaCirclePictureBox2.TabStop = false;
+            this.gunaCirclePictureBox2.UseTransfarantBackground = false;
             // 
-            // ColumnStockDetail
+            // gunaCirclePictureBox1
             // 
-            this.ColumnStockDetail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnStockDetail.FillWeight = 125.1232F;
-            this.ColumnStockDetail.HeaderText = "Total";
-            this.ColumnStockDetail.MinimumWidth = 6;
-            this.ColumnStockDetail.Name = "ColumnStockDetail";
-            this.ColumnStockDetail.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn1.FillWeight = 312.8079F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 30;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn2.FillWeight = 27.7284F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Empleado";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.FillWeight = 125.1232F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Total";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Poppins", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label14.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label14.Location = new System.Drawing.Point(37, 51);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(344, 120);
-            this.label14.TabIndex = 243;
-            this.label14.Text = "Opcion\r\nDeshabilitada";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Poppins", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label3.Location = new System.Drawing.Point(39, 100);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(344, 120);
-            this.label3.TabIndex = 244;
-            this.label3.Text = "Opcion\r\nDeshabilitada";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // gunaComboBox1
-            // 
-            this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox1.BorderColor = System.Drawing.Color.White;
-            this.gunaComboBox1.BorderSize = 0;
-            this.gunaComboBox1.DisplayMember = "Nombre";
-            this.gunaComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaComboBox1.ForeColor = System.Drawing.Color.LightGray;
-            this.gunaComboBox1.FormattingEnabled = true;
-            this.gunaComboBox1.Items.AddRange(new object[] {
-            "1 mes",
-            "1 mes ant.",
-            "1 año"});
-            this.gunaComboBox1.Location = new System.Drawing.Point(187, 7);
-            this.gunaComboBox1.Name = "gunaComboBox1";
-            this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.WhiteSmoke;
-            this.gunaComboBox1.OnHoverItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
-            this.gunaComboBox1.Radius = 7;
-            this.gunaComboBox1.Size = new System.Drawing.Size(108, 28);
-            this.gunaComboBox1.StartIndex = 0;
-            this.gunaComboBox1.TabIndex = 266;
-            this.gunaComboBox1.ValueMember = "cod_tipo";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Poppins ExtraLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label8.Location = new System.Drawing.Point(87, 15);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 19);
-            this.label8.TabIndex = 265;
-            this.label8.Text = "mensual";
+            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(6, 52);
+            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
+            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(12, 12);
+            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox1.TabIndex = 279;
+            this.gunaCirclePictureBox1.TabStop = false;
+            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
             // 
             // Dashboard
             // 
@@ -1401,6 +1403,8 @@ namespace MiRegistro.Views
             this.Controls.Add(this.dash_panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Dashboard";
             this.dash_panel10.ResumeLayout(false);
@@ -1430,8 +1434,8 @@ namespace MiRegistro.Views
             ((System.ComponentModel.ISupportInitialize)(this.pic_erroresmensual)).EndInit();
             this.dash_panel8.ResumeLayout(false);
             this.dash_panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

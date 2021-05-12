@@ -70,15 +70,15 @@ namespace Controllers
         }
         private void FormulariosClick(object sender, EventArgs e)
         {
-           // throw new NotImplementedException();
+            OpenFormInPanel(new Formularios());
         }
         private void TramitesClick(object sender, EventArgs e)
         {
-           // throw new NotImplementedException();
+            OpenFormInPanel(new Tramites());
         }
         private void ConfiguracionClick(object sender, EventArgs e)
         {
-            //throw new NotImplementedException();
+            OpenFormInPanel(new Configuracion());
         }
         private protected void LogoutClick(object sender, EventArgs e)
         {
