@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -11,7 +12,14 @@ using MySql.Data.MySqlClient;
 namespace Models
 {
     public class LoginViewModel
-    { 
+    {
+        private MiRegistroEntity db;
+
+        public LoginViewModel(MiRegistroEntity entity)
+        {
+            this.db = entity;
+        }
+
         public UserTableViewModel ValidateLogin(string user, string password)
         {
             UserTableViewModel result = null;
@@ -92,7 +100,7 @@ namespace Models
             List<UserPrivilegesTableViewModel> result = null;
             try
             {
-                using (MiRegistroEntity db = new MiRegistroEntity())
+                using(db)
                 {
                     DateTime today = DateTime.Now.Date;
                     var lst = db.usuario_rol
@@ -151,13 +159,17 @@ namespace Models
 
             return result;
         }
-        public usuario FindSavedUser() 
+        public LoginTableViewModel FindSavedUser() 
         {
-            usuario usuario = new usuario();
+            LoginTableViewModel usuario = new LoginTableViewModel();
             if(MiRegistro.Properties.Settings.Default.user != null) 
             {
-                usuario.Usuario1 = PasswordEncrypter.Decrypt(MiRegistro.Properties.Settings.Default.user);
-                usuario.Contraseña = PasswordEncrypter.Decrypt(MiRegistro.Properties.Settings.Default.pass);
+                try
+                {
+                    usuario.User = PasswordEncrypter.Decrypt(MiRegistro.Properties.Settings.Default.user);
+                    usuario.Password = PasswordEncrypter.Decrypt(MiRegistro.Properties.Settings.Default.pass);
+                }
+                catch { }
             }
             return usuario;
         }
@@ -171,7 +183,7 @@ namespace Models
             }
             else
             {
-                if(MiRegistro.Properties.Settings.Default.user != null) 
+                if(MiRegistro.Properties.Settings.Default.user != null && MiRegistro.Properties.Settings.Default.pass != null) 
                 {
                     if (PasswordEncrypter.Decrypt(MiRegistro.Properties.Settings.Default.user) == user)
                     {
@@ -181,6 +193,11 @@ namespace Models
                     }
                 }
             }
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
         }
     }
 }

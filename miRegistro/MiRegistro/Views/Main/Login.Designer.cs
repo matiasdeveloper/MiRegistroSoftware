@@ -79,7 +79,7 @@ namespace MiRegistro
             this.checkBox_guardar.Location = new System.Drawing.Point(38, 277);
             this.checkBox_guardar.Name = "checkBox_guardar";
             this.checkBox_guardar.Size = new System.Drawing.Size(125, 20);
-            this.checkBox_guardar.TabIndex = 251;
+            this.checkBox_guardar.TabIndex = 3;
             this.checkBox_guardar.Text = "Recordar cuenta";
             // 
             // txtBox_user
@@ -98,8 +98,9 @@ namespace MiRegistro
             this.txtBox_user.Name = "txtBox_user";
             this.txtBox_user.PasswordChar = '\0';
             this.txtBox_user.Radius = 7;
+            this.txtBox_user.SelectedText = "";
             this.txtBox_user.Size = new System.Drawing.Size(275, 28);
-            this.txtBox_user.TabIndex = 248;
+            this.txtBox_user.TabIndex = 1;
             this.txtBox_user.Text = "usuarioejemplo";
             // 
             // label4
@@ -176,8 +177,9 @@ namespace MiRegistro
             this.txtBox_pass.Name = "txtBox_pass";
             this.txtBox_pass.PasswordChar = '\0';
             this.txtBox_pass.Radius = 7;
+            this.txtBox_pass.SelectedText = "";
             this.txtBox_pass.Size = new System.Drawing.Size(275, 28);
-            this.txtBox_pass.TabIndex = 249;
+            this.txtBox_pass.TabIndex = 2;
             this.txtBox_pass.Text = "8 caracteres o mas";
             this.txtBox_pass.Enter += new System.EventHandler(this.txtBox_pass_Enter);
             this.txtBox_pass.Leave += new System.EventHandler(this.txtBox_pass_Leave);
@@ -192,7 +194,7 @@ namespace MiRegistro
             this.linkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel.Name = "linkLabel";
             this.linkLabel.Size = new System.Drawing.Size(146, 19);
-            this.linkLabel.TabIndex = 254;
+            this.linkLabel.TabIndex = 5;
             this.linkLabel.TabStop = true;
             this.linkLabel.Text = "Olvidaste la contraseña?";
             // 
@@ -381,7 +383,7 @@ namespace MiRegistro
             this.btn_login.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(122)))), ((int)(((byte)(252)))));
             this.btn_login.Radius = 10;
             this.btn_login.Size = new System.Drawing.Size(275, 30);
-            this.btn_login.TabIndex = 252;
+            this.btn_login.TabIndex = 4;
             this.btn_login.Text = "Ingresar al sistema";
             // 
             // Login

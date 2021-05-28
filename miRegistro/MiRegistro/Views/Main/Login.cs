@@ -1,4 +1,5 @@
 ﻿using Controllers;
+using MiRegistro.Views.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,11 @@ namespace MiRegistro
                 txtBox_pass.PasswordChar = (char)0;
                 txtBox_pass.Text = "8 caracteres o mas";
             }
+        }
+
+        internal void EnterPressed()
+        {
+            MessageBox.Show("ENTER PRESSED");
         }
     }
 }

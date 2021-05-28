@@ -20,12 +20,13 @@ namespace LayerData
             {
                 if (sqlConnection.State == ConnectionState.Closed)
                 {
+                    Console.WriteLine("MySql connection has succesful.");
                     sqlConnection.Open();
                 }
             }
             catch(Exception ex) 
             {
-                Debug.Write("Error connection DB" + ex);
+                Console.WriteLine("Error connection DB" + ex);
             }
             return sqlConnection;
         }

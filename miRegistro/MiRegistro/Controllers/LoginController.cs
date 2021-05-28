@@ -15,7 +15,8 @@ namespace Controllers
     public class LoginController
     {
         FormModel _formModel = new FormModel();
-        LoginViewModel _model = new LoginViewModel();
+        LoginViewModel _model = new LoginViewModel(new MiRegistroEntity());
+
         Login _view { get; set; }
 
         public LoginController(Login view) 
@@ -41,11 +42,11 @@ namespace Controllers
 
         private void FindSavedUser(object sender, EventArgs e)
         {
-            usuario usuario = _model.FindSavedUser();
-            if (usuario.Usuario1 != null)
+            LoginTableViewModel usuario = _model.FindSavedUser();
+            if (usuario.User != null)
             {
-                _view.txtBox_user.Text = usuario.Usuario1;
-                _view.txtBox_pass.Text = usuario.Contraseña;
+                _view.txtBox_user.Text = usuario.User;
+                _view.txtBox_pass.Text = usuario.Password;
                 _view.txtBox_pass.PasswordChar = '*';
                 _view.checkBox_guardar.Checked = true;
             }

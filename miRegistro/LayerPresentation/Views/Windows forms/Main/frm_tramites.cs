@@ -106,6 +106,7 @@ namespace LayerPresentation
             DataBind(DataSource);
             lbl_totaltramites.Text = "(" + 100 + "tramites)";
         }
+        
         private void LoadAccessPrivileges()
         {
             /*if (UserLoginCache.Priveleges == Privileges.Estandar)
@@ -118,6 +119,7 @@ namespace LayerPresentation
                 btn_eliminar.Enabled = false;
             }*/
         }
+
         private string[] GetSelectedRowDatagridview()
         {
             selectedIdDatagridview = Convert.ToInt32(dg_tramites.CurrentRow.Cells["Id"].Value);
@@ -135,6 +137,7 @@ namespace LayerPresentation
 
             return data;
         }
+        
         private void ShowMoreOptions(BunifuCards panel)
         {
             if (panel == currentPanelOpenInFront || panel.Visible == true)
@@ -285,6 +288,7 @@ namespace LayerPresentation
             selectedIdDatagridview = Convert.ToInt32(dg_tramites.CurrentRow.Cells["ColumnId"].Value);
             //y = dg_tramites.PointToScreen(dg_tramites.GetCellDisplayRectangle(0, dg_tramites.CurrentCell.RowIndex, false).Location).Y;
         }
+
         private void pn_editar_tramite_VisibleChanged(object sender, EventArgs e)
         {
             // On close panel save data edited
@@ -305,7 +309,6 @@ namespace LayerPresentation
                 // Refresh query
             }
         }
-
         private bool SelectQueryButton(Label click) 
         {
             if(click == currentQuerySelected) 

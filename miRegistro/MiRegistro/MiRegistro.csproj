@@ -51,8 +51,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -66,6 +66,9 @@
     <Reference Include="Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\MiRegistro Resources\Frameworks\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
@@ -182,15 +185,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ConfiguracionController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\DialogController.cs" />
+    <Compile Include="Controllers\FormulariosController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\TramitesController.cs" />
     <Compile Include="Controllers\WelcomeController.cs" />
     <Compile Include="Models\DashboardViewModel.cs" />
     <Compile Include="Models\Static\ColorSystem.cs" />
+    <Compile Include="Models\Static\ExportHelper.cs" />
     <Compile Include="Models\Static\PasswordEncrypter.cs" />
+    <Compile Include="Models\Static\PdfExporter.cs" />
     <Compile Include="Models\Static\Percentage.cs" />
+    <Compile Include="Models\TableViewModel\ConsultaTableViewModel.cs" />
     <Compile Include="Models\TableViewModel\DashboardTableViewModel.cs" />
+    <Compile Include="Models\TableViewModel\LoginTableViewModel.cs" />
+    <Compile Include="Models\TramitesViewModel.cs" />
     <Compile Include="Models\Utilities\FechaModel.cs" />
     <Compile Include="Models\MainViewModel.cs" />
     <Compile Include="Models\TableViewModel\TramitesTableViewModel.cs" />
@@ -206,6 +218,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="Views\Common\Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Common\Dialog.Designer.cs">
+      <DependentUpon>Dialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Main\Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,10 +359,10 @@
     <Compile Include="Views\Main\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Main\SplashWelcome.cs">
+    <Compile Include="Views\TabPages\SplashWelcome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Main\SplashWelcome.Designer.cs">
+    <Compile Include="Views\TabPages\SplashWelcome.Designer.cs">
       <DependentUpon>SplashWelcome.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Main\Tramites.cs">
@@ -353,6 +371,33 @@
     <Compile Include="Views\Main\Tramites.Designer.cs">
       <DependentUpon>Tramites.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\TabPages\TramitesError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TabPages\TramitesError.Designer.cs">
+      <DependentUpon>TramitesError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TabPages\TramitesInscribir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TabPages\TramitesInscribir.Designer.cs">
+      <DependentUpon>TramitesInscribir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TabPages\TramitesInsertar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TabPages\TramitesInsertar.Designer.cs">
+      <DependentUpon>TramitesInsertar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TabPages\TramitesObservar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TabPages\TramitesObservar.Designer.cs">
+      <DependentUpon>TramitesObservar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Common\Dialog.resx">
+      <DependentUpon>Dialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Main\Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </EmbeddedResource>
@@ -373,7 +418,7 @@
     <EmbeddedResource Include="Views\Main\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Main\SplashWelcome.resx">
+    <EmbeddedResource Include="Views\TabPages\SplashWelcome.resx">
       <DependentUpon>SplashWelcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Main\Tramites.resx">
@@ -418,6 +463,13 @@
       <DependentUpon>EntityDataModel.edmx</DependentUpon>
       <LastGenOutput>EntityDataModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\edit_26px.png" />
+    <None Include="Resources\edit_row_26px.png" />
+    <None Include="Resources\subtract_30px.png" />
+    <None Include="Resources\chevron_down_26px.png" />
+    <None Include="Resources\eye_64px.png" />
+    <None Include="Resources\search_50px1.png" />
+    <None Include="Resources\search_50px.png" />
     <None Include="Resources\chevron_right_26px.png" />
     <None Include="Resources\chevron_left_26px.png" />
     <None Include="Resources\icon_employee.png" />

@@ -63,6 +63,16 @@ namespace MiRegistro.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chevron_down_26px {
+            get {
+                object obj = ResourceManager.GetObject("chevron_down_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chevron_left_26px {
             get {
                 object obj = ResourceManager.GetObject("chevron_left_26px", resourceCulture);
@@ -76,6 +86,36 @@ namespace MiRegistro.Properties {
         internal static System.Drawing.Bitmap chevron_right_26px {
             get {
                 object obj = ResourceManager.GetObject("chevron_right_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_26px {
+            get {
+                object obj = ResourceManager.GetObject("edit_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_row_26px {
+            get {
+                object obj = ResourceManager.GetObject("edit_row_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye_64px {
+            get {
+                object obj = ResourceManager.GetObject("eye_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +203,26 @@ namespace MiRegistro.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap search_50px {
+            get {
+                object obj = ResourceManager.GetObject("search_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_50px1 {
+            get {
+                object obj = ResourceManager.GetObject("search_50px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap splash1 {
             get {
                 object obj = ResourceManager.GetObject("splash1", resourceCulture);
@@ -206,6 +266,16 @@ namespace MiRegistro.Properties {
         internal static System.Drawing.Bitmap splash5 {
             get {
                 object obj = ResourceManager.GetObject("splash5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap subtract_30px {
+            get {
+                object obj = ResourceManager.GetObject("subtract_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
