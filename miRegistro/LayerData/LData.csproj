@@ -72,12 +72,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LayerSoporte\LCache.csproj">
-      <Project>{45f12642-097e-4b16-ba2a-75655d8594c6}</Project>
-      <Name>LCache</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -44,9 +44,6 @@
   <ItemGroup>
     <Compile Include="Clases\Utilities\Statistics.cs" />
     <Compile Include="Clases\Utilities\Percentage.cs" />
-    <Compile Include="CNegocioFormulario.cs" />
-    <Compile Include="CNegocioTramite.cs" />
-    <Compile Include="CNegocioUsuario.cs" />
     <Compile Include="Older\Cn_alertas.cs" />
     <Compile Include="Older\Cn_Empleados.cs" />
     <Compile Include="Older\Cn_Employee.cs" />
@@ -56,17 +53,12 @@
     <Compile Include="Older\Cn_Tramites.cs" />
     <Compile Include="Older\Cn_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CNegocioAlerta.cs" />
     <Compile Include="Clases\Utilities\PasswordEncrypter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LayerData\LData.csproj">
       <Project>{24825e55-040f-47b2-98c3-a58964ce403a}</Project>
       <Name>LData</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LayerSoporte\LCache.csproj">
-      <Project>{45f12642-097e-4b16-ba2a-75655d8594c6}</Project>
-      <Name>LCache</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

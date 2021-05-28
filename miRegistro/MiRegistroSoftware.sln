@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LData", "LayerData\LData.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LBusiness", "LayerBusiness\LBusiness.csproj", "{6A594A3B-366C-41E2-A754-C1DF3B355DE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LCache", "LayerSoporte\LCache.csproj", "{45F12642-097E-4B16-BA2A-75655D8594C6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A06A90A5-32F0-4BDA-A507-14C7ECFA82E5}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -18,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiRegistro", "MiRegistro\Mi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LOlder", "LayerPresentation\LOlder.csproj", "{5877B5AF-6BC6-4A1B-8959-9E00A4920519}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigracionDatos", "MigracionDatos\MigracionDatos.csproj", "{970437CC-4FF3-4374-8652-26621825D642}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MigracionDatos", "MigracionDatos\MigracionDatos.csproj", "{970437CC-4FF3-4374-8652-26621825D642}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,10 +32,6 @@ Global
 		{6A594A3B-366C-41E2-A754-C1DF3B355DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A594A3B-366C-41E2-A754-C1DF3B355DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A594A3B-366C-41E2-A754-C1DF3B355DE7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{45F12642-097E-4B16-BA2A-75655D8594C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{45F12642-097E-4B16-BA2A-75655D8594C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{45F12642-097E-4B16-BA2A-75655D8594C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{45F12642-097E-4B16-BA2A-75655D8594C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BEF0C9DB-26EC-4A6E-B9C2-EE9AE96EC662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BEF0C9DB-26EC-4A6E-B9C2-EE9AE96EC662}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEF0C9DB-26EC-4A6E-B9C2-EE9AE96EC662}.Release|Any CPU.ActiveCfg = Release|Any CPU
