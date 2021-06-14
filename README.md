@@ -1,21 +1,57 @@
-# MiRegistro Software
-
-MiRegistro es un software especializado en el control integral de los registros del automotor del Argentina. Esta diseñado para planificar, organizar y monitorear las actividades cotidianas de la empresa. 
-
-- Official Documentation: [Go to the docs](https://www.linkedin.com/in/matiasvallejos/)
-- Forum: [Go to the forum]()
+<h1 align="center"> MiRegistro Software </h1>
   
-## Carateristicas
+<div align="center">
 
-- Agile Implementation and SOLID
-- MVC Arquitecture
-- .NET Framework 4.8
-- AWS RDS
-- MySql
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/matiasvallejosdev/miregistro-software?color=4cc51e)](https://github.com/matiasvallejosdev/AR-Covid-Interactive-Visualizer)
+[![GitHub top language](https://img.shields.io/github/languages/top/matiasvallejosdev/miregistro-software?color=1081c2)](https://github.com/matiasvallejosdev/AR-Covid-Interactive-Visualizer/search?l=c%23)
+[![GitHub Watchers](https://img.shields.io/github/watchers/matiasvallejosdev/miregistro-software?color=4cc51e)](https://github.com/matiasvallejosdev/AR-Covid-Interactive-Visualizer/watchers)
+[![GitHub Repo stars](https://img.shields.io/github/stars/matiasvallejosdev/miregistro-software?color=4cc51e)](https://github.com/matiasvallejosdev/AR-Covid-Interactive-Visualizer/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/matiasvallejosdev/miregistro-software?color=4cc51e)](https://github.com/matiasvallejosdev/AR-Covid-Interactive-Visualizer/network/members)
+<br />
+[![.NET Badge](http://img.shields.io/badge/.NET-5C2D91?logo=dot-net&logoColor=white)](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+[![Visual Studio Badge](http://img.shields.io/badge/-Visual_Studio_2019-5C2D91?logo=visual-studio&link=https://visualstudio.microsoft.com/)](https://visualstudio.microsoft.com/)
+
+</div>
+  <p align="center">
+MiRegistro is a software specialized in the comprehensive control of automotive records in Argentina. It is designed to plan, organize and monitor the daily activities of the company.
+<br />
+
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [About the project](#project)
+- [Setup](#setup)
+- [Credits](#credits)
+- [Licenses](#licenses)
+<br />
+  
+## Project
+- [Introduction](#introduction)
+- [Technology](#technology)
+- [Arquitecture](#arquitecture)
+### Introduction
+
+### Technology
+
 - C#
-## Instalacion
-#### Windows user:
-__Para comprar el sistema y realizar la configuracion de la base de datos comunicarse al siguiente contacto de ventas y soporte:__
+- MySql
+- AWS RDS
+- .NET Framework 4.8
+### Arquitecture
+
+- MVC Arquitecture
+## Requeriments
+
+- .NET Framework 4.8
+- Entity Framework 6.4.4
+- iTextSharp 5.5.13.2
+- MySql Data 8.0.24
+- MySql Data Entity 8.0.24
+- GunaUI 1.9.1
+
+## Setup
+
+_To purchase the system and configure the database, contact the following sales and support contact:_
 
 - Email: matiasavallejos@outlook.com
 - Phone: [Enviar Mensaje](https://api.whatsapp.com/send?phone=3492593341&text=Hola,%20quiero%20comprar%20el%20sistema%20MiRegistroSoftware)
@@ -23,14 +59,11 @@ __Para comprar el sistema y realizar la configuracion de la base de datos comuni
 
 ## Creditos
 
-- Main Developer: Matias A. Vallejos
-- Contributors
-- Distibuted under MIT License.
+- Main Developer: [Matias A. Vallejos](https://www.linkedin.com/in/matiasvallejos/)
+- Official Documentation: [Go to the docs]()
+- Forum: [Go to the forum]()
 
-Plan. Organize. Monitor. This system is developed to solve problems in the control of procedures, employees and stock of forms in the automotive records in Argentina. Developed in AZURE SQL, C #, VS .NET.
+## Licenses
+_Distibuted under MIT License._
 
-The main characteristics of the project are: :computer:
- 
-- Development of a system in c # with Visual Studio .NET.
-- Designed in relation to an Azure SQL database with a Microsoft Azure cloud infrastructure.
-- Informatic solution to the procedures to organize, monitor and statistically control employees, records and stock of forms.
+- [.NET Framework 4.8](https://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm)
