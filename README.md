@@ -20,15 +20,15 @@ MiRegistro is a software specialized in the comprehensive control of automotive 
 
 - [Table of Contents](#table-of-contents)
 - [About the project](#project)
+    - [Introduction](#introduction)
+    - [Technology](#technology)
+    - [Arquitecture](#arquitecture)
 - [Setup](#setup)
 - [Credits](#credits)
 - [Licenses](#licenses)
 <br />
   
 ## Project
-- [Introduction](#introduction)
-- [Technology](#technology)
-- [Arquitecture](#arquitecture)
 ### Introduction
 
 ### Technology
