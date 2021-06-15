@@ -60,7 +60,7 @@ _To purchase the system and configure the database, contact the following sales 
 ## Creditos
 
 - Main Developer: [Matias A. Vallejos](https://www.linkedin.com/in/matiasvallejos/)
-- Official Documentation: [Go to the docs]()
+- Official Documentation: [Go to the docs](https://www.notion.so/Wiki-MiRegistro-Software-bb9b6af212594ff09d5b0036bc5ea1cd)
 - Forum: [Go to the forum]()
 
 ## Licenses
